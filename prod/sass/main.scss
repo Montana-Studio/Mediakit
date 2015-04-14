@@ -1,0 +1,14 @@
+.container{
+	#header{
+		@include gridle(12);
+	}
+	#wrap{
+		@include gridle(8);
+	}
+	#sidebar{
+		@include gridle(4);
+	}
+	#footer{
+		@extend #header();
+	}
+}

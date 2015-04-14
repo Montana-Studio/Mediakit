@@ -88,7 +88,7 @@ module.exports = function(grunt) {
             },
             compile: {
                 files: {
-                    '<%= www %>/<%= jsout %>': ['<%= js %>']
+                    '<%= www %>/<%= jsout %>': ['<%= dist %>/<%= js %>']
                 }
             }
         },
@@ -144,7 +144,7 @@ module.exports = function(grunt) {
 
         watch: {
           configFiles:{
-            files:['<%= dist %>/<%= scss %>','<%= dist %>/<%= js %>','<%= www %>/**/*.php'],
+            files:['<%= dist %>/<%= scss %>','<%= dist %>/<%= js %>','<%= www %>/**/*.{php,html}'],
             options:{
               livereload: true,
             },
