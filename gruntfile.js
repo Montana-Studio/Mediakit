@@ -8,8 +8,8 @@ module.exports = function(grunt) {
         www: 'app/wp-content/themes/Chicfit',
         dist: 'prod',
         
-        jsout:'js/Chicfit.min.js',
-        cssout:'css/Chicfit.css',
+        jsout:'js/chicfit.min.js',
+        cssout:'css/chicfit.css',
         compimg:'img2/**/*.{png,jpg,gif}',
 
         js:'js/**/*.js',
