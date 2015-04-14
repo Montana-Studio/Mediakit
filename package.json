@@ -1,0 +1,19 @@
+{
+  "name": "Chicfit",
+  "version": "0.0.2",
+  "description": "Fitness Femenino",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Montana-Studio/Chicfit.git"
+  },
+  "author": "Montana Studio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Montana-Studio/Chicfit/issues"
+  },
+  "homepage": "https://github.com/Montana-Studio/Chicfit"
+}
