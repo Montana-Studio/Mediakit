@@ -4333,6 +4333,15 @@ html.ipad-landscape {
 
   .gridle-debug .debug-color-ipad-landscape-6, .debug-color-ipad-landscape-6.gridle-debug {
     background-color: #b2d8ee; } }
+.max-width, .container {
+  width: 80%;
+  margin: 0 auto; }
+  html.mobile .max-width, html.mobile .container {
+    width: 100%; }
+  @media screen and (max-width: 480px) {
+    .max-width, .container {
+      width: 100%; } }
+
 .container #header, .container #footer {
   float: left;
   direction: ltr;
@@ -4362,13 +4371,42 @@ html.ipad-landscape {
     content: "grid-default-12"; }
   .gridle-debug .container #header.parent:before, .gridle-debug .container .parent#footer:before, .container #header.gridle-debug.parent:before, .container .gridle-debug.parent#footer:before {
     content: "grid-parent-default-12"; }
+  html.mobile .container #header, html.mobile .container #footer {
+    width: 50%; }
+    .gridle-debug html.mobile .container #header:before, .gridle-debug html.mobile .container #footer:before, html.mobile .container #header.gridle-debug:before, html.mobile .container .gridle-debug#footer:before {
+      content: "grid-mobile-6" !important; }
+    .gridle-debug html.mobile .container #header.parent:before, .gridle-debug html.mobile .container .parent#footer:before, html.mobile .container #header.gridle-debug.parent:before, html.mobile .container .gridle-debug.parent#footer:before {
+      content: "grid-parent-mobile-6" !important; }
+  @media screen and (max-width: 480px) {
+    .container #header, .container #footer {
+      width: 50%; }
+      .gridle-debug .container #header:before, .gridle-debug .container #footer:before, .container #header.gridle-debug:before, .container .gridle-debug#footer:before {
+        content: "grid-mobile-6" !important; }
+      .gridle-debug .container #header.parent:before, .gridle-debug .container .parent#footer:before, .container #header.gridle-debug.parent:before, .container .gridle-debug.parent#footer:before {
+        content: "grid-parent-mobile-6" !important; } }
+  html.tablet .container #header, html.tablet .container #footer {
+    width: 100%; }
+    .gridle-debug html.tablet .container #header:before, .gridle-debug html.tablet .container #footer:before, html.tablet .container #header.gridle-debug:before, html.tablet .container .gridle-debug#footer:before {
+      content: "grid-tablet-12" !important; }
+    .gridle-debug html.tablet .container #header.parent:before, .gridle-debug html.tablet .container .parent#footer:before, html.tablet .container #header.gridle-debug.parent:before, html.tablet .container .gridle-debug.parent#footer:before {
+      content: "grid-parent-tablet-12" !important; }
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    .container #header, .container #footer {
+      width: 100%; }
+      .gridle-debug .container #header:before, .gridle-debug .container #footer:before, .container #header.gridle-debug:before, .container .gridle-debug#footer:before {
+        content: "grid-tablet-12" !important; }
+      .gridle-debug .container #header.parent:before, .gridle-debug .container .parent#footer:before, .container #header.gridle-debug.parent:before, .container .gridle-debug.parent#footer:before {
+        content: "grid-parent-tablet-12" !important; } }
 .container #content {
   float: left;
   direction: ltr;
   padding-left: 10px;
   padding-right: 10px;
   width: 66.66667%;
-  background: brown; }
+  float: left;
+  background: red;
+  font-size: 20px;
+  font-weight: bold; }
   html.default .container #content {
     float: left;
     direction: ltr;
@@ -4391,12 +4429,41 @@ html.ipad-landscape {
     content: "grid-default-8"; }
   .gridle-debug .container #content.parent:before, .container #content.gridle-debug.parent:before {
     content: "grid-parent-default-8"; }
+  html.mobile .container #content {
+    width: 100%; }
+    .gridle-debug html.mobile .container #content:before, html.mobile .container #content.gridle-debug:before {
+      content: "grid-mobile-12" !important; }
+    .gridle-debug html.mobile .container #content.parent:before, html.mobile .container #content.gridle-debug.parent:before {
+      content: "grid-parent-mobile-12" !important; }
+  @media screen and (max-width: 480px) {
+    .container #content {
+      width: 100%; }
+      .gridle-debug .container #content:before, .container #content.gridle-debug:before {
+        content: "grid-mobile-12" !important; }
+      .gridle-debug .container #content.parent:before, .container #content.gridle-debug.parent:before {
+        content: "grid-parent-mobile-12" !important; } }
+  html.tablet .container #content {
+    width: 100%; }
+    .gridle-debug html.tablet .container #content:before, html.tablet .container #content.gridle-debug:before {
+      content: "grid-tablet-12" !important; }
+    .gridle-debug html.tablet .container #content.parent:before, html.tablet .container #content.gridle-debug.parent:before {
+      content: "grid-parent-tablet-12" !important; }
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    .container #content {
+      width: 100%; }
+      .gridle-debug .container #content:before, .container #content.gridle-debug:before {
+        content: "grid-tablet-12" !important; }
+      .gridle-debug .container #content.parent:before, .container #content.gridle-debug.parent:before {
+        content: "grid-parent-tablet-12" !important; } }
+  html.default .container #content {
+    float: left; }
 .container #sidebar {
   float: left;
   direction: ltr;
   padding-left: 10px;
   padding-right: 10px;
   width: 33.33333%;
+  float: right;
   background: blue; }
   html.default .container #sidebar {
     float: left;
@@ -4420,5 +4487,63 @@ html.ipad-landscape {
     content: "grid-default-4"; }
   .gridle-debug .container #sidebar.parent:before, .container #sidebar.gridle-debug.parent:before {
     content: "grid-parent-default-4"; }
+  html.mobile .container #sidebar {
+    width: 50%; }
+    .gridle-debug html.mobile .container #sidebar:before, html.mobile .container #sidebar.gridle-debug:before {
+      content: "grid-mobile-6" !important; }
+    .gridle-debug html.mobile .container #sidebar.parent:before, html.mobile .container #sidebar.gridle-debug.parent:before {
+      content: "grid-parent-mobile-6" !important; }
+  @media screen and (max-width: 480px) {
+    .container #sidebar {
+      width: 50%; }
+      .gridle-debug .container #sidebar:before, .container #sidebar.gridle-debug:before {
+        content: "grid-mobile-6" !important; }
+      .gridle-debug .container #sidebar.parent:before, .container #sidebar.gridle-debug.parent:before {
+        content: "grid-parent-mobile-6" !important; } }
+  html.tablet .container #sidebar {
+    width: 100%; }
+    .gridle-debug html.tablet .container #sidebar:before, html.tablet .container #sidebar.gridle-debug:before {
+      content: "grid-tablet-12" !important; }
+    .gridle-debug html.tablet .container #sidebar.parent:before, html.tablet .container #sidebar.gridle-debug.parent:before {
+      content: "grid-parent-tablet-12" !important; }
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    .container #sidebar {
+      width: 100%; }
+      .gridle-debug .container #sidebar:before, .container #sidebar.gridle-debug:before {
+        content: "grid-tablet-12" !important; }
+      .gridle-debug .container #sidebar.parent:before, .container #sidebar.gridle-debug.parent:before {
+        content: "grid-parent-tablet-12" !important; } }
+  html.default .container #sidebar {
+    float: right; }
+.container #footer {
+  float: left;
+  direction: ltr;
+  padding-left: 10px;
+  padding-right: 10px; }
+  html.default .container #footer {
+    float: left;
+    direction: ltr;
+    padding-left: 10px;
+    padding-right: 10px; }
+  html.ipad-landscape .container #footer {
+    padding-left: 0;
+    padding-right: 0; }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .container #footer {
+      padding-left: 0;
+      padding-right: 0; } }
+  html.mobile .container #footer {
+    width: 100%; }
+    .gridle-debug html.mobile .container #footer:before, html.mobile .container #footer.gridle-debug:before {
+      content: "grid-mobile-12" !important; }
+    .gridle-debug html.mobile .container #footer.parent:before, html.mobile .container #footer.gridle-debug.parent:before {
+      content: "grid-parent-mobile-12" !important; }
+  @media screen and (max-width: 480px) {
+    .container #footer {
+      width: 100%; }
+      .gridle-debug .container #footer:before, .container #footer.gridle-debug:before {
+        content: "grid-mobile-12" !important; }
+      .gridle-debug .container #footer.parent:before, .container #footer.gridle-debug.parent:before {
+        content: "grid-parent-mobile-12" !important; } }
 
 /*# sourceMappingURL=chicfit.css.map */

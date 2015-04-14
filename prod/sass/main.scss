@@ -3,20 +3,41 @@
 
 // Generate classes :
 @include gridle_generate_classes();
+
+$var-width:80%;
+$var-width-mobile:100%;
+.max-width{
+	width:$var-width;
+	margin:0 auto;
+	@include gridle_state(mobile){
+		width:$var-width-mobile;
+	}
+}
 .container {
+	@extend .max-width;
 	#header {
 		@include gridle(12);
+		@include gridle(6, mobile);
+		@include gridle(12, tablet);
 		background : pink;  
 	}
 	#content {
 		@include gridle(8);
-		background: brown;
+		@include gridle(12,mobile);
+		@include gridle(12,tablet);
+		@include gridle_float(left, desktops);
+		background: red;
+		font:{size:20px;weight:bold;}
 	}
 	#sidebar{
 		@include gridle(4);
+		@include gridle(6, mobile);
+		@include gridle(12, tablet);
+		@include gridle_float(right, desktops);
 		background: blue;
 	}
 	#footer {
 		@extend #header;
+		@include gridle(12, mobile);
 	}
 }
