@@ -19,7 +19,7 @@ $var-width-mobile:100%;
 		@include gridle(12);
 		@include gridle(6, mobile);
 		@include gridle(12, tablet);
-		background : pink;  
+		background : yellow;  
 	}
 	#content {
 		@include gridle(8);
