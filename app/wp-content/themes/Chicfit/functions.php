@@ -94,23 +94,22 @@ function html5blank_header_scripts()
         if (HTML5_DEBUG) {
             // jQuery
             wp_deregister_script('jquery');
-            wp_register_script('jquery', get_template_directory_uri() . '/bower_components/jquery/dist/jquery.js', array(), '1.11.1');
+            wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.js', array(), '1.11.1');
 
             // Conditionizr
-            wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0');
+            // wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0');
 
             // Modernizr
-            wp_register_script('modernizr', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', array(), '2.8.3');
+            wp_register_script('modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.8.3');
 
             // Custom scripts
             wp_register_script(
                 'html5blankscripts',
-                get_template_directory_uri() . '/js/scripts.js',
+                get_template_directory_uri() . '/js/chicfit.min.js',
                 array(
-                    'conditionizr',
                     'modernizr',
                     'jquery'),
-                '1.0.0');
+                '1.0.0',true);
 
             // Enqueue Scripts
             wp_enqueue_script('html5blankscripts');
@@ -140,10 +139,10 @@ function html5blank_styles()
 {
     if (HTML5_DEBUG) {
         // normalize-css
-        wp_register_style('normalize', get_template_directory_uri() . '/bower_components/normalize.css/normalize.css', array(), '3.0.1');
+        wp_register_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '3.0.2');
 
         // Custom CSS
-        wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array('normalize'), '1.0');
+        wp_register_style('html5blank', get_template_directory_uri() . '/css/chicfit.css', array('normalize'), '1.0');
 
         // Register CSS
         wp_enqueue_style('html5blank');

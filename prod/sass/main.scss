@@ -1,43 +1,16 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300');
 // Import grid settings :
 @import '../../bower_components/gridle/sass/grid-settings';
+@import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
 
 // Generate classes :
 @include gridle_generate_classes();
 
-$var-width:80%;
-$var-width-mobile:100%;
-.max-width{
-	width:$var-width;
-	margin:0 auto;
-	@include gridle_state(mobile){
-		width:$var-width-mobile;
-	}
-}
-.container {
-	@extend .max-width;
-	#header {
-		@include gridle(12);
-		@include gridle(6, mobile);
-		@include gridle(12, tablet);
-		background : yellow;  
-	}
-	#content {
-		@include gridle(8);
-		@include gridle(12,mobile);
-		@include gridle(12,tablet);
-		@include gridle_float(left, desktops);
-		background: red;
-		font:{size:20px;weight:bold;}
-	}
-	#sidebar{
-		@include gridle(4);
-		@include gridle(6, mobile);
-		@include gridle(12, tablet);
-		@include gridle_float(right, desktops);
-		background: blue;
-	}
-	#footer {
-		@extend #header;
-		@include gridle(12, mobile);
-	}
-}
+@import 'partial/vars';
+@import 'partial/main';
+
+@import 'partial/header';
+@import 'partial/wrap';
+@import 'partial/aside';
+@import 'partial/footer';
+@import 'partial/nav-top';

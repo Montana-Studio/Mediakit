@@ -1,0 +1,106 @@
+.wrapper {
+	max-width: 1280px;
+	@extend .center;
+	@include gridle(12);
+	@include gridle_clear(both);
+	@include gridle_parent();
+	display: block;
+	float:none;
+}
+	.swipe{
+		overflow: hidden;
+		.swipe-wrap{
+			.content-slide{
+				
+				background:{position:center;size:cover;};
+				min-height:564px;
+				overflow: hidden;
+				article{
+					min-height:188px;
+					width:100%;
+					bottom: 0;
+					position: absolute;
+					@extend .text-center;
+					background:{color:rgba(0,0,0,.3);}
+					main{
+						h2{
+							
+							font:{family:$primary_font;weight:bold;}
+							color:#fff;
+							text:{transform:uppercase;}
+							@extend .no-margins;
+							@extend .no-paddings;
+						}
+						p{
+							font:{family:$primary_font;weight:normal;}
+							color:#fff;
+							@extend .no-paddings;
+							margin:10px 0;
+						}
+						.more{
+							margin:0 auto;
+							width:80px;
+							height:25px;
+							font:{weight:bold;size:12px;}
+							background:{color:#fff;}
+							border: none;
+							float: none;
+							display:block !important;
+								a{
+								text:{decoration:none;}
+								display: block;
+								width:100%;
+								height:100%;
+								color:#000;
+								padding-top:2px;
+								&:hover{
+									background:{color:#F2F2F2;}
+								}
+							}
+						}
+					}
+					.tags{
+						width:100%;
+						margin:{top:10px !important;}
+						@extend .text-center;
+						li{
+							display: inline-block;
+							padding:3px !important;
+							min-width:30px;
+							background:{color:$first_color;}
+							margin:0 2px !important;
+							span{
+								color: #fff;
+								@include gridle_float(left);
+							}
+							a{
+								display: inline;
+								color:#fff;
+								text:{decoration:none;}
+							}
+						}
+						
+					}
+				}
+			}
+		}
+		.btn_prev{
+			
+			position: absolute;
+			left:1%;
+			top:40%;
+			width:30px;
+			height:30px;
+			color:#fff;
+			font: {size:40px;}
+			cursor: pointer;
+			&:hover{
+				color:$first_color;
+			}
+			
+		}
+		.btn_next{
+			@extend .btn_prev;
+			left:97%;
+		}
+	}

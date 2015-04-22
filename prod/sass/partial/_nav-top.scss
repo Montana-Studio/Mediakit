@@ -1,0 +1,53 @@
+.nav-top {
+	max-width: 100%;
+	@extend .no-paddings;
+	@include gridle(12);
+	@include gridle_clear(both);
+	background:{color:$third_color} ;
+	height: 35px;
+	.top-social {
+		@include gridle(2);
+		@include gridle_push(2);
+		@include gridle_clear(left);
+		color:$third_color_2;
+		li {
+			width: 35px;
+			text:{decoration:none;align:center;}
+			list-style: none;
+			display: inline-block;
+			i { 	
+				padding: 7px 0 0 0; 
+				font:{size:20px;}
+			}
+				:hover {
+				color:$third_color_1;
+				}
+		}
+	}
+	.search {
+			@include gridle(4);
+			@include gridle_push(4);
+		.cont_search {
+			@include gridle(11);
+			input {
+				background: none;
+				width: 100%;
+				border:none;
+				color:#fff;
+				padding: 10px 0 0 0;
+				@include placeholder {
+					color: #fff;	
+				}
+			}
+		}
+		.search-icon {
+			@include gridle(1);
+			color:$third_color_2;
+			font:{size:20px;}
+			padding: 5px 0 0 0;
+			text:{align:right;}
+			cursor:pointer;
+		}
+
+	}
+}
