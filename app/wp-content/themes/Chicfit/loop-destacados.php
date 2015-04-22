@@ -3,7 +3,7 @@
 	<?php $query = new WP_Query('posts_per_page=4&category_name=destacado'); ?>
 
 	<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="background-image:url('<?php the_field('imagen_post_banner'); ?>');">
+		<article class="content-destacados" id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="background-image:url('<?php the_field('imagen_post_banner'); ?>');">
 			
 			<?php the_tags('<ul class="tags"><li><span>#</span>','</li><li><span>#</span>','</li></ul>'); ?>
 
