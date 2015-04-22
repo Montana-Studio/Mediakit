@@ -40,7 +40,8 @@
 				</div>
 			</footer>
 			<!-- /footer -->
-
+		
+		<script src="<?php echo get_template_directory_uri(); ?>/js/swipe.js"></script>
 		<?php wp_footer(); ?>
 
 		<!-- analytics -->
@@ -53,7 +54,7 @@
 		ga('send', 'pageview');
 		</script>
 
-		<script src="<?php echo get_template_directory_uri(); ?>/js/swipe.js"></script>
+		
 
 	</body>
 </html>
