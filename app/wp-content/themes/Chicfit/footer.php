@@ -31,6 +31,11 @@
 								<li><i class="fa fa-twitter"></i></li>
 								<li><i class="fa fa-instagram"></i></li>
 							</div>
+						<h4>CONTACTANOS</h4>	
+							<div class="contacto-footer">
+								<li><i class="fa fa-envelope-o"></i>Contacto Publicitario</li>
+								<li><i class="fa fa-envelope-o"></i>Contacto Editorial</li>
+							</div>
 					</div>
 				</div>
 			</footer>

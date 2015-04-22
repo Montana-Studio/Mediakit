@@ -65,7 +65,7 @@
 		}
 	}
 	.social-footer {
-			margin:10px 0;
+			margin:10px 0 20px 0;
 			background: none;
 		li {
 			width: 32%;
@@ -74,10 +74,30 @@
 			text:{align:center;}
 			color:#fff;
 			background:{color:$third_color_1;}
-			padding: 5px 0;
+			padding: 15px 0;
 		}
 		i {
 			color:#fff;
+			font:{size:20px;}
+		}
+	}
+	.contacto-footer {
+			margin:10px 0 20px 0;
+		li {
+			@include gridle(6);
+			list-style: none;
+			display: inline-block;
+			text:{align:center;}
+			color:#fff;
+			padding:15px 0;
+			background:{color:$third_color_1;}
+			text:{transform:uppercase;}
+			font:{family:$primary_font; size:15px;}
+			i {
+				width: 100%;
+				font:{size:25px;}
+				margin: 0 0 5px 0;
+			}
 		}
 	}
 }
