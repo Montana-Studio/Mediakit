@@ -3,5 +3,33 @@
 		@include gridle(6);
 		height: 250px;
 		background:{color:$second_color;}
+		margin: 10px 0;
+		.img-loop {
+			@include gridle(6);
+		}
+		h1 {
+			color:#fff;
+			font:{family:$primary_font;size:20px;}
+			text:{transform: uppercase;}
+		}
+		p {
+			color:#fff;
+			font:{family:$primary_font;size:12px;}
+		}
+		.tags{
+			@include gridle(12);
+			display: block;
+			color:#fff;
+			list-style: none;
+			li{
+				@include gridle_float(left);
+				padding: 0 10px;
+				a{
+					font:{size:12px;family:$primary_font;}
+					color:#fff;
+					text:{decoration:none;}
+				}
+			}
+		}
 	}	
 }
