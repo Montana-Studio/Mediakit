@@ -16,7 +16,7 @@
 				</a>
 			<?php endif; ?>
 			<!-- /post thumbnail -->
-
+		<img src="<?php the_field('imagen_post_banner'); ?>" alt="">
 			<!-- post title -->
 			<h1>
 				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>

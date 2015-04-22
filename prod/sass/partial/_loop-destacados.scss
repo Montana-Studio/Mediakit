@@ -1,0 +1,7 @@
+.destacados {
+	.content-destacados {
+		@include gridle(6);
+		height: 250px;
+		background:{color:$second_color;}
+	}	
+}
