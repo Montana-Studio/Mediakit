@@ -9,6 +9,17 @@ function swipe(){
 		transitionEnd: function(index, element) {}
 	}).data('Swipe');
 }
-jQuery(document).ready(function(){
+jQuery(document).ready(function($){
 	swipe();
+	 $(window).load(function(){
+
+	 	var $container = $('#container');
+		// initialize
+		$container.masonry({
+		 'columnWidth': '.item-principal',
+		  itemSelector: '.item-principal'
+		});
+
+	 });
 });
+

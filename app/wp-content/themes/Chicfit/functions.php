@@ -248,13 +248,15 @@ function my_remove_recent_comments_style()
 function html5wp_pagination()
 {
     global $wp_query;
-    $big = 999999999;
-    echo paginate_links(array(
-        'base' => str_replace($big, '%#%', get_pagenum_link($big)),
-        'format' => '?paged=%#%',
-        'current' => max(1, get_query_var('paged')),
-        'total' => $wp_query->max_num_pages
-    ));
+   $big = 999999999;
+   echo paginate_links(array(
+       'base' => str_replace($big, '%#%', get_pagenum_link($big)),
+       'format' => '?paged=%#%',
+       'current' => max(1, get_query_var('paged')),
+       'total' => $wp_query->max_num_pages,
+       'prev_text' => __('<div class="fa fa-chevron-left"></div>'),
+       'next_text' => __('<div class="fa fa-chevron-right"></div>'),
+   ));
 }
 
 // Custom Excerpts
@@ -290,7 +292,7 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
 function html5_blank_view_article($more)
 {
     global $post;
-    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'html5blank') . '</a>';
+    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('<i class="fa fa-plus"></i>', 'html5blank') . '</a>';
 }
 
 // Remove Admin bar

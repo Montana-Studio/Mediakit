@@ -3,44 +3,44 @@
 
 		<!-- footer -->
 			<footer class="footer" role="contentinfo">
-				<div class="content">
+				<div class="box">
 					<div class="first_box">
-						<div class="newsletter">
-							<h4 class="titulo">NEWSLETTER</h4>
-							<input type="text"><a href="#">Enviar</a>
-						</div>
-						<div class="news-logo">
+						<div class="logo">
 							<a href="<?php echo home_url(); ?>">
 								<svg viewBox="0 0 300 95">
 									<use xlink:href="#svg_logo"/> 
 								</svg>
 							</a>
 						</div>
+						<div class="newsletter">
+							<h4>Newsletter</h4>
+							<input type="search" name="s" placeholder="<?php _e( '', 'html5blank' ); ?>"><a class="send" href="">Enviar</a>
+						</div>
 					</div>
 					<div class="second_box">
-						<h4>CHICFIT DAILY</h4>
-						<div class="footer-nav">
+						<h4>Chicfit Daily</h4>
+						<nav class="nav">
 							<?php html5blank_nav(); ?>
-						</div>
-						
+						</nav>
 					</div>
 					<div class="third_box">
-						<h4>SIGUENOS</h4>
-							<div class="social-footer">
-								<li><i class="fa fa-facebook"></i></li>
-								<li><i class="fa fa-twitter"></i></li>
-								<li><i class="fa fa-instagram"></i></li>
-							</div>
-						<h4>CONTACTANOS</h4>	
-							<div class="contacto-footer">
-								<!--li><i class="fa fa-envelope-o"></i> Contacto Publicitario</li>
-								<li><i class="fa fa-envelope-o"></i> Contacto Editorial</li>-->
-							</div>
+						<div class="siguenos">
+							<h4>Siguenos</h4>
+							<li><a href=""><i class="fa fa-facebook"></i></a></li>
+							<li><a href=""><i class="fa fa-twitter"></i></a></li>
+							<li><a href=""><i class="fa fa-instagram"></i></a></li>
+						</div>
+						<div class="contactanos">
+							<h4>Contactanos</h4>
+							<li><a href="">Contacto Editorial<i class="fa fa-envelope-o"></i></a></li>
+							<li><a href="">Contacto Publitario<i class="fa fa-envelope-o"></i></a></li>
+						</div>
 					</div>
-				</div>
+				</div>	
 			</footer>
 			<!-- /footer -->
 		
+		<script src="<?php echo get_template_directory_uri(); ?>/js/masonry.pkgd.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/swipe.js"></script>
 		<?php wp_footer(); ?>
 
@@ -55,6 +55,6 @@
 		</script>
 
 		
-
+		
 	</body>
 </html>
