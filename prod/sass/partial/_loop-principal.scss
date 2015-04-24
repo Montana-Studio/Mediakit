@@ -1,13 +1,15 @@
 .content-loop-home{
 	clear:both;
-	.container-principal {
+	#container {
 		@extend .center-width;
 		height: auto !important;
 		.item-principal {
 			@include gridle(4);
-			position: relative;
-			margin: 0 auto;
-			height:400px;
+			position: relative !important;
+			margin: 0 auto 10px auto;
+			height:280px;
+			left:0 !important;
+			top:0 !important;
 			.social {
 				@extend .text-left;
 				background:{color:$third_color;}
@@ -68,6 +70,51 @@
 		}
 		.paginador {
 			@include gridle_clear(both);
+			@extend #reciente;
+			h2{
+				padding: 6px 45% 0 10px;
+			}
+			.pages {
+				position:absolute;
+				bottom: 0;
+				left: 0;
+				background:{color:$first_color_1;}
+				color:#fff;
+				width: 100%;
+				padding: 20px 0;
+			}
+		}
+		#reciente {
+			background:{color:$first_color;}
+			h2 {
+				font:{family:$primary_font; size:60px;weight: lighter;style: italic;}
+				color:#fff;
+				font-weight: lighter;
+				padding: 5px 30px 0 10px;
+				line-height: 60px;
+				margin-bottom:0;
+			}
+			.tags{
+				@extend .no-margins;
+				@extend .no-paddings;
+				display: block;
+				color:#fff;
+				list-style: none;
+				ul {
+					padding:0px 20px 0 10px;
+				}
+				li{
+					padding:2px 5px;
+					margin: 2px 2px 0 0;
+					display: inline-block;
+					background:{color:$first_color_1;}
+					a{
+						font:{size:12px;family:$primary_font;}
+						color:#fff;
+						text:{decoration:none;}
+					}
+				}
+			}
 		}
 	}
 }

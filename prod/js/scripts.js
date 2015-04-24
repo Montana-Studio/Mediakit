@@ -16,8 +16,8 @@ jQuery(document).ready(function($){
 	 	var $container = $('#container');
 		// initialize
 		$container.masonry({
-		 'columnWidth': '.item-principal',
-		  itemSelector: '.item-principal'
+		 	columnWidth: '.item-principal',
+		  	itemSelector: '.item-principal'
 		});
 
 	 });

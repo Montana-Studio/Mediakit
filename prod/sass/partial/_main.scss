@@ -27,3 +27,11 @@ a {
 	max-width: 1280px;
 	margin:0 auto;
 }
+h1 {
+	font:{family:$primary_font;}
+	color:#000;
+	@extend .text-left;
+}
+iframe {
+	width: 100%;
+}
