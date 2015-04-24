@@ -33,9 +33,9 @@
 .gridle-debug .container, .container.gridle-debug {
   background-color: #f5f5f5; }
 
-.gridle-debug .grid-1on5, .grid-1on5.gridle-debug, .gridle-debug .grid-0, .grid-0.gridle-debug, .gridle-debug .grid-1, .grid-1.gridle-debug, .gridle-debug .grid-2, .grid-2.gridle-debug, .gridle-debug .grid-3, .grid-3.gridle-debug, .gridle-debug .grid-4, .grid-4.gridle-debug, .gridle-debug .grid-5, .grid-5.gridle-debug, .gridle-debug .grid-6, .grid-6.gridle-debug, .gridle-debug .grid-7, .grid-7.gridle-debug, .gridle-debug .grid-8, .grid-8.gridle-debug, .gridle-debug .grid-9, .grid-9.gridle-debug, .gridle-debug .grid-10, .grid-10.gridle-debug, .gridle-debug .grid-11, .grid-11.gridle-debug, .gridle-debug .grid-12, .grid-12.gridle-debug, .gridle-debug .grid-mobile-1on5, .grid-mobile-1on5.gridle-debug, .gridle-debug .grid-mobile-0, .grid-mobile-0.gridle-debug, .gridle-debug .grid-mobile-1, .grid-mobile-1.gridle-debug, .gridle-debug .grid-mobile-2, .grid-mobile-2.gridle-debug, .gridle-debug .grid-mobile-3, .grid-mobile-3.gridle-debug, .gridle-debug .grid-mobile-4, .grid-mobile-4.gridle-debug, .gridle-debug .grid-mobile-5, .grid-mobile-5.gridle-debug, .gridle-debug .grid-mobile-6, .grid-mobile-6.gridle-debug, .gridle-debug .grid-mobile-7, .grid-mobile-7.gridle-debug, .gridle-debug .grid-mobile-8, .grid-mobile-8.gridle-debug, .gridle-debug .grid-mobile-9, .grid-mobile-9.gridle-debug, .gridle-debug .grid-mobile-10, .grid-mobile-10.gridle-debug, .gridle-debug .grid-mobile-11, .grid-mobile-11.gridle-debug, .gridle-debug .grid-mobile-12, .grid-mobile-12.gridle-debug, .gridle-debug .grid-tablet-1on5, .grid-tablet-1on5.gridle-debug, .gridle-debug .grid-tablet-0, .grid-tablet-0.gridle-debug, .gridle-debug .grid-tablet-1, .grid-tablet-1.gridle-debug, .gridle-debug .grid-tablet-2, .grid-tablet-2.gridle-debug, .gridle-debug .grid-tablet-3, .grid-tablet-3.gridle-debug, .gridle-debug .grid-tablet-4, .grid-tablet-4.gridle-debug, .gridle-debug .grid-tablet-5, .grid-tablet-5.gridle-debug, .gridle-debug .grid-tablet-6, .grid-tablet-6.gridle-debug, .gridle-debug .grid-tablet-7, .grid-tablet-7.gridle-debug, .gridle-debug .grid-tablet-8, .grid-tablet-8.gridle-debug, .gridle-debug .grid-tablet-9, .grid-tablet-9.gridle-debug, .gridle-debug .grid-tablet-10, .grid-tablet-10.gridle-debug, .gridle-debug .grid-tablet-11, .grid-tablet-11.gridle-debug, .gridle-debug .grid-tablet-12, .grid-tablet-12.gridle-debug, .gridle-debug .grid-ipad-landscape-1on5, .grid-ipad-landscape-1on5.gridle-debug, .gridle-debug .grid-ipad-landscape-0, .grid-ipad-landscape-0.gridle-debug, .gridle-debug .grid-ipad-landscape-1, .grid-ipad-landscape-1.gridle-debug, .gridle-debug .grid-ipad-landscape-2, .grid-ipad-landscape-2.gridle-debug, .gridle-debug .grid-ipad-landscape-3, .grid-ipad-landscape-3.gridle-debug, .gridle-debug .grid-ipad-landscape-4, .grid-ipad-landscape-4.gridle-debug, .gridle-debug .grid-ipad-landscape-5, .grid-ipad-landscape-5.gridle-debug, .gridle-debug .grid-ipad-landscape-6, .grid-ipad-landscape-6.gridle-debug, .gridle-debug .grid-ipad-landscape-7, .grid-ipad-landscape-7.gridle-debug, .gridle-debug .grid-ipad-landscape-8, .grid-ipad-landscape-8.gridle-debug, .gridle-debug .grid-ipad-landscape-9, .grid-ipad-landscape-9.gridle-debug, .gridle-debug .grid-ipad-landscape-10, .grid-ipad-landscape-10.gridle-debug, .gridle-debug .grid-ipad-landscape-11, .grid-ipad-landscape-11.gridle-debug, .gridle-debug .grid-ipad-landscape-12, .grid-ipad-landscape-12.gridle-debug, .gridle-debug .header, .header.gridle-debug, .gridle-debug .header .logo, .header .logo.gridle-debug, .gridle-debug .header .nav, .header .nav.gridle-debug, .gridle-debug .header .nav .menu, .header .nav .menu.gridle-debug, .gridle-debug .header .nav .menu ul li, .header .nav .menu ul li.gridle-debug, .gridle-debug .wrapper, .wrapper.gridle-debug, .gridle-debug .footer, .footer.gridle-debug, .gridle-debug .footer .box .first_box, .footer .box .first_box.gridle-debug, .gridle-debug .footer .box .first_box .logo, .footer .box .first_box .logo.gridle-debug, .gridle-debug .footer .box .first_box .newsletter, .footer .box .first_box .newsletter.gridle-debug, .gridle-debug .footer .box .first_box .newsletter input, .footer .box .first_box .newsletter input.gridle-debug, .gridle-debug .footer .box .first_box .newsletter .send, .footer .box .first_box .newsletter .send.gridle-debug, .gridle-debug .footer .box .second_box, .footer .box .second_box.gridle-debug, .gridle-debug .footer .box .third_box, .footer .box .third_box.gridle-debug, .gridle-debug .footer .box .third_box .siguenos li, .gridle-debug .footer .box .third_box .contactanos li, .footer .box .third_box .siguenos li.gridle-debug, .footer .box .third_box .contactanos li.gridle-debug, .gridle-debug .footer .box .third_box .siguenos li i, .gridle-debug .footer .box .third_box .contactanos li i, .footer .box .third_box .siguenos li i.gridle-debug, .footer .box .third_box .contactanos li i.gridle-debug, .gridle-debug .nav-top, .nav-top.gridle-debug, .gridle-debug .nav-top .top-social, .nav-top .top-social.gridle-debug, .gridle-debug .nav-top .search, .nav-top .search.gridle-debug, .gridle-debug .nav-top .search .cont_search, .nav-top .search .cont_search.gridle-debug, .gridle-debug .nav-top .search .search-icon, .nav-top .search .search-icon.gridle-debug, .gridle-debug .destacados .content-destacados, .destacados .content-destacados.gridle-debug, .gridle-debug .destacados .content-destacados .img-loop, .destacados .content-destacados .img-loop.gridle-debug, .gridle-debug .destacados .content-destacados .content-art, .destacados .content-destacados .content-art.gridle-debug, .gridle-debug .content-loop-home #container .item-principal, .content-loop-home #container .item-principal.gridle-debug, .gridle-debug .content-post, .content-post.gridle-debug, .gridle-debug .content-post .single-post, .content-post .single-post.gridle-debug, .gridle-debug .content-post .single-post .content-text, .content-post .single-post .content-text.gridle-debug, .gridle-debug .content-post .single-post .content-text .content-author, .content-post .single-post .content-text .content-author.gridle-debug, .gridle-debug .content-post .single-post .content-text .content-author .img-author, .content-post .single-post .content-text .content-author .img-author.gridle-debug, .gridle-debug .content-post .single-post .content-text .content-author .name-author, .content-post .single-post .content-text .content-author .name-author.gridle-debug {
+.gridle-debug .grid-1on5, .grid-1on5.gridle-debug, .gridle-debug .grid-0, .grid-0.gridle-debug, .gridle-debug .grid-1, .grid-1.gridle-debug, .gridle-debug .grid-2, .grid-2.gridle-debug, .gridle-debug .grid-3, .grid-3.gridle-debug, .gridle-debug .grid-4, .grid-4.gridle-debug, .gridle-debug .grid-5, .grid-5.gridle-debug, .gridle-debug .grid-6, .grid-6.gridle-debug, .gridle-debug .grid-7, .grid-7.gridle-debug, .gridle-debug .grid-8, .grid-8.gridle-debug, .gridle-debug .grid-9, .grid-9.gridle-debug, .gridle-debug .grid-10, .grid-10.gridle-debug, .gridle-debug .grid-11, .grid-11.gridle-debug, .gridle-debug .grid-12, .grid-12.gridle-debug, .gridle-debug .grid-mobile-1on5, .grid-mobile-1on5.gridle-debug, .gridle-debug .grid-mobile-0, .grid-mobile-0.gridle-debug, .gridle-debug .grid-mobile-1, .grid-mobile-1.gridle-debug, .gridle-debug .grid-mobile-2, .grid-mobile-2.gridle-debug, .gridle-debug .grid-mobile-3, .grid-mobile-3.gridle-debug, .gridle-debug .grid-mobile-4, .grid-mobile-4.gridle-debug, .gridle-debug .grid-mobile-5, .grid-mobile-5.gridle-debug, .gridle-debug .grid-mobile-6, .grid-mobile-6.gridle-debug, .gridle-debug .grid-mobile-7, .grid-mobile-7.gridle-debug, .gridle-debug .grid-mobile-8, .grid-mobile-8.gridle-debug, .gridle-debug .grid-mobile-9, .grid-mobile-9.gridle-debug, .gridle-debug .grid-mobile-10, .grid-mobile-10.gridle-debug, .gridle-debug .grid-mobile-11, .grid-mobile-11.gridle-debug, .gridle-debug .grid-mobile-12, .grid-mobile-12.gridle-debug, .gridle-debug .grid-tablet-1on5, .grid-tablet-1on5.gridle-debug, .gridle-debug .grid-tablet-0, .grid-tablet-0.gridle-debug, .gridle-debug .grid-tablet-1, .grid-tablet-1.gridle-debug, .gridle-debug .grid-tablet-2, .grid-tablet-2.gridle-debug, .gridle-debug .grid-tablet-3, .grid-tablet-3.gridle-debug, .gridle-debug .grid-tablet-4, .grid-tablet-4.gridle-debug, .gridle-debug .grid-tablet-5, .grid-tablet-5.gridle-debug, .gridle-debug .grid-tablet-6, .grid-tablet-6.gridle-debug, .gridle-debug .grid-tablet-7, .grid-tablet-7.gridle-debug, .gridle-debug .grid-tablet-8, .grid-tablet-8.gridle-debug, .gridle-debug .grid-tablet-9, .grid-tablet-9.gridle-debug, .gridle-debug .grid-tablet-10, .grid-tablet-10.gridle-debug, .gridle-debug .grid-tablet-11, .grid-tablet-11.gridle-debug, .gridle-debug .grid-tablet-12, .grid-tablet-12.gridle-debug, .gridle-debug .grid-ipad-landscape-1on5, .grid-ipad-landscape-1on5.gridle-debug, .gridle-debug .grid-ipad-landscape-0, .grid-ipad-landscape-0.gridle-debug, .gridle-debug .grid-ipad-landscape-1, .grid-ipad-landscape-1.gridle-debug, .gridle-debug .grid-ipad-landscape-2, .grid-ipad-landscape-2.gridle-debug, .gridle-debug .grid-ipad-landscape-3, .grid-ipad-landscape-3.gridle-debug, .gridle-debug .grid-ipad-landscape-4, .grid-ipad-landscape-4.gridle-debug, .gridle-debug .grid-ipad-landscape-5, .grid-ipad-landscape-5.gridle-debug, .gridle-debug .grid-ipad-landscape-6, .grid-ipad-landscape-6.gridle-debug, .gridle-debug .grid-ipad-landscape-7, .grid-ipad-landscape-7.gridle-debug, .gridle-debug .grid-ipad-landscape-8, .grid-ipad-landscape-8.gridle-debug, .gridle-debug .grid-ipad-landscape-9, .grid-ipad-landscape-9.gridle-debug, .gridle-debug .grid-ipad-landscape-10, .grid-ipad-landscape-10.gridle-debug, .gridle-debug .grid-ipad-landscape-11, .grid-ipad-landscape-11.gridle-debug, .gridle-debug .grid-ipad-landscape-12, .grid-ipad-landscape-12.gridle-debug, .gridle-debug .header, .header.gridle-debug, .gridle-debug .header .logo, .header .logo.gridle-debug, .gridle-debug .header .nav, .header .nav.gridle-debug, .gridle-debug .header .nav .menu, .header .nav .menu.gridle-debug, .gridle-debug .header .nav .menu ul li, .header .nav .menu ul li.gridle-debug, .gridle-debug .wrapper, .wrapper.gridle-debug, .gridle-debug .footer, .footer.gridle-debug, .gridle-debug .footer .box .first_box, .footer .box .first_box.gridle-debug, .gridle-debug .footer .box .first_box .logo, .footer .box .first_box .logo.gridle-debug, .gridle-debug .footer .box .first_box .newsletter, .footer .box .first_box .newsletter.gridle-debug, .gridle-debug .footer .box .first_box .newsletter input, .footer .box .first_box .newsletter input.gridle-debug, .gridle-debug .footer .box .first_box .newsletter .send, .footer .box .first_box .newsletter .send.gridle-debug, .gridle-debug .footer .box .second_box, .footer .box .second_box.gridle-debug, .gridle-debug .footer .box .third_box, .footer .box .third_box.gridle-debug, .gridle-debug .footer .box .third_box .siguenos li, .gridle-debug .footer .box .third_box .contactanos li, .footer .box .third_box .siguenos li.gridle-debug, .footer .box .third_box .contactanos li.gridle-debug, .gridle-debug .footer .box .third_box .siguenos li i, .gridle-debug .footer .box .third_box .contactanos li i, .footer .box .third_box .siguenos li i.gridle-debug, .footer .box .third_box .contactanos li i.gridle-debug, .gridle-debug .nav-top, .nav-top.gridle-debug, .gridle-debug .nav-top .top-social, .nav-top .top-social.gridle-debug, .gridle-debug .nav-top .search, .nav-top .search.gridle-debug, .gridle-debug .nav-top .search .cont_search, .nav-top .search .cont_search.gridle-debug, .gridle-debug .nav-top .search .search-icon, .nav-top .search .search-icon.gridle-debug, .gridle-debug .destacados .content-destacados, .destacados .content-destacados.gridle-debug, .gridle-debug .destacados .content-destacados .img-loop, .destacados .content-destacados .img-loop.gridle-debug, .gridle-debug .destacados .content-destacados .content-art, .destacados .content-destacados .content-art.gridle-debug, .gridle-debug .content-loop-home #container .item-principal, .content-loop-home #container .item-principal.gridle-debug, .gridle-debug .content-post, .content-post.gridle-debug, .gridle-debug .content-post .single-post, .content-post .single-post.gridle-debug, .gridle-debug .content-post .single-post .content-text, .content-post .single-post .content-text.gridle-debug, .gridle-debug .content-post .single-post .content-text .content-author, .content-post .single-post .content-text .content-author.gridle-debug, .gridle-debug .content-post .single-post .content-text .content-author .img-author, .content-post .single-post .content-text .content-author .img-author.gridle-debug, .gridle-debug .content-post .single-post .content-text .content-author .name-author, .content-post .single-post .content-text .content-author .name-author.gridle-debug, .gridle-debug .post-loop, .post-loop.gridle-debug, .gridle-debug .post-loop .img-post, .post-loop .img-post.gridle-debug, .gridle-debug .post-loop .content-post, .post-loop .content-post.gridle-debug, .gridle-debug .post-loop .content-post .content-author, .post-loop .content-post .content-author.gridle-debug, .gridle-debug .post-loop .content-post .content-author .img-author, .post-loop .content-post .content-author .img-author.gridle-debug, .gridle-debug .post-loop .content-post .content-author .name-author, .post-loop .content-post .content-author .name-author.gridle-debug, .gridle-debug .post-loop .date-post, .post-loop .date-post.gridle-debug {
   background-color: #daeff5; }
-  .gridle-debug .grid-1on5:before, .grid-1on5.gridle-debug:before, .gridle-debug .grid-0:before, .grid-0.gridle-debug:before, .gridle-debug .grid-1:before, .grid-1.gridle-debug:before, .gridle-debug .grid-2:before, .grid-2.gridle-debug:before, .gridle-debug .grid-3:before, .grid-3.gridle-debug:before, .gridle-debug .grid-4:before, .grid-4.gridle-debug:before, .gridle-debug .grid-5:before, .grid-5.gridle-debug:before, .gridle-debug .grid-6:before, .grid-6.gridle-debug:before, .gridle-debug .grid-7:before, .grid-7.gridle-debug:before, .gridle-debug .grid-8:before, .grid-8.gridle-debug:before, .gridle-debug .grid-9:before, .grid-9.gridle-debug:before, .gridle-debug .grid-10:before, .grid-10.gridle-debug:before, .gridle-debug .grid-11:before, .grid-11.gridle-debug:before, .gridle-debug .grid-12:before, .grid-12.gridle-debug:before, .gridle-debug .grid-mobile-1on5:before, .grid-mobile-1on5.gridle-debug:before, .gridle-debug .grid-mobile-0:before, .grid-mobile-0.gridle-debug:before, .gridle-debug .grid-mobile-1:before, .grid-mobile-1.gridle-debug:before, .gridle-debug .grid-mobile-2:before, .grid-mobile-2.gridle-debug:before, .gridle-debug .grid-mobile-3:before, .grid-mobile-3.gridle-debug:before, .gridle-debug .grid-mobile-4:before, .grid-mobile-4.gridle-debug:before, .gridle-debug .grid-mobile-5:before, .grid-mobile-5.gridle-debug:before, .gridle-debug .grid-mobile-6:before, .grid-mobile-6.gridle-debug:before, .gridle-debug .grid-mobile-7:before, .grid-mobile-7.gridle-debug:before, .gridle-debug .grid-mobile-8:before, .grid-mobile-8.gridle-debug:before, .gridle-debug .grid-mobile-9:before, .grid-mobile-9.gridle-debug:before, .gridle-debug .grid-mobile-10:before, .grid-mobile-10.gridle-debug:before, .gridle-debug .grid-mobile-11:before, .grid-mobile-11.gridle-debug:before, .gridle-debug .grid-mobile-12:before, .grid-mobile-12.gridle-debug:before, .gridle-debug .grid-tablet-1on5:before, .grid-tablet-1on5.gridle-debug:before, .gridle-debug .grid-tablet-0:before, .grid-tablet-0.gridle-debug:before, .gridle-debug .grid-tablet-1:before, .grid-tablet-1.gridle-debug:before, .gridle-debug .grid-tablet-2:before, .grid-tablet-2.gridle-debug:before, .gridle-debug .grid-tablet-3:before, .grid-tablet-3.gridle-debug:before, .gridle-debug .grid-tablet-4:before, .grid-tablet-4.gridle-debug:before, .gridle-debug .grid-tablet-5:before, .grid-tablet-5.gridle-debug:before, .gridle-debug .grid-tablet-6:before, .grid-tablet-6.gridle-debug:before, .gridle-debug .grid-tablet-7:before, .grid-tablet-7.gridle-debug:before, .gridle-debug .grid-tablet-8:before, .grid-tablet-8.gridle-debug:before, .gridle-debug .grid-tablet-9:before, .grid-tablet-9.gridle-debug:before, .gridle-debug .grid-tablet-10:before, .grid-tablet-10.gridle-debug:before, .gridle-debug .grid-tablet-11:before, .grid-tablet-11.gridle-debug:before, .gridle-debug .grid-tablet-12:before, .grid-tablet-12.gridle-debug:before, .gridle-debug .grid-ipad-landscape-1on5:before, .grid-ipad-landscape-1on5.gridle-debug:before, .gridle-debug .grid-ipad-landscape-0:before, .grid-ipad-landscape-0.gridle-debug:before, .gridle-debug .grid-ipad-landscape-1:before, .grid-ipad-landscape-1.gridle-debug:before, .gridle-debug .grid-ipad-landscape-2:before, .grid-ipad-landscape-2.gridle-debug:before, .gridle-debug .grid-ipad-landscape-3:before, .grid-ipad-landscape-3.gridle-debug:before, .gridle-debug .grid-ipad-landscape-4:before, .grid-ipad-landscape-4.gridle-debug:before, .gridle-debug .grid-ipad-landscape-5:before, .grid-ipad-landscape-5.gridle-debug:before, .gridle-debug .grid-ipad-landscape-6:before, .grid-ipad-landscape-6.gridle-debug:before, .gridle-debug .grid-ipad-landscape-7:before, .grid-ipad-landscape-7.gridle-debug:before, .gridle-debug .grid-ipad-landscape-8:before, .grid-ipad-landscape-8.gridle-debug:before, .gridle-debug .grid-ipad-landscape-9:before, .grid-ipad-landscape-9.gridle-debug:before, .gridle-debug .grid-ipad-landscape-10:before, .grid-ipad-landscape-10.gridle-debug:before, .gridle-debug .grid-ipad-landscape-11:before, .grid-ipad-landscape-11.gridle-debug:before, .gridle-debug .grid-ipad-landscape-12:before, .grid-ipad-landscape-12.gridle-debug:before, .gridle-debug .header:before, .header.gridle-debug:before, .gridle-debug .header .logo:before, .header .logo.gridle-debug:before, .gridle-debug .header .nav:before, .header .nav.gridle-debug:before, .gridle-debug .header .nav .menu:before, .header .nav .menu.gridle-debug:before, .gridle-debug .header .nav .menu ul li:before, .header .nav .menu ul li.gridle-debug:before, .gridle-debug .wrapper:before, .wrapper.gridle-debug:before, .gridle-debug .footer:before, .footer.gridle-debug:before, .gridle-debug .footer .box .first_box:before, .footer .box .first_box.gridle-debug:before, .gridle-debug .footer .box .first_box .logo:before, .footer .box .first_box .logo.gridle-debug:before, .gridle-debug .footer .box .first_box .newsletter:before, .footer .box .first_box .newsletter.gridle-debug:before, .gridle-debug .footer .box .first_box .newsletter input:before, .footer .box .first_box .newsletter input.gridle-debug:before, .gridle-debug .footer .box .first_box .newsletter .send:before, .footer .box .first_box .newsletter .send.gridle-debug:before, .gridle-debug .footer .box .second_box:before, .footer .box .second_box.gridle-debug:before, .gridle-debug .footer .box .third_box:before, .footer .box .third_box.gridle-debug:before, .gridle-debug .footer .box .third_box .siguenos li:before, .gridle-debug .footer .box .third_box .contactanos li:before, .footer .box .third_box .siguenos li.gridle-debug:before, .footer .box .third_box .contactanos li.gridle-debug:before, .gridle-debug .footer .box .third_box .siguenos li i:before, .gridle-debug .footer .box .third_box .contactanos li i:before, .footer .box .third_box .siguenos li i.gridle-debug:before, .footer .box .third_box .contactanos li i.gridle-debug:before, .gridle-debug .nav-top:before, .nav-top.gridle-debug:before, .gridle-debug .nav-top .top-social:before, .nav-top .top-social.gridle-debug:before, .gridle-debug .nav-top .search:before, .nav-top .search.gridle-debug:before, .gridle-debug .nav-top .search .cont_search:before, .nav-top .search .cont_search.gridle-debug:before, .gridle-debug .nav-top .search .search-icon:before, .nav-top .search .search-icon.gridle-debug:before, .gridle-debug .destacados .content-destacados:before, .destacados .content-destacados.gridle-debug:before, .gridle-debug .destacados .content-destacados .img-loop:before, .destacados .content-destacados .img-loop.gridle-debug:before, .gridle-debug .destacados .content-destacados .content-art:before, .destacados .content-destacados .content-art.gridle-debug:before, .gridle-debug .content-loop-home #container .item-principal:before, .content-loop-home #container .item-principal.gridle-debug:before, .gridle-debug .content-post:before, .content-post.gridle-debug:before, .gridle-debug .content-post .single-post:before, .content-post .single-post.gridle-debug:before, .gridle-debug .content-post .single-post .content-text:before, .content-post .single-post .content-text.gridle-debug:before, .gridle-debug .content-post .single-post .content-text .content-author:before, .content-post .single-post .content-text .content-author.gridle-debug:before, .gridle-debug .content-post .single-post .content-text .content-author .img-author:before, .content-post .single-post .content-text .content-author .img-author.gridle-debug:before, .gridle-debug .content-post .single-post .content-text .content-author .name-author:before, .content-post .single-post .content-text .content-author .name-author.gridle-debug:before, .gridle-debug .grid-1on5:after, .grid-1on5.gridle-debug:after, .gridle-debug .grid-0:after, .grid-0.gridle-debug:after, .gridle-debug .grid-1:after, .grid-1.gridle-debug:after, .gridle-debug .grid-2:after, .grid-2.gridle-debug:after, .gridle-debug .grid-3:after, .grid-3.gridle-debug:after, .gridle-debug .grid-4:after, .grid-4.gridle-debug:after, .gridle-debug .grid-5:after, .grid-5.gridle-debug:after, .gridle-debug .grid-6:after, .grid-6.gridle-debug:after, .gridle-debug .grid-7:after, .grid-7.gridle-debug:after, .gridle-debug .grid-8:after, .grid-8.gridle-debug:after, .gridle-debug .grid-9:after, .grid-9.gridle-debug:after, .gridle-debug .grid-10:after, .grid-10.gridle-debug:after, .gridle-debug .grid-11:after, .grid-11.gridle-debug:after, .gridle-debug .grid-12:after, .grid-12.gridle-debug:after, .gridle-debug .grid-mobile-1on5:after, .grid-mobile-1on5.gridle-debug:after, .gridle-debug .grid-mobile-0:after, .grid-mobile-0.gridle-debug:after, .gridle-debug .grid-mobile-1:after, .grid-mobile-1.gridle-debug:after, .gridle-debug .grid-mobile-2:after, .grid-mobile-2.gridle-debug:after, .gridle-debug .grid-mobile-3:after, .grid-mobile-3.gridle-debug:after, .gridle-debug .grid-mobile-4:after, .grid-mobile-4.gridle-debug:after, .gridle-debug .grid-mobile-5:after, .grid-mobile-5.gridle-debug:after, .gridle-debug .grid-mobile-6:after, .grid-mobile-6.gridle-debug:after, .gridle-debug .grid-mobile-7:after, .grid-mobile-7.gridle-debug:after, .gridle-debug .grid-mobile-8:after, .grid-mobile-8.gridle-debug:after, .gridle-debug .grid-mobile-9:after, .grid-mobile-9.gridle-debug:after, .gridle-debug .grid-mobile-10:after, .grid-mobile-10.gridle-debug:after, .gridle-debug .grid-mobile-11:after, .grid-mobile-11.gridle-debug:after, .gridle-debug .grid-mobile-12:after, .grid-mobile-12.gridle-debug:after, .gridle-debug .grid-tablet-1on5:after, .grid-tablet-1on5.gridle-debug:after, .gridle-debug .grid-tablet-0:after, .grid-tablet-0.gridle-debug:after, .gridle-debug .grid-tablet-1:after, .grid-tablet-1.gridle-debug:after, .gridle-debug .grid-tablet-2:after, .grid-tablet-2.gridle-debug:after, .gridle-debug .grid-tablet-3:after, .grid-tablet-3.gridle-debug:after, .gridle-debug .grid-tablet-4:after, .grid-tablet-4.gridle-debug:after, .gridle-debug .grid-tablet-5:after, .grid-tablet-5.gridle-debug:after, .gridle-debug .grid-tablet-6:after, .grid-tablet-6.gridle-debug:after, .gridle-debug .grid-tablet-7:after, .grid-tablet-7.gridle-debug:after, .gridle-debug .grid-tablet-8:after, .grid-tablet-8.gridle-debug:after, .gridle-debug .grid-tablet-9:after, .grid-tablet-9.gridle-debug:after, .gridle-debug .grid-tablet-10:after, .grid-tablet-10.gridle-debug:after, .gridle-debug .grid-tablet-11:after, .grid-tablet-11.gridle-debug:after, .gridle-debug .grid-tablet-12:after, .grid-tablet-12.gridle-debug:after, .gridle-debug .grid-ipad-landscape-1on5:after, .grid-ipad-landscape-1on5.gridle-debug:after, .gridle-debug .grid-ipad-landscape-0:after, .grid-ipad-landscape-0.gridle-debug:after, .gridle-debug .grid-ipad-landscape-1:after, .grid-ipad-landscape-1.gridle-debug:after, .gridle-debug .grid-ipad-landscape-2:after, .grid-ipad-landscape-2.gridle-debug:after, .gridle-debug .grid-ipad-landscape-3:after, .grid-ipad-landscape-3.gridle-debug:after, .gridle-debug .grid-ipad-landscape-4:after, .grid-ipad-landscape-4.gridle-debug:after, .gridle-debug .grid-ipad-landscape-5:after, .grid-ipad-landscape-5.gridle-debug:after, .gridle-debug .grid-ipad-landscape-6:after, .grid-ipad-landscape-6.gridle-debug:after, .gridle-debug .grid-ipad-landscape-7:after, .grid-ipad-landscape-7.gridle-debug:after, .gridle-debug .grid-ipad-landscape-8:after, .grid-ipad-landscape-8.gridle-debug:after, .gridle-debug .grid-ipad-landscape-9:after, .grid-ipad-landscape-9.gridle-debug:after, .gridle-debug .grid-ipad-landscape-10:after, .grid-ipad-landscape-10.gridle-debug:after, .gridle-debug .grid-ipad-landscape-11:after, .grid-ipad-landscape-11.gridle-debug:after, .gridle-debug .grid-ipad-landscape-12:after, .grid-ipad-landscape-12.gridle-debug:after, .gridle-debug .header:after, .header.gridle-debug:after, .gridle-debug .header .logo:after, .header .logo.gridle-debug:after, .gridle-debug .header .nav:after, .header .nav.gridle-debug:after, .gridle-debug .header .nav .menu:after, .header .nav .menu.gridle-debug:after, .gridle-debug .header .nav .menu ul li:after, .header .nav .menu ul li.gridle-debug:after, .gridle-debug .wrapper:after, .wrapper.gridle-debug:after, .gridle-debug .footer:after, .footer.gridle-debug:after, .gridle-debug .footer .box .first_box:after, .footer .box .first_box.gridle-debug:after, .gridle-debug .footer .box .first_box .logo:after, .footer .box .first_box .logo.gridle-debug:after, .gridle-debug .footer .box .first_box .newsletter:after, .footer .box .first_box .newsletter.gridle-debug:after, .gridle-debug .footer .box .first_box .newsletter input:after, .footer .box .first_box .newsletter input.gridle-debug:after, .gridle-debug .footer .box .first_box .newsletter .send:after, .footer .box .first_box .newsletter .send.gridle-debug:after, .gridle-debug .footer .box .second_box:after, .footer .box .second_box.gridle-debug:after, .gridle-debug .footer .box .third_box:after, .footer .box .third_box.gridle-debug:after, .gridle-debug .footer .box .third_box .siguenos li:after, .gridle-debug .footer .box .third_box .contactanos li:after, .footer .box .third_box .siguenos li.gridle-debug:after, .footer .box .third_box .contactanos li.gridle-debug:after, .gridle-debug .footer .box .third_box .siguenos li i:after, .gridle-debug .footer .box .third_box .contactanos li i:after, .footer .box .third_box .siguenos li i.gridle-debug:after, .footer .box .third_box .contactanos li i.gridle-debug:after, .gridle-debug .nav-top:after, .nav-top.gridle-debug:after, .gridle-debug .nav-top .top-social:after, .nav-top .top-social.gridle-debug:after, .gridle-debug .nav-top .search:after, .nav-top .search.gridle-debug:after, .gridle-debug .nav-top .search .cont_search:after, .nav-top .search .cont_search.gridle-debug:after, .gridle-debug .nav-top .search .search-icon:after, .nav-top .search .search-icon.gridle-debug:after, .gridle-debug .destacados .content-destacados:after, .destacados .content-destacados.gridle-debug:after, .gridle-debug .destacados .content-destacados .img-loop:after, .destacados .content-destacados .img-loop.gridle-debug:after, .gridle-debug .destacados .content-destacados .content-art:after, .destacados .content-destacados .content-art.gridle-debug:after, .gridle-debug .content-loop-home #container .item-principal:after, .content-loop-home #container .item-principal.gridle-debug:after, .gridle-debug .content-post:after, .content-post.gridle-debug:after, .gridle-debug .content-post .single-post:after, .content-post .single-post.gridle-debug:after, .gridle-debug .content-post .single-post .content-text:after, .content-post .single-post .content-text.gridle-debug:after, .gridle-debug .content-post .single-post .content-text .content-author:after, .content-post .single-post .content-text .content-author.gridle-debug:after, .gridle-debug .content-post .single-post .content-text .content-author .img-author:after, .content-post .single-post .content-text .content-author .img-author.gridle-debug:after, .gridle-debug .content-post .single-post .content-text .content-author .name-author:after, .content-post .single-post .content-text .content-author .name-author.gridle-debug:after {
+  .gridle-debug .grid-1on5:before, .grid-1on5.gridle-debug:before, .gridle-debug .grid-0:before, .grid-0.gridle-debug:before, .gridle-debug .grid-1:before, .grid-1.gridle-debug:before, .gridle-debug .grid-2:before, .grid-2.gridle-debug:before, .gridle-debug .grid-3:before, .grid-3.gridle-debug:before, .gridle-debug .grid-4:before, .grid-4.gridle-debug:before, .gridle-debug .grid-5:before, .grid-5.gridle-debug:before, .gridle-debug .grid-6:before, .grid-6.gridle-debug:before, .gridle-debug .grid-7:before, .grid-7.gridle-debug:before, .gridle-debug .grid-8:before, .grid-8.gridle-debug:before, .gridle-debug .grid-9:before, .grid-9.gridle-debug:before, .gridle-debug .grid-10:before, .grid-10.gridle-debug:before, .gridle-debug .grid-11:before, .grid-11.gridle-debug:before, .gridle-debug .grid-12:before, .grid-12.gridle-debug:before, .gridle-debug .grid-mobile-1on5:before, .grid-mobile-1on5.gridle-debug:before, .gridle-debug .grid-mobile-0:before, .grid-mobile-0.gridle-debug:before, .gridle-debug .grid-mobile-1:before, .grid-mobile-1.gridle-debug:before, .gridle-debug .grid-mobile-2:before, .grid-mobile-2.gridle-debug:before, .gridle-debug .grid-mobile-3:before, .grid-mobile-3.gridle-debug:before, .gridle-debug .grid-mobile-4:before, .grid-mobile-4.gridle-debug:before, .gridle-debug .grid-mobile-5:before, .grid-mobile-5.gridle-debug:before, .gridle-debug .grid-mobile-6:before, .grid-mobile-6.gridle-debug:before, .gridle-debug .grid-mobile-7:before, .grid-mobile-7.gridle-debug:before, .gridle-debug .grid-mobile-8:before, .grid-mobile-8.gridle-debug:before, .gridle-debug .grid-mobile-9:before, .grid-mobile-9.gridle-debug:before, .gridle-debug .grid-mobile-10:before, .grid-mobile-10.gridle-debug:before, .gridle-debug .grid-mobile-11:before, .grid-mobile-11.gridle-debug:before, .gridle-debug .grid-mobile-12:before, .grid-mobile-12.gridle-debug:before, .gridle-debug .grid-tablet-1on5:before, .grid-tablet-1on5.gridle-debug:before, .gridle-debug .grid-tablet-0:before, .grid-tablet-0.gridle-debug:before, .gridle-debug .grid-tablet-1:before, .grid-tablet-1.gridle-debug:before, .gridle-debug .grid-tablet-2:before, .grid-tablet-2.gridle-debug:before, .gridle-debug .grid-tablet-3:before, .grid-tablet-3.gridle-debug:before, .gridle-debug .grid-tablet-4:before, .grid-tablet-4.gridle-debug:before, .gridle-debug .grid-tablet-5:before, .grid-tablet-5.gridle-debug:before, .gridle-debug .grid-tablet-6:before, .grid-tablet-6.gridle-debug:before, .gridle-debug .grid-tablet-7:before, .grid-tablet-7.gridle-debug:before, .gridle-debug .grid-tablet-8:before, .grid-tablet-8.gridle-debug:before, .gridle-debug .grid-tablet-9:before, .grid-tablet-9.gridle-debug:before, .gridle-debug .grid-tablet-10:before, .grid-tablet-10.gridle-debug:before, .gridle-debug .grid-tablet-11:before, .grid-tablet-11.gridle-debug:before, .gridle-debug .grid-tablet-12:before, .grid-tablet-12.gridle-debug:before, .gridle-debug .grid-ipad-landscape-1on5:before, .grid-ipad-landscape-1on5.gridle-debug:before, .gridle-debug .grid-ipad-landscape-0:before, .grid-ipad-landscape-0.gridle-debug:before, .gridle-debug .grid-ipad-landscape-1:before, .grid-ipad-landscape-1.gridle-debug:before, .gridle-debug .grid-ipad-landscape-2:before, .grid-ipad-landscape-2.gridle-debug:before, .gridle-debug .grid-ipad-landscape-3:before, .grid-ipad-landscape-3.gridle-debug:before, .gridle-debug .grid-ipad-landscape-4:before, .grid-ipad-landscape-4.gridle-debug:before, .gridle-debug .grid-ipad-landscape-5:before, .grid-ipad-landscape-5.gridle-debug:before, .gridle-debug .grid-ipad-landscape-6:before, .grid-ipad-landscape-6.gridle-debug:before, .gridle-debug .grid-ipad-landscape-7:before, .grid-ipad-landscape-7.gridle-debug:before, .gridle-debug .grid-ipad-landscape-8:before, .grid-ipad-landscape-8.gridle-debug:before, .gridle-debug .grid-ipad-landscape-9:before, .grid-ipad-landscape-9.gridle-debug:before, .gridle-debug .grid-ipad-landscape-10:before, .grid-ipad-landscape-10.gridle-debug:before, .gridle-debug .grid-ipad-landscape-11:before, .grid-ipad-landscape-11.gridle-debug:before, .gridle-debug .grid-ipad-landscape-12:before, .grid-ipad-landscape-12.gridle-debug:before, .gridle-debug .header:before, .header.gridle-debug:before, .gridle-debug .header .logo:before, .header .logo.gridle-debug:before, .gridle-debug .header .nav:before, .header .nav.gridle-debug:before, .gridle-debug .header .nav .menu:before, .header .nav .menu.gridle-debug:before, .gridle-debug .header .nav .menu ul li:before, .header .nav .menu ul li.gridle-debug:before, .gridle-debug .wrapper:before, .wrapper.gridle-debug:before, .gridle-debug .footer:before, .footer.gridle-debug:before, .gridle-debug .footer .box .first_box:before, .footer .box .first_box.gridle-debug:before, .gridle-debug .footer .box .first_box .logo:before, .footer .box .first_box .logo.gridle-debug:before, .gridle-debug .footer .box .first_box .newsletter:before, .footer .box .first_box .newsletter.gridle-debug:before, .gridle-debug .footer .box .first_box .newsletter input:before, .footer .box .first_box .newsletter input.gridle-debug:before, .gridle-debug .footer .box .first_box .newsletter .send:before, .footer .box .first_box .newsletter .send.gridle-debug:before, .gridle-debug .footer .box .second_box:before, .footer .box .second_box.gridle-debug:before, .gridle-debug .footer .box .third_box:before, .footer .box .third_box.gridle-debug:before, .gridle-debug .footer .box .third_box .siguenos li:before, .gridle-debug .footer .box .third_box .contactanos li:before, .footer .box .third_box .siguenos li.gridle-debug:before, .footer .box .third_box .contactanos li.gridle-debug:before, .gridle-debug .footer .box .third_box .siguenos li i:before, .gridle-debug .footer .box .third_box .contactanos li i:before, .footer .box .third_box .siguenos li i.gridle-debug:before, .footer .box .third_box .contactanos li i.gridle-debug:before, .gridle-debug .nav-top:before, .nav-top.gridle-debug:before, .gridle-debug .nav-top .top-social:before, .nav-top .top-social.gridle-debug:before, .gridle-debug .nav-top .search:before, .nav-top .search.gridle-debug:before, .gridle-debug .nav-top .search .cont_search:before, .nav-top .search .cont_search.gridle-debug:before, .gridle-debug .nav-top .search .search-icon:before, .nav-top .search .search-icon.gridle-debug:before, .gridle-debug .destacados .content-destacados:before, .destacados .content-destacados.gridle-debug:before, .gridle-debug .destacados .content-destacados .img-loop:before, .destacados .content-destacados .img-loop.gridle-debug:before, .gridle-debug .destacados .content-destacados .content-art:before, .destacados .content-destacados .content-art.gridle-debug:before, .gridle-debug .content-loop-home #container .item-principal:before, .content-loop-home #container .item-principal.gridle-debug:before, .gridle-debug .content-post:before, .content-post.gridle-debug:before, .gridle-debug .content-post .single-post:before, .content-post .single-post.gridle-debug:before, .gridle-debug .content-post .single-post .content-text:before, .content-post .single-post .content-text.gridle-debug:before, .gridle-debug .content-post .single-post .content-text .content-author:before, .content-post .single-post .content-text .content-author.gridle-debug:before, .gridle-debug .content-post .single-post .content-text .content-author .img-author:before, .content-post .single-post .content-text .content-author .img-author.gridle-debug:before, .gridle-debug .content-post .single-post .content-text .content-author .name-author:before, .content-post .single-post .content-text .content-author .name-author.gridle-debug:before, .gridle-debug .post-loop:before, .post-loop.gridle-debug:before, .gridle-debug .post-loop .img-post:before, .post-loop .img-post.gridle-debug:before, .gridle-debug .post-loop .content-post:before, .post-loop .content-post.gridle-debug:before, .gridle-debug .post-loop .content-post .content-author:before, .post-loop .content-post .content-author.gridle-debug:before, .gridle-debug .post-loop .content-post .content-author .img-author:before, .post-loop .content-post .content-author .img-author.gridle-debug:before, .gridle-debug .post-loop .content-post .content-author .name-author:before, .post-loop .content-post .content-author .name-author.gridle-debug:before, .gridle-debug .post-loop .date-post:before, .post-loop .date-post.gridle-debug:before, .gridle-debug .grid-1on5:after, .grid-1on5.gridle-debug:after, .gridle-debug .grid-0:after, .grid-0.gridle-debug:after, .gridle-debug .grid-1:after, .grid-1.gridle-debug:after, .gridle-debug .grid-2:after, .grid-2.gridle-debug:after, .gridle-debug .grid-3:after, .grid-3.gridle-debug:after, .gridle-debug .grid-4:after, .grid-4.gridle-debug:after, .gridle-debug .grid-5:after, .grid-5.gridle-debug:after, .gridle-debug .grid-6:after, .grid-6.gridle-debug:after, .gridle-debug .grid-7:after, .grid-7.gridle-debug:after, .gridle-debug .grid-8:after, .grid-8.gridle-debug:after, .gridle-debug .grid-9:after, .grid-9.gridle-debug:after, .gridle-debug .grid-10:after, .grid-10.gridle-debug:after, .gridle-debug .grid-11:after, .grid-11.gridle-debug:after, .gridle-debug .grid-12:after, .grid-12.gridle-debug:after, .gridle-debug .grid-mobile-1on5:after, .grid-mobile-1on5.gridle-debug:after, .gridle-debug .grid-mobile-0:after, .grid-mobile-0.gridle-debug:after, .gridle-debug .grid-mobile-1:after, .grid-mobile-1.gridle-debug:after, .gridle-debug .grid-mobile-2:after, .grid-mobile-2.gridle-debug:after, .gridle-debug .grid-mobile-3:after, .grid-mobile-3.gridle-debug:after, .gridle-debug .grid-mobile-4:after, .grid-mobile-4.gridle-debug:after, .gridle-debug .grid-mobile-5:after, .grid-mobile-5.gridle-debug:after, .gridle-debug .grid-mobile-6:after, .grid-mobile-6.gridle-debug:after, .gridle-debug .grid-mobile-7:after, .grid-mobile-7.gridle-debug:after, .gridle-debug .grid-mobile-8:after, .grid-mobile-8.gridle-debug:after, .gridle-debug .grid-mobile-9:after, .grid-mobile-9.gridle-debug:after, .gridle-debug .grid-mobile-10:after, .grid-mobile-10.gridle-debug:after, .gridle-debug .grid-mobile-11:after, .grid-mobile-11.gridle-debug:after, .gridle-debug .grid-mobile-12:after, .grid-mobile-12.gridle-debug:after, .gridle-debug .grid-tablet-1on5:after, .grid-tablet-1on5.gridle-debug:after, .gridle-debug .grid-tablet-0:after, .grid-tablet-0.gridle-debug:after, .gridle-debug .grid-tablet-1:after, .grid-tablet-1.gridle-debug:after, .gridle-debug .grid-tablet-2:after, .grid-tablet-2.gridle-debug:after, .gridle-debug .grid-tablet-3:after, .grid-tablet-3.gridle-debug:after, .gridle-debug .grid-tablet-4:after, .grid-tablet-4.gridle-debug:after, .gridle-debug .grid-tablet-5:after, .grid-tablet-5.gridle-debug:after, .gridle-debug .grid-tablet-6:after, .grid-tablet-6.gridle-debug:after, .gridle-debug .grid-tablet-7:after, .grid-tablet-7.gridle-debug:after, .gridle-debug .grid-tablet-8:after, .grid-tablet-8.gridle-debug:after, .gridle-debug .grid-tablet-9:after, .grid-tablet-9.gridle-debug:after, .gridle-debug .grid-tablet-10:after, .grid-tablet-10.gridle-debug:after, .gridle-debug .grid-tablet-11:after, .grid-tablet-11.gridle-debug:after, .gridle-debug .grid-tablet-12:after, .grid-tablet-12.gridle-debug:after, .gridle-debug .grid-ipad-landscape-1on5:after, .grid-ipad-landscape-1on5.gridle-debug:after, .gridle-debug .grid-ipad-landscape-0:after, .grid-ipad-landscape-0.gridle-debug:after, .gridle-debug .grid-ipad-landscape-1:after, .grid-ipad-landscape-1.gridle-debug:after, .gridle-debug .grid-ipad-landscape-2:after, .grid-ipad-landscape-2.gridle-debug:after, .gridle-debug .grid-ipad-landscape-3:after, .grid-ipad-landscape-3.gridle-debug:after, .gridle-debug .grid-ipad-landscape-4:after, .grid-ipad-landscape-4.gridle-debug:after, .gridle-debug .grid-ipad-landscape-5:after, .grid-ipad-landscape-5.gridle-debug:after, .gridle-debug .grid-ipad-landscape-6:after, .grid-ipad-landscape-6.gridle-debug:after, .gridle-debug .grid-ipad-landscape-7:after, .grid-ipad-landscape-7.gridle-debug:after, .gridle-debug .grid-ipad-landscape-8:after, .grid-ipad-landscape-8.gridle-debug:after, .gridle-debug .grid-ipad-landscape-9:after, .grid-ipad-landscape-9.gridle-debug:after, .gridle-debug .grid-ipad-landscape-10:after, .grid-ipad-landscape-10.gridle-debug:after, .gridle-debug .grid-ipad-landscape-11:after, .grid-ipad-landscape-11.gridle-debug:after, .gridle-debug .grid-ipad-landscape-12:after, .grid-ipad-landscape-12.gridle-debug:after, .gridle-debug .header:after, .header.gridle-debug:after, .gridle-debug .header .logo:after, .header .logo.gridle-debug:after, .gridle-debug .header .nav:after, .header .nav.gridle-debug:after, .gridle-debug .header .nav .menu:after, .header .nav .menu.gridle-debug:after, .gridle-debug .header .nav .menu ul li:after, .header .nav .menu ul li.gridle-debug:after, .gridle-debug .wrapper:after, .wrapper.gridle-debug:after, .gridle-debug .footer:after, .footer.gridle-debug:after, .gridle-debug .footer .box .first_box:after, .footer .box .first_box.gridle-debug:after, .gridle-debug .footer .box .first_box .logo:after, .footer .box .first_box .logo.gridle-debug:after, .gridle-debug .footer .box .first_box .newsletter:after, .footer .box .first_box .newsletter.gridle-debug:after, .gridle-debug .footer .box .first_box .newsletter input:after, .footer .box .first_box .newsletter input.gridle-debug:after, .gridle-debug .footer .box .first_box .newsletter .send:after, .footer .box .first_box .newsletter .send.gridle-debug:after, .gridle-debug .footer .box .second_box:after, .footer .box .second_box.gridle-debug:after, .gridle-debug .footer .box .third_box:after, .footer .box .third_box.gridle-debug:after, .gridle-debug .footer .box .third_box .siguenos li:after, .gridle-debug .footer .box .third_box .contactanos li:after, .footer .box .third_box .siguenos li.gridle-debug:after, .footer .box .third_box .contactanos li.gridle-debug:after, .gridle-debug .footer .box .third_box .siguenos li i:after, .gridle-debug .footer .box .third_box .contactanos li i:after, .footer .box .third_box .siguenos li i.gridle-debug:after, .footer .box .third_box .contactanos li i.gridle-debug:after, .gridle-debug .nav-top:after, .nav-top.gridle-debug:after, .gridle-debug .nav-top .top-social:after, .nav-top .top-social.gridle-debug:after, .gridle-debug .nav-top .search:after, .nav-top .search.gridle-debug:after, .gridle-debug .nav-top .search .cont_search:after, .nav-top .search .cont_search.gridle-debug:after, .gridle-debug .nav-top .search .search-icon:after, .nav-top .search .search-icon.gridle-debug:after, .gridle-debug .destacados .content-destacados:after, .destacados .content-destacados.gridle-debug:after, .gridle-debug .destacados .content-destacados .img-loop:after, .destacados .content-destacados .img-loop.gridle-debug:after, .gridle-debug .destacados .content-destacados .content-art:after, .destacados .content-destacados .content-art.gridle-debug:after, .gridle-debug .content-loop-home #container .item-principal:after, .content-loop-home #container .item-principal.gridle-debug:after, .gridle-debug .content-post:after, .content-post.gridle-debug:after, .gridle-debug .content-post .single-post:after, .content-post .single-post.gridle-debug:after, .gridle-debug .content-post .single-post .content-text:after, .content-post .single-post .content-text.gridle-debug:after, .gridle-debug .content-post .single-post .content-text .content-author:after, .content-post .single-post .content-text .content-author.gridle-debug:after, .gridle-debug .content-post .single-post .content-text .content-author .img-author:after, .content-post .single-post .content-text .content-author .img-author.gridle-debug:after, .gridle-debug .content-post .single-post .content-text .content-author .name-author:after, .content-post .single-post .content-text .content-author .name-author.gridle-debug:after, .gridle-debug .post-loop:after, .post-loop.gridle-debug:after, .gridle-debug .post-loop .img-post:after, .post-loop .img-post.gridle-debug:after, .gridle-debug .post-loop .content-post:after, .post-loop .content-post.gridle-debug:after, .gridle-debug .post-loop .content-post .content-author:after, .post-loop .content-post .content-author.gridle-debug:after, .gridle-debug .post-loop .content-post .content-author .img-author:after, .post-loop .content-post .content-author .img-author.gridle-debug:after, .gridle-debug .post-loop .content-post .content-author .name-author:after, .post-loop .content-post .content-author .name-author.gridle-debug:after, .gridle-debug .post-loop .date-post:after, .post-loop .date-post.gridle-debug:after {
     content: "";
     display: block;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowRkEzNzVFNTg1NjgxMUUyOUI4RjhEMzg4QzM4QjZFOCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowRkEzNzVFNjg1NjgxMUUyOUI4RjhEMzg4QzM4QjZFOCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjBGQTM3NUUzODU2ODExRTI5QjhGOEQzODhDMzhCNkU4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjBGQTM3NUU0ODU2ODExRTI5QjhGOEQzODhDMzhCNkU4Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8++5+BhQAAAA9JREFUeNpiYGBgkAIIMAAAHwAbZIBtGgAAAABJRU5ErkJggg==);
@@ -49,7 +49,7 @@
     box-sizing: border-box;
     display: block !important; }
 
-.grid-1on5, .grid-0, .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-mobile-1on5, .grid-mobile-0, .grid-mobile-1, .grid-mobile-2, .grid-mobile-3, .grid-mobile-4, .grid-mobile-5, .grid-mobile-6, .grid-mobile-7, .grid-mobile-8, .grid-mobile-9, .grid-mobile-10, .grid-mobile-11, .grid-mobile-12, .grid-tablet-1on5, .grid-tablet-0, .grid-tablet-1, .grid-tablet-2, .grid-tablet-3, .grid-tablet-4, .grid-tablet-5, .grid-tablet-6, .grid-tablet-7, .grid-tablet-8, .grid-tablet-9, .grid-tablet-10, .grid-tablet-11, .grid-tablet-12, .grid-ipad-landscape-1on5, .grid-ipad-landscape-0, .grid-ipad-landscape-1, .grid-ipad-landscape-2, .grid-ipad-landscape-3, .grid-ipad-landscape-4, .grid-ipad-landscape-5, .grid-ipad-landscape-6, .grid-ipad-landscape-7, .grid-ipad-landscape-8, .grid-ipad-landscape-9, .grid-ipad-landscape-10, .grid-ipad-landscape-11, .grid-ipad-landscape-12, .header, .header .logo, .header .nav, .header .nav .menu, .header .nav .menu ul li, .wrapper, .footer, .footer .box .first_box, .footer .box .first_box .logo, .footer .box .first_box .newsletter, .footer .box .first_box .newsletter input, .footer .box .first_box .newsletter .send, .footer .box .second_box, .footer .box .third_box, .footer .box .third_box .siguenos li, .footer .box .third_box .contactanos li, .footer .box .third_box .siguenos li i, .footer .box .third_box .contactanos li i, .nav-top, .nav-top .top-social, .nav-top .search, .nav-top .search .cont_search, .nav-top .search .search-icon, .destacados .content-destacados, .destacados .content-destacados .img-loop, .destacados .content-destacados .content-art, .content-loop-home #container .item-principal, .content-post, .content-post .single-post, .content-post .single-post .content-text, .content-post .single-post .content-text .content-author, .content-post .single-post .content-text .content-author .img-author, .content-post .single-post .content-text .content-author .name-author {
+.grid-1on5, .grid-0, .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-mobile-1on5, .grid-mobile-0, .grid-mobile-1, .grid-mobile-2, .grid-mobile-3, .grid-mobile-4, .grid-mobile-5, .grid-mobile-6, .grid-mobile-7, .grid-mobile-8, .grid-mobile-9, .grid-mobile-10, .grid-mobile-11, .grid-mobile-12, .grid-tablet-1on5, .grid-tablet-0, .grid-tablet-1, .grid-tablet-2, .grid-tablet-3, .grid-tablet-4, .grid-tablet-5, .grid-tablet-6, .grid-tablet-7, .grid-tablet-8, .grid-tablet-9, .grid-tablet-10, .grid-tablet-11, .grid-tablet-12, .grid-ipad-landscape-1on5, .grid-ipad-landscape-0, .grid-ipad-landscape-1, .grid-ipad-landscape-2, .grid-ipad-landscape-3, .grid-ipad-landscape-4, .grid-ipad-landscape-5, .grid-ipad-landscape-6, .grid-ipad-landscape-7, .grid-ipad-landscape-8, .grid-ipad-landscape-9, .grid-ipad-landscape-10, .grid-ipad-landscape-11, .grid-ipad-landscape-12, .header, .header .logo, .header .nav, .header .nav .menu, .header .nav .menu ul li, .wrapper, .footer, .footer .box .first_box, .footer .box .first_box .logo, .footer .box .first_box .newsletter, .footer .box .first_box .newsletter input, .footer .box .first_box .newsletter .send, .footer .box .second_box, .footer .box .third_box, .footer .box .third_box .siguenos li, .footer .box .third_box .contactanos li, .footer .box .third_box .siguenos li i, .footer .box .third_box .contactanos li i, .nav-top, .nav-top .top-social, .nav-top .search, .nav-top .search .cont_search, .nav-top .search .search-icon, .destacados .content-destacados, .destacados .content-destacados .img-loop, .destacados .content-destacados .content-art, .content-loop-home #container .item-principal, .content-post, .content-post .single-post, .content-post .single-post .content-text, .content-post .single-post .content-text .content-author, .content-post .single-post .content-text .content-author .img-author, .content-post .single-post .content-text .content-author .name-author, .post-loop, .post-loop .img-post, .post-loop .content-post, .post-loop .content-post .content-author, .post-loop .content-post .content-author .img-author, .post-loop .content-post .content-author .name-author, .post-loop .date-post {
   display: inline-block;
   min-height: 1px;
   -webkit-box-sizing: border-box;
@@ -4340,19 +4340,19 @@ html.ipad-landscape {
 /* GRIS */
 /* GRIS tono 1 */
 /* GRIS tono 2 */
-.text-center {
+.text-center, .post-loop .content-post .content-author .img-author img, .post-loop .date-post .dia, .post-loop .date-post .mes {
   text-align: center; }
 
 .text-left, h1, .swipe .swipe-wrap .content-slide article, .content-loop-home #container .item-principal .social, .content-loop-home #container .item-principal .principal-post h2, .content-loop-home #container .item-principal .principal-post .date {
   text-align: left; }
 
-.text-right, .content-post .single-post .content-text .content-author .img-author, .content-post .single-post .content-text .content-author .img-author img {
+.text-right, .content-post .single-post .content-text .content-author .img-author, .content-post .single-post .content-text .content-author .img-author img, .post-loop .content-post .content-author .img-author {
   text-align: right; }
 
-.no-margins, .header .nav .menu ul, .swipe .swipe-wrap .content-slide article main h1, .footer .box h4, .footer .box .second_box .nav ul, .destacados .content-destacados .img-loop, .destacados .content-destacados .content-art .tags, .content-loop-home #container .item-principal .principal-post .date p, .content-loop-home #container #reciente .tags, .content-loop-home #container .paginador .tags, .content-post .single-post .content-title .tags {
+.no-margins, .header .nav .menu ul, .swipe .swipe-wrap .content-slide article main h1, .footer .box h4, .footer .box .second_box .nav ul, .destacados .content-destacados .img-loop, .destacados .content-destacados .content-art .tags, .content-loop-home #container .item-principal .principal-post .date p, .content-loop-home #container #reciente .bg-color h2, .content-loop-home #container .paginador .bg-color h2, .content-loop-home #container #reciente .bg-color .tags, .content-loop-home #container .paginador .bg-color .tags, .content-post .single-post .content-title .tags, .post-loop .img-post, .post-loop .content-post, .post-loop .date-post, .post-loop .date-post .dia, .post-loop .date-post .mes {
   margin: 0 !important; }
 
-.no-paddings, .header .nav, .header .nav .menu, .header .nav .menu ul, .header .nav .menu ul li, .swipe .swipe-wrap .content-slide article main h1, .footer .box .second_box .nav ul, .nav-top, .destacados .content-destacados .img-loop, .destacados .content-destacados .content-art .tags, .content-loop-home #container #reciente .tags, .content-loop-home #container .paginador .tags, .content-post .single-post .content-title .tags, .content-post .single-post .content-text, .content-post .single-post .content-text .content-author, .content-post .single-post .content-text .content-author .img-author img, .content-post .single-post .content-text .content-author .name-author {
+.no-paddings, .header .nav, .header .nav .menu, .header .nav .menu ul, .header .nav .menu ul li, .swipe .swipe-wrap .content-slide article main h1, .footer .box .second_box .nav ul, .nav-top, .destacados .content-destacados .img-loop, .destacados .content-destacados .content-art .tags, .content-loop-home #container #reciente .bg-color .tags, .content-loop-home #container .paginador .bg-color .tags, .content-post .single-post .content-title .tags, .content-post .single-post .content-text, .content-post .single-post .content-text .content-author, .content-post .single-post .content-text .content-author .img-author img, .content-post .single-post .content-text .content-author .name-author, .post-loop, .post-loop .img-post, .post-loop .content-post .content-author, .post-loop .content-post .content-author .img-author, .post-loop .content-post .content-author .img-author img, .post-loop .content-post .content-author .name-author, .post-loop .date-post .mes {
   padding: 0 !important; }
 
 .resp_img {
@@ -5400,19 +5400,19 @@ iframe {
       clear: both; }
       html.default .content-loop-home #container .paginador {
         clear: both; }
-      .content-loop-home #container .paginador h2 {
-        padding: 6px 45% 0 10px; }
-      .content-loop-home #container .paginador .pages {
+      .content-loop-home #container .paginador .bg-color h2 {
+        padding: 39px 50% 0 10px; }
+      .content-loop-home #container .paginador .bg-color .pages {
         position: absolute;
         bottom: 0;
-        left: 0;
         background-color: #74c0f0;
         color: #fff;
-        width: 100%;
+        width: 95%;
         padding: 20px 0; }
-    .content-loop-home #container #reciente, .content-loop-home #container .paginador {
-      background-color: #6cccff; }
-      .content-loop-home #container #reciente h2, .content-loop-home #container .paginador h2 {
+    .content-loop-home #container #reciente .bg-color, .content-loop-home #container .paginador .bg-color {
+      background-color: #6cccff;
+      height: 280px; }
+      .content-loop-home #container #reciente .bg-color h2, .content-loop-home #container .paginador .bg-color h2 {
         font-family: "Open Sans", sans-serif;
         font-size: 60px;
         font-weight: lighter;
@@ -5420,24 +5420,23 @@ iframe {
         color: #fff;
         font-weight: lighter;
         padding: 5px 30px 0 10px;
-        line-height: 60px;
-        margin-bottom: 0; }
-      .content-loop-home #container #reciente .tags, .content-loop-home #container .paginador .tags {
+        line-height: 60px; }
+      .content-loop-home #container #reciente .bg-color .tags, .content-loop-home #container .paginador .bg-color .tags {
         display: block;
         color: #fff;
         list-style: none; }
-        .content-loop-home #container #reciente .tags ul, .content-loop-home #container .paginador .tags ul {
+        .content-loop-home #container #reciente .bg-color .tags ul, .content-loop-home #container .paginador .bg-color .tags ul {
           padding: 0px 20px 0 10px; }
-        .content-loop-home #container #reciente .tags li, .content-loop-home #container .paginador .tags li {
-          padding: 2px 5px;
-          margin: 2px 2px 0 0;
-          display: inline-block;
-          background-color: #74c0f0; }
-          .content-loop-home #container #reciente .tags li a, .content-loop-home #container .paginador .tags li a {
-            font-size: 12px;
-            font-family: "Open Sans", sans-serif;
-            color: #fff;
-            text-decoration: none; }
+          .content-loop-home #container #reciente .bg-color .tags ul li, .content-loop-home #container .paginador .bg-color .tags ul li {
+            padding: 2px 5px;
+            margin: 2px 2px 0 0;
+            display: inline-block;
+            background-color: #74c0f0; }
+            .content-loop-home #container #reciente .bg-color .tags ul li a, .content-loop-home #container .paginador .bg-color .tags ul li a {
+              font-size: 12px;
+              font-family: "Open Sans", sans-serif;
+              color: #fff;
+              text-decoration: none; }
 
 .content-post {
   float: left;
@@ -5666,5 +5665,253 @@ iframe {
     .content-post .single-post .author a {
       color: #c0c0c0;
       font-style: italic; }
+
+.post-loop {
+  float: left;
+  direction: ltr;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  margin: 0 0 30px 0;
+  -webkit-box-shadow: 3px 4px 18px -3px rgba(189, 185, 189, 0.8);
+  -moz-box-shadow: 3px 4px 18px -3px rgba(189, 185, 189, 0.8);
+  box-shadow: 3px 4px 18px -3px rgba(189, 185, 189, 0.8); }
+  html.default .post-loop {
+    float: left;
+    direction: ltr;
+    padding-left: 10px;
+    padding-right: 10px; }
+  html.ipad-landscape .post-loop {
+    padding-left: 0;
+    padding-right: 0; }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .post-loop {
+      padding-left: 0;
+      padding-right: 0; } }
+  html.default .post-loop {
+    width: 100%; }
+    .gridle-debug html.default .post-loop:before, html.default .post-loop.gridle-debug:before {
+      content: "grid-default-12"; }
+    .gridle-debug html.default .post-loop.parent:before, html.default .post-loop.gridle-debug.parent:before {
+      content: "grid-parent-default-12"; }
+  .gridle-debug .post-loop:before, .post-loop.gridle-debug:before {
+    content: "grid-default-12"; }
+  .gridle-debug .post-loop.parent:before, .post-loop.gridle-debug.parent:before {
+    content: "grid-parent-default-12"; }
+  .post-loop .img-post {
+    float: left;
+    direction: ltr;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px; }
+    html.default .post-loop .img-post {
+      float: left;
+      direction: ltr;
+      padding-left: 10px;
+      padding-right: 10px; }
+    html.ipad-landscape .post-loop .img-post {
+      padding-left: 0;
+      padding-right: 0; }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+      .post-loop .img-post {
+        padding-left: 0;
+        padding-right: 0; } }
+    html.default .post-loop .img-post {
+      width: 25%; }
+      .gridle-debug html.default .post-loop .img-post:before, html.default .post-loop .img-post.gridle-debug:before {
+        content: "grid-default-3"; }
+      .gridle-debug html.default .post-loop .img-post.parent:before, html.default .post-loop .img-post.gridle-debug.parent:before {
+        content: "grid-parent-default-3"; }
+    .gridle-debug .post-loop .img-post:before, .post-loop .img-post.gridle-debug:before {
+      content: "grid-default-3"; }
+    .gridle-debug .post-loop .img-post.parent:before, .post-loop .img-post.gridle-debug.parent:before {
+      content: "grid-parent-default-3"; }
+  .post-loop .content-post {
+    float: left;
+    direction: ltr;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 58.33333%;
+    clear: none; }
+    html.default .post-loop .content-post {
+      float: left;
+      direction: ltr;
+      padding-left: 10px;
+      padding-right: 10px; }
+    html.ipad-landscape .post-loop .content-post {
+      padding-left: 0;
+      padding-right: 0; }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+      .post-loop .content-post {
+        padding-left: 0;
+        padding-right: 0; } }
+    html.default .post-loop .content-post {
+      width: 58.33333%; }
+      .gridle-debug html.default .post-loop .content-post:before, html.default .post-loop .content-post.gridle-debug:before {
+        content: "grid-default-7"; }
+      .gridle-debug html.default .post-loop .content-post.parent:before, html.default .post-loop .content-post.gridle-debug.parent:before {
+        content: "grid-parent-default-7"; }
+    .gridle-debug .post-loop .content-post:before, .post-loop .content-post.gridle-debug:before {
+      content: "grid-default-7"; }
+    .gridle-debug .post-loop .content-post.parent:before, .post-loop .content-post.gridle-debug.parent:before {
+      content: "grid-parent-default-7"; }
+    .post-loop .content-post h2 {
+      margin: 10px 0 0 0; }
+      .post-loop .content-post h2 a {
+        color: #bc1c80; }
+    .post-loop .content-post .content-author {
+      float: left;
+      direction: ltr;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 100%; }
+      html.default .post-loop .content-post .content-author {
+        float: left;
+        direction: ltr;
+        padding-left: 10px;
+        padding-right: 10px; }
+      html.ipad-landscape .post-loop .content-post .content-author {
+        padding-left: 0;
+        padding-right: 0; }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+        .post-loop .content-post .content-author {
+          padding-left: 0;
+          padding-right: 0; } }
+      html.default .post-loop .content-post .content-author {
+        width: 100%; }
+        .gridle-debug html.default .post-loop .content-post .content-author:before, html.default .post-loop .content-post .content-author.gridle-debug:before {
+          content: "grid-default-12"; }
+        .gridle-debug html.default .post-loop .content-post .content-author.parent:before, html.default .post-loop .content-post .content-author.gridle-debug.parent:before {
+          content: "grid-parent-default-12"; }
+      .gridle-debug .post-loop .content-post .content-author:before, .post-loop .content-post .content-author.gridle-debug:before {
+        content: "grid-default-12"; }
+      .gridle-debug .post-loop .content-post .content-author.parent:before, .post-loop .content-post .content-author.gridle-debug.parent:before {
+        content: "grid-parent-default-12"; }
+      .post-loop .content-post .content-author .img-author {
+        float: left;
+        direction: ltr;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 8.33333%; }
+        html.default .post-loop .content-post .content-author .img-author {
+          float: left;
+          direction: ltr;
+          padding-left: 10px;
+          padding-right: 10px; }
+        html.ipad-landscape .post-loop .content-post .content-author .img-author {
+          padding-left: 0;
+          padding-right: 0; }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+          .post-loop .content-post .content-author .img-author {
+            padding-left: 0;
+            padding-right: 0; } }
+        html.default .post-loop .content-post .content-author .img-author {
+          width: 8.33333%; }
+          .gridle-debug html.default .post-loop .content-post .content-author .img-author:before, html.default .post-loop .content-post .content-author .img-author.gridle-debug:before {
+            content: "grid-default-1"; }
+          .gridle-debug html.default .post-loop .content-post .content-author .img-author.parent:before, html.default .post-loop .content-post .content-author .img-author.gridle-debug.parent:before {
+            content: "grid-parent-default-1"; }
+        .gridle-debug .post-loop .content-post .content-author .img-author:before, .post-loop .content-post .content-author .img-author.gridle-debug:before {
+          content: "grid-default-1"; }
+        .gridle-debug .post-loop .content-post .content-author .img-author.parent:before, .post-loop .content-post .content-author .img-author.gridle-debug.parent:before {
+          content: "grid-parent-default-1"; }
+        .post-loop .content-post .content-author .img-author img {
+          width: 50px;
+          height: 50px;
+          border-radius: 25px;
+          margin: 0 auto;
+          display: block; }
+      .post-loop .content-post .content-author .name-author {
+        float: left;
+        direction: ltr;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 33.33333%;
+        display: table;
+        height: 60px; }
+        html.default .post-loop .content-post .content-author .name-author {
+          float: left;
+          direction: ltr;
+          padding-left: 10px;
+          padding-right: 10px; }
+        html.ipad-landscape .post-loop .content-post .content-author .name-author {
+          padding-left: 0;
+          padding-right: 0; }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+          .post-loop .content-post .content-author .name-author {
+            padding-left: 0;
+            padding-right: 0; } }
+        html.default .post-loop .content-post .content-author .name-author {
+          width: 33.33333%; }
+          .gridle-debug html.default .post-loop .content-post .content-author .name-author:before, html.default .post-loop .content-post .content-author .name-author.gridle-debug:before {
+            content: "grid-default-4"; }
+          .gridle-debug html.default .post-loop .content-post .content-author .name-author.parent:before, html.default .post-loop .content-post .content-author .name-author.gridle-debug.parent:before {
+            content: "grid-parent-default-4"; }
+        .gridle-debug .post-loop .content-post .content-author .name-author:before, .post-loop .content-post .content-author .name-author.gridle-debug:before {
+          content: "grid-default-4"; }
+        .gridle-debug .post-loop .content-post .content-author .name-author.parent:before, .post-loop .content-post .content-author .name-author.gridle-debug.parent:before {
+          content: "grid-parent-default-4"; }
+        .post-loop .content-post .content-author .name-author a {
+          padding-left: 5px;
+          display: table-cell;
+          vertical-align: middle;
+          color: #c0c0c0;
+          font-style: italic; }
+    .post-loop .content-post p {
+      margin: 5px 0; }
+  .post-loop .date-post {
+    float: left;
+    direction: ltr;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 16.66667%;
+    background: #bc1c80;
+    height: 200px; }
+    html.default .post-loop .date-post {
+      float: left;
+      direction: ltr;
+      padding-left: 10px;
+      padding-right: 10px; }
+    html.ipad-landscape .post-loop .date-post {
+      padding-left: 0;
+      padding-right: 0; }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+      .post-loop .date-post {
+        padding-left: 0;
+        padding-right: 0; } }
+    html.default .post-loop .date-post {
+      width: 16.66667%; }
+      .gridle-debug html.default .post-loop .date-post:before, html.default .post-loop .date-post.gridle-debug:before {
+        content: "grid-default-2"; }
+      .gridle-debug html.default .post-loop .date-post.parent:before, html.default .post-loop .date-post.gridle-debug.parent:before {
+        content: "grid-parent-default-2"; }
+    .gridle-debug .post-loop .date-post:before, .post-loop .date-post.gridle-debug:before {
+      content: "grid-default-2"; }
+    .gridle-debug .post-loop .date-post.parent:before, .post-loop .date-post.gridle-debug.parent:before {
+      content: "grid-parent-default-2"; }
+    .post-loop .date-post .dia, .post-loop .date-post .mes {
+      color: #fff;
+      width: 100%;
+      font-size: 40px;
+      padding: 20% 0 0 0; }
+    .post-loop .date-post .mes {
+      font-size: 20px;
+      font-weight: lighter;
+      text-transform: uppercase; }
+    .post-loop .date-post #flecha {
+      background: #bc1c80;
+      height: 20px;
+      width: 20px;
+      position: relative;
+      top: 45%;
+      left: -20px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
 
 /*# sourceMappingURL=chicfit.css.map */
