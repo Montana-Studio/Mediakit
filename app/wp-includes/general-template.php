@@ -2719,7 +2719,6 @@ function paginate_links( $args = '' ) {
 	}
 	return $r;
 }
-
 /**
  * Registers an admin colour scheme css file.
  *

@@ -1,20 +1,18 @@
 <?php
-/**
- * Author: Todd Motto | @toddmotto
- * URL: html5blank.com | @html5blank
- * Custom functions, support, custom post types and more.
+/*
+ *  Author: Todd Motto | @toddmotto
+ *  URL: html5blank.com | @html5blank
+ *  Custom functions, support, custom post types and more.
  */
 
-require_once "modules/is-debug.php";
-
 /*------------------------------------*\
-    External Modules/Files
+	External Modules/Files
 \*------------------------------------*/
 
 // Load any external files you have here
 
 /*------------------------------------*\
-    Theme Support
+	Theme Support
 \*------------------------------------*/
 
 if (!isset($content_width))
@@ -24,6 +22,8 @@ if (!isset($content_width))
 
 if (function_exists('add_theme_support'))
 {
+    // Add Menu Support
+    add_theme_support('menus');
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
@@ -34,21 +34,21 @@ if (function_exists('add_theme_support'))
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
-    'default-color' => 'FFF',
-    'default-image' => get_template_directory_uri() . '/img/bg.jpg'
+	'default-color' => 'FFF',
+	'default-image' => get_template_directory_uri() . '/img/bg.jpg'
     ));*/
 
     // Add Support for Custom Header - Uncomment below if you're going to use
     /*add_theme_support('custom-header', array(
-    'default-image'          => get_template_directory_uri() . '/img/headers/default.jpg',
-    'header-text'            => false,
-    'default-text-color'     => '000',
-    'width'                  => 1000,
-    'height'                 => 198,
-    'random-default'         => false,
-    'wp-head-callback'       => $wphead_cb,
-    'admin-head-callback'    => $adminhead_cb,
-    'admin-preview-callback' => $adminpreview_cb
+	'default-image'			=> get_template_directory_uri() . '/img/headers/default.jpg',
+	'header-text'			=> false,
+	'default-text-color'		=> '000',
+	'width'				=> 1000,
+	'height'			=> 198,
+	'random-default'		=> false,
+	'wp-head-callback'		=> $wphead_cb,
+	'admin-head-callback'		=> $adminhead_cb,
+	'admin-preview-callback'	=> $adminpreview_cb
     ));*/
 
     // Enables post and comment RSS feed links to head
@@ -59,68 +59,47 @@ if (function_exists('add_theme_support'))
 }
 
 /*------------------------------------*\
-    Functions
+	Functions
 \*------------------------------------*/
 
 // HTML5 Blank navigation
 function html5blank_nav()
 {
-    wp_nav_menu(
-    array(
-        'theme_location'  => 'header-menu',
-        'menu'            => '',
-        'container'       => 'div',
-        'container_class' => 'menu-{menu slug}-container',
-        'container_id'    => '',
-        'menu_class'      => 'menu',
-        'menu_id'         => '',
-        'echo'            => true,
-        'fallback_cb'     => 'wp_page_menu',
-        'before'          => '',
-        'after'           => '',
-        'link_before'     => '',
-        'link_after'      => '',
-        'items_wrap'      => '<ul>%3$s</ul>',
-        'depth'           => 0,
-        'walker'          => ''
-        )
-    );
+	wp_nav_menu(
+	array(
+		'theme_location'  => 'header-menu',
+		'menu'            => '',
+		'container'       => 'div',
+		'container_class' => 'menu-{menu slug}-container',
+		'container_id'    => '',
+		'menu_class'      => 'menu',
+		'menu_id'         => '',
+		'echo'            => true,
+		'fallback_cb'     => 'wp_page_menu',
+		'before'          => '',
+		'after'           => '',
+		'link_before'     => '',
+		'link_after'      => '',
+		'items_wrap'      => '<ul>%3$s</ul>',
+		'depth'           => 0,
+		'walker'          => ''
+		)
+	);
 }
 
 // Load HTML5 Blank scripts (header.php)
 function html5blank_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
-        if (HTML5_DEBUG) {
-            // jQuery
-            wp_deregister_script('jquery');
-            wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.js', array(), '1.11.1');
 
-            // Conditionizr
-            // wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0');
+    	//wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
+        //wp_enqueue_script('conditionizr'); // Enqueue it!
 
-            // Modernizr
-            wp_register_script('modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.8.3');
+        wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1', true); // Modernizr
+        wp_enqueue_script('modernizr'); // Enqueue it!
 
-            // Custom scripts
-            wp_register_script(
-                'html5blankscripts',
-                get_template_directory_uri() . '/js/chicfit.min.js',
-                array(
-                    'modernizr',
-                    'jquery'),
-                '1.0.0',true);
-
-            // Enqueue Scripts
-            wp_enqueue_script('html5blankscripts');
-
-        // If production
-        } else {
-            // Scripts minify
-            wp_register_script('html5blankscripts-min', get_template_directory_uri() . '/js/scripts.min.js', array(), '1.0.0');
-            // Enqueue Scripts
-            wp_enqueue_script('html5blankscripts-min');
-        }
+        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/output.min.js', array('jquery'), '1.0.0', true); // Custom scripts
+        wp_enqueue_script('html5blankscripts'); // Enqueue it!
     }
 }
 
@@ -128,31 +107,20 @@ function html5blank_header_scripts()
 function html5blank_conditional_scripts()
 {
     if (is_page('pagenamehere')) {
-        // Conditional script(s)
-        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0');
-        wp_enqueue_script('scriptname');
+        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
+        wp_enqueue_script('scriptname'); // Enqueue it!
     }
 }
 
 // Load HTML5 Blank styles
-function html5blank_styles()
+/*function html5blank_styles()
 {
-    if (HTML5_DEBUG) {
-        // normalize-css
-        wp_register_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '3.0.2');
+    wp_register_style('normalize', get_template_directory_uri() . '/normalize.min.css', array(), '1.0', 'all');
+    wp_enqueue_style('normalize'); // Enqueue it!
 
-        // Custom CSS
-        wp_register_style('html5blank', get_template_directory_uri() . '/css/chicfit.css', array('normalize'), '1.0');
-
-        // Register CSS
-        wp_enqueue_style('html5blank');
-    } else {
-        // Custom CSS
-        wp_register_style('html5blankcssmin', get_template_directory_uri() . '/style.css', array(), '1.0');
-        // Register CSS
-        wp_enqueue_style('html5blankcssmin');
-    }
-}
+    wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+    wp_enqueue_style('html5blank'); // Enqueue it!
+}*/
 
 // Register HTML5 Blank Navigation
 function register_html5_menu()
@@ -201,13 +169,6 @@ function add_slug_to_body_class($classes)
     return $classes;
 }
 
-// Remove the width and height attributes from inserted images
-function remove_width_attribute( $html ) {
-   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
-   return $html;
-}
-
-
 // If Dynamic Sidebar Exists
 if (function_exists('register_sidebar'))
 {
@@ -232,6 +193,16 @@ if (function_exists('register_sidebar'))
         'before_title' => '<h3>',
         'after_title' => '</h3>'
     ));
+
+    register_sidebar(array(
+        'name' => __('Load posts', 'html5blank'),
+        'description' => __('Shortcode for load post', 'html5blank'),
+        'id' => 'load-post',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
 }
 
 // Remove wp_head() injected Recent Comment styles
@@ -245,20 +216,20 @@ function my_remove_recent_comments_style()
 }
 
 // Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
-/*function html5wp_pagination()
+function html5wp_pagination()
 {
     global $wp_query;
-   $big = 999999999;
-   echo paginate_links(array(
-       'base' => str_replace($big, '%#%', get_pagenum_link($big)),
-       'format' => '?paged=%#%',
-       'current' => max(1, get_query_var('paged')),
-       'total' => $wp_query->max_num_pages,
-       'prev_text' => __('<div class="fa fa-chevron-left"></div>'),
-       'next_text' => __('<div class="fa fa-chevron-right"></div>'),
-   ));
+    $big = 999999999;
+    echo paginate_links(array(
+        'base' => str_replace($big, '%#%', get_pagenum_link($big)),
+        'format' => '?paged=%#%',
+        'current' => max(1, get_query_var('paged')),
+        'total' => $wp_query->max_num_pages,
+        'prev_text' => __('<div class="fa fa-chevron-left"></div>'),
+        'next_text' => __('<div class="fa fa-chevron-right"></div>'),
+    ));
 }
-*/
+
 // Custom Excerpts
 function html5wp_index($length) // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
 {
@@ -292,7 +263,7 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
 function html5_blank_view_article($more)
 {
     global $post;
-    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('<i class="fa fa-plus"></i>', 'html5blank') . '</a>';
+    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'html5blank') . '</a>';
 }
 
 // Remove Admin bar
@@ -335,56 +306,56 @@ function enable_threaded_comments()
 // Custom Comments Callback
 function html5blankcomments($comment, $args, $depth)
 {
-    $GLOBALS['comment'] = $comment;
-    extract($args, EXTR_SKIP);
+	$GLOBALS['comment'] = $comment;
+	extract($args, EXTR_SKIP);
 
-    if ( 'div' == $args['style'] ) {
-        $tag = 'div';
-        $add_below = 'comment';
-    } else {
-        $tag = 'li';
-        $add_below = 'div-comment';
-    }
+	if ( 'div' == $args['style'] ) {
+		$tag = 'div';
+		$add_below = 'comment';
+	} else {
+		$tag = 'li';
+		$add_below = 'div-comment';
+	}
 ?>
     <!-- heads up: starting < for the html tag (li or div) in the next line: -->
     <<?php echo $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
-    <?php if ( 'div' != $args['style'] ) : ?>
-    <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
-    <?php endif; ?>
-    <div class="comment-author vcard">
-    <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
-    <?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
-    </div>
+	<?php if ( 'div' != $args['style'] ) : ?>
+	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+	<?php endif; ?>
+	<div class="comment-author vcard">
+	<?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['180'] ); ?>
+	<?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
+	</div>
 <?php if ($comment->comment_approved == '0') : ?>
-    <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
-    <br />
+	<em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
+	<br />
 <?php endif; ?>
 
-    <div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
-        <?php
-            printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','' );
-        ?>
-    </div>
+	<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
+		<?php
+			printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','' );
+		?>
+	</div>
 
-    <?php comment_text() ?>
+	<?php comment_text() ?>
 
-    <div class="reply">
-    <?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-    </div>
-    <?php if ( 'div' != $args['style'] ) : ?>
-    </div>
-    <?php endif; ?>
+	<div class="reply">
+	<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+	</div>
+	<?php if ( 'div' != $args['style'] ) : ?>
+	</div>
+	<?php endif; ?>
 <?php }
 
 /*------------------------------------*\
-    Actions + Filters + ShortCodes
+	Actions + Filters + ShortCodes
 \*------------------------------------*/
 
 // Add Actions
 add_action('init', 'html5blank_header_scripts'); // Add Custom Scripts to wp_head
 add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditional Page Scripts
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
-add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
+//add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
@@ -395,7 +366,12 @@ remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the ext
 remove_action('wp_head', 'feed_links', 2); // Display the links to the general feeds: Post and Comment Feed
 remove_action('wp_head', 'rsd_link'); // Display the link to the Really Simple Discovery service endpoint, EditURI link
 remove_action('wp_head', 'wlwmanifest_link'); // Display the link to the Windows Live Writer manifest file.
+remove_action('wp_head', 'index_rel_link'); // Index link
+remove_action('wp_head', 'parent_post_rel_link', 10, 0); // Prev link
+remove_action('wp_head', 'start_post_rel_link', 10, 0); // Start link
+remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0); // Display relational links for the posts adjacent to the current post.
 remove_action('wp_head', 'wp_generator'); // Display the XHTML generator that is generated on the wp_head hook, WP version
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 
@@ -415,8 +391,7 @@ add_filter('excerpt_more', 'html5_blank_view_article'); // Add 'View Article' bu
 add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
 add_filter('style_loader_tag', 'html5_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
-add_filter('post_thumbnail_html', 'remove_width_attribute', 10 ); // Remove width and height dynamic attributes to post images
-add_filter('image_send_to_editor', 'remove_width_attribute', 10 ); // Remove width and height dynamic attributes to post images
+add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
 
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
@@ -429,7 +404,7 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 // [html5_shortcode_demo] [html5_shortcode_demo_2] Here's the page title! [/html5_shortcode_demo_2] [/html5_shortcode_demo]
 
 /*------------------------------------*\
-    Custom Post Types
+	Custom Post Types
 \*------------------------------------*/
 
 // Create 1 Custom Post type for a Demo, called HTML5-Blank
@@ -471,7 +446,7 @@ function create_post_type_html5()
 }
 
 /*------------------------------------*\
-    ShortCode Functions
+	ShortCode Functions
 \*------------------------------------*/
 
 // Shortcode Demo with Nested Capability
@@ -486,61 +461,173 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
-
-function custom_pagination($numpages = '', $pagerange = '', $paged='') {
-
-  if (empty($pagerange)) {
-    $pagerange = 2;
-  }
-
-  /**
-   * This first part of our function is a fallback
-   * for custom pagination inside a regular loop that
-   * uses the global $paged and global $wp_query variables.
-   * 
-   * It's good because we can now override default pagination
-   * in our theme, and use this function in default quries
-   * and custom queries.
-   */
-  global $paged;
-  if (empty($paged)) {
-    $paged = 1;
-  }
-  if ($numpages == '') {
-    global $wp_query;
-    $numpages = $wp_query->max_num_pages;
-    if(!$numpages) {
-        $numpages = 1;
+// function to display number of posts.
+function getPostViews($postID){
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return "0 Visitas";
     }
-  }
-
-  /** 
-   * We construct the pagination arguments to enter into our paginate_links
-   * function. 
-   */
-  $pagination_args = array(
-    'base'            => get_pagenum_link(1) . '%_%',
-    'format'          => 'page/%#%',
-    'total'           => $numpages,
-    'current'         => $paged,
-    'show_all'        => False,
-    'end_size'        => 1,
-    'mid_size'        => $pagerange,
-    'prev_next'       => True,
-    'prev_text'       => __('&laquo;'),
-    'next_text'       => __('&raquo;'),
-    'type'            => 'plain',
-    'add_args'        => false,
-    'add_fragment'    => ''
-  );
-
-  $paginate_links = paginate_links($pagination_args);
-
-  if ($paginate_links) {
-    echo "<nav class='custom-pagination'>";
-      echo "<span class='page-numbers page-num'>Page " . $paged . " of " . $numpages . "</span> ";
-      echo $paginate_links;
-    echo "</nav>";
-  }
-
+    return $count.' Visitas';
 }
+
+// function to count views.
+function setPostViews($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+
+
+// Add it to a column in WP-Admin
+add_filter('manage_posts_columns', 'posts_column_views');
+add_action('manage_posts_custom_column', 'posts_custom_column_views',5,2);
+function posts_column_views($defaults){
+    $defaults['post_views'] = __('Visitas');
+    return $defaults;
+}
+function posts_custom_column_views($column_name, $id){
+    if($column_name === 'post_views'){
+        echo getPostViews(get_the_ID());
+    }
+}
+
+//gallery adapt
+
+add_action( 'after_setup_theme', 'my_override_of_default_gallery' );
+
+function my_override_of_default_gallery() {
+    remove_shortcode( 'gallery' );
+    add_shortcode('gallery', 'my_gallery_shortcode');  
+}
+
+function my_gallery_shortcode($attr) {
+  $counter=0;
+//var_dump("Rewrite the shortcode gallery");
+
+    $post = get_post();
+
+static $instance = 0;
+$instance++;
+
+
+if ( ! empty( $attr['ids'] ) ) {
+    // 'ids' is explicitly ordered, unless you specify otherwise.
+    if ( empty( $attr['orderby'] ) )
+        $attr['orderby'] = 'post__in';
+    $attr['include'] = $attr['ids'];
+}
+
+
+
+// Allow plugins/themes to override the default gallery template.
+$output = apply_filters('post_gallery', '', $attr);
+if ( $output != '' )
+    return $output;
+
+// We're trusting author input, so let's at least make sure it looks like a valid orderby statement
+if ( isset( $attr['orderby'] ) ) {
+    $attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
+    if ( !$attr['orderby'] )
+        unset( $attr['orderby'] );
+}
+
+extract(shortcode_atts(array(
+
+/******    CHANGE TO FULL SIZE TO GET THE CORRECT INFORMATION **********/
+    'order'      => 'ASC',
+    'orderby'    => 'menu_order ID',
+    'id'         => $post->ID,
+    'itemtag'    => 'dl',
+    'icontag'    => 'dt',
+    'captiontag' => 'dd',
+    'columns'    => 3,
+    'size'       => 'Full size',
+    'include'    => '',
+    'exclude'    => ''    
+), $attr));
+
+/***********************************************************************/
+
+$id = intval($id);
+if ( 'RAND' == $order )
+    $orderby = 'none';
+
+if ( !empty($include) ) {
+    $_attachments = get_posts( array('include' => $include, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+
+    $attachments = array();
+    foreach ( $_attachments as $key => $val ) {
+        $attachments[$val->ID] = $_attachments[$key];
+    }
+} elseif ( !empty($exclude) ) {
+    $attachments = get_children( array('post_parent' => $id, 'exclude' => $exclude, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+} else {
+    $attachments = get_children( array('post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+}
+
+if ( empty($attachments) )
+    return '';
+
+if ( is_feed() ) {
+    $output = "\n";
+    foreach ( $attachments as $att_id => $attachment )
+        $output .= wp_get_attachment_link($att_id, $size, true) . "\n";
+    return $output;
+}
+
+$itemtag = tag_escape($itemtag);
+$captiontag = tag_escape($captiontag);
+$icontag = tag_escape($icontag);
+$valid_tags = wp_kses_allowed_html( 'post' );
+if ( ! isset( $valid_tags[ $itemtag ] ) )
+    $itemtag = 'dl';
+if ( ! isset( $valid_tags[ $captiontag ] ) )
+    $captiontag = 'dd';
+if ( ! isset( $valid_tags[ $icontag ] ) )
+    $icontag = 'dt';
+
+$columns = intval($columns);
+$itemwidth = $columns > 0 ? floor(100/$columns) : 100;
+$float = is_rtl() ? 'right' : 'left';
+
+$selector = "gallery-{$instance}";
+$gallery_div ="<div id='slider2' class='swipe swipe-all'><div class='swipe-wrap'>";
+$gallery_style ="";
+
+$output = apply_filters( 'gallery_style', "\n\t\t" . $gallery_div );
+
+$i = 0;
+$count=0;
+foreach ( $attachments as $id => $attachment ) {
+
+$test = $attachments[$id];
+$link=$test->guid;
+    $nocsript="";
+    if ($count==0){$nocsript ="";$sentence ="<div class='content-slide' style='background-image:url($link);'/></div>";}
+    if ($count==1){$sentence ="<div class='content-slide' style='background-image:url($link);' data-media='(min-width: 400px)'/></div>";}
+    if ($count==2){$sentence ="<div class='content-slide' style='background-image:url($link);' data-media='(min-width: 800px)'/></div>";}
+    if ($count==3){$sentence ="<div class='content-slide' style='background-image:url($link);' data-media='(min-width: 1000px)'/></div>";}
+    if ($count==4){$sentence ="<div class='content-slide' style='background-image:url($link);' data-media='(min-width: 1000px)'/></div>";}
+    if ($count==5){$sentence ="<div class='content-slide' style='background-image:url($link);' data-media='(min-width: 1000px)'/></div>";}
+    if ($count==6){$sentence ="<div class='content-slide' style='background-image:url($link);' data-media='(min-width: 400px)'/></div>";}
+    if ($count==7){$sentence ="<div class='content-slide' style='background-image:url($link);' data-media='(min-width: 800px)'/></div>";}
+    if ($count==8){$sentence ="<div class='content-slide' style='background-image:url($link);' data-media='(min-width: 1000px)'/></div>";}
+    if ($count==9){$sentence ="<div class='content-slide' style='background-image:url($link);' data-media='(min-width: 1000px)'/></div>";}
+    if($nocsript=="<div class='content-slide' style='background-image:url($link);'/></div>"){ $output .= "$sentence";} else { $output .= $nocsript."$sentence";}
+    $count++;
+}
+$output .= "</div><div class='btn_prev' onclick='mySwipe.prev()'><i class='fa fa-chevron-left'></i></div><div class='btn_next' onclick='mySwipe.next()'><i class='fa fa-chevron-right'></i></div></div>\n";
+return $output;
+}
+
+?>
