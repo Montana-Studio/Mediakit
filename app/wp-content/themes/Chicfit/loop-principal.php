@@ -7,15 +7,26 @@
 							<?php html5blank_nav(); ?>
 					</nav>			
 			</div>
-			<?php 
-				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				query_posts('posts_per_page=7&paged=' . $paged);
 
-				?>
+<?php 
 
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-				
-			<article class="item-principal" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
+
+  $query_args = array(
+      'post_type' => 'post',
+      'category_name' => 'destacado',
+      'posts_per_page' => 7,
+      'paged' => $paged,
+      'page' => $paged
+    );
+
+  $the_query = new WP_Query( $query_args ); ?>
+
+  <?php if ( $the_query->have_posts() ) : ?>
+
+    <!-- the loop -->
+    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+      <article class="item-principal" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<div class="social">
 					<li><i class="fa fa-facebook"></i></li>
 					<li><i class="fa fa-twitter"></i></li>
@@ -27,20 +38,31 @@
 					</a>
 				</div>
 			</article>
+    <?php endwhile; ?>
+    <!-- end of the loop -->
 
-			<?php endwhile;
-			wp_reset_postdata();
-			else: ?>
-				<p>No hay post.</p>
-			<?php endif; ?>
+	<div class="item-principal paginador">
+		<h2>VER MÁS</h2>
+		<div class="pages">
+			 <?php
+	      if (function_exists(custom_pagination)) {
+	        custom_pagination($the_query->max_num_pages,"",$paged);
+	      }
+	    ?>
+	    </div>
+		
+	</div>
+    <!-- pagination here -->
+   
 
-			<div class="item-principal paginador">
-				<h2>VER MÁS</h2>
-				<div class="pages">
-					<?php get_template_part('pagination'); ?>
-				</div>
-				
-			</div>
+  <?php wp_reset_postdata(); ?>
+
+  <?php else:  ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+  <?php endif; ?>
+
+
+			
 	</div>
 
 </div>
