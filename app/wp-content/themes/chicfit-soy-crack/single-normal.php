@@ -129,7 +129,7 @@
 		<?php endwhile;
 		wp_reset_postdata();
 		else: ?>
-			<p>No hay post.</p>
+			<h2>No hay post.</h2>
 		<?php endif; ?>
 
 	</ul>

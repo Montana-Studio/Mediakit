@@ -14,13 +14,16 @@
 		height: 450px;
 		.swipe-wrap{
 			overflow: hidden;
-			position: absolute;
+			position: relative;
 			.content-slide{
 				background:{position:center;size:cover;};
 				height: 450px;
-				/*min-height:564px;*/
-				overflow:hidden;
+				min-height:564px;
+				float:left;
+				width:100%;
+				position: relative;
 				article {
+					position: absolute;
 					width:40%;
 					height:100px;
 					bottom:150px;

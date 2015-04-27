@@ -1,14 +1,5 @@
-<?php get_header(); ?>
+<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-<main role="main" class="all-content" style="padding-top:60px;border:none;">
-	
-	<section class="wrapper-index">
-
-			<h1><?php _e( 'Tag Archive: ', 'html5blank' ); echo single_tag_title('', false); ?></h1>
-
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-			
 	<!-- article -->
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="post-loop">
@@ -36,6 +27,7 @@
 								
 				</div>
 			</div>
+				
 			<!-- /post post -->
 
 			<!-- post details -->
@@ -55,26 +47,14 @@
 	</article>
 	<!-- /article -->
 
-			<?php endwhile; ?>
+<?php endwhile; ?>
 
-			<?php else: ?>
+<?php else: ?>
 
-				<!-- article -->
-				<article>
-					<h2>No hay post.</h2>
-				</article>
-				<!-- /article -->
+	<!-- article -->
+	<article>
+		<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+	</article>
+	<!-- /article -->
 
-			<?php endif; ?>
-
-			<?php get_template_part('pagination'); ?>
-
-		</section>
-		<!-- /section -->
-
-		
-	</main>
-
-
-
-<?php get_footer(); ?>
+<?php endif; ?>

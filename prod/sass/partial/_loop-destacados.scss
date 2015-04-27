@@ -1,4 +1,8 @@
 .destacados {
+	height: auto;
+	@include gridle(12);
+	@extend .no-paddings;
+	margin-top: 40px;
 	.content-destacados {
 		@include gridle(6);
 		height: 200px;

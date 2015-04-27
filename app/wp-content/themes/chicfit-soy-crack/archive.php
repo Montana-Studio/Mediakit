@@ -8,50 +8,59 @@
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class('postes'); ?>>
-					<main class="post-content">
-						<div class="audiovisual">
-							<?php echo get_the_content('',FALSE,''); ?>
-						</div>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+	<!-- article -->
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<div class="post-loop">
+			
+			<!-- post thumbnail -->
+			<a href="<?php the_permalink()?>">
+				<div class="img-post" style="background-image:url('<?php the_field('imagen_post_banner'); ?>')"></div>
+			</a>
+			<!-- /post thumbnail -->
 
-					<?php if ( has_post_thumbnail()) : ?>
-					<?php the_post_thumbnail(); ?>
-					<?php endif; ?>
+			<!-- post post -->
+			<div class="content-post">
+				<h2>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+				</h2>
+				<p><?php html5wp_excerpt('html5wp_custom_post'); // Build your custom callback length in functions.php ?></p>
+				<div class="content-author">
+					<div class="img-author">
+						<img src="<?php the_field('imagen_post_banner'); ?>" alt="">
+					</div>
 
-							<small class="cat_date"><?php foreach((get_the_category()) as $category) { if ($category->cat_name != 'destacados' and $category->cat_name != 'galeria') {echo $category->name ;}} ?> / <?php the_date(); ?></small>
+					<div class="name-author">
+						<?php the_author_posts_link(); ?>
+					</div>
+								
+				</div>
+			</div>
+			<!-- /post post -->
 
-							<h2><?php the_title(); ?></h2>
+			<!-- post details -->
+			<div class="date-post">
+				<div id="flecha"></div>
+				<span class="date">
+					<time datetime="<?php the_time('d/m'); ?>">
+						<p class="dia"><?php echo get_the_date('d'); ?> </p>
+						<p class="mes"><?php echo get_the_date('F'); ?> </p>
+					</time>
+				</span>
+			</div>
+				
+			<!-- /post details -->
 
-							<small class="view_commen"><?php echo getPostViews(get_the_ID()); ?> / <?php comments_number(); ?></small>
-
-						</a>
-						<ul class="share_btns">
-							<li>
-								<a href="#" data-type="facebook" data-url="<?php the_permalink() ?>" data-description="<?php the_title_attribute(); ?>" data-via="SoyCrack" class="prettySocial">
-									<svg viewBox="0 0 94 30">
-										<use xlink:href="#svg_btnfb" />
-									</svg>
-								</a>
-							</li>
-							<li>
-								<a href="#" data-type="twitter" data-url="<?php the_permalink() ?>" data-description="<?php the_title_attribute(); ?>" data-via="SoyCrack" class="prettySocial">
-									<svg viewBox="0 0 94 30">
-										<use xlink:href="#svg_btntw" />
-									</svg>
-								</a>
-							</li>
-						</ul>
-					</main>
-				</article>
-
+		</div>
+	</article>
+	<!-- /article -->
+				
 			<?php endwhile; ?>
 
 			<?php else: ?>
 
 				<!-- article -->
 				<article>
-					<p>No hay post.</p>
+					<h2>No hay post.</h2>
 				</article>
 				<!-- /article -->
 
@@ -62,7 +71,6 @@
 		</section>
 		<!-- /section -->
 
-		<?php get_sidebar(); ?>
 
 	</main>
 

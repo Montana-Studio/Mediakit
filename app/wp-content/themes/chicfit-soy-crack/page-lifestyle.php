@@ -67,7 +67,7 @@
 
 				<!-- article -->
 				<article>
-					<p>No hay post.</p>
+					<h2>No hay post.</h2>
 				</article>
 				<!-- /article -->
 

@@ -1,29 +1,42 @@
-			<!-- footer -->
-			<footer class="footer" role="contentinfo">
-
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
-
-			</footer>
-			<!-- /footer -->
-
-		</div>
+			</div>
 		<!-- /wrapper -->
 
-		<div class="search-content oculto">
-			<div class="close">
-				<svg viewBox="0 0 24.707 24.707">
-					<use xlink:href="#svg_icon_cerrar2" />
-				</svg>
-			</div>
-			
-			<?php get_template_part('searchform'); ?>
+			<!-- footer -->
+			<footer class="footer" role="contentinfo">
+				<div class="container-footer">
 
-		</div>
+					<div class="first-box">
+						<div class="logo">
+							<a href="<?php echo home_url(); ?>">
+								<svg viewBox="0 0 300 95">
+									<use xlink:href="#svg_logo"/> 
+								</svg>
+							</a>
+						</div>
+						<nav class="nav">
+							<?php html5blank_nav(); ?>
+						</nav>
+					</div>
+
+					<div class="second-box">
+						<div class="newsletter">
+							<h4>Newsletter</h4>
+							<input type="search" name="s" placeholder="<?php _e( '', 'html5blank' ); ?>"><a class="send" href="">Enviar</a>
+						</div>
+					</div>
+					
+					<div class="third-box">
+						<div class="siguenos">
+							<h4>Siguenos</h4>
+							<li><a href=""><i class="fa fa-facebook"></i></a></li>
+							<li><a href=""><i class="fa fa-twitter"></i></a></li>
+							<li><a href=""><i class="fa fa-instagram"></i></a></li>
+						</div>
+					</div>
+
+				</div>
+			</footer>
+			<!-- /footer -->
 		
 		<script src="<?php echo get_template_directory_uri(); ?>/js/swipe.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/masonry.js"></script>

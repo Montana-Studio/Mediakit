@@ -40,10 +40,6 @@
 								
 							</div>
 						</div>
-						
-
-						
-
 				</article>
 
 			<?php endwhile; ?>
@@ -55,5 +51,7 @@
 			<?php endif; ?>
 	</section>
 	</main>
+
+<?php get_template_part('pagination'); ?>
 
 <?php get_footer(); ?>

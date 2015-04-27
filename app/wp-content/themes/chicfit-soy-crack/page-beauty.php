@@ -1,34 +1,13 @@
+<?php /*Template name: Beauty */ ?>
+
 <?php get_header(); ?>
 
-<!--SLIDER CONTENT-->
-<div id='slider' class='swipe'>
-	<div class='swipe-wrap'>
-		<?php $query = new WP_Query('posts_per_page=3&category_name=destacado'); ?>
-			<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-
-				<div class="content-slide" style="background-image:url(<?php the_field('imagen_post_banner'); ?>);">
-					<article id="post-<?php the_ID(); ?>">
-						<main>
-							<h1><?php the_title(); ?></h1>
-						</main>
-					</article>
-				</div>
-
-			<?php endwhile;
-			wp_reset_postdata();
-			else: ?>
-			<h2>No hay post.</h2>
-		<?php endif; ?>
-	</div>
-	<div class="btn_prev" onclick='mySwipe.prev()'><i class="fa fa-chevron-left"></i></div>
-	<div class="btn_next" onclick='mySwipe.next()'><i class="fa fa-chevron-right"></i></div>
-</div>
 
 
 <!-- LOOP DESTACADOS -->
 <div class="destacados">
 
-	<?php $query = new WP_Query('posts_per_page=4&category_name=destacado'); ?>
+	<?php $query = new WP_Query('posts_per_page=2&category_name=beauty'); ?>
 
 	<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 		<article class="content-destacados" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

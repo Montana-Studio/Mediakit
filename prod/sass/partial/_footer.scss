@@ -1,84 +1,105 @@
 .footer {
+	@include gridle(12);
+	@extend .text-center;
 	background:{color:$third_color;}
 	font:{family:$primary_font;}
 	color:#fff;
-	@include gridle(12);
-	padding-bottom: 20px;
-	.box {
-		@extend .center-width;
-		h4 {
-			@extend .no-margins;
-			color:#fff;
-			font:{family:$primary_font;}
-			padding:5px; 
-		}
-		.first_box {
-			@include gridle(6);
-			background:{color:$third_color_1;}
-			.logo {
-				@include gridle(6);
+	.container-footer {
+		@include gridle(8);
+		@include gridle_push(2);
+		@extend .text-center;
+		display: block;
+		margin: 0 auto;
+		position: relative;
+		.first-box {
+			@include gridle(12);
+			padding: 10px 0;
+			background:{color:$third_color;}
+				.logo {
+					@include gridle(2);
+					@include gridle_clear(both); 
+					float: center;
+					margin: 0 auto;
+					display: block;
+				}
+				.nav {
+					@extend .text-center;
+					display:block;
+					margin: 0 auto;
+					ul {
+						@extend .no-paddings;
+						@extend .no-margins;
+						text:{decoration:none}
+						list-style: none;
+						display: inline-block;
+						li {
+							display: inline-block;
+							a {
+								color: #000;
+								font:{size:11px;} 
+								margin-left: 42px;
+								text:{transform:uppercase;} 
+								font:{weight:bold;} 
+							}	
+						}
+					}
+				}
 			}
+		.second-box {
+			@extend .no-paddings;
+			@include gridle(8);
 			.newsletter {
 				@include gridle(12);
 				padding-bottom: 20px;
 				input {
 					@include gridle(10);
-					border:1px solid #fff;
+					border:1px solid $third_color_2;
 					background: none;
 					padding:10px 5px;
 				}
 				.send {
 					@include gridle(2);
-					border:1px solid #fff;
+					border:1px solid $third_color_2;
 					padding:10px 5px;
-					color:#fff;
+					color:$third_color_2;
+					font:{weight:bold;} 
 					text:{transform:uppercase;align:center;}
 				}
 			}
 		}
-		.second_box {
-			@include gridle(2);
-			.nav {
-				ul {
-					@extend .no-paddings;
-					@extend .no-margins;
-					text:{decoration:none}
-					list-style: none;
-					a {
-						color:#fff;
-						font:{size:14px;}
-						margin-left:5px;
-					}	
-				}
-			}
-		}
-		.third_box {
+		.third-box {
+			@extend .no-paddings;
 			@include gridle(4);
 			.siguenos {
 				text:{decoration:none}
 				list-style: none;
 				li {
+					@extend .text-center;
 					@include gridle(4);
-					margin:10px 0;
+					display: table;
+					padding-left: 20%;
 					i {
 						@include gridle(12);
-						border:1px solid #fff;
+						background: {color:$second_color}
+						border-radius: 20px;
+						color:$third_color;
+						display: table-cell;
 						font:{size:20px;}
-						padding:10px 10px;
-						color:#fff;
+						float: none;
+						height: 40px;
 						text:{align:center;}
+						vertical-align: middle;
+						width: 40px;
+						
 					}
 				}
 			}
-			.contactanos {
-				@extend .siguenos;
-				li {
-					@include gridle(6);
-					a {
-						color:#fff;
-					}
-				}
-			}
+		}
+		h4 {
+			@extend .no-paddings;
+			color:$third_color_2;
+			text:{transform:uppercase;} 
+			margin: 20px 0 5px 0;
 		}
 	}
 }
