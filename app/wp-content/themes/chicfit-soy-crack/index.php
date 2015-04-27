@@ -1,69 +1,28 @@
 <?php get_header(); ?>
 
-<script>
-	
-	jQuery(document).ready(function($){
-		window.mySwipe = new Swipe(document.getElementById('slider'), {
-		  startSlide: 0,
-		  speed: 1000,
-		  auto: 5000,
-		  continuous: true,
-		  disableScroll: false,
-		  stopPropagation: false,
-		  callback: function(index, elem) {
-		  	$('.tit-index-slide').animate({
-		  		bottom:-400,
-		  		opacity:0
-		  	});
-		  },
-		  transitionEnd: function(index, elem) {
-		  	$('.tit-index-slide').animate({
-		  		bottom:0,
-		  		opacity:1
-		  	}, 500);
-		  }
-		});
-	});
-
-</script>
 <!--SLIDER CONTENT-->
-<div id='slider' class='swipe swipe-all'>
+<div id='slider' class='swipe'>
 	<div class='swipe-wrap'>
 		<?php $query = new WP_Query('posts_per_page=3&category_name=destacado'); ?>
-		<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-		
-		<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-		
-			<div class="content-slide" style="background-image:url(<?php echo $feat_image;?>);">
-				<a href="<?php echo get_permalink(); ?>">
-					<article id="post-<?php the_ID(); ?>" <?php post_class('tit-index-slide'); ?>>
-						<main>
-
-							<small class="cat_date"><?php foreach((get_the_category()) as $category) { if ($category->cat_name != 'destacados' and $category->cat_name != 'galeria') {echo $category->name ;}} ?> / <?php the_time('M, j'); ?></small>
-							<h2><?php the_title(); ?></h2>
-
-							<small class="view_commen"><?php echo getPostViews(get_the_ID()); ?> / <?php comments_number(); ?></small>
-							
-						</main>
-					</article>
-				</a>
+			<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+			
+			<div class="content-slide" style="background-image:url(<?php the_field('imagen_post_banner'); ?>);">
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<main>
+						<h1><?php the_title(); ?></h1>
+					</main>
+				</article>
 			</div>
-		
-		<?php endwhile;
-		wp_reset_postdata();
-		else: ?>
-		<p>No hay post.</p>
+			<?php endwhile;
+			wp_reset_postdata();
+			else: ?>
+			<p>No hay post.</p>
 		<?php endif; ?>
 	</div>
 	<div class="btn_prev" onclick='mySwipe.prev()'><i class="fa fa-chevron-left"></i></div>
 	<div class="btn_next" onclick='mySwipe.next()'><i class="fa fa-chevron-right"></i></div>
 </div>
 
-<div class="ads_728x90_home">
-	<script src="//www.googletagservices.com/tag/js/gpt.js">
-	googletag.pubads().definePassback('/92947493/728x90_SOYCRACK_ALL', [728, 90]).display();
-	</script>
-</div>
 
 <!--DESTACADO CONTENT-->
 <ul class="content-destacado">

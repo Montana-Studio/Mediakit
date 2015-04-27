@@ -4343,16 +4343,16 @@ html.ipad-landscape {
 .text-center, .post-loop .content-post .content-author .img-author img, .post-loop .date-post .dia, .post-loop .date-post .mes {
   text-align: center; }
 
-.text-left, h1, .swipe .swipe-wrap .content-slide article, .nav-top .search .search-icon, .content-loop-home #container .item-principal .social, .content-loop-home #container .item-principal .principal-post h2, .content-loop-home #container .item-principal .principal-post .date {
+.text-left, h1, .wrapper .swipe .swipe-wrap .content-slide article, .nav-top .search .search-icon, .content-loop-home #container .item-principal .social, .content-loop-home #container .item-principal .principal-post h2, .content-loop-home #container .item-principal .principal-post .date {
   text-align: left; }
 
 .text-right, .content-post .single-post .content-text .content-author .img-author, .content-post .single-post .content-text .content-author .img-author img, .post-loop .content-post .content-author .img-author {
   text-align: right; }
 
-.no-margins, .header .nav .menu ul, .swipe .swipe-wrap .content-slide article main h1, .footer .box h4, .footer .box .second_box .nav ul, .destacados .content-destacados .img-loop, .destacados .content-destacados .content-art .tags, .content-loop-home #container .item-principal .principal-post .date p, .content-loop-home #container #reciente .bg-color h2, .content-loop-home #container .paginador .bg-color h2, .content-loop-home #container #reciente .bg-color .tags, .content-loop-home #container .paginador .bg-color .tags, .content-post .single-post .content-title .tags, .post-loop .img-post, .post-loop .content-post, .post-loop .date-post, .post-loop .date-post .dia, .post-loop .date-post .mes {
+.no-margins, .header .nav .menu ul, .wrapper .swipe .swipe-wrap .content-slide article main h1, .footer .box h4, .footer .box .second_box .nav ul, .destacados .content-destacados .img-loop, .destacados .content-destacados .content-art .tags, .content-loop-home #container .item-principal .principal-post .date p, .content-loop-home #container #reciente .bg-color h2, .content-loop-home #container .paginador .bg-color h2, .content-loop-home #container #reciente .bg-color .tags, .content-loop-home #container .paginador .bg-color .tags, .content-post .single-post .content-title .tags, .post-loop .img-post, .post-loop .content-post, .post-loop .date-post, .post-loop .date-post .dia, .post-loop .date-post .mes {
   margin: 0 !important; }
 
-.no-paddings, .header .nav, .header .nav .menu, .header .nav .menu ul, .header .nav .menu ul li, .swipe .swipe-wrap .content-slide article main h1, .footer .box .second_box .nav ul, .nav-top, .destacados .content-destacados .img-loop, .destacados .content-destacados .content-art .tags, .content-loop-home #container #reciente .bg-color .tags, .content-loop-home #container .paginador .bg-color .tags, .content-post .single-post .content-title .tags, .content-post .single-post .content-text, .content-post .single-post .content-text .content-author, .content-post .single-post .content-text .content-author .img-author img, .content-post .single-post .content-text .content-author .name-author, .post-loop, .post-loop .img-post, .post-loop .content-post .content-author, .post-loop .content-post .content-author .img-author, .post-loop .content-post .content-author .img-author img, .post-loop .content-post .content-author .name-author, .post-loop .date-post .mes {
+.no-paddings, .header .nav, .header .nav .menu, .header .nav .menu ul, .header .nav .menu ul li, .wrapper .swipe .swipe-wrap .content-slide article main h1, .footer .box .second_box .nav ul, .nav-top, .destacados .content-destacados .img-loop, .destacados .content-destacados .content-art .tags, .content-loop-home #container #reciente .bg-color .tags, .content-loop-home #container .paginador .bg-color .tags, .content-post .single-post .content-title .tags, .content-post .single-post .content-text, .content-post .single-post .content-text .content-author, .content-post .single-post .content-text .content-author .img-author img, .content-post .single-post .content-text .content-author .name-author, .post-loop, .post-loop .img-post, .post-loop .content-post .content-author, .post-loop .content-post .content-author .img-author, .post-loop .content-post .content-author .img-author img, .post-loop .content-post .content-author .name-author, .post-loop .date-post .mes {
   padding: 0 !important; }
 
 .resp_img {
@@ -4598,48 +4598,47 @@ iframe {
   html.default .wrapper {
     padding-left: 0;
     padding-right: 0; }
-
-.swipe {
-  overflow: hidden;
-  visibility: hidden;
-  position: relative;
-  width: 100%;
-  height: 450px; }
-  .swipe .swipe-wrap {
+  .wrapper .swipe {
     overflow: hidden;
-    position: relative; }
-    .swipe .swipe-wrap .content-slide {
-      background-position: center;
-      background-size: cover;
-      min-height: 564px;
-      overflow: hidden; }
-      .swipe .swipe-wrap .content-slide article {
-        width: 40%;
-        height: 100px;
-        bottom: 150px;
-        left: 50px;
-        position: absolute;
-        border-left: 8px solid #bc1c80;
-        padding: 20px;
-        background-color: rgba(0, 0, 0, 0.5); }
-        .swipe .swipe-wrap .content-slide article main h1 {
-          font-family: "Open Sans", sans-serif;
-          font-weight: bold;
-          color: #fff;
-          text-transform: uppercase; }
-  .swipe .btn_prev, .swipe .btn_next {
-    position: absolute;
-    left: 1%;
-    top: 40%;
-    width: 30px;
-    height: 30px;
-    color: #fff;
-    font-size: 40px;
-    cursor: pointer; }
-    .swipe .btn_prev:hover, .swipe .btn_next:hover {
-      color: #6cccff; }
-  .swipe .btn_next {
-    left: 97%; }
+    visibility: hidden;
+    position: relative;
+    width: 100%;
+    height: 450px; }
+    .wrapper .swipe .swipe-wrap {
+      overflow: hidden;
+      position: absolute; }
+      .wrapper .swipe .swipe-wrap .content-slide {
+        background-position: center;
+        background-size: cover;
+        height: 450px;
+        /*min-height:564px;*/
+        overflow: hidden; }
+        .wrapper .swipe .swipe-wrap .content-slide article {
+          width: 40%;
+          height: 100px;
+          bottom: 150px;
+          left: 50px;
+          border-left: 8px solid #bc1c80;
+          padding: 20px;
+          background-color: rgba(0, 0, 0, 0.5); }
+          .wrapper .swipe .swipe-wrap .content-slide article main h1 {
+            font-family: "Open Sans", sans-serif;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase; }
+    .wrapper .swipe .btn_prev, .wrapper .swipe .btn_next {
+      position: absolute;
+      left: 1%;
+      top: 40%;
+      width: 30px;
+      height: 30px;
+      color: #fff;
+      font-size: 40px;
+      cursor: pointer; }
+      .wrapper .swipe .btn_prev:hover, .wrapper .swipe .btn_next:hover {
+        color: #6cccff; }
+    .wrapper .swipe .btn_next {
+      left: 97%; }
 
 .footer {
   background-color: #e1e1e0;

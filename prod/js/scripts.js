@@ -1,4 +1,4 @@
-function swipe(){
+jQuery(document).ready(function($){
 	window.mySwipe = $('#slider').Swipe({
 		speed:1000,
 		auto: 3000,
@@ -8,9 +8,7 @@ function swipe(){
 		callback: function(index, element) {},
 		transitionEnd: function(index, element) {}
 	}).data('Swipe');
-}
-jQuery(document).ready(function($){
-	swipe();
+	
 	 $(window).load(function(){
 
 	 	var $container = $('#container');

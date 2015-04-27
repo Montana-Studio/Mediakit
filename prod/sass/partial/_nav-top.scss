@@ -32,20 +32,24 @@
 			input {
 				background: none;
 				width: 100%;
-				border:none;
-				color:#fff;
-				padding: 10px 0 0 0;
+				border:0;
+				border-bottom:1px solid $third_color_2;
+				color:$third_color_2;
+				padding: 8px 0 0 0;
+				outline:none;
+				font:{size:18px;}
+				text:{transform:uppercase;}
 				@include placeholder {
-					color: #fff;	
+					color:$third_color_2;	
 				}
 			}
 		}
 		.search-icon {
+			@extend .text-left;
 			@include gridle(1);
 			color:$third_color_2;
 			font:{size:20px;}
 			padding: 5px 0 0 0;
-			text:{align:right;}
 			cursor:pointer;
 		}
 

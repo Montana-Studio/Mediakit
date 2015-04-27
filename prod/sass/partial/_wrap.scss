@@ -6,7 +6,6 @@
 	@include gridle_parent();
 	display: block;
 	float:none;
-}
 	.swipe{
 		overflow: hidden;
 		visibility: hidden;
@@ -15,17 +14,17 @@
 		height: 450px;
 		.swipe-wrap{
 			overflow: hidden;
-			position: relative;
+			position: absolute;
 			.content-slide{
 				background:{position:center;size:cover;};
-				min-height:564px;
-				overflow: hidden;
-				article{
+				height: 450px;
+				/*min-height:564px;*/
+				overflow:hidden;
+				article {
 					width:40%;
 					height:100px;
 					bottom:150px;
 					left:50px;
-					position: absolute;
 					border:{left:8px solid $second_color;}
 					padding:20px;
 					@extend .text-left;
@@ -60,3 +59,4 @@
 			left:97%;
 		}
 	}
+}
