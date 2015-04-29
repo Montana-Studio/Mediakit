@@ -6,7 +6,8 @@
 	-moz-box-shadow: 3px 4px 18px -3px  rgba(189,185,189,0.8);
 	box-shadow: 3px 4px 18px -3px  rgba(189,185,189,0.8);
 	.img-post {
-		@include gridle(3);
+		@include gridle(3,desktopess);
+		@include gridle(12,phonees);
 		@extend .no-margins;
 		@extend .no-paddings;
 		background-size:cover;
@@ -14,7 +15,8 @@
 		height: 200px;
 	}
 	.content-post {
-		@include gridle(7);
+		@include gridle(7,desktopess);
+		@include gridle(12,phonees);
 		@extend .no-margins;
 		clear:none;
 		h2 {
@@ -27,9 +29,12 @@
 			@include gridle(12);
 			@extend .no-paddings;
 			.img-author{
-				@include gridle(1);
+				@include gridle(1,desktopess);
 				@extend .text-right;
 				@extend .no-paddings;
+				@include gridle_state(phoness){
+					width: 17%;
+				}
 				img {
 					@extend .text-center;
 					@extend .no-paddings;
@@ -45,12 +50,20 @@
 				@include gridle(4);
 				display: table;
 				height: 60px;
+				@include gridle_state(phoness){
+					width: 83%;
+				}
 				a {	
 					padding-left:5px; 
 					display: table-cell;
 					vertical-align: middle;
 					color:$third_color_2;
 					font:{style:italic;}
+					@include gridle_state(phoness){
+						font:{size:14px;}
+						margin: 0;
+						width: 80%;
+					}
 				}
 			}
 		}
@@ -59,10 +72,14 @@
 		}
 	}
 	.date-post {
-		@include gridle(2);
+		@include gridle(2,desktopess);
+		@include gridle(12,phoness);
 		@extend .no-margins;
 		background: $second_color;
 		height: 200px;
+		@include gridle_state(phonees){
+			height: 50px;
+		}
 		.dia {
 			@extend .text-center;
 			@extend .no-margins;
@@ -70,12 +87,24 @@
 			width: 100%;
 			font:{size:40px;}
 			padding: 20% 0 0 0;
+			@include gridle_state(phonees){
+				font:{size:16px;}
+				padding:0;
+				width: 10%;
+				display: inline-block;
+			}
 		}
 		.mes {
 			@extend .no-paddings;
 			@extend .dia;
 			font:{size:20px;weight:lighter; }
 			text:{transform: uppercase;}
+			@include gridle_state(phonees){
+				font:{size:14px;}
+				padding:0;
+				width: 10%;
+				display: inline-block;
+			}
 		}
 		#flecha {
 			background: $second_color;
@@ -89,7 +118,10 @@
 		    -o-transform: rotate(45deg);
 		    -ms-transform: rotate(45deg);
 		    transform: rotate(45deg);
-
+		    @include gridle_state(phoness){
+		    	top: -14%;
+				left: 43%;
+		    }
 		}
 	}
 }

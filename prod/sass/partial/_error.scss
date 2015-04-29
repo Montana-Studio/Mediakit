@@ -1,0 +1,27 @@
+.error404 {
+	@extend .text-center;
+	@include gridle(12);
+	height: 100%;
+	.logo-error {
+		@extend .text-center;
+		@include gridle(12);
+		@include gridle_clear(both);
+		margin: 0 auto;
+		display: block;
+		height: 100%;
+		svg {
+			@include gridle(6);
+			@extend .text-center;
+			margin:0 auto;
+			display: block;
+			float: none;
+		}
+	}
+	.txt-error {
+		@extend .text-center;
+		h1 {
+			@extend .text-center;
+			@extend .no-margins;
+		}
+	}
+}

@@ -1,6 +1,7 @@
 .container-sidebar {
 	@extend .no-paddings;
-	@include gridle(4);
+	@include gridle(4,desktopess);
+	@include gridle(12,phoness);
 	margin:20px 0;
 	height: auto;
 	.sidebar {

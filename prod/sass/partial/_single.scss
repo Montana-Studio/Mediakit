@@ -2,15 +2,27 @@
 	@include gridle(12);
 	@include gridle_clear(both);
 	.single-post {
-		@include gridle(12);
+		@include gridle(12,desktopess);
+		@include gridle(12,phoness);
+		@include gridle_state(phoness){
+			padding: 0;
+		}
 		.container-one {
 			@extend .no-paddings;
-			@include gridle(12);
+			@include gridle(12,desktopess);
+			@include gridle(12, phoness);
 			.content-title {
 				h1 {
 					margin:20px 0 0 0;
+					@include gridle_state(phoness){
+						  	margin: 20px 0 3px 0;
+							line-height: 24px;
+							}
 					a {
 					color:#000;
+						@include gridle_state( phoness){
+							font:{size:25px;}
+						}
 					}
 				}
 				.tags{
@@ -19,6 +31,9 @@
 					display: block;
 					color:#fff;
 					list-style: none;
+					@include gridle_state(phoness){
+						  width: 80%;
+					}
 					li{
 						padding:2px 5px;
 						margin: 2px 2px 0 0;
@@ -38,9 +53,12 @@
 				background-size: cover;
 				margin-top: 2%;
 				position: relative;
+				@include gridle_state(phoness){
+						height:200px;
+						}
 				.date {
 					background:{color:$second_color_1;}
-					border-radius: 45px;
+					border-radius: 50%;
 					color: #fff;
 					height: 65px;
 					right: 0;
@@ -50,23 +68,36 @@
 					padding: 5px;
 					width: 65px;
 					float: right;
+					@include gridle_state(phoness){
+						height: 40px;
+						width: 40px;
+						top:-25px;
+						}
 					i {
 						@extend.text-center;
 						display: block;
 						font-size: 30px;
 						margin: 5px 0;
+						@include gridle_state(phoness) {
+							font:{size:20px;}
+							margin:{top:2px; bottom:4px;}
+						}
 					}
 					time {
 						@extend.text-center;
 						text:{transform: uppercase;}
 						display: block;
+						@include gridle_state(phoness){
+							font:{size:12px;}
+						}
 					}	
 				}
 			}
 		}
 		.container-two {
 			@extend .no-paddings;
-			@include gridle(8);
+			@include gridle(8,desktopess);
+			@include gridle(12,phoness);
 			.content-text {
 				@include gridle(12);
 				@extend .no-paddings;
@@ -109,6 +140,9 @@
 							a {	
 							color:$third_color_2;
 							font:{style:italic;}
+							@include gridle_state(phoness){
+								font:{size:14px;}
+								}
 							}
 						}
 					}

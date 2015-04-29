@@ -4,7 +4,8 @@
 	@extend .no-paddings;
 	margin-top: 40px;
 	.content-destacados {
-		@include gridle(6);
+		@include gridle(6,desktopess);
+		@include gridle(12,phoness);
 		height: 200px;
 		margin:10px 0;
 		position: relative;
@@ -24,10 +25,16 @@
 				color:#fff;
 				font:{family:$primary_font;size:20px;}
 				text:{transform: uppercase;}
+				@include gridle_state(phoness){
+					font:{size:17px;}
+				}
 			}
 			p {
 				color:#fff;
 				font:{family:$primary_font;size:12px;}
+				@include gridle_state(phoness){
+					display:none;
+				}
 			}
 			.tags{
 				@extend .no-margins;

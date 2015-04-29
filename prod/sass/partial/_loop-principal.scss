@@ -8,7 +8,8 @@
 		@extend .center-width;
 		height: auto !important;
 		.item-principal {
-			@include gridle(4);
+			@include gridle(4,desktopess);
+			@include gridle(12,phoness);
 			position: relative !important;
 			margin: 0 auto 10px auto;
 			height:280px;
@@ -56,6 +57,10 @@
 						border-left:6px solid #bc1c80;
 						position: relative;
 						width: 82%;
+						@include gridle_state(phoness){
+							width: 87%;
+							left:10px;
+						}
 					}
 					.date {
 						@extend .text-left;
@@ -89,13 +94,18 @@
 				h2{
 				padding:45px 60% 0 10px !important;
 				}
-				.pages {
+				.paginador-arrow {
+					@extend .no-paddings;
 					position:absolute;
 					bottom: 0;
 					background:{color:$first_color_1;}
 					color:#fff;
 					width: 95%;
+					@include gridle_state(phoness){
+						width: 93%;
+					}
 					.pagination {
+						@extend .no-margins;
 						@extend .no-paddings;
 						@include gridle(12);
 						.page-numbers {
@@ -111,6 +121,9 @@
 							font:{size:20px;}
 							padding: 20px 0;
 							background:{color:$first_color_1}
+							.text {
+								display: none;
+							}
 							.fa {
 								@extend .text-center;
 								display: block;
@@ -122,6 +135,9 @@
 							float: left;
 							padding: 20px 0;
 							background:{color:$first_color_2}
+							.text {
+								display: none;
+							}
 						}
 					}
 				}

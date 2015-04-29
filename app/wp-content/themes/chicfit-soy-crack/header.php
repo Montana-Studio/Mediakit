@@ -11,7 +11,7 @@
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name='robots' content='noindex,follow' />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--meta name="viewport" content="width=device-width,initial-scale=1.0"-->
 
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/normalize.min.css">
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -40,9 +40,9 @@
 		<?php include (TEMPLATEPATH . '/svg_icons.php'); ?>
 		<div class="nav-top">
 			<div class="top-social">
-				<li><i class="fa fa-facebook"></i></li>
-				<li><i class="fa fa-twitter"></i></li>
-				<li><i class="fa fa-instagram"></i></li>
+				<li><a href="https://www.facebook.com/chicfitdaily"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/chicfitdaily"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="https://instagram.com/chicfitdaily/"><i class="fa fa-instagram"></i></a></li>
 			</div>
 			<div class="search">
 				<div class="cont_search">

@@ -116,7 +116,7 @@
 			<div class="item-principal paginador">
 				<div class="bg-color">
 					<h2>VER MÁS</h2>
-					<div class="pages">
+					<div class="paginador-arrow">
 						<?php get_template_part('pagination'); ?>
 					</div>
 				</div>

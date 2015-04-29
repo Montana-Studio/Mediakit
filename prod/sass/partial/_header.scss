@@ -6,8 +6,9 @@ html {
 	@include gridle_parent();
 	font:{family:$primary_font;};
 	.logo {
-		@include gridle(3);
+		@include gridle(3,desktopess);
 		@include gridle_clear(both);
+		@include gridle(7,phoness);
 	}
 	.nav {
 		@include gridle(12);

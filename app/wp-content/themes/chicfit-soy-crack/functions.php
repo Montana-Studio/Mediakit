@@ -225,8 +225,8 @@ function html5wp_pagination()
         'format' => '?paged=%#%',
         'current' => max(1, get_query_var('paged')),
         'total' => $wp_query->max_num_pages,
-        'prev_text' => __('<div class="fa fa-chevron-left"></div>'),
-        'next_text' => __('<div class="fa fa-chevron-right"></div>'),
+        'prev_text' => __('<div class="fa fa-chevron-left"> </div><div class="text">ANTERIOR</div>'),
+        'next_text' => __('<div class="text">SIGUIENTE</div> <div class="fa fa-chevron-right"></div>'),
     ));
 }
 
