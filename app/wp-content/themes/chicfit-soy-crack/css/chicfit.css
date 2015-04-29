@@ -4334,6 +4334,7 @@ html.ipad-landscape {
 
   .gridle-debug .debug-color-ipad-landscape-6, .debug-color-ipad-landscape-6.gridle-debug {
     background-color: #b2d8ee; } }
+/*queries*/
 /* CELESTE */
 /* CELESTE tono 1*/
 /* CELESTE tono 2*/
@@ -4377,6 +4378,7 @@ h1 {
 iframe {
   width: 100%; }
 
+/*wrapper*/
 .header {
   float: left;
   direction: ltr;
@@ -4422,9 +4424,7 @@ iframe {
     direction: ltr;
     padding-left: 10px;
     padding-right: 10px;
-    width: 25%;
-    clear: both;
-    width: 58.33333%; }
+    clear: both; }
     html.default .header .logo {
       float: left;
       direction: ltr;
@@ -4437,28 +4437,47 @@ iframe {
       .header .logo {
         padding-left: 0;
         padding-right: 0; } }
-    html.default .header .logo {
+    html.desktopess .header .logo {
       width: 25%; }
-      .gridle-debug html.default .header .logo:before, html.default .header .logo.gridle-debug:before {
+      .gridle-debug html.desktopess .header .logo:before, html.desktopess .header .logo.gridle-debug:before {
         content: "grid-default-3"; }
-      .gridle-debug html.default .header .logo.parent:before, html.default .header .logo.gridle-debug.parent:before {
+      .gridle-debug html.desktopess .header .logo.parent:before, html.desktopess .header .logo.gridle-debug.parent:before {
         content: "grid-parent-default-3"; }
-    .gridle-debug .header .logo:before, .header .logo.gridle-debug:before {
-      content: "grid-default-3"; }
-    .gridle-debug .header .logo.parent:before, .header .logo.gridle-debug.parent:before {
-      content: "grid-parent-default-3"; }
+    @media screen and (min-width: 1440px) {
+      .header .logo {
+        width: 25%; }
+        .gridle-debug .header .logo:before, .header .logo.gridle-debug:before {
+          content: "grid-default-3"; }
+        .gridle-debug .header .logo.parent:before, .header .logo.gridle-debug.parent:before {
+          content: "grid-parent-default-3"; } }
+    html.notebook-min .header .logo {
+      width: 25%; }
+      .gridle-debug html.notebook-min .header .logo:before, html.notebook-min .header .logo.gridle-debug:before {
+        content: "grid-default-3"; }
+      .gridle-debug html.notebook-min .header .logo.parent:before, html.notebook-min .header .logo.gridle-debug.parent:before {
+        content: "grid-parent-default-3"; }
+    @media screen and (max-width: 1440px) {
+      .header .logo {
+        width: 25%; }
+        .gridle-debug .header .logo:before, .header .logo.gridle-debug:before {
+          content: "grid-default-3"; }
+        .gridle-debug .header .logo.parent:before, .header .logo.gridle-debug.parent:before {
+          content: "grid-parent-default-3"; } }
     html.default .header .logo {
       clear: both; }
-    html.default .header .logo {
+    html.phoness .header .logo {
       width: 58.33333%; }
-      .gridle-debug html.default .header .logo:before, html.default .header .logo.gridle-debug:before {
-        content: "grid-default-7"; }
-      .gridle-debug html.default .header .logo.parent:before, html.default .header .logo.gridle-debug.parent:before {
-        content: "grid-parent-default-7"; }
-    .gridle-debug .header .logo:before, .header .logo.gridle-debug:before {
-      content: "grid-default-7"; }
-    .gridle-debug .header .logo.parent:before, .header .logo.gridle-debug.parent:before {
-      content: "grid-parent-default-7"; }
+      .gridle-debug html.phoness .header .logo:before, html.phoness .header .logo.gridle-debug:before {
+        content: "grid-phoness-7" !important; }
+      .gridle-debug html.phoness .header .logo.parent:before, html.phoness .header .logo.gridle-debug.parent:before {
+        content: "grid-parent-phoness-7" !important; }
+    @media screen and (max-width: 800px) {
+      .header .logo {
+        width: 58.33333%; }
+        .gridle-debug .header .logo:before, .header .logo.gridle-debug:before {
+          content: "grid-phoness-7" !important; }
+        .gridle-debug .header .logo.parent:before, .header .logo.gridle-debug.parent:before {
+          content: "grid-parent-phoness-7" !important; } }
   .header .nav {
     float: left;
     direction: ltr;
@@ -4574,28 +4593,16 @@ html {
     height: 100%; }
 
 .wrapper {
-  max-width: 1280px;
-  padding-left: 0;
-  padding-right: 0;
-  display: block;
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto 400px;
   float: left;
   direction: ltr;
   padding-left: 10px;
   padding-right: 10px;
-  width: 100%; }
-  html.default .wrapper {
-    padding-left: 0;
-    padding-right: 0; }
-    html.default html.default .wrapper {
-      padding-left: 0;
-      padding-right: 0; }
-  html.default .wrapper {
-    padding-left: 0;
-    padding-right: 0; }
+  max-width: 1280px;
+  display: block;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto 400px; }
   html.default .wrapper {
     float: left;
     direction: ltr;
@@ -4608,30 +4615,68 @@ html {
     .wrapper {
       padding-left: 0;
       padding-right: 0; } }
-  html.default .wrapper {
+  html.phoness .wrapper {
     width: 100%; }
-    .gridle-debug html.default .wrapper:before, html.default .wrapper.gridle-debug:before {
-      content: "grid-default-12"; }
-    .gridle-debug html.default .wrapper.parent:before, html.default .wrapper.gridle-debug.parent:before {
-      content: "grid-parent-default-12"; }
-  .gridle-debug .wrapper:before, .wrapper.gridle-debug:before {
-    content: "grid-default-12"; }
-  .gridle-debug .wrapper.parent:before, .wrapper.gridle-debug.parent:before {
-    content: "grid-parent-default-12"; }
+    .gridle-debug html.phoness .wrapper:before, html.phoness .wrapper.gridle-debug:before {
+      content: "grid-phoness-12" !important; }
+    .gridle-debug html.phoness .wrapper.parent:before, html.phoness .wrapper.gridle-debug.parent:before {
+      content: "grid-parent-phoness-12" !important; }
+  @media screen and (max-width: 800px) {
+    .wrapper {
+      width: 100%; }
+      .gridle-debug .wrapper:before, .wrapper.gridle-debug:before {
+        content: "grid-phoness-12" !important; }
+      .gridle-debug .wrapper.parent:before, .wrapper.gridle-debug.parent:before {
+        content: "grid-parent-phoness-12" !important; } }
+  html.desktopess .wrapper {
+    float: none; }
+  @media screen and (min-width: 1440px) {
+    .wrapper {
+      float: none; } }
+  html.notebook-min .wrapper {
+    float: none; }
+  @media screen and (max-width: 1440px) {
+    .wrapper {
+      float: none; } }
+  html.desktopess .wrapper {
+    padding-left: 0;
+    padding-right: 0; }
+    html.default html.desktopess .wrapper {
+      padding-left: 0;
+      padding-right: 0; }
+  @media screen and (min-width: 1440px) {
+    .wrapper {
+      padding-left: 0;
+      padding-right: 0; }
+      html.default .wrapper {
+        padding-left: 0;
+        padding-right: 0; } }
+  html.notebook-min .wrapper {
+    padding-left: 0;
+    padding-right: 0; }
+    html.default html.notebook-min .wrapper {
+      padding-left: 0;
+      padding-right: 0; }
+  @media screen and (max-width: 1440px) {
+    .wrapper {
+      padding-left: 0;
+      padding-right: 0; }
+      html.default .wrapper {
+        padding-left: 0;
+        padding-right: 0; } }
   .wrapper .push {
-    clear: both;
     height: 400px; }
-    html.default .wrapper .push {
-      clear: both; }
   .wrapper .swipe {
     overflow: hidden;
     visibility: hidden;
     position: relative;
     width: 100%;
-    height: 450px;
-    height: 250px; }
-    html.default .wrapper .swipe {
+    height: 450px; }
+    html.phoness .wrapper .swipe {
       height: 250px; }
+    @media screen and (max-width: 800px) {
+      .wrapper .swipe {
+        height: 250px; } }
     .wrapper .swipe .swipe-wrap {
       overflow: hidden;
       position: relative;
@@ -4639,7 +4684,8 @@ html {
       direction: ltr;
       padding-left: 10px;
       padding-right: 10px;
-      width: 100%; }
+      padding-left: 0;
+      padding-right: 0; }
       html.default .wrapper .swipe .swipe-wrap {
         float: left;
         direction: ltr;
@@ -4652,16 +4698,22 @@ html {
         .wrapper .swipe .swipe-wrap {
           padding-left: 0;
           padding-right: 0; } }
-      html.default .wrapper .swipe .swipe-wrap {
+      html.phoness .wrapper .swipe .swipe-wrap {
         width: 100%; }
-        .gridle-debug html.default .wrapper .swipe .swipe-wrap:before, html.default .wrapper .swipe .swipe-wrap.gridle-debug:before {
-          content: "grid-default-12"; }
-        .gridle-debug html.default .wrapper .swipe .swipe-wrap.parent:before, html.default .wrapper .swipe .swipe-wrap.gridle-debug.parent:before {
-          content: "grid-parent-default-12"; }
-      .gridle-debug .wrapper .swipe .swipe-wrap:before, .wrapper .swipe .swipe-wrap.gridle-debug:before {
-        content: "grid-default-12"; }
-      .gridle-debug .wrapper .swipe .swipe-wrap.parent:before, .wrapper .swipe .swipe-wrap.gridle-debug.parent:before {
-        content: "grid-parent-default-12"; }
+        .gridle-debug html.phoness .wrapper .swipe .swipe-wrap:before, html.phoness .wrapper .swipe .swipe-wrap.gridle-debug:before {
+          content: "grid-phoness-12" !important; }
+        .gridle-debug html.phoness .wrapper .swipe .swipe-wrap.parent:before, html.phoness .wrapper .swipe .swipe-wrap.gridle-debug.parent:before {
+          content: "grid-parent-phoness-12" !important; }
+      @media screen and (max-width: 800px) {
+        .wrapper .swipe .swipe-wrap {
+          width: 100%; }
+          .gridle-debug .wrapper .swipe .swipe-wrap:before, .wrapper .swipe .swipe-wrap.gridle-debug:before {
+            content: "grid-phoness-12" !important; }
+          .gridle-debug .wrapper .swipe .swipe-wrap.parent:before, .wrapper .swipe .swipe-wrap.gridle-debug.parent:before {
+            content: "grid-parent-phoness-12" !important; } }
+      html.default .wrapper .swipe .swipe-wrap {
+        padding-left: 0;
+        padding-right: 0; }
       .wrapper .swipe .swipe-wrap .content-slide {
         background-position: center;
         background-size: cover;
@@ -4669,12 +4721,14 @@ html {
         min-height: 564px;
         float: left;
         width: 100%;
-        position: relative;
-        height: 250px;
-        min-height: 0; }
-        html.default .wrapper .swipe .swipe-wrap .content-slide {
+        position: relative; }
+        html.phoness .wrapper .swipe .swipe-wrap .content-slide {
           height: 250px;
           min-height: 0; }
+        @media screen and (max-width: 800px) {
+          .wrapper .swipe .swipe-wrap .content-slide {
+            height: 250px;
+            min-height: 0; } }
         .wrapper .swipe .swipe-wrap .content-slide article {
           position: absolute;
           width: 40%;
@@ -4683,26 +4737,30 @@ html {
           left: 50px;
           border-left: 8px solid #bc1c80;
           padding: 20px;
-          background-color: rgba(0, 0, 0, 0.5);
-          height: 50px;
-          width: 80%;
-          bottom: 10px;
-          left: 10px;
-          padding: 10px; }
-          html.default .wrapper .swipe .swipe-wrap .content-slide article {
+          background-color: rgba(0, 0, 0, 0.5); }
+          html.phoness .wrapper .swipe .swipe-wrap .content-slide article {
             height: 50px;
             width: 80%;
             bottom: 10px;
             left: 10px;
             padding: 10px; }
+          @media screen and (max-width: 800px) {
+            .wrapper .swipe .swipe-wrap .content-slide article {
+              height: 50px;
+              width: 80%;
+              bottom: 10px;
+              left: 10px;
+              padding: 10px; } }
           .wrapper .swipe .swipe-wrap .content-slide article main h1 {
             font-family: "Open Sans", sans-serif;
             font-weight: bold;
             color: #fff;
-            text-transform: uppercase;
-            font-size: 20px; }
-            html.default .wrapper .swipe .swipe-wrap .content-slide article main h1 {
+            text-transform: uppercase; }
+            html.phoness .wrapper .swipe .swipe-wrap .content-slide article main h1 {
               font-size: 20px; }
+            @media screen and (max-width: 800px) {
+              .wrapper .swipe .swipe-wrap .content-slide article main h1 {
+                font-size: 20px; } }
     .wrapper .swipe .btn_prev, .wrapper .swipe .btn_next {
       position: absolute;
       left: 1%;
@@ -4711,25 +4769,27 @@ html {
       height: 30px;
       color: #fff;
       font-size: 40px;
-      cursor: pointer;
-      font-size: 20px; }
-      html.default .wrapper .swipe .btn_prev, html.default .wrapper .swipe .btn_next {
+      cursor: pointer; }
+      html.phoness .wrapper .swipe .btn_prev, html.phoness .wrapper .swipe .btn_next {
         font-size: 20px; }
+      @media screen and (max-width: 800px) {
+        .wrapper .swipe .btn_prev, .wrapper .swipe .btn_next {
+          font-size: 20px; } }
       .wrapper .swipe .btn_prev:hover, .wrapper .swipe .btn_next:hover {
         color: #6cccff; }
     .wrapper .swipe .btn_next {
-      left: 97%;
-      left: 94%; }
-      html.default .wrapper .swipe .btn_next {
+      left: 97%; }
+      html.phoness .wrapper .swipe .btn_next {
         left: 94%; }
+      @media screen and (max-width: 800px) {
+        .wrapper .swipe .btn_next {
+          left: 94%; } }
 
 .footer {
   float: left;
   direction: ltr;
   padding-left: 10px;
   padding-right: 10px;
-  width: 100%;
-  width: 100%;
   font-family: "Open Sans", sans-serif;
   color: #fff;
   position: relative;
@@ -4747,26 +4807,32 @@ html {
     .footer {
       padding-left: 0;
       padding-right: 0; } }
-  html.default .footer {
+  html.desktopess .footer {
     width: 100%; }
-    .gridle-debug html.default .footer:before, html.default .footer.gridle-debug:before {
-      content: "grid-default-12"; }
-    .gridle-debug html.default .footer.parent:before, html.default .footer.gridle-debug.parent:before {
-      content: "grid-parent-default-12"; }
-  .gridle-debug .footer:before, .footer.gridle-debug:before {
-    content: "grid-default-12"; }
-  .gridle-debug .footer.parent:before, .footer.gridle-debug.parent:before {
-    content: "grid-parent-default-12"; }
-  html.default .footer {
+    .gridle-debug html.desktopess .footer:before, html.desktopess .footer.gridle-debug:before {
+      content: "grid-desktopess-12" !important; }
+    .gridle-debug html.desktopess .footer.parent:before, html.desktopess .footer.gridle-debug.parent:before {
+      content: "grid-parent-desktopess-12" !important; }
+  @media screen and (min-width: 1440px) {
+    .footer {
+      width: 100%; }
+      .gridle-debug .footer:before, .footer.gridle-debug:before {
+        content: "grid-desktopess-12" !important; }
+      .gridle-debug .footer.parent:before, .footer.gridle-debug.parent:before {
+        content: "grid-parent-desktopess-12" !important; } }
+  html.phoness .footer {
     width: 100%; }
-    .gridle-debug html.default .footer:before, html.default .footer.gridle-debug:before {
-      content: "grid-default-12"; }
-    .gridle-debug html.default .footer.parent:before, html.default .footer.gridle-debug.parent:before {
-      content: "grid-parent-default-12"; }
-  .gridle-debug .footer:before, .footer.gridle-debug:before {
-    content: "grid-default-12"; }
-  .gridle-debug .footer.parent:before, .footer.gridle-debug.parent:before {
-    content: "grid-parent-default-12"; }
+    .gridle-debug html.phoness .footer:before, html.phoness .footer.gridle-debug:before {
+      content: "grid-phoness-12" !important; }
+    .gridle-debug html.phoness .footer.parent:before, html.phoness .footer.gridle-debug.parent:before {
+      content: "grid-parent-phoness-12" !important; }
+  @media screen and (max-width: 800px) {
+    .footer {
+      width: 100%; }
+      .gridle-debug .footer:before, .footer.gridle-debug:before {
+        content: "grid-phoness-12" !important; }
+      .gridle-debug .footer.parent:before, .footer.gridle-debug.parent:before {
+        content: "grid-parent-phoness-12" !important; } }
   .footer .footer-content {
     float: left;
     direction: ltr;
@@ -4801,15 +4867,9 @@ html {
       direction: ltr;
       padding-left: 10px;
       padding-right: 10px;
-      width: 66.66667%;
-      width: 100%;
-      left: 16.66667%;
       display: block;
       margin: 0 auto;
-      position: relative;
-      margin: 0;
-      padding: 0;
-      left: 0; }
+      position: relative; }
       html.default .footer .footer-content .container-footer {
         float: left;
         direction: ltr;
@@ -4822,38 +4882,52 @@ html {
         .footer .footer-content .container-footer {
           padding-left: 0;
           padding-right: 0; } }
-      html.default .footer .footer-content .container-footer {
+      html.desktopess .footer .footer-content .container-footer {
         width: 66.66667%; }
-        .gridle-debug html.default .footer .footer-content .container-footer:before, html.default .footer .footer-content .container-footer.gridle-debug:before {
-          content: "grid-default-8"; }
-        .gridle-debug html.default .footer .footer-content .container-footer.parent:before, html.default .footer .footer-content .container-footer.gridle-debug.parent:before {
-          content: "grid-parent-default-8"; }
-      .gridle-debug .footer .footer-content .container-footer:before, .footer .footer-content .container-footer.gridle-debug:before {
-        content: "grid-default-8"; }
-      .gridle-debug .footer .footer-content .container-footer.parent:before, .footer .footer-content .container-footer.gridle-debug.parent:before {
-        content: "grid-parent-default-8"; }
-      html.default .footer .footer-content .container-footer {
+        .gridle-debug html.desktopess .footer .footer-content .container-footer:before, html.desktopess .footer .footer-content .container-footer.gridle-debug:before {
+          content: "grid-desktopess-8" !important; }
+        .gridle-debug html.desktopess .footer .footer-content .container-footer.parent:before, html.desktopess .footer .footer-content .container-footer.gridle-debug.parent:before {
+          content: "grid-parent-desktopess-8" !important; }
+      @media screen and (min-width: 1440px) {
+        .footer .footer-content .container-footer {
+          width: 66.66667%; }
+          .gridle-debug .footer .footer-content .container-footer:before, .footer .footer-content .container-footer.gridle-debug:before {
+            content: "grid-desktopess-8" !important; }
+          .gridle-debug .footer .footer-content .container-footer.parent:before, .footer .footer-content .container-footer.gridle-debug.parent:before {
+            content: "grid-parent-desktopess-8" !important; } }
+      html.phoness .footer .footer-content .container-footer {
         width: 100%; }
-        .gridle-debug html.default .footer .footer-content .container-footer:before, html.default .footer .footer-content .container-footer.gridle-debug:before {
-          content: "grid-default-12"; }
-        .gridle-debug html.default .footer .footer-content .container-footer.parent:before, html.default .footer .footer-content .container-footer.gridle-debug.parent:before {
-          content: "grid-parent-default-12"; }
-      .gridle-debug .footer .footer-content .container-footer:before, .footer .footer-content .container-footer.gridle-debug:before {
-        content: "grid-default-12"; }
-      .gridle-debug .footer .footer-content .container-footer.parent:before, .footer .footer-content .container-footer.gridle-debug.parent:before {
-        content: "grid-parent-default-12"; }
+        .gridle-debug html.phoness .footer .footer-content .container-footer:before, html.phoness .footer .footer-content .container-footer.gridle-debug:before {
+          content: "grid-phoness-12" !important; }
+        .gridle-debug html.phoness .footer .footer-content .container-footer.parent:before, html.phoness .footer .footer-content .container-footer.gridle-debug.parent:before {
+          content: "grid-parent-phoness-12" !important; }
+      @media screen and (max-width: 800px) {
+        .footer .footer-content .container-footer {
+          width: 100%; }
+          .gridle-debug .footer .footer-content .container-footer:before, .footer .footer-content .container-footer.gridle-debug:before {
+            content: "grid-phoness-12" !important; }
+          .gridle-debug .footer .footer-content .container-footer.parent:before, .footer .footer-content .container-footer.gridle-debug.parent:before {
+            content: "grid-parent-phoness-12" !important; } }
       .gridle-debug .footer .footer-content .container-footer, .footer .footer-content .container-footer.gridle-debug {
         background-color: #f4efdf !important; }
-      html.default .footer .footer-content .container-footer {
+      html.desktopess .footer .footer-content .container-footer {
         left: 16.66667%; }
-        .gridle-debug html.default .footer .footer-content .container-footer:after, html.default .footer .footer-content .container-footer.gridle-debug:after {
-          content: "push-default-2"; }
-      .gridle-debug .footer .footer-content .container-footer:after, .footer .footer-content .container-footer.gridle-debug:after {
-        content: "push-default-2"; }
-      html.default .footer .footer-content .container-footer {
+        .gridle-debug html.desktopess .footer .footer-content .container-footer:after, html.desktopess .footer .footer-content .container-footer.gridle-debug:after {
+          content: "push-desktopess-2" !important; }
+      @media screen and (min-width: 1440px) {
+        .footer .footer-content .container-footer {
+          left: 16.66667%; }
+          .gridle-debug .footer .footer-content .container-footer:after, .footer .footer-content .container-footer.gridle-debug:after {
+            content: "push-desktopess-2" !important; } }
+      html.phoness .footer .footer-content .container-footer {
         margin: 0;
         padding: 0;
         left: 0; }
+      @media screen and (max-width: 800px) {
+        .footer .footer-content .container-footer {
+          margin: 0;
+          padding: 0;
+          left: 0; } }
       .footer .footer-content .container-footer .first-box {
         float: left;
         direction: ltr;
@@ -4888,8 +4962,6 @@ html {
           direction: ltr;
           padding-left: 10px;
           padding-right: 10px;
-          width: 16.66667%;
-          width: 100%;
           clear: both;
           float: center;
           margin: 0 auto;
@@ -4906,26 +4978,32 @@ html {
             .footer .footer-content .container-footer .first-box .logo {
               padding-left: 0;
               padding-right: 0; } }
-          html.default .footer .footer-content .container-footer .first-box .logo {
+          html.desktopess .footer .footer-content .container-footer .first-box .logo {
             width: 16.66667%; }
-            .gridle-debug html.default .footer .footer-content .container-footer .first-box .logo:before, html.default .footer .footer-content .container-footer .first-box .logo.gridle-debug:before {
-              content: "grid-default-2"; }
-            .gridle-debug html.default .footer .footer-content .container-footer .first-box .logo.parent:before, html.default .footer .footer-content .container-footer .first-box .logo.gridle-debug.parent:before {
-              content: "grid-parent-default-2"; }
-          .gridle-debug .footer .footer-content .container-footer .first-box .logo:before, .footer .footer-content .container-footer .first-box .logo.gridle-debug:before {
-            content: "grid-default-2"; }
-          .gridle-debug .footer .footer-content .container-footer .first-box .logo.parent:before, .footer .footer-content .container-footer .first-box .logo.gridle-debug.parent:before {
-            content: "grid-parent-default-2"; }
-          html.default .footer .footer-content .container-footer .first-box .logo {
+            .gridle-debug html.desktopess .footer .footer-content .container-footer .first-box .logo:before, html.desktopess .footer .footer-content .container-footer .first-box .logo.gridle-debug:before {
+              content: "grid-desktopess-2" !important; }
+            .gridle-debug html.desktopess .footer .footer-content .container-footer .first-box .logo.parent:before, html.desktopess .footer .footer-content .container-footer .first-box .logo.gridle-debug.parent:before {
+              content: "grid-parent-desktopess-2" !important; }
+          @media screen and (min-width: 1440px) {
+            .footer .footer-content .container-footer .first-box .logo {
+              width: 16.66667%; }
+              .gridle-debug .footer .footer-content .container-footer .first-box .logo:before, .footer .footer-content .container-footer .first-box .logo.gridle-debug:before {
+                content: "grid-desktopess-2" !important; }
+              .gridle-debug .footer .footer-content .container-footer .first-box .logo.parent:before, .footer .footer-content .container-footer .first-box .logo.gridle-debug.parent:before {
+                content: "grid-parent-desktopess-2" !important; } }
+          html.phoness .footer .footer-content .container-footer .first-box .logo {
             width: 100%; }
-            .gridle-debug html.default .footer .footer-content .container-footer .first-box .logo:before, html.default .footer .footer-content .container-footer .first-box .logo.gridle-debug:before {
-              content: "grid-default-12"; }
-            .gridle-debug html.default .footer .footer-content .container-footer .first-box .logo.parent:before, html.default .footer .footer-content .container-footer .first-box .logo.gridle-debug.parent:before {
-              content: "grid-parent-default-12"; }
-          .gridle-debug .footer .footer-content .container-footer .first-box .logo:before, .footer .footer-content .container-footer .first-box .logo.gridle-debug:before {
-            content: "grid-default-12"; }
-          .gridle-debug .footer .footer-content .container-footer .first-box .logo.parent:before, .footer .footer-content .container-footer .first-box .logo.gridle-debug.parent:before {
-            content: "grid-parent-default-12"; }
+            .gridle-debug html.phoness .footer .footer-content .container-footer .first-box .logo:before, html.phoness .footer .footer-content .container-footer .first-box .logo.gridle-debug:before {
+              content: "grid-phoness-12" !important; }
+            .gridle-debug html.phoness .footer .footer-content .container-footer .first-box .logo.parent:before, html.phoness .footer .footer-content .container-footer .first-box .logo.gridle-debug.parent:before {
+              content: "grid-parent-phoness-12" !important; }
+          @media screen and (max-width: 800px) {
+            .footer .footer-content .container-footer .first-box .logo {
+              width: 100%; }
+              .gridle-debug .footer .footer-content .container-footer .first-box .logo:before, .footer .footer-content .container-footer .first-box .logo.gridle-debug:before {
+                content: "grid-phoness-12" !important; }
+              .gridle-debug .footer .footer-content .container-footer .first-box .logo.parent:before, .footer .footer-content .container-footer .first-box .logo.gridle-debug.parent:before {
+                content: "grid-parent-phoness-12" !important; } }
           html.default .footer .footer-content .container-footer .first-box .logo {
             clear: both; }
         .footer .footer-content .container-footer .first-box .nav {
@@ -4934,14 +5012,16 @@ html {
           .footer .footer-content .container-footer .first-box .nav ul {
             text-decoration: none;
             list-style: none;
-            display: inline-block;
-            margin: 0;
-            padding: 0;
-            width: 100%; }
-            html.default .footer .footer-content .container-footer .first-box .nav ul {
+            display: inline-block; }
+            html.phoness .footer .footer-content .container-footer .first-box .nav ul {
               margin: 0;
               padding: 0;
               width: 100%; }
+            @media screen and (max-width: 800px) {
+              .footer .footer-content .container-footer .first-box .nav ul {
+                margin: 0;
+                padding: 0;
+                width: 100%; } }
             .footer .footer-content .container-footer .first-box .nav ul li {
               display: inline-block; }
               .footer .footer-content .container-footer .first-box .nav ul li a {
@@ -4949,19 +5029,19 @@ html {
                 font-size: 11px;
                 margin-left: 42px;
                 text-transform: uppercase;
-                font-weight: bold;
-                margin-left: 5px;
-                text-size: 10px; }
-                html.default .footer .footer-content .container-footer .first-box .nav ul li a {
+                font-weight: bold; }
+                html.phoness .footer .footer-content .container-footer .first-box .nav ul li a {
                   margin-left: 5px;
                   text-size: 10px; }
+                @media screen and (max-width: 800px) {
+                  .footer .footer-content .container-footer .first-box .nav ul li a {
+                    margin-left: 5px;
+                    text-size: 10px; } }
       .footer .footer-content .container-footer .second-box {
         float: left;
         direction: ltr;
         padding-left: 10px;
-        padding-right: 10px;
-        width: 66.66667%;
-        width: 100%; }
+        padding-right: 10px; }
         html.default .footer .footer-content .container-footer .second-box {
           float: left;
           direction: ltr;
@@ -4974,34 +5054,39 @@ html {
           .footer .footer-content .container-footer .second-box {
             padding-left: 0;
             padding-right: 0; } }
-        html.default .footer .footer-content .container-footer .second-box {
+        html.desktopess .footer .footer-content .container-footer .second-box {
           width: 66.66667%; }
-          .gridle-debug html.default .footer .footer-content .container-footer .second-box:before, html.default .footer .footer-content .container-footer .second-box.gridle-debug:before {
-            content: "grid-default-8"; }
-          .gridle-debug html.default .footer .footer-content .container-footer .second-box.parent:before, html.default .footer .footer-content .container-footer .second-box.gridle-debug.parent:before {
-            content: "grid-parent-default-8"; }
-        .gridle-debug .footer .footer-content .container-footer .second-box:before, .footer .footer-content .container-footer .second-box.gridle-debug:before {
-          content: "grid-default-8"; }
-        .gridle-debug .footer .footer-content .container-footer .second-box.parent:before, .footer .footer-content .container-footer .second-box.gridle-debug.parent:before {
-          content: "grid-parent-default-8"; }
-        html.default .footer .footer-content .container-footer .second-box {
+          .gridle-debug html.desktopess .footer .footer-content .container-footer .second-box:before, html.desktopess .footer .footer-content .container-footer .second-box.gridle-debug:before {
+            content: "grid-desktopess-8" !important; }
+          .gridle-debug html.desktopess .footer .footer-content .container-footer .second-box.parent:before, html.desktopess .footer .footer-content .container-footer .second-box.gridle-debug.parent:before {
+            content: "grid-parent-desktopess-8" !important; }
+        @media screen and (min-width: 1440px) {
+          .footer .footer-content .container-footer .second-box {
+            width: 66.66667%; }
+            .gridle-debug .footer .footer-content .container-footer .second-box:before, .footer .footer-content .container-footer .second-box.gridle-debug:before {
+              content: "grid-desktopess-8" !important; }
+            .gridle-debug .footer .footer-content .container-footer .second-box.parent:before, .footer .footer-content .container-footer .second-box.gridle-debug.parent:before {
+              content: "grid-parent-desktopess-8" !important; } }
+        html.phoness .footer .footer-content .container-footer .second-box {
           width: 100%; }
-          .gridle-debug html.default .footer .footer-content .container-footer .second-box:before, html.default .footer .footer-content .container-footer .second-box.gridle-debug:before {
-            content: "grid-default-12"; }
-          .gridle-debug html.default .footer .footer-content .container-footer .second-box.parent:before, html.default .footer .footer-content .container-footer .second-box.gridle-debug.parent:before {
-            content: "grid-parent-default-12"; }
-        .gridle-debug .footer .footer-content .container-footer .second-box:before, .footer .footer-content .container-footer .second-box.gridle-debug:before {
-          content: "grid-default-12"; }
-        .gridle-debug .footer .footer-content .container-footer .second-box.parent:before, .footer .footer-content .container-footer .second-box.gridle-debug.parent:before {
-          content: "grid-parent-default-12"; }
+          .gridle-debug html.phoness .footer .footer-content .container-footer .second-box:before, html.phoness .footer .footer-content .container-footer .second-box.gridle-debug:before {
+            content: "grid-phoness-12" !important; }
+          .gridle-debug html.phoness .footer .footer-content .container-footer .second-box.parent:before, html.phoness .footer .footer-content .container-footer .second-box.gridle-debug.parent:before {
+            content: "grid-parent-phoness-12" !important; }
+        @media screen and (max-width: 800px) {
+          .footer .footer-content .container-footer .second-box {
+            width: 100%; }
+            .gridle-debug .footer .footer-content .container-footer .second-box:before, .footer .footer-content .container-footer .second-box.gridle-debug:before {
+              content: "grid-phoness-12" !important; }
+            .gridle-debug .footer .footer-content .container-footer .second-box.parent:before, .footer .footer-content .container-footer .second-box.gridle-debug.parent:before {
+              content: "grid-parent-phoness-12" !important; } }
         .footer .footer-content .container-footer .second-box .newsletter {
           float: left;
           direction: ltr;
           padding-left: 10px;
           padding-right: 10px;
           width: 100%;
-          padding-bottom: 20px;
-          padding-bottom: 0; }
+          padding-bottom: 20px; }
           html.default .footer .footer-content .container-footer .second-box .newsletter {
             float: left;
             direction: ltr;
@@ -5024,15 +5109,16 @@ html {
             content: "grid-default-12"; }
           .gridle-debug .footer .footer-content .container-footer .second-box .newsletter.parent:before, .footer .footer-content .container-footer .second-box .newsletter.gridle-debug.parent:before {
             content: "grid-parent-default-12"; }
-          html.default .footer .footer-content .container-footer .second-box .newsletter {
+          html.phoness .footer .footer-content .container-footer .second-box .newsletter {
             padding-bottom: 0; }
+          @media screen and (max-width: 800px) {
+            .footer .footer-content .container-footer .second-box .newsletter {
+              padding-bottom: 0; } }
           .footer .footer-content .container-footer .second-box .newsletter input {
             float: left;
             direction: ltr;
             padding-left: 10px;
             padding-right: 10px;
-            width: 83.33333%;
-            width: 66.66667%;
             border: 1px solid #a2a2a2;
             outline: none !important;
             background: none;
@@ -5049,33 +5135,37 @@ html {
               .footer .footer-content .container-footer .second-box .newsletter input {
                 padding-left: 0;
                 padding-right: 0; } }
-            html.default .footer .footer-content .container-footer .second-box .newsletter input {
+            html.desktopess .footer .footer-content .container-footer .second-box .newsletter input {
               width: 83.33333%; }
-              .gridle-debug html.default .footer .footer-content .container-footer .second-box .newsletter input:before, html.default .footer .footer-content .container-footer .second-box .newsletter input.gridle-debug:before {
-                content: "grid-default-10"; }
-              .gridle-debug html.default .footer .footer-content .container-footer .second-box .newsletter input.parent:before, html.default .footer .footer-content .container-footer .second-box .newsletter input.gridle-debug.parent:before {
-                content: "grid-parent-default-10"; }
-            .gridle-debug .footer .footer-content .container-footer .second-box .newsletter input:before, .footer .footer-content .container-footer .second-box .newsletter input.gridle-debug:before {
-              content: "grid-default-10"; }
-            .gridle-debug .footer .footer-content .container-footer .second-box .newsletter input.parent:before, .footer .footer-content .container-footer .second-box .newsletter input.gridle-debug.parent:before {
-              content: "grid-parent-default-10"; }
-            html.default .footer .footer-content .container-footer .second-box .newsletter input {
+              .gridle-debug html.desktopess .footer .footer-content .container-footer .second-box .newsletter input:before, html.desktopess .footer .footer-content .container-footer .second-box .newsletter input.gridle-debug:before {
+                content: "grid-desktopess-10" !important; }
+              .gridle-debug html.desktopess .footer .footer-content .container-footer .second-box .newsletter input.parent:before, html.desktopess .footer .footer-content .container-footer .second-box .newsletter input.gridle-debug.parent:before {
+                content: "grid-parent-desktopess-10" !important; }
+            @media screen and (min-width: 1440px) {
+              .footer .footer-content .container-footer .second-box .newsletter input {
+                width: 83.33333%; }
+                .gridle-debug .footer .footer-content .container-footer .second-box .newsletter input:before, .footer .footer-content .container-footer .second-box .newsletter input.gridle-debug:before {
+                  content: "grid-desktopess-10" !important; }
+                .gridle-debug .footer .footer-content .container-footer .second-box .newsletter input.parent:before, .footer .footer-content .container-footer .second-box .newsletter input.gridle-debug.parent:before {
+                  content: "grid-parent-desktopess-10" !important; } }
+            html.phoness .footer .footer-content .container-footer .second-box .newsletter input {
               width: 66.66667%; }
-              .gridle-debug html.default .footer .footer-content .container-footer .second-box .newsletter input:before, html.default .footer .footer-content .container-footer .second-box .newsletter input.gridle-debug:before {
-                content: "grid-default-8"; }
-              .gridle-debug html.default .footer .footer-content .container-footer .second-box .newsletter input.parent:before, html.default .footer .footer-content .container-footer .second-box .newsletter input.gridle-debug.parent:before {
-                content: "grid-parent-default-8"; }
-            .gridle-debug .footer .footer-content .container-footer .second-box .newsletter input:before, .footer .footer-content .container-footer .second-box .newsletter input.gridle-debug:before {
-              content: "grid-default-8"; }
-            .gridle-debug .footer .footer-content .container-footer .second-box .newsletter input.parent:before, .footer .footer-content .container-footer .second-box .newsletter input.gridle-debug.parent:before {
-              content: "grid-parent-default-8"; }
+              .gridle-debug html.phoness .footer .footer-content .container-footer .second-box .newsletter input:before, html.phoness .footer .footer-content .container-footer .second-box .newsletter input.gridle-debug:before {
+                content: "grid-phoness-8" !important; }
+              .gridle-debug html.phoness .footer .footer-content .container-footer .second-box .newsletter input.parent:before, html.phoness .footer .footer-content .container-footer .second-box .newsletter input.gridle-debug.parent:before {
+                content: "grid-parent-phoness-8" !important; }
+            @media screen and (max-width: 800px) {
+              .footer .footer-content .container-footer .second-box .newsletter input {
+                width: 66.66667%; }
+                .gridle-debug .footer .footer-content .container-footer .second-box .newsletter input:before, .footer .footer-content .container-footer .second-box .newsletter input.gridle-debug:before {
+                  content: "grid-phoness-8" !important; }
+                .gridle-debug .footer .footer-content .container-footer .second-box .newsletter input.parent:before, .footer .footer-content .container-footer .second-box .newsletter input.gridle-debug.parent:before {
+                  content: "grid-parent-phoness-8" !important; } }
           .footer .footer-content .container-footer .second-box .newsletter .send {
             float: left;
             direction: ltr;
             padding-left: 10px;
             padding-right: 10px;
-            width: 16.66667%;
-            width: 33.33333%;
             border: 1px solid #a2a2a2;
             padding: 10px 5px;
             color: #a2a2a2;
@@ -5094,33 +5184,38 @@ html {
               .footer .footer-content .container-footer .second-box .newsletter .send {
                 padding-left: 0;
                 padding-right: 0; } }
-            html.default .footer .footer-content .container-footer .second-box .newsletter .send {
+            html.desktopess .footer .footer-content .container-footer .second-box .newsletter .send {
               width: 16.66667%; }
-              .gridle-debug html.default .footer .footer-content .container-footer .second-box .newsletter .send:before, html.default .footer .footer-content .container-footer .second-box .newsletter .send.gridle-debug:before {
-                content: "grid-default-2"; }
-              .gridle-debug html.default .footer .footer-content .container-footer .second-box .newsletter .send.parent:before, html.default .footer .footer-content .container-footer .second-box .newsletter .send.gridle-debug.parent:before {
-                content: "grid-parent-default-2"; }
-            .gridle-debug .footer .footer-content .container-footer .second-box .newsletter .send:before, .footer .footer-content .container-footer .second-box .newsletter .send.gridle-debug:before {
-              content: "grid-default-2"; }
-            .gridle-debug .footer .footer-content .container-footer .second-box .newsletter .send.parent:before, .footer .footer-content .container-footer .second-box .newsletter .send.gridle-debug.parent:before {
-              content: "grid-parent-default-2"; }
-            html.default .footer .footer-content .container-footer .second-box .newsletter .send {
+              .gridle-debug html.desktopess .footer .footer-content .container-footer .second-box .newsletter .send:before, html.desktopess .footer .footer-content .container-footer .second-box .newsletter .send.gridle-debug:before {
+                content: "grid-desktopess-2" !important; }
+              .gridle-debug html.desktopess .footer .footer-content .container-footer .second-box .newsletter .send.parent:before, html.desktopess .footer .footer-content .container-footer .second-box .newsletter .send.gridle-debug.parent:before {
+                content: "grid-parent-desktopess-2" !important; }
+            @media screen and (min-width: 1440px) {
+              .footer .footer-content .container-footer .second-box .newsletter .send {
+                width: 16.66667%; }
+                .gridle-debug .footer .footer-content .container-footer .second-box .newsletter .send:before, .footer .footer-content .container-footer .second-box .newsletter .send.gridle-debug:before {
+                  content: "grid-desktopess-2" !important; }
+                .gridle-debug .footer .footer-content .container-footer .second-box .newsletter .send.parent:before, .footer .footer-content .container-footer .second-box .newsletter .send.gridle-debug.parent:before {
+                  content: "grid-parent-desktopess-2" !important; } }
+            html.phoness .footer .footer-content .container-footer .second-box .newsletter .send {
               width: 33.33333%; }
-              .gridle-debug html.default .footer .footer-content .container-footer .second-box .newsletter .send:before, html.default .footer .footer-content .container-footer .second-box .newsletter .send.gridle-debug:before {
-                content: "grid-default-4"; }
-              .gridle-debug html.default .footer .footer-content .container-footer .second-box .newsletter .send.parent:before, html.default .footer .footer-content .container-footer .second-box .newsletter .send.gridle-debug.parent:before {
-                content: "grid-parent-default-4"; }
-            .gridle-debug .footer .footer-content .container-footer .second-box .newsletter .send:before, .footer .footer-content .container-footer .second-box .newsletter .send.gridle-debug:before {
-              content: "grid-default-4"; }
-            .gridle-debug .footer .footer-content .container-footer .second-box .newsletter .send.parent:before, .footer .footer-content .container-footer .second-box .newsletter .send.gridle-debug.parent:before {
-              content: "grid-parent-default-4"; }
+              .gridle-debug html.phoness .footer .footer-content .container-footer .second-box .newsletter .send:before, html.phoness .footer .footer-content .container-footer .second-box .newsletter .send.gridle-debug:before {
+                content: "grid-phoness-4" !important; }
+              .gridle-debug html.phoness .footer .footer-content .container-footer .second-box .newsletter .send.parent:before, html.phoness .footer .footer-content .container-footer .second-box .newsletter .send.gridle-debug.parent:before {
+                content: "grid-parent-phoness-4" !important; }
+            @media screen and (max-width: 800px) {
+              .footer .footer-content .container-footer .second-box .newsletter .send {
+                width: 33.33333%; }
+                .gridle-debug .footer .footer-content .container-footer .second-box .newsletter .send:before, .footer .footer-content .container-footer .second-box .newsletter .send.gridle-debug:before {
+                  content: "grid-phoness-4" !important; }
+                .gridle-debug .footer .footer-content .container-footer .second-box .newsletter .send.parent:before, .footer .footer-content .container-footer .second-box .newsletter .send.gridle-debug.parent:before {
+                  content: "grid-parent-phoness-4" !important; } }
       .footer .footer-content .container-footer .third-box {
         float: left;
         direction: ltr;
         padding-left: 10px;
         padding-right: 10px;
-        width: 33.33333%;
-        display: none; }
+        width: 33.33333%; }
         html.default .footer .footer-content .container-footer .third-box {
           float: left;
           direction: ltr;
@@ -5143,8 +5238,11 @@ html {
           content: "grid-default-4"; }
         .gridle-debug .footer .footer-content .container-footer .third-box.parent:before, .footer .footer-content .container-footer .third-box.gridle-debug.parent:before {
           content: "grid-parent-default-4"; }
-        html.default .footer .footer-content .container-footer .third-box {
+        html.phoness .footer .footer-content .container-footer .third-box {
           display: none; }
+        @media screen and (max-width: 800px) {
+          .footer .footer-content .container-footer .third-box {
+            display: none; } }
         .footer .footer-content .container-footer .third-box .siguenos {
           text-decoration: none;
           list-style: none; }
@@ -5153,8 +5251,6 @@ html {
             direction: ltr;
             padding-left: 10px;
             padding-right: 10px;
-            width: 100%;
-            width: 100%;
             height: auto; }
             html.default .footer .footer-content .container-footer .third-box .siguenos ul {
               float: left;
@@ -5168,33 +5264,37 @@ html {
               .footer .footer-content .container-footer .third-box .siguenos ul {
                 padding-left: 0;
                 padding-right: 0; } }
-            html.default .footer .footer-content .container-footer .third-box .siguenos ul {
+            html.desktopess .footer .footer-content .container-footer .third-box .siguenos ul {
               width: 100%; }
-              .gridle-debug html.default .footer .footer-content .container-footer .third-box .siguenos ul:before, html.default .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug:before {
-                content: "grid-default-12"; }
-              .gridle-debug html.default .footer .footer-content .container-footer .third-box .siguenos ul.parent:before, html.default .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug.parent:before {
-                content: "grid-parent-default-12"; }
-            .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul:before, .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug:before {
-              content: "grid-default-12"; }
-            .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul.parent:before, .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug.parent:before {
-              content: "grid-parent-default-12"; }
-            html.default .footer .footer-content .container-footer .third-box .siguenos ul {
+              .gridle-debug html.desktopess .footer .footer-content .container-footer .third-box .siguenos ul:before, html.desktopess .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug:before {
+                content: "grid-desktopess-12" !important; }
+              .gridle-debug html.desktopess .footer .footer-content .container-footer .third-box .siguenos ul.parent:before, html.desktopess .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug.parent:before {
+                content: "grid-parent-desktopess-12" !important; }
+            @media screen and (min-width: 1440px) {
+              .footer .footer-content .container-footer .third-box .siguenos ul {
+                width: 100%; }
+                .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul:before, .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug:before {
+                  content: "grid-desktopess-12" !important; }
+                .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul.parent:before, .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug.parent:before {
+                  content: "grid-parent-desktopess-12" !important; } }
+            html.phoness .footer .footer-content .container-footer .third-box .siguenos ul {
               width: 100%; }
-              .gridle-debug html.default .footer .footer-content .container-footer .third-box .siguenos ul:before, html.default .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug:before {
-                content: "grid-default-12"; }
-              .gridle-debug html.default .footer .footer-content .container-footer .third-box .siguenos ul.parent:before, html.default .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug.parent:before {
-                content: "grid-parent-default-12"; }
-            .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul:before, .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug:before {
-              content: "grid-default-12"; }
-            .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul.parent:before, .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug.parent:before {
-              content: "grid-parent-default-12"; }
+              .gridle-debug html.phoness .footer .footer-content .container-footer .third-box .siguenos ul:before, html.phoness .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug:before {
+                content: "grid-phoness-12" !important; }
+              .gridle-debug html.phoness .footer .footer-content .container-footer .third-box .siguenos ul.parent:before, html.phoness .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug.parent:before {
+                content: "grid-parent-phoness-12" !important; }
+            @media screen and (max-width: 800px) {
+              .footer .footer-content .container-footer .third-box .siguenos ul {
+                width: 100%; }
+                .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul:before, .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug:before {
+                  content: "grid-phoness-12" !important; }
+                .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul.parent:before, .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug.parent:before {
+                  content: "grid-parent-phoness-12" !important; } }
             .footer .footer-content .container-footer .third-box .siguenos ul li {
               float: left;
               direction: ltr;
               padding-left: 10px;
               padding-right: 10px;
-              width: 33.33333%;
-              width: 33.33333%;
               display: block; }
               html.default .footer .footer-content .container-footer .third-box .siguenos ul li {
                 float: left;
@@ -5208,26 +5308,32 @@ html {
                 .footer .footer-content .container-footer .third-box .siguenos ul li {
                   padding-left: 0;
                   padding-right: 0; } }
-              html.default .footer .footer-content .container-footer .third-box .siguenos ul li {
+              html.desktopess .footer .footer-content .container-footer .third-box .siguenos ul li {
                 width: 33.33333%; }
-                .gridle-debug html.default .footer .footer-content .container-footer .third-box .siguenos ul li:before, html.default .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug:before {
-                  content: "grid-default-4"; }
-                .gridle-debug html.default .footer .footer-content .container-footer .third-box .siguenos ul li.parent:before, html.default .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug.parent:before {
-                  content: "grid-parent-default-4"; }
-              .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul li:before, .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug:before {
-                content: "grid-default-4"; }
-              .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul li.parent:before, .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug.parent:before {
-                content: "grid-parent-default-4"; }
-              html.default .footer .footer-content .container-footer .third-box .siguenos ul li {
+                .gridle-debug html.desktopess .footer .footer-content .container-footer .third-box .siguenos ul li:before, html.desktopess .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug:before {
+                  content: "grid-desktopess-4" !important; }
+                .gridle-debug html.desktopess .footer .footer-content .container-footer .third-box .siguenos ul li.parent:before, html.desktopess .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug.parent:before {
+                  content: "grid-parent-desktopess-4" !important; }
+              @media screen and (min-width: 1440px) {
+                .footer .footer-content .container-footer .third-box .siguenos ul li {
+                  width: 33.33333%; }
+                  .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul li:before, .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug:before {
+                    content: "grid-desktopess-4" !important; }
+                  .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul li.parent:before, .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug.parent:before {
+                    content: "grid-parent-desktopess-4" !important; } }
+              html.phoness .footer .footer-content .container-footer .third-box .siguenos ul li {
                 width: 33.33333%; }
-                .gridle-debug html.default .footer .footer-content .container-footer .third-box .siguenos ul li:before, html.default .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug:before {
-                  content: "grid-default-4"; }
-                .gridle-debug html.default .footer .footer-content .container-footer .third-box .siguenos ul li.parent:before, html.default .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug.parent:before {
-                  content: "grid-parent-default-4"; }
-              .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul li:before, .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug:before {
-                content: "grid-default-4"; }
-              .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul li.parent:before, .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug.parent:before {
-                content: "grid-parent-default-4"; }
+                .gridle-debug html.phoness .footer .footer-content .container-footer .third-box .siguenos ul li:before, html.phoness .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug:before {
+                  content: "grid-phoness-4" !important; }
+                .gridle-debug html.phoness .footer .footer-content .container-footer .third-box .siguenos ul li.parent:before, html.phoness .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug.parent:before {
+                  content: "grid-parent-phoness-4" !important; }
+              @media screen and (max-width: 800px) {
+                .footer .footer-content .container-footer .third-box .siguenos ul li {
+                  width: 33.33333%; }
+                  .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul li:before, .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug:before {
+                    content: "grid-phoness-4" !important; }
+                  .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul li.parent:before, .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug.parent:before {
+                    content: "grid-parent-phoness-4" !important; } }
               .footer .footer-content .container-footer .third-box .siguenos ul li a {
                 background-color: #bc1c80;
                 border-radius: 50%;
@@ -5299,44 +5405,51 @@ html {
           content: "grid-default-12"; }
         .gridle-debug .footer .footer-content .container-footer .four-box.parent:before, .footer .footer-content .container-footer .four-box.gridle-debug.parent:before {
           content: "grid-parent-default-12"; }
-        .footer .footer-content .container-footer .four-box ul {
+        html.phoness .footer .footer-content .container-footer .four-box ul {
           margin: 0;
           padding: 0;
           width: 100%; }
-          html.default .footer .footer-content .container-footer .four-box ul {
+        @media screen and (max-width: 800px) {
+          .footer .footer-content .container-footer .four-box ul {
             margin: 0;
             padding: 0;
-            width: 100%; }
-          .footer .footer-content .container-footer .four-box ul li {
-            display: inline-block;
+            width: 100%; } }
+        .footer .footer-content .container-footer .four-box ul li {
+          display: inline-block; }
+          html.phoness .footer .footer-content .container-footer .four-box ul li {
             width: 100%;
             text-align: center; }
-            html.default .footer .footer-content .container-footer .four-box ul li {
+          @media screen and (max-width: 800px) {
+            .footer .footer-content .container-footer .four-box ul li {
               width: 100%;
-              text-align: center; }
-            .footer .footer-content .container-footer .four-box ul li:first-child {
-              padding-right: 20px;
-              border-right: 1px solid #000;
+              text-align: center; } }
+          .footer .footer-content .container-footer .four-box ul li:first-child {
+            padding-right: 20px;
+            border-right: 1px solid #000; }
+            html.phoness .footer .footer-content .container-footer .four-box ul li:first-child {
               border-right: 0;
               padding: 0;
               margin: 0; }
-              html.default .footer .footer-content .container-footer .four-box ul li:first-child {
+            @media screen and (max-width: 800px) {
+              .footer .footer-content .container-footer .four-box ul li:first-child {
                 border-right: 0;
                 padding: 0;
-                margin: 0; }
-            .footer .footer-content .container-footer .four-box ul li a {
-              color: #000;
-              font-size: 11px;
-              margin-left: 20px;
-              text-transform: uppercase;
-              font-weight: bold; }
+                margin: 0; } }
+          .footer .footer-content .container-footer .four-box ul li a {
+            color: #000;
+            font-size: 11px;
+            margin-left: 20px;
+            text-transform: uppercase;
+            font-weight: bold; }
       .footer .footer-content .container-footer h4 {
         color: #a2a2a2;
         text-transform: uppercase;
-        margin: 20px 0 5px 0;
-        margin-top: 0; }
-        html.default .footer .footer-content .container-footer h4 {
+        margin: 20px 0 5px 0; }
+        html.phoness .footer .footer-content .container-footer h4 {
           margin-top: 0; }
+        @media screen and (max-width: 800px) {
+          .footer .footer-content .container-footer h4 {
+            margin-top: 0; } }
   .footer .cont-feedinstaram {
     float: left;
     direction: ltr;
@@ -5414,13 +5527,8 @@ html {
     direction: ltr;
     padding-left: 10px;
     padding-right: 10px;
-    width: 16.66667%;
-    left: 16.66667%;
     clear: left;
-    color: #a2a2a2;
-    width: 33.33333%;
-    left: 0;
-    padding: 0; }
+    color: #a2a2a2; }
     html.default .nav-top .top-social {
       float: left;
       direction: ltr;
@@ -5433,70 +5541,82 @@ html {
       .nav-top .top-social {
         padding-left: 0;
         padding-right: 0; } }
-    html.default .nav-top .top-social {
+    html.desktopess .nav-top .top-social {
       width: 16.66667%; }
-      .gridle-debug html.default .nav-top .top-social:before, html.default .nav-top .top-social.gridle-debug:before {
-        content: "grid-default-2"; }
-      .gridle-debug html.default .nav-top .top-social.parent:before, html.default .nav-top .top-social.gridle-debug.parent:before {
-        content: "grid-parent-default-2"; }
-    .gridle-debug .nav-top .top-social:before, .nav-top .top-social.gridle-debug:before {
-      content: "grid-default-2"; }
-    .gridle-debug .nav-top .top-social.parent:before, .nav-top .top-social.gridle-debug.parent:before {
-      content: "grid-parent-default-2"; }
+      .gridle-debug html.desktopess .nav-top .top-social:before, html.desktopess .nav-top .top-social.gridle-debug:before {
+        content: "grid-desktopess-2" !important; }
+      .gridle-debug html.desktopess .nav-top .top-social.parent:before, html.desktopess .nav-top .top-social.gridle-debug.parent:before {
+        content: "grid-parent-desktopess-2" !important; }
+    @media screen and (min-width: 1440px) {
+      .nav-top .top-social {
+        width: 16.66667%; }
+        .gridle-debug .nav-top .top-social:before, .nav-top .top-social.gridle-debug:before {
+          content: "grid-desktopess-2" !important; }
+        .gridle-debug .nav-top .top-social.parent:before, .nav-top .top-social.gridle-debug.parent:before {
+          content: "grid-parent-desktopess-2" !important; } }
     .gridle-debug .nav-top .top-social, .nav-top .top-social.gridle-debug {
       background-color: #f4efdf !important; }
-    html.default .nav-top .top-social {
+    html.desktopess .nav-top .top-social {
       left: 16.66667%; }
-      .gridle-debug html.default .nav-top .top-social:after, html.default .nav-top .top-social.gridle-debug:after {
-        content: "push-default-2"; }
-    .gridle-debug .nav-top .top-social:after, .nav-top .top-social.gridle-debug:after {
-      content: "push-default-2"; }
+      .gridle-debug html.desktopess .nav-top .top-social:after, html.desktopess .nav-top .top-social.gridle-debug:after {
+        content: "push-desktopess-2" !important; }
+    @media screen and (min-width: 1440px) {
+      .nav-top .top-social {
+        left: 16.66667%; }
+        .gridle-debug .nav-top .top-social:after, .nav-top .top-social.gridle-debug:after {
+          content: "push-desktopess-2" !important; } }
     html.default .nav-top .top-social {
       clear: left; }
-    html.default .nav-top .top-social {
+    html.phoness .nav-top .top-social {
       width: 33.33333%; }
-      .gridle-debug html.default .nav-top .top-social:before, html.default .nav-top .top-social.gridle-debug:before {
-        content: "grid-default-4"; }
-      .gridle-debug html.default .nav-top .top-social.parent:before, html.default .nav-top .top-social.gridle-debug.parent:before {
-        content: "grid-parent-default-4"; }
-    .gridle-debug .nav-top .top-social:before, .nav-top .top-social.gridle-debug:before {
-      content: "grid-default-4"; }
-    .gridle-debug .nav-top .top-social.parent:before, .nav-top .top-social.gridle-debug.parent:before {
-      content: "grid-parent-default-4"; }
-    html.default .nav-top .top-social {
+      .gridle-debug html.phoness .nav-top .top-social:before, html.phoness .nav-top .top-social.gridle-debug:before {
+        content: "grid-phoness-4" !important; }
+      .gridle-debug html.phoness .nav-top .top-social.parent:before, html.phoness .nav-top .top-social.gridle-debug.parent:before {
+        content: "grid-parent-phoness-4" !important; }
+    @media screen and (max-width: 800px) {
+      .nav-top .top-social {
+        width: 33.33333%; }
+        .gridle-debug .nav-top .top-social:before, .nav-top .top-social.gridle-debug:before {
+          content: "grid-phoness-4" !important; }
+        .gridle-debug .nav-top .top-social.parent:before, .nav-top .top-social.gridle-debug.parent:before {
+          content: "grid-parent-phoness-4" !important; } }
+    html.phoness .nav-top .top-social {
       left: 0;
       padding: 0; }
+    @media screen and (max-width: 800px) {
+      .nav-top .top-social {
+        left: 0;
+        padding: 0; } }
     .nav-top .top-social li {
       width: 35px;
       text-decoration: none;
       text-align: center;
       list-style: none;
-      display: inline-block;
-      width: 20px; }
-      html.default .nav-top .top-social li {
+      display: inline-block; }
+      html.phoness .nav-top .top-social li {
         width: 20px; }
+      @media screen and (max-width: 800px) {
+        .nav-top .top-social li {
+          width: 20px; } }
       .nav-top .top-social li a {
         color: #a2a2a2; }
       .nav-top .top-social li i {
         padding: 7px 0 0 0;
-        font-size: 20px;
-        padding: 10px 0 0 0;
-        font-size: 18px; }
-        html.default .nav-top .top-social li i {
+        font-size: 20px; }
+        html.phoness .nav-top .top-social li i {
           padding: 10px 0 0 0;
           font-size: 18px; }
+        @media screen and (max-width: 800px) {
+          .nav-top .top-social li i {
+            padding: 10px 0 0 0;
+            font-size: 18px; } }
       .nav-top .top-social li :hover {
         color: #d0d0cf; }
   .nav-top .search {
     float: left;
     direction: ltr;
     padding-left: 10px;
-    padding-right: 10px;
-    width: 33.33333%;
-    left: 33.33333%;
-    width: 66.66667%;
-    left: 0;
-    padding: 0; }
+    padding-right: 10px; }
     html.default .nav-top .search {
       float: left;
       direction: ltr;
@@ -5509,44 +5629,78 @@ html {
       .nav-top .search {
         padding-left: 0;
         padding-right: 0; } }
-    html.default .nav-top .search {
+    html.desktopess .nav-top .search {
       width: 33.33333%; }
-      .gridle-debug html.default .nav-top .search:before, html.default .nav-top .search.gridle-debug:before {
+      .gridle-debug html.desktopess .nav-top .search:before, html.desktopess .nav-top .search.gridle-debug:before {
         content: "grid-default-4"; }
-      .gridle-debug html.default .nav-top .search.parent:before, html.default .nav-top .search.gridle-debug.parent:before {
+      .gridle-debug html.desktopess .nav-top .search.parent:before, html.desktopess .nav-top .search.gridle-debug.parent:before {
         content: "grid-parent-default-4"; }
-    .gridle-debug .nav-top .search:before, .nav-top .search.gridle-debug:before {
-      content: "grid-default-4"; }
-    .gridle-debug .nav-top .search.parent:before, .nav-top .search.gridle-debug.parent:before {
-      content: "grid-parent-default-4"; }
+    @media screen and (min-width: 1440px) {
+      .nav-top .search {
+        width: 33.33333%; }
+        .gridle-debug .nav-top .search:before, .nav-top .search.gridle-debug:before {
+          content: "grid-default-4"; }
+        .gridle-debug .nav-top .search.parent:before, .nav-top .search.gridle-debug.parent:before {
+          content: "grid-parent-default-4"; } }
+    html.notebook-min .nav-top .search {
+      width: 33.33333%; }
+      .gridle-debug html.notebook-min .nav-top .search:before, html.notebook-min .nav-top .search.gridle-debug:before {
+        content: "grid-default-4"; }
+      .gridle-debug html.notebook-min .nav-top .search.parent:before, html.notebook-min .nav-top .search.gridle-debug.parent:before {
+        content: "grid-parent-default-4"; }
+    @media screen and (max-width: 1440px) {
+      .nav-top .search {
+        width: 33.33333%; }
+        .gridle-debug .nav-top .search:before, .nav-top .search.gridle-debug:before {
+          content: "grid-default-4"; }
+        .gridle-debug .nav-top .search.parent:before, .nav-top .search.gridle-debug.parent:before {
+          content: "grid-parent-default-4"; } }
     .gridle-debug .nav-top .search, .nav-top .search.gridle-debug {
       background-color: #f4efdf !important; }
-    html.default .nav-top .search {
+    html.desktopess .nav-top .search {
       left: 33.33333%; }
-      .gridle-debug html.default .nav-top .search:after, html.default .nav-top .search.gridle-debug:after {
+      .gridle-debug html.desktopess .nav-top .search:after, html.desktopess .nav-top .search.gridle-debug:after {
         content: "push-default-4"; }
-    .gridle-debug .nav-top .search:after, .nav-top .search.gridle-debug:after {
-      content: "push-default-4"; }
-    html.default .nav-top .search {
+    @media screen and (min-width: 1440px) {
+      .nav-top .search {
+        left: 33.33333%; }
+        .gridle-debug .nav-top .search:after, .nav-top .search.gridle-debug:after {
+          content: "push-default-4"; } }
+    html.notebook-min .nav-top .search {
+      left: 33.33333%; }
+      .gridle-debug html.notebook-min .nav-top .search:after, html.notebook-min .nav-top .search.gridle-debug:after {
+        content: "push-default-4"; }
+    @media screen and (max-width: 1440px) {
+      .nav-top .search {
+        left: 33.33333%; }
+        .gridle-debug .nav-top .search:after, .nav-top .search.gridle-debug:after {
+          content: "push-default-4"; } }
+    html.phoness .nav-top .search {
       width: 66.66667%; }
-      .gridle-debug html.default .nav-top .search:before, html.default .nav-top .search.gridle-debug:before {
-        content: "grid-default-8"; }
-      .gridle-debug html.default .nav-top .search.parent:before, html.default .nav-top .search.gridle-debug.parent:before {
-        content: "grid-parent-default-8"; }
-    .gridle-debug .nav-top .search:before, .nav-top .search.gridle-debug:before {
-      content: "grid-default-8"; }
-    .gridle-debug .nav-top .search.parent:before, .nav-top .search.gridle-debug.parent:before {
-      content: "grid-parent-default-8"; }
-    html.default .nav-top .search {
+      .gridle-debug html.phoness .nav-top .search:before, html.phoness .nav-top .search.gridle-debug:before {
+        content: "grid-phoness-8" !important; }
+      .gridle-debug html.phoness .nav-top .search.parent:before, html.phoness .nav-top .search.gridle-debug.parent:before {
+        content: "grid-parent-phoness-8" !important; }
+    @media screen and (max-width: 800px) {
+      .nav-top .search {
+        width: 66.66667%; }
+        .gridle-debug .nav-top .search:before, .nav-top .search.gridle-debug:before {
+          content: "grid-phoness-8" !important; }
+        .gridle-debug .nav-top .search.parent:before, .nav-top .search.gridle-debug.parent:before {
+          content: "grid-parent-phoness-8" !important; } }
+    html.phoness .nav-top .search {
       left: 0;
       padding: 0; }
+    @media screen and (max-width: 800px) {
+      .nav-top .search {
+        left: 0;
+        padding: 0; } }
     .nav-top .search .cont_search {
       float: left;
       direction: ltr;
       padding-left: 10px;
       padding-right: 10px;
-      width: 91.66667%;
-      padding: 0; }
+      width: 91.66667%; }
       html.default .nav-top .search .cont_search {
         float: left;
         direction: ltr;
@@ -5569,8 +5723,11 @@ html {
         content: "grid-default-11"; }
       .gridle-debug .nav-top .search .cont_search.parent:before, .nav-top .search .cont_search.gridle-debug.parent:before {
         content: "grid-parent-default-11"; }
-      html.default .nav-top .search .cont_search {
+      html.phoness .nav-top .search .cont_search {
         padding: 0; }
+      @media screen and (max-width: 800px) {
+        .nav-top .search .cont_search {
+          padding: 0; } }
       .nav-top .search .cont_search input {
         background: none;
         width: 100%;
@@ -5598,9 +5755,7 @@ html {
       color: #a2a2a2;
       font-size: 20px;
       padding: 5px 0 0 0;
-      cursor: pointer;
-      padding: 5px 0 0 0;
-      font-size: 18px; }
+      cursor: pointer; }
       html.default .nav-top .search .search-icon {
         float: left;
         direction: ltr;
@@ -5623,9 +5778,13 @@ html {
         content: "grid-default-1"; }
       .gridle-debug .nav-top .search .search-icon.parent:before, .nav-top .search .search-icon.gridle-debug.parent:before {
         content: "grid-parent-default-1"; }
-      html.default .nav-top .search .search-icon {
+      html.phoness .nav-top .search .search-icon {
         padding: 5px 0 0 0;
         font-size: 18px; }
+      @media screen and (max-width: 800px) {
+        .nav-top .search .search-icon {
+          padding: 5px 0 0 0;
+          font-size: 18px; } }
 
 .destacados {
   height: auto;
@@ -5662,8 +5821,6 @@ html {
     direction: ltr;
     padding-left: 10px;
     padding-right: 10px;
-    width: 50%;
-    width: 100%;
     height: 200px;
     margin: 10px 0;
     position: relative; }
@@ -5679,26 +5836,45 @@ html {
       .destacados .content-destacados {
         padding-left: 0;
         padding-right: 0; } }
-    html.default .destacados .content-destacados {
+    html.desktopess .destacados .content-destacados {
       width: 50%; }
-      .gridle-debug html.default .destacados .content-destacados:before, html.default .destacados .content-destacados.gridle-debug:before {
+      .gridle-debug html.desktopess .destacados .content-destacados:before, html.desktopess .destacados .content-destacados.gridle-debug:before {
         content: "grid-default-6"; }
-      .gridle-debug html.default .destacados .content-destacados.parent:before, html.default .destacados .content-destacados.gridle-debug.parent:before {
+      .gridle-debug html.desktopess .destacados .content-destacados.parent:before, html.desktopess .destacados .content-destacados.gridle-debug.parent:before {
         content: "grid-parent-default-6"; }
-    .gridle-debug .destacados .content-destacados:before, .destacados .content-destacados.gridle-debug:before {
-      content: "grid-default-6"; }
-    .gridle-debug .destacados .content-destacados.parent:before, .destacados .content-destacados.gridle-debug.parent:before {
-      content: "grid-parent-default-6"; }
-    html.default .destacados .content-destacados {
+    @media screen and (min-width: 1440px) {
+      .destacados .content-destacados {
+        width: 50%; }
+        .gridle-debug .destacados .content-destacados:before, .destacados .content-destacados.gridle-debug:before {
+          content: "grid-default-6"; }
+        .gridle-debug .destacados .content-destacados.parent:before, .destacados .content-destacados.gridle-debug.parent:before {
+          content: "grid-parent-default-6"; } }
+    html.notebook-min .destacados .content-destacados {
+      width: 50%; }
+      .gridle-debug html.notebook-min .destacados .content-destacados:before, html.notebook-min .destacados .content-destacados.gridle-debug:before {
+        content: "grid-default-6"; }
+      .gridle-debug html.notebook-min .destacados .content-destacados.parent:before, html.notebook-min .destacados .content-destacados.gridle-debug.parent:before {
+        content: "grid-parent-default-6"; }
+    @media screen and (max-width: 1440px) {
+      .destacados .content-destacados {
+        width: 50%; }
+        .gridle-debug .destacados .content-destacados:before, .destacados .content-destacados.gridle-debug:before {
+          content: "grid-default-6"; }
+        .gridle-debug .destacados .content-destacados.parent:before, .destacados .content-destacados.gridle-debug.parent:before {
+          content: "grid-parent-default-6"; } }
+    html.phoness .destacados .content-destacados {
       width: 100%; }
-      .gridle-debug html.default .destacados .content-destacados:before, html.default .destacados .content-destacados.gridle-debug:before {
-        content: "grid-default-12"; }
-      .gridle-debug html.default .destacados .content-destacados.parent:before, html.default .destacados .content-destacados.gridle-debug.parent:before {
-        content: "grid-parent-default-12"; }
-    .gridle-debug .destacados .content-destacados:before, .destacados .content-destacados.gridle-debug:before {
-      content: "grid-default-12"; }
-    .gridle-debug .destacados .content-destacados.parent:before, .destacados .content-destacados.gridle-debug.parent:before {
-      content: "grid-parent-default-12"; }
+      .gridle-debug html.phoness .destacados .content-destacados:before, html.phoness .destacados .content-destacados.gridle-debug:before {
+        content: "grid-phoness-12" !important; }
+      .gridle-debug html.phoness .destacados .content-destacados.parent:before, html.phoness .destacados .content-destacados.gridle-debug.parent:before {
+        content: "grid-parent-phoness-12" !important; }
+    @media screen and (max-width: 800px) {
+      .destacados .content-destacados {
+        width: 100%; }
+        .gridle-debug .destacados .content-destacados:before, .destacados .content-destacados.gridle-debug:before {
+          content: "grid-phoness-12" !important; }
+        .gridle-debug .destacados .content-destacados.parent:before, .destacados .content-destacados.gridle-debug.parent:before {
+          content: "grid-parent-phoness-12" !important; } }
     .destacados .content-destacados .img-loop {
       float: left;
       direction: ltr;
@@ -5764,17 +5940,21 @@ html {
         color: #fff;
         font-family: "Open Sans", sans-serif;
         font-size: 20px;
-        text-transform: uppercase;
-        font-size: 17px; }
-        html.default .destacados .content-destacados .content-art h1 {
+        text-transform: uppercase; }
+        html.phoness .destacados .content-destacados .content-art h1 {
           font-size: 17px; }
+        @media screen and (max-width: 800px) {
+          .destacados .content-destacados .content-art h1 {
+            font-size: 17px; } }
       .destacados .content-destacados .content-art p {
         color: #fff;
         font-family: "Open Sans", sans-serif;
-        font-size: 12px;
-        display: none; }
-        html.default .destacados .content-destacados .content-art p {
+        font-size: 12px; }
+        html.phoness .destacados .content-destacados .content-art p {
           display: none; }
+        @media screen and (max-width: 800px) {
+          .destacados .content-destacados .content-art p {
+            display: none; } }
       .destacados .content-destacados .content-art .tags {
         display: block;
         color: #fff;
@@ -5837,13 +6017,11 @@ html {
       direction: ltr;
       padding-left: 10px;
       padding-right: 10px;
-      width: 33.33333%;
       position: relative !important;
       margin: 0 auto 10px auto;
       height: 280px;
       left: 0 !important;
-      top: 0 !important;
-      width: 100%; }
+      top: 0 !important; }
       html.default .content-loop-home #container .item-principal {
         float: left;
         direction: ltr;
@@ -5856,26 +6034,32 @@ html {
         .content-loop-home #container .item-principal {
           padding-left: 0;
           padding-right: 0; } }
-      html.default .content-loop-home #container .item-principal {
+      html.desktopess .content-loop-home #container .item-principal {
         width: 33.33333%; }
-        .gridle-debug html.default .content-loop-home #container .item-principal:before, html.default .content-loop-home #container .item-principal.gridle-debug:before {
-          content: "grid-default-4"; }
-        .gridle-debug html.default .content-loop-home #container .item-principal.parent:before, html.default .content-loop-home #container .item-principal.gridle-debug.parent:before {
-          content: "grid-parent-default-4"; }
-      .gridle-debug .content-loop-home #container .item-principal:before, .content-loop-home #container .item-principal.gridle-debug:before {
-        content: "grid-default-4"; }
-      .gridle-debug .content-loop-home #container .item-principal.parent:before, .content-loop-home #container .item-principal.gridle-debug.parent:before {
-        content: "grid-parent-default-4"; }
-      html.default .content-loop-home #container .item-principal {
+        .gridle-debug html.desktopess .content-loop-home #container .item-principal:before, html.desktopess .content-loop-home #container .item-principal.gridle-debug:before {
+          content: "grid-desktopess-4" !important; }
+        .gridle-debug html.desktopess .content-loop-home #container .item-principal.parent:before, html.desktopess .content-loop-home #container .item-principal.gridle-debug.parent:before {
+          content: "grid-parent-desktopess-4" !important; }
+      @media screen and (min-width: 1440px) {
+        .content-loop-home #container .item-principal {
+          width: 33.33333%; }
+          .gridle-debug .content-loop-home #container .item-principal:before, .content-loop-home #container .item-principal.gridle-debug:before {
+            content: "grid-desktopess-4" !important; }
+          .gridle-debug .content-loop-home #container .item-principal.parent:before, .content-loop-home #container .item-principal.gridle-debug.parent:before {
+            content: "grid-parent-desktopess-4" !important; } }
+      html.phoness .content-loop-home #container .item-principal {
         width: 100%; }
-        .gridle-debug html.default .content-loop-home #container .item-principal:before, html.default .content-loop-home #container .item-principal.gridle-debug:before {
-          content: "grid-default-12"; }
-        .gridle-debug html.default .content-loop-home #container .item-principal.parent:before, html.default .content-loop-home #container .item-principal.gridle-debug.parent:before {
-          content: "grid-parent-default-12"; }
-      .gridle-debug .content-loop-home #container .item-principal:before, .content-loop-home #container .item-principal.gridle-debug:before {
-        content: "grid-default-12"; }
-      .gridle-debug .content-loop-home #container .item-principal.parent:before, .content-loop-home #container .item-principal.gridle-debug.parent:before {
-        content: "grid-parent-default-12"; }
+        .gridle-debug html.phoness .content-loop-home #container .item-principal:before, html.phoness .content-loop-home #container .item-principal.gridle-debug:before {
+          content: "grid-phoness-12" !important; }
+        .gridle-debug html.phoness .content-loop-home #container .item-principal.parent:before, html.phoness .content-loop-home #container .item-principal.gridle-debug.parent:before {
+          content: "grid-parent-phoness-12" !important; }
+      @media screen and (max-width: 800px) {
+        .content-loop-home #container .item-principal {
+          width: 100%; }
+          .gridle-debug .content-loop-home #container .item-principal:before, .content-loop-home #container .item-principal.gridle-debug:before {
+            content: "grid-phoness-12" !important; }
+          .gridle-debug .content-loop-home #container .item-principal.parent:before, .content-loop-home #container .item-principal.gridle-debug.parent:before {
+            content: "grid-parent-phoness-12" !important; } }
       .content-loop-home #container .item-principal .bg-color-none {
         float: left;
         direction: ltr;
@@ -5939,12 +6123,14 @@ html {
             left: 20px;
             border-left: 6px solid #bc1c80;
             position: relative;
-            width: 82%;
-            width: 87%;
-            left: 10px; }
-            html.default .content-loop-home #container .item-principal .bg-color-none .principal-post h2 {
+            width: 82%; }
+            html.phoness .content-loop-home #container .item-principal .bg-color-none .principal-post h2 {
               width: 87%;
               left: 10px; }
+            @media screen and (max-width: 800px) {
+              .content-loop-home #container .item-principal .bg-color-none .principal-post h2 {
+                width: 87%;
+                left: 10px; } }
           .content-loop-home #container .item-principal .bg-color-none .principal-post .date {
             background-color: #6cccff;
             opacity: 0.8;
@@ -5976,10 +6162,12 @@ html {
         bottom: 0;
         background-color: #74c0f0;
         color: #fff;
-        width: 95%;
-        width: 93%; }
-        html.default .content-loop-home #container .paginador .bg-color .paginador-arrow {
+        width: 95%; }
+        html.phoness .content-loop-home #container .paginador .bg-color .paginador-arrow {
           width: 93%; }
+        @media screen and (max-width: 800px) {
+          .content-loop-home #container .paginador .bg-color .paginador-arrow {
+            width: 93%; } }
         .content-loop-home #container .paginador .bg-color .paginador-arrow .pagination {
           float: left;
           direction: ltr;
@@ -6084,6 +6272,7 @@ html {
               color: #fff;
               text-decoration: none; }
 
+/*help*/
 .content-post {
   float: left;
   direction: ltr;
@@ -6119,10 +6308,7 @@ html {
     float: left;
     direction: ltr;
     padding-left: 10px;
-    padding-right: 10px;
-    width: 100%;
-    width: 100%;
-    padding: 0; }
+    padding-right: 10px; }
     html.default .content-post .single-post {
       float: left;
       direction: ltr;
@@ -6135,35 +6321,42 @@ html {
       .content-post .single-post {
         padding-left: 0;
         padding-right: 0; } }
-    html.default .content-post .single-post {
+    html.desktopess .content-post .single-post {
       width: 100%; }
-      .gridle-debug html.default .content-post .single-post:before, html.default .content-post .single-post.gridle-debug:before {
-        content: "grid-default-12"; }
-      .gridle-debug html.default .content-post .single-post.parent:before, html.default .content-post .single-post.gridle-debug.parent:before {
-        content: "grid-parent-default-12"; }
-    .gridle-debug .content-post .single-post:before, .content-post .single-post.gridle-debug:before {
-      content: "grid-default-12"; }
-    .gridle-debug .content-post .single-post.parent:before, .content-post .single-post.gridle-debug.parent:before {
-      content: "grid-parent-default-12"; }
-    html.default .content-post .single-post {
+      .gridle-debug html.desktopess .content-post .single-post:before, html.desktopess .content-post .single-post.gridle-debug:before {
+        content: "grid-desktopess-12" !important; }
+      .gridle-debug html.desktopess .content-post .single-post.parent:before, html.desktopess .content-post .single-post.gridle-debug.parent:before {
+        content: "grid-parent-desktopess-12" !important; }
+    @media screen and (min-width: 1440px) {
+      .content-post .single-post {
+        width: 100%; }
+        .gridle-debug .content-post .single-post:before, .content-post .single-post.gridle-debug:before {
+          content: "grid-desktopess-12" !important; }
+        .gridle-debug .content-post .single-post.parent:before, .content-post .single-post.gridle-debug.parent:before {
+          content: "grid-parent-desktopess-12" !important; } }
+    html.phoness .content-post .single-post {
       width: 100%; }
-      .gridle-debug html.default .content-post .single-post:before, html.default .content-post .single-post.gridle-debug:before {
-        content: "grid-default-12"; }
-      .gridle-debug html.default .content-post .single-post.parent:before, html.default .content-post .single-post.gridle-debug.parent:before {
-        content: "grid-parent-default-12"; }
-    .gridle-debug .content-post .single-post:before, .content-post .single-post.gridle-debug:before {
-      content: "grid-default-12"; }
-    .gridle-debug .content-post .single-post.parent:before, .content-post .single-post.gridle-debug.parent:before {
-      content: "grid-parent-default-12"; }
-    html.default .content-post .single-post {
+      .gridle-debug html.phoness .content-post .single-post:before, html.phoness .content-post .single-post.gridle-debug:before {
+        content: "grid-phoness-12" !important; }
+      .gridle-debug html.phoness .content-post .single-post.parent:before, html.phoness .content-post .single-post.gridle-debug.parent:before {
+        content: "grid-parent-phoness-12" !important; }
+    @media screen and (max-width: 800px) {
+      .content-post .single-post {
+        width: 100%; }
+        .gridle-debug .content-post .single-post:before, .content-post .single-post.gridle-debug:before {
+          content: "grid-phoness-12" !important; }
+        .gridle-debug .content-post .single-post.parent:before, .content-post .single-post.gridle-debug.parent:before {
+          content: "grid-parent-phoness-12" !important; } }
+    html.phoness .content-post .single-post {
       padding: 0; }
+    @media screen and (max-width: 800px) {
+      .content-post .single-post {
+        padding: 0; } }
     .content-post .single-post .container-one {
       float: left;
       direction: ltr;
       padding-left: 10px;
-      padding-right: 10px;
-      width: 100%;
-      width: 100%; }
+      padding-right: 10px; }
       html.default .content-post .single-post .container-one {
         float: left;
         direction: ltr;
@@ -6176,45 +6369,57 @@ html {
         .content-post .single-post .container-one {
           padding-left: 0;
           padding-right: 0; } }
-      html.default .content-post .single-post .container-one {
+      html.desktopess .content-post .single-post .container-one {
         width: 100%; }
-        .gridle-debug html.default .content-post .single-post .container-one:before, html.default .content-post .single-post .container-one.gridle-debug:before {
-          content: "grid-default-12"; }
-        .gridle-debug html.default .content-post .single-post .container-one.parent:before, html.default .content-post .single-post .container-one.gridle-debug.parent:before {
-          content: "grid-parent-default-12"; }
-      .gridle-debug .content-post .single-post .container-one:before, .content-post .single-post .container-one.gridle-debug:before {
-        content: "grid-default-12"; }
-      .gridle-debug .content-post .single-post .container-one.parent:before, .content-post .single-post .container-one.gridle-debug.parent:before {
-        content: "grid-parent-default-12"; }
-      html.default .content-post .single-post .container-one {
+        .gridle-debug html.desktopess .content-post .single-post .container-one:before, html.desktopess .content-post .single-post .container-one.gridle-debug:before {
+          content: "grid-desktopess-12" !important; }
+        .gridle-debug html.desktopess .content-post .single-post .container-one.parent:before, html.desktopess .content-post .single-post .container-one.gridle-debug.parent:before {
+          content: "grid-parent-desktopess-12" !important; }
+      @media screen and (min-width: 1440px) {
+        .content-post .single-post .container-one {
+          width: 100%; }
+          .gridle-debug .content-post .single-post .container-one:before, .content-post .single-post .container-one.gridle-debug:before {
+            content: "grid-desktopess-12" !important; }
+          .gridle-debug .content-post .single-post .container-one.parent:before, .content-post .single-post .container-one.gridle-debug.parent:before {
+            content: "grid-parent-desktopess-12" !important; } }
+      html.phoness .content-post .single-post .container-one {
         width: 100%; }
-        .gridle-debug html.default .content-post .single-post .container-one:before, html.default .content-post .single-post .container-one.gridle-debug:before {
-          content: "grid-default-12"; }
-        .gridle-debug html.default .content-post .single-post .container-one.parent:before, html.default .content-post .single-post .container-one.gridle-debug.parent:before {
-          content: "grid-parent-default-12"; }
-      .gridle-debug .content-post .single-post .container-one:before, .content-post .single-post .container-one.gridle-debug:before {
-        content: "grid-default-12"; }
-      .gridle-debug .content-post .single-post .container-one.parent:before, .content-post .single-post .container-one.gridle-debug.parent:before {
-        content: "grid-parent-default-12"; }
+        .gridle-debug html.phoness .content-post .single-post .container-one:before, html.phoness .content-post .single-post .container-one.gridle-debug:before {
+          content: "grid-phoness-12" !important; }
+        .gridle-debug html.phoness .content-post .single-post .container-one.parent:before, html.phoness .content-post .single-post .container-one.gridle-debug.parent:before {
+          content: "grid-parent-phoness-12" !important; }
+      @media screen and (max-width: 800px) {
+        .content-post .single-post .container-one {
+          width: 100%; }
+          .gridle-debug .content-post .single-post .container-one:before, .content-post .single-post .container-one.gridle-debug:before {
+            content: "grid-phoness-12" !important; }
+          .gridle-debug .content-post .single-post .container-one.parent:before, .content-post .single-post .container-one.gridle-debug.parent:before {
+            content: "grid-parent-phoness-12" !important; } }
       .content-post .single-post .container-one .content-title h1 {
-        margin: 20px 0 0 0;
-        margin: 20px 0 3px 0;
-        line-height: 24px; }
-        html.default .content-post .single-post .container-one .content-title h1 {
+        margin: 20px 0 0 0; }
+        html.phoness .content-post .single-post .container-one .content-title h1 {
           margin: 20px 0 3px 0;
           line-height: 24px; }
+        @media screen and (max-width: 800px) {
+          .content-post .single-post .container-one .content-title h1 {
+            margin: 20px 0 3px 0;
+            line-height: 24px; } }
         .content-post .single-post .container-one .content-title h1 a {
-          color: #000;
-          font-size: 25px; }
-          html.default .content-post .single-post .container-one .content-title h1 a {
+          color: #000; }
+          html.phoness .content-post .single-post .container-one .content-title h1 a {
             font-size: 25px; }
+          @media screen and (max-width: 800px) {
+            .content-post .single-post .container-one .content-title h1 a {
+              font-size: 25px; } }
       .content-post .single-post .container-one .content-title .tags {
         display: block;
         color: #fff;
-        list-style: none;
-        width: 80%; }
-        html.default .content-post .single-post .container-one .content-title .tags {
+        list-style: none; }
+        html.phoness .content-post .single-post .container-one .content-title .tags {
           width: 80%; }
+        @media screen and (max-width: 800px) {
+          .content-post .single-post .container-one .content-title .tags {
+            width: 80%; } }
         .content-post .single-post .container-one .content-title .tags li {
           padding: 2px 5px;
           margin: 2px 2px 0 0;
@@ -6230,10 +6435,12 @@ html {
         background-repeat: no-repeat;
         background-size: cover;
         margin-top: 2%;
-        position: relative;
-        height: 200px; }
-        html.default .content-post .single-post .container-one .img-post {
+        position: relative; }
+        html.phoness .content-post .single-post .container-one .img-post {
           height: 200px; }
+        @media screen and (max-width: 800px) {
+          .content-post .single-post .container-one .img-post {
+            height: 200px; } }
         .content-post .single-post .container-one .img-post .date {
           background-color: #a0186d;
           border-radius: 50%;
@@ -6245,38 +6452,42 @@ html {
           position: relative;
           padding: 5px;
           width: 65px;
-          float: right;
-          height: 40px;
-          width: 40px;
-          top: -25px; }
-          html.default .content-post .single-post .container-one .img-post .date {
+          float: right; }
+          html.phoness .content-post .single-post .container-one .img-post .date {
             height: 40px;
             width: 40px;
             top: -25px; }
+          @media screen and (max-width: 800px) {
+            .content-post .single-post .container-one .img-post .date {
+              height: 40px;
+              width: 40px;
+              top: -25px; } }
           .content-post .single-post .container-one .img-post .date i {
             display: block;
             font-size: 30px;
-            margin: 5px 0;
-            font-size: 20px;
-            margin-top: 2px;
-            margin-bottom: 4px; }
-            html.default .content-post .single-post .container-one .img-post .date i {
+            margin: 5px 0; }
+            html.phoness .content-post .single-post .container-one .img-post .date i {
               font-size: 20px;
               margin-top: 2px;
               margin-bottom: 4px; }
+            @media screen and (max-width: 800px) {
+              .content-post .single-post .container-one .img-post .date i {
+                font-size: 20px;
+                margin-top: 2px;
+                margin-bottom: 4px; } }
           .content-post .single-post .container-one .img-post .date time {
             text-transform: uppercase;
-            display: block;
-            font-size: 12px; }
-            html.default .content-post .single-post .container-one .img-post .date time {
+            display: block; }
+            html.phoness .content-post .single-post .container-one .img-post .date time {
               font-size: 12px; }
+            @media screen and (max-width: 800px) {
+              .content-post .single-post .container-one .img-post .date time {
+                font-size: 12px; } }
     .content-post .single-post .container-two {
       float: left;
       direction: ltr;
       padding-left: 10px;
-      padding-right: 10px;
-      width: 66.66667%;
-      width: 100%; }
+      padding-right: 10px; }
       html.default .content-post .single-post .container-two {
         float: left;
         direction: ltr;
@@ -6289,26 +6500,32 @@ html {
         .content-post .single-post .container-two {
           padding-left: 0;
           padding-right: 0; } }
-      html.default .content-post .single-post .container-two {
+      html.desktopess .content-post .single-post .container-two {
         width: 66.66667%; }
-        .gridle-debug html.default .content-post .single-post .container-two:before, html.default .content-post .single-post .container-two.gridle-debug:before {
-          content: "grid-default-8"; }
-        .gridle-debug html.default .content-post .single-post .container-two.parent:before, html.default .content-post .single-post .container-two.gridle-debug.parent:before {
-          content: "grid-parent-default-8"; }
-      .gridle-debug .content-post .single-post .container-two:before, .content-post .single-post .container-two.gridle-debug:before {
-        content: "grid-default-8"; }
-      .gridle-debug .content-post .single-post .container-two.parent:before, .content-post .single-post .container-two.gridle-debug.parent:before {
-        content: "grid-parent-default-8"; }
-      html.default .content-post .single-post .container-two {
+        .gridle-debug html.desktopess .content-post .single-post .container-two:before, html.desktopess .content-post .single-post .container-two.gridle-debug:before {
+          content: "grid-desktopess-8" !important; }
+        .gridle-debug html.desktopess .content-post .single-post .container-two.parent:before, html.desktopess .content-post .single-post .container-two.gridle-debug.parent:before {
+          content: "grid-parent-desktopess-8" !important; }
+      @media screen and (min-width: 1440px) {
+        .content-post .single-post .container-two {
+          width: 66.66667%; }
+          .gridle-debug .content-post .single-post .container-two:before, .content-post .single-post .container-two.gridle-debug:before {
+            content: "grid-desktopess-8" !important; }
+          .gridle-debug .content-post .single-post .container-two.parent:before, .content-post .single-post .container-two.gridle-debug.parent:before {
+            content: "grid-parent-desktopess-8" !important; } }
+      html.phoness .content-post .single-post .container-two {
         width: 100%; }
-        .gridle-debug html.default .content-post .single-post .container-two:before, html.default .content-post .single-post .container-two.gridle-debug:before {
-          content: "grid-default-12"; }
-        .gridle-debug html.default .content-post .single-post .container-two.parent:before, html.default .content-post .single-post .container-two.gridle-debug.parent:before {
-          content: "grid-parent-default-12"; }
-      .gridle-debug .content-post .single-post .container-two:before, .content-post .single-post .container-two.gridle-debug:before {
-        content: "grid-default-12"; }
-      .gridle-debug .content-post .single-post .container-two.parent:before, .content-post .single-post .container-two.gridle-debug.parent:before {
-        content: "grid-parent-default-12"; }
+        .gridle-debug html.phoness .content-post .single-post .container-two:before, html.phoness .content-post .single-post .container-two.gridle-debug:before {
+          content: "grid-phoness-12" !important; }
+        .gridle-debug html.phoness .content-post .single-post .container-two.parent:before, html.phoness .content-post .single-post .container-two.gridle-debug.parent:before {
+          content: "grid-parent-phoness-12" !important; }
+      @media screen and (max-width: 800px) {
+        .content-post .single-post .container-two {
+          width: 100%; }
+          .gridle-debug .content-post .single-post .container-two:before, .content-post .single-post .container-two.gridle-debug:before {
+            content: "grid-phoness-12" !important; }
+          .gridle-debug .content-post .single-post .container-two.parent:before, .content-post .single-post .container-two.gridle-debug.parent:before {
+            content: "grid-parent-phoness-12" !important; } }
       .content-post .single-post .container-two .content-text {
         float: left;
         direction: ltr;
@@ -6393,10 +6610,12 @@ html {
               display: table-cell; }
               .content-post .single-post .container-two .content-text .content-author .name-author .author a {
                 color: #a2a2a2;
-                font-style: italic;
-                font-size: 14px; }
-                html.default .content-post .single-post .container-two .content-text .content-author .name-author .author a {
+                font-style: italic; }
+                html.phoness .content-post .single-post .container-two .content-text .content-author .name-author .author a {
                   font-size: 14px; }
+                @media screen and (max-width: 800px) {
+                  .content-post .single-post .container-two .content-text .content-author .name-author .author a {
+                    font-size: 14px; } }
       .content-post .single-post .container-two .author a {
         color: #a2a2a2;
         font-style: italic; }
@@ -6438,11 +6657,10 @@ html {
     direction: ltr;
     padding-left: 10px;
     padding-right: 10px;
-    width: 25%;
+    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 200px;
-    width: 100%; }
+    height: 200px; }
     html.default .post-loop .img-post {
       float: left;
       direction: ltr;
@@ -6455,16 +6673,19 @@ html {
       .post-loop .img-post {
         padding-left: 0;
         padding-right: 0; } }
-    html.default .post-loop .img-post {
+    html.desktopess .post-loop .img-post {
       width: 25%; }
-      .gridle-debug html.default .post-loop .img-post:before, html.default .post-loop .img-post.gridle-debug:before {
-        content: "grid-default-3"; }
-      .gridle-debug html.default .post-loop .img-post.parent:before, html.default .post-loop .img-post.gridle-debug.parent:before {
-        content: "grid-parent-default-3"; }
-    .gridle-debug .post-loop .img-post:before, .post-loop .img-post.gridle-debug:before {
-      content: "grid-default-3"; }
-    .gridle-debug .post-loop .img-post.parent:before, .post-loop .img-post.gridle-debug.parent:before {
-      content: "grid-parent-default-3"; }
+      .gridle-debug html.desktopess .post-loop .img-post:before, html.desktopess .post-loop .img-post.gridle-debug:before {
+        content: "grid-desktopess-3" !important; }
+      .gridle-debug html.desktopess .post-loop .img-post.parent:before, html.desktopess .post-loop .img-post.gridle-debug.parent:before {
+        content: "grid-parent-desktopess-3" !important; }
+    @media screen and (min-width: 1440px) {
+      .post-loop .img-post {
+        width: 25%; }
+        .gridle-debug .post-loop .img-post:before, .post-loop .img-post.gridle-debug:before {
+          content: "grid-desktopess-3" !important; }
+        .gridle-debug .post-loop .img-post.parent:before, .post-loop .img-post.gridle-debug.parent:before {
+          content: "grid-parent-desktopess-3" !important; } }
     html.default .post-loop .img-post {
       width: 100%; }
       .gridle-debug html.default .post-loop .img-post:before, html.default .post-loop .img-post.gridle-debug:before {
@@ -6480,7 +6701,6 @@ html {
     direction: ltr;
     padding-left: 10px;
     padding-right: 10px;
-    width: 58.33333%;
     width: 100%;
     clear: none; }
     html.default .post-loop .content-post {
@@ -6495,16 +6715,19 @@ html {
       .post-loop .content-post {
         padding-left: 0;
         padding-right: 0; } }
-    html.default .post-loop .content-post {
+    html.desktopess .post-loop .content-post {
       width: 58.33333%; }
-      .gridle-debug html.default .post-loop .content-post:before, html.default .post-loop .content-post.gridle-debug:before {
-        content: "grid-default-7"; }
-      .gridle-debug html.default .post-loop .content-post.parent:before, html.default .post-loop .content-post.gridle-debug.parent:before {
-        content: "grid-parent-default-7"; }
-    .gridle-debug .post-loop .content-post:before, .post-loop .content-post.gridle-debug:before {
-      content: "grid-default-7"; }
-    .gridle-debug .post-loop .content-post.parent:before, .post-loop .content-post.gridle-debug.parent:before {
-      content: "grid-parent-default-7"; }
+      .gridle-debug html.desktopess .post-loop .content-post:before, html.desktopess .post-loop .content-post.gridle-debug:before {
+        content: "grid-desktopess-7" !important; }
+      .gridle-debug html.desktopess .post-loop .content-post.parent:before, html.desktopess .post-loop .content-post.gridle-debug.parent:before {
+        content: "grid-parent-desktopess-7" !important; }
+    @media screen and (min-width: 1440px) {
+      .post-loop .content-post {
+        width: 58.33333%; }
+        .gridle-debug .post-loop .content-post:before, .post-loop .content-post.gridle-debug:before {
+          content: "grid-desktopess-7" !important; }
+        .gridle-debug .post-loop .content-post.parent:before, .post-loop .content-post.gridle-debug.parent:before {
+          content: "grid-parent-desktopess-7" !important; } }
     html.default .post-loop .content-post {
       width: 100%; }
       .gridle-debug html.default .post-loop .content-post:before, html.default .post-loop .content-post.gridle-debug:before {
@@ -6551,9 +6774,7 @@ html {
         float: left;
         direction: ltr;
         padding-left: 10px;
-        padding-right: 10px;
-        width: 8.33333%;
-        width: 17%; }
+        padding-right: 10px; }
         html.default .post-loop .content-post .content-author .img-author {
           float: left;
           direction: ltr;
@@ -6566,18 +6787,24 @@ html {
           .post-loop .content-post .content-author .img-author {
             padding-left: 0;
             padding-right: 0; } }
-        html.default .post-loop .content-post .content-author .img-author {
+        html.desktopess .post-loop .content-post .content-author .img-author {
           width: 8.33333%; }
-          .gridle-debug html.default .post-loop .content-post .content-author .img-author:before, html.default .post-loop .content-post .content-author .img-author.gridle-debug:before {
-            content: "grid-default-1"; }
-          .gridle-debug html.default .post-loop .content-post .content-author .img-author.parent:before, html.default .post-loop .content-post .content-author .img-author.gridle-debug.parent:before {
-            content: "grid-parent-default-1"; }
-        .gridle-debug .post-loop .content-post .content-author .img-author:before, .post-loop .content-post .content-author .img-author.gridle-debug:before {
-          content: "grid-default-1"; }
-        .gridle-debug .post-loop .content-post .content-author .img-author.parent:before, .post-loop .content-post .content-author .img-author.gridle-debug.parent:before {
-          content: "grid-parent-default-1"; }
-        html.default .post-loop .content-post .content-author .img-author {
+          .gridle-debug html.desktopess .post-loop .content-post .content-author .img-author:before, html.desktopess .post-loop .content-post .content-author .img-author.gridle-debug:before {
+            content: "grid-desktopess-1" !important; }
+          .gridle-debug html.desktopess .post-loop .content-post .content-author .img-author.parent:before, html.desktopess .post-loop .content-post .content-author .img-author.gridle-debug.parent:before {
+            content: "grid-parent-desktopess-1" !important; }
+        @media screen and (min-width: 1440px) {
+          .post-loop .content-post .content-author .img-author {
+            width: 8.33333%; }
+            .gridle-debug .post-loop .content-post .content-author .img-author:before, .post-loop .content-post .content-author .img-author.gridle-debug:before {
+              content: "grid-desktopess-1" !important; }
+            .gridle-debug .post-loop .content-post .content-author .img-author.parent:before, .post-loop .content-post .content-author .img-author.gridle-debug.parent:before {
+              content: "grid-parent-desktopess-1" !important; } }
+        html.phoness .post-loop .content-post .content-author .img-author {
           width: 17%; }
+        @media screen and (max-width: 800px) {
+          .post-loop .content-post .content-author .img-author {
+            width: 17%; } }
         .post-loop .content-post .content-author .img-author img {
           width: 50px;
           height: 50px;
@@ -6591,8 +6818,7 @@ html {
         padding-right: 10px;
         width: 33.33333%;
         display: table;
-        height: 60px;
-        width: 83%; }
+        height: 60px; }
         html.default .post-loop .content-post .content-author .name-author {
           float: left;
           direction: ltr;
@@ -6615,21 +6841,26 @@ html {
           content: "grid-default-4"; }
         .gridle-debug .post-loop .content-post .content-author .name-author.parent:before, .post-loop .content-post .content-author .name-author.gridle-debug.parent:before {
           content: "grid-parent-default-4"; }
-        html.default .post-loop .content-post .content-author .name-author {
+        html.phoness .post-loop .content-post .content-author .name-author {
           width: 83%; }
+        @media screen and (max-width: 800px) {
+          .post-loop .content-post .content-author .name-author {
+            width: 83%; } }
         .post-loop .content-post .content-author .name-author a {
           padding-left: 5px;
           display: table-cell;
           vertical-align: middle;
           color: #a2a2a2;
-          font-style: italic;
-          font-size: 14px;
-          margin: 0;
-          width: 80%; }
-          html.default .post-loop .content-post .content-author .name-author a {
+          font-style: italic; }
+          html.phoness .post-loop .content-post .content-author .name-author a {
             font-size: 14px;
             margin: 0;
             width: 80%; }
+          @media screen and (max-width: 800px) {
+            .post-loop .content-post .content-author .name-author a {
+              font-size: 14px;
+              margin: 0;
+              width: 80%; } }
     .post-loop .content-post p {
       margin: 5px 0; }
   .post-loop .date-post {
@@ -6637,8 +6868,6 @@ html {
     direction: ltr;
     padding-left: 10px;
     padding-right: 10px;
-    width: 16.66667%;
-    width: 100%;
     background: #bc1c80;
     height: 200px;
     height: 50px; }
@@ -6654,26 +6883,32 @@ html {
       .post-loop .date-post {
         padding-left: 0;
         padding-right: 0; } }
-    html.default .post-loop .date-post {
+    html.desktopess .post-loop .date-post {
       width: 16.66667%; }
-      .gridle-debug html.default .post-loop .date-post:before, html.default .post-loop .date-post.gridle-debug:before {
-        content: "grid-default-2"; }
-      .gridle-debug html.default .post-loop .date-post.parent:before, html.default .post-loop .date-post.gridle-debug.parent:before {
-        content: "grid-parent-default-2"; }
-    .gridle-debug .post-loop .date-post:before, .post-loop .date-post.gridle-debug:before {
-      content: "grid-default-2"; }
-    .gridle-debug .post-loop .date-post.parent:before, .post-loop .date-post.gridle-debug.parent:before {
-      content: "grid-parent-default-2"; }
-    html.default .post-loop .date-post {
+      .gridle-debug html.desktopess .post-loop .date-post:before, html.desktopess .post-loop .date-post.gridle-debug:before {
+        content: "grid-desktopess-2" !important; }
+      .gridle-debug html.desktopess .post-loop .date-post.parent:before, html.desktopess .post-loop .date-post.gridle-debug.parent:before {
+        content: "grid-parent-desktopess-2" !important; }
+    @media screen and (min-width: 1440px) {
+      .post-loop .date-post {
+        width: 16.66667%; }
+        .gridle-debug .post-loop .date-post:before, .post-loop .date-post.gridle-debug:before {
+          content: "grid-desktopess-2" !important; }
+        .gridle-debug .post-loop .date-post.parent:before, .post-loop .date-post.gridle-debug.parent:before {
+          content: "grid-parent-desktopess-2" !important; } }
+    html.phoness .post-loop .date-post {
       width: 100%; }
-      .gridle-debug html.default .post-loop .date-post:before, html.default .post-loop .date-post.gridle-debug:before {
-        content: "grid-default-12"; }
-      .gridle-debug html.default .post-loop .date-post.parent:before, html.default .post-loop .date-post.gridle-debug.parent:before {
-        content: "grid-parent-default-12"; }
-    .gridle-debug .post-loop .date-post:before, .post-loop .date-post.gridle-debug:before {
-      content: "grid-default-12"; }
-    .gridle-debug .post-loop .date-post.parent:before, .post-loop .date-post.gridle-debug.parent:before {
-      content: "grid-parent-default-12"; }
+      .gridle-debug html.phoness .post-loop .date-post:before, html.phoness .post-loop .date-post.gridle-debug:before {
+        content: "grid-phoness-12" !important; }
+      .gridle-debug html.phoness .post-loop .date-post.parent:before, html.phoness .post-loop .date-post.gridle-debug.parent:before {
+        content: "grid-parent-phoness-12" !important; }
+    @media screen and (max-width: 800px) {
+      .post-loop .date-post {
+        width: 100%; }
+        .gridle-debug .post-loop .date-post:before, .post-loop .date-post.gridle-debug:before {
+          content: "grid-phoness-12" !important; }
+        .gridle-debug .post-loop .date-post.parent:before, .post-loop .date-post.gridle-debug.parent:before {
+          content: "grid-parent-phoness-12" !important; } }
     html.default .post-loop .date-post {
       height: 50px; }
     .post-loop .date-post .dia, .post-loop .date-post .mes {
@@ -6714,12 +6949,14 @@ html {
       -moz-transform: rotate(45deg);
       -o-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-      top: -14%;
-      left: 43%; }
-      html.default .post-loop .date-post #flecha {
+      transform: rotate(45deg); }
+      html.phoness .post-loop .date-post #flecha {
         top: -14%;
         left: 43%; }
+      @media screen and (max-width: 800px) {
+        .post-loop .date-post #flecha {
+          top: -14%;
+          left: 43%; } }
 
 .pagination {
   float: right;
@@ -6728,15 +6965,19 @@ html {
   .pagination .page-numbers {
     background-color: #6cccff;
     padding: 10px 15px;
-    color: #fff;
-    padding: 10px 10px; }
-    html.default .pagination .page-numbers {
+    color: #fff; }
+    html.phoness .pagination .page-numbers {
       padding: 10px 10px; }
+    @media screen and (max-width: 800px) {
+      .pagination .page-numbers {
+        padding: 10px 10px; } }
   .pagination .text {
-    display: inline-block;
-    display: none; }
-    html.default .pagination .text {
+    display: inline-block; }
+    html.phoness .pagination .text {
       display: none; }
+    @media screen and (max-width: 800px) {
+      .pagination .text {
+        display: none; } }
 
 /*.pages {
 	position:absolute;
@@ -6780,8 +7021,6 @@ html {
   direction: ltr;
   padding-left: 10px;
   padding-right: 10px;
-  width: 33.33333%;
-  width: 100%;
   margin: 20px 0;
   height: auto; }
   html.default .container-sidebar {
@@ -6796,26 +7035,32 @@ html {
     .container-sidebar {
       padding-left: 0;
       padding-right: 0; } }
-  html.default .container-sidebar {
+  html.desktopess .container-sidebar {
     width: 33.33333%; }
-    .gridle-debug html.default .container-sidebar:before, html.default .container-sidebar.gridle-debug:before {
-      content: "grid-default-4"; }
-    .gridle-debug html.default .container-sidebar.parent:before, html.default .container-sidebar.gridle-debug.parent:before {
-      content: "grid-parent-default-4"; }
-  .gridle-debug .container-sidebar:before, .container-sidebar.gridle-debug:before {
-    content: "grid-default-4"; }
-  .gridle-debug .container-sidebar.parent:before, .container-sidebar.gridle-debug.parent:before {
-    content: "grid-parent-default-4"; }
-  html.default .container-sidebar {
+    .gridle-debug html.desktopess .container-sidebar:before, html.desktopess .container-sidebar.gridle-debug:before {
+      content: "grid-desktopess-4" !important; }
+    .gridle-debug html.desktopess .container-sidebar.parent:before, html.desktopess .container-sidebar.gridle-debug.parent:before {
+      content: "grid-parent-desktopess-4" !important; }
+  @media screen and (min-width: 1440px) {
+    .container-sidebar {
+      width: 33.33333%; }
+      .gridle-debug .container-sidebar:before, .container-sidebar.gridle-debug:before {
+        content: "grid-desktopess-4" !important; }
+      .gridle-debug .container-sidebar.parent:before, .container-sidebar.gridle-debug.parent:before {
+        content: "grid-parent-desktopess-4" !important; } }
+  html.phoness .container-sidebar {
     width: 100%; }
-    .gridle-debug html.default .container-sidebar:before, html.default .container-sidebar.gridle-debug:before {
-      content: "grid-default-12"; }
-    .gridle-debug html.default .container-sidebar.parent:before, html.default .container-sidebar.gridle-debug.parent:before {
-      content: "grid-parent-default-12"; }
-  .gridle-debug .container-sidebar:before, .container-sidebar.gridle-debug:before {
-    content: "grid-default-12"; }
-  .gridle-debug .container-sidebar.parent:before, .container-sidebar.gridle-debug.parent:before {
-    content: "grid-parent-default-12"; }
+    .gridle-debug html.phoness .container-sidebar:before, html.phoness .container-sidebar.gridle-debug:before {
+      content: "grid-phoness-12" !important; }
+    .gridle-debug html.phoness .container-sidebar.parent:before, html.phoness .container-sidebar.gridle-debug.parent:before {
+      content: "grid-parent-phoness-12" !important; }
+  @media screen and (max-width: 800px) {
+    .container-sidebar {
+      width: 100%; }
+      .gridle-debug .container-sidebar:before, .container-sidebar.gridle-debug:before {
+        content: "grid-phoness-12" !important; }
+      .gridle-debug .container-sidebar.parent:before, .container-sidebar.gridle-debug.parent:before {
+        content: "grid-parent-phoness-12" !important; } }
   .container-sidebar .sidebar {
     float: left;
     direction: ltr;
@@ -6853,9 +7098,7 @@ html {
   float: left;
   direction: ltr;
   padding-left: 10px;
-  padding-right: 10px;
-  width: 66.66667%;
-  width: 100%; }
+  padding-right: 10px; }
   html.default .us-about {
     float: left;
     direction: ltr;
@@ -6868,26 +7111,32 @@ html {
     .us-about {
       padding-left: 0;
       padding-right: 0; } }
-  html.default .us-about {
+  html.desktopess .us-about {
     width: 66.66667%; }
-    .gridle-debug html.default .us-about:before, html.default .us-about.gridle-debug:before {
-      content: "grid-default-8"; }
-    .gridle-debug html.default .us-about.parent:before, html.default .us-about.gridle-debug.parent:before {
-      content: "grid-parent-default-8"; }
-  .gridle-debug .us-about:before, .us-about.gridle-debug:before {
-    content: "grid-default-8"; }
-  .gridle-debug .us-about.parent:before, .us-about.gridle-debug.parent:before {
-    content: "grid-parent-default-8"; }
-  html.default .us-about {
+    .gridle-debug html.desktopess .us-about:before, html.desktopess .us-about.gridle-debug:before {
+      content: "grid-desktopess-8" !important; }
+    .gridle-debug html.desktopess .us-about.parent:before, html.desktopess .us-about.gridle-debug.parent:before {
+      content: "grid-parent-desktopess-8" !important; }
+  @media screen and (min-width: 1440px) {
+    .us-about {
+      width: 66.66667%; }
+      .gridle-debug .us-about:before, .us-about.gridle-debug:before {
+        content: "grid-desktopess-8" !important; }
+      .gridle-debug .us-about.parent:before, .us-about.gridle-debug.parent:before {
+        content: "grid-parent-desktopess-8" !important; } }
+  html.phoness .us-about {
     width: 100%; }
-    .gridle-debug html.default .us-about:before, html.default .us-about.gridle-debug:before {
-      content: "grid-default-12"; }
-    .gridle-debug html.default .us-about.parent:before, html.default .us-about.gridle-debug.parent:before {
-      content: "grid-parent-default-12"; }
-  .gridle-debug .us-about:before, .us-about.gridle-debug:before {
-    content: "grid-default-12"; }
-  .gridle-debug .us-about.parent:before, .us-about.gridle-debug.parent:before {
-    content: "grid-parent-default-12"; }
+    .gridle-debug html.phoness .us-about:before, html.phoness .us-about.gridle-debug:before {
+      content: "grid-phoness-12" !important; }
+    .gridle-debug html.phoness .us-about.parent:before, html.phoness .us-about.gridle-debug.parent:before {
+      content: "grid-parent-phoness-12" !important; }
+  @media screen and (max-width: 800px) {
+    .us-about {
+      width: 100%; }
+      .gridle-debug .us-about:before, .us-about.gridle-debug:before {
+        content: "grid-phoness-12" !important; }
+      .gridle-debug .us-about.parent:before, .us-about.gridle-debug.parent:before {
+        content: "grid-parent-phoness-12" !important; } }
 
 .error404 {
   float: left;

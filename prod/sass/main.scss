@@ -6,9 +6,12 @@
 // Generate classes :
 @include gridle_generate_classes();
 
+@import 'partial/queries';
+/*queries*/
 @import 'partial/vars';
 @import 'partial/main';
 
+/*wrapper*/
 @import 'partial/header';
 @import 'partial/wrap';
 @import 'partial/aside';
@@ -18,10 +21,10 @@
 @import 'partial/loop-destacados';
 @import 'partial/loop-principal';
 
+/*help*/
 @import 'partial/single';
 @import 'partial/search';
 @import 'partial/paginador';
 @import 'partial/sidebar';
 @import 'partial/about-us';
 @import 'partial/error';
-@import 'partial/queries';

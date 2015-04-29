@@ -38,8 +38,8 @@
 		}
 	}
 	.search {
-			@include gridle(4,desktopess);
-			@include gridle_push(4,desktopess);
+			@include gridle(4,desktopess notebook-min);
+			@include gridle_push(4,desktopess notebook-min);
 			@include gridle(8,phoness);
 			@include gridle_state(phoness){
 				left:0;

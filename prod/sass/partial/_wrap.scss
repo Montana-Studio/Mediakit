@@ -10,16 +10,16 @@ html{
 	}
 }
 .wrapper {
+	@include gridle(12,phoness); 
 	max-width: 1280px;
-	@include gridle_parent();
+	@include gridle_float(none, desktopess notebook-min);
+	@include gridle_parent(desktopess notebook-min);
 	display: block;
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
 	margin:0 auto $height-footer;
-	@include gridle(12,phoness); 
 	.push {
-		@include gridle_clear(both);
 		height: $height-footer;
 	}
 	.swipe{
@@ -34,7 +34,8 @@ html{
 		.swipe-wrap{
 			overflow: hidden;
 			position: relative;
-			@include gridle(12,phoness); 
+			@include gridle(12,phoness);
+			@include gridle_no_gutter();
 			.content-slide{
 				background:{position:center;size:cover;};
 				height: 450px;

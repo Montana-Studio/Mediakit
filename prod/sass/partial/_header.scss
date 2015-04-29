@@ -6,7 +6,7 @@ html {
 	@include gridle_parent();
 	font:{family:$primary_font;};
 	.logo {
-		@include gridle(3,desktopess);
+		@include gridle(3,desktopess notebook-min);
 		@include gridle_clear(both);
 		@include gridle(7,phoness);
 	}
