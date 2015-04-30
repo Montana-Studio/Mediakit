@@ -29,6 +29,9 @@
 			.first-box {
 				@include gridle(12);
 				padding: 10px 0;
+				@include gridle_state(phoness){
+					padding:0;
+				}
 				.logo {
 					@include gridle(2,desktopess notebook-min);
 					@include gridle(12,phoness);
@@ -41,17 +44,15 @@
 					@extend .text-center;
 					display:block;
 					margin: 0 auto;
+					@include gridle_state(phoness phoness-min){
+						display: none;
+					}
 					ul {
 						@extend .no-paddings;
 						@extend .no-margins;
 						text:{decoration:none}
 						list-style: none;
 						display: inline-block;
-						@include gridle_state(phoness){
-							margin:0;
-							padding: 0;
-							width: 100%;
-						}
 						li {
 							display: inline-block;
 							a {
@@ -60,10 +61,6 @@
 								margin-left: 42px;
 								text:{transform:uppercase;} 
 								font:{weight:bold;} 
-								@include gridle_state(phoness){
-									margin:{left:5px;}
-									text:{size:10px;}
-								}
 							}	
 						}	
 					}
@@ -123,8 +120,8 @@
 			}
 			.third-box {
 				@extend .no-paddings;
-				@include gridle(4);
-				@include gridle_state(phoness notebook-min){
+				@include gridle(3);
+				@include gridle_state(phoness tabless-min){
 					display: none;
 				}
 				.siguenos {
@@ -134,14 +131,14 @@
 						@extend .no-paddings;
 						@extend .no-margins;
 						@include gridle(12,desktopess notebook-min);
-						@include gridle(12,phoness);
 						height: auto;
+						float: none;
 						li {
 							@extend .no-paddings;
 							@extend .text-center;
-							@include gridle(4,desktopess notebook-min);
-							@include gridle(4,phoness);
-							display:block;
+							@include gridle(3,desktopess notebook-min);
+							display:inline-block;
+							float: none;
 							a {
 								@extend .text-center;
 								background: {color:$second_color}
@@ -168,6 +165,9 @@
 			.four-box {
 				@include gridle(12);
 				padding: 10px 0;
+				@include gridle_state(phoness){
+					padding:{top:0;}
+				}
 				ul {
 					@extend .no-margins;
 					@extend .no-paddings;

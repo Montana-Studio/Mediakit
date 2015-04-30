@@ -45,6 +45,10 @@ html{
 			@include gridle_state(desktopess phoness-min){
 				padding: 0;
 			}
+			@include gridle_state(notebook-min){
+				padding: 0;
+				float: none;
+			}
 			.content-slide{
 				background:{position:center;size:cover;};
 				height: 450px;

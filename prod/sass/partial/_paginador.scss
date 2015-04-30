@@ -11,6 +11,9 @@
 			padding: 10px 10px;
 		}
 	}
+	.current {
+			background:{color:$first_color_2}	
+		}
 	.text {
 		display: inline-block;
 		@include gridle_state(phoness){

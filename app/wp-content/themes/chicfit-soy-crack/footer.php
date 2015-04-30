@@ -57,11 +57,17 @@
 				</div>
 				
 			</footer>
+
+			<p>If you swipe me, I will disappear.</p>
+    <p>Swipe me away!</p>
+    <p>Swipe me too!</p>
+    
 			<!-- /footer -->
 		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.marquee.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/instafeed.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/swipe.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/masonry.js"></script>
+
 		<?php wp_footer(); ?>
 		
 	</body>

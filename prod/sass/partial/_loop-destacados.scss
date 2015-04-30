@@ -2,7 +2,10 @@
 	height: auto;
 	@include gridle(12);
 	@extend .no-paddings;
-	margin-top: 40px;
+	margin:{top:40px;}
+	@include gridle_state(phoness phoness-min){
+			margin:{top:0px;}
+		}
 	.content-destacados {
 		@include gridle(6,desktopess notebook-min);
 		@include gridle(12,phoness);
@@ -12,11 +15,18 @@
 		@include gridle_state(tabless tabless-min){
 			padding:{left:10px; right: 10px;}
 		}
+		@include gridle_state(phoness phoness-min){
+			height: 113px;
+			padding:{left:4px; right:4px;}
+		}
 		.img-loop {
 			@include gridle(6);
 			@extend .no-paddings;
 			@extend .no-margins;
 			height: 200px;
+				@include gridle_state(phoness phoness-min){
+					height: 130px;
+				}
 			}
 		.content-art{
 			@include gridle(6);
@@ -24,6 +34,9 @@
 			padding: 0 10px 0 0;
 			height:200px;
 			padding:10px;
+			@include gridle_state(phoness phoness-min){
+				height: 130px;
+			}
 			h1 {
 				color:#fff;
 				font:{family:$primary_font;size:20px;}
@@ -57,11 +70,15 @@
 				@include gridle_state(tabless tabless-min){
 					padding:{left:5px;}
 				}
+				@include gridle_state(phoness phonees-min){
+					display: none;
+				}
 				li{
 					padding:2px 5px;
 					margin: 2px 2px 0 0;
 					display: inline-block;
 					background:{color:$second_color_1;}
+					cursor: pointer;
 					a{
 						font:{size:12px;family:$primary_font;}
 						color:#fff;

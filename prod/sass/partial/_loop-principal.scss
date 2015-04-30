@@ -38,6 +38,7 @@
 						display: inline-block;
 						padding: 5px;
 						background:{color:$third_color;}
+						cursor: pointer;
 					}
 				}
 				.principal-post {
@@ -107,17 +108,10 @@
 					bottom: 0;
 					background:{color:$first_color_1;}
 					color:#fff;
-					@include gridle_state(phoness){
-						width: 93%;
-					}
-					@include gridle_state(tabless tabless-min){
-						width: 94%;
-					}
 					.pagination {
 						@extend .no-margins;
 						@extend .no-paddings;
 						@include gridle(12);
-
 						.page-numbers {
 							display: none;
 						}
@@ -158,6 +152,7 @@
 			.bg-color {
 				background:{color:$first_color;}
 				height: 280px;
+				position: relative;
 				h2 {
 					@extend .no-margins;
 					font:{family:$primary_font; size:60px;weight: lighter;style: italic;}

@@ -4729,6 +4729,13 @@ html {
       @media screen and (max-width: 480px) {
         .wrapper .swipe .swipe-wrap {
           padding: 0; } }
+      html.notebook-min .wrapper .swipe .swipe-wrap {
+        padding: 0;
+        float: none; }
+      @media screen and (max-width: 1440px) {
+        .wrapper .swipe .swipe-wrap {
+          padding: 0;
+          float: none; } }
       .wrapper .swipe .swipe-wrap .content-slide {
         background-position: center;
         background-size: cover;
@@ -4996,6 +5003,11 @@ html {
           content: "grid-default-12"; }
         .gridle-debug .footer .footer-content .container-footer .first-box.parent:before, .footer .footer-content .container-footer .first-box.gridle-debug.parent:before {
           content: "grid-parent-default-12"; }
+        html.phoness .footer .footer-content .container-footer .first-box {
+          padding: 0; }
+        @media screen and (max-width: 800px) {
+          .footer .footer-content .container-footer .first-box {
+            padding: 0; } }
         .footer .footer-content .container-footer .first-box .logo {
           float: left;
           direction: ltr;
@@ -5061,19 +5073,20 @@ html {
         .footer .footer-content .container-footer .first-box .nav {
           display: block;
           margin: 0 auto; }
+          html.phoness .footer .footer-content .container-footer .first-box .nav {
+            display: none; }
+          @media screen and (max-width: 800px) {
+            .footer .footer-content .container-footer .first-box .nav {
+              display: none; } }
+          html.phoness-min .footer .footer-content .container-footer .first-box .nav {
+            display: none; }
+          @media screen and (max-width: 480px) {
+            .footer .footer-content .container-footer .first-box .nav {
+              display: none; } }
           .footer .footer-content .container-footer .first-box .nav ul {
             text-decoration: none;
             list-style: none;
             display: inline-block; }
-            html.phoness .footer .footer-content .container-footer .first-box .nav ul {
-              margin: 0;
-              padding: 0;
-              width: 100%; }
-            @media screen and (max-width: 800px) {
-              .footer .footer-content .container-footer .first-box .nav ul {
-                margin: 0;
-                padding: 0;
-                width: 100%; } }
             .footer .footer-content .container-footer .first-box .nav ul li {
               display: inline-block; }
               .footer .footer-content .container-footer .first-box .nav ul li a {
@@ -5082,13 +5095,6 @@ html {
                 margin-left: 42px;
                 text-transform: uppercase;
                 font-weight: bold; }
-                html.phoness .footer .footer-content .container-footer .first-box .nav ul li a {
-                  margin-left: 5px;
-                  text-size: 10px; }
-                @media screen and (max-width: 800px) {
-                  .footer .footer-content .container-footer .first-box .nav ul li a {
-                    margin-left: 5px;
-                    text-size: 10px; } }
       .footer .footer-content .container-footer .second-box {
         float: left;
         direction: ltr;
@@ -5368,7 +5374,7 @@ html {
         direction: ltr;
         padding-left: 10px;
         padding-right: 10px;
-        width: 33.33333%; }
+        width: 25%; }
         html.default .footer .footer-content .container-footer .third-box {
           float: left;
           direction: ltr;
@@ -5382,23 +5388,23 @@ html {
             padding-left: 0;
             padding-right: 0; } }
         html.default .footer .footer-content .container-footer .third-box {
-          width: 33.33333%; }
+          width: 25%; }
           .gridle-debug html.default .footer .footer-content .container-footer .third-box:before, html.default .footer .footer-content .container-footer .third-box.gridle-debug:before {
-            content: "grid-default-4"; }
+            content: "grid-default-3"; }
           .gridle-debug html.default .footer .footer-content .container-footer .third-box.parent:before, html.default .footer .footer-content .container-footer .third-box.gridle-debug.parent:before {
-            content: "grid-parent-default-4"; }
+            content: "grid-parent-default-3"; }
         .gridle-debug .footer .footer-content .container-footer .third-box:before, .footer .footer-content .container-footer .third-box.gridle-debug:before {
-          content: "grid-default-4"; }
+          content: "grid-default-3"; }
         .gridle-debug .footer .footer-content .container-footer .third-box.parent:before, .footer .footer-content .container-footer .third-box.gridle-debug.parent:before {
-          content: "grid-parent-default-4"; }
+          content: "grid-parent-default-3"; }
         html.phoness .footer .footer-content .container-footer .third-box {
           display: none; }
         @media screen and (max-width: 800px) {
           .footer .footer-content .container-footer .third-box {
             display: none; } }
-        html.notebook-min .footer .footer-content .container-footer .third-box {
+        html.tabless-min .footer .footer-content .container-footer .third-box {
           display: none; }
-        @media screen and (max-width: 1440px) {
+        @media screen and (max-width: 1024px) {
           .footer .footer-content .container-footer .third-box {
             display: none; } }
         .footer .footer-content .container-footer .third-box .siguenos {
@@ -5409,7 +5415,8 @@ html {
             direction: ltr;
             padding-left: 10px;
             padding-right: 10px;
-            height: auto; }
+            height: auto;
+            float: none; }
             html.default .footer .footer-content .container-footer .third-box .siguenos ul {
               float: left;
               direction: ltr;
@@ -5448,25 +5455,13 @@ html {
                   content: "grid-default-12"; }
                 .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul.parent:before, .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug.parent:before {
                   content: "grid-parent-default-12"; } }
-            html.phoness .footer .footer-content .container-footer .third-box .siguenos ul {
-              width: 100%; }
-              .gridle-debug html.phoness .footer .footer-content .container-footer .third-box .siguenos ul:before, html.phoness .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug:before {
-                content: "grid-phoness-12" !important; }
-              .gridle-debug html.phoness .footer .footer-content .container-footer .third-box .siguenos ul.parent:before, html.phoness .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug.parent:before {
-                content: "grid-parent-phoness-12" !important; }
-            @media screen and (max-width: 800px) {
-              .footer .footer-content .container-footer .third-box .siguenos ul {
-                width: 100%; }
-                .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul:before, .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug:before {
-                  content: "grid-phoness-12" !important; }
-                .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul.parent:before, .footer .footer-content .container-footer .third-box .siguenos ul.gridle-debug.parent:before {
-                  content: "grid-parent-phoness-12" !important; } }
             .footer .footer-content .container-footer .third-box .siguenos ul li {
               float: left;
               direction: ltr;
               padding-left: 10px;
               padding-right: 10px;
-              display: block; }
+              display: inline-block;
+              float: none; }
               html.default .footer .footer-content .container-footer .third-box .siguenos ul li {
                 float: left;
                 direction: ltr;
@@ -5480,44 +5475,31 @@ html {
                   padding-left: 0;
                   padding-right: 0; } }
               html.desktopess .footer .footer-content .container-footer .third-box .siguenos ul li {
-                width: 33.33333%; }
+                width: 25%; }
                 .gridle-debug html.desktopess .footer .footer-content .container-footer .third-box .siguenos ul li:before, html.desktopess .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug:before {
-                  content: "grid-default-4"; }
+                  content: "grid-default-3"; }
                 .gridle-debug html.desktopess .footer .footer-content .container-footer .third-box .siguenos ul li.parent:before, html.desktopess .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug.parent:before {
-                  content: "grid-parent-default-4"; }
+                  content: "grid-parent-default-3"; }
               @media screen and (min-width: 1440px) {
                 .footer .footer-content .container-footer .third-box .siguenos ul li {
-                  width: 33.33333%; }
+                  width: 25%; }
                   .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul li:before, .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug:before {
-                    content: "grid-default-4"; }
+                    content: "grid-default-3"; }
                   .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul li.parent:before, .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug.parent:before {
-                    content: "grid-parent-default-4"; } }
+                    content: "grid-parent-default-3"; } }
               html.notebook-min .footer .footer-content .container-footer .third-box .siguenos ul li {
-                width: 33.33333%; }
+                width: 25%; }
                 .gridle-debug html.notebook-min .footer .footer-content .container-footer .third-box .siguenos ul li:before, html.notebook-min .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug:before {
-                  content: "grid-default-4"; }
+                  content: "grid-default-3"; }
                 .gridle-debug html.notebook-min .footer .footer-content .container-footer .third-box .siguenos ul li.parent:before, html.notebook-min .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug.parent:before {
-                  content: "grid-parent-default-4"; }
+                  content: "grid-parent-default-3"; }
               @media screen and (max-width: 1440px) {
                 .footer .footer-content .container-footer .third-box .siguenos ul li {
-                  width: 33.33333%; }
+                  width: 25%; }
                   .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul li:before, .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug:before {
-                    content: "grid-default-4"; }
+                    content: "grid-default-3"; }
                   .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul li.parent:before, .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug.parent:before {
-                    content: "grid-parent-default-4"; } }
-              html.phoness .footer .footer-content .container-footer .third-box .siguenos ul li {
-                width: 33.33333%; }
-                .gridle-debug html.phoness .footer .footer-content .container-footer .third-box .siguenos ul li:before, html.phoness .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug:before {
-                  content: "grid-phoness-4" !important; }
-                .gridle-debug html.phoness .footer .footer-content .container-footer .third-box .siguenos ul li.parent:before, html.phoness .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug.parent:before {
-                  content: "grid-parent-phoness-4" !important; }
-              @media screen and (max-width: 800px) {
-                .footer .footer-content .container-footer .third-box .siguenos ul li {
-                  width: 33.33333%; }
-                  .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul li:before, .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug:before {
-                    content: "grid-phoness-4" !important; }
-                  .gridle-debug .footer .footer-content .container-footer .third-box .siguenos ul li.parent:before, .footer .footer-content .container-footer .third-box .siguenos ul li.gridle-debug.parent:before {
-                    content: "grid-parent-phoness-4" !important; } }
+                    content: "grid-parent-default-3"; } }
               .footer .footer-content .container-footer .third-box .siguenos ul li a {
                 background-color: #bc1c80;
                 border-radius: 50%;
@@ -5589,6 +5571,11 @@ html {
           content: "grid-default-12"; }
         .gridle-debug .footer .footer-content .container-footer .four-box.parent:before, .footer .footer-content .container-footer .four-box.gridle-debug.parent:before {
           content: "grid-parent-default-12"; }
+        html.phoness .footer .footer-content .container-footer .four-box {
+          padding-top: 0; }
+        @media screen and (max-width: 800px) {
+          .footer .footer-content .container-footer .four-box {
+            padding-top: 0; } }
         html.phoness .footer .footer-content .container-footer .four-box ul {
           margin: 0;
           padding: 0;
@@ -6355,6 +6342,16 @@ html {
     content: "grid-default-12"; }
   .gridle-debug .destacados.parent:before, .destacados.gridle-debug.parent:before {
     content: "grid-parent-default-12"; }
+  html.phoness .destacados {
+    margin-top: 0px; }
+  @media screen and (max-width: 800px) {
+    .destacados {
+      margin-top: 0px; } }
+  html.phoness-min .destacados {
+    margin-top: 0px; }
+  @media screen and (max-width: 480px) {
+    .destacados {
+      margin-top: 0px; } }
   .destacados .content-destacados {
     float: left;
     direction: ltr;
@@ -6428,6 +6425,24 @@ html {
       .destacados .content-destacados {
         padding-left: 10px;
         padding-right: 10px; } }
+    html.phoness .destacados .content-destacados {
+      height: 113px;
+      padding-left: 4px;
+      padding-right: 4px; }
+    @media screen and (max-width: 800px) {
+      .destacados .content-destacados {
+        height: 113px;
+        padding-left: 4px;
+        padding-right: 4px; } }
+    html.phoness-min .destacados .content-destacados {
+      height: 113px;
+      padding-left: 4px;
+      padding-right: 4px; }
+    @media screen and (max-width: 480px) {
+      .destacados .content-destacados {
+        height: 113px;
+        padding-left: 4px;
+        padding-right: 4px; } }
     .destacados .content-destacados .img-loop {
       float: left;
       direction: ltr;
@@ -6457,6 +6472,16 @@ html {
         content: "grid-default-6"; }
       .gridle-debug .destacados .content-destacados .img-loop.parent:before, .destacados .content-destacados .img-loop.gridle-debug.parent:before {
         content: "grid-parent-default-6"; }
+      html.phoness .destacados .content-destacados .img-loop {
+        height: 130px; }
+      @media screen and (max-width: 800px) {
+        .destacados .content-destacados .img-loop {
+          height: 130px; } }
+      html.phoness-min .destacados .content-destacados .img-loop {
+        height: 130px; }
+      @media screen and (max-width: 480px) {
+        .destacados .content-destacados .img-loop {
+          height: 130px; } }
     .destacados .content-destacados .content-art {
       float: left;
       direction: ltr;
@@ -6489,6 +6514,16 @@ html {
         content: "grid-default-6"; }
       .gridle-debug .destacados .content-destacados .content-art.parent:before, .destacados .content-destacados .content-art.gridle-debug.parent:before {
         content: "grid-parent-default-6"; }
+      html.phoness .destacados .content-destacados .content-art {
+        height: 130px; }
+      @media screen and (max-width: 800px) {
+        .destacados .content-destacados .content-art {
+          height: 130px; } }
+      html.phoness-min .destacados .content-destacados .content-art {
+        height: 130px; }
+      @media screen and (max-width: 480px) {
+        .destacados .content-destacados .content-art {
+          height: 130px; } }
       .destacados .content-destacados .content-art h1 {
         color: #fff;
         font-family: "Open Sans", sans-serif;
@@ -6539,7 +6574,8 @@ html {
       .destacados .content-destacados .content-art .tags {
         display: block;
         color: #fff;
-        list-style: none; }
+        list-style: none;
+        display: none; }
         html.tabless .destacados .content-destacados .content-art .tags {
           padding-left: 5px; }
         @media screen and (min-width: 1024px) {
@@ -6550,11 +6586,19 @@ html {
         @media screen and (max-width: 1024px) {
           .destacados .content-destacados .content-art .tags {
             padding-left: 5px; } }
+        html.phoness .destacados .content-destacados .content-art .tags {
+          display: none; }
+        @media screen and (max-width: 800px) {
+          .destacados .content-destacados .content-art .tags {
+            display: none; } }
+        html.default .destacados .content-destacados .content-art .tags {
+          display: none; }
         .destacados .content-destacados .content-art .tags li {
           padding: 2px 5px;
           margin: 2px 2px 0 0;
           display: inline-block;
-          background-color: #a0186d; }
+          background-color: #a0186d;
+          cursor: pointer; }
           .destacados .content-destacados .content-art .tags li a {
             font-size: 12px;
             font-family: "Open Sans", sans-serif;
@@ -6724,7 +6768,8 @@ html {
           .content-loop-home #container .item-principal .bg-color-none .social li {
             display: inline-block;
             padding: 5px;
-            background-color: #e1e1e0; }
+            background-color: #e1e1e0;
+            cursor: pointer; }
         .content-loop-home #container .item-principal .bg-color-none .principal-post {
           position: absolute;
           background-repeat: no-repeat;
@@ -6812,21 +6857,6 @@ html {
           content: "grid-default-12"; }
         .gridle-debug .content-loop-home #container .paginador .bg-color .paginador-arrow.parent:before, .content-loop-home #container .paginador .bg-color .paginador-arrow.gridle-debug.parent:before {
           content: "grid-parent-default-12"; }
-        html.phoness .content-loop-home #container .paginador .bg-color .paginador-arrow {
-          width: 93%; }
-        @media screen and (max-width: 800px) {
-          .content-loop-home #container .paginador .bg-color .paginador-arrow {
-            width: 93%; } }
-        html.tabless .content-loop-home #container .paginador .bg-color .paginador-arrow {
-          width: 94%; }
-        @media screen and (min-width: 1024px) {
-          .content-loop-home #container .paginador .bg-color .paginador-arrow {
-            width: 94%; } }
-        html.tabless-min .content-loop-home #container .paginador .bg-color .paginador-arrow {
-          width: 94%; }
-        @media screen and (max-width: 1024px) {
-          .content-loop-home #container .paginador .bg-color .paginador-arrow {
-            width: 94%; } }
         .content-loop-home #container .paginador .bg-color .paginador-arrow .pagination {
           float: left;
           direction: ltr;
@@ -6904,7 +6934,8 @@ html {
               display: none; }
     .content-loop-home #container #reciente .bg-color, .content-loop-home #container .paginador .bg-color {
       background-color: #6cccff;
-      height: 280px; }
+      height: 280px;
+      position: relative; }
       .content-loop-home #container #reciente .bg-color h2, .content-loop-home #container .paginador .bg-color h2 {
         font-family: "Open Sans", sans-serif;
         font-size: 60px;
@@ -7070,11 +7101,11 @@ html {
       .content-post .single-post .container-one .content-title h1 {
         margin: 20px 0 0 0; }
         html.phoness .content-post .single-post .container-one .content-title h1 {
-          margin: 20px 0 3px 0;
+          margin: 28px 0 3px 0;
           line-height: 24px; }
         @media screen and (max-width: 800px) {
           .content-post .single-post .container-one .content-title h1 {
-            margin: 20px 0 3px 0;
+            margin: 28px 0 3px 0;
             line-height: 24px; } }
         .content-post .single-post .container-one .content-title h1 a {
           color: #000; }
@@ -8029,6 +8060,8 @@ html {
     @media screen and (max-width: 800px) {
       .pagination .page-numbers {
         padding: 10px 10px; } }
+  .pagination .current {
+    background-color: #6cb3df; }
   .pagination .text {
     display: inline-block; }
     html.phoness .pagination .text {
