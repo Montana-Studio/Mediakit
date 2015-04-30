@@ -10,7 +10,7 @@ html{
 	}
 }
 .wrapper {
-	@include gridle(12,phoness); 
+	//@include gridle(12,phoness tabless); 
 	max-width: 1280px;
 	@include gridle_float(none, desktopess notebook-min);
 	@include gridle_parent(desktopess notebook-min);
@@ -19,6 +19,9 @@ html{
 	height: auto !important;
 	height: 100%;
 	margin:0 auto $height-footer;
+	@include gridle_state(tabless-min){
+		padding:{left:10px;right:10px;}
+	}
 	.push {
 		height: $height-footer;
 	}
@@ -35,7 +38,10 @@ html{
 			overflow: hidden;
 			position: relative;
 			@include gridle(12,phoness);
-			@include gridle_no_gutter();
+			@include gridle_no_gutter(phonnes notebook-min desktopess);
+			@include gridle_state(desktopess phoness-min){
+				padding: 0;
+			}
 			.content-slide{
 				background:{position:center;size:cover;};
 				height: 450px;

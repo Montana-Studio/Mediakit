@@ -3,12 +3,14 @@
 	@extend .no-paddings;
 	background:{color:$third_color} ;
 	height: 35px;
+	position: relative;
+	z-index: 99;
 	.top-social {
-		@include gridle(2,desktopess);
+		@include gridle(2,desktopess notebook-min);
 		@include gridle_push(2,desktopess);
 		@include gridle_clear(left);
 		color:$third_color_2;
-		@include gridle(4,phoness);
+		@include gridle(3,phoness);
 		@include gridle_state(phoness){
 			left:0;
 			padding:0;
@@ -37,17 +39,34 @@
 				}
 		}
 	}
+	.nav-mobile {
+		@include gridle_state(desktopess notebook-min tabless-min){
+			display: none;
+		}
+		@include gridle(7,phoness phoness-min);
+		@include gridle_state(phoness phoness-min){
+			display: block;
+			height: 35px;
+		}
+		.logo {
+			width: 57%;
+			margin: 2% auto 0 auto;
+			display: block;
+		}
+	}
 	.search {
-			@include gridle(4,desktopess notebook-min);
+			@include gridle(4,desktopess);
+			@include gridle(6,notebook-min);
 			@include gridle_push(4,desktopess notebook-min);
-			@include gridle(8,phoness);
+			@include gridle(1,phoness);
 			@include gridle_state(phoness){
 				left:0;
 				padding:0;
 			}
 		.cont_search {
-			@include gridle(11);
-			@include gridle_state(phoness){
+			@include gridle(1,phoness phoness-min);
+			@include gridle(11, desktopess notebook-min tabless-min);
+			@include gridle_state(phoness phoness-min){
 				padding:0;
 			}
 			input {
@@ -63,6 +82,9 @@
 				@include placeholder {
 					color:$third_color_2;	
 				}
+				@include gridle_state(phoness phoness-min){
+					display: none;
+				}
 			}
 		}
 		.search-icon {
@@ -77,5 +99,35 @@
 					font:{size:18px;}
 			}
 		}
+	}
+}
+.nav-mob {
+	@include gridle_state(desktopess notebook-min tabless-min){
+		display: none;
+	}
+	@include gridle_show(phoness);
+	@include gridle(12);
+	@include gridle_parent();
+	display: block;
+	position: absolute;
+	z-index: 9;
+	top:0;
+	.content-menu{
+		width:100%;
+		background:{color:$third_color} ;
+		color:#666;
+		padding:{top:35px;}
+		height:0;
+		overflow: hidden;
+		top:0;
+		ul{
+			padding:{top:20px;}
+		}
+	}
+	.pestana {
+		width:80px;
+		height:auto;
+		margin: 0 auto;
+		cursor: pointer;
 	}
 }

@@ -18,7 +18,7 @@ var feed = new Instafeed({
 		transitionEnd: function(index, element) {}
 	}).data('Swipe');
 	
-	 $(window).load(function(){
+	$(window).load(function(){
 
 	 	var $container = $('#container');
 		// initialize
@@ -43,5 +43,15 @@ var feed = new Instafeed({
             $(this).data('drag', true).data('x', event.clientX).data('scrollX', this.scrollLeft);
         }).mouseup(function(){
             $(this).data('drag', false);
+    });
+
+    $('.pestana').toggle(function(){
+    	$('.content-menu').animate({
+    		height:'290px'
+    	},{duration:1500});
+    },function(){
+    	$('.content-menu').animate({
+    		height:'0px'
+    	},{duration:1500});
     });
 }(jQuery));

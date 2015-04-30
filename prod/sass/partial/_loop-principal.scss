@@ -7,14 +7,20 @@
 	#container {
 		@extend .center-width;
 		height: auto !important;
+		@include gridle_state(tabless){
+			height: auto;
+		}
 		.item-principal {
-			@include gridle(4,desktopess);
+			@include gridle(4,desktopess notebook-min);
 			@include gridle(12,phoness);
 			position: relative !important;
 			margin: 0 auto 10px auto;
 			height:280px;
 			left:0 !important;
 			top:0 !important;
+			@include gridle_state(tabless tabless-min){
+				padding:{left:10px;right:10px !important;}
+			}
 			.bg-color-none {
 				@include gridle(12);
 				height:280px;
@@ -104,6 +110,9 @@
 					@include gridle_state(phoness){
 						width: 93%;
 					}
+					@include gridle_state(tabless tabless-min){
+						width: 94%;
+					}
 					.pagination {
 						@extend .no-margins;
 						@extend .no-paddings;
@@ -144,6 +153,7 @@
 			}
 		}
 		#reciente {
+
 			.bg-color {
 				background:{color:$first_color;}
 				height: 280px;

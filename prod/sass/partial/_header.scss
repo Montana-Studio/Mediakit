@@ -9,10 +9,16 @@ html {
 		@include gridle(3,desktopess notebook-min);
 		@include gridle_clear(both);
 		@include gridle(7,phoness);
+		@include gridle_state(phoness phoness-min){
+			display: none;
+		}
 	}
 	.nav {
 		@include gridle(12);
 		@extend .no-paddings;
+		@include gridle_state(phoness phoness-min){
+			display: none;
+		}
 		.menu { 
 			@include gridle(12);
 			@extend .no-paddings;

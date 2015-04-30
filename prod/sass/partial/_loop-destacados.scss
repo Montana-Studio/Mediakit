@@ -9,6 +9,9 @@
 		height: 200px;
 		margin:10px 0;
 		position: relative;
+		@include gridle_state(tabless tabless-min){
+			padding:{left:10px; right: 10px;}
+		}
 		.img-loop {
 			@include gridle(6);
 			@extend .no-paddings;
@@ -28,12 +31,19 @@
 				@include gridle_state(phoness){
 					font:{size:17px;}
 				}
+				@include gridle_state(tabless tabless-min){
+					font:{size:17px;} 
+					padding:{left:5px;}
+				}
 			}
 			p {
 				color:#fff;
 				font:{family:$primary_font;size:12px;}
 				@include gridle_state(phoness){
 					display:none;
+				}
+				@include gridle_state(tabless tabless-min){
+					padding:{left:5px;}
 				}
 			}
 			.tags{
@@ -42,6 +52,9 @@
 				display: block;
 				color:#fff;
 				list-style: none;
+				@include gridle_state(tabless tabless-min){
+					padding:{left:5px;}
+				}
 				li{
 					padding:2px 5px;
 					margin: 2px 2px 0 0;
