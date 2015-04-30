@@ -15,6 +15,9 @@
 			margin:0 auto;
 			display: block;
 			float: none;
+			@include gridle_state(phoness phoness-min){
+				margin:50px auto 0;
+			}
 		}
 	}
 	.txt-error {

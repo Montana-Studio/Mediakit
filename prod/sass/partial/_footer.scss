@@ -18,14 +18,12 @@
 			@include gridle(12,phoness notebook-min);
 			@include gridle_push(2,desktopess);
 			@extend .text-center;
-			@extend .no-paddings;
 			@extend .no-margins;
 			display: block;
 			margin: 0 auto;
 			position: relative;
 			@include gridle_state(phoness){
 				margin: 0;
-				padding: 0;
 				left: 0;
 			}
 			.first-box {
@@ -101,7 +99,7 @@
 							padding:9px 5px;
 						}
 						@include gridle_state(tabless tabless-min){
-							padding:15px 5px;
+							padding:10px 5px;
 						}
 					}
 					.send {
@@ -114,10 +112,12 @@
 						text:{transform:uppercase;align:center;}
 						@include gridle_state(notebook-min){
 							padding:9px 5px;
+							border:1px solid $third_color_2;
 						}
 						@include gridle_state(tabless tabless-min){
-							padding:15px 5px;
-						}
+							padding:10px 5px;
+							border:1px solid $third_color_2;
+						} 
 					}
 				}
 			}

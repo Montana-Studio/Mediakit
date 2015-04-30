@@ -43,14 +43,14 @@
 		@include gridle_state(desktopess notebook-min tabless-min){
 			display: none;
 		}
-		@include gridle(7,phoness phoness-min);
+		@include gridle(6,phoness phoness-min);
 		@include gridle_state(phoness phoness-min){
 			display: block;
 			height: 35px;
 		}
 		.logo {
-			width: 57%;
-			margin: 2% auto 0 auto;
+			width: 68%;
+			margin:0 auto;
 			display: block;
 		}
 	}
@@ -95,8 +95,7 @@
 			padding: 5px 0 0 0;
 			cursor:pointer;
 			@include gridle_state(phoness){
-					padding: 5px 0 0 0;
-					font:{size:18px;}
+				display: none;
 			}
 		}
 	}
@@ -121,7 +120,47 @@
 		overflow: hidden;
 		top:0;
 		ul{
-			padding:{top:20px;}
+			padding:{top:10px; left:15px;}
+			li {
+			text:{decoration:none;}
+			list-style: none;
+				a {
+					text:{transform:uppercase;}
+					color:$third_color_2;
+					font:{size:13px;} 
+					line-height: 27px;
+				}
+			} 
+		}
+		.search-inner {
+			@include gridle(12);
+			input {
+				@include gridle(10);
+				background: none;
+				border:0;
+				background:{color:$third_color_2;}
+				outline: none;
+				color:#fff;
+				padding:{top:5px;bottom:5px;}
+				@include placeholder {
+					color: #fff;
+					font:{family:$primary_font;}
+  }
+			}
+			.search-submit {
+				@include gridle(2);
+				@extend .no-paddings;
+				@extend .no-margins;
+				background: none;
+				border: 0;
+				color:#fff;
+				height: 28px;
+				font:{size:21px;}
+				background:{color:$third_color_2;}
+				i {
+					
+				}
+			}
 		}
 	}
 	.pestana {

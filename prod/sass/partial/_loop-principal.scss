@@ -102,11 +102,11 @@
 				}
 				.paginador-arrow {
 					@extend .no-paddings;
+					@include gridle(12);
 					position:absolute;
 					bottom: 0;
 					background:{color:$first_color_1;}
 					color:#fff;
-					width: 95%;
 					@include gridle_state(phoness){
 						width: 93%;
 					}
@@ -117,6 +117,7 @@
 						@extend .no-margins;
 						@extend .no-paddings;
 						@include gridle(12);
+
 						.page-numbers {
 							display: none;
 						}

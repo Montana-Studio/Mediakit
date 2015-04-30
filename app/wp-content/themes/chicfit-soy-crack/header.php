@@ -73,6 +73,10 @@
 		<div class="nav-mob">
 			<div class="content-menu">
 				<?php html5blank_nav(); ?>
+				<form class="search-inner" method="get" action="<?php echo home_url(); ?>" role="search">
+					<input class="search-input" type="search" name="s" placeholder="Buscar">
+					<button class="search-submit" type="submit" role="button"><i class="fa fa-search"></i></button>
+				</form>	
 			</div>
 			<div class="pestana">
 				<svg viewBox="0 0 140.909 46.662">

@@ -1,4 +1,5 @@
 .pagination {
+	@include gridle(12);
 	float:right;
 	margin:{bottom:30px !important;}
 	height: auto;
