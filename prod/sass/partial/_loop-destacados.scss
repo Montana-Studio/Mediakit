@@ -64,6 +64,7 @@
 				}
 			}
 			.tags{
+				@include gridle(9, desktopess notebook-min);
 				@extend .no-margins;
 				@extend .no-paddings;
 				color:#fff;

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main role="main" class="all-content" style="padding-top:60px;border:none;">
+<main role="main" class="all-content">
 	
 	<section class="wrapper-index">
 
