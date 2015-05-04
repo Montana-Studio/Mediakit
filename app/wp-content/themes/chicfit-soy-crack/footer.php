@@ -67,6 +67,7 @@
 		<script src="<?php echo get_template_directory_uri(); ?>/js/instafeed.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/swipe.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/masonry.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.touchSwipe.min.js"></script>
 
 		<?php wp_footer(); ?>
 		

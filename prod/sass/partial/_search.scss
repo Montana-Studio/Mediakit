@@ -10,8 +10,7 @@
 		@include gridle(12,phoness-min);
 		@extend .no-margins;
 		@extend .no-paddings;
-		background-size:cover;
-		background-repeat: no-repeat; 
+		background:{size:cover;repeat: no-repeat;}
 		height: 200px;
 		@include gridle_state(phoness-min){
 			border:{top:5px solid $second_color;}
@@ -21,7 +20,7 @@
 		@include gridle(7,desktopess notebook-min tabless-min);
 		@include gridle(12,phoness-min);
 		@extend .no-margins;
-		clear:none;
+		@include gridle_clear(none);
 		@include gridle_state(tabless-min){
 			padding:{left:10px;right:10px;}
 		}
@@ -119,11 +118,7 @@
 			position:relative;
 			top: 45%;
   			left: -20px;
-			 -webkit-transform: rotate(45deg);
-		    -moz-transform: rotate(45deg);
-		    -o-transform: rotate(45deg);
-		    -ms-transform: rotate(45deg);
-		    transform: rotate(45deg);
+  			@include transform(rotate(45deg));
 		    @include gridle_state(desktopess notebook){
 		    	top: 45%;
   				left: -20px;

@@ -32,7 +32,8 @@ html{
 		overflow: hidden;
 		visibility: hidden;
 		position: relative;
-		width:100%;
+		@include gridle(12);
+		@include gridle_parent();
 		height: 450px;
 		@include gridle_state(phoness-min){
 			height:250px;
@@ -53,16 +54,17 @@ html{
 				background:{position:center;size:cover;};
 				height: 450px;
 				min-height:564px;
-				float:left;
-				width:100%;
+				@include gridle_float(left);
+				@include gridle(12);
+				@include gridle_parent();
 				position: relative;
 				@include gridle_state(phoness-min){
 					height:250px;
 					min-height:0;
 				}
 				article {
+					@include gridle(4);
 					position: absolute;
-					width:40%;
 					height:100px;
 					bottom:150px;
 					left:50px;
@@ -70,9 +72,9 @@ html{
 					padding:20px;
 					@extend .text-left;
 					background:{color:rgba(0,0,0,.5);}
+					@include gridle(11, phoness-min);
 					@include gridle_state(phoness-min){
 						height:50px;
-						width:80%;
 						bottom:10px;
 						left:10px;
 						padding:10px;

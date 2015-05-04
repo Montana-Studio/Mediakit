@@ -8,7 +8,6 @@
 		@extend .no-margins;
 		@include gridle(12);
 		@include gridle_clear(right);
-		float: right;
-
+		@include gridle_float(right);
 	}
 }

@@ -1,5 +1,6 @@
 .nav-top {
-	max-width: 100%;
+	@include gridle(12);
+	@include gridle_no_gutter();
 	@extend .no-paddings;
 	background:{color:$third_color} ;
 	height: 35px;
@@ -77,11 +78,17 @@
 			width: 68%;
 			margin:0 auto;
 			display: block;
+			@extend .text-center;
 			@include gridle_state(tabless-min){
 				width: 40%; 
 			}
 			@include gridle_state(phoness-min){
-				width: 74%; 
+				width: 74%;
+				a{
+					svg{
+						max-width: 120px
+					}
+				}
 			}
 		}
 	}
@@ -164,7 +171,7 @@
 		width:100%;
 		background:{color:$third_color} ;
 		color:#666;
-		padding:{top:35px;}
+		padding:{top:45px;}
 		height:0;
 		overflow: hidden;
 		top:0;
@@ -183,6 +190,8 @@
 		}
 		.search-inner {
 			@include gridle(12);
+			position: absolute;
+			bottom: 50px;
 			input {
 				@include gridle(10);
 				background: none;
@@ -194,7 +203,7 @@
 				@include placeholder {
 					color: #fff;
 					font:{family:$primary_font;}
-  }
+  				}
 			}
 			.search-submit {
 				@include gridle(2);

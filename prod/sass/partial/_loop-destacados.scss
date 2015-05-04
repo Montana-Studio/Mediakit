@@ -4,8 +4,13 @@
 	@extend .no-paddings;
 	margin:{top:40px;}
 	@include gridle_state(phoness-min){
-			margin:{top:0px;}
+		margin:{top:0px;}
+	}
+	@include gridle_state(phoness-min){
+		&.destaca-mobile{
+			padding-top: 30px !important;
 		}
+	}
 	.content-destacados {
 		@include gridle(6,desktopess notebook-min);
 		@include gridle(6,tabless-min);

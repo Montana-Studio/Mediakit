@@ -45,36 +45,21 @@ var feed = new Instafeed({
             $(this).data('drag', false);
     });
 
-    /*$('.pestana').toggle(function(){
-    	$('.content-menu').animate({
-    		height:'290px'
-    	},{duration:1500});
-    },function(){
-    	$('.content-menu').animate({
-    		height:'0px'
-    	},{duration:1500});
-    });*/
-    
-    var widthSize = $(window).width();
-    var URLmobile = 'http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js';
 
-    function readMobile(){
-        $('head').append('<script id="jquery-mobile" src="' + URLmobile + '" type="text/javascript"></script>');
-        $(document).on('pagecreate','#pageone',function(){
-          $('p').on('swipe',function(){
-            $(this).hide();
-          });                       
-        });
-    }
-    function removeMobile(){
-        $('#jquery-mobile').remove();
-    }
-    /*if(widthSize <=480){
-        readMobile();
-    }else if(widthSize >=481){
-        removeMobile();
-    }else{
-        console.log('nada');
-    }*/
+    $('.pestana').swipe( {
+        swipeDown:function() {
+          $('.content-menu').animate({
+                height: 230
+            },{duration:500});
+        },
+        swipeUp:function(){
+            $('.content-menu').animate({
+                height:'0px'
+            },{duration:500});
+        },
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+         //threshold:5
+    });
+
 
 }(jQuery));

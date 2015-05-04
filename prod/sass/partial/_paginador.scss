@@ -1,6 +1,6 @@
 .pagination {
 	@include gridle(12);
-	float:right;
+	@include gridle_float(right);
 	margin:{bottom:30px !important;}
 	height: auto;
 	.page-numbers {
