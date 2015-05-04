@@ -15,7 +15,7 @@
 			margin:0 auto;
 			display: block;
 			float: none;
-			@include gridle_state(phoness phoness-min){
+			@include gridle_state(phoness-min){
 				margin:50px auto 0;
 			}
 		}

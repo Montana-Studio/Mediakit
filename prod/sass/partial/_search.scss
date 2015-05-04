@@ -6,23 +6,23 @@
 	-moz-box-shadow: 3px 4px 18px -3px  rgba(189,185,189,0.8);
 	box-shadow: 3px 4px 18px -3px  rgba(189,185,189,0.8);
 	.img-post {
-		@include gridle(3,desktopess notebook-min tabless tabless-min);
-		@include gridle(12,phoness phoness-min);
+		@include gridle(3,desktopess notebook-min tabless-min);
+		@include gridle(12,phoness-min);
 		@extend .no-margins;
 		@extend .no-paddings;
 		background-size:cover;
 		background-repeat: no-repeat; 
 		height: 200px;
-		@include gridle_state(phoness phoness-min){
+		@include gridle_state(phoness-min){
 			border:{top:5px solid $second_color;}
 		}
 	}
 	.content-post {
-		@include gridle(7,desktopess notebook-min tabless tabless-min);
-		@include gridle(12,phoness phoness-min);
+		@include gridle(7,desktopess notebook-min tabless-min);
+		@include gridle(12,phoness-min);
 		@extend .no-margins;
 		clear:none;
-		@include gridle_state(tabless tabless-min){
+		@include gridle_state(tabless-min){
 			padding:{left:10px;right:10px;}
 		}
 		h2 {
@@ -35,10 +35,10 @@
 			@include gridle(12);
 			@extend .no-paddings;
 			.img-author{
-				@include gridle(1,desktopess notebook-min tabless tabless-min);
+				@include gridle(1,desktopess notebook-min tabless-min);
 				@extend .text-right;
 				@extend .no-paddings;
-				@include gridle_state(phoness phoness-min){
+				@include gridle_state(phoness-min){
 					width: 17%;
 				}
 				img {
@@ -56,7 +56,7 @@
 				@include gridle(4);
 				display: table;
 				height: 60px;
-				@include gridle_state(phoness phoness-min){
+				@include gridle_state(phoness-min){
 					width: 83%;
 				}
 				a {	
@@ -65,7 +65,7 @@
 					vertical-align: middle;
 					color:$third_color_2;
 					font:{style:italic;}
-					@include gridle_state(phoness phoness-min){
+					@include gridle_state(phoness-min){
 						font:{size:14px;}
 						margin: 0;
 						width: 80%;
@@ -78,12 +78,12 @@
 		}
 	}
 	.date-post {
-		@include gridle(2,desktopess notebook-min tabless tabless-min);
+		@include gridle(2,desktopess notebook-min tabless-min);
 		@extend .no-margins;
 		background: $second_color;
 		height: 200px;
-		@include gridle(12,phoness phoness-min);
-		@include gridle_state(phoness phoness-min){
+		@include gridle(12,phoness-min);
+		@include gridle_state(phoness-min){
 			height: 50px;
 		}
 		.dia {
@@ -93,7 +93,7 @@
 			width: 100%;
 			font:{size:40px;}
 			padding: 20% 0 0 0;
-			@include gridle_state(phoness phoness-min){
+			@include gridle_state(phoness-min){
 				font:{size:16px;}
 				padding:0;
 				width: 10%;
@@ -105,7 +105,7 @@
 			@extend .dia;
 			font:{size:20px;weight:lighter; }
 			text:{transform: uppercase;}
-			@include gridle_state(phoness phoness-min){
+			@include gridle_state(phoness-min){
 				font:{size:14px;}
 				padding:0;
 				width: 10%;
@@ -131,7 +131,7 @@
 		     @include gridle_state(tabless-min){
 				left: -10px;
 			}
-			@include gridle_state(phoness phoness-min){
+			@include gridle_state(phoness-min){
 		    	top: -14%;
 				left: 43%;
 		    }

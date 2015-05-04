@@ -1,6 +1,6 @@
 .footer {
 	@include gridle(12,desktopess notebook-min);
-	@include gridle(12,phoness);
+	@include gridle(12,phoness-min);
 	@extend .text-center;
 	@extend .no-paddings;
 	font:{family:$primary_font;}
@@ -15,26 +15,27 @@
 		background:{color:$third_color;}
 		.container-footer {
 			@include gridle(8,desktopess);
-			@include gridle(12,phoness notebook-min);
+			@include gridle(12,phoness-min notebook-min);
 			@include gridle_push(2,desktopess);
 			@extend .text-center;
 			@extend .no-margins;
 			display: block;
 			margin: 0 auto;
 			position: relative;
-			@include gridle_state(phoness){
+			@include gridle_state(phoness-min){
 				margin: 0;
 				left: 0;
 			}
 			.first-box {
 				@include gridle(12);
 				padding: 10px 0;
-				@include gridle_state(phoness){
+				@include gridle_state(phoness-min){
 					padding:0;
 				}
 				.logo {
 					@include gridle(2,desktopess notebook-min);
-					@include gridle(12,phoness);
+					@include gridle(12,phoness-min);
+					@include gridle(4,tabless-min);
 					@include gridle_clear(both); 
 					float: center;
 					margin: 0 auto;
@@ -44,7 +45,7 @@
 					@extend .text-center;
 					display:block;
 					margin: 0 auto;
-					@include gridle_state(phoness phoness-min){
+					@include gridle_state(phoness-min){
 						display: none;
 					}
 					ul {
@@ -69,17 +70,18 @@
 			.second-box {
 				@extend .no-paddings;
 				@include gridle(8,desktopess notebook-min);
-				@include gridle(12,phoness );
+				@include gridle(10,tabless-min);
+				@include gridle(12,phoness-min);
 				@include gridle_state(notebook-min){
 					float:none;
 				}
 				.newsletter {
 					@include gridle(12);
 					padding-bottom: 20px;
-					@include gridle_state(phoness){
+					@include gridle_state(phoness-min){
 						padding:{bottom:0;}
 					}
-					@include gridle_state(tabless tabless-min){
+					@include gridle_state(tabless-min){
 						padding:{left:10px;right: 10px;}
 					}
 					@include gridle_state(notebook-min){
@@ -87,7 +89,7 @@
 					}
 					input {
 						@include gridle(10,desktopess notebook-min);
-						@include gridle(8,phoness);
+						@include gridle(8,phoness-min);
 						border:1px solid $third_color_2;
 						outline:none !important; 
 						background: none;
@@ -95,13 +97,13 @@
 						@include gridle_state(notebook-min){
 							padding:9px 5px;
 						}
-						@include gridle_state(tabless tabless-min){
+						@include gridle_state(tabless-min){
 							padding:10px 5px;
 						}
 					}
 					.send {
 						@include gridle(2,desktopess notebook-min);
-						@include gridle(4,phoness);
+						@include gridle(4,phoness-min);
 						border:1px solid $third_color_2;
 						padding:10px 5px;
 						color:$third_color_2;
@@ -111,7 +113,7 @@
 							padding:9px 5px;
 							border:1px solid $third_color_2;
 						}
-						@include gridle_state(tabless tabless-min){
+						@include gridle_state(tabless-min){
 							padding:10px 5px;
 							border:1px solid $third_color_2;
 						} 
@@ -120,8 +122,8 @@
 			}
 			.third-box {
 				@extend .no-paddings;
-				@include gridle(3);
-				@include gridle_state(phoness tabless-min){
+				@include gridle(3, desktopess notebook notebook-min);
+				@include gridle_state(phoness-min tabless-min){
 					display: none;
 				}
 				.siguenos {
@@ -165,27 +167,27 @@
 			.four-box {
 				@include gridle(12);
 				padding: 10px 0;
-				@include gridle_state(phoness){
+				@include gridle_state(phoness-min){
 					padding:{top:0;}
 				}
 				ul {
 					@extend .no-margins;
 					@extend .no-paddings;
-					@include gridle_state(phoness){
+					@include gridle_state(phoness-min){
 						margin:0;
 						padding: 0;
 						width: 100%;
 					}
 					li {
 						display: inline-block;
-						@include gridle_state(phoness){
+						@include gridle_state(phoness-min){
 							width: 100%;
 							text:{align:center;}
 						}
 						&:first-child {
 							padding: {right:20px;}
 							border-right: 1px solid #000;
-							@include gridle_state(phoness){
+							@include gridle_state(phoness-min){
 								border-right: 0;
 								padding: 0;
 								margin:0;
@@ -206,7 +208,7 @@
 				color:$third_color_2;
 				text:{transform:uppercase;} 
 				margin: 20px 0 5px 0;
-				@include gridle_state(phoness){
+				@include gridle_state(phoness-min){
 					margin:{top:0;}
 				}
 			}

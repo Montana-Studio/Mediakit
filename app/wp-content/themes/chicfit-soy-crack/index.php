@@ -92,7 +92,7 @@
 								echo substr(the_title($before = '', $after = '', FALSE), 0, 40) . ' ... '; } else {
 								the_title();
 								} ?></h2>
-							<div class="date"><p>11 de abril</p></div>
+							<div class="date"><p><?php echo get_the_date('d F'); ?></p></div>
 						</a>
 					</div>
 				</div>

@@ -4,26 +4,49 @@
 	clear:both;
 	margin:40px 0;
 	height: auto;
+	@include gridle_state(tabless-min){
+		margin:{top:20px}
+	}
 	#container {
 		@extend .center-width;
 		height: auto !important;
-		@include gridle_state(tabless){
+		@include gridle_state(tabless-min){
 			height: auto;
 		}
 		.item-principal {
 			@include gridle(4,desktopess notebook-min);
-			@include gridle(12,phoness);
+			@include gridle(4,tabless-min);
+			@include gridle(12,phoness-min);
 			position: relative !important;
 			margin: 0 auto 10px auto;
 			height:280px;
 			left:0 !important;
 			top:0 !important;
-			@include gridle_state(tabless tabless-min){
-				padding:{left:10px;right:10px !important;}
+				@include gridle_state(tabless-min){
+					padding:{left:10px;right:10px !important;
+				}
+				@include gridle_state(phoness-min){
+					height: 230px;
+					margin:{bottom:5px;}
+				}
+				&:first-child {
+					@include gridle_state(phoness-min){
+						height: 130px !important;
+					}
+				}
+				&:last-child {
+					@include gridle_state(phoness-min){
+						height: 130px !important;
+					}
+				}
+
 			}
 			.bg-color-none {
 				@include gridle(12);
 				height:280px;
+					@include gridle_state(phoness-min){
+							height: 230px;
+					}
 				.social {
 					@extend .text-left;
 					background:{color:$third_color;}
@@ -52,6 +75,9 @@
 					left: 10px;
 					height: 280px;
 					width: 95%;
+					@include gridle_state(phoness-min){
+						height: 230px;
+					}
 					h2 {
 						@extend .text-left;
 						color:#fff;
@@ -64,9 +90,14 @@
 						border-left:6px solid #bc1c80;
 						position: relative;
 						width: 82%;
-						@include gridle_state(phoness){
+						@include gridle_state(tabless-min){
+							  left: 10px;
+							  margin:{top:180px;}
+						}
+						@include gridle_state(phoness-min){
 							width: 87%;
 							left:10px;
+							margin:{top:130px;}
 						}
 					}
 					.date {
@@ -100,6 +131,13 @@
 			.bg-color {
 				h2{
 				padding:45px 60% 0 10px !important;
+					@include gridle_state(tabless-min){
+						padding:{top:55px !important;} 
+					}
+					@include gridle_state(phoness-min){
+						padding:{top:11px !important;; right: 10px !important;;}
+					}
+					
 				}
 				.paginador-arrow {
 					@extend .no-paddings;
@@ -148,7 +186,11 @@
 			}
 		}
 		#reciente {
-
+			.item-principal {
+				@include gridle_state(tabless-min) {
+					padding:{right: 0px !important;}
+				}
+			}
 			.bg-color {
 				background:{color:$first_color;}
 				height: 280px;
@@ -158,8 +200,19 @@
 					font:{family:$primary_font; size:60px;weight: lighter;style: italic;}
 					color:#fff;
 					font-weight: lighter;
-					padding: 60px 30px 0 10px;
+					padding:{top:60px; right: 30px; left:10px;}
 					line-height: 60px;
+					@include gridle_state(desktopess notebook-min){
+						padding:{top:60px;right:30px;left:10px;}
+					}
+					@include gridle_state(tabless-min){
+						font:{size:49px}
+						line-height: 52px;
+						padding:{top:50px;right:0px;}
+					}
+					@include gridle_state(phoness-min){
+						padding:{top:8px;right:10px;bottom:0;left:10px;}
+					}
 				}
 				.tags{
 				@extend .no-margins;
@@ -167,6 +220,9 @@
 				display: block;
 				color:#fff;
 				list-style: none;
+					@include gridle_state(phoness-min){
+						display: none;
+					}
 					ul {
 						padding:0px 20px 0 10px;
 						li{
@@ -174,12 +230,23 @@
 							margin: 2px 2px 0 0;
 							display: inline-block;
 							background:{color:$first_color_1;}
+							@include gridle_state(tabless-min){
+								margin:{top:3px;right:6px;}
+							}
 							a {
 								font:{size:12px;family:$primary_font;}
 								color:#fff;
 								text:{decoration:none;}
+								@include gridle_state(tabless-min){
+								  font:{size:15px;}
+								}
 							}
 						}
+					}
+				}
+				&:first-child {
+					@include gridle_state(phoness-min){
+						height: 130px;
 					}
 				}
 			}

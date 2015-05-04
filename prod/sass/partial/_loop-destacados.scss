@@ -3,19 +3,20 @@
 	@include gridle(12);
 	@extend .no-paddings;
 	margin:{top:40px;}
-	@include gridle_state(phoness phoness-min){
+	@include gridle_state(phoness-min){
 			margin:{top:0px;}
 		}
 	.content-destacados {
 		@include gridle(6,desktopess notebook-min);
-		@include gridle(12,phoness);
+		@include gridle(6,tabless-min);
+		@include gridle(12,phoness-min);
 		height: 200px;
 		margin:10px 0;
 		position: relative;
-		@include gridle_state(tabless tabless-min){
+		@include gridle_state(tabless-min){
 			padding:{left:10px; right: 10px;}
 		}
-		@include gridle_state(phoness phoness-min){
+		@include gridle_state(phoness-min){
 			height: 113px;
 			padding:{left:4px; right:4px;}
 		}
@@ -24,7 +25,7 @@
 			@extend .no-paddings;
 			@extend .no-margins;
 			height: 200px;
-				@include gridle_state(phoness phoness-min){
+				@include gridle_state(phoness-min){
 					height: 130px;
 				}
 			}
@@ -34,43 +35,48 @@
 			padding: 0 10px 0 0;
 			height:200px;
 			padding:10px;
-			@include gridle_state(phoness phoness-min){
+			@include gridle_state(phoness-min){
 				height: 130px;
 			}
 			h1 {
 				color:#fff;
 				font:{family:$primary_font;size:20px;}
 				text:{transform: uppercase;}
-				@include gridle_state(tabless tabless-min){
-					font:{size:17px;} 
+				@include gridle_state(tabless-min){
+					font:{size:19px;} 
 					padding:{left:5px;}
 				}
-				@include gridle_state(phoness){
+				@include gridle_state(phoness-min){
 					font:{size:17px;}
 					margin:0;
 					padding:0;
+					padding:{left:0;}
 				}
 			}
 			p {
 				color:#fff;
 				font:{family:$primary_font;size:12px;}
-				@include gridle_state(phoness){
+				@include gridle_state(phoness-min){
 					display:none;
 				}
-				@include gridle_state(tabless tabless-min){
+				@include gridle_state(tabless-min){
 					padding:{left:5px;}
 				}
 			}
 			.tags{
 				@extend .no-margins;
 				@extend .no-paddings;
-				display: block;
 				color:#fff;
 				list-style: none;
-				@include gridle_state(tabless tabless-min){
-					padding:{left:5px;}
+				display: block;
+				@include gridle_state(desktopess notebook-min){
+					display: block;
 				}
-				@include gridle_state(phoness phonees-min){
+				@include gridle_state(tabless-min){
+					padding:{left:5px;}
+					display: none;
+				}
+				@include gridle_state(phonees-min){
 					display: none;
 				}
 				li{

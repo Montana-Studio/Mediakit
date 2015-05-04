@@ -22,7 +22,7 @@ html{
 	@include gridle_state(tabless-min){
 		padding:{left:10px;right:10px;}
 	}
-	@include gridle_state(phoness){
+	@include gridle_state(phoness-min){
 		padding:0;
 	}
 	.push {
@@ -34,14 +34,14 @@ html{
 		position: relative;
 		width:100%;
 		height: 450px;
-		@include gridle_state(phoness){
+		@include gridle_state(phoness-min){
 			height:250px;
 		}
 		.swipe-wrap{
 			overflow: hidden;
 			position: relative;
-			@include gridle(12,phoness);
-			@include gridle_no_gutter(phonnes notebook-min desktopess);
+			@include gridle(12,phoness-min);
+			@include gridle_no_gutter(phonnes-min notebook-min desktopess);
 			@include gridle_state(desktopess phoness-min){
 				padding: 0;
 			}
@@ -56,7 +56,7 @@ html{
 				float:left;
 				width:100%;
 				position: relative;
-				@include gridle_state(phoness){
+				@include gridle_state(phoness-min){
 					height:250px;
 					min-height:0;
 				}
@@ -70,7 +70,7 @@ html{
 					padding:20px;
 					@extend .text-left;
 					background:{color:rgba(0,0,0,.5);}
-					@include gridle_state(phoness){
+					@include gridle_state(phoness-min){
 						height:50px;
 						width:80%;
 						bottom:10px;
@@ -84,7 +84,7 @@ html{
 							text:{transform:uppercase;}
 							@extend .no-margins;
 							@extend .no-paddings;
-							@include gridle_state(phoness){
+							@include gridle_state(phoness-min){
 								font:{size:20px;}
 							}
 						}
@@ -101,7 +101,7 @@ html{
 			color:#fff;
 			font: {size:40px;}
 			cursor: pointer;
-			@include gridle_state(phoness){
+			@include gridle_state(phoness-min){
 				font: {size:20px;}
 			}
 			&:hover{
@@ -111,7 +111,7 @@ html{
 		.btn_next{
 			@extend .btn_prev;
 			left:97%;
-			@include gridle_state(phoness){
+			@include gridle_state(phoness-min){
 				left: 94%;
 			}
 		}

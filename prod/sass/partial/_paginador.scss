@@ -7,7 +7,7 @@
 		background:{color:$first_color}
 		padding: 10px 15px;
 		color: #fff;
-		@include gridle_state(phoness){
+		@include gridle_state(phoness-min){
 			padding: 10px 10px;
 		}
 	}
@@ -16,7 +16,7 @@
 		}
 	.text {
 		display: inline-block;
-		@include gridle_state(phoness){
+		@include gridle_state(phoness-min){
 			display: none;
 		}
 	}

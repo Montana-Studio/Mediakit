@@ -8,15 +8,15 @@ html {
 	.logo {
 		@include gridle(3,desktopess notebook-min);
 		@include gridle_clear(both);
-		@include gridle(7,phoness);
-		@include gridle_state(phoness phoness-min){
+		@include gridle(7,phoness-min);
+		@include gridle_state(phoness-min){
 			display: none;
 		}
 	}
 	.nav {
 		@include gridle(12);
 		@extend .no-paddings;
-		@include gridle_state(phoness phoness-min){
+		@include gridle_state(phoness-min){
 			display: none;
 		}
 		.menu { 
