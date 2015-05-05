@@ -6,7 +6,6 @@ var feed = new Instafeed({
     template:'<a href="{{link}}" target="_blank"><img src="{{image}}" alt="" /></a>',
     limit:20
 });
-
 (function($) { 'use strict'; 
 	window.mySwipe = $('#slider').Swipe({
 		speed:1000,

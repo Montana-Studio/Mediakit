@@ -3,7 +3,7 @@
 	@extend .no-paddings;
 	clear:both;
 	margin:40px 0;
-	height: auto;
+	height:auto;
 	@include gridle_state(tabless-min){
 		margin:{top:20px}
 	}
@@ -18,7 +18,7 @@
 			@include gridle(4,tabless-min);
 			@include gridle(12,phoness-min);
 			position: relative !important;
-			margin: 0 auto 10px auto;
+			margin:{right: auto;bottom:10px; left:auto;}
 			height:280px;
 			left:0 !important;
 			top:0 !important;
@@ -75,6 +75,9 @@
 					left: 10px;
 					height: 280px;
 					width: 95%;
+					@include gridle_state(tabless-md){
+						height: 260px;
+					}
 					@include gridle_state(phoness-min){
 						height: 230px;
 					}
@@ -82,8 +85,8 @@
 						@extend .text-left;
 						color:#fff;
 						font:{size:20px;}
-						padding: 21px 8px 20px 12px;
-						margin: 160px 0 20px 0;
+						padding:{top:21px; right: 8px;bottom:20px;left:12px;}
+						margin:{top:160px; bottom:20px;}
 						background-color: rgba(0, 0, 0, 0.5);
 						bottom: 0;
 						left: 20px;
@@ -99,6 +102,12 @@
 							left:10px;
 							margin:{top:130px;}
 						}
+						@include gridle_state(tabless-md){
+							left:5px;
+							margin:{top:150px;}
+							width:85%;
+							font:{size:18px;}
+						}
 					}
 					.date {
 						@extend .text-left;
@@ -109,12 +118,12 @@
 						left: 0;
 						z-index: 2;
 						position: absolute;
-						padding: 1px 60px 0px 0px;
+						padding:{top:1px;right: 60px;}
 						p {	
 							@extend .no-margins;
 							color:#fff;
 							font:{size:12px; font-family:$primary_font;weight:lighter;style: italic;}
-							padding:3px 0 3px 10px;
+							padding:{top:3px; bottom:3px; left:10px;}
 							text:{transform: uppercase;}
 							z-index: 10;
 						}
@@ -130,12 +139,12 @@
 			@extend #reciente;
 			.bg-color {
 				h2{
-				padding:45px 60% 0 10px !important;
+				padding:{top:45px !important; right:60% !important; left:10px !important;}
 					@include gridle_state(tabless-min){
 						padding:{top:55px !important;} 
 					}
 					@include gridle_state(phoness-min){
-						padding:{top:11px !important;; right: 10px !important;;}
+						padding:{top:11px !important; right: 10px !important;}
 					}
 					
 				}
@@ -157,11 +166,11 @@
 							@include gridle(6);
 							@extend .text-right;
 							@extend .no-margins;
+							@include gridle_float(right);
 							display: block !important;
-							float: right;
 							color:#fff;
 							font:{size:20px;}
-							padding: 20px 0;
+							padding:20px 0;
 							background:{color:$first_color_1}
 							.text {
 								display: none;
@@ -175,7 +184,7 @@
 						.prev {
 							@extend .next;
 							float: left;
-							padding: 20px 0;
+							padding:20px 0;
 							background:{color:$first_color_2}
 							.text {
 								display: none;
@@ -197,9 +206,8 @@
 				position: relative;
 				h2 {
 					@extend .no-margins;
-					font:{family:$primary_font; size:60px;weight: lighter;style: italic;}
+					font:{family:$primary_font; size:60px;weight: lighter;style: italic; weight: lighter;}
 					color:#fff;
-					font-weight: lighter;
 					padding:{top:60px; right: 30px; left:10px;}
 					line-height: 60px;
 					@include gridle_state(desktopess notebook-min){
@@ -220,14 +228,14 @@
 				display: block;
 				color:#fff;
 				list-style: none;
-					@include gridle_state(phoness-min){
+					@include gridle_state(phoness-min tabless-md){
 						display: none;
 					}
 					ul {
-						padding:0px 20px 0 10px;
+						padding:{right:20px; left:10px;}
 						li{
 							padding:2px 5px;
-							margin: 2px 2px 0 0;
+							margin:{top:2px; right: 2px;}
 							display: inline-block;
 							background:{color:$first_color_1;}
 							@include gridle_state(tabless-min){

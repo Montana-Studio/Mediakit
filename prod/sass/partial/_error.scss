@@ -12,9 +12,9 @@
 		svg {
 			@include gridle(6);
 			@extend .text-center;
+			@include gridle_float(none);
 			margin:0 auto;
 			display: block;
-			float: none;
 			@include gridle_state(phoness-min){
 				margin:50px auto 0;
 			}

@@ -60,14 +60,10 @@
 			<!-- /MOBILE Nav -->
 
 			<div class="search">
-				<div class="cont_search">
-
 					<?php get_template_part('searchform'); ?>
-
-				</div>
-				<div class="search-icon">
+				<!--<div class="search-icon">
 					<i class="fa fa-search"></i>
-				</div>
+				</div>-->
 			</div>
 		</div>
 		<div class="nav-mob">
@@ -108,7 +104,7 @@
 
 					<!-- nav -->
 					<nav class="nav" role="navigation">
-						<div class="menu"><?php html5blank_nav(); ?></div>
+						<?php html5blank_nav(); ?>
 					</nav>
 
 					

@@ -10,6 +10,9 @@
 		&.destaca-mobile{
 			padding-top: 30px !important;
 		}
+	@include gridle_state(tabless-md){
+		  margin:{top:5px !important;}
+		}	
 	}
 	.content-destacados {
 		@include gridle(6,desktopess notebook-min);
@@ -21,7 +24,7 @@
 		@include gridle_state(tabless-min){
 			padding:{left:10px; right: 10px;}
 		}
-		@include gridle_state(phoness-min){
+		@include gridle_state(phoness-min tabless-md){
 			height: 113px;
 			padding:{left:4px; right:4px;}
 		}
@@ -30,17 +33,17 @@
 			@extend .no-paddings;
 			@extend .no-margins;
 			height: 200px;
-				@include gridle_state(phoness-min){
+				@include gridle_state(phoness-min tabless-md){
 					height: 130px;
 				}
 			}
 		.content-art{
 			@include gridle(6);
 			background:{color:$second_color;}
-			padding: 0 10px 0 0;
+			padding:{right: 10px;}
 			height:200px;
 			padding:10px;
-			@include gridle_state(phoness-min){
+			@include gridle_state(phoness-min tabless-md){
 				height: 130px;
 			}
 			h1 {
@@ -51,17 +54,16 @@
 					font:{size:19px;} 
 					padding:{left:5px;}
 				}
-				@include gridle_state(phoness-min){
+				@include gridle_state(phoness-min tabless-md){
 					font:{size:17px;}
 					margin:0;
 					padding:0;
-					padding:{left:0;}
 				}
 			}
 			p {
 				color:#fff;
 				font:{family:$primary_font;size:12px;}
-				@include gridle_state(phoness-min){
+				@include gridle_state(phoness-min tabless-md){
 					display:none;
 				}
 				@include gridle_state(tabless-min){
@@ -87,7 +89,7 @@
 				}
 				li{
 					padding:2px 5px;
-					margin: 2px 2px 0 0;
+					margin:{top:2px;right: 2px;}
 					display: inline-block;
 					background:{color:$second_color_1;}
 					cursor: pointer;

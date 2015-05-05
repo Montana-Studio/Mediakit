@@ -25,7 +25,7 @@
 			padding:{left:10px;right:10px;}
 		}
 		h2 {
-			margin: 10px 0 0 0;
+			margin:{top:10px;}
 			a {
 			color:$second_color;
 			}
@@ -43,9 +43,9 @@
 				img {
 					@extend .text-center;
 					@extend .no-paddings;
+					@extend .border-radius; 
 					width: 50px;
 					height: 50px;
-					border-radius: 25px;
 					margin: 0 auto;
 					display: block;
 				}
@@ -59,21 +59,21 @@
 					width: 83%;
 				}
 				a {	
-					padding-left:5px; 
+					padding:{left:5px;} 
 					display: table-cell;
 					vertical-align: middle;
 					color:$third_color_2;
 					font:{style:italic;}
 					@include gridle_state(phoness-min){
 						font:{size:14px;}
-						margin: 0;
-						width: 80%;
+						margin:0;
+						width:80%;
 					}
 				}
 			}
 		}
 		p {	
-			margin: 5px 0;
+			margin:5px 0;
 		}
 	}
 	.date-post {
@@ -89,9 +89,9 @@
 			@extend .text-center;
 			@extend .no-margins;
 			color:#fff;
-			width: 100%;
+			width:100%;
 			font:{size:40px;}
-			padding: 20% 0 0 0;
+			padding:{top:20%;}
 			@include gridle_state(phoness-min){
 				font:{size:16px;}
 				padding:0;

@@ -19,7 +19,7 @@ html{
 	height: auto !important;
 	height: 100%;
 	margin:0 auto $height-footer;
-	@include gridle_state(tabless-min){
+	@include gridle_state(tabless-min tabless-md){
 		padding:{left:10px;right:10px;}
 	}
 	@include gridle_state(phoness-min){
@@ -41,9 +41,9 @@ html{
 		.swipe-wrap{
 			overflow: hidden;
 			position: relative;
-			@include gridle(12,phoness-min);
+			@include gridle(12,phoness-min tabless-md);
 			@include gridle_no_gutter(phonnes-min notebook-min desktopess);
-			@include gridle_state(desktopess phoness-min){
+			@include gridle_state(desktopess phoness-min tabless-md){
 				padding: 0;
 			}
 			@include gridle_state(notebook-min){
@@ -64,8 +64,9 @@ html{
 				}
 				article {
 					@include gridle(4);
+					@include gridle(8,tabless-md);
 					position: absolute;
-					height:100px;
+					height:auto;
 					bottom:150px;
 					left:50px;
 					border:{left:8px solid $second_color;}
@@ -74,7 +75,6 @@ html{
 					background:{color:rgba(0,0,0,.5);}
 					@include gridle(11, phoness-min);
 					@include gridle_state(phoness-min){
-						height:50px;
 						bottom:10px;
 						left:10px;
 						padding:10px;
@@ -103,7 +103,7 @@ html{
 			color:#fff;
 			font: {size:40px;}
 			cursor: pointer;
-			@include gridle_state(phoness-min){
+			@include gridle_state(phoness-min tabless-md){
 				font: {size:20px;}
 			}
 			&:hover{
@@ -113,7 +113,7 @@ html{
 		.btn_next{
 			@extend .btn_prev;
 			left:97%;
-			@include gridle_state(phoness-min){
+			@include gridle_state(phoness-min tabless-md){
 				left: 94%;
 			}
 		}
