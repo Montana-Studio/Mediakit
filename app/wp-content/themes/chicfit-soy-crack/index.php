@@ -5,14 +5,17 @@
 	<div class='swipe-wrap'>
 		<?php $query = new WP_Query('posts_per_page=3&category_name=destacado'); ?>
 			<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-
+				
 				<div class="content-slide" style="background-image:url(<?php the_field('imagen_post_banner'); ?>);">
+					<a href="<?php the_permalink()?>">
 					<article id="post-<?php the_ID(); ?>">
 						<main>
 							<h1><?php the_title(); ?></h1>
 						</main>
 					</article>
+					</a>
 				</div>
+				
 
 			<?php endwhile;
 			wp_reset_postdata();
@@ -89,7 +92,7 @@
 								echo substr(the_title($before = '', $after = '', FALSE), 0, 40) . ' ... '; } else {
 								the_title();
 								} ?></h2>
-							<div class="date"><p>11 de abril</p></div>
+							<div class="date"><p><?php echo get_the_date('d F'); ?></p></div>
 						</a>
 					</div>
 				</div>

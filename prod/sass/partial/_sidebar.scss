@@ -1,14 +1,13 @@
 .container-sidebar {
 	@extend .no-paddings;
 	@include gridle(4,desktopess);
-	@include gridle(12,phoness);
+	@include gridle(12,phoness-min);
 	margin:20px 0;
-	height: auto;
+	height:auto;
 	.sidebar {
 		@extend .no-margins;
 		@include gridle(12);
 		@include gridle_clear(right);
-		float: right;
-
+		@include gridle_float(right);
 	}
 }

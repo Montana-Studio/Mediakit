@@ -1,6 +1,6 @@
 .footer {
-	@include gridle(12,desktopess);
-	@include gridle(12,phoness);
+	@include gridle(12,desktopess notebook-min);
+	@include gridle(12,phoness-min);
 	@extend .text-center;
 	@extend .no-paddings;
 	font:{family:$primary_font;}
@@ -15,57 +15,53 @@
 		background:{color:$third_color;}
 		.container-footer {
 			@include gridle(8,desktopess);
-			@include gridle(12,phoness);
+			@include gridle(12,phoness-min notebook-min);
 			@include gridle_push(2,desktopess);
 			@extend .text-center;
-			@extend .no-paddings;
 			@extend .no-margins;
 			display: block;
 			margin: 0 auto;
 			position: relative;
-			@include gridle_state(phoness){
+			@include gridle_state(phoness-min){
 				margin: 0;
-				padding: 0;
 				left: 0;
 			}
 			.first-box {
 				@include gridle(12);
 				padding: 10px 0;
+				@include gridle_state(phoness-min){
+					padding:0;
+				}
 				.logo {
-					@include gridle(2,desktopess);
-					@include gridle(12,phoness);
+					@include gridle(2,desktopess notebook-min);
+					@include gridle(12,phoness-min);
+					@include gridle(4,tabless-min);
 					@include gridle_clear(both); 
-					float: center;
+					@include gridle_float(center);
 					margin: 0 auto;
 					display: block;
 				}
 				.nav {
-					@extend .text-center;
+					@extend .text-center; 
 					display:block;
 					margin: 0 auto;
+					@include gridle_state(phoness-min){
+						display: none;
+					}
 					ul {
 						@extend .no-paddings;
 						@extend .no-margins;
 						text:{decoration:none}
 						list-style: none;
 						display: inline-block;
-						@include gridle_state(phoness){
-							margin:0;
-							padding: 0;
-							width: 100%;
-						}
 						li {
 							display: inline-block;
 							a {
 								color: #000;
 								font:{size:11px;} 
-								margin-left: 42px;
+								margin:{left: 42px;}
 								text:{transform:uppercase;} 
 								font:{weight:bold;} 
-								@include gridle_state(phoness){
-									margin:{left:5px;}
-									text:{size:10px;}
-								}
 							}	
 						}	
 					}
@@ -73,37 +69,61 @@
 			}
 			.second-box {
 				@extend .no-paddings;
-				@include gridle(8,desktopess);
-				@include gridle(12,phoness);
+				@include gridle(8,desktopess notebook-min);
+				@include gridle(10,tabless-min);
+				@include gridle(12,phoness-min);
+				@include gridle_state(notebook-min){
+					float:none;
+				}
 				.newsletter {
 					@include gridle(12);
-					padding-bottom: 20px;
-					@include gridle_state(phoness){
+					padding:{bottom: 20px;}
+					@include gridle_state(phoness-min){
 						padding:{bottom:0;}
 					}
+					@include gridle_state(tabless-min){
+						padding:{left:10px;right: 10px;}
+					}
+					@include gridle_state(notebook-min){
+						padding:{left:0;right:0;}
+					}
 					input {
-						@include gridle(10,desktopess);
-						@include gridle(8,phoness);
+						@include gridle(10,desktopess notebook-min);
+						@include gridle(8,phoness-min);
 						border:1px solid $third_color_2;
 						outline:none !important; 
 						background: none;
 						padding:10px 5px;
+						@include gridle_state(notebook-min){
+							padding:9px 5px;
+						}
+						@include gridle_state(tabless-min){
+							padding:10px 5px;
+						}
 					}
 					.send {
-						@include gridle(2,desktopess);
-						@include gridle(4,phoness);
+						@include gridle(2,desktopess notebook-min);
+						@include gridle(4,phoness-min);
 						border:1px solid $third_color_2;
 						padding:10px 5px;
 						color:$third_color_2;
 						font:{weight:bold;} 
 						text:{transform:uppercase;align:center;}
+						@include gridle_state(notebook-min){
+							padding:9px 5px;
+							border:1px solid $third_color_2;
+						}
+						@include gridle_state(tabless-min){
+							padding:10px 5px;
+							border:1px solid $third_color_2;
+						} 
 					}
 				}
 			}
 			.third-box {
 				@extend .no-paddings;
-				@include gridle(4);
-				@include gridle_state(phoness){
+				@include gridle(3, desktopess notebook notebook-min);
+				@include gridle_state(phoness-min tabless-min){
 					display: none;
 				}
 				.siguenos {
@@ -112,19 +132,19 @@
 					ul {
 						@extend .no-paddings;
 						@extend .no-margins;
-						@include gridle(12,desktopess);
-						@include gridle(12,phoness);
+						@include gridle(12,desktopess notebook-min);
 						height: auto;
+						float: none;
 						li {
 							@extend .no-paddings;
 							@extend .text-center;
-							@include gridle(4,desktopess);
-							@include gridle(4,phoness);
-							display:block;
+							@include gridle(3,desktopess notebook-min);
+							display:inline-block;
+							float: none;
 							a {
 								@extend .text-center;
+								@extend .border-radius;
 								background: {color:$second_color}
-								border-radius: 50%;
 								display: table;
 								height: 40px;
 								width: 40px;
@@ -147,22 +167,27 @@
 			.four-box {
 				@include gridle(12);
 				padding: 10px 0;
+				@include gridle_state(phoness-min){
+					padding:{top:0;}
+				}
 				ul {
-					@include gridle_state(phoness){
+					@extend .no-margins;
+					@extend .no-paddings;
+					@include gridle_state(phoness-min){
 						margin:0;
 						padding: 0;
 						width: 100%;
 					}
 					li {
 						display: inline-block;
-						@include gridle_state(phoness){
+						@include gridle_state(phoness-min){
 							width: 100%;
 							text:{align:center;}
 						}
 						&:first-child {
 							padding: {right:20px;}
 							border-right: 1px solid #000;
-							@include gridle_state(phoness){
+							@include gridle_state(phoness-min){
 								border-right: 0;
 								padding: 0;
 								margin:0;
@@ -171,7 +196,7 @@
 						a {
 							color: #000;
 							font:{size:11px;} 
-							margin-left: 20px;
+							margin:{left:20px;} 
 							text:{transform:uppercase;} 
 							font:{weight:bold;} 
 						}
@@ -182,8 +207,8 @@
 				@extend .no-paddings;
 				color:$third_color_2;
 				text:{transform:uppercase;} 
-				margin: 20px 0 5px 0;
-				@include gridle_state(phoness){
+				margin:{top:20px; bottom:5px;}
+				@include gridle_state(phoness-min){
 					margin:{top:0;}
 				}
 			}
@@ -204,8 +229,8 @@
 			@include gridle(12);
 			padding: 20px 0;
 			img {
-				margin: 0 30px 0 0;
-				border: {radius:5px;}
+				margin:{right: 30px;}
+				border:{radius:5px;}
 			}
 		}	
 	}

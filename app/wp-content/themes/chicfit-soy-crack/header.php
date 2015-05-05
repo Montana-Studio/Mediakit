@@ -44,15 +44,44 @@
 				<li><a href="https://twitter.com/chicfitdaily"><i class="fa fa-twitter"></i></a></li>
 				<li><a href="https://instagram.com/chicfitdaily/"><i class="fa fa-instagram"></i></a></li>
 			</div>
+
+			<!-- MOBILE Nav -->
+
+			<div class="nav-mobile">
+				<div class="logo">
+					<a href="<?php echo home_url(); ?>">
+						<svg viewBox="0 0 300 95">
+							<use xlink:href="#svg_logo"/> 
+						</svg>
+					</a>
+				</div>
+			</div>
+
+			<!-- /MOBILE Nav -->
+
 			<div class="search">
-				<div class="cont_search">
-
 					<?php get_template_part('searchform'); ?>
-
-				</div>
-				<div class="search-icon">
+				<!--<div class="search-icon">
 					<i class="fa fa-search"></i>
-				</div>
+				</div>-->
+			</div>
+		</div>
+		<div class="nav-mob">
+
+			<div class="content-menu">
+
+				<?php html5blank_nav(); ?>
+
+				<form class="search-inner" method="get" action="<?php echo home_url(); ?>" role="search">
+					<input class="search-input" type="search" name="s" placeholder="Buscar">
+					<button class="search-submit" type="submit" role="button"><i class="fa fa-search"></i></button>
+				</form>	
+
+			</div>
+			<div class="pestana">
+				<svg viewBox="0 0 140.909 46.662">
+					<use xlink:href="#svg_pestana"/> 
+				</svg>
 			</div>
 		</div>
 
@@ -71,6 +100,7 @@
 						</a>
 					</div>
 					<!-- /logo -->
+
 
 					<!-- nav -->
 					<nav class="nav" role="navigation">

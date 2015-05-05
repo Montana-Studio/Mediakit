@@ -5,8 +5,7 @@
 		<div class="post-loop">
 			
 			<!-- post thumbnail -->
-			<a href="<?php the_permalink()?>">
-				<div class="img-post" style="background-image:url('<?php the_field('imagen_post_banner'); ?>')"></div>
+			<a href="<?php the_permalink()?>" class="img-post" style="background-image:url('<?php the_field('imagen_post_banner'); ?>')">
 			</a>
 			<!-- /post thumbnail -->
 

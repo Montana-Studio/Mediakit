@@ -1,15 +1,24 @@
 .nav-top {
-	max-width: 100%;
+	@include gridle(12);
+	@include gridle_no_gutter();
 	@extend .no-paddings;
 	background:{color:$third_color} ;
-	height: 35px;
+	height:35px;
+	position: relative;
+	z-index:99;
+	@include gridle_state(tabless-min){
+		height:45px;
+	}
+	@include gridle_state(phoness-min){
+		height:35px;
+	}
 	.top-social {
-		@include gridle(2,desktopess);
+		@include gridle(2,desktopess notebook-min);
 		@include gridle_push(2,desktopess);
 		@include gridle_clear(left);
 		color:$third_color_2;
-		@include gridle(4,phoness);
-		@include gridle_state(phoness){
+		@include gridle(3,phoness-min tabless-md);
+		@include gridle_state(phoness-min tabless-md){
 			left:0;
 			padding:0;
 		}
@@ -18,64 +27,220 @@
 			text:{decoration:none;align:center;}
 			list-style: none;
 			display: inline-block;
-				@include gridle_state(phoness){
+				@include gridle_state(tabless-min){
+					height: 45px;
+					width: 45px;
+				}
+				@include gridle_state(phoness-min){
+					height: 35px;
 					width:20px;
-				}	
+				}
 			a {
 				color:$third_color_2;
+				display: table;
+				@include gridle_state(tabless-min){
+					height: 45px;
+					width: 45px;
+				}
+				@include gridle_state(phoness-min){
+					height: 35px;
+					width: 35px;
+				}
+				&:hover {
+					@include animation(color-nav .4s ease-out);
+				}
 			} 
 			i { 	
-				padding: 7px 0 0 0; 
+				padding:{top:7px;} 
 				font:{size:20px;}
-				@include gridle_state(phoness){
-					padding: 10px 0 0 0;
-					font:{size:18px;}
-				}	
-			}
-				:hover {
-				color:$third_color_1;
+				display: table-cell;
+				vertical-align: middle;
+				@include gridle_state(tabless-min){
+					font:{size:24px;}
 				}
+				@include gridle_state(phoness-min){
+					padding:{top:10px;}
+					font:{size:18px;}
+				}
+			}
+		}
+	}
+	.nav-mobile {
+		@include gridle_state(desktopess notebook-min tabless-min){
+			display:none;
+		}
+		@include gridle(6,phoness-min);
+		@include gridle_state(phoness-min){
+			display: block;
+			height: 35px;
+		}
+		.logo {
+			width: 68%;
+			margin:0 auto;
+			display: block;
+			@extend .text-center;
+			@include gridle_state(tabless-min){
+				width: 40%; 
+			}
+			@include gridle_state(phoness-min){
+				width: 74%;
+				a{
+					svg{
+						max-width: 120px
+					}
+				}
+			}
 		}
 	}
 	.search {
-			@include gridle(4,desktopess notebook-min);
-			@include gridle_push(4,desktopess notebook-min);
-			@include gridle(8,phoness);
-			@include gridle_state(phoness){
+			@extend .no-paddings;
+			@include gridle(4,desktopess);
+			@include gridle(6,notebook-min);
+			@include gridle_push(4,desktopess notebook-min tabless-md);
+			@include gridle(1,phoness-min);
+			@include gridle_state(phoness-min){
 				left:0;
 				padding:0;
 			}
-		.cont_search {
-			@include gridle(11);
-			@include gridle_state(phoness){
-				padding:0;
-			}
-			input {
+		.search-inner {
+			@extend .no-paddings;
+			@include gridle(12,desktopess notebook-min tabless-min);
+			.search-input {
+				@include gridle(11,desktopess notebook-min tabless-min);
+				@include gridle(8,tabless-md);
 				background: none;
-				width: 100%;
 				border:0;
 				border-bottom:1px solid $third_color_2;
 				color:$third_color_2;
-				padding: 8px 0 0 0;
+				padding:0;
+				margin:{bottom:5px;}
 				outline:none;
 				font:{size:18px;}
 				text:{transform:uppercase;}
+				height: 30px;
 				@include placeholder {
 					color:$third_color_2;	
 				}
+				@include gridle_state(phoness-min){
+					display: none;
+				}
+				@include gridle_state(tabless-min){
+					height: 40px;
+					margin:{bottom:5px;}
+				}
 			}
-		}
-		.search-icon {
-			@extend .text-left;
-			@include gridle(1);
-			color:$third_color_2;
-			font:{size:20px;}
-			padding: 5px 0 0 0;
-			cursor:pointer;
-			@include gridle_state(phoness){
-					padding: 5px 0 0 0;
-					font:{size:18px;}
+			.search-submit {
+				@extend .text-left;
+				@include gridle(1, desktopess notebook-min tabless-min);
+				@include gridle(4,tabless-md);
+				color:$third_color_2;
+				font:{size:22px;}
+				padding:{top:5px;}
+				cursor:pointer;
+				height:35px;
+				display:table;
+				background: none;
+				border:0;
+				outline:none;
+				@include gridle_state(phoness-min){
+					display: none;
+				}
+				@include gridle_state(tabless-min){
+						height: 45px;
+				}
+				i {
+					display: table-cell;
+					vertical-align: middle;
+					@include gridle_state(tabless-min){
+						font:{size:24px;}
+					}
+				}
+				&:hover {
+					@include animation(color-nav .4s ease);
+				}
 			}
 		}
 	}
+}
+.nav-mob {
+	@include gridle_state(desktopess notebook-min tabless-min){
+		display: none;
+	}
+	@include gridle_show(phoness-min);
+	@include gridle(12);
+	@include gridle_parent();
+	display: block;
+	position: absolute;
+	z-index: 9;
+	top:0;
+	.content-menu{
+		@include gridle(12);
+		background:{color:$third_color} ;
+		color:#666;
+		padding:{top:45px;}
+		height:0;
+		overflow: hidden;
+		top:0;
+		ul{
+			padding:{top:10px; left:15px;}
+			li {
+			text:{decoration:none;}
+			list-style: none;
+				a {
+					text:{transform:uppercase;}
+					color:$third_color_2;
+					font:{size:13px;} 
+					line-height: 27px;
+				}
+			} 
+		}
+		.search-inner {
+			@include gridle(12);
+			@include gridle(11,tabless-md);
+			position: absolute;
+			bottom: 50px;
+			.search-input {
+				@include gridle(7);
+				background: none;
+				border:0;
+				background:{color:$third_color_2;}
+				outline: none;
+				color:#fff;
+				padding:{top:5px;bottom:5px;}
+				@include placeholder {
+					color: #fff;
+					font:{family:$primary_font;}
+  				}
+			}
+			.search-submit {
+				@include gridle(2); 
+					@extend .no-paddings;
+					@extend .no-margins;
+					@include gridle_clear(none);
+					background: none;
+					border: 0;
+					color:#fff;
+					height: 28px;
+					font:{size:21px;}
+					background:{color:$third_color_2;}
+			}
+		}
+	}
+	.pestana {
+		width: 80px;
+		height: auto;
+		margin: 0 auto;
+		cursor: pointer;
+		@include gridle_state(tabless-min){
+			width: 110px;
+		}
+		@include gridle_state(phoness-min){
+			width: 90px;
+		}
+	}
+}
+
+@include keyframes(color-nav) {
+   0% {color:$third_color_2;}
+  100% {color:$third_color_1;}
 }

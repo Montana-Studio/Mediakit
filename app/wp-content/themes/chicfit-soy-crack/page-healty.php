@@ -5,9 +5,9 @@
 
 
 <!-- LOOP DESTACADOS -->
-<div class="destacados">
+<div class="destacados destaca-mobile">
 
-	<?php $query = new WP_Query('posts_per_page=2&category_name=fitness'); ?>
+	<?php $query = new WP_Query('posts_per_page=2&category_name=destacado'); ?>
 
 	<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 		<article class="content-destacados" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -36,7 +36,7 @@
 <!-- / LOOP DESTACADOS -->
 
 
-<!--CONTENT WRAP -->
+<!--CONTENT WRAP -->ç
 
 
 <!-- LOOP MÁS RECIENTES -->

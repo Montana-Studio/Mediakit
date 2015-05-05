@@ -1,19 +1,23 @@
 .pagination {
-	float:right;
+	@include gridle(12);
+	@include gridle_float(right);
 	margin:{bottom:30px !important;}
 	height: auto;
 	.page-numbers {
 		background:{color:$first_color}
-		padding: 10px 15px;
+		padding:10px 15px;
 		color: #fff;
-		@include gridle_state(phoness){
-			padding: 10px 10px;
+		@include gridle_state(phoness-min){
+			padding:10px 10px;
 		}
 	}
+	.current {
+			background:{color:$first_color_2}	
+		}
 	.text {
-		display: inline-block;
-		@include gridle_state(phoness){
-			display: none;
+		display:inline-block;
+		@include gridle_state(phoness-min){
+			display:none;
 		}
 	}
 }

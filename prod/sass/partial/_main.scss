@@ -35,3 +35,9 @@ h1 {
 iframe {
 	width: 100%;
 }
+.border-radius {
+ 	@include border-top-radius(50%);
+	@include border-right-radius(50%);
+	@include border-bottom-radius(50%);
+	@include border-left-radius(50%);
+}

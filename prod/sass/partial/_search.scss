@@ -6,21 +6,26 @@
 	-moz-box-shadow: 3px 4px 18px -3px  rgba(189,185,189,0.8);
 	box-shadow: 3px 4px 18px -3px  rgba(189,185,189,0.8);
 	.img-post {
-		@include gridle(3,desktopess);
-		@include gridle(12,phonees);
+		@include gridle(3,desktopess notebook-min tabless-min);
+		@include gridle(12,phoness-min);
 		@extend .no-margins;
 		@extend .no-paddings;
-		background-size:cover;
-		background-repeat: no-repeat; 
+		background:{size:cover;repeat: no-repeat;}
 		height: 200px;
+		@include gridle_state(phoness-min){
+			border:{top:5px solid $second_color;}
+		}
 	}
 	.content-post {
-		@include gridle(7,desktopess);
-		@include gridle(12,phonees);
+		@include gridle(7,desktopess notebook-min tabless-min);
+		@include gridle(12,phoness-min);
 		@extend .no-margins;
-		clear:none;
+		@include gridle_clear(none);
+		@include gridle_state(tabless-min){
+			padding:{left:10px;right:10px;}
+		}
 		h2 {
-			margin: 10px 0 0 0;
+			margin:{top:10px;}
 			a {
 			color:$second_color;
 			}
@@ -29,18 +34,18 @@
 			@include gridle(12);
 			@extend .no-paddings;
 			.img-author{
-				@include gridle(1,desktopess);
+				@include gridle(1,desktopess notebook-min tabless-min);
 				@extend .text-right;
 				@extend .no-paddings;
-				@include gridle_state(phoness){
+				@include gridle_state(phoness-min){
 					width: 17%;
 				}
 				img {
 					@extend .text-center;
 					@extend .no-paddings;
+					@extend .border-radius; 
 					width: 50px;
 					height: 50px;
-					border-radius: 25px;
 					margin: 0 auto;
 					display: block;
 				}
@@ -50,44 +55,44 @@
 				@include gridle(4);
 				display: table;
 				height: 60px;
-				@include gridle_state(phoness){
+				@include gridle_state(phoness-min){
 					width: 83%;
 				}
 				a {	
-					padding-left:5px; 
+					padding:{left:5px;} 
 					display: table-cell;
 					vertical-align: middle;
 					color:$third_color_2;
 					font:{style:italic;}
-					@include gridle_state(phoness){
+					@include gridle_state(phoness-min){
 						font:{size:14px;}
-						margin: 0;
-						width: 80%;
+						margin:0;
+						width:80%;
 					}
 				}
 			}
 		}
 		p {	
-			margin: 5px 0;
+			margin:5px 0;
 		}
 	}
 	.date-post {
-		@include gridle(2,desktopess);
-		@include gridle(12,phoness);
+		@include gridle(2,desktopess notebook-min tabless-min);
 		@extend .no-margins;
 		background: $second_color;
 		height: 200px;
-		@include gridle_state(phonees){
+		@include gridle(12,phoness-min);
+		@include gridle_state(phoness-min){
 			height: 50px;
 		}
 		.dia {
 			@extend .text-center;
 			@extend .no-margins;
 			color:#fff;
-			width: 100%;
+			width:100%;
 			font:{size:40px;}
-			padding: 20% 0 0 0;
-			@include gridle_state(phonees){
+			padding:{top:20%;}
+			@include gridle_state(phoness-min){
 				font:{size:16px;}
 				padding:0;
 				width: 10%;
@@ -99,7 +104,7 @@
 			@extend .dia;
 			font:{size:20px;weight:lighter; }
 			text:{transform: uppercase;}
-			@include gridle_state(phonees){
+			@include gridle_state(phoness-min){
 				font:{size:14px;}
 				padding:0;
 				width: 10%;
@@ -113,12 +118,15 @@
 			position:relative;
 			top: 45%;
   			left: -20px;
-			 -webkit-transform: rotate(45deg);
-		    -moz-transform: rotate(45deg);
-		    -o-transform: rotate(45deg);
-		    -ms-transform: rotate(45deg);
-		    transform: rotate(45deg);
-		    @include gridle_state(phoness){
+  			@include transform(rotate(45deg));
+		    @include gridle_state(desktopess notebook){
+		    	top: 45%;
+  				left: -20px;
+		    }
+		     @include gridle_state(tabless-min){
+				left: -10px;
+			}
+			@include gridle_state(phoness-min){
 		    	top: -14%;
 				left: 43%;
 		    }

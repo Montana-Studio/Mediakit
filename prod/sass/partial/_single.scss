@@ -3,40 +3,40 @@
 	@include gridle_clear(both);
 	.single-post {
 		@include gridle(12,desktopess);
-		@include gridle(12,phoness);
-		@include gridle_state(phoness){
+		@include gridle(12,phoness-min);
+		@include gridle_state(phoness-min){
 			padding: 0;
 		}
 		.container-one {
 			@extend .no-paddings;
-			@include gridle(12,desktopess);
-			@include gridle(12, phoness);
+			@include gridle(12,desktopess notebook-min);
+			@include gridle(12,phoness-min);
 			.content-title {
 				h1 {
-					margin:20px 0 0 0;
-					@include gridle_state(phoness){
-						  	margin: 20px 0 3px 0;
-							line-height: 24px;
-							}
+					margin:{top:0;}
+					@include gridle_state(phoness-min){
+					  	margin:{top:28;left:3px;}
+						line-height: 24px;
+					}
 					a {
 					color:#000;
-						@include gridle_state( phoness){
+						@include gridle_state(phoness-min){
 							font:{size:25px;}
 						}
 					}
 				}
 				.tags{
+					@include gridle(11,desktopess);
+					@include gridle(10,notebook-min);
+					@include gridle_float(none, tabless-min);
 					@extend .no-margins;
 					@extend .no-paddings;
 					display: block;
 					color:#fff;
-					list-style: none;
-					@include gridle_state(phoness){
-						  width: 80%;
-					}
+					list:{style: none;}
 					li{
 						padding:2px 5px;
-						margin: 2px 2px 0 0;
+						margin:{top:2px;right:2px;}
 						display: inline-block;
 						background:{color:$first_color;}
 						a{
@@ -48,27 +48,29 @@
 				}
 			}	
 			.img-post{
-				height: 500px;
-				background-repeat: no-repeat;
-				background-size: cover;
-				margin-top: 2%;
-				position: relative;
-				@include gridle_state(phoness){
-						height:200px;
-						}
+				height:500px;
+				background:{repeat: no-repeat;size: cover;}
+				margin:{top:2%;}
+				position:relative;
+				@include gridle_state(phoness-min){
+					height:200px;
+				}
 				.date {
 					background:{color:$second_color_1;}
-					border-radius: 50%;
+					@include border-top-radius(50%);
+					@include border-right-radius(50%);
+					@include border-bottom-radius(50%);
+					@include border-left-radius(50%);
 					color: #fff;
 					height: 65px;
 					right: 0;
-					text-align: center;
+					@extend .text-center;
 					top: -35px;
 					position: relative;
 					padding: 5px;
 					width: 65px;
-					float: right;
-					@include gridle_state(phoness){
+					@include gridle_float(right);
+					@include gridle_state(phoness-min){
 						height: 40px;
 						width: 40px;
 						top:-25px;
@@ -76,9 +78,9 @@
 					i {
 						@extend.text-center;
 						display: block;
-						font-size: 30px;
-						margin: 5px 0;
-						@include gridle_state(phoness) {
+						font:{size: 30px;}
+						margin:5px 0;
+						@include gridle_state(phoness-min) {
 							font:{size:20px;}
 							margin:{top:2px; bottom:4px;}
 						}
@@ -87,7 +89,7 @@
 						@extend.text-center;
 						text:{transform: uppercase;}
 						display: block;
-						@include gridle_state(phoness){
+						@include gridle_state(phoness-min){
 							font:{size:12px;}
 						}
 					}	
@@ -96,8 +98,8 @@
 		}
 		.container-two {
 			@extend .no-paddings;
-			@include gridle(8,desktopess);
-			@include gridle(12,phoness);
+			@include gridle(8,desktopess notebook-min);
+			@include gridle(12,phoness-min);
 			.content-text {
 				@include gridle(12);
 				@extend .no-paddings;
@@ -127,7 +129,7 @@
 							@extend .no-paddings;
 							width: 40px;
 							height: 40px;
-							border-radius: 20px;
+							border-radius:50%;
 						}
 					}
 					.name-author{
@@ -135,13 +137,13 @@
 						position: relative;
 						display: inline-block;
 						.author {
-							padding: 10px 0 0 0;
+							padding:{top:10px;}
 							display: table-cell;
 							a {	
-							color:$third_color_2;
-							font:{style:italic;}
-							@include gridle_state(phoness){
-								font:{size:14px;}
+								color:$third_color_2;
+								font:{style:italic;}
+								@include gridle_state(phoness-min){
+									font:{size:14px;}
 								}
 							}
 						}
