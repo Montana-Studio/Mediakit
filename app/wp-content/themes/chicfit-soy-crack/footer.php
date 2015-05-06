@@ -57,6 +57,24 @@
 				</div>
 				
 			</footer>
+
+			<div style="width:1520px;position:fixed;margin:0 auto;left:0;right:0;top:0;">
+				
+				<!-- /92947493/160X600_CFD -->
+				<div id='div-gpt-ad-1430928327422-2' style='width:160px;float:left;'>
+				<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1430928327422-2'); });
+				</script>
+				</div>
+
+				<!-- /92947493/160x600_CFD_right -->
+				<div id='div-gpt-ad-1430928327422-3' style='width:160px;float:right;'>
+				<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1430928327422-3'); });
+				</script>
+				</div>
+
+			</div>
     
 			<!-- /footer -->
 		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.marquee.js"></script>
@@ -65,39 +83,7 @@
 		<script src="<?php echo get_template_directory_uri(); ?>/js/masonry.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.touchSwipe.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/classie.js"></script>
-		<script>
-			var buttons7Click = Array.prototype.slice.call( document.querySelectorAll( '#btn-click button' ) ),
-				buttons9Click = Array.prototype.slice.call( document.querySelectorAll( 'button.btn-8g' ) ),
-				totalButtons7Click = buttons7Click.length,
-				totalButtons9Click = buttons9Click.length;
 
-			buttons7Click.forEach( function( el, i ) { el.addEventListener( 'click', activate, false ); } );
-			buttons9Click.forEach( function( el, i ) { el.addEventListener( 'click', activate, false ); } );
-
-			function activate() {
-				var self = this, activatedClass = 'btn-activated';
-
-				if( classie.has( this, 'btn-7h' ) ) {
-					// if it is the first of the two btn-7h then activatedClass = 'btn-error';
-					// if it is the second then activatedClass = 'btn-success'
-					activatedClass = buttons7Click.indexOf( this ) === totalButtons7Click-2 ? 'btn-error' : 'btn-success';
-				}
-				else if( classie.has( this, 'btn-8g' ) ) {
-					// if it is the first of the two btn-8g then activatedClass = 'btn-success3d';
-					// if it is the second then activatedClass = 'btn-error3d'
-					activatedClass = buttons9Click.indexOf( this ) === totalButtons9Click-2 ? 'btn-success3d' : 'btn-error3d';
-				}
-
-				if( !classie.has( this, activatedClass ) ) {
-					classie.add( this, activatedClass );
-					setTimeout( function() { classie.remove( self, activatedClass ) }, 1000 );
-				}
-			}
-
-			document.querySelector( '.btn-7i' ).addEventListener( 'click', function() {
-				classie.add( document.querySelector( '#trash-effect' ), 'trash-effect-active' );
-			}, false );
-		</script>
 		<?php wp_footer(); ?>
 		
 	</body>

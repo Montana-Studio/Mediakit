@@ -33,11 +33,51 @@
 		  ga('send', 'pageview');
 
 		</script>
+		
+		<script type='text/javascript'>
+		  (function() {
+		    var useSSL = 'https:' == document.location.protocol;
+		    var src = (useSSL ? 'https:' : 'http:') +
+		        '//www.googletagservices.com/tag/js/gpt.js';
+		    document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+		  })();
+		</script>
 
+		<script type='text/javascript'>
+		  googletag.cmd.push(function() {
+		    googletag.defineOutOfPageSlot('/92947493/ITT_CFDv', 'div-gpt-ad-1430928327422-0').addService(googletag.pubads());
+		    googletag.defineOutOfPageSlot('/92947493/Masthead_CFD_ALL', 'div-gpt-ad-1430928327422-1').addService(googletag.pubads());
+		    googletag.defineSlot('/92947493/160X600_CFD', [160, 600], 'div-gpt-ad-1430928327422-2').addService(googletag.pubads());
+		    googletag.defineSlot('/92947493/160x600_CFD_right', [160, 600], 'div-gpt-ad-1430928327422-3').addService(googletag.pubads());
+		    googletag.defineSlot('/92947493/300X250_CFD', [300, 250], 'div-gpt-ad-1430928327422-4').addService(googletag.pubads());
+		    googletag.defineSlot('/92947493/300X250_CFD_sidebar_2', [300, 250], 'div-gpt-ad-1430928327422-5').addService(googletag.pubads());
+		    googletag.defineSlot('/92947493/320x50_CFD', [320, 50], 'div-gpt-ad-1430928327422-6').addService(googletag.pubads());
+		    googletag.defineSlot('/92947493/728X90_CFD', [728, 90], 'div-gpt-ad-1430928327422-7').addService(googletag.pubads());
+		    googletag.defineSlot('/92947493/728x90_CFD_cont', [728, 90], 'div-gpt-ad-1430928327422-8').addService(googletag.pubads());
+		    googletag.defineSlot('/92947493/970x90_CFD', [970, 90], 'div-gpt-ad-1430928327422-9').addService(googletag.pubads());
+		    googletag.pubads().enableSingleRequest();
+			googletag.pubads().collapseEmptyDivs();
+			googletag.pubads().enableSyncRendering();
+			googletag.enableServices();
+		  });
+		</script>
 		
 	</head>
 
 	<body <?php body_class(); ?>>
+		<!-- /92947493/ITT_CFDv -->
+		<div id='div-gpt-ad-1430928327422-0'>
+			<script type='text/javascript'>
+			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1430928327422-0'); });
+			</script>
+		</div>
+
+		<!-- /92947493/320x50_CFD -->
+		<div id='div-gpt-ad-1430928327422-6' style='width:320px;position:fixed;bottom:0;z-index:999;left:0;right:0;margin:0 auto;'>
+			<script type='text/javascript'>
+			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1430928327422-6'); });
+			</script>
+		</div>
 
 		<?php include (TEMPLATEPATH . '/svg_icons.php'); ?>
 		<div class="nav-top">
@@ -68,6 +108,13 @@
 				</div>-->
 			</div>
 		</div>
+
+		<div id='div-gpt-ad-1430928327422-1' style="width:970px;margin:5px auto;display:block;clear:both;position:relative;">
+			<script type='text/javascript'>
+			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1430928327422-1'); });
+			</script>
+		</div>
+
 		<div class="nav-mob">
 
 			<div class="content-menu">
