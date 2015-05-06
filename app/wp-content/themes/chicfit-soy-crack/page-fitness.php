@@ -3,7 +3,6 @@
 <?php get_header(); ?>
 
 
-
 <!-- LOOP DESTACADOS -->
 <div class="destacados destaca-mobile">
 
@@ -37,24 +36,26 @@
 
 
 <!--CONTENT WRAP -->
-
-
 <!-- LOOP MÁS RECIENTES -->
 <div class="content-loop-home">
-	<div id="container" class="container-principal">
+<div id="container" class="container-principal">
 
-			<div id="reciente" class="item-principal">
-				<div class="bg-color">
-					<h2>LO MAS RECIENTE</h2>
-					<nav class="tags">
-						<?php html5blank_nav(); ?>
-					</nav>	
-				</div>			
-			</div>
+		<div id="reciente" class="item-principal">
+			<div class="bg-color">
+				<h2>Fitness</h2>
+				<nav class="tags">
+					<?php html5blank_nav(); ?>
+				</nav>	
+			</div>			
+		</div>
+		<?php 
 
-			<?php //if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-			
-			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+			query_posts('category_name=running,jogging,pilates,yoga,asanas,calentamiento,elongacion,flexibilidad,danza,rutina,recuperacion,acondicionamiento,trx,referentes,crossfit&posts_per_page=7&paged=' . $paged);
+
+		?>
+
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 			<article class="item-principal" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<div class="bg-color-none">
@@ -74,36 +75,26 @@
 				</div>
 			</article>
 
-			<?php /* endwhile;
-			wp_reset_postdata();
-			else: ?>
+		<?php endwhile; ?>
+
+		<?php else: ?>
+
+			<!-- article -->
+			<article>
 				<p>No hay post.</p>
-			<?php endif; */?>
-			
-			<?php endwhile; ?>
+			</article>
+			<!-- /article -->
 
-			<?php else: ?>
+		<?php endif; ?>
 
-				 <!-- article -->
-				<article>
-					<h2>No hay post.</h2>
-				</article>
-				<!-- /article -->
-
-			<?php endif; ?>
-
-			<div class="item-principal paginador">
-				<div class="bg-color">
-					<h2>VER MÁS</h2>
-					<div class="paginador-arrow">
-						<?php get_template_part('pagination'); ?>
-					</div>
+		<div class="item-principal paginador">
+			<div class="bg-color">
+				<h2>VER MÁS</h2>
+				<div class="paginador-arrow">
+					<?php get_template_part('pagination'); ?>
 				</div>
 			</div>
-
+		</div>
 	</div>
 </div>
-<!-- /LOOP MÁS RECIENTES -->
-
-
 <?php get_footer(); ?>

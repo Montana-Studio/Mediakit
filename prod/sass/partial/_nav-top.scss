@@ -196,11 +196,10 @@
 		}
 		.search-inner {
 			@include gridle(12);
-			@include gridle(11,tabless-md);
-			position: absolute;
-			bottom: 50px;
+			position: relative;
+			bottom: -10px;
 			.search-input {
-				@include gridle(7);
+				@include gridle(10);
 				background: none;
 				border:0;
 				background:{color:$third_color_2;}

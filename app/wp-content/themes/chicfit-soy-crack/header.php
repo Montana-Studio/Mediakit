@@ -27,7 +27,9 @@
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'xxxxxxxx', 'auto');
+		  ga('create', 'UA-51156134-1', 'chicfitdaily.com');
+		  ga('require', 'displayfeatures');
+		  ga('require', 'linkid', 'linkid.js');
 		  ga('send', 'pageview');
 
 		</script>
@@ -104,7 +106,7 @@
 
 					<!-- nav -->
 					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
+						<div class="menu"><?php html5blank_nav(); ?></div>
 					</nav>
 
 					

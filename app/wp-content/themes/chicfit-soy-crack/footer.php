@@ -49,7 +49,7 @@
 
 						<div class="four-box">
 							<ul>
-								<li><a href="mailto:alvaro@mediatrends.cl"><i class="fa fa-envelope-o"></i> CONTACTO PUBCLITIARIO</a></li>
+								<li><a href="mailto:alvaro@mediatrends.cl"><i class="fa fa-envelope-o"></i> CONTACTO PUBLICITARIO</a></li>
 								<li><a href="mailto:chicfitdaily@gmail.com"><i class="fa fa-envelope-o"></i> CONTACTO EDITORIAL</a></li>
 							</ul>
 						</div>
@@ -57,10 +57,6 @@
 				</div>
 				
 			</footer>
-
-			<p>If you swipe me, I will disappear.</p>
-    <p>Swipe me away!</p>
-    <p>Swipe me too!</p>
     
 			<!-- /footer -->
 		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.marquee.js"></script>

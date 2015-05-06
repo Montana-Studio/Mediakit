@@ -3,7 +3,7 @@
 <!--SLIDER CONTENT-->
 <div id='slider' class='swipe'>
 	<div class='swipe-wrap'>
-		<?php $query = new WP_Query('posts_per_page=3&category_name=destacado'); ?>
+		<?php $query = new WP_Query('posts_per_page=3&category_name=slide'); ?>
 			<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 				
 				<div class="content-slide" style="background-image:url(<?php the_field('imagen_post_banner'); ?>);">

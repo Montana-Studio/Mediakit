@@ -1,6 +1,6 @@
 var feed = new Instafeed({
     get:'user',
-    userId:20355835,
+    userId:1021323093,
     accessToken:'641827348.467ede5.82e872aed9ed4959a3ee985d62781c51',
     clientId:'cd33a91424cc4cf8a6aaac7db1f6e955',
     template:'<a href="{{link}}" target="_blank"><img src="{{image}}" alt="" /></a>',
@@ -48,12 +48,14 @@ var feed = new Instafeed({
     $('.pestana').swipe( {
         swipeDown:function() {
           $('.content-menu').animate({
-                height: 230
+                height: 271,
+                'padding-bottom':50
             },{duration:500});
         },
         swipeUp:function(){
             $('.content-menu').animate({
-                height:'0px'
+                height:'0px',
+                'padding-bottom':0
             },{duration:500});
         },
         //Default is 75px, set to 0 for demo so any distance triggers swipe

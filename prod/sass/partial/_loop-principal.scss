@@ -210,6 +210,7 @@
 					color:#fff;
 					padding:{top:60px; right: 30px; left:10px;}
 					line-height: 60px;
+					text:{transform:uppercase;}
 					@include gridle_state(desktopess notebook-min){
 						padding:{top:60px;right:30px;left:10px;}
 					}

@@ -1,6 +1,9 @@
 .content-post {
 	@include gridle(12);
 	@include gridle_clear(both);
+	@include gridle_state(phoness){
+		padding:{top:50px}
+	}
 	.single-post {
 		@include gridle(12,desktopess);
 		@include gridle(12,phoness-min);
@@ -13,9 +16,9 @@
 			@include gridle(12,phoness-min);
 			.content-title {
 				h1 {
-					margin:{top:0;}
+					margin:{top:0;bottom:0;}
 					@include gridle_state(phoness-min){
-					  	margin:{top:28;left:3px;}
+					  	margin:{left:3px;}
 						line-height: 24px;
 					}
 					a {
