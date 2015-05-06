@@ -58,19 +58,19 @@
 				
 			</footer>
 
-			<div style="width:1520px;position:fixed;margin:0 auto;left:0;right:0;top:0;">
+			<div style="width:1570px;position:fixed;margin:0 auto;left:0;right:0;top:36px;z-index:1;">
 				
-				<!-- /92947493/160X600_CFD -->
-				<div id='div-gpt-ad-1430928327422-2' style='width:160px;float:left;'>
+							<!-- /92947493/160X600_CFD -->
+				<div id='div-gpt-ad-1430935394858-2'style='width:160px;float:left;'>
 				<script type='text/javascript'>
-				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1430928327422-2'); });
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1430935394858-2'); });
 				</script>
 				</div>
 
 				<!-- /92947493/160x600_CFD_right -->
-				<div id='div-gpt-ad-1430928327422-3' style='width:160px;float:right;'>
+				<div id='div-gpt-ad-1430935394858-3' style='width:160px;float:right;'>
 				<script type='text/javascript'>
-				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1430928327422-3'); });
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1430935394858-3'); });
 				</script>
 				</div>
 
