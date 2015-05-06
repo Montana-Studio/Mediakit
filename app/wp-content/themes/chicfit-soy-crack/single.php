@@ -24,7 +24,7 @@
 				</div>
 
 <!-- /92947493/970x90_CFD -->
-<div id='div-gpt-ad-1430935394858-9' style='width:970px;margin:0 auto -40px;display:block;clear:both;padding:5px 0;'>
+<div id='div-gpt-ad-1430935394858-9' style='width:970px;margin:0 auto;display:block;clear:both;padding:5px 0;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1430935394858-9'); });
 </script>
