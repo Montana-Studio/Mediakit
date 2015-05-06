@@ -182,6 +182,7 @@
 		background:{color:$third_color} ;
 		color:#666;
 		padding:{top:45px;bottom:30px;}
+		margin: {bottom:-2px;}
 		height:auto;
 		overflow: hidden;
 		top:0;
@@ -234,6 +235,8 @@
 		height: auto;
 		margin: 0 auto;
 		cursor: pointer;
+		margin:{top:-5px;}
+		top:-5px;
 		@include gridle_state(tabless-min){
 			width: 110px;
 		}
