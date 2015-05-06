@@ -51,10 +51,15 @@
 				font:{family:$primary_font;size:20px;}
 				text:{transform: uppercase;}
 				@include gridle_state(tabless-min){
-					font:{size:19px;} 
+					font:{size:21px;} 
 					padding:{left:5px;}
 				}
-				@include gridle_state(phoness-min tabless-md){
+				@include gridle_state(tabless-md){
+					font:{size:18px;}
+					margin: 5px 10px;
+					padding:0;
+				}  
+				@include gridle_state(phoness-min){
 					font:{size:17px;}
 					margin:0;
 					padding:0;
