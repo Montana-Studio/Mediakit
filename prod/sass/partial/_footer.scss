@@ -40,6 +40,11 @@
 					@include gridle_float(center);
 					margin: 0 auto;
 					display: block;
+					a{
+						svg{
+							max-height: 40px;
+						}
+					}
 				}
 				.nav {
 					@extend .text-center; 
@@ -87,40 +92,62 @@
 					@include gridle_state(notebook-min){
 						padding:{left:0;right:0;}
 					}
-					input {
-						@include gridle(10,desktopess notebook-min);
-						@include gridle(8,phoness-min);
-						border:1px solid $third_color_2;
-						outline:none !important; 
-						background: none;
-						padding:10px 5px;
-						@include border-top-radius(0);
-						@include border-right-radius(0);
-						@include border-bottom-radius(0);
-						@include border-left-radius(0);
-						@include gridle_state(notebook-min){
-							padding:9px 5px;
+					#wysija-2{
+						.widget_wysija_cont{
+							.widget_wysija{
+								h3{
+									@extend .no-paddings;
+									color:$third_color_2 !important;
+									text:{transform:uppercase;} 
+									margin:{top:20px; bottom:5px;}
+									@include gridle_state(phoness-min){
+										margin:{top:0;}
+									}
+								}
+								.wysija-paragraph{
+									label{
+										@include gridle_hide();
+									}
+									.wysija-input{
+										@include gridle(10,desktopess notebook-min);
+										@include gridle(8,phoness-min);
+										border:1px solid $third_color_2;
+										outline:none !important; 
+										background: none;
+										padding:10px 5px;
+										@include border-top-radius(0);
+										@include border-right-radius(0);
+										@include border-bottom-radius(0);
+										@include border-left-radius(0);
+										@include gridle_state(notebook-min){
+											padding:9px 5px;
+										}
+										@include gridle_state(tabless-min){
+											padding:10px 5px;
+										}
+									}
+								}
+								.wysija-submit{
+									@include gridle(2,desktopess notebook-min);
+									@include gridle(4,phoness-min);
+									border:1px solid $third_color_2;
+									padding:10px 5px;
+									color:$third_color_2;
+									font:{weight:bold;} 
+									text:{transform:uppercase;align:center;}
+									margin: 0;
+  									background: none;
+									@include gridle_state(notebook-min){
+										padding:9px 5px;
+										border:1px solid $third_color_2;
+									}
+									@include gridle_state(tabless-min){
+										padding:10px 5px;
+										border:1px solid $third_color_2;
+									} 
+								}
+							}
 						}
-						@include gridle_state(tabless-min){
-							padding:10px 5px;
-						}
-					}
-					.send {
-						@include gridle(2,desktopess notebook-min);
-						@include gridle(4,phoness-min);
-						border:1px solid $third_color_2;
-						padding:10px 5px;
-						color:$third_color_2;
-						font:{weight:bold;} 
-						text:{transform:uppercase;align:center;}
-						@include gridle_state(notebook-min){
-							padding:9px 5px;
-							border:1px solid $third_color_2;
-						}
-						@include gridle_state(tabless-min){
-							padding:10px 5px;
-							border:1px solid $third_color_2;
-						} 
 					}
 				}
 			}

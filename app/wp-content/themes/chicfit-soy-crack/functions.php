@@ -195,9 +195,9 @@ if (function_exists('register_sidebar'))
     ));
 
     register_sidebar(array(
-        'name' => __('Load posts', 'html5blank'),
+        'name' => __('Newsletter', 'html5blank'),
         'description' => __('Shortcode for load post', 'html5blank'),
-        'id' => 'load-post',
+        'id' => 'newsletter',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',

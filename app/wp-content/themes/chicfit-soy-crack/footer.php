@@ -31,8 +31,10 @@
 
 						<div class="second-box">
 							<div class="newsletter">
-								<h4>Newsletter</h4>
-								<input type="search" name="s" placeholder="<?php _e( '', 'html5blank' ); ?>"><a class="send" href="">Enviar</a>
+								<!--h4>Newsletter</h4>
+								<input type="search" name="s" placeholder="<?php _e( '', 'html5blank' ); ?>"><a class="send" href="">Enviar</a-->
+
+								<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('newsletter')) ?>
 							</div>
 						</div>
 						
@@ -51,7 +53,7 @@
 							<ul>
 								<li><a href="mailto:alvaro@mediatrends.cl"><i class="fa fa-envelope-o"></i> CONTACTO PUBLICITARIO</a></li>
 								<li><a href="mailto:chicfitdaily@gmail.com"><i class="fa fa-envelope-o"></i> CONTACTO EDITORIAL</a></li>
-								<li><a href="#"><i class="fa fa-heart-o"></i> ABOUT US</a></li>
+								<li><a href="about-us"><i class="fa fa-heart-o"></i> ABOUT US</a></li>
 							</ul>
 						</div>
 					</div>

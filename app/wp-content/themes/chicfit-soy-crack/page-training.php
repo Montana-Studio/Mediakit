@@ -72,8 +72,8 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1430935394858-8');
 			<article class="item-principal" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<div class="bg-color-none">
 					<div class="social">
-						<li><i class="fa fa-facebook"></i></li>
-						<li><i class="fa fa-twitter"></i></li>
+						<li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink()?>&t=<?php the_title(); ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on Facebook"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://twitter.com/share?url=<?php the_permalink()?>&via=chicfitdaily&text=<?php the_title(); ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a></li>
 					</div>
 					<div class="principal-post" style="background-image:url('<?php the_field('imagen_post_banner'); ?>')">
 						<a href="<?php the_permalink()?>">
