@@ -110,7 +110,6 @@
 					margin:20px 0;
 					font:{family:$second_font;}
 					color:#606061;
-					line-height: 
 					img {
 					  	border: 0;
 					  	width: 100%;
@@ -119,6 +118,25 @@
 					@include gridle_state(desktopess){
 					  	font:{size:16px;} 
 						line-height:24px;
+					}
+					a {
+						text:{decoration: underline;}
+						font:{style:italic;}
+						color:$third_color_2;	
+						&:visited {
+							color:$third_color_1;	
+						}
+						&:hover {
+							color:$third_color;	
+						}
+						&:active {
+							color:$second_color;	
+						}
+						img {
+						  	border: 0;
+						  	width: 100%;
+						  	height: auto;
+						}
 					}
 				}
 				.content-author {

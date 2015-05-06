@@ -48,7 +48,7 @@ var feed = new Instafeed({
     $('.pestana').swipe( {
         swipeDown:function() {
           $('.content-menu').animate({
-                height: 360,
+                height: 271,
                 'padding-bottom':50
             },{duration:500});
         },

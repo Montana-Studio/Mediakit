@@ -24,6 +24,9 @@
 		@include gridle_state(tabless-min){
 			padding:{left:10px;right:10px;}
 		}
+		@include gridle_state(tabless-md tabless-min phoness-min){
+			padding:{top:0;}
+		}
 		h2 {
 			margin:{top:10px;}
 			a {
@@ -48,6 +51,10 @@
 					height: 50px;
 					margin: 0 auto;
 					display: block;
+					@include gridle_state(tebless-min){
+						width: 45px;
+						height: 45px;
+					}
 				}
 			}
 			.name-author{
@@ -64,6 +71,9 @@
 					vertical-align: middle;
 					color:$third_color_2;
 					font:{style:italic;}
+					@include gridle_state(tabless-min){
+						padding:{left:17px;}
+					}
 					@include gridle_state(phoness-min){
 						font:{size:14px;}
 						margin:0;
@@ -74,6 +84,23 @@
 		}
 		p {	
 			margin:5px 0;
+			@include gridle_state(notebook-min tabless-min tabless-md){
+				font:{size:12px;}
+			}
+			a {
+				text:{decoration: underline;}
+				font:{style:italic;}
+				color:$third_color_2;	
+				&:visited {
+					color:$third_color_1;	
+				}
+				&:hover {
+					color:$third_color;	
+				}
+				&:active {
+					color:$second_color;	
+				}
+			}
 		}
 	}
 	.date-post {
@@ -126,10 +153,21 @@
 		     @include gridle_state(tabless-min){
 				left: -10px;
 			}
+			@include gridle_state(tabless-md){
+				  left: -17px;
+			}
 			@include gridle_state(phoness-min){
 		    	top: -14%;
 				left: 43%;
 		    }
 		}
+	}
+}
+.page-content {
+	h1 {
+		@include gridle(12);
+		background:$first_color;
+		font:{family:$primary_font; size:60px;weight: lighter;style: italic; weight: lighter;}
+		color:#fff;
 	}
 }
