@@ -4909,7 +4909,7 @@ html {
           direction: ltr;
           padding-left: 10px;
           padding-right: 10px;
-          width: 33.33333%;
+          width: 41.66667%;
           position: absolute;
           height: auto;
           bottom: 150px;
@@ -4930,15 +4930,15 @@ html {
               padding-left: 0;
               padding-right: 0; } }
           html.default .wrapper .swipe .swipe-wrap .content-slide article {
-            width: 33.33333%; }
+            width: 41.66667%; }
             .gridle-debug html.default .wrapper .swipe .swipe-wrap .content-slide article:before, html.default .wrapper .swipe .swipe-wrap .content-slide article.gridle-debug:before {
-              content: "grid-default-4"; }
+              content: "grid-default-5"; }
             .gridle-debug html.default .wrapper .swipe .swipe-wrap .content-slide article.parent:before, html.default .wrapper .swipe .swipe-wrap .content-slide article.gridle-debug.parent:before {
-              content: "grid-parent-default-4"; }
+              content: "grid-parent-default-5"; }
           .gridle-debug .wrapper .swipe .swipe-wrap .content-slide article:before, .wrapper .swipe .swipe-wrap .content-slide article.gridle-debug:before {
-            content: "grid-default-4"; }
+            content: "grid-default-5"; }
           .gridle-debug .wrapper .swipe .swipe-wrap .content-slide article.parent:before, .wrapper .swipe .swipe-wrap .content-slide article.gridle-debug.parent:before {
-            content: "grid-parent-default-4"; }
+            content: "grid-parent-default-5"; }
           html.tabless-md .wrapper .swipe .swipe-wrap .content-slide article {
             width: 66.66667%; }
             .gridle-debug html.tabless-md .wrapper .swipe .swipe-wrap .content-slide article:before, html.tabless-md .wrapper .swipe .swipe-wrap .content-slide article.gridle-debug:before {
@@ -5486,7 +5486,15 @@ html {
             border: 1px solid #a2a2a2;
             outline: none !important;
             background: none;
-            padding: 10px 5px; }
+            padding: 10px 5px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0; }
             html.default .footer .footer-content .container-footer .second-box .newsletter input {
               float: left;
               direction: ltr;
@@ -5866,14 +5874,19 @@ html {
             padding: 0;
             width: 100%; } }
         .footer .footer-content .container-footer .four-box ul li {
-          display: inline-block; }
+          display: inline-block;
+          border-right: 1px solid #000;
+          padding: 0 10px;
+          margin: 5px 0; }
           html.phoness-min .footer .footer-content .container-footer .four-box ul li {
-            width: 100%;
-            text-align: center; }
+            text-align: center;
+            border: 0;
+            width: 100%; }
           @media screen and (max-width: 480px) {
             .footer .footer-content .container-footer .four-box ul li {
-              width: 100%;
-              text-align: center; } }
+              text-align: center;
+              border: 0;
+              width: 100%; } }
           .footer .footer-content .container-footer .four-box ul li:first-child {
             padding-right: 20px;
             border-right: 1px solid #000; }
@@ -5886,10 +5899,13 @@ html {
                 border-right: 0;
                 padding: 0;
                 margin: 0; } }
+          .footer .footer-content .container-footer .four-box ul li:last-child {
+            border: 0;
+            margin-top: 0; }
           .footer .footer-content .container-footer .four-box ul li a {
             color: #000;
             font-size: 11px;
-            margin-left: 20px;
+            margin: 0 20px;
             text-transform: uppercase;
             font-weight: bold; }
       .footer .footer-content .container-footer h4 {
@@ -6426,7 +6442,7 @@ html {
         padding-right: 10px;
         background: none;
         border: 0;
-        border-bottom: 1px solid #a2a2a2;
+        border-bottom: 1px solid #d0d0cf;
         color: #a2a2a2;
         padding: 0;
         margin-bottom: 5px;
@@ -6771,7 +6787,15 @@ html {
         outline: none;
         color: #fff;
         padding-top: 5px;
-        padding-bottom: 5px; }
+        padding-bottom: 5px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0; }
         html.default .nav-mob .content-menu .search-inner .search-input {
           float: left;
           direction: ltr;

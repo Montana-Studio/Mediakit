@@ -51,6 +51,7 @@
 							<ul>
 								<li><a href="mailto:alvaro@mediatrends.cl"><i class="fa fa-envelope-o"></i> CONTACTO PUBLICITARIO</a></li>
 								<li><a href="mailto:chicfitdaily@gmail.com"><i class="fa fa-envelope-o"></i> CONTACTO EDITORIAL</a></li>
+								<li><a href="#"><i class="fa fa-heart-o"></i> ABOUT US</a></li>
 							</ul>
 						</div>
 					</div>

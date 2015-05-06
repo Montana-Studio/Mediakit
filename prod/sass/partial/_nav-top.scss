@@ -114,7 +114,7 @@
 				@include gridle(10,tabless-md);
 				background: none;
 				border:0;
-				border-bottom:1px solid $third_color_2;
+				border-bottom:1px solid $third_color_1;
 				color:$third_color_2;
 				padding:0;
 				margin:{bottom:5px;}
@@ -211,6 +211,10 @@
 				outline: none;
 				color:#fff;
 				padding:{top:5px;bottom:5px;}
+				@include border-top-radius(0);
+				@include border-right-radius(0);
+				@include border-bottom-radius(0);
+				@include border-left-radius(0);
 				@include placeholder {
 					color: #fff;
 					font:{family:$primary_font;}
