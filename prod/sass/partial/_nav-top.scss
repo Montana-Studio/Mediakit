@@ -114,7 +114,7 @@
 				@include gridle(10,tabless-md);
 				background: none;
 				border:0;
-				border-bottom:1px solid $third_color_2;
+				border-bottom:1px solid $third_color_1;
 				color:$third_color_2;
 				padding:0;
 				margin:{bottom:5px;}
@@ -182,6 +182,7 @@
 		background:{color:$third_color} ;
 		color:#666;
 		padding:{top:45px;bottom:30px;}
+		margin: {bottom:-2px;}
 		height:auto;
 		overflow: hidden;
 		top:0;
@@ -210,6 +211,10 @@
 				outline: none;
 				color:#fff;
 				padding:{top:5px;bottom:5px;}
+				@include border-top-radius(0);
+				@include border-right-radius(0);
+				@include border-bottom-radius(0);
+				@include border-left-radius(0);
 				@include placeholder {
 					color: #fff;
 					font:{family:$primary_font;}
@@ -234,6 +239,8 @@
 		height: auto;
 		margin: 0 auto;
 		cursor: pointer;
+		margin:{top:-5px;}
+		top:-5px;
 		@include gridle_state(tabless-min){
 			width: 110px;
 		}

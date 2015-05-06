@@ -24,6 +24,9 @@
 		@include gridle_state(tabless-min){
 			padding:{left:10px;right:10px;}
 		}
+		@include gridle_state(tabless-md tabless-min phoness-min){
+			padding:{top:0;}
+		}
 		h2 {
 			margin:{top:10px;}
 			a {
@@ -48,6 +51,10 @@
 					height: 50px;
 					margin: 0 auto;
 					display: block;
+					@include gridle_state(tebless-min){
+						width: 45px;
+						height: 45px;
+					}
 				}
 			}
 			.name-author{
@@ -64,6 +71,9 @@
 					vertical-align: middle;
 					color:$third_color_2;
 					font:{style:italic;}
+					@include gridle_state(tabless-min){
+						padding:{left:17px;}
+					}
 					@include gridle_state(phoness-min){
 						font:{size:14px;}
 						margin:0;
@@ -74,6 +84,23 @@
 		}
 		p {	
 			margin:5px 0;
+			@include gridle_state(notebook-min tabless-min tabless-md){
+				font:{size:12px;}
+			}
+			a {
+				text:{decoration: underline;}
+				font:{style:italic;}
+				color:$third_color_2;	
+				&:visited {
+					color:$third_color_1;	
+				}
+				&:hover {
+					color:$third_color;	
+				}
+				&:active {
+					color:$second_color;	
+				}
+			}
 		}
 	}
 	.date-post {
@@ -85,32 +112,58 @@
 		@include gridle_state(phoness-min){
 			height: 50px;
 		}
-		.dia {
-			@extend .text-center;
-			@extend .no-margins;
-			color:#fff;
-			width:100%;
-			font:{size:40px;}
-			padding:{top:20%;}
+		.icon {
+			display: inline-block;
+			color:#fff; 
+			font:{size:26px;}
+			margin:{top:-10px;}
+			@include gridle(2,tabless-min tabless-md phoness-min);
+			@include gridle_state(desktopess notebook-min tabless-min tabless-md){
+				display: none;
+			}
 			@include gridle_state(phoness-min){
-				font:{size:16px;}
-				padding:0;
-				width: 10%;
-				display: inline-block;
+				display:inline-block;
 			}
 		}
-		.mes {
-			@extend .no-paddings;
-			@extend .dia;
-			font:{size:20px;weight:lighter; }
-			text:{transform: uppercase;}
-			@include gridle_state(phoness-min){
-				font:{size:14px;}
-				padding:0;
-				width: 10%;
-				display: inline-block;
+		.info-date {
+			@include gridle_state(desktopess notebook-min tabless-min tabless-md){
+				display: block;
+				float:none;
 			}
+			@include gridle(10,phoness-min);
+			@include gridle_state(phoness-min){
+				margin:{top:-1px;}
+				padding: 0;
+			}	
+			.dia {
+				@extend .text-center;
+				@extend .no-margins;
+				color:#fff;
+				width:100%;
+				font:{size:40px;}
+				padding:{top:20%;}
+				@include gridle_state(phoness-min){
+					font:{size:16px;}
+					padding:0;
+					width: 7%;
+					display: inline-block;
+				}
+			}
+			.mes {
+				@extend .no-paddings;
+				@extend .dia;
+				font:{size:20px;weight:lighter; }
+				text:{transform: uppercase;}
+				@include gridle_state(phoness-min){
+					font:{size:14px;}
+					padding:0;
+					width: 50%;
+					display: inline-block;
+					text:{align:left;}
+				}
+			}	
 		}
+		
 		#flecha {
 			background: $second_color;
 			height: 20px;
@@ -123,13 +176,28 @@
 		    	top: 45%;
   				left: -20px;
 		    }
-		     @include gridle_state(tabless-min){
+		    
+			@include gridle_state(tabless-md){
+				  left: -17px;
+			}
+			@include gridle_state(tabless-min){
 				left: -10px;
 			}
 			@include gridle_state(phoness-min){
 		    	top: -14%;
 				left: 43%;
 		    }
+		}
+	}
+}
+.page-content {
+	h1 {
+		@include gridle(12);
+		background:$first_color;
+		font:{family:$primary_font;weight: lighter;style: italic; weight: lighter;}
+		color:#fff; 
+		@include gridle_state(tabless-min tabless-md phoness-min){
+			margin:{top:35px;bottom:10px;}
 		}
 	}
 }

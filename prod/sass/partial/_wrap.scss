@@ -1,6 +1,6 @@
 *{
 	margin:0;
-}
+} 
 html{
 	height: 100%;
 	body{
@@ -63,7 +63,7 @@ html{
 					min-height:0;
 				}
 				article {
-					@include gridle(4);
+					@include gridle(5);
 					@include gridle(8,tabless-md);
 					position: absolute;
 					height:auto;
