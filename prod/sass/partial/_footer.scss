@@ -40,10 +40,10 @@
 					@include gridle_float(center);
 					margin: 0 auto;
 					display: block;
-					a{
-						@include gridle(12,phoness-min);
+					a{	
+						@include gridle(12,desktopess notebook-min tabless-min phoness-min);
 						@include gridle_state(phoness-min){
-							margin:{top:15%;bottom:-15%;}
+							margin:{top:15%;bottom:-15%;} 
 						}
 						svg{
 							max-height: 40px;
@@ -281,4 +281,4 @@
 			}
 		}	
 	}
-}
+} 
