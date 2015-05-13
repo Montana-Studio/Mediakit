@@ -23,7 +23,10 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1430935394858-9');
 			</div>
 			<div class="content-art">
 				<a href="<?php the_permalink()?>">
-					<h1><?php the_title(); ?></h1>
+					<h2><?php if (strlen($post->post_title) > 40) {
+								echo substr(the_title($before = '', $after = '', FALSE), 0, 40) . ' ... '; } else {
+								the_title();
+								} ?></h2>
 				</a>
 				<p><?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?></p>
 				<?php the_tags('<ul class="tags"><li>','</li><li>','</li></ul>'); ?>
