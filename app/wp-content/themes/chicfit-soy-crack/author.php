@@ -38,7 +38,7 @@
 				<p><?php html5wp_excerpt('html5wp_custom_post'); // Build your custom callback length in functions.php ?></p>
 				<div class="content-author">
 					<div class="img-author">
-						<?php echo get_avatar(get_the_author_ID()); ?>
+						<?php echo get_avatar(get_the_author_meta()); ?>
 					</div>
 
 					<div class="name-author">
