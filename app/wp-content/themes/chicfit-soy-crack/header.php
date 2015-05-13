@@ -45,6 +45,7 @@
 
 		<script type='text/javascript'>
 		  googletag.cmd.push(function() {
+		  	googletag.defineOutOfPageSlot('/92947493/intersitial_CFD_ALL', 'div-gpt-ad-1431382352477-0').addService(googletag.pubads());
 		    googletag.defineOutOfPageSlot('/92947493/ITT_CFDv', 'div-gpt-ad-1430935394858-0').addService(googletag.pubads());
 		    googletag.defineSlot('/92947493/Masthead_CFD_ALL', [970, 250], 'div-gpt-ad-1430935394858-1').addService(googletag.pubads());
 		    googletag.defineSlot('/92947493/160X600_CFD', [160, 600], 'div-gpt-ad-1430935394858-2').addService(googletag.pubads());
@@ -65,6 +66,14 @@
 	</head>
 
 	<body <?php body_class(); ?>>
+
+		<!-- /92947493/intersitial_CFD_ALL -->
+		<div id='div-gpt-ad-1431382352477-0'>
+		<script type='text/javascript'>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1431382352477-0'); });
+		</script>
+		</div>
+
 		<!-- /92947493/ITT_CFDv -->
 		<div id='div-gpt-ad-1430935394858-0'>
 			<script type='text/javascript'>
@@ -73,7 +82,7 @@
 		</div>
 
 		<!-- /92947493/320x50_CFD -->
-		<div id='div-gpt-ad-1430935394858-6' style='width:320px;position:fixed;bottom:0;z-index:999;left:0;right:0;margin:0 auto;'>
+		<div id='div-gpt-ad-1430935394858-6' style='width:320px;position:fixed;bottom:18px;z-index:999;left:0;right:0;margin:0 auto;'>
 			<script type='text/javascript'>
 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1430935394858-6'); });
 			</script>
