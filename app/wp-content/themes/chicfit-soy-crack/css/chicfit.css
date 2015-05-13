@@ -5353,19 +5353,58 @@ html {
               .footer .footer-content .container-footer .first-box .logo a {
                 padding-left: 0;
                 padding-right: 0; } }
+            html.desktopess .footer .footer-content .container-footer .first-box .logo a {
+              width: 100%; }
+              .gridle-debug html.desktopess .footer .footer-content .container-footer .first-box .logo a:before, html.desktopess .footer .footer-content .container-footer .first-box .logo a.gridle-debug:before {
+                content: "grid-default-12"; }
+              .gridle-debug html.desktopess .footer .footer-content .container-footer .first-box .logo a.parent:before, html.desktopess .footer .footer-content .container-footer .first-box .logo a.gridle-debug.parent:before {
+                content: "grid-parent-default-12"; }
+            @media screen and (min-width: 1440px) {
+              .footer .footer-content .container-footer .first-box .logo a {
+                width: 100%; }
+                .gridle-debug .footer .footer-content .container-footer .first-box .logo a:before, .footer .footer-content .container-footer .first-box .logo a.gridle-debug:before {
+                  content: "grid-default-12"; }
+                .gridle-debug .footer .footer-content .container-footer .first-box .logo a.parent:before, .footer .footer-content .container-footer .first-box .logo a.gridle-debug.parent:before {
+                  content: "grid-parent-default-12"; } }
+            html.notebook-min .footer .footer-content .container-footer .first-box .logo a {
+              width: 100%; }
+              .gridle-debug html.notebook-min .footer .footer-content .container-footer .first-box .logo a:before, html.notebook-min .footer .footer-content .container-footer .first-box .logo a.gridle-debug:before {
+                content: "grid-default-12"; }
+              .gridle-debug html.notebook-min .footer .footer-content .container-footer .first-box .logo a.parent:before, html.notebook-min .footer .footer-content .container-footer .first-box .logo a.gridle-debug.parent:before {
+                content: "grid-parent-default-12"; }
+            @media screen and (max-width: 1440px) {
+              .footer .footer-content .container-footer .first-box .logo a {
+                width: 100%; }
+                .gridle-debug .footer .footer-content .container-footer .first-box .logo a:before, .footer .footer-content .container-footer .first-box .logo a.gridle-debug:before {
+                  content: "grid-default-12"; }
+                .gridle-debug .footer .footer-content .container-footer .first-box .logo a.parent:before, .footer .footer-content .container-footer .first-box .logo a.gridle-debug.parent:before {
+                  content: "grid-parent-default-12"; } }
+            html.tabless-min .footer .footer-content .container-footer .first-box .logo a {
+              width: 100%; }
+              .gridle-debug html.tabless-min .footer .footer-content .container-footer .first-box .logo a:before, html.tabless-min .footer .footer-content .container-footer .first-box .logo a.gridle-debug:before {
+                content: "grid-default-12"; }
+              .gridle-debug html.tabless-min .footer .footer-content .container-footer .first-box .logo a.parent:before, html.tabless-min .footer .footer-content .container-footer .first-box .logo a.gridle-debug.parent:before {
+                content: "grid-parent-default-12"; }
+            @media screen and (max-width: 1024px) {
+              .footer .footer-content .container-footer .first-box .logo a {
+                width: 100%; }
+                .gridle-debug .footer .footer-content .container-footer .first-box .logo a:before, .footer .footer-content .container-footer .first-box .logo a.gridle-debug:before {
+                  content: "grid-default-12"; }
+                .gridle-debug .footer .footer-content .container-footer .first-box .logo a.parent:before, .footer .footer-content .container-footer .first-box .logo a.gridle-debug.parent:before {
+                  content: "grid-parent-default-12"; } }
             html.phoness-min .footer .footer-content .container-footer .first-box .logo a {
               width: 100%; }
               .gridle-debug html.phoness-min .footer .footer-content .container-footer .first-box .logo a:before, html.phoness-min .footer .footer-content .container-footer .first-box .logo a.gridle-debug:before {
-                content: "grid-phoness-min-12" !important; }
+                content: "grid-default-12"; }
               .gridle-debug html.phoness-min .footer .footer-content .container-footer .first-box .logo a.parent:before, html.phoness-min .footer .footer-content .container-footer .first-box .logo a.gridle-debug.parent:before {
-                content: "grid-parent-phoness-min-12" !important; }
+                content: "grid-parent-default-12"; }
             @media screen and (max-width: 480px) {
               .footer .footer-content .container-footer .first-box .logo a {
                 width: 100%; }
                 .gridle-debug .footer .footer-content .container-footer .first-box .logo a:before, .footer .footer-content .container-footer .first-box .logo a.gridle-debug:before {
-                  content: "grid-phoness-min-12" !important; }
+                  content: "grid-default-12"; }
                 .gridle-debug .footer .footer-content .container-footer .first-box .logo a.parent:before, .footer .footer-content .container-footer .first-box .logo a.gridle-debug.parent:before {
-                  content: "grid-parent-phoness-min-12" !important; } }
+                  content: "grid-parent-default-12"; } }
             html.phoness-min .footer .footer-content .container-footer .first-box .logo a {
               margin-top: 15%;
               margin-bottom: -15%; }
