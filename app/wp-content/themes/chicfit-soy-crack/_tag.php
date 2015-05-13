@@ -1,5 +1,6 @@
 <?php get_header(); ?>
-
+<section class="page-content">
+	
 <main role="main" class="all-content">
 	
 	<section class="wrapper-index">
@@ -74,6 +75,8 @@
 
 		
 	</main>
+</section>
+
 
 
 

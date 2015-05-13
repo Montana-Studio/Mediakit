@@ -212,7 +212,9 @@
 						border-right: 1px solid #000;
 						padding: 0 10px;
 						margin:5px 0;
-						@include gridle(12,phoness);
+						float: none;
+						@include gridle(8,desktopess notebook-min);
+						@include gridle(10,tabless-min);
 						@include gridle_state(phoness-min){
 							text:{align:center;}
 							border:0;
