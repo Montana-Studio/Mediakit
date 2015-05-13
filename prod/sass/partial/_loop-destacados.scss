@@ -43,10 +43,11 @@
 			padding:{right: 10px;}
 			height:200px;
 			padding:10px;
+			overflow: hidden;
 			@include gridle_state(phoness-min tabless-md){
 				height: 130px;
 			}
-			h1 {
+			h2 {
 				color:#fff;
 				font:{family:$primary_font;size:20px;}
 				text:{transform: uppercase;}
