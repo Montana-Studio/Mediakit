@@ -121,16 +121,17 @@
 					}
 					a {
 						text:{decoration: underline;}
-						font:{style:italic;}
-						color:$third_color_2;	
+						font:{weight:bold;}
+						color:$second_color;	
 						&:visited {
-							color:$third_color_1;	
+							font:{style:italic;}
+							color:$third_color_2;	
 						}
 						&:hover {
-							color:$third_color;	
+							color:$first_color; 	
 						}
 						&:active {
-							color:$second_color;	
+							color:$third_color_1;	
 						}
 						img {
 						  	border: 0;

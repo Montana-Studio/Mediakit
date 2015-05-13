@@ -82,7 +82,7 @@
 		</div>
 
 		<!-- /92947493/320x50_CFD -->
-		<div id='div-gpt-ad-1430935394858-6' style='width:320px;position:fixed;bottom:18px;z-index:999;left:0;right:0;margin:0 auto;'>
+		<div id='div-gpt-ad-1430935394858-6' style='width:320px;position:fixed;bottom:0;z-index:999;left:0;right:0;margin:0 auto;'>
 			<script type='text/javascript'>
 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1430935394858-6'); });
 			</script>

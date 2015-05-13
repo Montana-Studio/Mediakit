@@ -15,7 +15,7 @@
 						<?php the_tags('<ul class="tags"><li>','</li><li>','</li></ul>'); ?>
 					</div>
 
-					<div class="img-post" style="background-image:url('<?php the_field('imagen_post_banner'); ?>')">
+					<div class="img-post" style="background-image:url('<?php the_field('imagen_post_normal'); ?>')">
 						<div class="date">
 							<i class="fa fa-calendar"></i>
 							<time><?php echo get_the_date('d/m'); ?></time>
