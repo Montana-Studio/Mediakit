@@ -42,7 +42,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1430935394858-9');
 						<?php the_content();?>
 						<div class="content-author">
 							<div class="img-author">
-								<img src="<?php the_field('imagen_post_banner'); ?>" alt="">
+								<?php echo get_avatar(); ?>
 							</div>
 							<div class="name-author">
 								<div class="author">
