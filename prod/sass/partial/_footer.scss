@@ -41,6 +41,10 @@
 					margin: 0 auto;
 					display: block;
 					a{
+						@include gridle(12,phoness-min);
+						@include gridle_state(phoness-min){
+							margin:{top:15%;bottom:-15%;}
+						}
 						svg{
 							max-height: 40px;
 						}
@@ -196,7 +200,10 @@
 				}
 			}
 			.four-box {
-				@include gridle(12);
+				@include gridle(6,desktopess notebook-min);
+				@include gridle(7,tabless-min);
+				@include gridle(12,phoness-min); 
+				@include gridle_float(none);
 				padding: 10px 0;
 				@include gridle_state(phoness-min){
 					padding:{top:0;}
@@ -204,17 +211,15 @@
 				ul {
 					@extend .no-margins;
 					@extend .no-paddings;
-					@include gridle_state(phoness-min){
-						width: 100%;
-					}
+					@include gridle(12,phoness-min); 
 					li {
+						
 						display: inline-block;
 						border-right: 1px solid #000;
 						padding: 0 10px;
 						margin:5px 0;
 						float: none;
-						@include gridle(8,desktopess notebook-min);
-						@include gridle(10,tabless-min);
+						@include gridle(12,phoness-min);
 						@include gridle_state(phoness-min){
 							text:{align:center;}
 							border:0;
@@ -231,7 +236,9 @@
 						}
 						&:last-child {
 							border:0;
-							margin:{top:0;}
+							@include gridle_state(phoness-min){
+								margin:0; 
+							}
 						}
 						a {
 							color: #000;

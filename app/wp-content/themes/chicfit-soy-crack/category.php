@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-
-<main role="main" class="all-content">
+<section class="page-content">
+	<main role="main" class="all-content">
 	
 	<section class="wrapper-index">
 
@@ -42,8 +42,13 @@
 				<div id="flecha"></div>
 				<span class="date">
 					<time datetime="<?php the_time('d/m'); ?>">
-						<p class="dia"><?php echo get_the_date('d'); ?> </p>
-						<p class="mes"><?php echo get_the_date('F'); ?> </p>
+						<div class="icon">
+							<i class="fa fa-calendar"></i>
+						</div>
+						<div class="info-date">
+							<p class="dia"><?php echo get_the_date('d'); ?> </p>
+							<p class="mes"><?php echo get_the_date('F'); ?> </p>
+						</div>
 					</time>
 				</span>
 			</div>
@@ -73,6 +78,9 @@
 
 		
 	</main>
+	
+</section>
+
 
 
 
