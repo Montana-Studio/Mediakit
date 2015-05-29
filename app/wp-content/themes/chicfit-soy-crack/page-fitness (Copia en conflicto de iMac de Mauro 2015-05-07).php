@@ -1,4 +1,4 @@
-<?php /*Template name: Style Life */ ?>
+<?php /*Template name: Fitness */ ?>
 
 <?php get_header(); ?>
 
@@ -42,7 +42,7 @@
 
 		<div id="reciente" class="item-principal">
 			<div class="bg-color">
-				<h2>Style Life</h2>
+				<h2>Fitness</h2>
 				<nav class="tags">
 					<?php html5blank_nav(); ?>
 				</nav>	
@@ -51,7 +51,7 @@
 		<?php 
 
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-			query_posts('category_name=look,prendas,esenciales,belleza,musica,tendencias,spotify,videos,accesorios&posts_per_page=7&paged=' . $paged);
+			query_posts('category_name=running,jogging,pilates,yoga,asanas,calentamiento,elongacion,flexibilidad,danza,rutina,recuperacion,acondicionamiento,trx,referentes,crossfit&posts_per_page=7&paged=' . $paged);
 
 		?>
 

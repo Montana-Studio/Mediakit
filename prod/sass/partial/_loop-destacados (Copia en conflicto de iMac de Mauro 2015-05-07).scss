@@ -1,0 +1,115 @@
+.destacados {
+	height: auto;
+	@include gridle(12);
+	@extend .no-paddings;
+	margin:{top:40px;}
+	@include gridle_state(phoness-min){
+		margin:{top:0px;}
+	}
+	@include gridle_state(phoness-min){
+		&.destaca-mobile{
+			padding-top: 30px !important;
+		}
+	@include gridle_state(tabless-md){
+		  margin:{top:5px !important;}
+		}	
+	}
+	.content-destacados {
+		@include gridle(6,desktopess notebook-min);
+		@include gridle(6,tabless-min);
+		@include gridle(12,phoness-min);
+		height: 200px;
+		margin:10px 0;
+		position: relative;
+		@include gridle_state(tabless-min){
+			padding:{left:10px; right: 10px;}
+		}
+		@include gridle_state(phoness-min tabless-md){
+			height: 113px;
+			padding:{left:4px; right:4px;}
+		}
+		.img-loop {
+			@include gridle(6);
+			@extend .no-paddings;
+			@extend .no-margins;
+			height: 200px;
+				@include gridle_state(phoness-min tabless-md){
+					height: 130px;
+				}
+			}
+		.content-art{
+			@include gridle(6);
+			background:{color:$second_color;}
+			padding:{right: 10px;}
+			height:200px;
+			padding:10px;
+			@include gridle_state(phoness-min tabless-md){
+				height: 130px;
+			}
+			h1 {
+				color:#fff;
+				font:{family:$primary_font;size:20px;}
+				text:{transform: uppercase;}
+				@include gridle_state(tabless-min){
+					font:{size:19px;} 
+					padding:{left:5px;}
+				}
+				@include gridle_state(phoness-min tabless-md){
+					font:{size:17px;}
+					margin:0;
+					padding:0;
+				}
+			}
+			p {
+				color:#fff;
+				font:{family:$primary_font;size:12px;}
+				@include gridle_state(phoness-min tabless-md){
+					display:none;
+				}
+				@include gridle_state(tabless-min){
+					padding:{left:5px;}
+				}
+			}
+			.tags{
+				@include gridle(9, desktopess notebook-min);
+				@extend .no-margins;
+				@extend .no-paddings;
+				color:#fff;
+				list-style: none;
+				display: block;
+				@include gridle_state(desktopess notebook-min){
+					display: block;
+				}
+				@include gridle_state(tabless-min){
+					padding:{left:5px;}
+					display: none;
+				}
+				@include gridle_state(phonees-min){
+					display: none;
+				}
+				li{
+					padding:2px 5px;
+					margin:{top:2px;right: 2px;}
+					display: inline-block;
+					background:{color:$second_color_1;}
+					cursor: pointer;
+					a{
+						font:{size:12px;family:$primary_font;}
+						color:#fff;
+						text:{decoration:none;}
+					}
+				}
+			}
+		}
+		.view-article {
+			background:{color:$second_color_1;}
+			color:#fff;
+			text:{decoration:none;}
+			bottom:0;
+			position: absolute;
+			right:10px;
+			display: block;
+			padding: 5px;
+		}	
+	}	
+}

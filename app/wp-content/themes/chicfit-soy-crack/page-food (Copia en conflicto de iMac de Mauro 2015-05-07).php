@@ -1,7 +1,6 @@
-<?php /*Template name: Style Life */ ?>
+<?php /*Template name: Food */ ?>
 
 <?php get_header(); ?>
-
 
 <!-- LOOP DESTACADOS -->
 <div class="destacados destaca-mobile">
@@ -42,7 +41,7 @@
 
 		<div id="reciente" class="item-principal">
 			<div class="bg-color">
-				<h2>Style Life</h2>
+				<h2>Food</h2>
 				<nav class="tags">
 					<?php html5blank_nav(); ?>
 				</nav>	
@@ -51,7 +50,7 @@
 		<?php 
 
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-			query_posts('category_name=look,prendas,esenciales,belleza,musica,tendencias,spotify,videos,accesorios&posts_per_page=7&paged=' . $paged);
+			query_posts('category_name=vegetales,frutas,jugos,semillas,legumbres,carbohidratos,snacks,recetas,sano&posts_per_page=7&paged=' . $paged);
 
 		?>
 

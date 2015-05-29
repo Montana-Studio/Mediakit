@@ -1,7 +1,6 @@
-<?php /*Template name: Style Life */ ?>
+<?php /*Template name: Training */ ?>
 
 <?php get_header(); ?>
-
 
 <!-- LOOP DESTACADOS -->
 <div class="destacados destaca-mobile">
@@ -42,7 +41,7 @@
 
 		<div id="reciente" class="item-principal">
 			<div class="bg-color">
-				<h2>Style Life</h2>
+				<h2>Training</h2>
 				<nav class="tags">
 					<?php html5blank_nav(); ?>
 				</nav>	
@@ -51,7 +50,7 @@
 		<?php 
 
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-			query_posts('category_name=look,prendas,esenciales,belleza,musica,tendencias,spotify,videos,accesorios&posts_per_page=7&paged=' . $paged);
+			query_posts('category_name=tonificacion,piernas,brazos,abs,espalda,pushup,squats,gluteos,hombros,musculo,rutina,workout,fuerza,circuito,maquinas,implementos&posts_per_page=7&paged=' . $paged);
 
 		?>
 

@@ -1,0 +1,30 @@
+.error404 {
+	@extend .text-center;
+	@include gridle(12);
+	height: 100%;
+	.logo-error {
+		@extend .text-center;
+		@include gridle(12);
+		@include gridle_clear(both);
+		margin: 0 auto;
+		display: block;
+		height: 100%;
+		svg {
+			@include gridle(6);
+			@extend .text-center;
+			@include gridle_float(none);
+			margin:0 auto;
+			display: block;
+			@include gridle_state(phoness-min){
+				margin:50px auto 0;
+			}
+		}
+	}
+	.txt-error {
+		@extend .text-center;
+		h1 {
+			@extend .text-center;
+			@extend .no-margins;
+		}
+	}
+}
