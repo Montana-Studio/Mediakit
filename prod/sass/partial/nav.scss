@@ -1,0 +1,46 @@
+.nav {
+	@include gridle(12);
+	@extend .no-paddings;
+	background: $first_color;
+	color:$second_color;
+	font:{family:$primary_font;}
+	.menu {
+		ul{
+			li {
+				list-style: none;
+				a {
+					color:$second_color;
+				}
+			}
+		}
+	}
+}
+.nav-mobile {
+	@include gridle(12);
+	@extend .no-paddings;
+	background: $first_color;
+	color:$second_color;
+	height: 40px;
+	.logo-mobile {
+		@include gridle(6,phoness);
+		a {
+			@include gridle(12);
+			color:$second_color;
+			padding:{left:0;right:20px;}
+			svg {
+				width: 100%;
+				height: auto;
+				min-height: 40px;
+			}
+		}
+	}
+	.menu-mobile {
+		@include gridle(2,phoness);
+		@include gridle_float(right);
+		text:{align:center;} 
+		i {
+			font:{size:28px;}
+			padding: {top:8px;}
+		}
+	}
+}

@@ -1,0 +1,104 @@
+.page-header {
+	@include gridle(12);
+	@extend .no-paddings;
+	.encabezado {
+		@include gridle(12);
+		@include gridle_state(phoness-min){
+			padding:0 5px;
+		}
+		height: 210px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: table;
+		.content-title {
+			@include gridle(12);
+			@include gridle_float(none);
+			@extend .no-paddings;
+			display: table-cell;
+			vertical-align: bottom;
+			text:{transform: uppercase;}
+			h2 {
+				margin:{bottom:0;}
+			}
+		}
+	}
+	&.page-categoria {
+		.content-loop-categoria {
+			@include gridle(12,phoness);
+			@include gridle(12,phoness-min);
+			@include gridle(3,desktopess);
+			@extend .no-paddings;
+			.sitio-single {
+				@include gridle(12, phoness-min);
+				@include gridle(12, phoness);
+				@include gridle(12, desktopess);
+				padding: 0 5px;
+				height: auto;
+				.content-single {
+					@include gridle(12,phoness-min);
+					@extend .no-paddings;
+					background-color: $second_color;
+					height: auto;
+					@include border-width(1px);
+					@include border-color(#999);
+					@include border-style(solid);
+					margin:5px 0; 
+					.header-destacado {
+						@include gridle(12);
+						background: $first_color;
+						color:$second_color;
+						padding: 10px;
+						text:{transform: uppercase;}
+						a {
+							color:$second_color;
+							font:{family:$primary_font;weight:300;style:italic; size:14px;}
+						}
+					}
+					.pattern {
+						.highlight-inv {
+							font:{size:18px;}
+						}
+					}
+					.img-single {
+						@include gridle(12);
+						@extend .no-paddings;
+						img {
+							width: 100%;
+							height: auto;
+						}
+						.title {
+							margin:{top:-31px;}
+							a {
+								font:{size:20px;}
+								text:{transform:uppercase;}
+							}
+						}
+					}
+					.sitio-social {
+						@include gridle(12);
+						@extend .no-paddings;
+						ul {
+							@include gridle(12);
+							@extend .no-paddings;
+							@extend .no-margins;
+							li {
+								@include gridle(4);
+								padding: 10px 0;
+								text:{align:center;}
+								a {
+									font:{family:$primary_font;}
+									display: block;
+									color:$first_color_1;
+									&.bajada-num {
+										font:{size:13px;weight:300;style:italic;}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

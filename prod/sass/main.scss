@@ -1,0 +1,15 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
+
+@import '../../bower_components/gridle/sass/grid-settings';
+@import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
+
+// Generate classes :
+@include gridle_generate_classes();
+
+@import 'partial/vars';
+@import 'partial/general';   
+@import 'partial/header'; 
+@import 'partial/nav'; 
+@import 'partial/page-categoria';   
+@import 'partial/page-sitio';   
+@import 'partial/queries';   

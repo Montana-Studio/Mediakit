@@ -1,0 +1,26 @@
+{
+  "name": "mediakit",
+  "title": "Mediakit",
+  "description": "metricas",
+  "version": "0.0.2",
+  "homepage": "http://www.mediakit.mediatrends.cl",
+  "author": {
+    "name": "Montana Studio",
+    "email": "mauro@montana-studio.com",
+    "url": "http://www.montana-studio.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Mediatrends/mediakit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mediatrends/mediakit/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.mediakit.mediatrends.cl/blob/master/LICENSE-MIT"
+    }
+  ],
+  "keywords": []
+}

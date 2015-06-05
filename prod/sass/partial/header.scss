@@ -1,0 +1,26 @@
+.wrapper {
+	@include gridle(12);
+	@extend .no-paddings;
+	.highlight {
+		background-color:#000;
+		color:#fff;
+		font:{family:$primary_font;weight:400;size: 26px;style:italic;} 
+		padding: 0 10px;
+	}
+	.highlight-inv {
+		@extend .highlight;
+		background: $second_color;
+		color:$first_color;
+	}
+	.bajada {
+		@include gridle(12);
+		@extend .highlight;
+		font:{size:10px;}
+		text:{transform: initial;}
+		padding: 10px;
+		margin:5px 0;
+		p {
+			@extend .no-margins;
+		}
+	}
+}

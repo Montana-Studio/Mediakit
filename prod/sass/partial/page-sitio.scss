@@ -1,0 +1,52 @@
+.page-sitio {
+	@include gridle(12);
+	@extend .no-paddings;
+	.encabezado {
+		position: relative;
+		@include gridle_state(phoness){
+			  margin:{bottom: 47px;}
+		}
+		.content-header {
+				bottom: -40px;
+				position: absolute;
+			.logo-sitio {
+				@include gridle(4, phoness-min);
+				@include border-width(3px);
+				@include border-color(#000);
+				@include border-style(solid);
+				height: 100px;
+				background: $second_color;
+				display: table;
+				padding: 0 5px;
+				a {
+					display: table-cell;
+					vertical-align: middle;
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+			.pattern {
+				@include gridle(7,phoness-min);
+				margin:{left:5px;top:10px;}
+				a {
+					font:{size:12px;}
+				}
+			}
+			.btn {
+				@include gridle(7,phoness-min);
+				margin:{top:5px;left:5px;}
+				a {
+					font:{size:12px;}
+				}
+			}	
+		}
+	}
+	.content-sitio {
+		@include gridle(12);
+		@include gridle_state(phoness){
+			padding: 0 5px;
+		}
+	}
+}

@@ -1,0 +1,126 @@
+html {
+	font:{family:$primary_font;}
+}
+.text-center{
+	text-align: center;
+}
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}
+.no-margins{
+	margin:0 !important;
+}
+.no-paddings{
+	padding:0 !important;
+}
+.resp_img{
+	width:100%;
+	height:auto;
+}
+.center{
+	margin:0 auto !important;
+}
+a {
+	text:{decoration:none;}
+}	
+.center-width {
+	max-width: 1280px;
+	margin:0 auto;
+}
+
+.pattern {
+	@include gridle(12);
+	@include background-image(url("../img/pattern.jpg"), url("../img/pattern.jpg"));
+	padding: 10px;
+	background:{position: left;repeat:repeat;}
+	display: inline-block;
+	a {
+		display: inline-block;
+		font:{size:17px;}
+	}
+}
+.btn {
+	@include gridle(12);
+	@extend .no-paddings;
+	background: $first_color;
+	text:{align:center;transform: uppercase;}
+	a {
+		@include gridle(12);
+		color:$second_color;
+		font:{family:$primary_font; size:14px;}
+		padding:10px !important;
+		i {
+			@include gridle(2);
+			@include gridle_float(left);
+			font:{size:18px;}
+		}
+	}
+}
+.metrics {
+	@include gridle(12,phoness);
+	@extend .no-paddings;
+	ul {
+		@include gridle(12);
+		@extend .no-paddings;
+		@extend .no-margins;
+		font:{family:$primary_font;}
+		h3 {
+			margin:{bottom: 5px;}
+			a {
+				font:{size:14px !important;}
+				padding:3px 8px !important;
+				text:{transform:uppercase;}
+			}
+		}
+		li {
+			@include gridle(12);
+			display: table;
+			font:{size: 11px;}
+			border:0;
+			border-bottom:1px solid $second_color_1;
+			padding:{top:8px;left:0;bottom:8px; right:0;}
+			text:{transform:uppercase;}
+			i {
+				@include gridle(1);
+				@extend .no-paddings;
+				@extend .text-left;
+				display: table-cell;
+				vertical-align: middle;
+				@include gridle_float(none);
+				color:$second_color_1;
+				font:{size: 15px;}
+			}
+			.metrics-1 {
+				@include gridle(7);
+				@extend .text-left;
+				@extend .no-margins;
+				@extend .no-paddings;
+				display: table-cell;
+				vertical-align: middle;
+				color:$second_color_1;
+			}
+			.metrics-2 {
+				@include gridle(4);
+				@extend .text-right;
+				@include gridle_float(right);
+				@extend .no-margins;
+				@extend .no-paddings;
+				display: table-cell;
+				vertical-align: middle;
+				color:$second_color_1;
+			}
+		}
+		.img-map {
+			@include gridle(12);
+			@extend .no-paddings;
+			margin:{top:15px; bottom:15px;}
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
