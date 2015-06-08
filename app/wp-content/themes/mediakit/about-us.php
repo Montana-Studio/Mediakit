@@ -1,4 +1,4 @@
-<?php /*Template name: Pagina Sport*/ ?>
+<?php /*Template name: Pagina About Us*/ ?>
 <?php get_header(); ?>
 <div class="nav-mobile">
 	<div class="logo-mobile">
@@ -13,12 +13,19 @@
 
 <main role="main">
 	<!-- section -->
-	<section class="page-header page-categoria">
+	<section class="page-header page-aboutus">
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 				<div class="encabezado" style="background-image:url('<?php echo $feat_image;?>') ">
 					<div class="content-title">
+						<div class="logo-mediatrends">
+							<a href="<?php echo home_url(); ?>">
+								<svg viewBox="0 0 792 656.856">
+									<use xlink:href="#mediatrends-logo"/> 
+								</svg>
+							</a>
+						</div>
 						<h2><a class="highlight" href=""><?php the_title(); ?></a></h2>
 						<div class="bajada"><?php the_content(); ?></div>
 					</div>
@@ -47,43 +54,7 @@
 
 				<article class="content-loop-categoria" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					<div class="sitio-single">
-						<div class="content-single">
-
-							<div class="header-destacado"><a href="#"><i class="fa fa-star"></i> Destacado</a></div>
-
-							<div class="img-single"><?php echo the_post_thumbnail();?>
-								<div class="title">
-									<a class="highlight" href="<?php the_permalink()?>">
-											<?php if (strlen($post->post_title) > 40) {
-												echo substr(the_title($before = '', $after = '', FALSE), 0, 40) . ' ... '; } else {
-												the_title();
-												} ?>
-									</a>
-								</div>
-							</div>
-
-							<div class="pattern"><a href="#" class="highlight-inv">MONTHLY REACH 134.000</a></div>
-
-							<div id="results_metrics" class="sitio-social">
-								<ul>
-									<li>
-										<div class="number">134.000</div>
-										<div href="#" class="bajada-num"><i class="fa fa-facebook"> Likes</div></i>
-									</li>
-									<li>
-										<div class="number">134.000</div>
-										<div id="twitter_followers" class="bajada-num"><i class="fa fa-twitter"> Follows</i></div>
-									</li>
-									<li>
-										<div class="number">134.000</div>
-										<div href="#" class="bajada-num"><i class="fa fa-instagram"> Follows</div></i>
-									</li>
-								</ul>
-							</div>
-
-						</div>	
-					</div>
+				
 
 				</article>
 
@@ -96,4 +67,5 @@
 	</section>
 	<!-- /section -->
 </main>
+<?php get_footer(); ?>
 

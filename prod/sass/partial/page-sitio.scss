@@ -45,8 +45,9 @@
 	}
 	.content-sitio {
 		@include gridle(12);
+		margin:{top: 10px;}
 		@include gridle_state(phoness){
-			padding: 0 5px;
+			padding: 0 5px !important;
 		}
 	}
 }

@@ -1,0 +1,29 @@
+.search-content {
+	@include gridle(12);
+	.search-loop {
+		@include gridle(12);
+		@extend .no-paddings;
+		.img-search {
+			@include gridle(3);
+			@extend .no-paddings;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		.title-search {
+			@include gridle(9);
+			color:$first_color;
+			&:visited {
+				color:$first_color_2;
+				font:{style:italic;}
+			}
+		}
+		.title-resultado {
+			@include gridle(4);
+			display: block;
+			font:{size:12px;}
+			margin:10px 0; 
+		}
+	}
+}

@@ -1,144 +1,132 @@
+<?php /*Template name: Pagina Sitio*/ ?>
 <?php get_header(); ?>
 
+<div class="nav-mobile">
+  <div class="logo-mobile">
+    <a href="<?php echo home_url(); ?>">
+      <svg viewBox="0 0 158.459 40">
+        <use xlink:href="#mobile-mediatrends"/> 
+      </svg>
+    </a>
+  </div>
+  <div class="menu-mobile"><i class="fa fa-bars"></i></div>
+</div>
+
+<section class="page-header page-sitio">
 	<main role="main">
-	<!-- section -->
-	<section>
 
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+        <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+        <!-- article -->
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+                <div class="encabezado" style="background-image:url('<?php echo $feat_image;?>') ">
+                    <div class="content-header">
+                        <div class="logo-sitio"><a href="#"><img src="<?php the_field('imagen_logo_sitio'); ?>" alt=""></a></div>
+                        <div class="pattern"><a href="#" class="highlight-inv">MONTHLY REACH 134.000</a></div>
+                        <div class="btn"><a href="#"><i class="fa fa-external-link"></i> ver sitio</a></div>
+                    </div>
+                </div>
 
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <!-- Resultado mÃ©tricas -->
+                <!-- 
+                La estructra puede variar segÃºn el template lo necesite pero, es importante no modificar algunos tags que sonde se inyectarÃ¡n las mÃ©tricas.
+                Se debe respetar los tags marcados con //No modificar id!
+                En este caso fueron creados con con <div>, se puede modifcar a <p>, <h3>, o como estime conveniente pero no se debe alterar su id.
+                -->
+                <div class="content-sitio">
+                    <div class="btn"><a href="#"><i class="fa fa-external-link"></i> Cotizar</a></div>
+                    <div id="results_metrics" class="metrics">
+                        <ul>
+                            <h3><a class="highlight" href="">Social Media</a></h3>
+                            <li>
+                                <i class="fa fa-facebook"></i>
+                                <p class="metrics-1">facebook</p>
+                                <p id="fb_likes" class="metrics-2"></p>
+                            </li>
+                            <li>
+                                <i class="fa fa-twitter"></i>
+                                <p class="metrics-1">Twitter</p>
+                                <p id="twitter_followers" class="metrics-2"></p>
+                            </li>
+                            <li>
+                                <i class="fa fa-instagram"></i>
+                                <p class="metrics-1">Instagram</p>
+                                <p id="instagram_followers" class="metrics-2"></p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <h3><a class="highlight" href="">DESKTOP METRICS</a></h3>
+                            <li>
+                                <i class="fa fa-eye"></i>
+                                <p class="metrics-1">SESSIONS</p>
+                                <p id="sessions_count" class="metrics-2"></p>
+                            </li>
+                            <li>
+                                <i class="fa fa-male"></i>
+                                <p class="metrics-1">USUARIOS</p>
+                                <p id="users_count" class="metrics-2"></p>
+                            </li>
+                            <li>
+                                <i class="fa fa-heart-o"></i>
+                                <p class="metrics-1">PAGES VIEWS</p>
+                                <p id="pageviews_count" class="metrics-2"></p>
+                            </li>
+                            <li>
+                                <i class="fa fa-laptop"></i>
+                                <p class="metrics-1">PAGEVIEWS/SESSIONS</p>
+                                <p id="pageviews_per_session" class="metrics-2"></p>
+                            </li>
+                            <li>
+                                <i class="fa fa-clock-o"></i>
+                                <p class="metrics-1">AVG. SESSION DURATION</p>
+                                <p id="avg_sessions_duration" class="metrics-2"></p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <h3><a class="highlight" href="">Mobile METRICS</a></h3>
+                            <li>
+                                <i class="fa fa-eye"></i>
+                                <p class="metrics-1">SESSIONS</p>
+                                <p id="sessions_count_mobile"class="metrics-2"></p>
+                            </li>
+                            <li>
+                                <i class="fa fa-male"></i>
+                                <p class="metrics-1">USUARIOS</p>
+                                <p id="users_count_mobile" class="metrics-2"></p>
+                            </li>
+                            <li>
+                                <i class="fa fa-heart-o"></i>
+                                <p class="metrics-1">PAGES VIEWS</p>
+                                <p id="pageviews_count_mobile" class="metrics-2"></p>
+                            </li>
+                            <li>
+                                <i class="fa fa-laptop"></i>
+                                <p class="metrics-1">PAGEVIEWS/SESSIONS</p>
+                                <p id="pageviews_per_session_mobile" class="metrics-2"></p>
+                            </li>
+                            <li>
+                                <i class="fa fa-clock-o"></i>
+                                <p class="metrics-1">AVG. SESSION DURATION</p>
+                                <p id="avg_sessions_duration_mobile" class="metrics-2"></p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <h3><a class="highlight" href="">MAP GLOBAL REACH</a></h3>
+                            <div class="img-map"><img src="<?php the_field('imagen_mapa'); ?>"  alt=""></div>
+                            
+                        </ul>   
+                    </div>
+                </div>    
+                <!-- Fin Resultado mÃ©tricas -->
 
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-				</a>
-			<?php endif; ?>
-			<!-- /post thumbnail -->
+                <?php the_content(); // Dynamic Content ?>
 
-			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
+            </article>
+        <!-- /article -->
 
-			<!-- Datepicker -->
-<!-- CÃ³digo donde se cargara selector de fechas-->
-<div id="date-range">
-  <div id="date-range-field">
-    <span></span>
-    <a href="#">&#9660;</a>
-  </div>
-  <div id="datepicker-calendar"></div>
-  <div id="actions_ga">
-    <a href="" id="apply_ga">Aplicar</a>
-    <a href="" id="cancel_ga">Cancelar</a>
-  </div>
-</div>
-<!-- End Datepicker -->
+        <?php endwhile; ?>
 
-<!-- Resultado mÃ©tricas -->
-<!-- 
-La estructra puede variar segÃºn el template lo necesite pero, es importante no modificar algunos tags que sonde se inyectarÃ¡n las mÃ©tricas.
-Se debe respetar los tags marcados con //No modificar id!
-En este caso fueron creados con con <div>, se puede modifcar a <p>, <h3>, o como estime conveniente pero no se debe alterar su id.
--->
-<div id="results_metrics">
-  <p>
-    Desktop
-    <ul>
-      <li>
-        SESSIONS
-        <div id="sessions_count"></div><!-- //No modificar id! -->
-      </li>
-      <li>
-        USUARIOS
-        <div id="users_count"></div><!-- //No modificar id! -->
-      </li>
-      <li>
-        PAGES VIEWS
-        <div id="pageviews_count"></div><!-- //No modificar id! -->
-      </li>
-      <li>
-        PAGEVIEWS/SESSIONS
-        <div id="pageviews_per_session"></div><!-- //No modificar id! -->
-      </li>
-      <li>
-        AVG. SESSION DURATION
-        <div id="avg_sessions_duration"></div><!-- //No modificar id! -->
-      </li>
-    </ul>
-  </p>
-  <p>
-    Mobile
-    <ul>
-      <li>
-        SESSIONS
-        <div id="sessions_count_mobile"></div><!-- //No modificar id! -->
-      </li>
-      <li>
-        USUARIOS
-        <div id="users_count_mobile"></div><!-- //No modificar id! -->
-      </li>
-      <li>
-        PAGES VIEWS
-        <div id="pageviews_count_mobile"></div><!-- //No modificar id! -->
-      </li>
-      <li>
-        PAGEVIEWS/SESSIONS
-        <div id="pageviews_per_session_mobile"></div><!-- //No modificar id! -->
-      </li>
-      <li>
-        AVG. SESSION DURATION
-        <div id="avg_sessions_duration_mobile"></div><!-- //No modificar id! -->
-      </li>
-    </ul>
-  </p>
-  <p>
-    Social Media
-    <ul>
-      <li>
-        Twitter Follows
-        <div id="twitter_followers"></div><!-- //No modificar id! -->
-      </li>
-      <li>
-        Facebook Likes
-        <div id="fb_likes"></div><!-- //No modificar id! -->
-      </li>
-      <li>
-        Instagram Follows
-        <div id="instagram_followers"></div><!-- //No modificar id! -->
-      </li>
-    </ul>
-  </p>
-</div>
-<!-- Fin Resultado mÃ©tricas -->
-
-			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-			<!-- /post details -->
-
-			<?php the_content(); // Dynamic Content ?>
-
-			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
-
-			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
-
-			<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
-
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
-
-			<?php comments_template(); ?>
-
-		</article>
-		<!-- /article -->
-
-	<?php endwhile; ?>
-
-	<?php else: ?>
+        <?php else: ?>
 
 		<!-- article -->
 		<article>
@@ -150,10 +138,6 @@ En este caso fueron creados con con <div>, se puede modifcar a <p>, <h3>, o como
 
 	<?php endif; ?>
 
-	</section>
 	<!-- /section -->
 	</main>
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+</section>

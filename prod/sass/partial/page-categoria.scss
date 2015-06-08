@@ -25,9 +25,9 @@
 	}
 	&.page-categoria {
 		.content-loop-categoria {
+			@include gridle(3,desktopess);
 			@include gridle(12,phoness);
 			@include gridle(12,phoness-min);
-			@include gridle(3,desktopess);
 			@extend .no-paddings;
 			.sitio-single {
 				@include gridle(12, phoness-min);

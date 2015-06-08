@@ -1,0 +1,25 @@
+.page-aboutus{
+	@include gridle(12);
+	@extend .no-paddings;
+	.encabezado {
+		height: auto;
+		.content-title {
+			.logo-mediatrends {
+				@include gridle(11,phoness);
+				@include gridle_float(none);
+				margin:0 auto 30px auto;
+				left:0;
+				right:0;
+				display: block;
+				a {
+					svg {
+						min-height: 200px;
+					}
+				}
+			}
+			.bajada {
+				margin:{bottom:100px;}
+			}
+		}
+	}
+}

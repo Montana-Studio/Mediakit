@@ -13,7 +13,7 @@
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mediakit.css">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mediakit.css"> 
 
 		<?php wp_head(); ?>
 		<script>
@@ -30,7 +30,12 @@
 	<?php include (TEMPLATEPATH . '/svg_icon.php'); ?>
 		<!-- wrapper -->
 		<div class="wrapper">
-
+			<div id="menu-colapse" class="nav-colapse">
+				<div class="search">
+					<?php get_template_part('searchform'); ?>
+				</div>	
+				<?php html5blank_nav(); ?>
+			</div>
 			<!-- header -->
 			<header class="header clear" role="banner">
 
