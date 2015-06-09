@@ -3,6 +3,7 @@
 @import '../../bower_components/gridle/sass/grid-settings';
 @import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
 
+
 // Generate classes :
 @include gridle_generate_classes();
 
@@ -15,5 +16,6 @@
 @import 'partial/about-us';   
 @import 'partial/nav-colapse';   
 @import 'partial/search';   
+@import 'partial/page-contacto';   
 @import 'partial/footer';   
 @import 'partial/queries';   

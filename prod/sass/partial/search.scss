@@ -3,27 +3,34 @@
 	.search-loop {
 		@include gridle(12);
 		@extend .no-paddings;
+		margin: 20px 0px;
+		border-bottom:1px solid #b3b3b3;
 		.img-search {
-			@include gridle(3);
+			@include gridle(12);
 			@extend .no-paddings;
 			img {
-				width: 100%;
+				@include gridle(6);
 				height: auto;
-			}
-		}
-		.title-search {
-			@include gridle(9);
-			color:$first_color;
-			&:visited {
-				color:$first_color_2;
-				font:{style:italic;}
 			}
 		}
 		.title-resultado {
 			@include gridle(4);
 			display: block;
-			font:{size:12px;}
+			font:{size:12px;family:$primary_font;}
 			margin:10px 0; 
+			.resultado-1 {
+				font:{weight:600;}
+			}
+			.pattern {
+				padding:{top:5px; right:5px; bottom:5px; left:3px;}
+			}
+			.resultado-2 {
+				a {
+					@extend .highlight-inv;
+					padding:{left:3px !important;right:5px !important;}
+					font:{size:12px !important;weight:600 !important;}
+				}
+			}
 		}
 	}
 }

@@ -1,0 +1,88 @@
+.page-contacto {
+	@include gridle(12);
+	padding: {bottom:20px !important;}  
+	.form-contacto-cont {
+		@include gridle(12, phoness-min phoness tabless-md tabless-min tabless );
+		@include gridle(6, desktopess notebook-min);
+		.title-form {
+			@include gridle(12);
+			padding:10px;
+		}
+		.content-form {
+			@include gridle(12);
+			@extend .no-paddings;
+			.wpcf7 {
+				@extend .no-margins;
+				.wpcf7-form {
+					@include gridle(12);
+					@extend .no-margins;
+					@extend .no-paddings;
+					p {
+						@extend .no-margins;
+						.wpcf7-form-control-wrap {
+							@include gridle(12);
+							@extend .no-paddings;
+							margin:{top:10px;}
+							input {
+								@include gridle(12);
+								border:0;
+								border-bottom:1px solid #bebebe;
+								padding:{top:5px; right:5px; bottom:5px; left:0;}
+								@include placeholder {
+									font:{family:$primary_font;}
+								}
+							}
+							textarea {
+								@include gridle(12);
+								border:0;
+								border-bottom:1px solid #bebebe;
+								padding:{top:5px; right:5px; bottom:5px; left:0;}
+								height: 100px;
+								@include placeholder {
+									font:{family:$primary_font;}
+								}
+							}
+							select {
+								@include gridle(6);
+								border:1px solid #bebebe;
+								padding:{top:5px; right:5px; bottom:5px; left:0;}
+								@include placeholder {
+									font:{family:$primary_font;}
+								}
+							}
+						}
+						.form-btn {
+							margin:20px 0 !important;
+							@include gridle(12);
+							background: $first_color;
+							text:{align:center;transform: uppercase;}
+							padding:12px 0;
+							color:$second_color;
+							border:0 !important; 
+							font:{size:12px; family:$primary_font;}
+						}
+					}
+				}
+			}
+		}	
+	}
+	.content-info {
+		@include gridle(12, phoness-min phoness tabless-md tabless-min tabless);
+		@include gridle(6, desktopess notebook-min); 
+		height: 300px;
+		@include gridle_state(desktopess notebook-min){
+			height: 487px;
+		}
+		.trama {
+			@include gridle(12); 
+			height: inherit;
+			color:$second_color;
+			padding: {top:50px;}
+			@include background-image(url("../img/pattern-logo.jpg"), url("../img/pattern-logo.jpg"));
+			background:{position:top left;repeat:repeat;}
+			p {
+				font:{size:12px;}
+			}
+		}
+	}
+}

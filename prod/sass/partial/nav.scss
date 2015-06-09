@@ -1,4 +1,5 @@
 .nav {
+
 	@include gridle(12);
 	@extend .no-paddings;
 	background: $first_color;
@@ -17,6 +18,9 @@
 }
 .nav-mobile {
 	@include gridle(12);
+	@include gridle_state(desktopess){
+		display: none;
+	}
 	@extend .no-paddings;
 	background: $first_color;
 	color:$second_color;

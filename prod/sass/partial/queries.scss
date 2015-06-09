@@ -9,31 +9,32 @@ $bp-xxl : 1440px;
 
 //MOBILE FIRST
 @include gridle_register_state( phoness-min, (
-   (screen and (min-width : $bp-smalless) and (max-width:$bp-meddies))
+    screen and (min-width : $bp-smalless) and (max-width:$bp-meddies)
 ) );
 
 @include gridle_register_state( phoness, (
-   max-width : $bp-large
+    screen and (max-width : $bp-large)
 ) );
 
 @include gridle_register_state( tabless-md, (
-    (min-width : $bp-md) and (max-width:$bp-largess)
+    screen and (min-width : $bp-md) and (max-width:$bp-largess)
 ) );
 
 @include gridle_register_state( tabless-min, (
-   (min-width : $bp-large) and (max-width:$bp-largess)
+    screen and (min-width : $bp-large) and (max-width:$bp-largess)
 ) );
 
 @include gridle_register_state( tabless, (
-  min-width : $bp-largess
+  screen and (min-width : $bp-largess)
 ) );
 
-@include gridle_register_state( notebook-min,(
-   (min-width : $bp-xl) and (max-width:$bp-xxl)
-));
+@include gridle_register_state( notebook-min, (
+  screen and (min-width : $bp-xl) and (max-width:$bp-xxl)
+) );
 
 @include gridle_register_state( desktopess, (
-   min-width : $bp-xxl
-));
+   screen and (min-width : $bp-xxl)
+) );
 
 @include gridle_register_state(webkit_brw, (screen and (-webkit-min-device-pixel-ratio:0)));
+

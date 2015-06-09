@@ -6,20 +6,17 @@
 			<div class="img-search">
 				<img src="<?php the_field('imagen_logo_sitio'); ?>" alt="">
 			</div>
-			<h2 class="title-search">
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-			</h2>
 			<div class="title-resultado">
 				<div class="resultado-1">Nombre</div>
-				<div class="resultado-2"><?php the_title(); ?></div>
+				<div class="pattern resultado-2"><a class="highlight-inv"><?php the_title(); ?></a></div>
 			</div>
 			<div class="title-resultado">
-				<div class="resultado-1">Nombre</div>
-				<div class="resultado-2"><?php the_title(); ?></div>
+				<div class="resultado-1">Vertical</div>
+				<div class="pattern resultado-2"><?php the_category(' '); ?></div>
 			</div>
 			<div class="title-resultado">
-				<div class="resultado-1">Nombre</div>
-				<div class="resultado-2"><?php the_title(); ?></div>
+				<div class="resultado-1">Reach</div>
+				<div class="pattern resultado-2"><a class="highlight-inv">134.000</a></div>
 			</div>
 		</div>
 	</article>

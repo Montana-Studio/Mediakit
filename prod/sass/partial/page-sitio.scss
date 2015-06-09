@@ -7,10 +7,14 @@
 			  margin:{bottom: 47px;}
 		}
 		.content-header {
+				@include gridle(12);
+				@include gridle(6, desktopess notebook-min);
+				@extend .no-paddings;
 				bottom: -40px;
 				position: absolute;
 			.logo-sitio {
 				@include gridle(4, phoness-min);
+				@include gridle(4, desktopess notebook-min);
 				@include border-width(3px);
 				@include border-color(#000);
 				@include border-style(solid);

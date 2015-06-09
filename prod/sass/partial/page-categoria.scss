@@ -3,14 +3,19 @@
 	@extend .no-paddings;
 	.encabezado {
 		@include gridle(12);
-		@include gridle_state(phoness-min){
-			padding:0 5px;
-		}
 		height: 210px;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		display: table;
+		@include gridle_state(desktopess notebook-min tabless-min tabless) {
+			height: 350px;
+			margin:{bottom: 25px;}
+		}
+		@include gridle_state(phoness phoness-min tabless-md) {
+			padding:0 5px;
+			height: 210px; 
+		}
 		.content-title {
 			@include gridle(12);
 			@include gridle_float(none);
