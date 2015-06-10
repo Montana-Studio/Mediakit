@@ -1,5 +1,9 @@
 .search-content {
 	@include gridle(12);
+	@include gridle(10, desktopess notebook-min);
+	@include gridle_state(desktopess notebook-min){
+		float:right;
+	}
 	.search-loop {
 		@include gridle(12);
 		@extend .no-paddings;

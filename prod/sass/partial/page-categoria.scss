@@ -1,5 +1,9 @@
 .page-header {
-	@include gridle(12);
+	@include gridle(10, desktopess notebook-min);
+	@include gridle(12, phoness phoness-min);
+	@include gridle_state(desktopess notebook-min){
+		float:right;
+	}
 	@extend .no-paddings;
 	.encabezado {
 		@include gridle(12);
@@ -10,7 +14,6 @@
 		display: table;
 		@include gridle_state(desktopess notebook-min tabless-min tabless) {
 			height: 350px;
-			margin:{bottom: 25px;}
 		}
 		@include gridle_state(phoness phoness-min tabless-md) {
 			padding:0 5px;

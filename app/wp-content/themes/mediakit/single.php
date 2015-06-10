@@ -12,6 +12,8 @@
   <div class="menu-mobile"><i class="fa fa-bars"></i></div>
 </div>
 
+<?php get_template_part('menu'); ?>
+
 <section class="page-header page-sitio">
 	<main role="main">
 
@@ -36,85 +38,92 @@
                 <div class="content-sitio">
                     <div class="btn"><a href="#"><i class="fa fa-external-link"></i> Cotizar</a></div>
                     <div id="results_metrics" class="metrics">
-                        <ul>
-                            <h3><a class="highlight" href="">Social Media</a></h3>
-                            <li>
-                                <i class="fa fa-facebook"></i>
-                                <p class="metrics-1">facebook</p>
-                                <p id="fb_likes" class="metrics-2"></p>
-                            </li>
-                            <li>
-                                <i class="fa fa-twitter"></i>
-                                <p class="metrics-1">Twitter</p>
-                                <p id="twitter_followers" class="metrics-2"></p>
-                            </li>
-                            <li>
-                                <i class="fa fa-instagram"></i>
-                                <p class="metrics-1">Instagram</p>
-                                <p id="instagram_followers" class="metrics-2"></p>
-                            </li>
-                        </ul>
-                        <ul>
-                            <h3><a class="highlight" href="">DESKTOP METRICS</a></h3>
-                            <li>
-                                <i class="fa fa-eye"></i>
-                                <p class="metrics-1">SESSIONS</p>
-                                <p id="sessions_count" class="metrics-2"></p>
-                            </li>
-                            <li>
-                                <i class="fa fa-male"></i>
-                                <p class="metrics-1">USUARIOS</p>
-                                <p id="users_count" class="metrics-2"></p>
-                            </li>
-                            <li>
-                                <i class="fa fa-heart-o"></i>
-                                <p class="metrics-1">PAGES VIEWS</p>
-                                <p id="pageviews_count" class="metrics-2"></p>
-                            </li>
-                            <li>
-                                <i class="fa fa-laptop"></i>
-                                <p class="metrics-1">PAGEVIEWS/SESSIONS</p>
-                                <p id="pageviews_per_session" class="metrics-2"></p>
-                            </li>
-                            <li>
-                                <i class="fa fa-clock-o"></i>
-                                <p class="metrics-1">AVG. SESSION DURATION</p>
-                                <p id="avg_sessions_duration" class="metrics-2"></p>
-                            </li>
-                        </ul>
-                        <ul>
-                            <h3><a class="highlight" href="">Mobile METRICS</a></h3>
-                            <li>
-                                <i class="fa fa-eye"></i>
-                                <p class="metrics-1">SESSIONS</p>
-                                <p id="sessions_count_mobile"class="metrics-2"></p>
-                            </li>
-                            <li>
-                                <i class="fa fa-male"></i>
-                                <p class="metrics-1">USUARIOS</p>
-                                <p id="users_count_mobile" class="metrics-2"></p>
-                            </li>
-                            <li>
-                                <i class="fa fa-heart-o"></i>
-                                <p class="metrics-1">PAGES VIEWS</p>
-                                <p id="pageviews_count_mobile" class="metrics-2"></p>
-                            </li>
-                            <li>
-                                <i class="fa fa-laptop"></i>
-                                <p class="metrics-1">PAGEVIEWS/SESSIONS</p>
-                                <p id="pageviews_per_session_mobile" class="metrics-2"></p>
-                            </li>
-                            <li>
-                                <i class="fa fa-clock-o"></i>
-                                <p class="metrics-1">AVG. SESSION DURATION</p>
-                                <p id="avg_sessions_duration_mobile" class="metrics-2"></p>
-                            </li>
-                        </ul>
-                        <ul>
+                        <div class="metrica-number">
+                            <ul>
+                                <h3><a class="highlight" href="">Social Media</a></h3>
+                                <li>
+                                    <i class="fa fa-facebook"></i>
+                                    <p class="metrics-1">facebook</p>
+                                    <p id="fb_likes" class="metrics-2"></p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-twitter"></i>
+                                    <p class="metrics-1">Twitter</p>
+                                    <p id="twitter_followers" class="metrics-2"></p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-instagram"></i>
+                                    <p class="metrics-1">Instagram</p>
+                                    <p id="instagram_followers" class="metrics-2"></p>
+                                </li>
+                            </ul>
+                             <ul>
+                                <h3><a class="highlight" href="">DESKTOP METRICS</a></h3>
+                                <li>
+                                    <i class="fa fa-eye"></i>
+                                    <p class="metrics-1">SESSIONS</p>
+                                    <p id="sessions_count" class="metrics-2"></p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-male"></i>
+                                    <p class="metrics-1">USUARIOS</p>
+                                    <p id="users_count" class="metrics-2"></p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-heart-o"></i>
+                                    <p class="metrics-1">PAGES VIEWS</p>
+                                    <p id="pageviews_count" class="metrics-2"></p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-laptop"></i>
+                                    <p class="metrics-1">PAGEVIEWS/SESSIONS</p>
+                                    <p id="pageviews_per_session" class="metrics-2"></p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-clock-o"></i>
+                                    <p class="metrics-1">AVG. SESSION DURATION</p>
+                                    <p id="avg_sessions_duration" class="metrics-2"></p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <h3><a class="highlight" href="">Mobile METRICS</a></h3>
+                                <li>
+                                    <i class="fa fa-eye"></i>
+                                    <p class="metrics-1">SESSIONS</p>
+                                    <p id="sessions_count_mobile"class="metrics-2"></p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-male"></i>
+                                    <p class="metrics-1">USUARIOS</p>
+                                    <p id="users_count_mobile" class="metrics-2"></p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-heart-o"></i>
+                                    <p class="metrics-1">PAGES VIEWS</p>
+                                    <p id="pageviews_count_mobile" class="metrics-2"></p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-laptop"></i>
+                                    <p class="metrics-1">PAGEVIEWS/SESSIONS</p>
+                                    <p id="pageviews_per_session_mobile" class="metrics-2"></p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-clock-o"></i>
+                                    <p class="metrics-1">AVG. SESSION DURATION</p>
+                                    <p id="avg_sessions_duration_mobile" class="metrics-2"></p>
+                                </li>
+                            </ul>  
+                        </div>
+                        <div class="metrica-mapa">
+                            <ul>
                             <h3><a class="highlight" href="">MAP GLOBAL REACH</a></h3>
                             <div class="img-map"><img src="<?php the_field('imagen_mapa'); ?>"  alt=""></div>
                             
-                        </ul>   
+                            </ul>   
+                        </div>
+                        <div class="btn-display">
+                            <div class="btn display-des"><a href="#"><i class="fa fa-external-link"></i> Cotizar</a></div>
+                        </div> 
                     </div>
                 </div>    
                 <!-- Fin Resultado mÃ©tricas -->

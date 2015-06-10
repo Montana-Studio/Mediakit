@@ -9,6 +9,9 @@
 	</div>
 	<div id="menu-nav" class="menu-mobile"><i class="fa fa-bars"></i></div>
 </div>
+
+<?php get_template_part('menu'); ?>
+
 	<main role="main">
 		<!-- section -->
 		<section class="search-content">

@@ -92,6 +92,9 @@ a {
 				@include gridle_float(none);
 				color:$second_color_1;
 				font:{size: 15px;}
+				@include gridle_state(desktopess notebook-min){
+					width: 25px;
+				}
 			}
 			.metrics-1 {
 				@include gridle(7);

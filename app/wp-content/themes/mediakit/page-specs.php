@@ -1,4 +1,4 @@
-<?php /*Template name: Pagina Music*/ ?>
+<?php /*Template name: Pagina Specs*/ ?>
 <?php get_header(); ?>
 <div class="nav-mobile">
 	<div class="logo-mobile">
@@ -47,45 +47,9 @@
 
 				<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
-				<article class="content-loop-categoria" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<article class="content-specs" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					<div class="sitio-single">
-						<div class="content-single">
-
-							<div class="header-destacado"><a href="#"><i class="fa fa-star"></i> Destacado</a></div>
-
-							<div class="img-single"><?php echo the_post_thumbnail();?>
-								<div class="title">
-									<a class="highlight" href="<?php the_permalink()?>">
-											<?php if (strlen($post->post_title) > 40) {
-												echo substr(the_title($before = '', $after = '', FALSE), 0, 40) . ' ... '; } else {
-												the_title();
-												} ?>
-									</a>
-								</div>
-							</div>
-
-							<div class="pattern"><a href="#" class="highlight-inv">MONTHLY REACH 134.000</a></div>
-
-							<div id="results_metrics" class="sitio-social">
-								<ul>
-									<li>
-										<div class="number">134.000</div>
-										<div href="#" class="bajada-num"><i class="fa fa-facebook"> Likes</div></i>
-									</li>
-									<li>
-										<div class="number">134.000</div>
-										<div id="twitter_followers" class="bajada-num"><i class="fa fa-twitter"> Follows</i></div>
-									</li>
-									<li>
-										<div class="number">134.000</div>
-										<div href="#" class="bajada-num"><i class="fa fa-instagram"> Follows</div></i>
-									</li>
-								</ul>
-							</div>
-
-						</div>	
-					</div>
+					
 
 				</article>
 

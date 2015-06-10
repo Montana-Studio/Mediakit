@@ -1,19 +1,34 @@
 .nav-colapse {
+	@include gridle(2, desktopess notebook-min);
+	@include gridle_state(desktopess notebook-min){
+		float:left;
+		height: 1000px;
+	}
+	@include gridle_state(phoness phoness-min){
+		display: none;
+	}
 	@include gridle(8);
 	@include gridle_float(right);
 	@extend .no-paddings;
 	background: $first_color;
 	color:$second_color;
+	.logo-menu-media {
+		@include gridle(10);
+		@include gridle_float(none);
+		margin:0 auto;
+		display: block;
+	}
 	.search {
 		@include gridle(12);
 		@extend .no-paddings;
+		height: 70px;
 		.search-input {
 			@include gridle(10);
 			background: $first_color;
 			border:0;
 			outline: none;
 			color:$second_color;
-			padding: 10px 20px;
+			padding:20px;
 			@include placeholder {
 				color: $second_color;
 				font:{family:$primary_font;}
@@ -24,7 +39,7 @@
 			background: none;
 			color:$second_color;
 			border:0;
-			padding: 10px 0;
+			padding: 20px 0;
 		}
 	}
 	.menu {
@@ -33,7 +48,7 @@
 			margin:{left:20px; right:20px;}
 			li {
 				list-style: none;
-				 margin: 10px 0;
+				 padding: 15px 0;
 				a {
 					color:$second_color;
 					font:{family:$primary_font;weight:400;}

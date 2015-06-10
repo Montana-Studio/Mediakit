@@ -30,12 +30,7 @@
 	<?php include (TEMPLATEPATH . '/svg_icon.php'); ?>
 		<!-- wrapper -->
 		<div class="wrapper">
-			<div id="menu-colapse" class="nav-colapse">
-				<div class="search">
-					<?php get_template_part('searchform'); ?>
-				</div>	
-				<?php html5blank_nav(); ?>
-			</div>
+			
 			<!-- header -->
 			<header class="header clear" role="banner">
 

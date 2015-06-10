@@ -1,20 +1,27 @@
 .page-sitio {
-	@include gridle(12);
 	@extend .no-paddings;
 	.encabezado {
 		position: relative;
+		@include gridle_state(desktopess notebook-min){
+			margin:{bottom: 25px;}
+		}
 		@include gridle_state(phoness){
-			  margin:{bottom: 47px;}
+			margin:{bottom: 47px;}
 		}
 		.content-header {
-				@include gridle(12);
-				@include gridle(6, desktopess notebook-min);
+				@include gridle(10, desktopess notebook-min);
+				@include gridle(12, phoness phoness-min);
 				@extend .no-paddings;
+				left:0;
 				bottom: -40px;
 				position: absolute;
+				@include gridle_state(phoness phoness-min){
+					left:0;
+					padding:{left: 5px !important;right:0 !important;}
+				}
 			.logo-sitio {
-				@include gridle(4, phoness-min);
-				@include gridle(4, desktopess notebook-min);
+				@include gridle(2, desktopess notebook-min);
+				@include gridle(4, phoness phoness-min);
 				@include border-width(3px);
 				@include border-color(#000);
 				@include border-style(solid);
@@ -22,6 +29,13 @@
 				background: $second_color;
 				display: table;
 				padding: 0 5px;
+				@include gridle_state(desktopess notebook-min){
+					height: 215px;
+				}
+				@include gridle_state(phoness phoness-min){
+					height: 105px;
+					padding: 0 5px !important;
+				}
 				a {
 					display: table-cell;
 					vertical-align: middle;
@@ -32,14 +46,25 @@
 				}
 			}
 			.pattern {
-				@include gridle(7,phoness-min);
+				@include gridle(4, desktopess notebook-min);
+				@include gridle(7, phoness phoness-min);
+				@include gridle_state(desktopess notebook-min){
+					display: inline-block;
+				}
 				margin:{left:5px;top:10px;}
 				a {
 					font:{size:12px;}
 				}
 			}
 			.btn {
-				@include gridle(7,phoness-min);
+				@include gridle(4, desktopess notebook-min);
+				@include gridle(7, phoness phoness-min);
+				@include gridle_state(desktopess notebook-min){
+					display: inline-block;
+				}
+				@include gridle_state(phoness phoness-min){
+					float: left;
+				}
 				margin:{top:5px;left:5px;}
 				a {
 					font:{size:12px;}
@@ -50,8 +75,58 @@
 	.content-sitio {
 		@include gridle(12);
 		margin:{top: 10px;}
-		@include gridle_state(phoness){
+		@include gridle_state(phoness phoness-min){
 			padding: 0 5px !important;
+		}
+		.btn {
+			@include gridle_state(desktopess notebook-min) {
+				display:none;
+			}
+			@include gridle_state(phoness phoness-min) {
+				display:block !important;
+			}
+		}
+		.metrics {
+			@include gridle(12);
+			.metrica-number {
+				@include gridle(6, desktopess notebook-min);
+				@include gridle(12, phoness phoness-min);
+				@include gridle_state(desktopess notebook-min){
+					float: left;
+					padding:{left:0;}
+				}
+				@include gridle_state(phoness phoness-min){
+					padding:0;
+				}
+			}
+			.metrica-mapa {
+				@include gridle(6, desktopess notebook-min);
+				@include gridle(12, phoness phoness-min);
+				@include gridle_state(desktopess notebook-min){
+					float: right;
+				}
+				@include gridle_state(phoness phoness-min){
+					padding:0;
+				}
+			}
+			.btn-display {
+				@include gridle(6, desktopess notebook-min);
+				@include gridle_state(desktopess notebook-min){
+					float: right;
+					margin:{top: 60px; right:auto;bottom:0;left:auto;}
+					display: block;
+				}
+				@include gridle_state(phoness phoness-min){
+					display: none;
+				}
+				.btn {
+					@include gridle(6, desktopess notebook-min);
+					display: block !important;
+					margin:0 auto;
+					float: none;
+					height: 40px;
+				}
+			}
 		}
 	}
 }

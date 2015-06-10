@@ -1,11 +1,15 @@
 .page-aboutus{
-	@include gridle(12);
-	@extend .no-paddings;
 	.encabezado {
-		height: auto;
+		@include gridle_state(desktopess notebook-min){
+			 height: 930px;
+		}
 		.content-title {
+			@include gridle_state(desktopess notebook-min){
+			 display: block;
+			}
 			.logo-mediatrends {
 				@include gridle(11,phoness);
+				@include gridle(3, desktopess notebook-min tabless tabless-min);
 				@include gridle_float(none);
 				margin:0 auto 30px auto;
 				left:0;
@@ -17,7 +21,22 @@
 					}
 				}
 			}
+			h2 {
+				@include gridle(8, desktopess notebook-min);
+				@include gridle_state(desktopess notebook-min){
+					float:none;
+					margin:0 auto;
+					display: block;
+					padding:{left:0 !important;}
+				}
+			}
 			.bajada {
+				@include gridle(8, desktopess notebook-min);
+				@include gridle_state(desktopess notebook-min){
+					float:none;
+					margin:0 auto;
+					display: block;
+				}
 				margin:{bottom:100px;}
 			}
 		}

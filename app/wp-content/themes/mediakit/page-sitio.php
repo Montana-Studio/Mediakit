@@ -1,5 +1,7 @@
 <?php /*Template name: Pagina Sitio*/ ?>
+x
 <?php get_header(); ?>
+
 <div class="nav-mobile">
 	<div class="logo-mobile">
 		<a href="<?php echo home_url(); ?>">
@@ -10,6 +12,9 @@
 	</div>
 	<div class="menu-mobile"><i class="fa fa-bars"></i></div>
 </div>
+
+<?php get_template_part('menu'); ?>
+ 
 <main role="main">
 	<!-- section -->
 	<section class="page-header page-sitio">

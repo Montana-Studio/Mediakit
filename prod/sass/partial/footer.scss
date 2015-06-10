@@ -4,21 +4,36 @@
 	color:$second_color;
 	font:{family:$primary_font;}
 	height: 70px;
+	@include gridle(10, desktopess notebook-min);
+	@include gridle_state(desktopess notebook-min){
+		float:right;
+	}
 	.footer-content {
 		@include gridle(12);
 		@extend .no-paddings;
 		margin:{top:-30px;}
+		height: 100%;
+		@include gridle(8, desktopess notebook-min);
+		@include gridle_state(desktopess notebook-min) {
+			margin:{top:-60px;right: auto; bottom: 0; left:auto;}
+			display: block;
+			float: none;
+		}
 		.content-left {
 			@include gridle(11);
+			@include gridle(5, desktopess notebook-min);
 			@extend .no-paddings;
 			@include gridle_float(left);
 			display: inline-block;
 			.img-footer {
 				@include gridle(4, phoness);
+				@include gridle(4, desktopess notebook-min);
 				@extend .no-paddings;
 				border:3px solid #fff;
 				height: 90px;
-
+				@include gridle_state(desktopess notebook-min){
+					height: 115px;
+				}
 				img {
 					width: 100%;
 					height: 100%;
@@ -34,6 +49,7 @@
 		}
 		.content-right {
 			@include gridle(1);
+			@include gridle(7, desktopess notebook-min);
 			@extend .no-paddings;
 			@include gridle_float(right);
 			display: inline-block;

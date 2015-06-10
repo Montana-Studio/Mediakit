@@ -1,9 +1,11 @@
 .page-contacto {
-	@include gridle(12);
 	padding: {bottom:20px !important;}  
+	.encabezado {
+		margin:{bottom:20px;}
+	}
 	.form-contacto-cont {
-		@include gridle(12, phoness-min phoness tabless-md tabless-min tabless );
 		@include gridle(6, desktopess notebook-min);
+		@include gridle(12, phoness phoness-min );
 		.title-form {
 			@include gridle(12);
 			padding:10px;
@@ -67,11 +69,14 @@
 		}	
 	}
 	.content-info {
-		@include gridle(12, phoness-min phoness tabless-md tabless-min tabless);
 		@include gridle(6, desktopess notebook-min); 
+		@include gridle(12, phoness phoness-min );
 		height: 300px;
 		@include gridle_state(desktopess notebook-min){
 			height: 487px;
+		}
+		@include gridle_state(phoness phoness-min){
+			height: 300px;
 		}
 		.trama {
 			@include gridle(12); 
