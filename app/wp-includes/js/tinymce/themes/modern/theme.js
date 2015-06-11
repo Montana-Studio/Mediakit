@@ -114,7 +114,11 @@ tinymce.ThemeManager.add('modern', function(editor) {
 							itemName = item;
 							item = editor.buttons[itemName];
 
+<<<<<<< HEAD
 							if (typeof item == "function") {
+=======
+							if (typeof(item) == "function") {
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 								item = item();
 							}
 
@@ -276,7 +280,11 @@ tinymce.ThemeManager.add('modern', function(editor) {
 			}
 		}
 
+<<<<<<< HEAD
 		var enabledMenuNames = typeof settings.menubar == "string" ? settings.menubar.split(/[ ,]/) : defaultMenuBar;
+=======
+		var enabledMenuNames = typeof(settings.menubar) == "string" ? settings.menubar.split(/[ ,]/) : defaultMenuBar;
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		for (var i = 0; i < enabledMenuNames.length; i++) {
 			var menu = enabledMenuNames[i];
 			menu = createMenu(menu);

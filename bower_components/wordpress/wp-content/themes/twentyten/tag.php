@@ -22,7 +22,11 @@ get_header(); ?>
  * If you want to overload this in a child theme then include a file
  * called loop-tag.php and that will be used instead.
  */
+<<<<<<< HEAD
 get_template_part( 'loop', 'tag' );
+=======
+ get_template_part( 'loop', 'tag' );
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 ?>
 			</div><!-- #content -->
 		</div><!-- #container -->

@@ -2,7 +2,11 @@
 /**
  * The template for displaying image attachments
  *
+<<<<<<< HEAD
  * @link https://codex.wordpress.org/Template_Hierarchy
+=======
+ * @link http://codex.wordpress.org/Template_Hierarchy
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
  *
  * @package WordPress
  * @subpackage Twenty_Twelve
@@ -66,7 +70,11 @@ if ( count( $attachments ) > 1 ) :
 		$next_attachment_url = get_attachment_link( $attachments[ $k ]->ID );
 	else :
 		// or get the URL of the first image attachment
+<<<<<<< HEAD
 		$next_attachment_url = get_attachment_link( $attachments[0]->ID );
+=======
+		$next_attachment_url = get_attachment_link( $attachments[ 0 ]->ID );
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	endif;
 else :
 	// or, if there's only 1 image, get the URL of the image
@@ -113,4 +121,8 @@ endif;
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
+<<<<<<< HEAD
 <?php get_footer(); ?>
+=======
+<?php get_footer(); ?>
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f

@@ -880,7 +880,11 @@
 
 				if ( 'link' === type ) {
 					_.defaults( embed, {
+<<<<<<< HEAD
 						linkText: embed.url,
+=======
+						title:   embed.url,
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 						linkUrl: embed.url
 					});
 
@@ -1034,11 +1038,19 @@
 			 */
 			link: function( embed ) {
 				return wp.media.post( 'send-link-to-editor', {
+<<<<<<< HEAD
 					nonce:     wp.media.view.settings.nonce.sendToEditor,
 					src:       embed.linkUrl,
 					link_text: embed.linkText,
 					html:      wp.media.string.link( embed ),
 					post_id:   wp.media.view.settings.post.id
+=======
+					nonce:   wp.media.view.settings.nonce.sendToEditor,
+					src:     embed.linkUrl,
+					title:   embed.title,
+					html:    wp.media.string.link( embed ),
+					post_id: wp.media.view.settings.post.id
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				});
 			}
 		},

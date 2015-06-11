@@ -10,7 +10,11 @@
  * already has tag.php for Tag archives, category.php for Category archives,
  * and author.php for Author archives.
  *
+<<<<<<< HEAD
  * @link https://codex.wordpress.org/Template_Hierarchy
+=======
+ * @link http://codex.wordpress.org/Template_Hierarchy
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
  *
  * @package WordPress
  * @subpackage Twenty_Thirteen
@@ -52,4 +56,8 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
+<<<<<<< HEAD
 <?php get_footer(); ?>
+=======
+<?php get_footer(); ?>
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f

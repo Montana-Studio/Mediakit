@@ -205,7 +205,11 @@ function wp_widget_control( $sidebar_args ) {
 	</div>
 
 	<div class="widget-inside">
+<<<<<<< HEAD
 	<form method="post">
+=======
+	<form action="" method="post">
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	<div class="widget-content">
 <?php
 	if ( isset($control['callback']) )

@@ -63,11 +63,15 @@ if ( get_option('db_upgraded') ) {
 	 */
 	} elseif ( apply_filters( 'do_mu_upgrade', true ) ) {
 		$c = get_blog_count();
+<<<<<<< HEAD
 
 		/*
 		 * If there are 50 or fewer sites, run every time. Otherwise, throttle to reduce load:
 		 * attempt to do no more than threshold value, with some +/- allowed.
 		 */
+=======
+		// If 50 or fewer sites, run every time. Else, run "about ten percent" of the time. Shh, don't check that math.
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		if ( $c <= 50 || ( $c > 50 && mt_rand( 0, (int)( $c / 50 ) ) == 1 ) ) {
 			require_once( ABSPATH . WPINC . '/http.php' );
 			$response = wp_remote_get( admin_url( 'upgrade.php?step=1' ), array( 'timeout' => 120, 'httpversion' => '1.1' ) );
@@ -94,6 +98,7 @@ $time_format = get_option('time_format');
 
 wp_enqueue_script( 'common' );
 
+<<<<<<< HEAD
 // $pagenow is set in vars.php
 // $wp_importers is sometimes set in wp-admin/includes/import.php
 //
@@ -103,6 +108,8 @@ global $pagenow, $wp_importers, $hook_suffix, $plugin_page, $typenow, $taxnow;
 
 $page_hook = null;
 
+=======
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 $editing = false;
 
 if ( isset($_GET['page']) ) {
@@ -180,6 +187,7 @@ if ( isset($plugin_page) ) {
 }
 
 $hook_suffix = '';
+<<<<<<< HEAD
 if ( isset( $page_hook ) ) {
 	$hook_suffix = $page_hook;
 } elseif ( isset( $plugin_page ) ) {
@@ -187,6 +195,14 @@ if ( isset( $page_hook ) ) {
 } elseif ( isset( $pagenow ) ) {
 	$hook_suffix = $pagenow;
 }
+=======
+if ( isset($page_hook) )
+	$hook_suffix = $page_hook;
+else if ( isset($plugin_page) )
+	$hook_suffix = $plugin_page;
+else if ( isset($pagenow) )
+	$hook_suffix = $pagenow;
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 set_current_screen();
 
@@ -220,7 +236,11 @@ if ( isset($plugin_page) ) {
 		/**
 		 * Used to call the registered callback for a plugin screen.
 		 *
+<<<<<<< HEAD
 		 * @ignore
+=======
+		 * @internal
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		 * @since 1.5.0
 		 */
 		do_action( $page_hook );
@@ -257,7 +277,11 @@ if ( isset($plugin_page) ) {
 	include(ABSPATH . 'wp-admin/admin-footer.php');
 
 	exit();
+<<<<<<< HEAD
 } elseif ( isset( $_GET['import'] ) ) {
+=======
+} else if (isset($_GET['import'])) {
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 	$importer = $_GET['import'];
 

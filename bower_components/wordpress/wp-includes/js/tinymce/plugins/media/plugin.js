@@ -24,8 +24,11 @@ tinymce.PluginManager.add('media', function(editor, url) {
 	var embedChange = (tinymce.Env.ie && tinymce.Env.ie <= 8) ? 'onChange' : 'onInput';
 
 	function guessMime(url) {
+<<<<<<< HEAD
 		url = url.toLowerCase();
 
+=======
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		if (url.indexOf('.mp3') != -1) {
 			return 'audio/mpeg';
 		}
@@ -96,6 +99,7 @@ tinymce.PluginManager.add('media', function(editor, url) {
 			if (win.find('#constrain')[0].checked() && width && height && newWidth && newHeight) {
 				if (e.control == widthCtrl) {
 					newHeight = Math.round((newWidth / width) * newHeight);
+<<<<<<< HEAD
 
 					if (!isNaN(newHeight)) {
 						heightCtrl.value(newHeight);
@@ -106,6 +110,12 @@ tinymce.PluginManager.add('media', function(editor, url) {
 					if (!isNaN(newWidth)) {
 						widthCtrl.value(newWidth);
 					}
+=======
+					heightCtrl.value(newHeight);
+				} else {
+					newWidth = Math.round((newHeight / height) * newWidth);
+					widthCtrl.value(newWidth);
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				}
 			}
 
@@ -129,9 +139,15 @@ tinymce.PluginManager.add('media', function(editor, url) {
 				align: 'center',
 				spacing: 5,
 				items: [
+<<<<<<< HEAD
 					{name: 'width', type: 'textbox', maxLength: 5, size: 3, onchange: recalcSize, ariaLabel: 'Width'},
 					{type: 'label', text: 'x'},
 					{name: 'height', type: 'textbox', maxLength: 5, size: 3, onchange: recalcSize, ariaLabel: 'Height'},
+=======
+					{name: 'width', type: 'textbox', maxLength: 3, size: 3, onchange: recalcSize},
+					{type: 'label', text: 'x'},
+					{name: 'height', type: 'textbox', maxLength: 3, size: 3, onchange: recalcSize},
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 					{name: 'constrain', type: 'checkbox', checked: true, text: 'Constrain proportions'}
 				]
 			});
@@ -774,7 +790,11 @@ tinymce.PluginManager.add('media', function(editor, url) {
 
 	editor.addMenuItem('media', {
 		icon: 'media',
+<<<<<<< HEAD
 		text: 'Insert/edit video',
+=======
+		text: 'Insert video',
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		onclick: showDialog,
 		context: 'insert',
 		prependToContext: true

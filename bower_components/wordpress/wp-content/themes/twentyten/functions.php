@@ -9,8 +9,13 @@
  * The first function, twentyten_setup(), sets up the theme by registering support
  * for various features in WordPress, such as post thumbnails, navigation menus, and the like.
  *
+<<<<<<< HEAD
  * When using a child theme (see https://codex.wordpress.org/Theme_Development and
  * https://codex.wordpress.org/Child_Themes), you can override certain functions
+=======
+ * When using a child theme (see http://codex.wordpress.org/Theme_Development and
+ * http://codex.wordpress.org/Child_Themes), you can override certain functions
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
  * (those wrapped in a function_exists() call) by defining them first in your child theme's
  * functions.php file. The child theme's functions.php file is included before the parent
  * theme's file, so the child theme functions would be used.
@@ -31,7 +36,11 @@
  * }
  * </code>
  *
+<<<<<<< HEAD
  * For more information on hooks, actions, and filters, see https://codex.wordpress.org/Plugin_API.
+=======
+ * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
  *
  * @package WordPress
  * @subpackage Twenty_Ten
@@ -570,7 +579,11 @@ function twentyten_get_gallery_images() {
 	if ( function_exists( 'get_post_galleries' ) ) {
 		$galleries = get_post_galleries( get_the_ID(), false );
 		if ( isset( $galleries[0]['ids'] ) )
+<<<<<<< HEAD
 			$images = explode( ',', $galleries[0]['ids'] );
+=======
+		 	$images = explode( ',', $galleries[0]['ids'] );
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	} else {
 		$pattern = get_shortcode_regex();
 		preg_match( "/$pattern/s", get_the_content(), $match );

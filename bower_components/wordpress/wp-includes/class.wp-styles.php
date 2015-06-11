@@ -107,6 +107,7 @@ class WP_Styles extends WP_Dependencies {
 			}
 		}
 
+<<<<<<< HEAD
 		$conditional_pre = $conditional_post = '';
 		if ( isset( $obj->extra['conditional'] ) && $obj->extra['conditional'] ) {
 			$conditional_pre  = "<!--[if {$obj->extra['conditional']}]>\n";
@@ -125,6 +126,19 @@ class WP_Styles extends WP_Dependencies {
 			echo $tag;
 			$this->print_inline_style( $handle );
 			echo $conditional_post;
+=======
+		if ( isset($obj->extra['conditional']) && $obj->extra['conditional'] ) {
+			$tag = "<!--[if {$obj->extra['conditional']}]>\n" . $tag . "<![endif]-->\n";
+		}
+
+		if ( $this->do_concat ) {
+			$this->print_html .= $tag;
+			if ( $inline_style = $this->print_inline_style( $handle, false ) )
+				$this->print_html .= sprintf( "<style id='%s-inline-css' type='text/css'>\n%s\n</style>\n", esc_attr( $handle ), $inline_style );
+		} else {
+			echo $tag;
+			$this->print_inline_style( $handle );
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		}
 
 		return true;

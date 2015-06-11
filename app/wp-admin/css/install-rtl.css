@@ -16,12 +16,20 @@ body {
 }
 
 a {
+<<<<<<< HEAD
 	color: #0073aa;
+=======
+	color: #0074a2;
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	text-decoration: none;
 }
 
 a:hover {
+<<<<<<< HEAD
 	color: #00a0d2;
+=======
+	color: #2ea2cc;
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 }
 
 h1 {
@@ -237,7 +245,11 @@ submit {
 	background-color: #ffebe8;
 }
 
+<<<<<<< HEAD
 /* rtl:ignore */
+=======
+/* @noflip */
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 #dbname,
 #uname,
 #pwd,
@@ -333,7 +345,11 @@ body.language-chooser {
 	display: block;
 	border: 1px solid #ddd;
 	background-color: #fff;
+<<<<<<< HEAD
 	color: #32373c;
+=======
+	color: #333;
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	font-size: 16px;
 	font-family: Arial, sans-serif;
 	font-weight: normal;
@@ -378,6 +394,10 @@ body.language-chooser {
  * HiDPI Displays
  */
 @media print,
+<<<<<<< HEAD
+=======
+  (-o-min-device-pixel-ratio: 5/4),
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 120dpi) {
 

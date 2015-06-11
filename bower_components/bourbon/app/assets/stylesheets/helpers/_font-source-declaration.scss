@@ -16,7 +16,11 @@
   $file-formats,
   $font-url) {
 
+<<<<<<< HEAD
   $src: ();
+=======
+  $src: null;
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
   $formats-map: (
     eot:   "#{$file-path}.eot?#iefix" format("embedded-opentype"),

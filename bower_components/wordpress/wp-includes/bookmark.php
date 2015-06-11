@@ -386,18 +386,29 @@ function sanitize_bookmark_field($field, $value, $bookmark_id, $context) {
 		} else {
 			$value = esc_attr($value);
 		}
+<<<<<<< HEAD
 	} elseif ( 'db' == $context ) {
+=======
+	} else if ( 'db' == $context ) {
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		/** This filter is documented in wp-includes/post.php */
 		$value = apply_filters( "pre_$field", $value );
 	} else {
 		/** This filter is documented in wp-includes/post.php */
 		$value = apply_filters( $field, $value, $bookmark_id, $context );
 
+<<<<<<< HEAD
 		if ( 'attribute' == $context ) {
 			$value = esc_attr( $value );
 		} elseif ( 'js' == $context ) {
 			$value = esc_js( $value );
 		}
+=======
+		if ( 'attribute' == $context )
+			$value = esc_attr($value);
+		else if ( 'js' == $context )
+			$value = esc_js($value);
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	}
 
 	return $value;

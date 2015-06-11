@@ -9,6 +9,7 @@
 			$( '#site-description' ).text( to );
 		} );
 	} );
+<<<<<<< HEAD
 
 	// Header text color
 	wp.customize( 'header_textcolor', function( value ) {
@@ -27,4 +28,6 @@
 			}
 		} );
 	} );
+=======
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 } )( jQuery );

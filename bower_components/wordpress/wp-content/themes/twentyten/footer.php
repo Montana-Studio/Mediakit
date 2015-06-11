@@ -24,7 +24,11 @@
 ?>
 
 			<div id="site-info">
+<<<<<<< HEAD
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+=======
+				<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 					<?php bloginfo( 'name' ); ?>
 				</a>
 			</div><!-- #site-info -->

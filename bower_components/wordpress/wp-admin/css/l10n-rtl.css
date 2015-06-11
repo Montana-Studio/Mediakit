@@ -8,6 +8,7 @@ body.rtl .press-this a.wp-switch-editor {
 	font-family: Tahoma, Arial, sans-serif;
 }
 
+<<<<<<< HEAD
 /* Arial is best for RTL headings. */
 .rtl h1,
 .rtl h2,
@@ -18,6 +19,8 @@ body.rtl .press-this a.wp-switch-editor {
 	font-family: Arial, sans-serif;
 	font-weight: bold;
 }
+=======
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 /* he_IL: Remove Tahoma from the font stack. Arial is best for Hebrew. */
 body.locale-he-il,
