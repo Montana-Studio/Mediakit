@@ -15,13 +15,19 @@
 	.logo-menu-media {
 		@include gridle(10);
 		@include gridle_float(none);
-		margin:0 auto;
+		margin:{top:20px; right:auto; bottom:0; left:auto;}
 		display: block;
+	}
+	.menu-review {
+		text:{align:center;}
+		font:{family:$primary_font;size:14px;}
+		color:$second_color;
+		margin:{top:0;bottom:30px;}
 	}
 	.search {
 		@include gridle(12);
 		@extend .no-paddings;
-		height: 70px;
+		height: 60px;
 		.search-input {
 			@include gridle(10);
 			background: $first_color;
@@ -39,19 +45,59 @@
 			background: none;
 			color:$second_color;
 			border:0;
-			padding: 20px 0;
+			padding: 21px 0;
+			font:{size:19px;}
 		}
 	}
 	.menu {
+		margin:{top: 90px;}
 		ul {
+			@extend .no-margins;
 			@extend .no-paddings;
-			margin:{left:20px; right:20px;}
 			li {
+				@include gridle(12);
+				@extend .no-paddings;
 				list-style: none;
-				 padding: 15px 0;
+				//padding:{top:20px; right:20px; bottom:20px; left:20px;}
+				background: $first_color_3;
+				border-bottom: 1px solid #000;
 				a {
+					@include gridle(10); 
+					@include gridle_float(right);
 					color:$second_color;
 					font:{family:$primary_font;weight:400;}
+					padding:{top:20px;bottom:20px;left:5px;}
+				}
+				&.fa {
+					&:before {
+						padding: {top:20px;right:0px; bottom:20px; left:24px;}
+						display: inline-block;
+					}
+				}	
+				&:hover {
+					@include animation(hover-btn 1.5s infinite alternate);
+				}
+				&.current-menu-item {
+					background: $first_color;
+				}
+				&:first-child {
+					@extend .pattern;
+					float:none;
+					padding:{top:20px !important; right:20px; bottom:20px !important; left:20px;}
+					a {
+						@extend .highlight-inv;
+						font:{size: 18px !important;}
+						padding: 4px 10px;
+						margin:{top: 18px;}
+					}
+					&.fa {
+						color:$first_color;
+						font:{size: 18px !important;}
+						padding:0 !important;			
+						&:before {
+							background:none;
+						}
+					}
 				}
 			}
 		}
