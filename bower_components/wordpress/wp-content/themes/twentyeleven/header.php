@@ -40,7 +40,11 @@
 
 	// Add a page number if necessary:
 	if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() )
+<<<<<<< HEAD
 		echo esc_html( ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) ) );
+=======
+		echo ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -111,7 +115,11 @@
 							$header_image_height = HEADER_IMAGE_HEIGHT;
 						}
 						?>
+<<<<<<< HEAD
 					<img src="<?php header_image(); ?>" width="<?php echo esc_attr( $header_image_width ); ?>" height="<?php echo esc_attr( $header_image_height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+=======
+					<img src="<?php header_image(); ?>" width="<?php echo $header_image_width; ?>" height="<?php echo $header_image_height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				<?php endif; // end check for featured image or standard header ?>
 			</a>
 			<?php endif; // end check for removed header image ?>

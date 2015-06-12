@@ -106,10 +106,13 @@ http://support.advancedcustomfields.com/
 
 == Changelog ==
 
+<<<<<<< HEAD
 = 4.4.2 =
 * Image field: Fixed UI bug when image has been removed via media library
 * Core: Minor fixes and improvements
 
+=======
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 = 4.4.1 =
 * Taxonomy field: Added compatibility for upcoming 'term splitting' in WP 4.2
 * Taxonomy field: Major improvement to save/load setting allowing for different values on multiple sub fields

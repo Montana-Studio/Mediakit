@@ -34,8 +34,13 @@
 		var $colorpicker, $stylesheet, user_id, current_user_id,
 			select = $( '#display_name' );
 
+<<<<<<< HEAD
 		$('#pass1').val('').on( 'input propertychange', check_pass_strength );
 		$('#pass2').val('').on( 'input propertychange', check_pass_strength );
+=======
+		$('#pass1').val('').keyup( check_pass_strength );
+		$('#pass2').val('').keyup( check_pass_strength );
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		$('#pass-strength-result').show();
 		$('.color-palette').click( function() {
 			$(this).siblings('input[name="admin_color"]').prop('checked', true);
@@ -119,10 +124,13 @@
 					action:       'save-user-color-scheme',
 					color_scheme: $this.children( 'input[name="admin_color"]' ).val(),
 					nonce:        $('#color-nonce').val()
+<<<<<<< HEAD
 				}).done( function( response ) {
 					if ( response.success ) {
 						$( 'body' ).removeClass( response.data.previousScheme ).addClass( response.data.currentScheme );
 					}
+=======
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				});
 			}
 		});

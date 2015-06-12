@@ -141,7 +141,11 @@ function wp_install_language_form( $languages ) {
 			$language = $languages[ $wp_local_package ];
 			printf( '<option value="%s" lang="%s" data-continue="%s"%s>%s</option>' . "\n",
 				esc_attr( $language['language'] ),
+<<<<<<< HEAD
 				esc_attr( current( $language['iso'] ) ),
+=======
+				esc_attr( $language['iso'][1] ),
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				esc_attr( $language['strings']['continue'] ),
 				in_array( $language['language'], $installed_languages ) ? ' data-installed="1"' : '',
 				esc_html( $language['native_name'] ) );
@@ -153,7 +157,11 @@ function wp_install_language_form( $languages ) {
 	foreach ( $languages as $language ) {
 		printf( '<option value="%s" lang="%s" data-continue="%s"%s>%s</option>' . "\n",
 			esc_attr( $language['language'] ),
+<<<<<<< HEAD
 			esc_attr( current( $language['iso'] ) ),
+=======
+			esc_attr( $language['iso'][1] ),
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			esc_attr( $language['strings']['continue'] ),
 			in_array( $language['language'], $installed_languages ) ? ' data-installed="1"' : '',
 			esc_html( $language['native_name'] ) );
@@ -229,7 +237,10 @@ function wp_can_install_language_pack() {
 	require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
 	$skin = new Automatic_Upgrader_Skin;
 	$upgrader = new Language_Pack_Upgrader( $skin );
+<<<<<<< HEAD
 	$upgrader->init();
+=======
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 	$check = $upgrader->fs_connect( array( WP_CONTENT_DIR, WP_LANG_DIR ) );
 

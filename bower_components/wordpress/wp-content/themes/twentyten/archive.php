@@ -5,7 +5,11 @@
  * Used to display archive-type pages if nothing more specific matches a query.
  * For example, puts together date-based pages if no date.php file exists.
  *
+<<<<<<< HEAD
  * @link https://codex.wordpress.org/Template_Hierarchy
+=======
+ * @link http://codex.wordpress.org/Template_Hierarchy
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
  *
  * @package WordPress
  * @subpackage Twenty_Ten
@@ -54,7 +58,11 @@ get_header(); ?>
 	 * If you want to overload this in a child theme then include a file
 	 * called loop-archive.php and that will be used instead.
 	 */
+<<<<<<< HEAD
 	get_template_part( 'loop', 'archive' );
+=======
+	 get_template_part( 'loop', 'archive' );
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 ?>
 
 			</div><!-- #content -->

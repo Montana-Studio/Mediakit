@@ -434,6 +434,10 @@ class WP_User_Meta_Session_Tokens extends WP_Session_Tokens {
 	 * @static
 	 */
 	public static function drop_sessions() {
+<<<<<<< HEAD
 		delete_metadata( 'user', 0, 'session_tokens', false, true );
+=======
+		delete_metadata( 'user', false, 'session_tokens', false, true );
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	}
 }

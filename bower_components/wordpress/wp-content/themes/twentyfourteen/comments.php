@@ -40,9 +40,15 @@ if ( post_password_required() ) {
 	<ol class="comment-list">
 		<?php
 			wp_list_comments( array(
+<<<<<<< HEAD
 				'style'       => 'ol',
 				'short_ping'  => true,
 				'avatar_size' => 34,
+=======
+				'style'      => 'ol',
+				'short_ping' => true,
+				'avatar_size'=> 34,
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			) );
 		?>
 	</ol><!-- .comment-list -->

@@ -7,9 +7,11 @@
 			</svg>
 		</a>
 	</div>
-
+	<p class="menu-review">review</p>
 	<div class="search">
 		<?php get_template_part('searchform'); ?>
 	</div>	
-	<?php html5blank_nav(); ?>
+	<div class="menu">
+		<?php html5blank_nav(); ?>
+	</div>
 </div>

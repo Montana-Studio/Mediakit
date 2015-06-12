@@ -101,6 +101,16 @@ blockquote {
 	font-style: normal;
 }
 
+<<<<<<< HEAD
+=======
+/* Text meant only for screen readers */
+.screen-reader-text {
+	left: auto;
+	text-indent:-9000px;
+	overflow:hidden;
+}
+
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 /* =Header
 -------------------------------------------------------------- */

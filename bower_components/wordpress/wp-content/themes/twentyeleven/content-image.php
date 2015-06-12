@@ -4,7 +4,11 @@
  *
  * Used on index and archive pages.
  *
+<<<<<<< HEAD
  * @link https://codex.wordpress.org/Post_Formats
+=======
+ * @link http://codex.wordpress.org/Post_Formats
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
  *
  * @package WordPress
  * @subpackage Twenty_Eleven
@@ -20,7 +24,11 @@
 
 			<?php if ( comments_open() && ! post_password_required() ) : ?>
 			<div class="comments-link">
+<<<<<<< HEAD
 				<?php comments_popup_link( '<span class="leave-reply">' . __( 'Reply', 'twentyeleven' ) . '</span>', _x( '1', 'comments number', 'twentyeleven' ), _x( '%', 'comments number', 'twentyeleven' ) ); ?>
+=======
+				<?php comments_popup_link( '<span class="leave-reply">' . __( "Reply", 'twentyeleven' ) . '</span>', _x( '1', 'comments number', 'twentyeleven' ), _x( '%', 'comments number', 'twentyeleven' ) ); ?>
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			</div>
 			<?php endif; ?>
 		</header><!-- .entry-header -->

@@ -11,8 +11,11 @@ class WP_Terms_List_Table extends WP_List_Table {
 
 	public $callback_args;
 
+<<<<<<< HEAD
 	private $level;
 
+=======
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	/**
 	 * Constructor.
 	 *
@@ -114,10 +117,13 @@ class WP_Terms_List_Table extends WP_List_Table {
 		return true;
 	}
 
+<<<<<<< HEAD
 	public function no_items() {
 		echo get_taxonomy( $this->screen->taxonomy )->labels->not_found;
 	}
 
+=======
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	protected function get_bulk_actions() {
 		$actions = array();
 		$actions['delete'] = __( 'Delete' );
@@ -268,6 +274,10 @@ class WP_Terms_List_Table extends WP_List_Table {
 
 	/**
 	 * @global string $taxonomy
+<<<<<<< HEAD
+=======
+	 * @staticvar string $row_class
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	 * @param object $tag
 	 * @param int $level
 	 */
@@ -275,9 +285,18 @@ class WP_Terms_List_Table extends WP_List_Table {
 		global $taxonomy;
  		$tag = sanitize_term( $tag, $taxonomy );
 
+<<<<<<< HEAD
 		$this->level = $level;
 
 		echo '<tr id="tag-' . $tag->term_id . '">';
+=======
+		static $row_class = '';
+		$row_class = ( $row_class == '' ? ' class="alternate"' : '' );
+
+		$this->level = $level;
+
+		echo '<tr id="tag-' . $tag->term_id . '"' . $row_class . '>';
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		$this->single_row_columns( $tag );
 		echo '</tr>';
 	}
@@ -463,7 +482,11 @@ class WP_Terms_List_Table extends WP_List_Table {
 			return;
 ?>
 
+<<<<<<< HEAD
 	<form method="get"><table style="display: none"><tbody id="inlineedit">
+=======
+	<form method="get" action=""><table style="display: none"><tbody id="inlineedit">
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		<tr id="inline-edit" class="inline-edit-row" style="display: none"><td colspan="<?php echo $this->get_column_count(); ?>" class="colspanchange">
 
 			<fieldset><div class="inline-edit-col">
@@ -497,8 +520,13 @@ class WP_Terms_List_Table extends WP_List_Table {
 	?>
 
 		<p class="inline-edit-save submit">
+<<<<<<< HEAD
 			<a href="#inline-edit" class="cancel button-secondary alignleft"><?php _e( 'Cancel' ); ?></a>
 			<a href="#inline-edit" class="save button-primary alignright"><?php echo $tax->labels->update_item; ?></a>
+=======
+			<a accesskey="c" href="#inline-edit" class="cancel button-secondary alignleft"><?php _e( 'Cancel' ); ?></a>
+			<a accesskey="s" href="#inline-edit" class="save button-primary alignright"><?php echo $tax->labels->update_item; ?></a>
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			<span class="spinner"></span>
 			<span class="error" style="display:none;"></span>
 			<?php wp_nonce_field( 'taxinlineeditnonce', '_inline_edit', false ); ?>

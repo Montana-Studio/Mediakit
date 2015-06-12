@@ -127,3 +127,11 @@ a {
 		}
 	}
 }
+@include keyframes(hover-btn) {
+  0% {
+    background-color: $first_color_3;
+  }
+  100% {
+    background-color: $first_color;
+  }
+}

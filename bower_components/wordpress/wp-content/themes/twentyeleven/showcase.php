@@ -105,7 +105,11 @@ get_header(); ?>
 					}
 					?>
 
+<<<<<<< HEAD
 					<section class="featured-post <?php echo esc_attr( $feature_class ); ?>" id="featured-post-<?php echo esc_attr( $counter_slider ); ?>">
+=======
+					<section class="featured-post <?php echo $feature_class; ?>" id="featured-post-<?php echo $counter_slider; ?>">
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 						<?php
 							/*
@@ -135,6 +139,7 @@ get_header(); ?>
 					<?php
 
 						// Reset the counter so that we end up with matching elements
+<<<<<<< HEAD
 						$counter_slider = 0;
 
 						// Begin from zero
@@ -149,6 +154,22 @@ get_header(); ?>
 								$class = '';
 						?>
 						<li><a href="#featured-post-<?php echo esc_attr( $counter_slider ); ?>" title="<?php echo esc_attr( sprintf( __( 'Featuring: %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ) ); ?>"<?php echo $class; ?>></a></li>
+=======
+				    	$counter_slider = 0;
+
+						// Begin from zero
+				    	rewind_posts();
+
+						// Let's roll again.
+				    	while ( $featured->have_posts() ) : $featured->the_post();
+				    		$counter_slider++;
+							if ( 1 == $counter_slider )
+								$class = 'class="active"';
+							else
+								$class = '';
+				    	?>
+						<li><a href="#featured-post-<?php echo $counter_slider; ?>" title="<?php echo esc_attr( sprintf( __( 'Featuring: %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ) ); ?>" <?php echo $class; ?>></a></li>
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 					<?php endwhile;	?>
 					</ul>
 				</nav>

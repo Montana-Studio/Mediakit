@@ -29,7 +29,11 @@ inlineEditPost = {
 			return inlineEditPost.save(this);
 		});
 		$('td', qeRow).keydown(function(e){
+<<<<<<< HEAD
 			if ( e.which === 13 && ! $( e.target ).hasClass( 'cancel' ) ) {
+=======
+			if ( e.which === 13 ) {
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				return inlineEditPost.save(this);
 			}
 		});
@@ -82,8 +86,12 @@ inlineEditPost = {
 		this.revert();
 
 		$('#bulk-edit td').attr('colspan', $('.widefat:first thead th:visible').length);
+<<<<<<< HEAD
 		// Insert the editor at the top of the table with an empty row above to maintain zebra striping.
 		$('table.widefat tbody').prepend( $('#bulk-edit') ).prepend('<tr class="hidden"></tr>');
+=======
+		$('table.widefat tbody').prepend( $('#bulk-edit') );
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		$('#bulk-edit').addClass('inline-editor').show();
 
 		$( 'tbody th.check-column input[type="checkbox"]' ).each( function() {
@@ -117,7 +125,11 @@ inlineEditPost = {
 	},
 
 	edit : function(id) {
+<<<<<<< HEAD
 		var t = this, fields, editRow, rowData, status, pageOpt, pageLevel, nextPage, pageLoop = true, nextLevel, cur_format, f, val;
+=======
+		var t = this, fields, editRow, rowData, status, pageOpt, pageLevel, nextPage, pageLoop = true, nextLevel, cur_format, f;
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		t.revert();
 
 		if ( typeof(id) === 'object' ) {
@@ -129,11 +141,22 @@ inlineEditPost = {
 			fields.push('post_parent', 'page_template');
 		}
 
+<<<<<<< HEAD
 		// add the new edit row with an extra blank row underneath to maintain zebra striping.
 		editRow = $('#inline-edit').clone(true);
 		$('td', editRow).attr('colspan', $('.widefat:first thead th:visible').length);
 
 		$(t.what+id).hide().after(editRow).after('<tr class="hidden"></tr>');
+=======
+		// add the new blank row
+		editRow = $('#inline-edit').clone(true);
+		$('td', editRow).attr('colspan', $('.widefat:first thead th:visible').length);
+
+		if ( $( t.what + id ).hasClass( 'alternate' ) ) {
+			$(editRow).addClass('alternate');
+		}
+		$(t.what+id).hide().after(editRow);
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 		// populate the data
 		rowData = $('#inline_'+id);
@@ -155,11 +178,15 @@ inlineEditPost = {
 		});
 
 		for ( f = 0; f < fields.length; f++ ) {
+<<<<<<< HEAD
 			val = $('.'+fields[f], rowData);
 			// Deal with Twemoji
 			val.find( 'img' ).replaceWith( function() { return this.alt; } );
 			val = val.text();
 			$(':input[name="' + fields[f] + '"]', editRow).val( val );
+=======
+			$(':input[name="' + fields[f] + '"]', editRow).val( $('.'+fields[f], rowData).text() );
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		}
 
 		if ( $( '.comment_status', rowData ).text() === 'open' ) {
@@ -185,14 +212,21 @@ inlineEditPost = {
 
 		//flat taxonomies
 		$('.tags_input', rowData).each(function(){
+<<<<<<< HEAD
 			var terms = $(this),
+=======
+			var terms = $(this).text(),
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				taxname = $(this).attr('id').replace('_' + id, ''),
 				textarea = $('textarea.tax_input_' + taxname, editRow),
 				comma = inlineEditL10n.comma;
 
+<<<<<<< HEAD
 			terms.find( 'img' ).replaceWith( function() { return this.alt; } );
 			terms = terms.text();
 
+=======
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			if ( terms ) {
 				if ( ',' !== comma ) {
 					terms = terms.replace(/,/g, comma);
@@ -250,7 +284,11 @@ inlineEditPost = {
 			id = this.getId(id);
 		}
 
+<<<<<<< HEAD
 		$( 'table.widefat .spinner' ).addClass( 'is-active' );
+=======
+		$('table.widefat .spinner').show();
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 		params = {
 			action: 'inline-save',
@@ -266,11 +304,19 @@ inlineEditPost = {
 		// make ajax request
 		$.post( ajaxurl, params,
 			function(r) {
+<<<<<<< HEAD
 				$( 'table.widefat .spinner' ).removeClass( 'is-active' );
 
 				if (r) {
 					if ( -1 !== r.indexOf( '<tr' ) ) {
 						$(inlineEditPost.what+id).siblings('tr.hidden').addBack().remove();
+=======
+				$('table.widefat .spinner').hide();
+
+				if (r) {
+					if ( -1 !== r.indexOf( '<tr' ) ) {
+						$(inlineEditPost.what+id).remove();
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 						$('#edit-'+id).before(r).remove();
 						$(inlineEditPost.what+id).hide().fadeIn();
 					} else {
@@ -280,6 +326,13 @@ inlineEditPost = {
 				} else {
 					$('#edit-'+id+' .inline-edit-save .error').html(inlineEditL10n.error).show();
 				}
+<<<<<<< HEAD
+=======
+
+				if ( $('#post-'+id).prev().hasClass('alternate') ) {
+					$('#post-'+id).removeClass('alternate');
+				}
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			},
 		'html');
 		return false;
@@ -289,6 +342,7 @@ inlineEditPost = {
 		var id = $('table.widefat tr.inline-editor').attr('id');
 
 		if ( id ) {
+<<<<<<< HEAD
 			$( 'table.widefat .spinner' ).removeClass( 'is-active' );
 
 			if ( 'bulk-edit' === id ) {
@@ -297,6 +351,16 @@ inlineEditPost = {
 				$('#inlineedit').append( $('#bulk-edit') );
 			} else {
 				$('#'+id).siblings('tr.hidden').addBack().remove();
+=======
+			$('table.widefat .spinner').hide();
+
+			if ( 'bulk-edit' === id ) {
+				$('table.widefat #bulk-edit').removeClass('inline-editor').hide();
+				$('#bulk-titles').html('');
+				$('#inlineedit').append( $('#bulk-edit') );
+			} else {
+				$('#'+id).remove();
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				id = id.substr( id.lastIndexOf('-') + 1 );
 				$(this.what+id).show();
 			}

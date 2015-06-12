@@ -325,7 +325,11 @@ class Featured_Content {
 		}
 
 		$settings = self::get_setting();
+<<<<<<< HEAD
 		foreach ( $terms as $order => $term ) {
+=======
+		foreach( $terms as $order => $term ) {
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			if ( ( $settings['tag-id'] === $term->term_id || $settings['tag-name'] === $term->name ) && 'post_tag' === $term->taxonomy ) {
 				unset( $terms[ $order ] );
 			}
@@ -369,7 +373,11 @@ class Featured_Content {
 		}
 
 		$settings = self::get_setting();
+<<<<<<< HEAD
 		foreach ( $terms as $order => $term ) {
+=======
+		foreach( $terms as $order => $term ) {
+>>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			if ( ( $settings['tag-id'] === $term->term_id || $settings['tag-name'] === $term->name ) && 'post_tag' === $term->taxonomy ) {
 				unset( $terms[ $term->term_id ] );
 			}
