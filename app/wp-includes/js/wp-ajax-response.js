@@ -12,11 +12,7 @@ var wpAjax = jQuery.extend( {
 		return r;
 	},
 	parseAjaxResponse: function( x, r, e ) { // 1 = good, 0 = strange (bad data?), -1 = you lack permission
-<<<<<<< HEAD
 		var parsed = {}, re = jQuery('#' + r).empty(), err = '';
-=======
-		var parsed = {}, re = jQuery('#' + r).html(''), err = '';
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 		if ( x && typeof x == 'object' && x.getElementsByTagName('wp_ajax') ) {
 			parsed.responses = [];

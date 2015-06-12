@@ -25,31 +25,17 @@ class Walker {
 	 * DB fields to use.
 	 *
 	 * @since 2.1.0
-<<<<<<< HEAD
 	 * @var array
 	 */
 	public $db_fields;
-=======
-	 * @access protected
-	 * @var array
-	 */
-	protected $db_fields;
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 	/**
 	 * Max number of pages walked by the paged walker
 	 *
 	 * @since 2.7.0
-<<<<<<< HEAD
 	 * @var int
 	 */
 	public $max_pages = 1;
-=======
-	 * @access protected
-	 * @var int
-	 */
-	protected $max_pages = 1;
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 	/**
 	 * Whether the current element has children or not.
@@ -57,68 +43,9 @@ class Walker {
 	 * To be used in start_el().
 	 *
 	 * @since 4.0.0
-<<<<<<< HEAD
 	 * @var bool
 	 */
 	public $has_children;
-=======
-	 * @access protected
-	 * @var bool
-	 */
-	protected $has_children;
-
-	/**
-	 * Make private properties readable for backwards compatibility.
-	 *
-	 * @since 4.0.0
-	 * @access public
-	 *
-	 * @param string $name Property to get.
-	 * @return mixed Property.
-	 */
-	public function __get( $name ) {
-		return $this->$name;
-	}
-
-	/**
-	 * Make private properties settable for backwards compatibility.
-	 *
-	 * @since 4.0.0
-	 * @access public
-	 *
-	 * @param string $name  Property to set.
-	 * @param mixed  $value Property value.
-	 * @return mixed Newly-set property.
-	 */
-	public function __set( $name, $value ) {
-		return $this->$name = $value;
-	}
-
-	/**
-	 * Make private properties checkable for backwards compatibility.
-	 *
-	 * @since 4.0.0
-	 * @access public
-	 *
-	 * @param string $name Property to check if set.
-	 * @return bool Whether the property is set.
-	 */
-	public function __isset( $name ) {
-		return isset( $this->$name );
-	}
-
-	/**
-	 * Make private properties un-settable for backwards compatibility.
-	 *
-	 * @since 4.0.0
-	 * @access public
-	 *
-	 * @param string $name Property to unset.
-	 */
-	public function __unset( $name ) {
-		unset( $this->$name );
-	}
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 	/**
 	 * Starts the list before the elements are added.

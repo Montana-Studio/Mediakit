@@ -50,7 +50,6 @@ function wp_underscore_audio_template() {
 function wp_underscore_video_template() {
 	$video_types = wp_get_video_extensions();
 ?>
-<<<<<<< HEAD
 <#  var w_rule = h_rule = '', classes = [],
 		w, h, settings = wp.media.view.settings,
 		isYouTube = isVimeo = false;
@@ -59,11 +58,6 @@ function wp_underscore_video_template() {
 		isYouTube = data.model.src.match(/youtube|youtu\.be/);
 		isVimeo = -1 !== data.model.src.indexOf('vimeo');
 	}
-=======
-<#  var w_rule = h_rule = '',
-		w, h, settings = wp.media.view.settings,
-		isYouTube = ! _.isEmpty( data.model.src ) && data.model.src.match(/youtube|youtu\.be/);
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 	if ( settings.contentWidth && data.model.width >= settings.contentWidth ) {
 		w = settings.contentWidth;
@@ -83,7 +77,6 @@ function wp_underscore_video_template() {
 	if ( h ) {
 		h_rule = 'height: ' + h + 'px;';
 	}
-<<<<<<< HEAD
 
 	if ( isYouTube ) {
 		classes.push( 'youtube-video' );
@@ -97,12 +90,6 @@ function wp_underscore_video_template() {
 <div style="{{ w_rule }}{{ h_rule }}" class="wp-video">
 <video controls
 	class="wp-video-shortcode {{ classes.join( ' ' ) }}"
-=======
-#>
-<div style="{{ w_rule }}{{ h_rule }}" class="wp-video">
-<video controls
-	class="wp-video-shortcode{{ isYouTube ? ' youtube-video' : '' }}"
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	<# if ( w ) { #>width="{{ w }}"<# } #>
 	<# if ( h ) { #>height="{{ h }}"<# } #>
 	<?php
@@ -127,11 +114,8 @@ function wp_underscore_video_template() {
 	<# if ( ! _.isEmpty( data.model.src ) ) {
 		if ( isYouTube ) { #>
 		<source src="{{ data.model.src }}" type="video/youtube" />
-<<<<<<< HEAD
 		<# } else if ( isVimeo ) { #>
 		<source src="{{ data.model.src }}" type="video/vimeo" />
-=======
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		<# } else { #>
 		<source src="{{ data.model.src }}" type="{{ settings.embedMimes[ data.model.src.split('.').pop() ] }}" />
 		<# }
@@ -828,15 +812,9 @@ function wp_print_media_templates() {
 	</script>
 
 	<script type="text/html" id="tmpl-embed-link-settings">
-<<<<<<< HEAD
 		<label class="setting link-text">
 			<span><?php _e( 'Link Text' ); ?></span>
 			<input type="text" class="alignment" data-setting="linkText" />
-=======
-		<label class="setting title">
-			<span><?php _e( 'Title' ); ?></span>
-			<input type="text" class="alignment" data-setting="title" />
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		</label>
 		<div class="embed-container" style="display: none;">
 			<div class="embed-preview"></div>
@@ -1130,12 +1108,7 @@ function wp_print_media_templates() {
 			<div class="embed-media-settings embed-video-settings">
 				<div class="wp-video-holder">
 				<#
-<<<<<<< HEAD
 				var w = ! data.model.width || data.model.width > 640 ? 640 : data.model.width,
-=======
-				var isYouTube = ! _.isEmpty( data.model.src ) && data.model.src.match(/youtube|youtu\.be/);
-					w = ! data.model.width || data.model.width > 640 ? 640 : data.model.width,
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 					h = ! data.model.height ? 360 : data.model.height;
 
 				if ( data.model.width && w !== data.model.width ) {
@@ -1232,11 +1205,7 @@ function wp_print_media_templates() {
 	</script>
 
 	<script type="text/html" id="tmpl-editor-gallery">
-<<<<<<< HEAD
 		<# if ( data.attachments.length ) { #>
-=======
-		<# if ( data.attachments ) { #>
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			<div class="gallery gallery-columns-{{ data.columns }}">
 				<# _.each( data.attachments, function( attachment, index ) { #>
 					<dl class="gallery-item">

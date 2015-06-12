@@ -6,10 +6,6 @@ class WP_Importer {
 	/**
 	 * Class Constructor
 	 *
-<<<<<<< HEAD
-=======
-	 * @return void
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	 */
 	public function __construct() {}
 
@@ -213,11 +209,7 @@ class WP_Importer {
 	 */
 	public function is_user_over_quota() {
 		if ( function_exists( 'upload_is_user_over_quota' ) ) {
-<<<<<<< HEAD
 			if ( upload_is_user_over_quota() ) {
-=======
-			if ( upload_is_user_over_quota( 1 ) ) {
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				echo "Sorry, you have used your upload quota.\n";
 				return true;
 			}
@@ -280,22 +272,14 @@ function get_cli_args( $param, $required = false ) {
 			}
 
 			$last_arg = $key;
-<<<<<<< HEAD
 		} elseif ( (bool) preg_match( "/^-([a-zA-Z0-9]+)/", $args[$i], $match ) ) {
-=======
-		} else if ( (bool) preg_match( "/^-([a-zA-Z0-9]+)/", $args[$i], $match ) ) {
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			for ( $j = 0, $jl = strlen( $match[1] ); $j < $jl; $j++ ) {
 				$key = $match[1]{$j};
 				$out[$key] = true;
 			}
 
 			$last_arg = $key;
-<<<<<<< HEAD
 		} elseif ( $last_arg !== null ) {
-=======
-		} else if ( $last_arg !== null ) {
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			$out[$last_arg] = $args[$i];
 		}
 	}

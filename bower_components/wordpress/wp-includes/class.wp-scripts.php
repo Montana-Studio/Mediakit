@@ -95,7 +95,6 @@ class WP_Scripts extends WP_Dependencies {
 		if ( false === $group && in_array($handle, $this->in_footer, true) )
 			$this->in_footer = array_diff( $this->in_footer, (array) $handle );
 
-<<<<<<< HEAD
 		$obj = $this->registered[$handle];
 
 		if ( null === $obj->ver ) {
@@ -103,17 +102,10 @@ class WP_Scripts extends WP_Dependencies {
 		} else {
 			$ver = $obj->ver ? $obj->ver : $this->default_version;
 		}
-=======
-		if ( null === $this->registered[$handle]->ver )
-			$ver = '';
-		else
-			$ver = $this->registered[$handle]->ver ? $this->registered[$handle]->ver : $this->default_version;
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 		if ( isset($this->args[$handle]) )
 			$ver = $ver ? $ver . '&amp;' . $this->args[$handle] : $this->args[$handle];
 
-<<<<<<< HEAD
 		$src = $obj->src;
 		$cond_before = $cond_after = '';
 		$conditional = isset( $obj->extra['conditional'] ) ? $obj->extra['conditional'] : '';
@@ -122,9 +114,6 @@ class WP_Scripts extends WP_Dependencies {
 			$cond_before = "<!--[if {$conditional}]>\n";
 			$cond_after = "<![endif]-->\n";
 		}
-=======
-		$src = $this->registered[$handle]->src;
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 		if ( $this->do_concat ) {
 			/**
@@ -136,11 +125,7 @@ class WP_Scripts extends WP_Dependencies {
 			 * @param string $handle Script handle.
 			 */
 			$srce = apply_filters( 'script_loader_src', $src, $handle );
-<<<<<<< HEAD
 			if ( $this->in_default_dir( $srce ) && ! $conditional ) {
-=======
-			if ( $this->in_default_dir($srce) ) {
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				$this->print_code .= $this->print_extra_script( $handle, false );
 				$this->concat .= "$handle,";
 				$this->concat_version .= "$handle$ver";
@@ -151,7 +136,6 @@ class WP_Scripts extends WP_Dependencies {
 			}
 		}
 
-<<<<<<< HEAD
 		$has_conditional_data = $conditional && $this->get_data( $handle, 'data' );
 
 		if ( $has_conditional_data ) {
@@ -170,15 +154,6 @@ class WP_Scripts extends WP_Dependencies {
 
 		if ( ! empty( $ver ) )
 			$src = add_query_arg( 'ver', $ver, $src );
-=======
-		$this->print_extra_script( $handle );
-		if ( !preg_match('|^(https?:)?//|', $src) && ! ( $this->content_url && 0 === strpos($src, $this->content_url) ) ) {
-			$src = $this->base_url . $src;
-		}
-
-		if ( !empty($ver) )
-			$src = add_query_arg('ver', $ver, $src);
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 		/** This filter is documented in wp-includes/class.wp-scripts.php */
 		$src = esc_url( apply_filters( 'script_loader_src', $src, $handle ) );
@@ -186,11 +161,7 @@ class WP_Scripts extends WP_Dependencies {
 		if ( ! $src )
 			return true;
 
-<<<<<<< HEAD
 		$tag = "{$cond_before}<script type='text/javascript' src='$src'></script>\n{$cond_after}";
-=======
-		$tag = "<script type='text/javascript' src='$src'></script>\n";
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 		/** 
 		 * Filter the HTML script tag of an enqueued script.

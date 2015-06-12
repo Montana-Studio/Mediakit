@@ -173,11 +173,7 @@ class WP_Theme_Install_List_Table extends WP_Themes_List_Table {
 		</div>
 
 		<?php
-<<<<<<< HEAD
 		$this->tablenav( 'bottom' );
-=======
-		parent::tablenav( 'bottom' );
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	}
 
 	public function display_rows() {

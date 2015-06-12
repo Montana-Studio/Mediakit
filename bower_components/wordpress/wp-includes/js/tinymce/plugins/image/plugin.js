@@ -67,22 +67,14 @@ tinymce.PluginManager.add('image', function(editor) {
 		return function() {
 			var imageList = editor.settings.image_list;
 
-<<<<<<< HEAD
 			if (typeof imageList == "string") {
-=======
-			if (typeof(imageList) == "string") {
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				tinymce.util.XHR.send({
 					url: imageList,
 					success: function(text) {
 						callback(tinymce.util.JSON.parse(text));
 					}
 				});
-<<<<<<< HEAD
 			} else if (typeof imageList == "function") {
-=======
-			} else if (typeof(imageList) == "function") {
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				imageList(callback);
 			} else {
 				callback(imageList);
@@ -110,7 +102,6 @@ tinymce.PluginManager.add('image', function(editor) {
 			if (win.find('#constrain')[0].checked() && width && height && newWidth && newHeight) {
 				if (width != newWidth) {
 					newHeight = Math.round((newWidth / width) * newHeight);
-<<<<<<< HEAD
 
 					if (!isNaN(newHeight)) {
 						heightCtrl.value(newHeight);
@@ -121,12 +112,6 @@ tinymce.PluginManager.add('image', function(editor) {
 					if (!isNaN(newWidth)) {
 						widthCtrl.value(newWidth);
 					}
-=======
-					heightCtrl.value(newHeight);
-				} else {
-					newWidth = Math.round((newHeight / height) * newWidth);
-					widthCtrl.value(newWidth);
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				}
 			}
 
@@ -171,13 +156,10 @@ tinymce.PluginManager.add('image', function(editor) {
 				data.alt = '';
 			}
 
-<<<<<<< HEAD
 			if (!data.title) {
 				data.title = '';
 			}
 
-=======
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			if (data.width === '') {
 				data.width = null;
 			}
@@ -191,17 +173,11 @@ tinymce.PluginManager.add('image', function(editor) {
 			}
 
 			// Setup new data excluding style properties
-<<<<<<< HEAD
 			/*eslint dot-notation: 0*/
 			data = {
 				src: data.src,
 				alt: data.alt,
 				title: data.title,
-=======
-			data = {
-				src: data.src,
-				alt: data.alt,
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				width: data.width,
 				height: data.height,
 				style: data.style,
@@ -230,13 +206,10 @@ tinymce.PluginManager.add('image', function(editor) {
 					return;
 				}
 
-<<<<<<< HEAD
 				if (data.title === "") {
 					data.title = null;
 				}
 
-=======
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				if (!imgElm) {
 					data.id = '__mcenew';
 					editor.focus();
@@ -260,11 +233,7 @@ tinymce.PluginManager.add('image', function(editor) {
 		}
 
 		function srcChange(e) {
-<<<<<<< HEAD
 			var srcURL, prependURL, absoluteURLPattern, meta = e.meta || {};
-=======
-			var meta = e.meta || {};
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 			if (imageListCtrl) {
 				imageListCtrl.value(editor.convertURL(this.value(), 'src'));
@@ -275,7 +244,6 @@ tinymce.PluginManager.add('image', function(editor) {
 			});
 
 			if (!meta.width && !meta.height) {
-<<<<<<< HEAD
 				srcURL = editor.convertURL(this.value(), 'src');
 
 				// Pattern test the src url and make sure we haven't already prepended the url
@@ -288,18 +256,6 @@ tinymce.PluginManager.add('image', function(editor) {
 				this.value(srcURL);
 
 				getImageSize(editor.documentBaseURI.toAbsolute(this.value()), function(data) {
-=======
-				var srcURL = this.value(),
-				absoluteURLPattern = new RegExp('^(?:[a-z]+:)?//', 'i'),
-				baseURL = editor.settings.document_base_url;
-
-				//Pattern test the src url and make sure we haven't already prepended the url
-				if (baseURL && !absoluteURLPattern.test(srcURL) && srcURL.substring(0, baseURL.length) !== baseURL) {
-					this.value(baseURL + srcURL);
-				}
-
-				getImageSize(this.value(), function(data) {
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 					if (data.width && data.height && imageDimensions) {
 						width = data.width;
 						height = data.height;
@@ -318,10 +274,7 @@ tinymce.PluginManager.add('image', function(editor) {
 			data = {
 				src: dom.getAttrib(imgElm, 'src'),
 				alt: dom.getAttrib(imgElm, 'alt'),
-<<<<<<< HEAD
 				title: dom.getAttrib(imgElm, 'title'),
-=======
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				"class": dom.getAttrib(imgElm, 'class'),
 				width: width,
 				height: height
@@ -395,13 +348,10 @@ tinymce.PluginManager.add('image', function(editor) {
 			generalFormItems.push({name: 'alt', type: 'textbox', label: 'Image description'});
 		}
 
-<<<<<<< HEAD
 		if (editor.settings.image_title) {
 			generalFormItems.push({name: 'title', type: 'textbox', label: 'Image Title'});
 		}
 
-=======
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		if (imageDimensions) {
 			generalFormItems.push({
 				type: 'container',
@@ -424,7 +374,6 @@ tinymce.PluginManager.add('image', function(editor) {
 		// WP
 		editor.fire( 'wpLoadImageForm', { data: generalFormItems } );
 
-<<<<<<< HEAD
 		function mergeMargins(css) {
 			if (css.margin) {
 
@@ -460,8 +409,6 @@ tinymce.PluginManager.add('image', function(editor) {
 			return css;
 		}
 
-=======
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		function updateStyle() {
 			function addPixelSuffix(value) {
 				if (value.length > 0 && /^[0-9]+$/.test(value)) {
@@ -475,7 +422,6 @@ tinymce.PluginManager.add('image', function(editor) {
 				return;
 			}
 
-<<<<<<< HEAD
 			var data = win.toJSON(),
 				css = dom.parseStyle(data.style);
 
@@ -528,23 +474,11 @@ tinymce.PluginManager.add('image', function(editor) {
 
 			win.find('#style').value(dom.serializeStyle(dom.parseStyle(dom.serializeStyle(css))));
 
-=======
-			var data = win.toJSON();
-			var css = dom.parseStyle(data.style);
-
-			delete css.margin;
-			css['margin-top'] = css['margin-bottom'] = addPixelSuffix(data.vspace);
-			css['margin-left'] = css['margin-right'] = addPixelSuffix(data.hspace);
-			css['border-width'] = addPixelSuffix(data.border);
-
-			win.find('#style').value(dom.serializeStyle(dom.parseStyle(dom.serializeStyle(css))));
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		}
 
 		if (editor.settings.image_advtab) {
 			// Parse styles from img
 			if (imgElm) {
-<<<<<<< HEAD
 				if (imgElm.style.marginLeft && imgElm.style.marginRight && imgElm.style.marginLeft === imgElm.style.marginRight) {
 					data.hspace = removePixelSuffix(imgElm.style.marginLeft);
 				}
@@ -555,11 +489,6 @@ tinymce.PluginManager.add('image', function(editor) {
 					data.border = removePixelSuffix(imgElm.style.borderWidth);
 				}
 
-=======
-				data.hspace = removePixelSuffix(imgElm.style.marginLeft || imgElm.style.marginRight);
-				data.vspace = removePixelSuffix(imgElm.style.marginTop || imgElm.style.marginBottom);
-				data.border = removePixelSuffix(imgElm.style.borderWidth);
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				data.style = editor.dom.serializeStyle(editor.dom.parseStyle(editor.dom.getAttrib(imgElm, 'style')));
 			}
 
@@ -583,12 +512,8 @@ tinymce.PluginManager.add('image', function(editor) {
 							{
 								label: 'Style',
 								name: 'style',
-<<<<<<< HEAD
 								type: 'textbox',
 								onchange: updateVSpaceHSpaceBorder
-=======
-								type: 'textbox'
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 							},
 							{
 								type: 'form',
@@ -633,11 +558,7 @@ tinymce.PluginManager.add('image', function(editor) {
 
 	editor.addMenuItem('image', {
 		icon: 'image',
-<<<<<<< HEAD
 		text: 'Insert/edit image',
-=======
-		text: 'Insert image',
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		onclick: createImageList(showDialog),
 		context: 'insert',
 		prependToContext: true

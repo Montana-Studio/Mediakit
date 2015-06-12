@@ -1,11 +1,7 @@
 {
   "name": "bourbon",
   "description": "A simple and lightweight mixin library for Sass.",
-<<<<<<< HEAD
   "version": "4.2.3",
-=======
-  "version": "4.2.2",
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
   "main": "app/assets/stylesheets/_bourbon.scss",
   "license": "MIT",
   "ignore": [

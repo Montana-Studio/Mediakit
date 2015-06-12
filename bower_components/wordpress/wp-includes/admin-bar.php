@@ -22,11 +22,7 @@ function _wp_admin_bar_init() {
 		return false;
 
 	/* Load the admin bar class code ready for instantiation */
-<<<<<<< HEAD
 	require_once( ABSPATH . WPINC . '/class-wp-admin-bar.php' );
-=======
-	require( ABSPATH . WPINC . '/class-wp-admin-bar.php' );
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 	/* Instantiate the admin bar */
 
@@ -48,12 +44,6 @@ function _wp_admin_bar_init() {
 
 	return true;
 }
-<<<<<<< HEAD
-=======
-// Don't remove. Wrong way to disable.
-add_action( 'template_redirect', '_wp_admin_bar_init', 0 );
-add_action( 'admin_init', '_wp_admin_bar_init' );
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 /**
  * Render the admin bar to the page based on the $wp_admin_bar->menu member var.
@@ -99,11 +89,6 @@ function wp_admin_bar_render() {
 	 */
 	do_action( 'wp_after_admin_bar_render' );
 }
-<<<<<<< HEAD
-=======
-add_action( 'wp_footer', 'wp_admin_bar_render', 1000 );
-add_action( 'in_admin_header', 'wp_admin_bar_render', 0 );
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 /**
  * Add the WordPress logo menu.
@@ -115,16 +100,8 @@ add_action( 'in_admin_header', 'wp_admin_bar_render', 0 );
 function wp_admin_bar_wp_menu( $wp_admin_bar ) {
 	$wp_admin_bar->add_menu( array(
 		'id'    => 'wp-logo',
-<<<<<<< HEAD
 		'title' => '<span class="ab-icon"></span><span class="screen-reader-text">' . __( 'About WordPress' ) . '</span>',
 		'href'  => self_admin_url( 'about.php' ),
-=======
-		'title' => '<span class="ab-icon"></span>',
-		'href'  => self_admin_url( 'about.php' ),
-		'meta'  => array(
-			'title' => __('About WordPress'),
-		),
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	) );
 
 	if ( is_user_logged_in() ) {
@@ -133,11 +110,7 @@ function wp_admin_bar_wp_menu( $wp_admin_bar ) {
 			'parent' => 'wp-logo',
 			'id'     => 'about',
 			'title'  => __('About WordPress'),
-<<<<<<< HEAD
 			'href'   => self_admin_url( 'about.php' ),
-=======
-			'href'  => self_admin_url( 'about.php' ),
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		) );
 	}
 
@@ -154,11 +127,7 @@ function wp_admin_bar_wp_menu( $wp_admin_bar ) {
 		'parent'    => 'wp-logo-external',
 		'id'        => 'documentation',
 		'title'     => __('Documentation'),
-<<<<<<< HEAD
 		'href'      => __('https://codex.wordpress.org/'),
-=======
-		'href'      => __('http://codex.wordpress.org/'),
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	) );
 
 	// Add forums link
@@ -221,10 +190,6 @@ function wp_admin_bar_my_account_item( $wp_admin_bar ) {
 		'href'      => $profile_url,
 		'meta'      => array(
 			'class'     => $class,
-<<<<<<< HEAD
-=======
-			'title'     => __('My Account'),
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		),
 	) );
 }
@@ -364,7 +329,6 @@ function wp_admin_bar_my_sites_menu( $wp_admin_bar ) {
 	if ( count( $wp_admin_bar->user->blogs ) < 1 && ! is_super_admin() )
 		return;
 
-<<<<<<< HEAD
 	if ( $wp_admin_bar->user->active_blog ) {
 		$my_sites_url = get_admin_url( $wp_admin_bar->user->active_blog->blog_id, 'my-sites.php' );
 	} else {
@@ -375,12 +339,6 @@ function wp_admin_bar_my_sites_menu( $wp_admin_bar ) {
 		'id'    => 'my-sites',
 		'title' => __( 'My Sites' ),
 		'href'  => $my_sites_url,
-=======
-	$wp_admin_bar->add_menu( array(
-		'id'    => 'my-sites',
-		'title' => __( 'My Sites' ),
-		'href'  => admin_url( 'my-sites.php' ),
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	) );
 
 	if ( is_super_admin() ) {
@@ -648,12 +606,6 @@ function wp_admin_bar_new_content_menu( $wp_admin_bar ) {
 		'id'    => 'new-content',
 		'title' => $title,
 		'href'  => admin_url( current( array_keys( $actions ) ) ),
-<<<<<<< HEAD
-=======
-		'meta'  => array(
-			'title' => _x( 'Add New', 'admin bar menu group label' ),
-		),
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	) );
 
 	foreach ( $actions as $link => $action ) {
@@ -704,7 +656,6 @@ function wp_admin_bar_comments_menu( $wp_admin_bar ) {
 function wp_admin_bar_appearance_menu( $wp_admin_bar ) {
 	$wp_admin_bar->add_group( array( 'parent' => 'site-name', 'id' => 'appearance' ) );
 
-<<<<<<< HEAD
 	$current_url = ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 	$customize_url = add_query_arg( 'url', urlencode( $current_url ), wp_customize_url() );
 
@@ -732,16 +683,6 @@ function wp_admin_bar_appearance_menu( $wp_admin_bar ) {
 		}
 	}
 
-=======
-	if ( current_user_can( 'switch_themes' ) || current_user_can( 'edit_theme_options' ) )
-		$wp_admin_bar->add_menu( array( 'parent' => 'appearance', 'id' => 'themes', 'title' => __('Themes'), 'href' => admin_url('themes.php') ) );
-
-	if ( ! current_user_can( 'edit_theme_options' ) )
-		return;
-
-	$current_url = ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-	$customize_url = add_query_arg( 'url', urlencode( $current_url ), wp_customize_url() );
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	if ( current_user_can( 'customize' ) ) {
 		$wp_admin_bar->add_menu( array(
 			'parent' => 'appearance',
@@ -755,7 +696,6 @@ function wp_admin_bar_appearance_menu( $wp_admin_bar ) {
 		add_action( 'wp_before_admin_bar_render', 'wp_customize_support_script' );
 	}
 
-<<<<<<< HEAD
 	if ( ! current_user_can( 'edit_theme_options' ) ) {
 		return;
 	}
@@ -783,10 +723,6 @@ function wp_admin_bar_appearance_menu( $wp_admin_bar ) {
 			) );
 		}
 	}
-=======
-	if ( current_theme_supports( 'widgets' )  )
-		$wp_admin_bar->add_menu( array( 'parent' => 'appearance', 'id' => 'widgets', 'title' => __('Widgets'), 'href' => admin_url('widgets.php') ) );
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 	if ( current_theme_supports( 'menus' ) || current_theme_supports( 'widgets' ) )
 		$wp_admin_bar->add_menu( array( 'parent' => 'appearance', 'id' => 'menus', 'title' => __('Menus'), 'href' => admin_url('nav-menus.php') ) );
@@ -881,10 +817,7 @@ function wp_admin_bar_search_menu( $wp_admin_bar ) {
 
 	$form  = '<form action="' . esc_url( home_url( '/' ) ) . '" method="get" id="adminbarsearch">';
 	$form .= '<input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" />';
-<<<<<<< HEAD
 	$form .= '<label for="adminbar-search" class="screen-reader-text">' . __( 'Search' ) . '</label>';
-=======
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	$form .= '<input type="submit" class="adminbar-button" value="' . __('Search') . '"/>';
 	$form .= '</form>';
 

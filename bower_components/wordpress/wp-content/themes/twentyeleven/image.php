@@ -66,11 +66,7 @@ get_header(); ?>
 			$next_attachment_url = get_attachment_link( $attachments[ $k ]->ID );
 		else
 			// or get the URL of the first image attachment
-<<<<<<< HEAD
 			$next_attachment_url = get_attachment_link( $attachments[0]->ID );
-=======
-			$next_attachment_url = get_attachment_link( $attachments[ 0 ]->ID );
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	} else {
 		// or, if there's only 1 image, get the URL of the image
 		$next_attachment_url = wp_get_attachment_url();

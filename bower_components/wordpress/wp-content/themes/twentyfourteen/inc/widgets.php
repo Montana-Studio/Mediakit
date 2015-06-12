@@ -4,11 +4,7 @@
  *
  * Displays posts from Aside, Quote, Video, Audio, Image, Gallery, and Link formats.
  *
-<<<<<<< HEAD
  * @link https://codex.wordpress.org/Widgets_API#Developing_Widgets
-=======
- * @link http://codex.wordpress.org/Widgets_API#Developing_Widgets
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
  *
  * @package WordPress
  * @subpackage Twenty_Fourteen
@@ -111,11 +107,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 			echo $args['before_widget'];
 			?>
 			<h1 class="widget-title <?php echo esc_attr( $format ); ?>">
-<<<<<<< HEAD
 				<a class="entry-format" href="<?php echo esc_url( get_post_format_link( $format ) ); ?>"><?php echo esc_html( $title ); ?></a>
-=======
-				<a class="entry-format" href="<?php echo esc_url( get_post_format_link( $format ) ); ?>"><?php echo $title; ?></a>
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			</h1>
 			<ol>
 
@@ -157,11 +149,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 									if ( has_post_thumbnail() ) :
 										$post_thumbnail = get_the_post_thumbnail();
 									elseif ( $total_images > 0 ) :
-<<<<<<< HEAD
 										$image          = reset( $images );
-=======
-										$image          = array_shift( $images );
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 										$post_thumbnail = wp_get_attachment_image( $image, 'post-thumbnail' );
 									endif;
 
@@ -273,11 +261,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 			<p><label for="<?php echo esc_attr( $this->get_field_id( 'format' ) ); ?>"><?php _e( 'Post format to show:', 'twentyfourteen' ); ?></label>
 			<select id="<?php echo esc_attr( $this->get_field_id( 'format' ) ); ?>" class="widefat" name="<?php echo esc_attr( $this->get_field_name( 'format' ) ); ?>">
 				<?php foreach ( $this->formats as $slug ) : ?>
-<<<<<<< HEAD
 				<option value="<?php echo esc_attr( $slug ); ?>"<?php selected( $format, $slug ); ?>><?php echo esc_html( get_post_format_string( $slug ) ); ?></option>
-=======
-				<option value="<?php echo esc_attr( $slug ); ?>"<?php selected( $format, $slug ); ?>><?php echo get_post_format_string( $slug ); ?></option>
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				<?php endforeach; ?>
 			</select>
 		<?php

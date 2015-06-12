@@ -95,11 +95,7 @@ function export_wp( $args = array() ) {
 		$cat = get_term( $term['term_id'], 'category' );
 		$cats = array( $cat->term_id => $cat );
 		unset( $term, $cat );
-<<<<<<< HEAD
 	} elseif ( 'all' == $args['content'] ) {
-=======
-	} else if ( 'all' == $args['content'] ) {
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		$categories = (array) get_categories( array( 'get' => 'all' ) );
 		$tags = (array) get_tags( array( 'get' => 'all' ) );
 

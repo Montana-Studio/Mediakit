@@ -30,11 +30,7 @@ textarea {
 	-webkit-box-shadow: inset 0 1px 2px rgba( 0, 0, 0, 0.07 );
 	box-shadow: inset 0 1px 2px rgba( 0, 0, 0, 0.07 );
 	background-color: #fff;
-<<<<<<< HEAD
 	color: #32373c;
-=======
-	color: #333;
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	outline: none;
 	-webkit-transition: 0.05s border-color ease-in-out;
 	transition: 0.05s border-color ease-in-out;
@@ -65,11 +61,7 @@ textarea:focus {
 	box-shadow: 0 0 2px rgba( 30, 140, 190, 0.8 );
 }
 
-<<<<<<< HEAD
 /* rtl:ignore */
-=======
-/* @noflip */
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 input[type="email"],
 input[type="url"] {
 	direction: ltr;
@@ -77,11 +69,7 @@ input[type="url"] {
 
 input[type="checkbox"],
 input[type="radio"] {
-<<<<<<< HEAD
 	border: 1px solid #b4b9be;
-=======
-	border: 1px solid #bbb;
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	background: #fff;
 	color: #555;
 	clear: none;
@@ -104,20 +92,12 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + label:before {
-<<<<<<< HEAD
 	color: #82878c;
-=======
-	color: #888;
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 }
 
 .wp-core-ui input[type="reset"]:hover,
 .wp-core-ui input[type="reset"]:active {
-<<<<<<< HEAD
 	color: #00a0d2;
-=======
-	color: #2ea2cc;
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 }
 
 td > input[type="checkbox"],
@@ -503,7 +483,6 @@ p.search-box {
 	margin: 0 0 0 4px;
 }
 
-<<<<<<< HEAD
 input[type="text"].ui-autocomplete-loading,
 input[type="email"].ui-autocomplete-loading {
 	background-image: url(../images/loading.gif);
@@ -516,70 +495,30 @@ input.ui-autocomplete-input.open {
 	border-bottom-color: transparent;
 }
 
-=======
-input[type="text"].ui-autocomplete-loading {
-	background: transparent url(../images/loading.gif) no-repeat left center;
-	visibility: visible;
-}
-
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 ul#add-to-blog-users {
 	margin: 0 14px 0 0;
 }
 
-<<<<<<< HEAD
-=======
-.ui-autocomplete-input.open {
-	-webkit-border-bottom-left-radius: 0;
-	border-bottom-left-radius: 0;
-	-webkit-border-bottom-right-radius: 0;
-	border-bottom-right-radius: 0;
-}
-
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 .ui-autocomplete {
 	padding: 0;
 	margin: 0;
 	list-style: none;
 	position: absolute;
 	z-index: 10000;
-<<<<<<< HEAD
 	border: 1px solid #5b9dd9;
 	-webkit-box-shadow: 0 1px 2px rgba( 30, 140, 190, 0.8 );
 	box-shadow: 0 1px 2px rgba( 30, 140, 190, 0.8 );
 	background-color: #fff;
-=======
-	-webkit-border-bottom-left-radius: 3px;
-	border-bottom-left-radius: 3px;
-	-webkit-border-bottom-right-radius: 3px;
-	border-bottom-right-radius: 3px;
-	border: 1px solid #aaa;
-	background-color: #efefef;
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 }
 
 .ui-autocomplete li {
 	margin-bottom: 0;
-<<<<<<< HEAD
 	padding: 4px 10px;
-=======
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	white-space: nowrap;
 	text-align: right;
 }
 
-<<<<<<< HEAD
 .ui-autocomplete li.ui-state-focus {
-=======
-.ui-autocomplete li a {
-	display: block;
-	height: 100%;
-	padding: 4px 10px;
-	color: #444;
-}
-
-.ui-autocomplete li a.ui-state-focus {
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	background-color: #ddd;
 	cursor: pointer;
 }
@@ -612,11 +551,7 @@ ul#add-to-blog-users {
 
 .form-table th,
 .form-wrap label {
-<<<<<<< HEAD
 	color: #23282d;
-=======
-	color: #222;
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	font-weight: normal;
 	text-shadow: none;
 	vertical-align: baseline;
@@ -739,7 +674,6 @@ table.form-table td .updated p {
 	line-height: 24px;
 }
 
-<<<<<<< HEAD
 /* Card styles */
 
 .card {
@@ -784,20 +718,6 @@ table.form-table td .updated p {
 	position: relative;
 	cursor: move;
 	color: #32373c;
-=======
-.pressthis {
-	margin: 20px 0;
-}
-
-.pressthis a,
-.pressthis a:hover,
-.pressthis a:focus,
-.pressthis a:active {
-	display: inline-block;
-	position: relative;
-	cursor: move;
-	color: #333;
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	background: #e6e6e6;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
@@ -808,7 +728,6 @@ table.form-table td .updated p {
 	text-decoration: none;
 }
 
-<<<<<<< HEAD
 .pressthis-bookmarklet:active {
 	outline: none;
 }
@@ -833,35 +752,17 @@ table.form-table td .updated p {
 	-webkit-transform: skew(-20deg) rotate(-9deg);
 	-ms-transform: skew(-20deg) rotate(-9deg);
 	transform: skew(-20deg) rotate(-9deg);
-=======
-.pressthis a:active {
-	outline: none;
-}
-
-.pressthis a:hover:after {
-	-webkit-transform: skew(20deg) rotate(9deg);
-	-ms-transform: skew(20deg) rotate(9deg);
-	transform: skew(20deg) rotate(9deg);
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	-webkit-box-shadow: 0 10px 8px rgba(0, 0, 0, 0.7);
 	box-shadow: 0 10px 8px rgba(0, 0, 0, 0.7);
 }
 
-<<<<<<< HEAD
 .pressthis-bookmarklet span {
-=======
-.pressthis a span {
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	display: inline-block;
 	margin: 0px 0 0;
 	padding: 0px 9px 8px 12px;
 }
 
-<<<<<<< HEAD
 .pressthis-bookmarklet span:before {
-=======
-.pressthis a span:before {
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	color: #777;
 	font: normal 20px/1 'dashicons';
 	content:'\f157';
@@ -871,7 +772,6 @@ table.form-table td .updated p {
 	margin-left: 4px;
 }
 
-<<<<<<< HEAD
 .pressthis-js-toggle {
 	margin-right: 10px;
 	padding: 0;
@@ -895,22 +795,6 @@ table.form-table td .updated p {
 .pressthis-js-toggle .dashicons {
 	margin: 5px 7px 6px 8px;
 	color: #777;
-=======
-.pressthis a:after {
-	content: '';
-	width: 70%;
-	height: 55%;
-	z-index: -1;
-	position: absolute;
-	left: 10px;
-	bottom: 9px;
-	background: transparent;
-	-webkit-transform: skew(20deg) rotate(6deg);
-	-ms-transform: skew(20deg) rotate(6deg);
-	transform: skew(20deg) rotate(6deg);
-	-webkit-box-shadow: 0 10px 8px rgba(0, 0, 0, 0.6);
-	box-shadow: 0 10px 8px rgba(0, 0, 0, 0.6);
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 }
 
 /*------------------------------------------------------------------------------
@@ -927,7 +811,6 @@ table.form-table td .updated p {
 	vertical-align: middle;
 }
 
-<<<<<<< HEAD
 .options-general-php input.small-text {
 	width: 56px;
 }
@@ -935,11 +818,6 @@ table.form-table td .updated p {
 .options-general-php .spinner {
 	float: none;
 	margin: 0 3px;
-=======
-.options-general-php .spinner {
-	float: none;
-	margin: -3px 3px;
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 }
 
 .settings-php .language-install-spinner,
@@ -974,7 +852,6 @@ table.form-table td .updated p {
 	margin-bottom: 5px;
 }
 
-<<<<<<< HEAD
 /*------------------------------------------------------------------------------
    Credentials check dialog for Install and Updates
 ------------------------------------------------------------------------------*/
@@ -1043,8 +920,6 @@ table.form-table td .updated p {
 }
 
 
-=======
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 /* =Media Queries
 -------------------------------------------------------------- */
 
@@ -1274,7 +1149,6 @@ table.form-table td .updated p {
 		max-width: 400px;
 		width: auto;
 	}
-<<<<<<< HEAD
 
 }
 
@@ -1289,8 +1163,6 @@ table.form-table td .updated p {
 		right: 0;
 		overflow-y: auto;
 	}
-=======
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 }
 
 /* Smartphone */

@@ -402,15 +402,11 @@ class IXR_Server
     {
         if (!$data) {
             if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] !== 'POST') {
-<<<<<<< HEAD
                 if ( function_exists( 'status_header' ) ) {
                     status_header( 405 ); // WP #20986
                     header( 'Allow: POST' );
                 }
                 header('Content-Type: text/plain'); // merged from WP #9093
-=======
-            	header('Content-Type: text/plain'); // merged from WP #9093
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
                 die('XML-RPC server accepts POST requests only.');
             }
 

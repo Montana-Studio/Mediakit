@@ -2,11 +2,7 @@
 /**
  * Implement an optional custom header for Twenty Twelve
  *
-<<<<<<< HEAD
  * See https://codex.wordpress.org/Custom_Headers
-=======
- * See http://codex.wordpress.org/Custom_Headers
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
  *
  * @package WordPress
  * @subpackage Twenty_Twelve
@@ -151,7 +147,6 @@ function twentytwelve_admin_header_style() {
  * @since Twenty Twelve 1.0
  */
 function twentytwelve_admin_header_image() {
-<<<<<<< HEAD
 	$style = 'color: #' . get_header_textcolor() . ';';
 	if ( ! display_header_text() ) {
 		$style = 'display: none;';
@@ -163,21 +158,6 @@ function twentytwelve_admin_header_image() {
 		<?php $header_image = get_header_image();
 		if ( ! empty( $header_image ) ) : ?>
 			<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="" />
-=======
-	?>
-	<div id="headimg">
-		<?php
-		if ( ! display_header_text() )
-			$style = ' style="display:none;"';
-		else
-			$style = ' style="color:#' . get_header_textcolor() . ';"';
-		?>
-		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"  tabindex="-1"><?php bloginfo( 'name' ); ?></a></h1>
-		<h2 id="desc" class="displaying-header-text"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></h2>
-		<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>
-			<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		<?php endif; ?>
 	</div>
 <?php }

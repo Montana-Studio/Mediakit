@@ -3,13 +3,8 @@
  * The loop that displays posts
  *
  * The loop displays the posts and the post content. See
-<<<<<<< HEAD
  * https://codex.wordpress.org/The_Loop to understand it and
  * https://codex.wordpress.org/Template_Tags to understand
-=======
- * http://codex.wordpress.org/The_Loop to understand it and
- * http://codex.wordpress.org/Template_Tags to understand
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
  * the tags used in it.
  *
  * This can be overridden in child themes with loop.php or
@@ -80,21 +75,13 @@
 					$images = twentyten_get_gallery_images();
 					if ( $images ) :
 						$total_images = count( $images );
-<<<<<<< HEAD
 						$image = reset( $images );
-=======
-						$image = array_shift( $images );
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				?>
 						<div class="gallery-thumb">
 							<a class="size-thumbnail" href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image( $image, 'thumbnail' ); ?></a>
 						</div><!-- .gallery-thumb -->
 						<p><em><?php printf( _n( 'This gallery contains <a %1$s>%2$s photo</a>.', 'This gallery contains <a %1$s>%2$s photos</a>.', $total_images, 'twentyten' ),
-<<<<<<< HEAD
 								'href="' . esc_url( get_permalink() ) . '" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ) ) . '" rel="bookmark"',
-=======
-								'href="' . get_permalink() . '" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ) ) . '" rel="bookmark"',
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 								number_format_i18n( $total_images )
 							); ?></em></p>
 				<?php endif; // end twentyten_get_gallery_images() check ?>
@@ -104,17 +91,10 @@
 
 			<div class="entry-utility">
 			<?php if ( function_exists( 'get_post_format' ) && 'gallery' == get_post_format( $post->ID ) ) : ?>
-<<<<<<< HEAD
 				<a href="<?php echo esc_url( get_post_format_link( 'gallery' ) ); ?>" title="<?php esc_attr_e( 'View Galleries', 'twentyten' ); ?>"><?php _e( 'More Galleries', 'twentyten' ); ?></a>
 				<span class="meta-sep">|</span>
 			<?php elseif ( $gallery = get_term_by( 'slug', _x( 'gallery', 'gallery category slug', 'twentyten' ), 'category' ) && in_category( $gallery->term_id ) ) : ?>
 				<a href="<?php echo esc_url( get_category_link( $gallery ) ); ?>" title="<?php esc_attr_e( 'View posts in the Gallery category', 'twentyten' ); ?>"><?php _e( 'More Galleries', 'twentyten' ); ?></a>
-=======
-				<a href="<?php echo get_post_format_link( 'gallery' ); ?>" title="<?php esc_attr_e( 'View Galleries', 'twentyten' ); ?>"><?php _e( 'More Galleries', 'twentyten' ); ?></a>
-				<span class="meta-sep">|</span>
-			<?php elseif ( $gallery = get_term_by( 'slug', _x( 'gallery', 'gallery category slug', 'twentyten' ), 'category' ) && in_category( $gallery->term_id ) ) : ?>
-				<a href="<?php echo get_category_link( $gallery ); ?>" title="<?php esc_attr_e( 'View posts in the Gallery category', 'twentyten' ); ?>"><?php _e( 'More Galleries', 'twentyten' ); ?></a>
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				<span class="meta-sep">|</span>
 			<?php endif; ?>
 				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyten' ), __( '1 Comment', 'twentyten' ), __( '% Comments', 'twentyten' ) ); ?></span>

@@ -524,11 +524,7 @@
 		slider.doMath = function() {
 			var slide = slider.slides.first();
 
-<<<<<<< HEAD
 			slider.w = ( slider.viewport === undefined ) ? slider.width() : slider.viewport.width();
-=======
-			slider.w = ( slider.viewport===undefined ) ? slider.width() : slider.viewport.width();
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			slider.h = slide.height();
 			slider.boxPadding = slide.outerWidth() - slide.width();
 

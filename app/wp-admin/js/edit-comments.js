@@ -351,13 +351,8 @@ commentReply = {
 		$('#com-reply').append( replyrow );
 		$('#replycontent').css('height', '').val('');
 		$('#edithead input').val('');
-<<<<<<< HEAD
 		$('.error', replyrow).empty().hide();
 		$( '.spinner', replyrow ).removeClass( 'is-active' );
-=======
-		$('.error', replyrow).html('').hide();
-		$('.spinner', replyrow).hide();
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 		this.cid = '';
 	},
@@ -447,11 +442,7 @@ commentReply = {
 		var post = {};
 
 		$('#replysubmit .error').hide();
-<<<<<<< HEAD
 		$( '#replysubmit .spinner' ).addClass( 'is-active' );
-=======
-		$('#replysubmit .spinner').show();
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 		$('#replyrow input').not(':button').each(function() {
 			var t = $(this);
@@ -534,11 +525,7 @@ commentReply = {
 	error : function(r) {
 		var er = r.statusText;
 
-<<<<<<< HEAD
 		$( '#replysubmit .spinner' ).removeClass( 'is-active' );
-=======
-		$('#replysubmit .spinner').hide();
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 		if ( r.responseText )
 			er = r.responseText.replace( /<.[^<>]*?>/g, '' );
@@ -616,13 +603,9 @@ $(document).ready(function(){
 					disableInInput: true,
 					type: 'keypress',
 					noDisable: '.check-column input[type="checkbox"]'
-<<<<<<< HEAD
 				},
 				cycle_expr: '#the-comment-list tr',
 				start_row_index: 0
-=======
-				}
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			}
 		);
 	}

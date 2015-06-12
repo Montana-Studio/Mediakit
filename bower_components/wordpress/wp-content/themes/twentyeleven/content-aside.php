@@ -4,11 +4,7 @@
  *
  * Used on index and archive pages.
  *
-<<<<<<< HEAD
  * @link https://codex.wordpress.org/Post_Formats
-=======
- * @link http://codex.wordpress.org/Post_Formats
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
  *
  * @package WordPress
  * @subpackage Twenty_Eleven

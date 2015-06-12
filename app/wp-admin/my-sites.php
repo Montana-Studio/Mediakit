@@ -45,22 +45,14 @@ get_current_screen()->add_help_tab( array(
 
 get_current_screen()->set_help_sidebar(
 	'<p><strong>' . __('For more information:') . '</strong></p>' .
-<<<<<<< HEAD
 	'<p>' . __('<a href="https://codex.wordpress.org/Dashboard_My_Sites_Screen" target="_blank">Documentation on My Sites</a>') . '</p>' .
-=======
-	'<p>' . __('<a href="http://codex.wordpress.org/Dashboard_My_Sites_Screen" target="_blank">Documentation on My Sites</a>') . '</p>' .
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	'<p>' . __('<a href="https://wordpress.org/support/" target="_blank">Support Forums</a>') . '</p>'
 );
 
 require_once( ABSPATH . 'wp-admin/admin-header.php' );
 
 if ( $updated ) { ?>
-<<<<<<< HEAD
 	<div id="message" class="updated notice is-dismissible"><p><strong><?php _e( 'Settings saved.' ); ?></strong></p></div>
-=======
-	<div id="message" class="updated"><p><strong><?php _e( 'Settings saved.' ); ?></strong></p></div>
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 <?php } ?>
 
 <div class="wrap">
@@ -72,11 +64,7 @@ if ( empty( $blogs ) ) :
 	echo '</p>';
 else :
 ?>
-<<<<<<< HEAD
 <form id="myblogs" method="post">
-=======
-<form id="myblogs" action="" method="post">
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	<?php
 	choose_primary_blog();
 	/**
@@ -87,11 +75,7 @@ else :
 	do_action( 'myblogs_allblogs_options' );
 	?>
 	<br clear="all" />
-<<<<<<< HEAD
 	<table class="widefat fixed striped">
-=======
-	<table class="widefat fixed">
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	<?php
 	/**
 	 * Enable the Global Settings section on the My Sites screen.
@@ -125,15 +109,8 @@ else :
 		$split = $split + $cols;
 	}
 
-<<<<<<< HEAD
 	foreach ( $rows as $row ) {
 		echo "<tr>";
-=======
-	$c = '';
-	foreach ( $rows as $row ) {
-		$c = $c == 'alternate' ? '' : 'alternate';
-		echo "<tr class='$c'>";
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		$i = 0;
 		foreach ( $row as $user_blog ) {
 			$s = $i == 3 ? '' : 'border-right: 1px solid #ccc;';

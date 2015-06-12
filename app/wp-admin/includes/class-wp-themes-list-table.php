@@ -213,11 +213,7 @@ class WP_Themes_List_Table extends WP_List_Table {
 				<p><?php echo $theme->display('Description'); ?></p>
 				<?php if ( $theme->parent() ) {
 					printf( ' <p class="howto">' . __( 'This <a href="%1$s">child theme</a> requires its parent theme, %2$s.' ) . '</p>',
-<<<<<<< HEAD
 						__( 'https://codex.wordpress.org/Child_Themes' ),
-=======
-						__( 'http://codex.wordpress.org/Child_Themes' ),
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 						$theme->parent()->display( 'Name' ) );
 				} ?>
 			</div>

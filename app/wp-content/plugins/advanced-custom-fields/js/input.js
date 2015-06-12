@@ -3568,7 +3568,6 @@ var acf = {
 			// end loop through all fields
 		},
 		
-<<<<<<< HEAD
 		/*
 		*  show_spinner
 		*
@@ -3650,8 +3649,6 @@ var acf = {
 			
 		},
 		
-=======
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		validate : function( div ){
 			
 			// var
@@ -3923,13 +3920,8 @@ var acf = {
 		acf.validation.run();
 			
 			
-<<<<<<< HEAD
 		if( ! acf.validation.status ) {
 			
-=======
-		if( ! acf.validation.status )
-		{
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			// vars
 			var $form = $(this);
 			
@@ -3949,11 +3941,7 @@ var acf = {
 				
 				
 				// remove spinner
-<<<<<<< HEAD
 				acf.validation.hide_spinner( $('#submitdiv .spinner') );
-=======
-				$('#submitdiv .spinner').hide();
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				
 			}
 			

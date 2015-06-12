@@ -11,14 +11,8 @@ class WP_Ajax_Response {
 	 *
 	 * @since 2.1.0
 	 * @var array
-<<<<<<< HEAD
 	 */
 	public $responses = array();
-=======
-	 * @access private
-	 */
-	private $responses = array();
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 	/**
 	 * Constructor - Passes args to {@link WP_Ajax_Response::add()}.
@@ -27,10 +21,6 @@ class WP_Ajax_Response {
 	 * @see WP_Ajax_Response::add()
 	 *
 	 * @param string|array $args Optional. Will be passed to add() method.
-<<<<<<< HEAD
-=======
-	 * @return WP_Ajax_Response
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	 */
 	public function __construct( $args = '' ) {
 		if ( !empty($args) )
@@ -38,61 +28,6 @@ class WP_Ajax_Response {
 	}
 
 	/**
-<<<<<<< HEAD
-=======
-	 * Make private properties readable for backwards compatibility.
-	 *
-	 * @since 4.0.0
-	 * @access public
-	 *
-	 * @param string $name Property to get.
-	 * @return mixed Property.
-	 */
-	public function __get( $name ) {
-		return $this->$name;
-	}
-
-	/**
-	 * Make private properties settable for backwards compatibility.
-	 *
-	 * @since 4.0.0
-	 * @access public
-	 *
-	 * @param string $name  Property to set.
-	 * @param mixed  $value Property value.
-	 * @return mixed Newly-set property.
-	 */
-	public function __set( $name, $value ) {
-		return $this->$name = $value;
-	}
-
-	/**
-	 * Make private properties checkable for backwards compatibility.
-	 *
-	 * @since 4.0.0
-	 * @access public
-	 *
-	 * @param string $name Property to check if set.
-	 * @return bool Whether the property is set.
-	 */
-	public function __isset( $name ) {
-		return isset( $this->$name );
-	}
-
-	/**
-	 * Make private properties un-settable for backwards compatibility.
-	 *
-	 * @since 4.0.0
-	 * @access public
-	 *
-	 * @param string $name Property to unset.
-	 */
-	public function __unset( $name ) {
-		unset( $this->$name );
-	}
-
-	/**
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 	 * Append to XML response based on given arguments.
 	 *
 	 * The arguments that can be passed in the $args parameter are below. It is

@@ -66,7 +66,6 @@ class acf_field_image extends acf_field
 			'url'		=>	'',
 		);
 		
-<<<<<<< HEAD
 		
 		// has value?
 		if( $field['value'] && is_numeric($field['value']) ) {
@@ -80,14 +79,6 @@ class acf_field_image extends acf_field
 			
 			}
 						
-=======
-		if( $field['value'] && is_numeric($field['value']) )
-		{
-			$url = wp_get_attachment_image_src($field['value'], $field['preview_size']);
-			
-			$o['class'] = 'active';
-			$o['url'] = $url[0];
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		}
 		
 		?>

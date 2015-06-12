@@ -3,13 +3,13 @@
 module.exports = function(grunt) {
 
     grunt.initConfig({
-        pkg: grunt.file.readJSON('Chicfit.json'),
+        pkg: grunt.file.readJSON('mediakit.json'),
 
-        www: 'app/wp-content/themes/chicfit-soy-crack',
+        www: 'app/wp-content/themes/mediakit',
         dist: 'prod',
         
-        jsout:'js/chicfit.min.js',
-        cssout:'css/chicfit.css',
+        jsout:'js/mediakit.min.js',
+        cssout:'css/mediakit.css',
         compimg:'img2/**/*.{png,jpg,gif}',
 
         js:'js/**/*.js',
@@ -88,7 +88,7 @@ module.exports = function(grunt) {
             },
             compile: {
                 files: {
-                    '<%= www %>/<%= jsout %>': ['<%= dist %>/<%= js %>']
+                    '<%= www %>/<%= jsout %>': ['<%= js %>']
                 }
             }
         },
@@ -144,7 +144,7 @@ module.exports = function(grunt) {
 
         watch: {
           configFiles:{
-            files:['<%= dist %>/<%= scss %>','<%= dist %>/<%= js %>','<%= www %>/**/*.{php,html}'],
+            files:['<%= dist %>/<%= scss %>','<%= dist %>/<%= js %>','<%= www %>/**/*.php'],
             options:{
               livereload: true,
             },

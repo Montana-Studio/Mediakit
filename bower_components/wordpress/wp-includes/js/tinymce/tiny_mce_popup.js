@@ -78,11 +78,7 @@ var tinyMCEPopup = {
 		 * tinyMCEPopup.onInit.add(function(ed) {
 		 *     alert(ed.selection.getContent());
 		 * });
-<<<<<<< HEAD
 		 *
-=======
-		 * 
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		 * // Executes the init method on page load in some object using the SomeObject scope
 		 * tinyMCEPopup.onInit.add(SomeObject.init, SomeObject);
 		 */
@@ -331,11 +327,7 @@ var tinyMCEPopup = {
 		}
 	},
 
-<<<<<<< HEAD
 	// Internal functions
-=======
-	// Internal functions	
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 	_restoreSelection : function() {
 		var e = window.event.srcElement;
@@ -367,11 +359,7 @@ var tinyMCEPopup = {
 				"browse": "Browse"
 			};
 
-<<<<<<< HEAD
 			var langCode = (tinymce.settings ? tinymce.settings : t.editor.settings).language || 'en';
-=======
-			var langCode = tinymce.settings.language || 'en';
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			for (var key in map) {
 				tinymce.i18n.data[langCode + "." + key] = tinymce.i18n.translate(map[key]);
 			}
@@ -535,11 +523,7 @@ tinymce.util.Dispatcher = function(scope) {
 		var self = this, returnValue, args = arguments, i, listeners = self.listeners, listener;
 
 		self.inDispatch = true;
-<<<<<<< HEAD
 
-=======
-		
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		// Needs to be a real loop since the listener count might change while looping
 		// And this is also more efficient
 		for (i = 0; i < listeners.length; i++) {

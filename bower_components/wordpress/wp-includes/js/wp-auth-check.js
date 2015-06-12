@@ -49,10 +49,7 @@
 			$('#wp-auth-check-form').append( frame );
 		}
 
-<<<<<<< HEAD
 		$( 'body' ).addClass( 'modal-open' );
-=======
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		wrap.removeClass('hidden');
 
 		if ( frame ) {
@@ -84,10 +81,7 @@
 		wrap.fadeOut( 200, function() {
 			wrap.addClass('hidden').css('display', '');
 			$('#wp-auth-check-frame').remove();
-<<<<<<< HEAD
 			$( 'body' ).removeClass( 'modal-open' );
-=======
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		});
 	}
 

@@ -4,11 +4,7 @@
  *
  * This file has the following configurations: MySQL settings, Table Prefix,
  * Secret Keys, and ABSPATH. You can find more information by visiting
-<<<<<<< HEAD
  * {@link https://codex.wordpress.org/Editing_wp-config.php Editing wp-config.php}
-=======
- * {@link http://codex.wordpress.org/Editing_wp-config.php Editing wp-config.php}
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
  * Codex page. You can get the MySQL settings from your web host.
  *
  * This file is used by the wp-config.php creation script during the
@@ -20,7 +16,6 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-<<<<<<< HEAD
 define('DB_NAME', 'mediakit');
 
 /** MySQL database username */
@@ -34,21 +29,6 @@ define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
-=======
-define('DB_NAME', 'chicfitpublic');
-
-/** MySQL database username */
-define('DB_USER', 'root');
-
-/** MySQL database password */
-define('DB_PASSWORD', 'root');
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
-
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
@@ -62,7 +42,6 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-<<<<<<< HEAD
 define('AUTH_KEY',         ':-E}2=~R[A`_[[B-/MAgg],.DM7-zZ4c307+bH8S#L[+H<<KG}X;o>5BT$Yk^?o:');
 define('SECURE_AUTH_KEY',  '@nZ7$Yi||g-D{?uy_G5F3XN-;UrHU~<*UNo!92QB: >899~/X[UFfwm<G=-+4!3F');
 define('LOGGED_IN_KEY',    ';F[Z|1g]o/D>Uv1BFgJ<|l-Xd~a7UC?9H +y#|EEI9#;f#A^sL)RAjU:]YL``AuQ');
@@ -71,16 +50,6 @@ define('AUTH_SALT',        '6J~~`#|DXl?86sX6nJ#DS9v 1&1<9|L-8swa|OchSq+6NL|=}@_r
 define('SECURE_AUTH_SALT', 'Y<&k$5{yCz+9];ohHy.Y!^6+9@8I]9}Nk:=xu]tV7[~UA.LzCF)9U1OMhgt_T|h%');
 define('LOGGED_IN_SALT',   '|I|z^0nD+~~:F@<E_7l^wDTaM-,wX} o-ObLzjj6-J5AuodFz^5nUaZZ{}i$UCT9');
 define('NONCE_SALT',       '+A&+*X.2[KI|62}]Rp<4~LXh,x&wRI,sfgQyTYkMLJ^u?j6v)KDs|D6DM=ksa3k+');
-=======
-define('AUTH_KEY',         '$=R@?j-rr*gpUF$`fybUuD%,eu|(+6p}p+2]wP68~(ZV)t35vO2.J*6h46R6jd{&');
-define('SECURE_AUTH_KEY',  'xrhRs_4~3t$e+}Ds8A[%%_I0P/4;l6@%^b:ES&fwP]E0(Gx^} Tadnafr<)aU)pO');
-define('LOGGED_IN_KEY',    'V|i4o@gK7<nQW0iBIh_E{8o(3-`A|e~5,@kWlX0;x:FTu6w6L{@Rv>MV-B,:cN;I');
-define('NONCE_KEY',        'A|48ciQBIOx`fBGby)cOY,C[jZ5DJ%?UbsOW#Y`:}V9F_vK[fmF:-c;oX+dE|.&m');
-define('AUTH_SALT',        'C*+pOx-$TQ-H{8i~p7c_M=-mFAB3h%-N$ b&.^PC;KniwtSMn-|Y[=@.qxLFiiz|');
-define('SECURE_AUTH_SALT', '9hV{/0J5C]x9=>6-uJPo~9BqNKIBKu$FT]em+<G_p*nd<+r AWP]C3k9_+Ut9kzR');
-define('LOGGED_IN_SALT',   'd3D%*y[i})9>-Z>M59Zcb<-+8<vCg0D*rqU=h61:3xr[7@ASNyD~63g9xB=J-@R7');
-define('NONCE_SALT',       'Gs[5oL!5_UOaLMNYlwr+P-)||c=O1JjC^ g3R/_,$D}rbS~qUM7ME4[83xw 24L}');
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 /**#@-*/
 
@@ -90,11 +59,7 @@ define('NONCE_SALT',       'Gs[5oL!5_UOaLMNYlwr+P-)||c=O1JjC^ g3R/_,$D}rbS~qUM7M
  * You can have multiple installations in one database if you give each a unique
  * prefix. Only numbers, letters, and underscores please!
  */
-<<<<<<< HEAD
 $table_prefix  = 'wp_';
-=======
-$table_prefix  = 'wp_';
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 
 /**
  * For developers: WordPress debugging mode.

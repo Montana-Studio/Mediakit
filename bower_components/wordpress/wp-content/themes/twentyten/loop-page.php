@@ -3,13 +3,8 @@
  * The loop that displays a page
  *
  * The loop displays the posts and the post content. See
-<<<<<<< HEAD
  * https://codex.wordpress.org/The_Loop to understand it and
  * https://codex.wordpress.org/Template_Tags to understand
-=======
- * http://codex.wordpress.org/The_Loop to understand it and
- * http://codex.wordpress.org/Template_Tags to understand
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
  * the tags used in it.
  *
  * This can be overridden in child themes with loop-page.php.

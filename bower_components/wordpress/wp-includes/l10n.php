@@ -594,11 +594,7 @@ function load_plugin_textdomain( $domain, $deprecated = false, $plugin_rel_path 
 
 	if ( false !== $plugin_rel_path	) {
 		$path = WP_PLUGIN_DIR . '/' . trim( $plugin_rel_path, '/' );
-<<<<<<< HEAD
 	} elseif ( false !== $deprecated ) {
-=======
-	} else if ( false !== $deprecated ) {
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 		_deprecated_argument( __FUNCTION__, '2.7' );
 		$path = ABSPATH . trim( $deprecated, '/' );
 	} else {
@@ -900,11 +896,7 @@ function wp_dropdown_languages( $args = array() ) {
 			$languages[] = array(
 				'language'    => $translation['language'],
 				'native_name' => $translation['native_name'],
-<<<<<<< HEAD
 				'lang'        => current( $translation['iso'] ),
-=======
-				'lang'        => $translation['iso'][1],
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 			);
 
 			// Remove installed language from available translations.
@@ -950,11 +942,7 @@ function wp_dropdown_languages( $args = array() ) {
 			$structure[] = sprintf(
 				'<option value="%s" lang="%s"%s>%s</option>',
 				esc_attr( $translation['language'] ),
-<<<<<<< HEAD
 				esc_attr( current( $translation['iso'] ) ),
-=======
-				esc_attr( $translation['iso'][1] ),
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 				selected( $translation['language'], $args['selected'], false ),
 				esc_html( $translation['native_name'] )
 			);

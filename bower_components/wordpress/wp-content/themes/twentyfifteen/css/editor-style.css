@@ -15,10 +15,7 @@ Description: Used to style the TinyMCE editor.
  * 6.0 - Galleries
  * 7.0 - Audio / Video
  * 8.0 - RTL
-<<<<<<< HEAD
  * 9.0 - Media Queries
-=======
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
  */
 
 
@@ -304,13 +301,6 @@ img {
 	vertical-align: middle;
 }
 
-<<<<<<< HEAD
-=======
-a img {
-	display: block;
-}
-
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
 figure {
 	margin: 0;
 }
@@ -486,7 +476,6 @@ body.rtl {
 .rtl table caption {
 	text-align: right;
 }
-<<<<<<< HEAD
 
 
 /**
@@ -502,5 +491,3 @@ body.rtl {
 		width: auto !important;
 	}
 }
-=======
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f

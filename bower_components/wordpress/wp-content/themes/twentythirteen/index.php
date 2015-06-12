@@ -7,11 +7,7 @@
  * It is used to display a page when nothing more specific matches a query.
  * For example, it puts together the home page when no home.php file exists.
  *
-<<<<<<< HEAD
  * @link https://codex.wordpress.org/Template_Hierarchy
-=======
- * @link http://codex.wordpress.org/Template_Hierarchy
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
  *
  * @package WordPress
  * @subpackage Twenty_Thirteen
@@ -39,8 +35,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
-<<<<<<< HEAD
 <?php get_footer(); ?>
-=======
-<?php get_footer(); ?>
->>>>>>> f8417fafd5bf20d329bf2e3402fca16fd839cf1f
