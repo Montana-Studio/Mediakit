@@ -32,15 +32,15 @@
 							<div class="img-single"><?php echo the_post_thumbnail();?>
 								<div class="title">
 									<a class="highlight" href="<?php the_permalink()?>">
-											<?php if (strlen($post->post_title) > 40) {
-												echo substr(the_title($before = '', $after = '', FALSE), 0, 40) . ' ... '; } else {
-												the_title();
-												} ?>
+									<?php if (strlen($post->post_title) > 40) {
+										echo substr(the_title($before = '', $after = '', FALSE), 0, 40) . ' ... '; } else {
+										the_title();
+										} ?>
 									</a>
 								</div>
 							</div>
 
-							<div class="pattern"><a href="#" class="highlight-inv">MONTHLY REACH 134.000</a></div>
+							<div class="pattern"><a class="highlight-inv">MONTHLY REACH 134.000</a></div>
 
 							<div id="results_metrics" class="sitio-social">
 								<ul>

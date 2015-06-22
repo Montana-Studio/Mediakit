@@ -1,8 +1,12 @@
 .wrapper {
-	@include gridle(12);
-	height: auto;
-	@extend .no-paddings;
 	background:$bg-color; 
+	position:relative;
+	@include gridle(12);
+	@extend .no-paddings;
+	height: 100% !important;
+	@include gridle_state(phoness tabless-md tabless-min notebook-min desktopess) {
+		height: auto !important;
+	}
 	.highlight {
 		background-color:#000;
 		color:#fff;

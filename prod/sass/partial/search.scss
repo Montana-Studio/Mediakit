@@ -15,9 +15,13 @@
 		@include gridle(12);
 		@extend .no-paddings;
 		.encabezado {
+			@extend .shadow;
 			@include gridle(12);
 			background: $second_color;
 			padding: 10px;
+			@include gridle_state(phoness) {
+				margin:{top:10px;}
+			}
 			.content-title {
 				h2 {
 					@extend .no-margins;
@@ -26,7 +30,8 @@
 		}
 		.search-loop {
 			@include gridle(12);
-			margin: 20px 0px;
+			@extend .shadow;
+			margin:{top:20px;}
 			border-bottom:1px solid $li-border-color;
 			background: $second_color;
 			padding:20px 10px;
@@ -74,6 +79,7 @@
 					@include gridle_state(tabless-min) {
 						 padding:{left: 5px;}
 					}
+					@include gridle(12, phoness);
 					a {
 						@extend .highlight-inv;
 						padding:{left:3px !important;right:5px !important;}

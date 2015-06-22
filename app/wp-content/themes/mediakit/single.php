@@ -24,7 +24,7 @@
                     <div class="content-header">
                         <div class="logo-sitio"><a href="#"><img src="<?php the_field('imagen_logo_sitio'); ?>" alt=""></a></div>
                         <div class="bajada"><?php the_content(); ?></div>
-                        <div class="btn-left"><div class="pattern"><a href="#" class="highlight-inv">MONTHLY REACH 34.000</a></div></div>
+                        <div class="btn-left"><div class="pattern"><a class="highlight-inv">MONTHLY REACH 34.000</a></div></div>
                         <div class="btn-right"><div class="btn"><a href="#"><i class="fa fa-external-link"></i> ver sitio</a></div></div> 
                     </div>
                     <!--Resultado mÃ©tricas -->

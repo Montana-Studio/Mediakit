@@ -1,21 +1,20 @@
 .nav-colapse {
+	height: 100%;
+	position: absolute;
 	@include gridle(2, desktopess notebook-min);
 	@include gridle_state(desktopess) {
 		float:left;
-		height: 1000px;
 	}
-	@include gridle_state(notebook-min) {
-		height: 986px;
-		float: left;
-		display:block;
-	}
-	@include gridle(3, tabless-md tabless-min);
 	@include gridle_state(phoness tabless-md) {
 		display: none;
-		position: absolute;
 		z-index: 99;
 		right:0;
 	}
+	@include gridle_state(notebook-min) {
+		float: left;
+		display:block; 
+	}
+	@include gridle(3, tabless-md tabless-min);
 	@include gridle(9, phoness);
 	@include gridle_float(right);
 	@extend .no-paddings;
@@ -26,7 +25,7 @@
 		@include gridle_float(none);
 		margin:20px auto;
 		display: block;
-		@include gridle_state(phoness) {
+		@include gridle_state(phoness tabless-min) {
 			display: none;
 		}
 	}
@@ -94,7 +93,7 @@
 							  padding:{left: 10px;}
 						}
 						@include gridle_state(tabless-md) {
-							  padding:{left: 18px;}
+							  padding:{left: 18px !important;}
 						}
 						@include gridle_state(tabless-min) {
 							 padding:{left: 3px;}

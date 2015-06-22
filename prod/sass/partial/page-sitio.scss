@@ -171,9 +171,8 @@
 					  margin:{bottom:10px;}
 				}
 				@include gridle_state(phoness phoness-min) {
-					padding:10px !important;
-					background:$second_color; 
-					margin:{bottom:10px;}
+					padding:0 !important;
+					margin:{bottom:10px;}  
 				}
 				.btn {
 					@include gridle_state(desktopess notebook-min) {
@@ -202,7 +201,8 @@
 							padding:{right: 15px;}
 						}
 						@include gridle_state(phoness phoness-min) {
-							padding:0;
+							padding: 0 10px !important;
+							margin:{top:10px; bottom:10px}
 						}
 					}
 					.metrica-mapa {
@@ -229,7 +229,7 @@
 								padding: 0 10px;
 							}
 							@include gridle_state(phoness) {
-								padding:0px !important;
+								padding:0 10px !important;
 							}
 						}
 					}

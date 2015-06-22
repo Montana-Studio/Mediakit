@@ -39,7 +39,7 @@
 				<div class="content-single">
 					<div class="header-destacado"><a href="#"><i class="fa fa-star"></i> Destacado</a></div>
 					<div class="img-single"><img src="../app/wp-content/themes/mediakit/img/sport.jpg" alt=""><div class="title"><a class="highlight" href="#">Chilerunning</a></div></div>
-					<div class="pattern"><a href="#" class="highlight-inv">MONTHLY REACH 134.000</a></div>
+					<div class="pattern"><a class="highlight-inv">MONTHLY REACH 134.000</a></div>
 					<div class="sitio-social">
 						<ul>
 							<li>
