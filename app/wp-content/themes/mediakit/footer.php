@@ -3,21 +3,23 @@
 
 				<!-- copyright -->
 				<div class="footer-content">
-					<div class="content-left">
-						<div class="img-footer">
-							<img src="<?php echo get_template_directory_uri()?>/img/sport.jpg">
+					<div class="footer-container">
+						<div class="content-left">
+							<div class="img-footer">
+								<img src="<?php echo get_template_directory_uri()?>/img/sport.jpg">
+							</div>
+							<h3><a class="highlight-inv">Álvaro Sepúlveda</a></h3>
+							<h3><a class="highlight-inv">CEO Monetización Digital</a></h3>
+							<h3><a class="highlight-inv"><i class="fa fa-envelope-o"></i> asepulveda@mediatrends.cl</a></h3>
+							<h3><a class="highlight-inv"><i class="fa fa-phone"></i> +56 (9) 94866770</a></h3>
 						</div>
-						<h3><a class="highlight-inv">Álvaro Sepúlveda</a></h3>
-						<h3><a class="highlight-inv">CEO Monetización Digital</a></h3>
-						<h3><a class="highlight-inv"><i class="fa fa-envelope-o"></i> asepulveda@mediatrends.cl</a></h3>
-						<h3><a class="highlight-inv"><i class="fa fa-phone"></i> +56 (9) 94866770</a></h3>
-					</div>
-					<div class="content-right">
-						<ul>
-							<li class="pattern"><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li class="pattern"><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li class="pattern"><a href="#"><i class="fa fa-instagram"></i></a></li>
-						</ul>
+						<div class="content-right">
+							<ul>
+								<li class="pattern"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="pattern"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="pattern"><a href="#"><i class="fa fa-instagram"></i></a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<!-- /copyright -->
@@ -27,6 +29,7 @@
 
 		</div>
 		<!-- /wrapper -->
+		<script src="<?php echo get_template_directory_uri(); ?>/js/masonry.js"></script>
 
 		<?php wp_footer(); ?>
 

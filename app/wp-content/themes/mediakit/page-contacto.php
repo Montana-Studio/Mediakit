@@ -1,29 +1,27 @@
 <?php /*Template name: Pagina Contacto*/ ?>
-<?php get_header(); ?>
-<div class="nav-mobile">
-	<div class="logo-mobile">
-		<a href="<?php echo home_url(); ?>">
-			<svg viewBox="0 0 158.459 40">
-				<use xlink:href="#mobile-mediatrends"/> 
-			</svg>
-		</a>
+<div class="contact-content">
+
+
+	
+	<div class="nav-mobile">
+		<div class="logo-mobile">
+			<a href="<?php echo home_url(); ?>">
+				<svg viewBox="0 0 158.459 40">
+					<use xlink:href="#mobile-mediatrends"/> 
+				</svg>
+			</a>
+		</div>
+		<div id="menu-nav" onclick="toggleContent()" class="menu-mobile"><i class="fa fa-bars"></i></div>
 	</div>
-	<div id="menu-nav" class="menu-mobile"><i class="fa fa-bars"></i></div>
-</div>
+	
+	<?php get_header(); ?>
 
-<?php get_template_part('menu'); ?>
+	<?php get_template_part('menu'); ?>
 
-<main role="main">
 	<!-- section -->
-	<section class="page-header page-contacto">
+	<section class="page-contacto">
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-				<div class="encabezado" style="background-image:url('<?php echo $feat_image;?>') ">
-					<div class="content-title">
-						<h2><a class="highlight"><?php the_title(); ?></a></h2>
-					</div>
-				</div>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<div class="form-contacto-cont">
 					<div class="pattern title-form"><a class="highlight-inv"><?php the_title(); ?></a></div>
 					<div class="content-form"><?php the_content(); ?></div>
@@ -49,6 +47,8 @@
 			<?php endif; ?>
 		
 	</section>
-	<!-- /section -->
-</main>
+	<!-- /section -->	
+
+</div>
+
 

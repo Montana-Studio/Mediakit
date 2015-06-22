@@ -17,6 +17,7 @@
 		<div class="encabezado">
 			<div class="content-header">
 				<div class="logo-sitio"><a href="#"><img src="<?php echo get_template_directory_uri()?>/img/logo_chicfit.png" alt=""></a></div>
+				<div class="bajada"><?php the_content(); ?></div>
 				<div class="pattern"><a href="#" class="highlight-inv">MONTHLY REACH 134.000</a></div>
 				<div class="btn"><a href="#"><i class="fa fa-external-link"></i> ver sitio</a></div>
 			</div>

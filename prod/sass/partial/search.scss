@@ -1,38 +1,90 @@
 .search-content {
-	@include gridle(12);
-	@include gridle(10, desktopess notebook-min);
-	@include gridle_state(desktopess notebook-min){
+	@include gridle(12, phoness-min phoness tabless-md tabless-min tabless); 
+	@include gridle(10, notebook-min desktopess);
+	@include gridle_state(notebook-min desktopess){
 		float:right;
 	}
-	.search-loop {
+	@include gridle(12, phoness-min tabless-min);
+	@include gridle_state(phoness-min) {
+		padding:0 5px;
+	}
+	@include gridle_state(tabless-md tabless-min tabless) {
+		padding:0 10px;
+	} 
+	.search-cont {
 		@include gridle(12);
 		@extend .no-paddings;
-		margin: 20px 0px;
-		border-bottom:1px solid #b3b3b3;
-		.img-search {
+		.encabezado {
 			@include gridle(12);
-			@extend .no-paddings;
-			img {
-				@include gridle(6);
-				height: auto;
+			background: $second_color;
+			padding: 10px;
+			.content-title {
+				h2 {
+					@extend .no-margins;
+				}
 			}
 		}
-		.title-resultado {
-			@include gridle(4);
-			display: block;
-			font:{size:12px;family:$primary_font;}
-			margin:10px 0; 
-			.resultado-1 {
-				font:{weight:600;}
+		.search-loop {
+			@include gridle(12);
+			margin: 20px 0px;
+			border-bottom:1px solid $li-border-color;
+			background: $second_color;
+			padding:20px 10px;
+			.img-search {
+				@include gridle(12);
+				@extend .no-paddings;
+				img {
+					height: auto;
+					@include gridle(6, tabless-md tabless-min tabless);
+					@include gridle(2, notebook-min desktopess); 
+					@include gridle(5, phoness-min); 
+					@include gridle_state(phoness-min) {
+						padding:{left:0;}
+						margin:{top:0;}
+					}
+
+				}
 			}
-			.pattern {
-				padding:{top:5px; right:5px; bottom:5px; left:3px;}
-			}
-			.resultado-2 {
-				a {
-					@extend .highlight-inv;
-					padding:{left:3px !important;right:5px !important;}
-					font:{size:12px !important;weight:600 !important;}
+			.title-resultado {
+				@include gridle(4);
+				@include gridle(12, phoness-min);
+				display: block;
+				font:{size:12px;family:$primary_font;}
+				margin:10px 0; 
+				@include gridle_state(phoness-min phoness) {
+					padding:{left:0;}
+					margin:{top:0; bottom: 5px;}
+				}
+				.resultado-1 {
+					font:{weight:600;}
+					@include gridle_state(desktopess notebook-min) {
+						font:{size: 17px;}
+						margin:{bottom: 3px;}
+					}
+					@include gridle_state(phoness-min) {
+						font:{size: 14px;}
+						margin:0;
+					}
+				}
+				.pattern {
+					padding:{top:5px; right:5px; bottom:5px; left:3px;}
+				}
+				.resultado-2 {
+					@include gridle(11,tabless-min);
+					@include gridle_state(tabless-min) {
+						 padding:{left: 5px;}
+					}
+					a {
+						@extend .highlight-inv;
+						padding:{left:3px !important;right:5px !important;}
+						font:{size:12px !important;weight:600 !important;}
+						@include gridle_state(desktopess notebook-min) {
+							font:{size: 20px !important;}
+						}
+						@include gridle_state(phoness-min) {
+							font:{size: 16px !important;}
+						}
+					}
 				}
 			}
 		}

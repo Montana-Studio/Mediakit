@@ -1,8 +1,6 @@
 <?php /*Template name: Pagina Sitio*/ ?>
-x
-<?php get_header(); ?>
 
-<div class="nav-mobile">
+ <div class="nav-mobile">
 	<div class="logo-mobile">
 		<a href="<?php echo home_url(); ?>">
 			<svg viewBox="0 0 158.459 40">
@@ -10,27 +8,30 @@ x
 			</svg>
 		</a>
 	</div>
-	<div class="menu-mobile"><i class="fa fa-bars"></i></div>
+	<div id="menu-nav" onclick="toggleContent()" class="menu-mobile"><i class="fa fa-bars"></i></div>
 </div>
 
+<?php get_header(); ?>
+
 <?php get_template_part('menu'); ?>
- 
+
 <main role="main">
 	<!-- section -->
-	<section class="page-header page-sitio">
+	<section class="page-sitio">
 
 		<div class="encabezado">
 			<div class="content-header">
 				<div class="logo-sitio"><a href="#"><img src="<?php echo get_template_directory_uri()?>/img/logo_chicfit.png" alt=""></a></div>
-				<div class="pattern"><a href="#" class="highlight-inv">MONTHLY REACH 134.000</a></div>
-				<div class="btn"><a href="#"><i class="fa fa-external-link"></i> ver sitio</a></div>
-			</div>
+				<div class="btn-left"><div class="pattern"><a href="#" class="highlight-inv">MONTHLY REACH 34.000</a></div></div>
+				<div class="btn-right"><div class="btn"><a href="#"><i class="fa fa-external-link"></i> ver sitio</a></div></div> 
+				
+			</div>  
 		</div>
 		<div class="content-sitio">
 			<div class="btn"><a href="#"><i class="fa fa-external-link"></i> Cotizar</a></div>
 			<div id="results_metrics" class="metrics">
 				<ul>
-					<h3><a class="highlight" href="">Social Media</a></h3>
+					<h3><a class="highlight" href="">_Social Media</a></h3>
 					<li>
 						<i class="fa fa-facebook"></i>
 						<p class="metrics-1">facebook</p>

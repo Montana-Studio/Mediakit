@@ -1,5 +1,4 @@
 .nav {
-
 	@include gridle(12);
 	@extend .no-paddings;
 	background: $first_color;
@@ -18,15 +17,35 @@
 }
 .nav-mobile {
 	@include gridle(12);
-	@include gridle_state(desktopess){
-		display: none;
-	}
+	display: block;
 	@extend .no-paddings;
 	background: $first_color;
 	color:$second_color;
 	height: 40px;
-	.logo-mobile {
-		@include gridle(6,phoness);
+	cursor:pointer;
+	@include gridle_state(notebook-min desktopess) {
+		display: none;
+	}
+	@include gridle_state(tabless-min) {
+		display: block;
+		height: 55px;
+	}
+	@include gridle_state(phoness-min) {
+		display: block;
+		height: 40px;
+	}
+ 	.logo-mobile {
+		@include gridle(2,tabless-min);
+		@include gridle_state(tabless-min) {
+			  padding: 7px 10px;
+		}
+		@include gridle(4,phoness);
+		@include gridle(3,tabless-md);
+		@include gridle(2,tabless);
+		@include gridle(6,phoness-min);
+		@include gridle_state(phoness-min) {
+			padding:0 10px;
+		}
 		a {
 			@include gridle(12);
 			color:$second_color;
@@ -39,12 +58,26 @@
 		}
 	}
 	.menu-mobile {
+		@include gridle(1,tabless-md);
+		@include gridle(1,tabless-min);
 		@include gridle(2,phoness);
 		@include gridle_float(right);
 		text:{align:center;} 
+		@include gridle_state(tabless-md) {
+			text:{align: right;}
+		}
+		@include gridle_state(tabless-min) {
+			padding:{right: 10px;}
+		}
 		i {
-			font:{size:28px;}
-			padding: {top:8px;}
+			@include gridle_state(tabless-min) {
+				font:{size:32px;}
+				padding: {top:12px;}
+			}
+			@include gridle_state(phoness-min) {
+				font:{size:28px;}
+				padding: {top:8px;}
+			}
 		}
 	}
 }

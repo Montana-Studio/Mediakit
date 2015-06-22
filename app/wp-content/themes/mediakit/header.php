@@ -12,8 +12,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
+		<link rel=”shortcut icon”  href="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/favicon.ico">
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mediakit.css"> 
+		<script src="<?php echo get_template_directory_uri(); ?>/js/mediakit.min.js" type="text/javascript"></script>
+
 
 		<?php wp_head(); ?>
 		<script>
@@ -32,9 +35,25 @@
 		<div class="wrapper">
 			
 			<!-- header -->
-			<header class="header clear" role="banner">
+			<header class="page-header">
+			
+					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+						<div class="content-header">
+							<div class="encabezado" style="background-image:url('<?php echo $feat_image;?>') ">
+								<div class="content-title">
+									<h2><a class="highlight" href=""><?php the_title(); ?></a></h2>
+									<div class="bajada"><?php the_content(); ?></div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<?php endwhile; ?>
 
+					<?php else: ?>
+
+					<?php endif; ?>
 					
-
 			</header>
 			<!-- /header -->

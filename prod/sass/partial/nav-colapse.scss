@@ -1,13 +1,22 @@
 .nav-colapse {
 	@include gridle(2, desktopess notebook-min);
-	@include gridle_state(desktopess notebook-min){
+	@include gridle_state(desktopess) {
 		float:left;
 		height: 1000px;
 	}
-	@include gridle_state(phoness phoness-min){
-		display: none;
+	@include gridle_state(notebook-min) {
+		height: 986px;
+		float: left;
+		display:block;
 	}
-	@include gridle(8);
+	@include gridle(3, tabless-md tabless-min);
+	@include gridle_state(phoness tabless-md) {
+		display: none;
+		position: absolute;
+		z-index: 99;
+		right:0;
+	}
+	@include gridle(9, phoness);
 	@include gridle_float(right);
 	@extend .no-paddings;
 	background: $first_color;
@@ -15,13 +24,25 @@
 	.logo-menu-media {
 		@include gridle(10);
 		@include gridle_float(none);
-		margin:0 auto;
+		margin:20px auto;
 		display: block;
+		@include gridle_state(phoness) {
+			display: none;
+		}
+	}
+	.menu-review {
+		text:{align:center;}
+		font:{family:$primary_font;size:14px;}
+		color:$second_color;
+		margin:{top:0;bottom:0;}
+		@include gridle_state(phoness) {
+			display: none;
+		}
 	}
 	.search {
 		@include gridle(12);
 		@extend .no-paddings;
-		height: 70px;
+		height: 60px;
 		.search-input {
 			@include gridle(10);
 			background: $first_color;
@@ -39,19 +60,95 @@
 			background: none;
 			color:$second_color;
 			border:0;
-			padding: 20px 0;
+			padding: 21px 0;
+			font:{size:19px;}
 		}
 	}
 	.menu {
+		margin:{top: 75px;}
+		@include gridle_state(phoness) {
+			margin:{top: 60px;}
+		}
 		ul {
+			@extend .no-margins;
 			@extend .no-paddings;
-			margin:{left:20px; right:20px;}
 			li {
+				@include gridle(12);
+				@extend .no-paddings;
 				list-style: none;
-				 padding: 15px 0;
+				//padding:{top:20px; right:20px; bottom:20px; left:20px;}
+				background: $first_color_3;
+				border-bottom: 1px solid #000;
 				a {
+					@include gridle(10); 
+					@include gridle_float(right);
 					color:$second_color;
 					font:{family:$primary_font;weight:400;}
+					padding:{top:20px;bottom:20px;left:5px;}
+				}
+				&.fa {
+					&:before {
+						padding: {top:20px;right:0px; bottom:20px; left:24px;}
+						display: inline-block;
+						@include gridle_state(notebook-min) {
+							  padding:{left: 10px;}
+						}
+						@include gridle_state(tabless-md) {
+							  padding:{left: 18px;}
+						}
+						@include gridle_state(tabless-min) {
+							 padding:{left: 3px;}
+						}
+						@include gridle_state(phoness) {
+							  padding:{left: 15px;}
+						}
+					}
+				}	
+				&:hover {
+					@include animation(hover-btn 1.5s infinite alternate);
+				}
+				&.current-menu-item {
+					background: $first_color;
+				}
+				&:first-child {
+					@extend .pattern;
+					float:none;
+					padding:{top:20px !important; right:20px; bottom:20px !important; left:20px;}
+					
+					a {  
+						@extend .highlight-inv;
+						font:{size: 18px !important;}
+						padding: 4px 10px;
+						margin:{top: 18px;}
+						&:hover {
+							background: $first_color;
+							color:$second_color;
+						}
+					}
+					&.fa {
+						color:$first_color;
+						font:{size: 18px !important;}
+						padding:0 !important;			
+						&:before {
+							background:none;
+						}
+					}
+					&:hover {
+						background-image: url("../img/pattern_inv.jpg") !important;
+						color:$second_color;
+						a {
+					 		background: $first_color;
+							color:$second_color;
+						} 
+					}
+					&.current-menu-item {
+						background-image: url("../img/pattern_inv.jpg") !important;
+						color:$second_color;
+						 a {
+					 		background: $first_color;
+							color:$second_color;
+						 }
+					}		
 				}
 			}
 		}
