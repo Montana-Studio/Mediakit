@@ -3,8 +3,8 @@
 	position:relative;
 	@include gridle(12);
 	@extend .no-paddings;
-	height: 100% !important;
-	@include gridle_state(phoness tabless-md tabless-min notebook-min desktopess) {
+	height: 100%;
+	@include gridle_state(tabless-md notebook-min) {
 		height: auto !important;
 	}
 	.highlight {

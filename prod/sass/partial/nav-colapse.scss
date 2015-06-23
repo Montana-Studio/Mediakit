@@ -53,6 +53,9 @@
 				color: $second_color;
 				font:{family:$primary_font;}
 			}
+			@include gridle_state(tabless-md) {
+				padding: 20px 10px;
+			}
 		}
 		.search-submit {
 			@include gridle(2);

@@ -7,6 +7,7 @@
 	.page-aboutus{
 		@include gridle(10);
 		padding: 10px;
+		@include gridle_float(right);
 		@include gridle(12, phoness tabless-min);
 		@include gridle_state(phoness tabless-min) {
 			padding:0;

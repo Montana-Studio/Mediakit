@@ -1,12 +1,5 @@
 .wrapper {
-	@include gridle_state(tabless-md tabless-min) {
-		height: 100% !important;
-	}
-	@include gridle_state(phoness) {
-		height: auto !important;
-	}
 	.page-categoria {
-		height: 100%;
 		@include gridle(10,desktopess notebook-min);
 		@include gridle(12,phoness tabless-min);
 		@include gridle_float(right);
