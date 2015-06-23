@@ -1,6 +1,7 @@
 .nav-colapse {
 	height: 100%;
 	position: absolute;
+	@include animation(icon-rotate 1.5s ease);
 	@include gridle(2, desktopess notebook-min);
 	@include gridle_state(desktopess) {
 		float:left;
@@ -8,7 +9,7 @@
 	@include gridle_state(phoness tabless-md) {
 		display: none;
 		z-index: 99;
-		right:0;
+		right:-300px;
 	}
 	@include gridle_state(notebook-min) {
 		float: left;
@@ -64,6 +65,7 @@
 			border:0;
 			padding: 21px 0;
 			font:{size:19px;}
+			outline: none;
 		}
 	}
 	.menu {
@@ -87,13 +89,19 @@
 					color:$second_color;
 					font:{family:$primary_font;weight:400;}
 					padding:{top:20px;bottom:20px;left:5px;}
+					@include gridle_state(notebook-min) {
+						padding:{top:15px;bottom:15px;}
+					}
+					@include gridle_state(phoness) {
+						padding: {top:13px;bottom:13px;left: 15px;}
+					}
 				}
 				&.fa {
 					&:before {
 						padding: {top:20px;right:0px; bottom:20px; left:24px;}
 						display: inline-block;
 						@include gridle_state(notebook-min) {
-							  padding:{left: 10px;}
+							  padding:{top:15px;bottom:15px;left: 10px;}
 						}
 						@include gridle_state(tabless-md) {
 							  padding:{left: 18px !important;}
@@ -102,7 +110,7 @@
 							 padding:{left: 3px;}
 						}
 						@include gridle_state(phoness) {
-							  padding:{left: 15px;}
+							  padding:{top:13px;bottom:13px;left: 15px;}
 						}
 					}
 				}	
@@ -122,6 +130,12 @@
 						font:{size: 18px !important;}
 						padding: 4px 10px;
 						margin:{top: 18px;}
+						@include gridle_state(notebook-min) {
+							margin:{top: 15px;}
+						}
+						@include gridle_state(phoness) {
+							margin:{top: 13px;}
+						}
 						&:hover {
 							background: $first_color;
 							color:$second_color;
@@ -133,6 +147,18 @@
 						padding:0 !important;			
 						&:before {
 							background:none;
+							@include gridle_state(notebook-min) {
+								  padding:{top:15px;bottom:15px;left: 10px;}
+							}
+							@include gridle_state(tabless-md) {
+								  padding:{left: 18px !important;}
+							}
+							@include gridle_state(tabless-min) {
+								 padding:{left: 3px;}
+							}
+							@include gridle_state(phoness) {
+								  padding:{top:13px;bottom:13px;left: 15px;}
+							}
 						}
 					}
 					&:hover {

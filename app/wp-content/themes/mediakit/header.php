@@ -15,8 +15,6 @@
 		<link rel=”shortcut icon”  href="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/favicon.ico">
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mediakit.css"> 
-		<script src="<?php echo get_template_directory_uri(); ?>/js/mediakit.min.js" type="text/javascript"></script>
-
 
 		<?php wp_head(); ?>
 		<script>
@@ -28,9 +26,27 @@
         });
         </script>
 
+		<script src="<?php echo get_template_directory_uri(); ?>/js/mediakit.min.js" type="text/javascript"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/easing.min.js" type="text/javascript"></script>
+
 	</head>
 	<body <?php body_class(); ?>>
 	<?php include (TEMPLATEPATH . '/svg_icon.php'); ?>
+
+	<div class="nav-mobile">
+		<div class="logo-mobile">
+			<a href="<?php echo home_url(); ?>">
+				<svg viewBox="0 0 158.459 40">
+					<use xlink:href="#mobile-mediatrends"/> 
+				</svg>
+			</a>
+		</div>
+		<div id="menu-nav" class="menu-mobile">
+			<svg viewBox="0 0 25 25">
+				<use xlink:href="#fa-nav"/> 
+			</svg>
+		</div>
+	</div>
 		<!-- wrapper -->
 		<div class="wrapper">
 			

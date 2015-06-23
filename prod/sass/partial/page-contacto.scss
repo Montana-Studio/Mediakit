@@ -1,4 +1,4 @@
-.contact-content {
+.contact {
 	@include gridle(12);
 	@extend .no-paddings;
 	.page-header {
@@ -23,6 +23,9 @@
 			}
 			@include gridle_state(desktopess notebook-min) {
 				float:right;
+			} 
+			@include gridle_state(notebook-min) {
+				margin:{bottom:10px;}
 			} 
 			@include gridle_state(tabless-min) {
 				padding:10px;
@@ -80,7 +83,7 @@
 						padding:{left:20px; right: 20px;}
 					}
 					@include gridle_state(notebook-min) {
-						padding:{left:0; right: 10px;}
+						padding:{left:10px; right: 10px;}
 						background: $second_color;
 					}
 					@include gridle_state(tabless-min) {
@@ -158,6 +161,9 @@
 									border:0 !important; 
 									font:{size:14px; family:$primary_font;}
 									outline: none;
+									@include gridle_state(notebook-min) {
+										margin:{bottom:10px !important;}
+									}
 								}
 							}
 							.wpcf7-validation-errors {
@@ -191,13 +197,13 @@
 					padding:{right:0;}
 				}
 				@include gridle_state(notebook-min) {
-					height: 495px;
+					height: 554px;
 					padding:0;
 					padding:{right:0;}
 				}
 				@include gridle_state(tabless-md) {
-					height: 530px;
-	  				padding:{right: 10px;}
+					height: 588px;
+	  				padding:{right: 0;}
 				}
 				@include gridle_state(phoness phoness-min) {
 					height: 300px;

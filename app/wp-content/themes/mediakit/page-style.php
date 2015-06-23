@@ -1,16 +1,5 @@
 <?php /*Template name: Pagina Style*/ ?>
 
-<div class="nav-mobile">
-	<div class="logo-mobile">
-		<a href="<?php echo home_url(); ?>">
-			<svg viewBox="0 0 158.459 40">
-				<use xlink:href="#mobile-mediatrends"/> 
-			</svg>
-		</a>
-	</div>
-	<div id="menu-nav" onclick="toggleContent()" class="menu-mobile"><i class="fa fa-bars"></i></div>
-</div>
-
 <?php get_header(); ?>
 
 <?php get_template_part('menu'); ?>

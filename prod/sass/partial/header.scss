@@ -3,9 +3,10 @@
 	position:relative;
 	@include gridle(12);
 	@extend .no-paddings;
-	height: 100%;
-	@include gridle_state(tabless-md notebook-min) {
-		height: auto !important;
+	height: auto !important;
+	overflow:hidden;
+	@include gridle_state(desktopess) {
+		height: 100% !important;
 	}
 	.highlight {
 		background-color:#000;

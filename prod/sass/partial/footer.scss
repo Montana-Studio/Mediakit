@@ -6,10 +6,10 @@
 	}
 	@include gridle(12, tabless-md);
 	@include gridle(12, phoness);
-	margin-top: -43px;
+	margin:{top:-80px;}
 	@include gridle_state(phoness) {
-		margin:{top:-80px;}
 		padding:0 !important;
+		margin:{top:0;} 
 	}
 	.footer-content {
 		@include gridle(12);
