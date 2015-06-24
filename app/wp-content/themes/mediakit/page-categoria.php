@@ -1,15 +1,8 @@
 <?php /*Template name: Pagina Categoria*/ ?>
 <?php get_header(); ?>
-<div class="nav-mobile">
-	<div class="logo-mobile">
-		<a href="<?php echo home_url(); ?>">
-			<svg viewBox="0 0 158.459 40">
-				<use xlink:href="#mobile-mediatrends"/> 
-			</svg>
-		</a>
-	</div>
-	<div class="menu-mobile"><i class="fa fa-bars"></i></div>
-</div>
+
+<?php get_template_part('menu'); ?>
+
 <main role="main">
 	<!-- section -->
 	<section class="page-header page-categoria">
@@ -36,7 +29,7 @@
 				<div class="content-single">
 					<div class="header-destacado"><a href="#"><i class="fa fa-star"></i> Destacado</a></div>
 					<div class="img-single"><img src="../app/wp-content/themes/mediakit/img/sport.jpg" alt=""><div class="title"><a class="highlight" href="#">Chilerunning</a></div></div>
-					<div class="pattern"><a href="#" class="highlight-inv">MONTHLY REACH 134.000</a></div>
+					<div class="pattern"><a class="highlight-inv">MONTHLY REACH 134.000</a></div>
 					<div class="sitio-social">
 						<ul>
 							<li>

@@ -1,132 +1,275 @@
-.page-sitio {
-	@extend .no-paddings;
-	.encabezado {
-		position: relative;
-		@include gridle_state(desktopess notebook-min){
-			margin:{bottom: 25px;}
+.sitio-single {
+	.page-header {
+		.encabezado {
+			h2 {
+				display: none;
+			}
+			.bajada {
+			 	display: none;
+			}
 		}
-		@include gridle_state(phoness){
-			margin:{bottom: 47px;}
-		}
-		.content-header {
-				@include gridle(10, desktopess notebook-min);
-				@include gridle(12, phoness phoness-min);
+	}
+	.wrapper {
+		height: auto !important;
+		.page-sitio {
+			@include gridle(10, desktopess notebook-min);
+			@include gridle(12, phoness tabless-min);
+			@include gridle_float(right);
+			.art-single {
+				@include gridle(12);
 				@extend .no-paddings;
-				left:0;
-				bottom: -40px;
-				position: absolute;
-				@include gridle_state(phoness phoness-min){
-					left:0;
-					padding:{left: 5px !important;right:0 !important;}
+				.content-header {
+						@include gridle(9, desktopess notebook-min);
+						@include gridle(12, phoness phoness-min);
+						@include gridle_state(desktopess) {
+							margin-top: -150px;
+						}
+						@include gridle_state(notebook-min) {
+							margin:{top:-114px;left:0;} 
+						}
+						@include gridle_state(tabless-min) {
+							margin:{top:-100px;left:10px;} 
+						}
+						@include gridle_state(phoness phoness-min) {
+							padding:{left:0;right:0 !important;}
+							margin:{top:-85px;left:0;}
+						}
+						p {
+							width: 100% !important;
+						}
+					.logo-sitio {
+						@include gridle(2, desktopess notebook-min);
+						@include gridle(4, phoness phoness-min);
+						@include border-width(3px);
+						@include border-color(#000);
+						@include border-style(solid);
+						height: 100px;
+						background: $second_color;
+						display: table;
+						padding: 0 5px;
+						@include gridle_state(desktopess) {
+							height: 185px
+						}
+						@include gridle_state(notebook-min) {
+							height: 136px;
+						}
+						@include gridle_state(tabless-md) {
+							height: 135px;
+						}
+						@include gridle_state(phoness phoness-min) {
+							height: 105px;
+							padding: 0 5px !important;
+						}
+						a {
+							display: table-cell;
+							vertical-align: middle;
+							img {
+								width: 100%;
+								height: auto;
+							}
+						}
+					}
+					.bajada {
+						padding:{bottom:10px;}
+						line-height: 20px;
+						@include gridle_state(phoness) {
+							display: none;
+						}
+						@include gridle(10, tabless-md notebook-min desktopess);
+						@include gridle_state(desktopess) {
+							padding:{top:41px;;right:0;left:5px;}
+							margin:0; 
+						}
+						@include gridle_state(notebook-min) {
+							padding: {top:20px; right:0;bottom:5px;left:5px;}
+							margin:0;
+							font:{size: 12px;}
+						}
+						@include gridle_state(tabless-md) {
+							padding: {top:0; right:0;left:5px;}
+							margin: 0;
+							font:{size: 12px;}
+						}
+						p {
+							@include gridle(10, desktopess);
+							padding:10px !important;
+						}
+					}
+					.btn-left {
+							@include gridle(5, desktopess notebook-min tabless-min);
+							@include gridle(8, phoness-min);
+							padding:{right:10px !important; left:6px !important;} 
+						.pattern {
+							@include gridle(12);
+							margin:0;
+							padding:{bottom:13px;}
+							@include gridle_state(desktopess notebook-min) {
+								display: inline-block;
+								margin:0 !important; 
+							}
+							@include gridle_state(notebook-min) {
+								margin:{top: 5px; right:5px;}
+							}
+							margin:{left:5px;top:10px;}
+							
+							@include gridle_state(phoness) {
+								margin:{top: 14px !important;}
+							}
+							a {
+								font:{size:12px;}
+								@include gridle_state(desktopess) {
+									  font:{size: 14px;}
+								}
+								@include gridle_state(tabless-md) {
+								  	font:{size: 13px;}
+									margin:{left: 5px;}
+								}
+								@include gridle_state(phoness) {
+									font:{size: 12px;}
+									margin:{left: -4px;}
+								}
+							}
+						}	
+					}
+					.btn-right {
+							@include gridle(5, desktopess notebook-min tabless-min);
+							@include gridle(8, phoness-min);
+							@extend .no-paddings;
+							@include gridle_state(phoness-min) {
+								padding:{right:10px !important; left:6px !important;} 
+								margin: {top:5px;}
+							}
+						.btn {
+							@include gridle(12);
+							@include gridle_state(desktopess notebook-min) {
+								display: inline-block;
+								margin:0;
+							}
+							@include gridle_state(phoness phoness-min) {
+								float: left;
+							}
+							a {
+								font:{size:12px;}
+								@include gridle_state(desktopess) {
+									padding:12px !important;
+								}
+							}
+						}	
+					}
+					
 				}
-			.logo-sitio {
-				@include gridle(2, desktopess notebook-min);
-				@include gridle(4, phoness phoness-min);
-				@include border-width(3px);
-				@include border-color(#000);
-				@include border-style(solid);
-				height: 100px;
-				background: $second_color;
-				display: table;
-				padding: 0 5px;
-				@include gridle_state(desktopess notebook-min){
-					height: 215px;
-				}
-				@include gridle_state(phoness phoness-min){
-					height: 105px;
-					padding: 0 5px !important;
-				}
-				a {
-					display: table-cell;
-					vertical-align: middle;
-					img {
-						width: 100%;
-						height: auto;
+				.content-sitio {
+					margin:{top: 10px;}
+					@include gridle(12, desktopess notebook-min);
+					@include gridle_state(desktopess notebook-min) {
+						padding:0;
+					}
+					@include gridle_state(notebook-min) {
+						margin:{bottom:10px;}
+					}
+					@include gridle(12, phoness phoness-min);
+					@include gridle_state(tabless-md) {
+						  padding:0 10px;
+						  margin:{bottom:10px;}
+					}
+					@include gridle_state(phoness phoness-min) {
+						padding:0 !important;
+						margin:{bottom:10px;}  
+					}
+					.btn {
+						@include gridle_state(desktopess notebook-min) {
+							display:none;
+						}
+						@include gridle_state(notebook-min) {
+							margin:{top: 5px;}
+						}
+						@include gridle_state(phoness phoness-min) {
+							display:block !important;
+						}
+					}
+					.metrics {
+						@include gridle(12);
+						.metrica-number {
+							background:$second_color;
+							padding:0 10px;
+							@include gridle(6, desktopess notebook-min);
+							@include gridle(12, phoness phoness-min);
+							@extend .shadow;
+							@include gridle_state(desktopess notebook-min) {
+								float: left;
+								padding:{top:0;right: 10px; bottom:10px; left:10px;}
+							}
+							@include gridle_state(tabless-md) {
+								padding:{right: 15px;}
+							}
+							@include gridle_state(phoness phoness-min) {
+								padding: 0 10px !important;
+								margin:{top:10px; bottom:10px}
+							}
+						}
+						.metrica-mapa {
+							padding: 0 10px;
+							@include gridle(6, desktopess notebook-min);
+							@include gridle(12, phoness phoness-min);
+							@extend .shadow;
+							@include gridle_state(desktopess notebook-min) {
+								float: right;
+							}
+							@include gridle_state(notebook-min) {
+								padding:{right:0;}
+							}
+							@include gridle_state(tabless-md) {
+								padding:{left:10px !important;}
+							}
+							@include gridle_state(phoness) {
+								padding:0px !important;
+							}
+							.map-content {
+								@include gridle(12);
+								background: $second_color;
+								@include gridle_state(tabless-md) {
+									padding: 0 10px;
+								}
+								@include gridle_state(phoness) {
+									padding:0 10px !important;
+								}
+							}
+						}
+						.btn-display {
+							padding: 0 10px;
+							@include gridle(6, desktopess notebook-min);
+							@extend .shadow;
+							@include gridle_state(desktopess notebook-min) {
+								float: right;
+								margin:{top: 10px; right:auto;bottom:0;left:auto;}
+								display: block;
+							}
+							@include gridle_state(notebook-min) {
+								padding:{top:0; right:0; bottom:0; left:10px;}
+							}
+							@include gridle_state(phoness phoness-min) {
+								display: none;
+							}
+							.content-display {
+								@include gridle(12);
+								background: $second_color; 
+								padding:20px 0;
+								@include gridle_state(desktopess notebook-min){
+									padding:{top:40px;}
+								}
+								.btn {
+									@include gridle(6, desktopess notebook-min);
+									display: block !important;
+									margin:0 auto;
+									float: none;
+									height: 40px;
+								}	
+							}
+						}
 					}
 				}
 			}
-			.pattern {
-				@include gridle(4, desktopess notebook-min);
-				@include gridle(7, phoness phoness-min);
-				@include gridle_state(desktopess notebook-min){
-					display: inline-block;
-				}
-				margin:{left:5px;top:10px;}
-				a {
-					font:{size:12px;}
-				}
-			}
-			.btn {
-				@include gridle(4, desktopess notebook-min);
-				@include gridle(7, phoness phoness-min);
-				@include gridle_state(desktopess notebook-min){
-					display: inline-block;
-				}
-				@include gridle_state(phoness phoness-min){
-					float: left;
-				}
-				margin:{top:5px;left:5px;}
-				a {
-					font:{size:12px;}
-				}
-			}	
 		}
 	}
-	.content-sitio {
-		@include gridle(12);
-		margin:{top: 10px;}
-		@include gridle_state(phoness phoness-min){
-			padding: 0 5px !important;
-		}
-		.btn {
-			@include gridle_state(desktopess notebook-min) {
-				display:none;
-			}
-			@include gridle_state(phoness phoness-min) {
-				display:block !important;
-			}
-		}
-		.metrics {
-			@include gridle(12);
-			.metrica-number {
-				@include gridle(6, desktopess notebook-min);
-				@include gridle(12, phoness phoness-min);
-				@include gridle_state(desktopess notebook-min){
-					float: left;
-					padding:{left:0;}
-				}
-				@include gridle_state(phoness phoness-min){
-					padding:0;
-				}
-			}
-			.metrica-mapa {
-				@include gridle(6, desktopess notebook-min);
-				@include gridle(12, phoness phoness-min);
-				@include gridle_state(desktopess notebook-min){
-					float: right;
-				}
-				@include gridle_state(phoness phoness-min){
-					padding:0;
-				}
-			}
-			.btn-display {
-				@include gridle(6, desktopess notebook-min);
-				@include gridle_state(desktopess notebook-min){
-					float: right;
-					margin:{top: 60px; right:auto;bottom:0;left:auto;}
-					display: block;
-				}
-				@include gridle_state(phoness phoness-min){
-					display: none;
-				}
-				.btn {
-					@include gridle(6, desktopess notebook-min);
-					display: block !important;
-					margin:0 auto;
-					float: none;
-					height: 40px;
-				}
-			}
-		}
-	}
+	
 }

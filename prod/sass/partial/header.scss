@@ -1,32 +1,89 @@
 .wrapper {
+	background:$bg-color; 
+	position:relative;
 	@include gridle(12);
 	@extend .no-paddings;
-	.highlight {
-		background-color:#000;
-		color:#fff;
-		font:{family:$primary_font;weight:400;size: 26px;style:italic;} 
-		padding: 0 10px;
-		@include gridle_state(desktopess, notebook-min){
-			font:{size: 40px;}
+	height: 100% !important;
+	overflow:hidden;
+	.page-header {
+		@include gridle(10, desktopess notebook-min);
+		@include gridle(12, phoness phoness-min tabless-min);
+		@include gridle_state(desktopess notebook-min) {
+		float:right;
 		}
-	}
-	.highlight-inv {
-		@extend .highlight;
-		background: $second_color;
-		color:$first_color;
-	}
-	.bajada {
-		@include gridle(12);
-		@extend .highlight;
-		font:{size:10px;}
-		text:{transform: initial;}
-		padding: 10px;
-		margin:5px 0;
-		@include gridle_state(desktopess, notebook-min){
-			font:{size: 13px;}
+		@extend .no-paddings;
+		.content-header {
+			@include gridle(12);
+			padding: 10px;
+			@include gridle_state(phoness tabless-min) {
+				padding:0;
+			}
+			.encabezado {
+				@include gridle(12);
+				height: 210px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				display: table;
+				@include gridle_state(desktopess notebook-min tabless) {
+					height: 350px;
+				}
+				@include gridle_state(tabless-min) {
+					height: 300px;
+				}
+				@include gridle_state(phoness phoness-min) {
+					padding:0 5px;
+					height: 210px; 
+				}
+				@include gridle_state(phoness-min) {
+					padding:0 7px;
+				}
+				.content-title {
+					@include gridle(12);
+					@include gridle_float(none);
+					@extend .no-paddings;
+					display: table-cell;
+					vertical-align: bottom;
+					text:{transform: uppercase;}
+					@include gridle_state(tabless-md) {
+						padding:{left: 7px !important;}
+					}
+					h2 {
+						margin:{bottom:0;left:10px;}
+						@include gridle_state(tabless-md) {
+							margin:{left:0;}
+						}
+						@include gridle_state(phoness-min) {
+							margin:{left:0;}
+						}
+					}
+					.bajada {
+						@include gridle(12);
+						@extend .highlight;
+						background: none;
+						font:{size:10px;}
+						text:{transform: initial;}
+						padding: 10px;
+						margin:{top:0; right:0; bottom:5px; right:0;}
+						@include gridle_state(desktopess, notebook-min){
+							font:{size: 13px;}
+							padding:{left:10px;}
+						}
+						@include gridle_state(phoness-min) {
+							padding:{left:0; right:0;}
+						}
+						@include gridle_state(tables-md) {
+							padding:{left:0; right:0;}
+						}
+						@include gridle(11, tabless-md);
+						p {
+							@extend .no-margins;
+							background: $first_color;
+							padding: 7px 5px;
+						}
+					}
+				}
+			}	
 		}
-		p {
-			@extend .no-margins;
-		}
-	}
+	}	
 }

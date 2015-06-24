@@ -30,7 +30,20 @@ a {
 	max-width: 1280px;
 	margin:0 auto;
 }
-
+.highlight {
+	background-color:#000;
+	color:#fff;
+	font:{family:$primary_font;weight:400;size: 26px;style:italic;} 
+	padding: 0 10px;
+	@include gridle_state(desktopess, notebook-min){
+		font:{size: 40px;}
+	}
+}
+.highlight-inv {
+	@extend .highlight;
+	background: $second_color;
+	color:$first_color;
+}
 .pattern {
 	@include gridle(12);
 	@include background-image(url("../img/pattern.jpg"), url("../img/pattern.jpg"));
@@ -58,6 +71,9 @@ a {
 			font:{size:18px;}
 		}
 	}
+	&:hover {
+		@include animation(btn-general 1.5s ease-in);
+	}
 }
 .metrics {
 	@include gridle(12,phoness);
@@ -80,7 +96,7 @@ a {
 			display: table;
 			font:{size: 11px;}
 			border:0;
-			border-bottom:1px solid $second_color_1;
+			border-bottom:1px solid $li-border-color;
 			padding:{top:8px;left:0;bottom:8px; right:0;}
 			text:{transform:uppercase;}
 			i {
@@ -90,7 +106,7 @@ a {
 				display: table-cell;
 				vertical-align: middle;
 				@include gridle_float(none);
-				color:$second_color_1;
+				color:$font-color;
 				font:{size: 15px;}
 				@include gridle_state(desktopess notebook-min){
 					width: 25px;
@@ -103,7 +119,7 @@ a {
 				@extend .no-paddings;
 				display: table-cell;
 				vertical-align: middle;
-				color:$second_color_1;
+				color:$font-color;
 			}
 			.metrics-2 {
 				@include gridle(4);
@@ -113,7 +129,7 @@ a {
 				@extend .no-paddings;
 				display: table-cell;
 				vertical-align: middle;
-				color:$second_color_1;
+				color:$font-color;
 			}
 		}
 		.img-map {
@@ -126,4 +142,36 @@ a {
 			}
 		}
 	}
+}
+.nothing-message {
+	@include gridle(12);
+	background:$second_color;
+	position: relative;
+	display: block;
+	margin:{top:10px;} 
+}
+.shadow {
+	box-shadow: 0 2px 2px rgba(204, 204, 204, 0.2);
+	-webkit-box-shadow: 0 2px 2px rgba(204, 204, 204, 0.2);
+	-moz-box-shadow: 0 2px 2px rgba(204, 204, 204, 0.2);
+	-o-box-shadow: 0 2px 2px rgba(204, 204, 204, 0.2);
+}
+@keyframes hover-btn {
+    0% {background-color:$first_color_3;}
+    100% {background-color: $first_color;}
+}
+@keyframes btn-general {
+	0% {background-color:$first_color;}
+    100% {background-color: $first_color_2;}
+}
+.translate {
+	@include animation(trans-1 1.0s ease-out);	
+}
+@keyframes trans-1 {
+  	0% { transform: translate(0, 0); }
+  	100% { transform: translate(0, 7px); }
+}
+@keyframes trans-2 {
+  	0% { transform: translate(0, 0); }
+  	100% { transform: translate(0, -7px); }
 }

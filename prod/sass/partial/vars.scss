@@ -1,9 +1,14 @@
 /* COLOR */
 $first_color: black;			/* BLACK*/
-$first_color_1: #454545;		/* 2 BLACK*/
-$first_color_2:#2c2a29;			/* 3 BLACK*/
+$first_color_1: #454545;		/* 1 BLACK*/
+$first_color_2:#2c2a29;			/* 2 BLACK*/
+$first_color_3:#1f1f1f;			/* 3 BLACK*/
 $second_color: #ffffff;			/* WHITE*/
 $second_color_1: #c4c4c4;		/* 2 WHITE*/
+
+$bg-color:#e7e7e7;
+$font-color:#8b91a0;
+$li-border-color:#e5e9ec;
 
 $primary_font:'Open Sans', sans-serif;
 
@@ -29,6 +34,10 @@ $bp-xxl : 1440px;
 	(min-width : $bp-md) and (max-width:$bp-largess)
 ) );
 
+@include gridle_register_state( tabless-md-portrait, (
+	(min-width : $bp-md)and(max-width: $bp-largess)and(orientation:landscape) 
+) );
+
 @include gridle_register_state( tabless-min, (
 	(min-width : $bp-large) and (max-width:$bp-largess)
 ) );
@@ -45,4 +54,3 @@ $bp-xxl : 1440px;
 	(min-width : $bp-xxl)
 ) );
 
-@include gridle_register_state(webkit_brw, (screen and (-webkit-min-device-pixel-ratio:0)));

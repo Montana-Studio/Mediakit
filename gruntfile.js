@@ -88,7 +88,7 @@ module.exports = function(grunt) {
             },
             compile: {
                 files: {
-                    '<%= www %>/<%= jsout %>': ['<%= js %>']
+                    '<%= www %>/<%= jsout %>': ['<%= dist %>/<%= js %>']
                 }
             }
         },

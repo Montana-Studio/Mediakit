@@ -1,56 +1,32 @@
-.page-header {
-	@include gridle(10, desktopess notebook-min);
-	@include gridle(12, phoness phoness-min);
-	@include gridle_state(desktopess notebook-min){
-		float:right;
-	}
-	@extend .no-paddings;
-	.encabezado {
-		@include gridle(12);
-		height: 210px;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		display: table;
-		@include gridle_state(desktopess notebook-min tabless-min tabless) {
-			height: 350px;
+.wrapper {
+	.page-categoria {
+		@include gridle(10,desktopess notebook-min);
+		@include gridle(12,phoness tabless-min);
+		@include gridle_float(right);
+		@include gridle_state(phoness tabless-min) {
+			padding:0;
 		}
-		@include gridle_state(phoness phoness-min tabless-md) {
-			padding:0 5px;
-			height: 210px; 
-		}
-		.content-title {
-			@include gridle(12);
-			@include gridle_float(none);
-			@extend .no-paddings;
-			display: table-cell;
-			vertical-align: bottom;
-			text:{transform: uppercase;}
-			h2 {
-				margin:{bottom:0;}
-			}
-		}
-	}
-	&.page-categoria {
 		.content-loop-categoria {
-			@include gridle(3,desktopess);
-			@include gridle(12,phoness);
-			@include gridle(12,phoness-min);
+			@include gridle(3, desktopess notebook-min);
+			@include gridle(4, tabless-md tabless-min);
+			@include gridle(12, phoness-min);
 			@extend .no-paddings;
 			.sitio-single {
 				@include gridle(12, phoness-min);
 				@include gridle(12, phoness);
 				@include gridle(12, desktopess);
-				padding: 0 5px;
+				@include gridle_state(tabless-min) {
+					padding:{left: 6px !important;}
+				}
+				padding:{top: 0;right: 5px; bottom:0; left:0;}
 				height: auto;
 				.content-single {
 					@include gridle(12,phoness-min);
 					@extend .no-paddings;
+					@extend .shadow;
 					background-color: $second_color;
 					height: auto;
-					@include border-width(1px);
-					@include border-color(#999);
-					@include border-style(solid);
+					border:1px solid $li-border-color;
 					margin:5px 0; 
 					.header-destacado {
 						@include gridle(12);
@@ -61,11 +37,17 @@
 						a {
 							color:$second_color;
 							font:{family:$primary_font;weight:300;style:italic; size:14px;}
+							@include gridle_state(tabless-md) {
+								padding:{left: 10px;}
+							}
 						}
 					}
 					.pattern {
 						.highlight-inv {
 							font:{size:18px;}
+							@include gridle_state(tabless-md){
+								font:{size:14px;}
+							}
 						}
 					}
 					.img-single {
@@ -90,17 +72,19 @@
 							@include gridle(12);
 							@extend .no-paddings;
 							@extend .no-margins;
+							background:$second_color;  
+							color:$font-color;
 							li {
 								@include gridle(4);
 								padding: 10px 0;
 								text:{align:center;}
-								a {
-									font:{family:$primary_font;}
-									display: block;
-									color:$first_color_1;
-									&.bajada-num {
-										font:{size:13px;weight:300;style:italic;}
-									}
+								.number {
+									font:{size:15px !important ;weight:800;font-family:$primary_font;}
+								}
+								.bajada-num {
+									font:{size:12px !important ;weight:800;style:italic; font-family:$primary_font;}
+									text-transform: uppercase;
+									padding: {top:5px !important;}
 								}
 							}
 						}
@@ -108,5 +92,6 @@
 				}
 			}
 		}
-	}
+	}	
 }
+
