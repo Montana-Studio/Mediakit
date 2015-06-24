@@ -69,19 +69,32 @@
 	}
 	.menu {
 		margin:{top: 75px;}
+		position: absolute;
+		overflow: hidden;
+		top: 0;
+		bottom: 0;
+		list-style: none;
+		padding: 0;
 		@include gridle_state(phoness) {
 			margin:{top: 60px;}
 		}
-		ul {
+		.menu-inner{
 			@extend .no-margins;
 			@extend .no-paddings;
+			list-style: none;
+			margin: 0;
+			padding: 0;  
+			transition: all .3s ease;
+			perspective: 2000px;
 			li {
 				@include gridle(12);
 				@extend .no-paddings;
 				list-style: none;
 				//padding:{top:20px; right:20px; bottom:20px; left:20px;}
 				background: $first_color_3;
-				border-bottom: 1px solid #000;
+				transform-origin: left center;
+				position: relative;
+				text-decoration: none;
 				a {
 					@include gridle(10); 
 					@include gridle_float(right);
@@ -93,6 +106,14 @@
 					}
 					@include gridle_state(phoness) {
 						padding: {top:13px;bottom:13px;left: 15px;}
+					}
+					&.item{
+					    display: block;
+					    transform-origin:left center;
+					    position: relative;
+				    	&:active{
+					      transition: all .2s 0 ease;
+					    }
 					}
 				}
 				&.fa {

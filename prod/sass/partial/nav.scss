@@ -95,3 +95,29 @@
 		}
 	}
 }
+.item{
+    display: block;
+    transform-origin:left center;
+    position: relative;
+	&:active{
+      transition: all .2s 0 ease;
+    }
+}
+.menu--is-closed{
+  pointer-events: none;
+  .item{
+    transform: rotateY(360deg);
+  }
+}
+$delay-unit: .5s;
+$n: 11;
+
+@for $i from 0 through $n {
+  .item-#{$i} { 
+    transition-delay: $delay-unit * ( $n - $i );
+    z-index: $i;
+  }
+  .menu--is-closed .item-#{$i} { 
+    transition-delay: $delay-unit * $i; 
+  }
+}
