@@ -46,12 +46,15 @@
 					@extend .no-paddings;
 					display: table-cell;
 					vertical-align: bottom;
-					text:{transform: uppercase;}
+					position: absolute;
+					bottom: 0; 
 					@include gridle_state(tabless-md) {
 						padding:{left: 7px !important;}
 					}
 					h2 {
+						float: left;
 						margin:{bottom:0;left:10px;}
+						text:{transform: uppercase;}
 						@include gridle_state(tabless-md) {
 							margin:{left:0;}
 						}
@@ -63,8 +66,8 @@
 						@include gridle(12);
 						@extend .highlight;
 						background: none;
-						font:{size:10px;}
-						text:{transform: initial;}
+						font:{size:10px;transform:none;}
+						text:{align:left;}
 						padding: 10px;
 						margin:{top:0; right:0; bottom:5px; right:0;}
 						@include gridle_state(desktopess, notebook-min){

@@ -8,7 +8,7 @@
 	@include gridle_state(phoness tabless-md) {
 		display: none;
 		z-index: 99;
-		right:-300px;
+		right:-310px;
 	}
 	@include gridle_state(notebook-min) {
 		float: left;
@@ -120,20 +120,24 @@
 					background: $first_color;
 				}
 				&:first-child {
-					@extend .pattern;
 					float:none;
 					padding:{top:20px !important; right:20px; bottom:20px !important; left:20px;}
-					
+					@include background-image(url("../img/pattern.jpg"), url("../img/pattern.jpg"));
 					a {  
+						@include gridle_float(left);
+						width: auto;
 						@extend .highlight-inv;
 						font:{size: 18px !important;}
-						padding: 4px 10px;
-						margin:{top: 18px;}
+						padding:{top:3px; right:5px; bottom:5px; left:5px;}
+						margin:{top:8px;left: 11px;}
+						@include gridle_state(desktopess) {
+							margin:{top:15px;}
+						}
 						@include gridle_state(notebook-min) {
 							margin:{top: 15px;}
 						}
 						@include gridle_state(phoness) {
-							margin:{top: 13px;}
+							margin:{top: 10px;}
 						}
 						&:hover {
 							background: $first_color;
@@ -145,6 +149,7 @@
 						font:{size: 18px !important;}
 						padding:0 !important;			
 						&:before {
+							@include gridle_float(left);
 							background:none;
 							@include gridle_state(notebook-min) {
 								  padding:{top:15px;bottom:15px;left: 10px;}

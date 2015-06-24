@@ -60,7 +60,6 @@
 						c-0.247,0-0.46-0.067-0.641-0.2s-0.27-0.291-0.27-0.474v-1.348c0-0.183,0.09-0.341,0.27-0.474c0.18-0.133,0.394-0.2,0.641-0.2
 						h20.041c0.246,0,0.46,0.067,0.64,0.2C23.341,17.737,23.431,17.895,23.431,18.077z"/>
 					</g>
-				
 				</g>
 			</svg>
 		</div>
@@ -74,12 +73,24 @@
 					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-						<div class="content-header">
+						<!--<div class="content-header">
 							<div class="encabezado" style="background-image:url('<?php echo $feat_image;?>') ">
 								<div class="content-title">
 									<h2><a class="highlight" href=""><?php the_title(); ?></a></h2>
 									<div class="bajada"><?php the_content(); ?></div>
 								</div>
+							</div>
+						</div>-->
+						<div class="content-header">
+							<div class="fullscreen background parallax encabezado" style="background-image:url('<?php echo $feat_image;?>');" data-img-width="100%" data-img-height="350" data-diff="100">
+							    <div class="content-a">
+							        <div class="content-b ">
+							           <div class="content-title">
+											<h2><a class="highlight" href=""><?php the_title(); ?></a></h2>
+											<div class="bajada"><?php the_content(); ?></div>
+										</div>
+							        </div>
+							    </div>
 							</div>
 						</div>
 					</article>

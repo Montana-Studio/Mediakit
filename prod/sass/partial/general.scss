@@ -43,6 +43,7 @@ a {
 	@extend .highlight;
 	background: $second_color;
 	color:$first_color;
+	display: inline;
 }
 .pattern {
 	@include gridle(12);
@@ -166,21 +167,34 @@ a {
 	0% {background-color:$first_color;}
     100% {background-color: $first_color_2;}
 }
-.translate {
-	@include animation(trans-1 1.0s ease-out normal forwards);	
-}
 @keyframes trans-1 {
   	0% { transform: translate(0, 0);transform:rotate(0deg);transform-origin:center; }
   	50% { transform: translate(0, 7px); }
-  	100%{ transform:rotate(45deg);transform-origin:2px 10px;}
+  	100%{ transform:rotate(45deg);transform-origin:2px 9px;}
 }
 @keyframes trans-1-b {
-  	100% { transform: translate(0, 0);transform:rotate(0deg);transform-origin:center; }
-  	50% { transform: translate(0, -7px); }
-  	0%{ transform:rotate(45deg);transform-origin:-2px -10px;}
+  	100% { transform: translate(0, 0);transform:rotate(0deg);transform-origin:top left; }
+  	50% { transform: translate(0, 7px); }
+  	0% { transform:rotate(45deg);transform-origin:-2px -9px;}
 }
 @keyframes trans-2 {
-  	0% { transform: translate(0, 0);transform:rotate(0deg); }
-  	50% { transform: translate(0, -7px); }
-  	100%{ transform:rotate(-45deg);}
+  	0% { transform: translate(0, 0);transform:rotate(0deg);transform-origin:center;display: block ; opacity: 1; }
+  	50% { transform: translate(0, 0px); display:none ; opacity: 0;}
+  	100%{ transform:rotate(45deg);transform-origin:9px 12px;display:none ; opacity: 0;}
 }
+@keyframes trans-2-b {
+  	100% { transform: translate(0, 0);transform:rotate(0deg);transform-origin:top left; display: block ; opacity: 1;}
+  	50% { transform: translate(0, 0); display:none ; opacity: 0;}
+  	0% { transform:rotate(45deg);transform-origin:9px 12px; display:none ; opacity: 0;}
+}
+@keyframes trans-3 {
+  	0% { transform: translate(0, 0);transform:rotate(0deg);transform-origin:center; }
+  	50% { transform: translate(0,-7px); }  
+  	100%{ transform:rotate(-45deg);transform-origin:7px 18px;}
+}
+@keyframes trans-3-b {
+  	100% { transform: translate(0, 0);transform:rotate(0deg);transform-origin:bottom left; }
+  	50% { transform: translate(0, -7px); }
+  	0% { transform:rotate(-45deg);transform-origin:7px 18px; transform-origin:bottom left;}
+}
+  
