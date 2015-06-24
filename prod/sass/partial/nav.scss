@@ -76,12 +76,16 @@
 				position: absolute;
 				top:0;
 				right: 0;
-				#uno {
+				.uno{
+					@extend .translate;
 				}
-				#dos {
+				.uno-b{
+					@include animation(trans-1-b 1.0s ease-out normal forwards);
+				}
+				#dos{
 
 				}
-				#tres  {
+				#tres{
 				}	
 			}
 		}
