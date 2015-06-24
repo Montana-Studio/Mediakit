@@ -18,11 +18,11 @@
 .nav-mobile {
 	@include gridle(12);
 	display: block;
-	@extend .no-paddings;
 	background: $first_color;
 	color:$second_color;
 	height: 40px;
 	cursor:pointer;
+	@extend .no-paddings;
 	@include gridle_state(notebook-min desktopess) {
 		display: none;
 	}
@@ -63,20 +63,26 @@
 		@include gridle(2,phoness);
 		@include gridle_float(right);
 		text:{align:center;} 
+		padding:{top:5px;}
 		@include gridle_state(tabless-md) {
 			text:{align: right;}
 		}
 		@include gridle_state(tabless-min) {
 			padding:{right: 10px;}
 		}
-		i {
-			@include gridle_state(tabless-min) {
-				font:{size:32px;}
-				padding: {top:12px;}
-			}
-			@include gridle_state(phoness-min) {
-				font:{size:28px;}
-				padding: {top:8px;}
+		#icon-mobile {
+			position: relative;
+			#fa-nav {
+				position: absolute;
+				top:0;
+				right: 0;
+				#uno {
+				}
+				#dos {
+
+				}
+				#tres  {
+				}	
 			}
 		}
 	}

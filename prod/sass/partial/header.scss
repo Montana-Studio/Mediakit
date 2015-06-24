@@ -3,50 +3,8 @@
 	position:relative;
 	@include gridle(12);
 	@extend .no-paddings;
-	height: auto !important;
+	height: 100% !important;
 	overflow:hidden;
-	@include gridle_state(desktopess) {
-		height: 100% !important;
-	}
-	.highlight {
-		background-color:#000;
-		color:#fff;
-		font:{family:$primary_font;weight:400;size: 26px;style:italic;} 
-		padding: 0 10px;
-		@include gridle_state(desktopess, notebook-min){
-			font:{size: 40px;}
-		}
-	}
-	.highlight-inv {
-		@extend .highlight;
-		background: $second_color;
-		color:$first_color;
-	}
-	.bajada {
-		@include gridle(12);
-		@extend .highlight;
-		background: none;
-		font:{size:10px;}
-		text:{transform: initial;}
-		padding: 10px;
-		margin:{top:0; right:0; bottom:5px; right:0;}
-		@include gridle_state(desktopess, notebook-min){
-			font:{size: 13px;}
-			padding:{left:10px;}
-		}
-		@include gridle_state(phoness-min) {
-			padding:{left:0; right:0;}
-		}
-		@include gridle_state(tables-md) {
-			padding:{left:0; right:0;}
-		}
-		@include gridle(11, tabless-md);
-		p {
-			@extend .no-margins;
-			background: $first_color;
-			padding: 7px 5px;
-		}
-	}
 	.page-header {
 		@include gridle(10, desktopess notebook-min);
 		@include gridle(12, phoness phoness-min tabless-min);
@@ -97,6 +55,31 @@
 						}
 						@include gridle_state(phoness-min) {
 							margin:{left:0;}
+						}
+					}
+					.bajada {
+						@include gridle(12);
+						@extend .highlight;
+						background: none;
+						font:{size:10px;}
+						text:{transform: initial;}
+						padding: 10px;
+						margin:{top:0; right:0; bottom:5px; right:0;}
+						@include gridle_state(desktopess, notebook-min){
+							font:{size: 13px;}
+							padding:{left:10px;}
+						}
+						@include gridle_state(phoness-min) {
+							padding:{left:0; right:0;}
+						}
+						@include gridle_state(tables-md) {
+							padding:{left:0; right:0;}
+						}
+						@include gridle(11, tabless-md);
+						p {
+							@extend .no-margins;
+							background: $first_color;
+							padding: 7px 5px;
 						}
 					}
 				}

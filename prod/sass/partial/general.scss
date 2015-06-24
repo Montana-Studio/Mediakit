@@ -30,7 +30,20 @@ a {
 	max-width: 1280px;
 	margin:0 auto;
 }
-
+.highlight {
+	background-color:#000;
+	color:#fff;
+	font:{family:$primary_font;weight:400;size: 26px;style:italic;} 
+	padding: 0 10px;
+	@include gridle_state(desktopess, notebook-min){
+		font:{size: 40px;}
+	}
+}
+.highlight-inv {
+	@extend .highlight;
+	background: $second_color;
+	color:$first_color;
+}
 .pattern {
 	@include gridle(12);
 	@include background-image(url("../img/pattern.jpg"), url("../img/pattern.jpg"));
@@ -151,18 +164,14 @@ a {
 	0% {background-color:$first_color;}
     100% {background-color: $first_color_2;}
 }
-.rotate-animation {
-	@include animation(icon-rotate 1.5s ease);
+.translate {
+	@include animation(trans-1 1.0s ease-out);	
 }
-@keyframes icon-rotate {
-	0% {  
-		-ms-transform: rotate(0deg); /* IE 9 */
-		-webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
-		transform: rotate(0deg); 
-	}
-	100% { 
-		-ms-transform: rotate(45deg); /* IE 9 */
-		-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-		transform: rotate(45deg); 
-	}
+@keyframes trans-1 {
+  	0% { transform: translate(0, 0); }
+  	100% { transform: translate(0, 7px); }
+}
+@keyframes trans-2 {
+  	0% { transform: translate(0, 0); }
+  	100% { transform: translate(0, -7px); }
 }

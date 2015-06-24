@@ -1,7 +1,6 @@
 .nav-colapse {
 	height: 100%;
 	position: absolute;
-	@include animation(icon-rotate 1.5s ease);
 	@include gridle(2, desktopess notebook-min);
 	@include gridle_state(desktopess) {
 		float:left;
