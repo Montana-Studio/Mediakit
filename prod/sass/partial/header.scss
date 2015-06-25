@@ -47,16 +47,16 @@
 					display: table-cell;
 					vertical-align: bottom;
 					position: absolute;
-					bottom: 0; 
+					bottom: 15px;
 					@include gridle_state(tabless-md) {
 						padding:{left: 7px !important;}
 					}
 					@include gridle_state(phoness) {
 						padding:{left:0 !important;}
 					}
-					h2 {
+					h1 {
 						float: left;
-						margin:{bottom:0;left:10px;}
+						margin:{bottom:5px;left:10px;}
 						text:{transform: uppercase;}
 						@include gridle_state(tabless-md) {
 							margin:{left:0;}
@@ -66,13 +66,17 @@
 						}
 					}
 					.bajada {
-						@include gridle(12);
-						@extend .highlight;
-						background: none;
+						@include gridle(9, desktopess notebook-min);
+						@include gridle(12, phoness tabless-min);
 						font:{size:10px;transform:none;}
 						text:{align:left;}
 						padding: 10px;
-						margin:{top:0; right:0; bottom:5px; right:0;}
+						margin:{top:0; right:0; bottom:5px; left:10px;}
+						clear: both;
+						display: table;
+						position: relative;
+						width: initial !important;
+						padding-right: 10px !important;
 						@include gridle_state(desktopess, notebook-min){
 							font:{size: 13px;}
 							padding:{left:10px;}
@@ -86,8 +90,8 @@
 						@include gridle(11, tabless-md);
 						p {
 							@extend .no-margins;
-							background: $first_color;
 							padding: 7px 5px;
+
 						}
 					}
 				}

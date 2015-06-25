@@ -8,9 +8,11 @@
 			height: 100% !important;
 		}
 		.page-header {
+			z-index: 1;
+			position: relative;
 			.content-header {
 				.content-title {
-					h2 {
+					h1 {
 						display: none !important;
 					}
 					.bajada {
@@ -27,24 +29,26 @@
 				@include gridle(12);
 				@extend .no-paddings;
 				.content-header {
-						@include gridle(9, desktopess notebook-min);
-						@include gridle(12, phoness phoness-min);
-						@include gridle_state(desktopess) {
-							margin-top: -150px;
-						}
-						@include gridle_state(notebook-min) {
-							margin:{top:-114px;left:0;} 
-						}
-						@include gridle_state(tabless-min) {
-							margin:{top:-100px;left:10px;} 
-						}
-						@include gridle_state(phoness phoness-min) {
-							padding:{left:0;right:0 !important;}
-							margin:{top:-85px;left:0;}
-						}
-						p {
-							width: 100% !important;
-						}
+					z-index: 99;
+					position: absolute;
+					@include gridle(9, desktopess notebook-min);
+					@include gridle(12, phoness phoness-min);
+					@include gridle_state(desktopess) {
+						margin-top: -167px;
+					}
+					@include gridle_state(notebook-min) {
+						margin:{top:-114px;left:0;} 
+					}
+					@include gridle_state(tabless-min) {
+						margin:{top:-100px;left:10px;} 
+					}
+					@include gridle_state(phoness phoness-min) {
+						padding:{left:0;right:0 !important;}
+						margin:{top:-85px;left:0;}
+					}
+					p {
+						width: 100% !important;
+					}
 					.logo-sitio {
 						@include gridle(2, desktopess notebook-min);
 						@include gridle(4, phoness phoness-min);
@@ -56,7 +60,7 @@
 						display: table;
 						padding: 0 5px;
 						@include gridle_state(desktopess) {
-							height: 185px
+							height: 205px;
 						}
 						@include gridle_state(notebook-min) {
 							height: 136px;
@@ -68,7 +72,10 @@
 							height: 105px;
 							padding: 0 5px !important;
 						}
-						a {
+						.img-content {
+							@include gridle(12);
+							@extend .no-paddings;
+							@include gridle_float(none);
 							display: table-cell;
 							vertical-align: middle;
 							img {
@@ -81,28 +88,29 @@
 						display:none;
 					}
 					.bajada {
-						padding:{bottom:10px;}
+						width: 73% !important;
+						@extend .no-paddings;
 						line-height: 20px;
+						margin:{left: 6px;}
+						display: table;
+						width: initial !important;
 						@include gridle_state(phoness) {
 							display: none !important;
 						}
 						@include gridle(10, tabless-md notebook-min desktopess);
 						@include gridle_state(desktopess) {
-							padding:{top:41px;;right:0;left:5px;}
-							margin:0; 
+							margin:{top:41px;}
 						}
 						@include gridle_state(notebook-min) {
-							padding: {top:20px; right:0;bottom:5px;left:5px;}
-							margin:0;
+							margin:{top:20px;}
 							font:{size: 12px;}
 						}
 						@include gridle_state(tabless-md) {
-							padding: {top:0; right:0;left:5px;}
-							margin: 0;
+							margin:0;
 							font:{size: 12px;}
 						}
 						p {
-							@include gridle(10, desktopess);
+							@include gridle(9, desktopess);    
 							padding:10px !important;
 						}
 					}
@@ -175,7 +183,7 @@
 					
 				}
 				.content-sitio {
-					margin:{top: 10px;}
+					margin:{top: 48px;}
 					@include gridle(12, desktopess notebook-min);
 					@include gridle_state(desktopess notebook-min) {
 						padding:0;
@@ -205,6 +213,15 @@
 					}
 					.metrics {
 						@include gridle(12);
+						h3 {
+							font:{family:$primary_font;style:italic;weight:400;size:14px;}
+							text:{transform: uppercase;}
+							display: table;
+							padding: 3px 8px !important;
+							&:hover {
+								font:{weight:600;}
+							}
+						}
 						.metrica-number {
 							background:$second_color;
 							padding:0 10px;
@@ -269,9 +286,9 @@
 							.content-display {
 								@include gridle(12);
 								background: $second_color; 
-								padding:20px 0;
-								@include gridle_state(desktopess notebook-min){
-									padding:{top:40px;}
+								padding:{top:20px;left:10px;bottom:10px;left:10px;}
+								@include gridle_state(desktopess notebook-min) {
+									padding:{top:0;}
 								}
 								.btn {
 									@include gridle(6, desktopess notebook-min);

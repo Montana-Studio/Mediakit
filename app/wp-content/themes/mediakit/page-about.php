@@ -19,7 +19,7 @@
 								</svg>
 							</a>
 						</div>
-						<h2><a class="highlight" href=""><?php the_title(); ?></a></h2>
+						<h2 class="bg-highlight-inv"><?php the_title(); ?></h2> 
 						<div class="bajada"><?php the_content(); ?></div>
 					</div>
 				</div>

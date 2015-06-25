@@ -56,6 +56,43 @@ a {
 		font:{size:17px;}
 	}
 }
+.bg-highlight {
+	color:$second_color;
+	font:{family:$primary_font;weight:normal; }
+	background-position: -0% 0;
+	@include background-image (linear-gradient(to right, rgba(0, 0, 0, 1) 50%, #fff 50%));
+	background-size: 200.22% auto;
+	-webkit-background-size: 200.22% auto;
+	-moz-background-size: 200.22% auto;
+	background-position: -0% 0;
+	@include transition(background-position 0.5s ease-out);
+	padding:{left:10px;right:5px;}
+	&:hover {
+		background-position: -99.99% 0;
+		color:$first_color;
+		font:{weight:normal;}
+	}
+	p {
+		@extend .no-paddings;
+	}
+}
+.bg-highlight-inv {
+	color:$first_color;
+	font:{family:$primary_font;weight:normal; }
+	background-position: -0% 0;
+	@include background-image (linear-gradient(to right, rgba(255, 255, 255, 1) 50%, #000 50%));
+	background-size: 200.22% auto;
+	-webkit-background-size: 200.22% auto;
+	-moz-background-size: 200.22% auto;
+	background-position: -0% 0;
+	@include transition(background-position 0.5s ease-out);
+	padding:{left:10px;right:5px;}
+	&:hover {
+		background-position: -99.99% 0;
+		color:$second_color;
+		font:{weight:normal;}
+	}
+}
 .btn {
 	@include gridle(12);
 	@extend .no-paddings;
@@ -146,8 +183,6 @@ a {
 }
 .bajada {
 	@include gridle(12);
-	@extend .highlight;
-	background: none;
 	font:{size:10px;transform:none;}
 	text:{align:left;}
 	padding: 10px;
@@ -165,7 +200,6 @@ a {
 	@include gridle(11, tabless-md);
 	p {
 		@extend .no-margins;
-		background: $first_color;
 		padding: 7px 5px;
 	}
 }

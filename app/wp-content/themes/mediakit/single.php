@@ -11,8 +11,8 @@
                 <article  class="art-single" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                    <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
                     <div class="content-header">
-                        <div class="logo-sitio"><a href="#"><img src="<?php the_field('imagen_logo_sitio'); ?>" alt=""></a></div>
-                        <div class="bajada"><?php the_content(); ?></div>
+                        <div class="logo-sitio"><div class="img-content"><img src="<?php the_field('imagen_logo_sitio'); ?>" alt=""></div></div>
+                        <div class="bajada bg-highlight"><?php the_content(); ?></div>
                         <div class="btn-left"><div class="pattern"><a class="highlight-inv">MONTHLY REACH 34.000</a></div></div>
                         <div class="btn-right"><div class="btn"><a href="#"><i class="fa fa-external-link"></i> ver sitio</a></div></div> 
                     </div>
@@ -27,7 +27,7 @@
                         <div id="results_metrics" class="metrics">
                             <div class="metrica-number">
                                 <ul>
-                                    <h3><a class="highlight">Social Media</a></h3>
+                                    <h3 class="bg-highlight">Social Media</h3>
                                     <li>
                                         <i class="fa fa-facebook"></i>
                                         <p class="metrics-1">facebook</p>
@@ -45,7 +45,7 @@
                                     </li>
                                 </ul>
                                  <ul>
-                                    <h3><a class="highlight">DESKTOP METRICS</a></h3>
+                                    <h3 class="bg-highlight">DESKTOP METRICS</h3>
                                     <li>
                                         <i class="fa fa-eye"></i>
                                         <p class="metrics-1">SESSIONS</p>
@@ -73,7 +73,7 @@
                                     </li>
                                 </ul>
                                 <ul>
-                                    <h3><a class="highlight">Mobile METRICS</a></h3>
+                                    <h3 class="bg-highlight">Mobile METRICS</h3>
                                     <li>
                                         <i class="fa fa-eye"></i>
                                         <p class="metrics-1">SESSIONS</p>
@@ -104,13 +104,14 @@
                             <div class="metrica-mapa">
                                 <div class="map-content">
                                     <ul>
-                                        <h3><a class="highlight">MAP GLOBAL REACH</a></h3>
+                                        <h3 class="bg-highlight">MAP GLOBAL REACH</h3>
                                         <div class="img-map"><img src="<?php the_field('imagen_mapa'); ?>"  alt=""></div>
                                     </ul>     
                                 </div>
                             </div>
                             <div class="btn-display">
                                 <div class="content-display">
+                                    <h3 class="bg-highlight">CONTACTANOS</h3>
                                      <div class="btn display-des"><a href="#"><i class="fa fa-external-link"></i> Cotizar</a></div>
                                 </div>
                             </div> 

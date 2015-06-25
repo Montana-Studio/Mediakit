@@ -21,7 +21,7 @@
 
 							<div class="img-single"><?php echo the_post_thumbnail();?>
 								<div class="title">
-									<a class="highlight" href="<?php the_permalink()?>">
+									<a class="bg-highlight" href="<?php the_permalink()?>">
 									<?php if (strlen($post->post_title) > 40) {
 										echo substr(the_title($before = '', $after = '', FALSE), 0, 40) . ' ... '; } else {
 										the_title();

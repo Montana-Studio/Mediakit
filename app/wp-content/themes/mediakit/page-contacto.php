@@ -15,7 +15,7 @@
 				</div>
 				<div class="content-info">
 					<div class="trama">
-						<h3><a class="highlight-inv">DONDE UBICARNOS</a></h3>
+						<h3 class="bg-highlight-inv">DONDE UBICARNOS</h3>
 						<p>Av. Italia 12345,</p>
 						<p>Santiago de Chile.</p>
 						<p>hola@mediatrends.cl</p> 

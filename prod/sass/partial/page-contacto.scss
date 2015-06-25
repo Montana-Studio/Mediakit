@@ -226,13 +226,10 @@
 						padding:{top:30px;}
 					}
 					h3 {
-						a {
-							&.highlight-inv {
-								font:{size: 30px;}
-								@include gridle_state(phoness) {
-									font:{size:24px;}
-								}
-							}
+						font:{size: 30px;}
+						display: table;
+						@include gridle_state(phoness) {
+							font:{size:24px;}
 						}
 					}
 					p {
