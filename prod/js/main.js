@@ -138,5 +138,26 @@ jQuery(document).ready(function($){
 
 	});   
 
-});     
+	$(function() {
+	    function moveFloatMenu() {
+	        var menuOffset = $(this).scrollTop() + 'px';
+	        $('#floatMenu').animate({
+	            top: menuOffset
+	        }, {
+	            duration: 500,
+	            queue: false
+	        });
+	    }
+
+	    var menuYloc = $('#floatMenu').offset();
+
+	    $(window).scroll(moveFloatMenu);
+
+	    moveFloatMenu();
+	});
+
+
+});    
+
+
 

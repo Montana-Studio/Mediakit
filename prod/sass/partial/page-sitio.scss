@@ -1,16 +1,24 @@
 .sitio-single {
-	.page-header {
-		.encabezado {
-			h2 {
-				display: none;
-			}
-			.bajada {
-			 	display: none;
-			}
-		}
-	}
+	@include gridle(12);
+	@extend .no-paddings;
+	height: auto;
 	.wrapper {
 		height: auto !important;
+		@include gridle_state(desktopess) {
+			height: 100% !important;
+		}
+		.page-header {
+			.content-header {
+				.content-title {
+					h2 {
+						display: none !important;
+					}
+					.bajada {
+						display: none !important;
+					}
+				}
+			}
+		}
 		.page-sitio {
 			@include gridle(10, desktopess notebook-min);
 			@include gridle(12, phoness tabless-min);
@@ -69,11 +77,14 @@
 							}
 						}
 					}
+					h2 {
+						display:none;
+					}
 					.bajada {
 						padding:{bottom:10px;}
 						line-height: 20px;
 						@include gridle_state(phoness) {
-							display: none;
+							display: none !important;
 						}
 						@include gridle(10, tabless-md notebook-min desktopess);
 						@include gridle_state(desktopess) {
@@ -155,6 +166,11 @@
 								}
 							}
 						}	
+					}
+					.content-title {
+						h2 {
+							display: none;
+						}
 					}
 					
 				}
@@ -271,5 +287,4 @@
 			}
 		}
 	}
-	
 }

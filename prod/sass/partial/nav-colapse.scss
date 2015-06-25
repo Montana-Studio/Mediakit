@@ -1,6 +1,9 @@
 .nav-colapse {
 	height: 100%;
 	position: absolute;
+	background: $first_color;
+	color:$second_color;
+	overflow: scroll;
 	@include gridle(2, desktopess notebook-min);
 	@include gridle_state(desktopess) {
 		float:left;
@@ -18,160 +21,91 @@
 	@include gridle(9, phoness);
 	@include gridle_float(right);
 	@extend .no-paddings;
-	background: $first_color;
-	color:$second_color;
-	.logo-menu-media {
-		@include gridle(10);
-		@include gridle_float(none);
-		margin:20px auto;
-		display: block;
-		@include gridle_state(phoness tabless-min) {
-			display: none;
-		}
-	}
-	.menu-review {
-		text:{align:center;}
-		font:{family:$primary_font;size:14px;}
-		color:$second_color;
-		margin:{top:0;bottom:0;}
-		@include gridle_state(phoness) {
-			display: none;
-		}
-	}
-	.search {
+	.contendor-menu {
 		@include gridle(12);
 		@extend .no-paddings;
-		height: 60px;
-		.search-input {
+		position:absolute;
+		height: auto;
+		top:0;
+		.logo-menu-media {
 			@include gridle(10);
-			background: $first_color;
-			border:0;
-			outline: none;
-			color:$second_color;
-			padding:20px;
-			@include placeholder {
-				color: $second_color;
-				font:{family:$primary_font;}
-			}
-			@include gridle_state(tabless-md) {
-				padding: 20px 10px;
+			@include gridle_float(none);
+			margin:20px auto;
+			display: block;
+			@include gridle_state(phoness tabless-min) {
+				display: none;
 			}
 		}
-		.search-submit {
-			@include gridle(2);
-			background: none;
-			color:$second_color;
-			border:0;
-			padding: 21px 0;
-			font:{size:19px;}
-			outline: none;
-		}
-	}
-	.menu {
-		margin:{top: 75px;}
-		position: absolute;
-		overflow: hidden;
-		top: 0;
-		bottom: 0;
-		list-style: none;
-		padding: 0;
-		@include gridle_state(phoness) {
-			margin:{top: 60px;}
-		}
-		.menu-inner{
-			@extend .no-margins;
+		.search {
+			@include gridle(12);
 			@extend .no-paddings;
-			list-style: none;
-			margin: 0;
-			padding: 0;  
-			transition: all .3s ease;
-			perspective: 2000px;
-			li {
+			.search-input {
+				@include gridle(10);
+				background: $first_color;
+				border:0;
+				outline: none;
+				color:$second_color;
+				padding:15 20px;
+				@include placeholder {
+					color: $second_color;
+					font:{family:$primary_font;}
+				}
+				@include gridle_state(tabless-md) {
+					padding: 15px 10px;
+				}
+			}
+			.search-submit {
+				@include gridle(2);
+				background: none;
+				color:$second_color;
+				border:0; 
+				padding: 15px 0; 
+				font:{size:19px;}
+				outline: none;
+			}
+		}
+		.menu {
+			margin:{top: 75px;}
+			position:absolute;
+			height: auto;
+			top:0;
+			margin{top: 50px;}
+			@include gridle_state(desktopess notebook-min) {
+				margin:{top: 305px;}
+			}
+			@include gridle_state(phoness tabless-min) {
+				margin:{top:50px;}
+			}
+			ul {
 				@include gridle(12);
+				@extend .no-margins;
 				@extend .no-paddings;
 				list-style: none;
-				//padding:{top:20px; right:20px; bottom:20px; left:20px;}
-				background: $first_color_3;
-				transform-origin: left center;
-				position: relative;
-				text-decoration: none;
-				a {
-					@include gridle(10); 
-					@include gridle_float(right);
-					color:$second_color;
-					font:{family:$primary_font;weight:400;}
-					padding:{top:20px;bottom:20px;left:5px;}
-					@include gridle_state(notebook-min) {
-						padding:{top:15px;bottom:15px;}
-					}
-					@include gridle_state(phoness) {
-						padding: {top:13px;bottom:13px;left: 15px;}
-					}
-					&.item{
-					    display: block;
-					    transform-origin:left center;
-					    position: relative;
-				    	&:active{
-					      transition: all .2s 0 ease;
-					    }
-					}
-				}
-				&.fa {
-					&:before {
-						padding: {top:20px;right:0px; bottom:20px; left:24px;}
-						display: inline-block;
+				height: auto;
+				li {
+					@include gridle(12);
+					@extend .no-paddings;
+					list-style: none;
+					background: $first_color_3;
+					text-decoration: none;
+					border-bottom:1px solid $first_color;
+					a {
+						@include gridle(10); 
+						@include gridle_float(right);
+						color:$second_color;
+						font:{family:$primary_font;weight:400;}
+						padding:{top:20px;bottom:20px;left:5px;}
 						@include gridle_state(notebook-min) {
-							  padding:{top:15px;bottom:15px;left: 10px;}
-						}
-						@include gridle_state(tabless-md) {
-							  padding:{left: 18px !important;}
-						}
-						@include gridle_state(tabless-min) {
-							 padding:{left: 3px;}
+							padding:{top:15px;bottom:15px;}
 						}
 						@include gridle_state(phoness) {
-							  padding:{top:13px;bottom:13px;left: 15px;}
-						}
-					}
-				}	
-				&:hover {
-					@include animation(hover-btn 1.5s infinite alternate);
-				}
-				&.current-menu-item {
-					background: $first_color;
-				}
-				&:first-child {
-					float:none;
-					padding:{top:20px !important; right:20px; bottom:20px !important; left:20px;}
-					@include background-image(url("../img/pattern.jpg"), url("../img/pattern.jpg"));
-					a {  
-						@include gridle_float(left);
-						width: auto;
-						@extend .highlight-inv;
-						font:{size: 18px !important;}
-						padding:{top:3px; right:5px; bottom:5px; left:5px;}
-						margin:{top:8px;left: 11px;}
-						@include gridle_state(desktopess) {
-							margin:{top:15px;}
-						}
-						@include gridle_state(notebook-min) {
-							margin:{top: 15px;}
-						}
-						@include gridle_state(phoness) {
-							margin:{top: 10px;}
-						}
-						&:hover {
-							background: $first_color;
-							color:$second_color;
+							padding: {top:13px;bottom:13px;left: 15px;}
 						}
 					}
 					&.fa {
-						color:$first_color;
-						font:{size: 18px !important;}
-						padding:0 !important;			
 						&:before {
-							@include gridle_float(left);
-							background:none;
+							padding: {top:20px;right:0px; bottom:20px; left:24px;}
+							display: inline-block;
 							@include gridle_state(notebook-min) {
 								  padding:{top:15px;bottom:15px;left: 10px;}
 							}
@@ -185,25 +119,78 @@
 								  padding:{top:13px;bottom:13px;left: 15px;}
 							}
 						}
-					}
+					}	
 					&:hover {
-						background-image: url("../img/pattern_inv.jpg") !important;
-						color:$second_color;
-						a {
-					 		background: $first_color;
-							color:$second_color;
-						} 
+						@include animation(hover-btn 1.5s infinite alternate);
 					}
 					&.current-menu-item {
-						background-image: url("../img/pattern_inv.jpg") !important;
-						color:$second_color;
-						 a {
-					 		background: $first_color;
+						background: $first_color;
+					}
+					&:first-child {
+						float:none;
+						padding:{top:20px !important; right:20px; bottom:20px !important; left:20px;}
+						@include background-image(url("../img/pattern.jpg"), url("../img/pattern.jpg"));
+						a {  
+							@include gridle_float(left);
+							width: auto;
+							@extend .highlight-inv;
+							font:{size: 18px !important;}
+							padding:{top:3px; right:5px; bottom:5px; left:5px;}
+							margin:{top:8px;left: 11px;}
+							@include gridle_state(desktopess) {
+								margin:{top:15px;}
+							}
+							@include gridle_state(notebook-min) {
+								margin:{top: 15px;}
+							}
+							@include gridle_state(phoness) {
+								margin:{top: 10px;}
+							}
+							&:hover {
+								background: $first_color;
+								color:$second_color;
+							}
+						}
+						&.fa {
+							color:$first_color;
+							font:{size: 18px !important;}
+							padding:0 !important;			
+							&:before {
+								@include gridle_float(left);
+								background:none;
+								@include gridle_state(notebook-min) {
+									  padding:{top:15px;bottom:15px;left: 10px;}
+								}
+								@include gridle_state(tabless-md) {
+									  padding:{left: 18px !important;}
+								}
+								@include gridle_state(tabless-min) {
+									 padding:{left: 3px;}
+								}
+								@include gridle_state(phoness) {
+									  padding:{top:13px;bottom:13px;left: 15px;}
+								}
+							}
+						}
+						&:hover {
+							background-image: url("../img/pattern_inv.jpg") !important;
 							color:$second_color;
-						 }
-					}		
+							a {
+						 		background: $first_color;
+								color:$second_color;
+							} 
+						}
+						&.current-menu-item {
+							background-image: url("../img/pattern_inv.jpg") !important;
+							color:$second_color;
+							 a {
+						 		background: $first_color;
+								color:$second_color;
+							 }
+						}		
+					}
 				}
 			}
-		}
+		}	
 	}
-}
+}	

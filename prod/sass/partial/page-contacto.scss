@@ -1,19 +1,21 @@
 .contact {
 	@include gridle(12);
 	@extend .no-paddings;
-	.page-header {
-		.content-header {
-			.bajada {
-				display: none;
-			}
-		}
-	}
 	.wrapper { 
 		@include gridle(12);
 		@extend .no-paddings;
 		height: 100% !important;
 		@include gridle_state(phoness tabless-md tabless-min notebook-min) {
 			height: auto !important;
+		}
+		.page-header {
+			.content-header {
+				.encabezado {
+					.bajada {
+						display: none !important;
+					}	
+				}
+			}
 		}
 		.page-contacto {
 			@include gridle(10, desktopess notebook-min);

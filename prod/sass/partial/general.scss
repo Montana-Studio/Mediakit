@@ -144,6 +144,31 @@ a {
 		}
 	}
 }
+.bajada {
+	@include gridle(12);
+	@extend .highlight;
+	background: none;
+	font:{size:10px;transform:none;}
+	text:{align:left;}
+	padding: 10px;
+	margin:{top:0; right:0; bottom:5px; right:0;}
+	@include gridle_state(desktopess, notebook-min){
+		font:{size: 13px;}
+		padding:{left:10px;}
+	}
+	@include gridle_state(phoness-min) {
+		padding:{left:0; right:0;}
+	}
+	@include gridle_state(tables-md) {
+		padding:{left:0; right:0;}
+	}
+	@include gridle(11, tabless-md);
+	p {
+		@extend .no-margins;
+		background: $first_color;
+		padding: 7px 5px;
+	}
+}
 .nothing-message {
 	@include gridle(12);
 	background:$second_color;
