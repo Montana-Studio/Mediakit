@@ -23,38 +23,3 @@
 @import 'partial/queries';   
 
 
-$width-column:16.66667%;
-.wrapper{
-	@include gridle(10, desktopess notebook-min);
-	@include gridle(12, phoness phoness-min tabless-min tabless-min);
-	@include gridle_push(2, desktopess notebook-min);
-	@include gridle_push(0, phoness phoness-min tabless-min tabless);
-	@include gridle_state(phoness-min phoness tabless-min tabless){
-		overflow: hidden;
-		.nav-colapse{
-			position: absolute;
-			left: inherit !important;
-		}
-	}
-	@include gridle_state(desktopess notebook-min){
-		overflow: scroll;
-		.nav-colapse{
-			position: fixed;
-			left:0;
-		}
-	}
-	.page-header{
-		@include gridle(12, desktopess notebook-min);
-	}
-	.page-categoria{
-		@extend .page-header;
-		padding:0 10px !important;
-	}
-	.page-sitio{
-		@extend .page-header;
-	}
-	.page-contacto{
-		@extend .page-header;
-		padding:0 10px !important;
-	}
-}
