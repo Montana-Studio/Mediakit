@@ -9,7 +9,6 @@
 	margin:{top:-80px;}
 	@include gridle_state(phoness) {
 		padding:0 !important;
-		margin:{top:0;} 
 	}
 	.footer-content {
 		@include gridle(12);
@@ -22,9 +21,12 @@
 		position: relative; 
 		@include gridle(12);
 		@include gridle_state(desktopess notebook-min) {
-			margin:{top:0;right: auto; bottom: 0; left:auto;}
+			margin:{top:-10px;right: auto; bottom: 0; left:auto;}
 			float: none;
 			display: block;
+		}
+		@include gridle_state(notebook-min) {
+			margin:{top: -10px;}
 		}
 		@include gridle_state(phoness) {
 			padding: 0 !important;
@@ -63,24 +65,36 @@
 					}
 				}
 				h3 {
+					visibility: hidden;
 					@extend .no-margins;
 					font:{size:11px;}	
-					&:first-child {
-						a {
-							font:{weight:bold !important;}
-						}
+					display: table;
+					width: auto;
+					@include gridle_state(desktopess) {
+						font:{size: 15px;}
+						padding:{left: 4px;}
+						line-height: 26px;
 					}
-					a{
-						font:{size:11px;}	
-						@include gridle_state(desktopess) {
-							font:{size: 15px;}
-							padding:{left: 4px;}
-							line-height: 26px;
-						}
-						@include gridle_state(notebook-min) {
-							font-size: 13px;
-							line-height: 25px;
-						}
+					@include gridle_state(notebook-min) {
+						font-size: 13px;
+						line-height: 25px;
+					}
+					@include gridle_state(tabless-md) {
+						padding: {left:5px;}
+					}
+					@include gridle_state(phoness) {
+						padding:{left:4px;}
+						line-height: 22px;
+						margin:{top: 2px !important;}
+						font:{size: 12px;}
+					}
+					&:first-child {
+						font:{weight:bold !important;}
+					}
+					a {
+						color:$first_color;
+						font:{style:italic;}
+						text:{decoration: underline;}
 					}
 				}
 			}
@@ -113,7 +127,7 @@
 						@include gridle_state(notebook-min) {
 							margin:{left: 6px;}
 						}
-						a{
+						a {
 							text:{align:center;}
 							color:$first_color;
 							display: table-cell;

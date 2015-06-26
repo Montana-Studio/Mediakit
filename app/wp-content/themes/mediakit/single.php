@@ -12,9 +12,12 @@
                    <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
                     <div class="content-header">
                         <div class="logo-sitio"><div class="img-content"><img src="<?php the_field('imagen_logo_sitio'); ?>" alt=""></div></div>
-                        <div class="bajada bg-highlight"><?php the_content(); ?></div>
-                        <div class="btn-left"><div class="pattern"><a class="highlight-inv">MONTHLY REACH 34.000</a></div></div>
-                        <div class="btn-right"><div class="btn"><a href="#"><i class="fa fa-external-link"></i> ver sitio</a></div></div> 
+                        <div class="content-group">
+                            <div class="bajada bg-highlight"><?php the_content(); ?></div>
+                            <div class="btn-left"><div class="pattern"><a class="highlight-inv">MONTHLY REACH 34.000</a></div></div>
+                            <div class="btn-right"><div class="btn"><a href="#"><i class="fa fa-external-link"></i> ver sitio</a></div></div>   
+                        </div>
+                        
                     </div>
                     <!--Resultado mÃ©tricas -->
                     <!-- 
@@ -101,6 +104,12 @@
                                     </li>
                                 </ul>  
                             </div>
+                             <div class="btn-display">
+                                <div class="content-display">
+                                    <h3 class="bg-highlight">CONTACTANOS</h3>
+                                     <div class="btn display-des"><a href="#"><i class="fa fa-external-link"></i> Cotizar</a></div>
+                                </div>
+                            </div>
                             <div class="metrica-mapa">
                                 <div class="map-content">
                                     <ul>
@@ -109,12 +118,7 @@
                                     </ul>     
                                 </div>
                             </div>
-                            <div class="btn-display">
-                                <div class="content-display">
-                                    <h3 class="bg-highlight">CONTACTANOS</h3>
-                                     <div class="btn display-des"><a href="#"><i class="fa fa-external-link"></i> Cotizar</a></div>
-                                </div>
-                            </div> 
+                            
                         </div>
                     </div>    
                     <!-- Fin Resultado mÃ©tricas -->

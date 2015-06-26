@@ -1,5 +1,24 @@
 jQuery(document).ready(function($){
 
+	var loadReady = setTimeout(function(){$('.logo-mediatrends').addClass('fadeOutDown');},600);
+	
+	$(window).load(loadReady,function(){
+		//una vez cargado
+		setTimeout(function(){
+			$('.content-about h2').addClass('fadeOut');
+		},400);
+		setTimeout(function(){
+			$('.content-about .bajada').addClass('fadeOut');
+		},800);
+		setTimeout(function(){ $('#info-1').addClass('fadeOut'); },1700);
+		setTimeout(function(){ $('#info-2').addClass('fadeOut'); },1800);
+		setTimeout(function(){ $('#info-3').addClass('fadeOut'); },1900);
+		setTimeout(function(){ $('#info-4').addClass('fadeOut'); },2000);
+		setTimeout(function(){ $('#fsocial-f').addClass('fadeIn'); },2400);
+		setTimeout(function(){ $('#fsocial-t').addClass('fadeIn'); },2600);
+		setTimeout(function(){ $('#fsocial-i').addClass('fadeIn'); },2800);
+	});
+	
 	$('#menu-nav').toggle(function() {
 	  $('.nav-colapse').animate({ right:0 }, 300, 'swing');
 	  $('#uno path').removeAttr('class','uno-b');
@@ -9,9 +28,7 @@ jQuery(document).ready(function($){
 	  $('#tres path').removeAttr('class','tres-b');
 	  $('#tres path').attr('class','tres');
 	},function(){
-	  $('.nav-colapse').animate({
-			right:'-300px'
-		},300);
+	  $('.nav-colapse').animate({ right:'-300px' },300);
 	  $('#uno path').removeAttr('class','uno');
 	  $('#uno path').attr('class','uno-b');
 	  $('#dos path').removeAttr('class','dos');
@@ -156,6 +173,7 @@ jQuery(document).ready(function($){
 	    moveFloatMenu();
 	});
 
+	
 
 });    
 

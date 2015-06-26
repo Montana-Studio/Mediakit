@@ -48,7 +48,7 @@
 					.pattern {
 						.highlight-inv {
 							font:{size:18px;}
-							@include gridle_state(tabless-md){
+							@include gridle_state(tabless-md) {
 								font:{size:14px;}
 							}
 						}

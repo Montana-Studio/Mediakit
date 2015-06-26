@@ -20,8 +20,8 @@
 							</a>
 						</div>
 						<div class="content-about">
-							<h2 class="bg-highlight-inv"><?php the_title(); ?></h2> 
-							<div class="bajada bg-highlight-inv"><?php the_content(); ?></div>
+							<h2 class="highlight-inv"><?php the_title(); ?></h2> 
+							<div class="bajada"><?php the_content(); ?></div>
 						</div>
 					</div>
 				</div>

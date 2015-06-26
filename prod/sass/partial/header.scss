@@ -77,7 +77,7 @@
 						position: relative;
 						width: initial !important;
 						padding-right: 10px !important;
-						@include gridle_state(desktopess, notebook-min){
+						@include gridle_state(desktopess, notebook-min) {
 							font:{size: 13px;}
 							padding:{left:10px;}
 						}

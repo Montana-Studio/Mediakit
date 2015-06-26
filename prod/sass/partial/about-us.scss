@@ -27,19 +27,30 @@
 				@include gridle_state(desktopess notebook-min) { 
 				 display: block;
 				 height: 100%;
-				}
+				 }
+				 @include gridle_state(phoness) {
+				 	  padding:{top: 30px;}
+				 }
 				.logo-mediatrends {
-					@include gridle(3, phoness desktopess tabless tabless-min);
-					@include gridle(4, notebook-min);
-					@include gridle(7,phoness-min);
-					@include gridle_float(none);
+					visibility:hidden;
 					margin:{top:0;right:auto;bottom:30px;left: auto;}
 					left:0;
 					right:0;
 					right: 0;
 					display: block;
-					@include gridle_state(phoness) {
+					@include gridle(3,desktopess);
+					@include gridle(4,notebook-min);
+					@include gridle(2,tabless-md);
+					@include gridle(7,phoness-min);
+					@include gridle_float(none);
+					@include gridle_state(desktopess) {
+					margin:{bottom:0;}	
+					}
+					@include gridle_state(tabless-md) {
 						margin:{bottom:0;}
+					}
+					@include gridle_state(phoness) {
+						display: none;
 					}
 					a {
 						svg {
@@ -56,43 +67,63 @@
 					display: block;
 					margin:0 auto;
 					h2 {
+						visibility: hidden;
 						display:table;
 						width: auto;
-						@include gridle_state(desktopess notebook-min) {
-							padding:{left:0 !important;}
-						}
-						@include gridle_state(tabless-min) {
-							padding: 0 10px;
+						font:{size:2em;}
+						@include gridle_state(tabless-md) {
+							padding: {left:5px;}
+							margin:{top:0;}
 						}
 						@include gridle_state(phoness) {
 							padding: 0 10px;
+							margin:{top:0;}
 						}
 					}
 					.bajada {
 						@include gridle(12);
 						@extend .no-paddings;
-						
+						visibility: hidden;
 						margin:{bottom:100px;}
 						p {
+							@extend .highlight-inv;
+							line-height: 26px;
+							letter-spacing: 0;
+							font:{size: 13px;}
+							display: inline;
+							padding:5px;
 							@include gridle_state(desktopess) {
-								line-height: 30px;
-								letter-spacing: 1px;
+								line-height: 25px;
+								letter-spacing: 0px;
 							}
 							@include gridle_state(notebook-min) {
 								line-height: 23px;
 								font:{size: 13px;}
 							} 
+							@include gridle_state(tabless-md) {
+
+							}
 							@include gridle_state(phoness) {
-								padding: 0 10px;
-							}   
-							@include gridle_state(phoness-min) {
-								line-height: 20px;
-								font:{size: 11px;} 
+								line-height: 21px;
+								font-size: 12px;
+								padding: 1px;
+								font-weight: 600;
 							}
 						}
 					}
 				}
 			}
+		}
+	}
+	.footer {
+		#fsocial-f {
+			visibility: hidden;
+		}
+		#fsocial-t {
+			visibility: hidden;
+		}
+		#fsocial-i {
+			visibility: hidden;
 		}
 	}	 
 }       
