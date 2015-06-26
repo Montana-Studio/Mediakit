@@ -1,243 +1,221 @@
-.contact {
-	@include gridle(12);
-	@extend .no-paddings;
-	.wrapper { 
-		@include gridle(12);
+.page-contacto {
+	@include gridle(10, desktopess notebook-min);
+	@include gridle(12, phoness tabless-min);
+	@include gridle_state(desktopess) {
+		padding:{top:0; right:10px; bottom:0; left:10px;}
+	}
+	@include gridle_state(desktopess notebook-min) {
+		float:right;
+	} 
+	@include gridle_state(notebook-min) {
+		margin:{bottom:10px;}
+	} 
+	@include gridle_state(tabless-min) {
+		padding:10px;
+	} 
+	@include gridle_state(phoness) {
+		padding:10px;
+	}
+	.encabezado {
+		margin:{bottom:20px;}
 		@extend .no-paddings;
-		height: 100% !important;
-		@include gridle_state(phoness tabless-md tabless-min notebook-min) {
-			height: auto !important;
-		}
-		.page-header {
-			.content-header {
-				.encabezado {
-					.bajada {
-						display: none !important;
-					}	
+		.content-title {
+			position: relative;
+			h2 {
+				margin:{bottom: 30px;}
+				position:absolute;
+				bottom: 0;
+				a {
+					&.highlight {
+						font:{size:30px;}
+					}
 				}
 			}
+			iframe {
+				border: 0;
+				bottom: 0;
+				height: 100%;
+			}
 		}
-		.page-contacto {
-			@include gridle(10, desktopess notebook-min);
-			@include gridle(12, phoness tabless-min);
+	}
+	.form-contacto-cont {
+		background: $second_color;
+		@include gridle(6, desktopess notebook-min);
+		@include gridle(12, phoness phoness-min );
+		@extend .no-paddings;
+		@include gridle_state(notebook-min) {
+			padding: 0 10px;
+			background: none;
+		}
+		.title-form {
+			@include gridle(12);
+			padding:10px;
+			@include gridle_state(tabless-md) {
+				padding: 10px !important;
+			}
+			a {
+				font:{size:17px !important;}
+			}
+		}
+		.content-form {
+			@include gridle(12);
+			@include gridle_state(tabless-md) {
+				padding:0 10px;
+			}
 			@include gridle_state(desktopess) {
-				padding:{top:0; right:10px; bottom:0; left:10px;}
+				padding:{left:20px; right: 20px;}
 			}
-			@include gridle_state(desktopess notebook-min) {
-				float:right;
-			} 
 			@include gridle_state(notebook-min) {
-				margin:{bottom:10px;}
-			} 
-			@include gridle_state(tabless-min) {
-				padding:10px;
-			} 
-			@include gridle_state(phoness) {
-				padding:10px;
-			}
-			.encabezado {
-				margin:{bottom:20px;}
-				@extend .no-paddings;
-				.content-title {
-					position: relative;
-					h2 {
-						margin:{bottom: 30px;}
-						position:absolute;
-						bottom: 0;
-						a {
-							&.highlight {
-								font:{size:30px;}
-							}
-						}
-					}
-					iframe {
-						border: 0;
-						bottom: 0;
-						height: 100%;
-					}
-				}
-			}
-			.form-contacto-cont {
+				padding:{left:10px; right: 10px;}
 				background: $second_color;
-				@include gridle(6, desktopess notebook-min);
-				@include gridle(12, phoness phoness-min );
-				@extend .no-paddings;
-				@include gridle_state(notebook-min) {
-					padding: 0 10px;
-					background: none;
-				}
-				.title-form {
+			}
+			@include gridle_state(tabless-min) {
+				padding:{left:10px; right: 10px;}
+			}
+			@include gridle_state(phoness) {
+				padding:{left:10px; right:10px;}
+				margin:{bottom:10px;}
+			}
+			.wpcf7 {
+				@extend .no-margins;
+				.wpcf7-form {
 					@include gridle(12);
-					padding:10px;
-					@include gridle_state(tabless-md) {
-						padding: 10px !important;
-					}
-					a {
-						font:{size:17px !important;}
-					}
-				}
-				.content-form {
-					@include gridle(12);
-					@include gridle_state(tabless-md) {
-						padding:0 10px;
-					}
-					@include gridle_state(desktopess) {
-						padding:{left:20px; right: 20px;}
-					}
-					@include gridle_state(notebook-min) {
-						padding:{left:10px; right: 10px;}
-						background: $second_color;
-					}
-					@include gridle_state(tabless-min) {
-						padding:{left:10px; right: 10px;}
-					}
-					@include gridle_state(phoness) {
-						padding:{left:10px; right:10px;}
-						margin:{bottom:10px;}
-					}
-					.wpcf7 {
+					@extend .no-margins;
+					@extend .no-paddings;
+					p {
 						@extend .no-margins;
-						.wpcf7-form {
+						.wpcf7-form-control-wrap {
 							@include gridle(12);
-							@extend .no-margins;
 							@extend .no-paddings;
-							p {
-								@extend .no-margins;
-								.wpcf7-form-control-wrap {
-									@include gridle(12);
-									@extend .no-paddings;
-									margin:{top:10px;}
-									input {
-										@include gridle(12);
-										border:0;
-										border-bottom:1px solid $li-border-color;
-										padding:{top:5px; right:5px; bottom:10px; left:0;}
-										outline: none;
-										@include placeholder {
-											font:{family:$primary_font;style:italic;}
-											color:$font-color;
-											margin:{bottom:5px;}
-										}
-									}
-									textarea {
-										@include gridle(12);
-										border:0;
-										border-bottom:1px solid $li-border-color;
-										padding:{top:5px; right:5px; bottom:5px; left:0;}
-										height: 150px;
-										outline: none;
-										@include placeholder {
-											font:{family:$primary_font;style:italic;}
-											color:$font-color;
-										}
-									}
-									select {
-										@include gridle(12);
-										border:1px solid $li-border-color;
-										padding:{top:5px; right:5px; bottom:5px; left:0;}
-										outline: none;
-										@include placeholder {
-											font:{family:$primary_font;style:italic;}
-											color:$font-color;
-										}
-									}
-									span {
-										&.wpcf7-not-valid-tip {
-											color:$first_color;
-											font:{family:$primary_font;style:italic;}
-											color:$font-color;
-										}
-									}
-									&.menu-1 {
-										@include gridle(6, desktopess notebook-min);
-										@include gridle(12, phoness tabless-min);
-									}
-								}
-								.form-btn {
-									margin:20px 0 !important;
-									@include gridle(12);
-									background: $first_color;
-									text:{align:center;transform: uppercase;}
-									padding:12px 0;
-									color:$second_color;
-									border:0 !important; 
-									font:{size:14px; family:$primary_font;}
-									outline: none;
-									@include gridle_state(notebook-min) {
-										margin:{bottom:10px !important;}
-									}
+							margin:{top:10px;}
+							input {
+								@include gridle(12);
+								border:0;
+								border-bottom:1px solid $li-border-color;
+								padding:{top:5px; right:5px; bottom:10px; left:0;}
+								outline: none;
+								@include placeholder {
+									font:{family:$primary_font;style:italic;}
+									color:$font-color;
+									margin:{bottom:5px;}
 								}
 							}
-							.wpcf7-validation-errors {
+							textarea {
+								@include gridle(12);
 								border:0;
-								text:{align: center;}
+								border-bottom:1px solid $li-border-color;
+								padding:{top:5px; right:5px; bottom:5px; left:0;}
+								height: 150px;
+								outline: none;
+								@include placeholder {
+									font:{family:$primary_font;style:italic;}
+									color:$font-color;
+								}
 							}
-							.wpcf7-mail-sent-ok {
-								border:0;
-								text:{align: center;}			
+							select {
+								@include gridle(12);
+								border:1px solid $li-border-color;
+								padding:{top:5px; right:5px; bottom:5px; left:0;}
+								outline: none;
+								@include placeholder {
+									font:{family:$primary_font;style:italic;}
+									color:$font-color;
+								}
 							}
-							.explicacion-form {
+							span {
+								&.wpcf7-not-valid-tip {
+									color:$first_color;
+									font:{family:$primary_font;style:italic;}
+									color:$font-color;
+								}
+							}
+							&.menu-1 {
 								@include gridle(6, desktopess notebook-min);
 								@include gridle(12, phoness tabless-min);
-								font:{family:$primary_font; size:10px;style:italic;}
-								color:$first_color_3;
-								padding: 10px 10px;
-								display: block;
-								float: right;
+							}
+						}
+						.form-btn {
+							margin:20px 0 !important;
+							@include gridle(12);
+							background: $first_color;
+							text:{align:center;transform: uppercase;}
+							padding:12px 0;
+							color:$second_color;
+							border:0 !important; 
+							font:{size:14px; family:$primary_font;}
+							outline: none;
+							@include gridle_state(notebook-min) {
+								margin:{bottom:10px !important;}
 							}
 						}
 					}
-				}	
+					.wpcf7-validation-errors {
+						border:0;
+						text:{align: center;}
+					}
+					.wpcf7-mail-sent-ok {
+						border:0;
+						text:{align: center;}			
+					}
+					.explicacion-form {
+						@include gridle(6, desktopess notebook-min);
+						@include gridle(12, phoness tabless-min);
+						font:{family:$primary_font; size:10px;style:italic;}
+						color:$first_color_3;
+						padding: 10px 10px;
+						display: block;
+						float: right;
+					}
+				}
 			}
-			.content-info {
-				@extend .shadow;
-				@include gridle(6, desktopess notebook-min); 
-				@include gridle(12, phoness phoness-min );
-				height: 300px;
-				@include gridle_state(desktopess) {
-					height: 565px; 
-					padding:{right:0;}
+		}	
+	}
+	.content-info {
+		@extend .shadow;
+		@include gridle(6, desktopess notebook-min); 
+		@include gridle(12, phoness phoness-min );
+		height: 300px;
+		@include gridle_state(desktopess) {
+			height: 565px; 
+			padding:{right:0;}
+		}
+		@include gridle_state(notebook-min) {
+			height: 554px;
+			padding:0;
+			padding:{right:0;}
+		}
+		@include gridle_state(tabless-md) {
+			height: 588px;
+				padding:{right: 0;}
+		}
+		@include gridle_state(phoness phoness-min) {
+			height: 300px;
+			padding:{right:0;}
+		}
+		.trama {
+			@extend .shadow;
+			@include gridle(12); 
+			height: inherit;
+			color:$second_color;
+			padding: {top:130px; left:20px;}
+			@include background-image(url("../img/pattern-logo.jpg"), url("../img/pattern-logo.jpg"));
+			background:{position:top left;repeat:repeat;}
+			@include gridle_state(tabless-md) {
+				padding:{top:115px; left:10px;}
+			}
+			@include gridle_state(phoness) {
+				padding:{top:30px;}
+			}
+			h3 {
+				font:{size: 30px;}
+				display: table;
+				@include gridle_state(phoness) {
+					font:{size:24px;}
 				}
-				@include gridle_state(notebook-min) {
-					height: 554px;
-					padding:0;
-					padding:{right:0;}
-				}
-				@include gridle_state(tabless-md) {
-					height: 588px;
-	  				padding:{right: 0;}
-				}
-				@include gridle_state(phoness phoness-min) {
-					height: 300px;
-					padding:{right:0;}
-				}
-				.trama {
-					@extend .shadow;
-					@include gridle(12); 
-					height: inherit;
-					color:$second_color;
-					padding: {top:130px; left:20px;}
-					@include background-image(url("../img/pattern-logo.jpg"), url("../img/pattern-logo.jpg"));
-					background:{position:top left;repeat:repeat;}
-					@include gridle_state(tabless-md) {
-						padding:{top:115px; left:10px;}
-					}
-					@include gridle_state(phoness) {
-						padding:{top:30px;}
-					}
-					h3 {
-						font:{size: 30px;}
-						display: table;
-						@include gridle_state(phoness) {
-							font:{size:24px;}
-						}
-					}
-					p {
-						font:{size:15px;}
-					}
-				}
+			}
+			p {
+				font:{size:15px;}
 			}
 		}
-	}	
+	}
 }
-
