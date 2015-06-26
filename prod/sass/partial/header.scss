@@ -82,7 +82,8 @@
 							padding:{left:10px;}
 						}
 						@include gridle_state(phoness-min) {
-							padding:{left:0; right:0;}
+							padding:{left:10px; right:0;}
+							margin:{left:0;}
 						}
 						@include gridle_state(tables-md) {
 							padding:{left:0; right:0;}

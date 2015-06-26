@@ -4,13 +4,13 @@
 	background: $first_color;
 	color:$second_color;
 	overflow: scroll;
+	z-index: 999; 
 	@include gridle(2, desktopess notebook-min);
 	@include gridle_state(desktopess) {
 		float:left;
 	}
 	@include gridle_state(phoness tabless-md) {
 		display: none;
-		z-index: 99;
 		right:-310px;
 	}
 	@include gridle_state(notebook-min) {
