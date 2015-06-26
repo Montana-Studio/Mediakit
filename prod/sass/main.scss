@@ -27,8 +27,8 @@ $width-column:16.66667%;
 .wrapper{
 	@include gridle(10, desktopess notebook-min);
 	@include gridle(12, phoness phoness-min tabless-min tabless-min);
-	@include gridle_pull(2, desktopess notebook-min);
-	@include gridle_pull(0, phoness phoness-min tabless-min tabless);
+	@include gridle_push(2, desktopess notebook-min);
+	@include gridle_push(0, phoness phoness-min tabless-min tabless);
 	@include gridle_state(phoness-min phoness tabless-min tabless){
 		overflow: hidden;
 		.nav-colapse{
