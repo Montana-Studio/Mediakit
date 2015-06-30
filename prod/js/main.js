@@ -137,42 +137,6 @@ jQuery(document).ready(function($){
 	    parallaxPosition();
 	}
 
-	$('.fa-line-chart a').attr('class','item item-0');
-	$('.fa-paint-brush a').attr('class','item item-1');
-	$('.fa-desktop a').attr('class','item item-2');
-	$('.fa-star-o a').attr('class','item item-3');
-	$('.fa-gamepad a').attr('class','item item-4');
-	$('.fa-music a').attr('class','item item-5');
-	$('.fa-futbol-o a').attr('class','item item-6');
-	$('.fa-trophy a').attr('class','item item-7');
-	$('.fa-glass a').attr('class','item item-8');
-	$('.fa-envelope-o a').attr('class','item item-9');
-	$('.fa-heart a').attr('class','item item-10');
-
-	$('#menu-nav').on('click', function(){
-  
-		console.log('click'); $('.menu-inner').toggleClass('menu--is-closed');
-
-	});   
-
-	$(function() {
-	    function moveFloatMenu() {
-	        var menuOffset = $(this).scrollTop() + 'px';
-	        $('#floatMenu').animate({
-	            top: menuOffset
-	        }, {
-	            duration: 500,
-	            queue: false
-	        });
-	    }
-
-	    var menuYloc = $('#floatMenu').offset();
-
-	    $(window).scroll(moveFloatMenu);
-
-	    moveFloatMenu();
-	});
-
 	
 
 });    

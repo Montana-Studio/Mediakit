@@ -22,6 +22,8 @@
 	color:$second_color;
 	height: 40px;
 	cursor:pointer;
+	position: fixed;
+  	z-index: 999;
 	@extend .no-paddings;
 	@include gridle_state(notebook-min desktopess) {
 		display: none;
@@ -66,9 +68,13 @@
 		width: 35px;
 		@include gridle_state(tabless-md) {
 			text:{align: right;}
+			padding:{top: 10px;}
 		}
 		@include gridle_state(tabless-min) {
 			padding:{right: 10px;}
+		}
+		@include gridle_state(phoness) {
+			padding:{top:3px;}
 		}
 		#icon-mobile {
 			position: relative;

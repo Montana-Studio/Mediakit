@@ -1,5 +1,5 @@
 <div id="menu-colapse" class="nav-colapse">
-	<div class="contendor-menu" id="floatMenu">
+	<div class="contendor-menu">
 		<div class="logo-menu-media">
 			<a href="<?php echo home_url(); ?>">
 				<svg viewBox="0 0 792 656.856">

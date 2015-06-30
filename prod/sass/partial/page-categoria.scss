@@ -23,6 +23,16 @@
 				}
 				padding:{top: 0;right: 5px; bottom:0; left:0;}
 				height: auto;
+				&:hover {
+					.title {
+						h2 {
+							@include transition(background-position 0.5s ease-out);
+							background-position: 99.99% 0 !important;
+							color:$first_color !important;
+							
+						}
+					}
+				}
 				.content-single {
 					@include gridle(12,phoness-min);
 					@extend .no-paddings;
@@ -30,24 +40,18 @@
 					background-color: $second_color;
 					height: auto;
 					border:1px solid $li-border-color;
-					margin:5px 0; 
+					margin:5px 0;
+					position: relative;
 					.header-destacado {
-						@include gridle(12);
-						background: $first_color;
-						color:$second_color;
-						padding: 10px;
-						text:{transform: uppercase;}
-						a {
-							color:$second_color;
-							font:{family:$primary_font;weight:300;style:italic; size:14px;}
-							@include gridle_state(tabless-md) {
-								padding:{left: 10px;}
-							}
-						}
+						display: none; 
 					}
 					.pattern {
 						.highlight-inv {
 							font:{size:18px;}
+							display: table;
+							@include gridle_state(notebook-min) {
+								font:{size: 15px;}
+							}
 							@include gridle_state(tabless-md) {
 								font:{size:14px;}
 							}
@@ -62,9 +66,26 @@
 						}
 						.title {
 							margin:{top:-31px;}
-							a {
+							h2 {
+								color:$second_color;
 								font:{size:20px;}
+								padding:{top:3px;left:10px;right:5px;}
 								text:{transform:uppercase;}
+								background-position: -0% 0;
+								@include background-image (linear-gradient(to right, rgba(0, 0, 0, 1) 50%, #fff 50%));
+								background-size: 200.22% auto;
+								-webkit-background-size: 200.22% auto;
+								-moz-background-size: 200.22% auto;
+								background-position: -0% 0;
+								@include transition(background-position 0.5s ease-out);
+								font:{style:italic;weight:400;}
+								width: auto;
+								position: absolute;
+								margin:{top: -26px !important;bottom:0;}
+								&:hover {
+									background-position: 99.99% 0;
+									color:$first_color;
+								}
 							}
 						}
 					}
@@ -91,6 +112,24 @@
 								}
 							}
 						}
+					}
+				}
+			}
+		}
+		.category-destacado{
+			.header-destacado {
+				position: absolute;
+				display: block !important;
+				@include gridle(12);
+				background: $first_color;
+				color:$second_color;
+				padding: 10px;
+				text:{transform: uppercase;}
+				a {
+					color:$second_color;
+					font:{family:$primary_font;weight:300;style:italic; size:14px;}
+					@include gridle_state(tabless-md) {
+						padding:{left: 10px;}
 					}
 				}
 			}

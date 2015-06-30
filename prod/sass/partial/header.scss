@@ -58,6 +58,9 @@
 						float: left;
 						margin:{bottom:5px;left:10px;}
 						text:{transform: uppercase;}
+						@include gridle_state(desktopess) {
+							margin:{left:0;}
+						}
 						@include gridle_state(tabless-md) {
 							margin:{left:0;}
 						}
@@ -77,8 +80,12 @@
 						position: relative;
 						width: initial !important;
 						padding-right: 10px !important;
-						@include gridle_state(desktopess, notebook-min) {
+						@include gridle_state(desktopess) {
 							font:{size: 13px;}
+							padding:{left:10px;}
+						}
+						@include gridle_state(notebook-min) {
+							font:{size: 11px;}
 							padding:{left:10px;}
 						}
 						@include gridle_state(phoness-min) {
@@ -87,6 +94,7 @@
 						}
 						@include gridle_state(tables-md) {
 							padding:{left:0; right:0;}
+							margin:{left: 0;}
 						}
 						@include gridle(11, tabless-md);
 						p {

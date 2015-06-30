@@ -10,6 +10,8 @@
 		float:left;
 	}
 	@include gridle_state(phoness tabless-md) {
+		position: fixed;
+		z-index: 990;
 		display: none;
 		right:-310px;
 	}
@@ -50,8 +52,18 @@
 					color: $second_color;
 					font:{family:$primary_font;}
 				}
+				@include gridle_state(notebook-min) {
+					margin:{top:0;}
+				}
+				@include gridle_state(tabless-min) {
+					margin: {top:40px;}
+				}
 				@include gridle_state(tabless-md) {
 					padding: 15px 10px;
+					margin:{top:55px;}
+				}
+				@include gridle_state(phoness) {
+					margin: {top:40px;}
 				}
 			}
 			.search-submit {
@@ -62,19 +74,39 @@
 				padding: 15px 0; 
 				font:{size:19px;}
 				outline: none;
+				@include gridle_state(notebook-min) {
+					margin:{top:0;}
+				} 
+				@include gridle_state(tabless-min) {
+					margin: {top:40px;}
+				}
+				@include gridle_state(tabless-md) {
+					margin:{top:55px;}
+				}
+				@include gridle_state(phoness) {
+					margin: {top:40px;}
+				}
 			}
 		}
 		.menu {
-			margin:{top: 75px;}
 			position:absolute;
 			height: auto;
 			top:0;
 			margin{top: 50px;}
-			@include gridle_state(desktopess notebook-min) {
+			@include gridle_state(desktopess) {
 				margin:{top: 305px;}
 			}
-			@include gridle_state(phoness tabless-min) {
-				margin:{top:50px;}
+			@include gridle_state(notebook-min) {
+				margin:{top:244px;}
+			}
+			@include gridle_state(tabless-min) {
+				margin:{top:88px;}
+			}
+			@include gridle_state(tabless-md) {
+				margin:{top:106px;}
+			}
+			@include gridle_state(phoness) {
+				margin:{top:88px;}
 			}
 			ul {
 				@include gridle(12);
@@ -86,13 +118,18 @@
 					@include gridle(12);
 					@extend .no-paddings;
 					list-style: none;
-					background: $first_color_3;
 					text-decoration: none;
-					border-bottom:1px solid $first_color;
+					border-bottom:1px solid $first_color_3;
+					background-position: -0% 0;
+					@include background-image (linear-gradient(to right, rgba(0, 0, 0, 1) 50%, #fff 50%)); 
+					background-size: 200.22% auto;
+					-webkit-background-size: 200.22% auto;
+					-moz-background-size: 200.22% auto;
+					background-position: -0% 0;
+					@include transition(background-position 0.5s ease-out);
 					a {
 						@include gridle(10); 
 						@include gridle_float(right);
-						color:$second_color;
 						font:{family:$primary_font;weight:400;}
 						padding:{top:20px;bottom:20px;left:5px;}
 						@include gridle_state(notebook-min) {
@@ -101,6 +138,7 @@
 						@include gridle_state(phoness) {
 							padding: {top:13px;bottom:13px;left: 15px;}
 						}
+						color:$second_color;
 					}
 					&.fa {
 						&:before {
@@ -121,15 +159,31 @@
 						}
 					}	
 					&:hover {
-						@include animation(hover-btn 1.5s infinite alternate);
+						background-position: -99.99% 0;
+						color:$first_color;
+						@include gridle_state(notebook-min) {
+							background-position: -99.99% 0;
+						}
+						a {
+							color:$first_color;
+						}
+						&.fa {
+							color:$first_color;
+						}
 					}
 					&.current-menu-item {
-						background: $first_color;
+						background: $second_color;
+						color:$first_color;
+						a {
+							color:$first_color;
+						}
 					}
+					$urlPath:'../../../uploads/2015/06'; 
 					&:first-child {
 						float:none;
-						padding:{top:20px !important; right:20px; bottom:20px !important; left:20px;}
-						@include background-image(url("../img/pattern.jpg"), url("../img/pattern.jpg"));
+						padding:{top:20px !important; right:20px; bottom:0 !important; left:20px;}
+						margin:{bottom:-4px;}
+						background:{size: inherit;image:url(#{$urlPath}/bg-pattern-fino.svg);color: $second_color;repeat: repeat;}
 						a {  
 							@include gridle_float(left);
 							width: auto;
@@ -141,14 +195,10 @@
 								margin:{top:15px;}
 							}
 							@include gridle_state(notebook-min) {
-								margin:{top: 15px;}
+								margin:{top: 10px;}
 							}
 							@include gridle_state(phoness) {
 								margin:{top: 10px;}
-							}
-							&:hover {
-								background: $first_color;
-								color:$second_color;
 							}
 						}
 						&.fa {
@@ -173,8 +223,6 @@
 							}
 						}
 						&:hover {
-							background-image: url("../img/pattern_inv.jpg") !important;
-							color:$second_color;
 							a {
 						 		background: $first_color;
 								color:$second_color;
