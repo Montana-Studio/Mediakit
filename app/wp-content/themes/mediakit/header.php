@@ -12,7 +12,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
-		<link rel=”shortcut icon”  href="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/favicon.ico">
+		<link rel="shortcut icon" type="image/svg+xml" href="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/favicon.svg">
+		<link rel="shortcut icon"  href="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/favicon.ico">
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mediakit.css"> 
 

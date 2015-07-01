@@ -5509,7 +5509,7 @@ a {
               padding-left: 0 !important; } }
           .wrapper .page-header .content-header .encabezado .content-title h1 {
             float: left;
-            margin-bottom: 5px;
+            margin-bottom: 0;
             margin-left: 10px;
             text-transform: uppercase; }
             html.desktopess .wrapper .page-header .content-header .encabezado .content-title h1 {
