@@ -5,7 +5,7 @@
 <?php get_template_part('menu'); ?>
 
 	<!-- section -->
-	<div class="page-categoria grid">
+	<div class="page-categoria">
 			
 			<!-- LOOP -->
 				<?php $query = new WP_Query('posts_per_page=10&category_name=sport'); ?>
