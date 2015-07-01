@@ -28,8 +28,11 @@
 				 display: block;
 				 height: 100%;
 				 }
-				 @include gridle_state(phoness) {
+				 @include gridle_state(phoness tabless-md) {
 				 	  padding:{top: 30px;}
+				 }
+				  @include gridle_state(phoness-min) {
+				 	  padding:{top: 40px;}
 				 }
 				.logo-mediatrends {
 					visibility:hidden;

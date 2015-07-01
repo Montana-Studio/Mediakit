@@ -315,14 +315,13 @@ a {
 @keyframes fadeIn {
 	0% {
 		@include transform(scale(0));
-			
+		opacity: 0;		
 	}
 	60% {
 		@include transform(scale(1.1));
 	}
 	80% {
 		@include transform(scale(0.9));
-		opacity: 1;	
 	}	
 	100% {
 		@include transform(scale(1));

@@ -5155,7 +5155,8 @@ a {
     -moz-transform: scale(0);
     -ms-transform: scale(0);
     -o-transform: scale(0);
-    transform: scale(0); }
+    transform: scale(0);
+    opacity: 0; }
   60% {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -5167,8 +5168,7 @@ a {
     -moz-transform: scale(0.9);
     -ms-transform: scale(0.9);
     -o-transform: scale(0.9);
-    transform: scale(0.9);
-    opacity: 1; }
+    transform: scale(0.9); }
   100% {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
@@ -8153,6 +8153,11 @@ a {
       @media screen and (max-width: 800px) {
         .about-us-page .page-aboutus .encabezado .content-title {
           padding-top: 30px; } }
+      html.tabless-md .about-us-page .page-aboutus .encabezado .content-title {
+        padding-top: 30px; }
+      @media screen and (max-width: 1024px) {
+        .about-us-page .page-aboutus .encabezado .content-title {
+          padding-top: 30px; } }
       .about-us-page .page-aboutus .encabezado .content-title .logo-mediatrends {
         visibility: hidden;
         margin-top: 0;
@@ -10675,6 +10680,11 @@ a {
     @media screen and (max-width: 1440px) {
       .footer .footer-content {
         margin-top: -10px; } }
+    html.tabless-min .footer .footer-content {
+      margin-top: 0; }
+    @media screen and (max-width: 1024px) {
+      .footer .footer-content {
+        margin-top: 0; } }
     html.phoness .footer .footer-content {
       padding: 0 !important; }
     @media screen and (max-width: 800px) {
