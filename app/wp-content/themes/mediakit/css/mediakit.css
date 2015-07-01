@@ -5445,23 +5445,25 @@ a {
             height: 300px; } }
         html.phoness .wrapper .page-header .content-header .encabezado {
           padding: 0 5px;
-          height: 210px; }
+          height: 300px; }
         @media screen and (max-width: 800px) {
           .wrapper .page-header .content-header .encabezado {
             padding: 0 5px;
-            height: 210px; } }
+            height: 300px; } }
         html.phoness-min .wrapper .page-header .content-header .encabezado {
           padding: 0 5px;
-          height: 210px; }
+          height: 300px; }
         @media screen and (max-width: 480px) {
           .wrapper .page-header .content-header .encabezado {
             padding: 0 5px;
-            height: 210px; } }
+            height: 300px; } }
         html.phoness-min .wrapper .page-header .content-header .encabezado {
-          padding: 0 7px; }
+          padding: 0 7px;
+          height: 210px; }
         @media screen and (max-width: 480px) {
           .wrapper .page-header .content-header .encabezado {
-            padding: 0 7px; } }
+            padding: 0 7px;
+            height: 210px; } }
         .wrapper .page-header .content-header .encabezado .content-title {
           float: left;
           direction: ltr;
@@ -5503,30 +5505,17 @@ a {
             .wrapper .page-header .content-header .encabezado .content-title {
               padding-left: 7px !important; } }
           html.phoness .wrapper .page-header .content-header .encabezado .content-title {
-            padding-left: 0 !important; }
+            padding-left: 0 !important;
+            bottom: 0; }
           @media screen and (max-width: 800px) {
             .wrapper .page-header .content-header .encabezado .content-title {
-              padding-left: 0 !important; } }
+              padding-left: 0 !important;
+              bottom: 0; } }
           .wrapper .page-header .content-header .encabezado .content-title h1 {
             float: left;
             margin-bottom: 0;
-            margin-left: 10px;
+            margin-left: 0;
             text-transform: uppercase; }
-            html.desktopess .wrapper .page-header .content-header .encabezado .content-title h1 {
-              margin-left: 0; }
-            @media screen and (min-width: 1440px) {
-              .wrapper .page-header .content-header .encabezado .content-title h1 {
-                margin-left: 0; } }
-            html.tabless-md .wrapper .page-header .content-header .encabezado .content-title h1 {
-              margin-left: 0; }
-            @media screen and (max-width: 1024px) {
-              .wrapper .page-header .content-header .encabezado .content-title h1 {
-                margin-left: 0; } }
-            html.phoness-min .wrapper .page-header .content-header .encabezado .content-title h1 {
-              margin-left: 0; }
-            @media screen and (max-width: 480px) {
-              .wrapper .page-header .content-header .encabezado .content-title h1 {
-                margin-left: 0; } }
           .wrapper .page-header .content-header .encabezado .content-title .bajada {
             float: left;
             direction: ltr;
@@ -5899,8 +5888,13 @@ a {
       .nav-mobile .menu-mobile {
         padding-right: 10px; } }
     html.phoness .nav-mobile .menu-mobile {
-      padding-top: 3px; }
+      padding-top: 10px; }
     @media screen and (max-width: 800px) {
+      .nav-mobile .menu-mobile {
+        padding-top: 10px; } }
+    html.phoness-min .nav-mobile .menu-mobile {
+      padding-top: 3px; }
+    @media screen and (max-width: 480px) {
       .nav-mobile .menu-mobile {
         padding-top: 3px; } }
     .nav-mobile .menu-mobile #icon-mobile {
@@ -6779,16 +6773,16 @@ a {
               margin-top: -100px;
               margin-left: 10px; } }
           html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header {
+            margin-top: -135px;
+            margin-left: 0;
             padding-left: 0;
-            padding-right: 0 !important;
-            margin-top: -85px;
-            margin-left: 0; }
+            padding-right: 0 !important; }
           @media screen and (max-width: 800px) {
             .sitio-single .wrapper .page-sitio .art-single .content-header {
+              margin-top: -135px;
+              margin-left: 0;
               padding-left: 0;
-              padding-right: 0 !important;
-              margin-top: -85px;
-              margin-left: 0; } }
+              padding-right: 0 !important; } }
           html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header {
             padding-left: 0;
             padding-right: 0 !important;
@@ -6852,32 +6846,45 @@ a {
                   content: "grid-default-2"; }
                 .gridle-debug .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.parent:before, .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.gridle-debug.parent:before {
                   content: "grid-parent-default-2"; } }
+            html.tabless-min .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio {
+              width: 16.66667%; }
+              .gridle-debug html.tabless-min .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio:before, html.tabless-min .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.gridle-debug:before {
+                content: "grid-default-2"; }
+              .gridle-debug html.tabless-min .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.parent:before, html.tabless-min .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.gridle-debug.parent:before {
+                content: "grid-parent-default-2"; }
+            @media screen and (max-width: 1024px) {
+              .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio {
+                width: 16.66667%; }
+                .gridle-debug .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio:before, .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.gridle-debug:before {
+                  content: "grid-default-2"; }
+                .gridle-debug .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.parent:before, .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.gridle-debug.parent:before {
+                  content: "grid-parent-default-2"; } }
             html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio {
-              width: 33.33333%; }
+              width: 25%; }
               .gridle-debug html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio:before, html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.gridle-debug:before {
-                content: "grid-default-4"; }
+                content: "grid-phoness-3" !important; }
               .gridle-debug html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.parent:before, html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.gridle-debug.parent:before {
-                content: "grid-parent-default-4"; }
+                content: "grid-parent-phoness-3" !important; }
             @media screen and (max-width: 800px) {
               .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio {
-                width: 33.33333%; }
+                width: 25%; }
                 .gridle-debug .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio:before, .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.gridle-debug:before {
-                  content: "grid-default-4"; }
+                  content: "grid-phoness-3" !important; }
                 .gridle-debug .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.parent:before, .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.gridle-debug.parent:before {
-                  content: "grid-parent-default-4"; } }
+                  content: "grid-parent-phoness-3" !important; } }
             html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio {
               width: 33.33333%; }
               .gridle-debug html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio:before, html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.gridle-debug:before {
-                content: "grid-default-4"; }
+                content: "grid-phoness-min-4" !important; }
               .gridle-debug html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.parent:before, html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.gridle-debug.parent:before {
-                content: "grid-parent-default-4"; }
+                content: "grid-parent-phoness-min-4" !important; }
             @media screen and (max-width: 480px) {
               .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio {
                 width: 33.33333%; }
                 .gridle-debug .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio:before, .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.gridle-debug:before {
-                  content: "grid-default-4"; }
+                  content: "grid-phoness-min-4" !important; }
                 .gridle-debug .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.parent:before, .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio.gridle-debug.parent:before {
-                  content: "grid-parent-default-4"; } }
+                  content: "grid-parent-phoness-min-4" !important; } }
             html.desktopess .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio {
               height: 185px; }
             @media screen and (min-width: 1440px) {
@@ -6894,11 +6901,11 @@ a {
               .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio {
                 height: 135px; } }
             html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio {
-              height: 105px;
+              height: 166px;
               padding: 0 5px !important; }
             @media screen and (max-width: 800px) {
               .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio {
-                height: 105px;
+                height: 166px;
                 padding: 0 5px !important; } }
             html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .logo-sitio {
               height: 105px;
@@ -7052,9 +7059,9 @@ a {
             @media screen and (max-width: 1024px) {
               .sitio-single .wrapper .page-sitio .art-single .content-header .content-group {
                 padding: 0 5px; } }
-            html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .content-group {
+            html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .content-group {
               top: 0; }
-            @media screen and (max-width: 800px) {
+            @media screen and (max-width: 480px) {
               .sitio-single .wrapper .page-sitio .art-single .content-header .content-group {
                 top: 0; } }
             .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .bajada {
@@ -7113,8 +7120,8 @@ a {
               direction: ltr;
               padding-left: 10px;
               padding-right: 10px;
-              padding-right: 10px !important;
-              padding-left: 0; }
+              padding-left: 0 !important;
+              padding-right: 10px !important; }
               html.default .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left {
                 float: left;
                 direction: ltr;
@@ -7166,26 +7173,40 @@ a {
                     content: "grid-default-6"; }
                   .gridle-debug .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left.parent:before, .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left.gridle-debug.parent:before {
                     content: "grid-parent-default-6"; } }
-              html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left {
+              html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left {
                 width: 100%; }
-                .gridle-debug html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left:before, html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left.gridle-debug:before {
-                  content: "grid-phoness-min-12" !important; }
-                .gridle-debug html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left.parent:before, html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left.gridle-debug.parent:before {
-                  content: "grid-parent-phoness-min-12" !important; }
-              @media screen and (max-width: 480px) {
+                .gridle-debug html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left:before, html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left.gridle-debug:before {
+                  content: "grid-phoness-12" !important; }
+                .gridle-debug html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left.parent:before, html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left.gridle-debug.parent:before {
+                  content: "grid-parent-phoness-12" !important; }
+              @media screen and (max-width: 800px) {
                 .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left {
                   width: 100%; }
                   .gridle-debug .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left:before, .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left.gridle-debug:before {
-                    content: "grid-phoness-min-12" !important; }
+                    content: "grid-phoness-12" !important; }
                   .gridle-debug .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left.parent:before, .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left.gridle-debug.parent:before {
-                    content: "grid-parent-phoness-min-12" !important; } }
+                    content: "grid-parent-phoness-12" !important; } }
+              html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left {
+                padding-right: 0 !important;
+                margin-bottom: 5px; }
+              @media screen and (max-width: 800px) {
+                .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left {
+                  padding-right: 0 !important;
+                  margin-bottom: 5px; } }
+              html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left {
+                padding-right: 10px !important;
+                margin-bottom: 0; }
+              @media screen and (max-width: 480px) {
+                .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left {
+                  padding-right: 10px !important;
+                  margin-bottom: 0; } }
               .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left .pattern {
                 float: left;
                 direction: ltr;
                 padding-left: 10px;
                 padding-right: 10px;
                 width: 100%;
-                padding-bottom: 13px;
+                padding-bottom: 10px;
                 margin-left: 5px;
                 margin-top: 10px; }
                 html.default .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-left .pattern {
@@ -7311,19 +7332,19 @@ a {
                     content: "grid-default-6"; }
                   .gridle-debug .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right.parent:before, .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right.gridle-debug.parent:before {
                     content: "grid-parent-default-6"; } }
-              html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right {
+              html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right {
                 width: 100%; }
-                .gridle-debug html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right:before, html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right.gridle-debug:before {
-                  content: "grid-phoness-min-12" !important; }
-                .gridle-debug html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right.parent:before, html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right.gridle-debug.parent:before {
-                  content: "grid-parent-phoness-min-12" !important; }
-              @media screen and (max-width: 480px) {
+                .gridle-debug html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right:before, html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right.gridle-debug:before {
+                  content: "grid-phoness-12" !important; }
+                .gridle-debug html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right.parent:before, html.phoness .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right.gridle-debug.parent:before {
+                  content: "grid-parent-phoness-12" !important; }
+              @media screen and (max-width: 800px) {
                 .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right {
                   width: 100%; }
                   .gridle-debug .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right:before, .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right.gridle-debug:before {
-                    content: "grid-phoness-min-12" !important; }
+                    content: "grid-phoness-12" !important; }
                   .gridle-debug .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right.parent:before, .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right.gridle-debug.parent:before {
-                    content: "grid-parent-phoness-min-12" !important; } }
+                    content: "grid-parent-phoness-12" !important; } }
               html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-header .content-group .btn-right {
                 padding-right: 10px !important;
                 padding-left: 0 !important;
@@ -7496,13 +7517,11 @@ a {
               margin-top: 25px;
               margin-bottom: 10px; } }
           html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-sitio {
-            padding: 0 !important;
-            margin-top: 25px;
+            margin-top: 16px;
             margin-bottom: 10px; }
           @media screen and (max-width: 480px) {
             .sitio-single .wrapper .page-sitio .art-single .content-sitio {
-              padding: 0 !important;
-              margin-top: 25px;
+              margin-top: 16px;
               margin-bottom: 10px; } }
           html.desktopess .sitio-single .wrapper .page-sitio .art-single .content-sitio .btn {
             display: none; }
@@ -7520,15 +7539,12 @@ a {
             .sitio-single .wrapper .page-sitio .art-single .content-sitio .btn {
               margin-top: 5px; } }
           html.phoness .sitio-single .wrapper .page-sitio .art-single .content-sitio .btn {
-            display: block !important; }
+            display: block !important;
+            margin-top: 14px; }
           @media screen and (max-width: 800px) {
             .sitio-single .wrapper .page-sitio .art-single .content-sitio .btn {
-              display: block !important; } }
-          html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-sitio .btn {
-            display: block !important; }
-          @media screen and (max-width: 480px) {
-            .sitio-single .wrapper .page-sitio .art-single .content-sitio .btn {
-              display: block !important; } }
+              display: block !important;
+              margin-top: 14px; } }
           .sitio-single .wrapper .page-sitio .art-single .content-sitio .metrics {
             float: left;
             direction: ltr;
@@ -7670,23 +7686,35 @@ a {
                 .sitio-single .wrapper .page-sitio .art-single .content-sitio .metrics .metrica-number {
                   padding-right: 15px; } }
               html.phoness .sitio-single .wrapper .page-sitio .art-single .content-sitio .metrics .metrica-number {
-                padding: 0 10px !important;
+                padding: 0 !important;
                 margin-top: 10px;
                 margin-bottom: 10px; }
               @media screen and (max-width: 800px) {
                 .sitio-single .wrapper .page-sitio .art-single .content-sitio .metrics .metrica-number {
-                  padding: 0 10px !important;
+                  padding: 0 !important;
                   margin-top: 10px;
                   margin-bottom: 10px; } }
               html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-sitio .metrics .metrica-number {
-                padding: 0 10px !important;
+                padding: 0 !important;
                 margin-top: 10px;
                 margin-bottom: 10px; }
               @media screen and (max-width: 480px) {
                 .sitio-single .wrapper .page-sitio .art-single .content-sitio .metrics .metrica-number {
-                  padding: 0 10px !important;
+                  padding: 0 !important;
                   margin-top: 10px;
                   margin-bottom: 10px; } }
+              html.phoness .sitio-single .wrapper .page-sitio .art-single .content-sitio .metrics .metrica-number ul {
+                padding: 0 10px !important; }
+              @media screen and (max-width: 800px) {
+                .sitio-single .wrapper .page-sitio .art-single .content-sitio .metrics .metrica-number ul {
+                  padding: 0 10px !important; } }
+              html.phoness-min .sitio-single .wrapper .page-sitio .art-single .content-sitio .metrics .metrica-number ul {
+                padding: 0 10px !important; }
+              @media screen and (max-width: 480px) {
+                .sitio-single .wrapper .page-sitio .art-single .content-sitio .metrics .metrica-number ul {
+                  padding: 0 10px !important; } }
+              .sitio-single .wrapper .page-sitio .art-single .content-sitio .metrics .metrica-number ul:last-child li:last-child {
+                border-bottom: 0; }
             .sitio-single .wrapper .page-sitio .art-single .content-sitio .metrics .metrica-mapa {
               padding: 0 10px;
               float: left;
@@ -8158,6 +8186,11 @@ a {
       @media screen and (max-width: 1024px) {
         .about-us-page .page-aboutus .encabezado .content-title {
           padding-top: 30px; } }
+      html.phoness-min .about-us-page .page-aboutus .encabezado .content-title {
+        padding-top: 50px; }
+      @media screen and (max-width: 480px) {
+        .about-us-page .page-aboutus .encabezado .content-title {
+          padding-top: 50px; } }
       .about-us-page .page-aboutus .encabezado .content-title .logo-mediatrends {
         visibility: hidden;
         margin-top: 0;
@@ -8411,11 +8444,47 @@ a {
   color: #ffffff;
   overflow: scroll;
   z-index: 999;
+  float: right;
   float: left;
   direction: ltr;
   padding-left: 10px;
-  padding-right: 10px;
-  float: right; }
+  padding-right: 10px; }
+  html.desktopess .nav-colapse {
+    float: left; }
+  @media screen and (min-width: 1440px) {
+    .nav-colapse {
+      float: left; } }
+  html.phoness .nav-colapse {
+    position: fixed;
+    z-index: 990;
+    display: none;
+    right: -310px; }
+  @media screen and (max-width: 800px) {
+    .nav-colapse {
+      position: fixed;
+      z-index: 990;
+      display: none;
+      right: -310px; } }
+  html.tabless-md .nav-colapse {
+    position: fixed;
+    z-index: 990;
+    display: none;
+    right: -310px; }
+  @media screen and (max-width: 1024px) {
+    .nav-colapse {
+      position: fixed;
+      z-index: 990;
+      display: none;
+      right: -310px; } }
+  html.notebook-min .nav-colapse {
+    float: left;
+    display: block; }
+  @media screen and (max-width: 1440px) {
+    .nav-colapse {
+      float: left;
+      display: block; } }
+  html.default .nav-colapse {
+    float: right; }
   html.default .nav-colapse {
     float: left;
     direction: ltr;
@@ -8454,81 +8523,45 @@ a {
         content: "grid-default-2"; }
       .gridle-debug .nav-colapse.parent:before, .nav-colapse.gridle-debug.parent:before {
         content: "grid-parent-default-2"; } }
-  html.desktopess .nav-colapse {
-    float: left; }
-  @media screen and (min-width: 1440px) {
-    .nav-colapse {
-      float: left; } }
-  html.phoness .nav-colapse {
-    position: fixed;
-    z-index: 990;
-    display: none;
-    right: -310px; }
-  @media screen and (max-width: 800px) {
-    .nav-colapse {
-      position: fixed;
-      z-index: 990;
-      display: none;
-      right: -310px; } }
   html.tabless-md .nav-colapse {
-    position: fixed;
-    z-index: 990;
-    display: none;
-    right: -310px; }
-  @media screen and (max-width: 1024px) {
-    .nav-colapse {
-      position: fixed;
-      z-index: 990;
-      display: none;
-      right: -310px; } }
-  html.notebook-min .nav-colapse {
-    float: left;
-    display: block; }
-  @media screen and (max-width: 1440px) {
-    .nav-colapse {
-      float: left;
-      display: block; } }
-  html.tabless-md .nav-colapse {
-    width: 25%; }
+    width: 16.66667%; }
     .gridle-debug html.tabless-md .nav-colapse:before, html.tabless-md .nav-colapse.gridle-debug:before {
-      content: "grid-default-3"; }
+      content: "grid-default-2"; }
     .gridle-debug html.tabless-md .nav-colapse.parent:before, html.tabless-md .nav-colapse.gridle-debug.parent:before {
-      content: "grid-parent-default-3"; }
+      content: "grid-parent-default-2"; }
   @media screen and (max-width: 1024px) {
     .nav-colapse {
-      width: 25%; }
+      width: 16.66667%; }
       .gridle-debug .nav-colapse:before, .nav-colapse.gridle-debug:before {
-        content: "grid-default-3"; }
+        content: "grid-default-2"; }
       .gridle-debug .nav-colapse.parent:before, .nav-colapse.gridle-debug.parent:before {
-        content: "grid-parent-default-3"; } }
-  html.tabless-min .nav-colapse {
-    width: 25%; }
-    .gridle-debug html.tabless-min .nav-colapse:before, html.tabless-min .nav-colapse.gridle-debug:before {
-      content: "grid-default-3"; }
-    .gridle-debug html.tabless-min .nav-colapse.parent:before, html.tabless-min .nav-colapse.gridle-debug.parent:before {
-      content: "grid-parent-default-3"; }
-  @media screen and (max-width: 1024px) {
-    .nav-colapse {
-      width: 25%; }
-      .gridle-debug .nav-colapse:before, .nav-colapse.gridle-debug:before {
-        content: "grid-default-3"; }
-      .gridle-debug .nav-colapse.parent:before, .nav-colapse.gridle-debug.parent:before {
-        content: "grid-parent-default-3"; } }
+        content: "grid-parent-default-2"; } }
   html.phoness .nav-colapse {
-    width: 75%; }
+    width: 33.33333%; }
     .gridle-debug html.phoness .nav-colapse:before, html.phoness .nav-colapse.gridle-debug:before {
-      content: "grid-phoness-9" !important; }
+      content: "grid-phoness-4" !important; }
     .gridle-debug html.phoness .nav-colapse.parent:before, html.phoness .nav-colapse.gridle-debug.parent:before {
-      content: "grid-parent-phoness-9" !important; }
+      content: "grid-parent-phoness-4" !important; }
   @media screen and (max-width: 800px) {
     .nav-colapse {
-      width: 75%; }
+      width: 33.33333%; }
       .gridle-debug .nav-colapse:before, .nav-colapse.gridle-debug:before {
-        content: "grid-phoness-9" !important; }
+        content: "grid-phoness-4" !important; }
       .gridle-debug .nav-colapse.parent:before, .nav-colapse.gridle-debug.parent:before {
-        content: "grid-parent-phoness-9" !important; } }
-  html.default .nav-colapse {
-    float: right; }
+        content: "grid-parent-phoness-4" !important; } }
+  html.phoness-min .nav-colapse {
+    width: 66.66667%; }
+    .gridle-debug html.phoness-min .nav-colapse:before, html.phoness-min .nav-colapse.gridle-debug:before {
+      content: "grid-phoness-min-8" !important; }
+    .gridle-debug html.phoness-min .nav-colapse.parent:before, html.phoness-min .nav-colapse.gridle-debug.parent:before {
+      content: "grid-parent-phoness-min-8" !important; }
+  @media screen and (max-width: 480px) {
+    .nav-colapse {
+      width: 66.66667%; }
+      .gridle-debug .nav-colapse:before, .nav-colapse.gridle-debug:before {
+        content: "grid-phoness-min-8" !important; }
+      .gridle-debug .nav-colapse.parent:before, .nav-colapse.gridle-debug.parent:before {
+        content: "grid-parent-phoness-min-8" !important; } }
   .nav-colapse .contendor-menu {
     float: left;
     direction: ltr;
