@@ -178,12 +178,12 @@
 							color:$first_color;
 						}
 					}
-					$urlPath:'../../../uploads/2015/06'; 
+					
 					&:first-child {
 						float:none;
 						padding:{top:20px !important; right:20px; bottom:0 !important; left:20px;}
 						margin:{bottom:-4px;}
-						background:{size: inherit;image:url(#{$urlPath}/bg-pattern-fino.svg);color: $second_color;repeat: repeat;}
+						background:{size: inherit;image:url(#{$urlPath}/bg-pattern-fino2b.svg);color: $second_color;repeat: repeat;}   
 						a {  
 							@include gridle_float(left);
 							width: auto;

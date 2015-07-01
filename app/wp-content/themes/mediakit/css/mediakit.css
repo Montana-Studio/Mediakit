@@ -4439,12 +4439,16 @@ a {
   padding-left: 10px;
   padding-right: 10px;
   width: 100%;
-  background-image: url("../img/pattern.jpg"), url("../img/pattern.jpg");
-  background-image: url("../img/pattern.jpg"), url("../img/pattern.jpg");
-  padding: 10px;
+  background-image: url(../../../uploads/2015/06/bg-pattern-fino2b.svg);
+  background-color: #ffffff;
   background-position: left;
   background-repeat: repeat;
-  display: inline-block; }
+  padding: 10px;
+  display: inline-block;
+  background-position: -0% 0;
+  -webkit-transition: background-position 0.5s ease-out;
+  -moz-transition: background-position 0.5s ease-out;
+  transition: background-position 0.5s ease-out; }
   html.default .pattern {
     float: left;
     direction: ltr;
@@ -4467,6 +4471,12 @@ a {
     content: "grid-default-12"; }
   .gridle-debug .pattern.parent:before, .pattern.gridle-debug.parent:before {
     content: "grid-parent-default-12"; }
+  .pattern:hover {
+    background-image: url(../../../uploads/2015/06/bg-pattern-fino2b.svg);
+    background-color: #ffffff;
+    background-position: left;
+    background-repeat: repeat;
+    background-position: -99.99% 0; }
   .pattern a {
     display: inline-block;
     font-size: 17px; }
@@ -4481,7 +4491,6 @@ a {
   background-size: 200.22% auto;
   -webkit-background-size: 200.22% auto;
   -moz-background-size: 200.22% auto;
-  background-position: -0% 0;
   -webkit-transition: background-position 0.5s ease-out;
   -moz-transition: background-position 0.5s ease-out;
   transition: background-position 0.5s ease-out;
@@ -8952,7 +8961,7 @@ a {
             padding-left: 20px;
             margin-bottom: -4px;
             background-size: inherit;
-            background-image: url(../../../uploads/2015/06/bg-pattern-fino.svg);
+            background-image: url(../../../uploads/2015/06/bg-pattern-fino2b.svg);
             background-color: #ffffff;
             background-repeat: repeat; }
             .nav-colapse .contendor-menu .menu ul li:first-child a {
