@@ -29,4 +29,5 @@
 
     <rect id="pattern-apply" fill="url(#lines-pattern)"/>
     <rect id="pattern-apply2" fill="url(#lines-pattern2)"/>
+
 </svg>

@@ -6,7 +6,6 @@
 	color:$second_color;
 	overflow: scroll;
 	z-index: 999; 
-
 	@include gridle_state(desktopess) {
 		float:left;
 	}
@@ -16,14 +15,19 @@
 		display: none;
 		right:-310px;
 	}
+	@include gridle_state(tabless-min) {
+		right:-320px;
+	}
 	@include gridle_state(notebook-min) {
 		float: left;
 		display:block; 
 	} 
 	@include gridle_float(right);
-	@include gridle(2, desktopess notebook-min tabless-md);
-	@include gridle(4, phoness);
-	@include gridle(8, phoness-min);
+	@include gridle(2, desktopess notebook-min); 
+	@include gridle(6, tabless-md);
+	@include gridle(3, tabless-min);
+	@include gridle(5, phoness);
+	@include gridle(8, phoness-min); 
 	.contendor-menu {
 		@include gridle(12);
 		@extend .no-paddings;
