@@ -148,7 +148,7 @@ jQuery(document).ready(function($){
 	    });
 	    $('.nav-colapse .contendor-menu .menu ul li:first-child, .btn-left .pattern').mouseleave(function(){
 	    		$(doc).find('#pattern-apply2').fadeIn();
-	    		$(doc).find('#pattern-apply').fadeOut();
+	    		$(doc).find('#pattern-apply').fadeOut(); 
 	    });
 	});
 
