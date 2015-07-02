@@ -74,6 +74,9 @@
 			padding:{right: 10px;}
 		}
 		@include gridle_state(phoness) {
+			padding:{top:10px;}
+		}
+		@include gridle_state(phoness-min) {
 			padding:{top:3px;}
 		}
 		#icon-mobile {

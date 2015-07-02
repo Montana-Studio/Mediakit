@@ -45,7 +45,11 @@
 					@include gridle_state(tabless-min) {
 						margin:{top:-100px;left:10px;} 
 					}
-					@include gridle_state(phoness phoness-min) {
+					@include gridle_state(phoness) {
+						margin:{top: -135px;left:0;}
+						padding:{left:0;right:0 !important;}
+					}
+					@include gridle_state(phoness-min) {
 						padding:{left:0;right:0 !important;}
 						margin:{top:-85px;left:0;}
 					}
@@ -53,8 +57,9 @@
 						width: 100% !important;
 					}
 					.logo-sitio {
-						@include gridle(2, desktopess notebook-min);
-						@include gridle(4, phoness phoness-min);
+						@include gridle(2, desktopess notebook-min tabless-min);
+						@include gridle(3, phoness);
+						@include gridle(4, phoness-min);
 						@include border-width(3px);
 						@include border-color(#000);
 						@include border-style(solid);
@@ -71,7 +76,11 @@
 						@include gridle_state(tabless-md) {
 							height: 135px;
 						}
-						@include gridle_state(phoness phoness-min) {
+						@include gridle_state(phoness) {
+							height: 166px;
+							padding: 0 5px !important;
+						}
+						@include gridle_state(phoness-min) {
 							height: 105px;
 							padding: 0 5px !important;
 						}
@@ -101,7 +110,7 @@
 						@include gridle_state(tabless-md) {
 							padding: 0 5px;
 						}
-						@include gridle_state(phoness) {
+						@include gridle_state(phoness-min) {
 							top:0;
 						}
 						.bajada {
@@ -126,11 +135,19 @@
 						}
 						.btn-left {
 								@include gridle(6, desktopess notebook-min tabless-min);
-								@include gridle(12, phoness-min);
-								padding:{right:10px !important;left:0;}  
+								@include gridle(12, phoness);
+								@include gridle_state(phoness) {
+									padding: {right:0 !important;}
+									margin:{bottom:5px;}
+								}
+								@include gridle_state(phoness-min) {
+									padding: {right:10px !important;}
+									margin:{bottom:0;}
+								}
+								padding:{left:0 !important;right:10px !important;}
 							.pattern {
 								@include gridle(12);
-								padding:{bottom:13px;}
+								padding:{bottom:10px;}
 								margin:{left:5px;top:10px;}
 								@include gridle_state(desktopess notebook-min) {
 									display: inline-block;
@@ -159,7 +176,7 @@
 						}
 						.btn-right {
 								@include gridle(6, desktopess notebook-min tabless-min);
-								@include gridle(12, phoness-min);
+								@include gridle(12, phoness);
 								@extend .no-paddings;
 								@include gridle_state(phoness-min) {
 									padding:{right:10px !important; left:0 !important;} 
@@ -203,9 +220,12 @@
 						  padding:0 10px;
 						  margin:{bottom:10px;}
 					}
-					@include gridle_state(phoness phoness-min) {
+					@include gridle_state(phoness) {
 						padding:0 !important;
 						margin:{top:25px;bottom:10px;}  
+					}
+					@include gridle_state(phoness-min) {
+						margin:{top:16px;bottom:10px;}  
 					}
 					.btn {
 						@include gridle_state(desktopess notebook-min) {
@@ -214,8 +234,9 @@
 						@include gridle_state(notebook-min) {
 							margin:{top: 5px;}
 						}
-						@include gridle_state(phoness phoness-min) {
+						@include gridle_state(phoness) { 
 							display:block !important;
+							margin:{top: 14px;}
 						}
 					}
 					.metrics {
@@ -230,11 +251,11 @@
 							}
 						}
 						.metrica-number {
+							@extend .shadow;
 							background:$second_color;
 							padding:0 10px;
 							@include gridle(6, desktopess notebook-min);
 							@include gridle(12, phoness phoness-min);
-							@extend .shadow;
 							@include gridle_state(desktopess notebook-min) {
 								float: left;
 								padding:{top:0;right: 10px; bottom:10px; left:10px;}
@@ -243,8 +264,20 @@
 								padding:{right: 15px;}
 							}
 							@include gridle_state(phoness phoness-min) {
-								padding: 0 10px !important;
+								padding: 0!important;
 								margin:{top:10px; bottom:10px}
+							}
+							ul {
+								@include gridle_state(phoness phoness-min) {
+									padding: 0 10px !important;
+								}
+								&:last-child {
+									li {
+										&:last-child {
+											  border-bottom: 0;
+										}
+									}
+								}
 							}
 						}
 						.metrica-mapa {
