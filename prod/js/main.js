@@ -140,15 +140,15 @@ jQuery(document).ready(function($){
 
 	//FADE OPTION
 	$(window).load(function(){
-		var object = document.getElementsByClassName('content-pattern');
+		var object = document.getElementById('content-pattern');
 	    var doc = object.contentDocument;
-	    $('.nav-colapse .contendor-menu .menu ul li:first-child, .btn-left .pattern').mouseover(function(){
-	    		$(doc).find('#pattern-apply').fadeIn();
-	    		$(doc).find('#pattern-apply2').fadeOut();
-	    });
 	    $('.nav-colapse .contendor-menu .menu ul li:first-child, .btn-left .pattern').mouseleave(function(){
 	    		$(doc).find('#pattern-apply2').fadeIn();
 	    		$(doc).find('#pattern-apply').fadeOut(); 
+	    });			
+	    $('.nav-colapse .contendor-menu .menu ul li:first-child, .btn-left .pattern').mouseleave(function(){
+	    		$(doc).find('#pattern-apply').fadeOut();
+	    		$(doc).find('#pattern-apply2').fadeIn();
 	    });
 	});
 
@@ -164,10 +164,11 @@ jQuery(document).ready(function($){
 	    });
 	});*/
 
-	var urlPath = 'http://local.mediatrends/Montana-Studio/sitios/_MediaKit/htdocs/app/wp-content/uploads';
+	var urlNav = window.location.href,
+		urlPath = ''+urlNav+'/wp-content/uploads';
 	
-	$('.nav-colapse .contendor-menu .menu ul li:first-child, .btn-left .pattern').append('<object class="content-pattern" type="image/svg+xml" data="'+ urlPath +'/2015/06/bg-pattern-fino2b.svg"></object>');
-	
+	$('.nav-colapse .contendor-menu .menu ul li:first-child').append('<object id="content-pattern" type="image/svg+xml" data="'+ urlPath +'/2015/06/bg-pattern-fino2b.svg"></object>');
+
 });    
 
 
