@@ -84,7 +84,8 @@ module.exports = function(grunt) {
 
         uglify: {
             options: {
-                report: 'min'
+                report: 'min',
+                beautify: true
             },
             compile: {
                 files: {

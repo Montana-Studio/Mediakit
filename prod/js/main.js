@@ -130,6 +130,7 @@ jQuery(document).ready(function($){
 	        }
 	    });
 	}
+
 	if(!$('html').hasClass('touch')){
 	    $(window).resize(parallaxPosition);
 	    //$(window).focus(parallaxPosition);
@@ -137,8 +138,36 @@ jQuery(document).ready(function($){
 	    parallaxPosition();
 	}
 
-	
+	//FADE OPTION
+	$(window).load(function(){
+		var object = document.getElementById('content-pattern');
+	    var doc = object.contentDocument;
+	    $('.nav-colapse .contendor-menu .menu ul li:first-child').mouseover(function(){
+	    		$(doc).find('#pattern-apply').fadeIn();
+	    		$(doc).find('#pattern-apply2').fadeOut();
+	    });
+	    $('.nav-colapse .contendor-menu .menu ul li:first-child').mouseleave(function(){
+	    		$(doc).find('#pattern-apply2').fadeIn();
+	    		$(doc).find('#pattern-apply').fadeOut();
+	    });
+	});
 
+	//COLOR OPTION
+	/*$(window).load(function(){
+		var object = document.getElementById('content-pattern');
+	    var doc = object.contentDocument;
+	    $('.nav-colapse .contendor-menu .menu ul li:first-child').mouseover(function(){
+	    		$(doc).find('.pattern-lines').css('fill','#000');
+	    });
+	    $('.nav-colapse .contendor-menu .menu ul li:first-child').mouseleave(function(){
+	    		$(doc).find('.pattern-lines').css('fill','#fff');
+	    });
+	});*/
+
+	var urlPath = 'http://local.mediatrends/_MediaTrends/_MediaKit/htdocs/app/wp-content/uploads';
+	
+	$('.nav-colapse .contendor-menu .menu ul li:first-child').append('<object id="content-pattern" type="image/svg+xml" data="'+ urlPath +'/2015/06/bg-pattern-fino2b.svg"></object>');
+	
 });    
 
 

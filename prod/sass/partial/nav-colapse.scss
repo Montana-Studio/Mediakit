@@ -121,12 +121,13 @@
 					text-decoration: none;
 					border-bottom:1px solid $first_color_3;
 					background-position: -0% 0;
-					@include background-image (linear-gradient(to right, rgba(0, 0, 0, 1) 50%, #fff 50%)); 
+					@include background-image (linear-gradient(to right, #000 50%, #fff 50%)); 
 					background-size: 200.22% auto;
 					-webkit-background-size: 200.22% auto;
 					-moz-background-size: 200.22% auto;
-					background-position: -0% 0;
-					@include transition(background-position 0.5s ease-out);
+					@include transition(background-position 0.3s ease-out);
+					position:relative;
+					overflow: hidden;
 					a {
 						@include gridle(10); 
 						@include gridle_float(right);
@@ -183,11 +184,14 @@
 						float:none;
 						padding:{top:20px !important; right:20px; bottom:0 !important; left:20px;}
 						margin:{bottom:-4px;}
-						background:{size: inherit;image:url(#{$urlPath}/bg-pattern-fino2b.svg);color: $second_color;repeat: repeat;}   
+						background:{position: -0% 0;}
+						@include background-image (linear-gradient(to right, #000 50%, #fff 50%));
+						@include transition(background-position 0.3s ease-out);
 						a {  
 							@include gridle_float(left);
 							width: auto;
 							@extend .highlight-inv;
+							color:$first_color;
 							font:{size: 18px !important;}
 							padding:{top:3px; right:5px; bottom:5px; left:5px;}
 							margin:{top:8px;left: 11px;}
@@ -202,7 +206,7 @@
 							}
 						}
 						&.fa {
-							color:$first_color;
+							color:$second_color;
 							font:{size: 18px !important;}
 							padding:0 !important;			
 							&:before {
@@ -223,10 +227,14 @@
 							}
 						}
 						&:hover {
+						 	background: {position: -99.99% 0;}
 							a {
-						 		background: $first_color;
 								color:$second_color;
+								background: {color:$first_color;}
 							} 
+							&.fa{
+								color:$first_color;
+							}
 						}
 						&.current-menu-item {
 							background-image: url("../img/pattern_inv.jpg") !important;

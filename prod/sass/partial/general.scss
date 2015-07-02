@@ -43,16 +43,22 @@ a {
 	@extend .highlight;
 	background: $second_color;
 	color:$first_color;
+	background-color: #fff;
+	position: relative;
+	z-index: 9;
 }
 .pattern {
 	@include gridle(12);
-	background:{image:url(#{$urlPath}/bg-pattern-fino2b.svg);color: $second_color;position: left;repeat:repeat;} 
+	background:{color: $second_color;position: left;repeat:repeat;}
 	padding: 10px;
 	display: inline-block;
 	background-position: -0% 0;
 	@include transition(background-position 0.5s ease-out);
+	position:relative;
+	overflow:hidden;
+	background: {color:#fff;}
 	&:hover {
-		background:{image:url(#{$urlPath}/bg-pattern-fino2b.svg);color: $second_color;position: left;repeat:repeat;} 
+		background:{color: $second_color;position: left;repeat:repeat;} 
 		background-position: -99.99% 0;
 	}
 	a {
@@ -354,5 +360,35 @@ a {
 	100% {
 		@include transform(translateY(0%));
 		opacity: 1;
+	}
+}
+#content-pattern{
+	width:100%;
+	position:absolute;
+	left:0;
+	top:0;
+}
+#pattern-lines{
+	#lines-pattern{
+		width:100%;
+		height:100%;
+		.pattern-lines{
+			fill:#000;
+		}
+	}
+	#pattern-apply{
+		width:100%;
+		height:100%;
+	}
+	#lines-pattern2{
+		width:100%;
+		height:100%;
+		.pattern-lines2{
+			fill:#fff;
+		}
+	}
+	#pattern-apply2{
+		width:100%;
+		height:100%;
 	}
 }

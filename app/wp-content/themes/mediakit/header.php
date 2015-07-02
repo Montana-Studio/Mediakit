@@ -29,10 +29,10 @@
 		<script src="<?php echo get_template_directory_uri(); ?>/js/snap.svg.js" type="text/javascript"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/mediakit.min.js" type="text/javascript"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/easing.min.js" type="text/javascript"></script>
-		
 
 	</head>
 	<body <?php body_class(); ?>>
+
 	<?php include (TEMPLATEPATH . '/svg_icon.php'); ?>
 
 	<div class="nav-mobile">

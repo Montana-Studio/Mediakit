@@ -4431,7 +4431,10 @@ a {
 
 .highlight-inv, .about-us-page .page-aboutus .encabezado .content-title .content-about .bajada p, .nav-colapse .contendor-menu .menu ul li:first-child a, .search-content .search-cont .search-loop .title-resultado .resultado-2 a {
   background: #ffffff;
-  color: black; }
+  color: black;
+  background-color: #fff;
+  position: relative;
+  z-index: 9; }
 
 .pattern {
   float: left;
@@ -4439,7 +4442,6 @@ a {
   padding-left: 10px;
   padding-right: 10px;
   width: 100%;
-  background-image: url(../../../uploads/2015/06/bg-pattern-fino2b.svg);
   background-color: #ffffff;
   background-position: left;
   background-repeat: repeat;
@@ -4448,7 +4450,10 @@ a {
   background-position: -0% 0;
   -webkit-transition: background-position 0.5s ease-out;
   -moz-transition: background-position 0.5s ease-out;
-  transition: background-position 0.5s ease-out; }
+  transition: background-position 0.5s ease-out;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff; }
   html.default .pattern {
     float: left;
     direction: ltr;
@@ -4472,7 +4477,6 @@ a {
   .gridle-debug .pattern.parent:before, .pattern.gridle-debug.parent:before {
     content: "grid-parent-default-12"; }
   .pattern:hover {
-    background-image: url(../../../uploads/2015/06/bg-pattern-fino2b.svg);
     background-color: #ffffff;
     background-position: left;
     background-repeat: repeat;
@@ -5218,6 +5222,29 @@ a {
     -o-transform: translateY(0%);
     transform: translateY(0%);
     opacity: 1; } }
+#content-pattern {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+#pattern-lines #lines-pattern {
+  width: 100%;
+  height: 100%; }
+  #pattern-lines #lines-pattern .pattern-lines {
+    fill: #000; }
+#pattern-lines #pattern-apply {
+  width: 100%;
+  height: 100%; }
+#pattern-lines #lines-pattern2 {
+  width: 100%;
+  height: 100%; }
+  #pattern-lines #lines-pattern2 .pattern-lines2 {
+    fill: #fff; }
+#pattern-lines #pattern-apply2 {
+  width: 100%;
+  height: 100%; }
+
 .wrapper {
   background: #e7e7e7;
   position: relative;
@@ -8158,6 +8185,11 @@ a {
       @media screen and (max-width: 1024px) {
         .about-us-page .page-aboutus .encabezado .content-title {
           padding-top: 30px; } }
+      html.phoness-min .about-us-page .page-aboutus .encabezado .content-title {
+        padding-top: 40px; }
+      @media screen and (max-width: 480px) {
+        .about-us-page .page-aboutus .encabezado .content-title {
+          padding-top: 40px; } }
       .about-us-page .page-aboutus .encabezado .content-title .logo-mediatrends {
         visibility: hidden;
         margin-top: 0;
@@ -8823,15 +8855,16 @@ a {
           text-decoration: none;
           border-bottom: 1px solid #1f1f1f;
           background-position: -0% 0;
-          background-image: -webkit-linear-gradient( left , black 50%, #fff 50%);
-          background-image: linear-gradient(to right, black 50%, #fff 50%);
+          background-image: -webkit-linear-gradient( left , #000 50%, #fff 50%);
+          background-image: linear-gradient(to right, #000 50%, #fff 50%);
           background-size: 200.22% auto;
           -webkit-background-size: 200.22% auto;
           -moz-background-size: 200.22% auto;
-          background-position: -0% 0;
-          -webkit-transition: background-position 0.5s ease-out;
-          -moz-transition: background-position 0.5s ease-out;
-          transition: background-position 0.5s ease-out; }
+          -webkit-transition: background-position 0.3s ease-out;
+          -moz-transition: background-position 0.3s ease-out;
+          transition: background-position 0.3s ease-out;
+          position: relative;
+          overflow: hidden; }
           html.default .nav-colapse .contendor-menu .menu ul li {
             float: left;
             direction: ltr;
@@ -8965,13 +8998,16 @@ a {
             padding-bottom: 0 !important;
             padding-left: 20px;
             margin-bottom: -4px;
-            background-size: inherit;
-            background-image: url(../../../uploads/2015/06/bg-pattern-fino2b.svg);
-            background-color: #ffffff;
-            background-repeat: repeat; }
+            background-position: -0% 0;
+            background-image: -webkit-linear-gradient( left , #000 50%, #fff 50%);
+            background-image: linear-gradient(to right, #000 50%, #fff 50%);
+            -webkit-transition: background-position 0.3s ease-out;
+            -moz-transition: background-position 0.3s ease-out;
+            transition: background-position 0.3s ease-out; }
             .nav-colapse .contendor-menu .menu ul li:first-child a {
               float: left;
               width: auto;
+              color: black;
               font-size: 18px !important;
               padding-top: 3px;
               padding-right: 5px;
@@ -8997,7 +9033,7 @@ a {
                 .nav-colapse .contendor-menu .menu ul li:first-child a {
                   margin-top: 10px; } }
             .nav-colapse .contendor-menu .menu ul li:first-child.fa {
-              color: black;
+              color: #ffffff;
               font-size: 18px !important;
               padding: 0 !important; }
               .nav-colapse .contendor-menu .menu ul li:first-child.fa:before {
@@ -9033,9 +9069,13 @@ a {
                     padding-top: 13px;
                     padding-bottom: 13px;
                     padding-left: 15px; } }
-            .nav-colapse .contendor-menu .menu ul li:first-child:hover a {
-              background: black;
-              color: #ffffff; }
+            .nav-colapse .contendor-menu .menu ul li:first-child:hover {
+              background-position: -99.99% 0; }
+              .nav-colapse .contendor-menu .menu ul li:first-child:hover a {
+                color: #ffffff;
+                background-color: black; }
+              .nav-colapse .contendor-menu .menu ul li:first-child:hover.fa {
+                color: black; }
             .nav-colapse .contendor-menu .menu ul li:first-child.current-menu-item {
               background-image: url("../img/pattern_inv.jpg") !important;
               color: #ffffff; }
