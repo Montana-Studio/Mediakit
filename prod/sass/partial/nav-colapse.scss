@@ -186,7 +186,7 @@
 						padding:{top:20px !important; right:20px; bottom:0 !important; left:20px;}
 						margin:{bottom:-4px;}
 						background:{position: -0% 0;}
-						@include background-image (linear-gradient(to right, #000 50%, #fff 50%));
+						@include background-image (linear-gradient(to right, #fff 50%, #000 50%));
 						@include transition(background-position 0.3s ease-out);
 						a {  
 							@include gridle_float(left);
@@ -234,7 +234,7 @@
 								background: {color:$first_color;}
 							} 
 							&.fa{
-								color:$first_color;
+								color:$second_color;
 							}
 						}
 						&.current-menu-item {
