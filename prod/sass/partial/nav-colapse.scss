@@ -93,7 +93,7 @@
 				}
 			}
 		}
-		.menu {
+		.menu{
 			position:absolute;
 			height: auto;
 			top:0;
@@ -146,6 +146,7 @@
 						}
 						color:$second_color;
 					}
+					@extend .trama;
 					&.fa {
 						&:before {
 							padding: {top:20px;right:0px; bottom:20px; left:24px;}
@@ -173,7 +174,7 @@
 						a {
 							color:$first_color;
 						}
-						&.fa {
+						&.fa{
 							color:$first_color;
 						}
 					}
@@ -239,6 +240,15 @@
 							} 
 							&.fa{
 								color:$second_color;
+							}
+							.trama{
+								svg{
+									pattern{
+										polygon{
+											@include animation(tramaFadea 0.4s ease forwards);
+										}
+									}
+								}
 							}
 						}
 						&.current-menu-item {

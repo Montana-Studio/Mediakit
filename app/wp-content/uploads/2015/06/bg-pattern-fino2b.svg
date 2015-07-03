@@ -27,7 +27,7 @@
 	    </pattern>
     </defs>
 
-    <rect id="pattern-apply" fill="url(#lines-pattern)"/>
-    <rect id="pattern-apply2" fill="url(#lines-pattern2)"/>
+    <rect class="pattern-apply" fill="url(#lines-pattern)"/>
+    <rect class="pattern-apply2" fill="url(#lines-pattern2)"/>
 
 </svg>

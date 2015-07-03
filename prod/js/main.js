@@ -138,40 +138,27 @@ jQuery(document).ready(function($){
 	    parallaxPosition();
 	}
 
-	//FADE OPTION
 	$(window).load(function(){
-		var object = document.getElementById('content-pattern');
-	    var doc = object.contentDocument;
-	    $('.nav-colapse .contendor-menu .menu ul li:first-child, .btn-left .pattern').mouseover(function(){
-	    	console.log('mouse over');
-	    		
-	    		$(doc).find('#pattern-apply').fadeIn();
-	    		$(doc).find('#pattern-apply2').fadeOut();
 
-	    });
-	    $('.nav-colapse .contendor-menu .menu ul li:first-child, .btn-left .pattern').mouseleave(function(){
-	    		console.log('mouse leave');
-	    		$(doc).find('#pattern-apply').fadeOut();
-	    		$(doc).find('#pattern-apply2').fadeIn();
-	    });
+		var classAdd = $('.nav-colapse .contendor-menu .menu ul li:first-child, .content-single a .pattern');
+
+		classAdd.append('<div class="trama"><svg><defs><pattern id="lines-pattern" class="lines-pattern" width="5" height="5" patternUnits="userSpaceOnUse"><polygon fill="none" points="-71.125,-70.875 -64.04,-70.875 -64.04,-72.968 -74.04,-72.968 -74.04,-62.968 -71.125,-62.968 "/><polygon points="9.293,10 10,10 10,9.293 "/><polygon points="9.293,0 0,9.293 0,10 0.707,10 10,0.707 10,0 "/><polygon points="0,0 0,0.707 0.707,0 "/><polygon points="4.285,0 0,4.285 0,5.699 5.699,0 "/><polygon points="4.285,10 5.699,10 10,5.699 10,4.285 "/></pattern></defs><rect class="pattern-apply" fill="url(#lines-pattern)"/></svg></div>');
+
+		var childDivs = $('.trama svg');
+
+		for(var i=0; i<childDivs.length; i++){
+
+			var attrMain = 'id',
+				idIncrement = 'pattern-lines-'+i;
+
+		    $(childDivs[i]).attr(attrMain,idIncrement).css({
+		    	'width':'100%',
+				'position':'absolute',
+				'left':0,
+				'top':0
+		    });
+		}
 	});
-
-	//COLOR OPTION
-	/*$(window).load(function(){
-		var object = document.getElementById('content-pattern');
-	    var doc = object.contentDocument;
-	    $('.nav-colapse .contendor-menu .menu ul li:first-child').mouseover(function(){
-	    		$(doc).find('.pattern-lines').css('fill','#000');
-	    });
-	    $('.nav-colapse .contendor-menu .menu ul li:first-child').mouseleave(function(){
-	    		$(doc).find('.pattern-lines').css('fill','#fff');
-	    });
-	});*/
-
-	var urlNav = window.location.href,
-		urlPath = ''+urlNav+'/wp-content/uploads';
-	
-	$('.nav-colapse .contendor-menu .menu ul li:first-child').append('<object id="content-pattern" type="image/svg+xml" data="'+ urlPath +'/2015/06/bg-pattern-fino2b.svg"></object>');
 
 });    
 

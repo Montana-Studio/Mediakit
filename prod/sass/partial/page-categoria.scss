@@ -23,16 +23,6 @@
 				}
 				padding:{top: 0;right: 5px; bottom:0; left:0;}
 				height: auto;
-				&:hover {
-					.title {
-						h2 {
-							@include transition(background-position 0.5s ease-out);
-							background-position: 99.99% 0 !important;
-							color:$first_color !important;
-							
-						}
-					}
-				}
 				.content-single {
 					@include gridle(12,phoness-min);
 					@extend .no-paddings;
@@ -46,6 +36,10 @@
 						display: none; 
 					}
 					.pattern {
+						background-position: -0% 0;
+						@include background-image (linear-gradient(to right, #fff 50%, #000 50%));
+						background-size: 200.22% auto;
+						@include transition(background-position 0.5s ease-out);
 						.highlight-inv {
 							font:{size:18px;}
 							display: table;
@@ -56,6 +50,7 @@
 								font:{size:14px;}
 							}
 						}
+						@extend .trama;
 					}
 					.img-single {
 						@include gridle(12);
@@ -72,20 +67,13 @@
 								padding:{top:3px;left:10px;right:5px;}
 								text:{transform:uppercase;}
 								background-position: -0% 0;
-								@include background-image (linear-gradient(to right, rgba(0, 0, 0, 1) 50%, #fff 50%));
+								@include background-image (linear-gradient(to right, #000 50%, #fff 50%));
 								background-size: 200.22% auto;
-								-webkit-background-size: 200.22% auto;
-								-moz-background-size: 200.22% auto;
-								background-position: -0% 0;
 								@include transition(background-position 0.5s ease-out);
 								font:{style:italic;weight:400;}
 								width: auto;
 								position: absolute;
 								margin:{top: -26px !important;bottom:0;}
-								&:hover {
-									background-position: 99.99% 0;
-									color:$first_color;
-								}
 							}
 						}
 					}
@@ -109,6 +97,31 @@
 									font:{size:12px !important ;weight:800;style:italic; font-family:$primary_font;}
 									text-transform: uppercase;
 									padding: {top:5px !important;}
+								}
+							}
+						}
+					}
+				}
+				&:hover {
+					.title {
+						h2 {
+							@include transition(background-position 0.5s ease-out);
+							background-position: 99.99% 0 !important;
+							color:$first_color !important;
+							
+						}
+					}
+					.content-single{
+						.pattern{
+							@include transition(background-position 0.5s ease-out);
+							background-position: 99.99% 0 !important;
+							.trama{
+								svg{
+									pattern{
+										polygon{
+											@include animation(tramaFadea 0.4s ease forwards);
+										}
+									}
 								}
 							}
 						}
