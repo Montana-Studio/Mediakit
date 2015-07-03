@@ -139,8 +139,22 @@ jQuery(document).ready(function($){
 	}
 
 	$(window).load(function(){
+<<<<<<< HEAD
 
 		var classAdd = $('.nav-colapse .contendor-menu .menu ul li:first-child, .content-single a .pattern');
+=======
+		var object = document.getElementById('content-pattern');
+	    var doc = object.contentDocument;
+	    $('.nav-colapse .contendor-menu .menu ul li:first-child, .btn-left .pattern').mouseleave(function(){
+	    		$(doc).find('#pattern-apply2').fadeIn();
+	    		$(doc).find('#pattern-apply').fadeOut(); 
+	    });			
+	    $('.nav-colapse .contendor-menu .menu ul li:first-child, .btn-left .pattern').mouseleave(function(){
+	    		$(doc).find('#pattern-apply').fadeOut();
+	    		$(doc).find('#pattern-apply2').fadeIn();
+	    });
+	});
+>>>>>>> 25e58c266751784b625646d15877113e46a1ffa1
 
 		classAdd.append('<div class="trama"><svg><defs><pattern id="lines-pattern" class="lines-pattern" width="5" height="5" patternUnits="userSpaceOnUse"><polygon fill="none" points="-71.125,-70.875 -64.04,-70.875 -64.04,-72.968 -74.04,-72.968 -74.04,-62.968 -71.125,-62.968 "/><polygon points="9.293,10 10,10 10,9.293 "/><polygon points="9.293,0 0,9.293 0,10 0.707,10 10,0.707 10,0 "/><polygon points="0,0 0,0.707 0.707,0 "/><polygon points="4.285,0 0,4.285 0,5.699 5.699,0 "/><polygon points="4.285,10 5.699,10 10,5.699 10,4.285 "/></pattern></defs><rect class="pattern-apply" fill="url(#lines-pattern)"/></svg></div>');
 

@@ -312,7 +312,6 @@
 						.btn-display {
 							padding: 0 10px;
 							@include gridle(6, desktopess notebook-min);
-							@extend .shadow;
 							@include gridle_state(desktopess notebook-min) {
 								float: right;
 								margin:{top:0; right:auto;bottom:10px;left:auto;}
@@ -326,6 +325,7 @@
 								display: none;
 							}
 							.content-display {
+								@extend .shadow;
 								@include gridle(12);
 								background: $second_color; 
 								padding:{top:20px;left:10px;bottom:10px;left:10px;}

@@ -16,7 +16,7 @@
 		right:-310px;
 	}
 	@include gridle_state(tabless-min) {
-		right:-320px;
+		right:-340px;
 	}
 	@include gridle_state(notebook-min) {
 		float: left;
@@ -46,6 +46,20 @@
 		.search {
 			@include gridle(12);
 			@extend .no-paddings;
+			@extend .no-margins;
+			position: absolute;
+			@include gridle_state(desktopess) {
+				top: 128px;
+			}
+			@include gridle_state(notebook-min) {
+				top: 92px;
+			}
+			@include gridle_state(tabless-md) {
+				top:0;
+			}
+			@include gridle_state(phoness-min) {
+				top: 0;
+			} 
 			.search-input {
 				@include gridle(10);
 				background: $first_color;
@@ -61,13 +75,13 @@
 					margin:{top:0;}
 				}
 				@include gridle_state(tabless-min) {
-					margin: {top:40px;}
+					margin: {top:55px;}
 				}
 				@include gridle_state(tabless-md) {
 					padding: 15px 10px;
 					margin:{top:55px;}
 				}
-				@include gridle_state(phoness) {
+				@include gridle_state(phoness-min) {
 					margin: {top:40px;}
 				}
 			}
@@ -88,7 +102,7 @@
 				@include gridle_state(tabless-md) {
 					margin:{top:55px;}
 				}
-				@include gridle_state(phoness) {
+				@include gridle_state(phoness-min) {
 					margin: {top:40px;}
 				}
 			}
@@ -102,16 +116,16 @@
 				margin:{top: 305px;}
 			}
 			@include gridle_state(notebook-min) {
-				margin:{top:244px;}
+				margin:{top:233px;}
 			}
 			@include gridle_state(tabless-min) {
 				margin:{top:88px;}
 			}
 			@include gridle_state(tabless-md) {
-				margin:{top:106px;}
+				margin:{top:100px;}
 			}
-			@include gridle_state(phoness) {
-				margin:{top:88px;}
+			@include gridle_state(phoness-min) {
+				margin:{top:88px;} 
 			}
 			ul {
 				@include gridle(12);
