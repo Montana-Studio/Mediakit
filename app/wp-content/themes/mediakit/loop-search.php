@@ -1,5 +1,8 @@
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
+	<div class="content-title">
+			<h2 class="highlight" style="display:table;"><?php echo sprintf( __( '<span>%s</span> Search Results for ', 'html5blank' ), $wp_query->found_posts ); ?></h2>
+			<p><?php echo get_search_query(); ?></p>
+	</div>
 	<!-- article -->
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="search-loop">
@@ -21,7 +24,7 @@
 		</div>
 	</article>
 	<!-- /article -->
-
+<?php get_template_part('pagination'); ?>
 <?php endwhile; ?>
 
 <?php else: ?>
