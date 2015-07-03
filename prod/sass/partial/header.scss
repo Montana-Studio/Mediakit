@@ -1,6 +1,8 @@
 .wrapper {
 	background:$bg-color; 
 	position:relative;
+	overflow:scroll;
+	overflow-x:hidden;
 	@include gridle(12);
 	@extend .no-paddings;
 	height: 100% !important;

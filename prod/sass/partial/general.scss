@@ -1,5 +1,9 @@
 html {
 	font:{family:$primary_font;}
+	overflow: hidden;
+	body{
+		overflow: hidden;
+	}
 }
 .text-center{
 	text-align: center;
@@ -381,7 +385,4 @@ a {
 	100%{
 		fill:#fff;
 	}
-}
-#tramaAnimaa{
-	@include animation(tramaFadea 0.4s ease forwards);
 }

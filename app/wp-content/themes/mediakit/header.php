@@ -71,6 +71,8 @@
 		
 			<?php if(is_page('contact')){
 				include (TEMPLATEPATH . '/template-headercontact.php');
+			}elseif(is_search()){
+				include (TEMPLATEPATH . '/template-headersearch.php');
 			}else{
 				include (TEMPLATEPATH . '/template-headernorm.php');	
 			}?>

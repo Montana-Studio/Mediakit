@@ -1,10 +1,11 @@
 .nav-colapse {
 	@extend .no-paddings;
 	height: 100%;
-	position: absolute;
+	position: fixed;
 	background: $first_color;
 	color:$second_color;
 	overflow: scroll;
+	overflow-x: hidden;
 	z-index: 999; 
 	@include gridle_state(desktopess) {
 		float:left;
@@ -127,7 +128,7 @@
 			@include gridle_state(phoness-min) {
 				margin:{top:88px;} 
 			}
-			
+
 			ul {
 				@include gridle(12);
 				@extend .no-margins;
