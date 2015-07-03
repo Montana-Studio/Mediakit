@@ -127,6 +127,7 @@
 			@include gridle_state(phoness-min) {
 				margin:{top:88px;} 
 			}
+			
 			ul {
 				@include gridle(12);
 				@extend .no-margins;
