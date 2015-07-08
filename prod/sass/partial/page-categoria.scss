@@ -152,3 +152,50 @@
 	}	
 }
   
+.nothing-message {
+	@include gridle(12);
+	background:$second_color;
+	position: relative;
+	display: block;
+	h2 {
+		@extend .text-center;
+		@extend .no-margins;
+		@include gridle(12);
+		padding:{top:40px;bottom:10px;}
+		visibility: hidden;
+		@include gridle_state(phoness-min) {
+			font:{size:18px;}
+			padding:{top:20px;}
+		}
+	}
+	p {
+		@extend .text-center;
+		font:{size:20px;weight:800;style:italic;}
+		padding:{bottom:20px;}
+		@include gridle(12);
+		@extend .no-margins;
+		visibility: hidden;
+		@include gridle_state(phoness-min) {
+			font:{size:14px;}
+			padding:{bottom:0;}
+		}
+	}
+	.logotipe-message {
+		@include gridle(4);
+		@include gridle(8, phoness-min); 
+		@include gridle_float(none);
+		margin:0 auto;
+		display: block;
+		visibility: hidden;
+		svg {
+			@include gridle(12);
+			padding:{bottom:80px;} 
+			@include gridle_state(phoness-min) {
+				padding:{bottom:10px;} 
+			}
+			path  {
+				fill: #000 !important;
+			}
+		}
+	}
+}

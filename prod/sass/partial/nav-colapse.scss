@@ -32,7 +32,7 @@
 	.contendor-menu {
 		@include gridle(12);
 		@extend .no-paddings;
-		position:absolute;
+		//position:absolute;
 		height: auto;
 		top:0;
 		.logo-menu-media {
@@ -43,12 +43,15 @@
 			@include gridle_state(phoness tabless-min) {
 				display: none;
 			}
+			svg {
+				fill: $second_color !important;
+			}
 		}
 		.search {
 			@include gridle(12);
 			@extend .no-paddings;
 			@extend .no-margins;
-			position: absolute;
+			//position: absolute;
 			@include gridle_state(desktopess) {
 				top: 128px;
 			}
@@ -109,11 +112,11 @@
 			}
 		}
 		.menu{
-			position:absolute;
+			//position:absolute;
 			height: auto;
 			top:0;
 			margin{top: 50px;}
-			@include gridle_state(desktopess) {
+			/*@include gridle_state(desktopess) {
 				margin:{top: 305px;}
 			}
 			@include gridle_state(notebook-min) {
@@ -127,7 +130,7 @@
 			}
 			@include gridle_state(phoness-min) {
 				margin:{top:88px;} 
-			}
+			}*/
 
 			ul {
 				@include gridle(12);

@@ -215,13 +215,6 @@ a {
 		padding: 7px 5px;
 	}
 }
-.nothing-message {
-	@include gridle(12);
-	background:$second_color;
-	position: relative;
-	display: block;
-	margin:{top:10px;} 
-}
 .shadow {
 	box-shadow: 0 2px 2px rgba(204, 204, 204, 0.2);
 	-webkit-box-shadow: 0 2px 2px rgba(204, 204, 204, 0.2);
@@ -338,6 +331,53 @@ a {
 		opacity: 1;	
 	}		
 }
+
+.flipInY {
+	@include animation(flipInY 1s ease-in-out);
+	visibility: visible !important;	
+}
+
+@keyframes flipInY {
+	0% {
+		@include transform(perspective(400px) rotate3d(0, 1, 0, 90deg));
+		-webkit-animation-timing-function: ease-in;
+    	animation-timing-function: ease-in;
+		opacity: 0;		
+	}
+	40% {
+		@include transform(perspective(400px) rotate3d(0, 1, 0, -20deg));
+    	-webkit-animation-timing-function: ease-in;
+    	animation-timing-function: ease-in;
+	}
+	60% {
+		@include transform(perspective(400px) rotate3d(0, 1, 0, 10deg));
+    	opacity: 1;
+	}	
+	100% {
+		@include transform(perspective(400px));
+	}		
+}
+
+.vanishIn {
+  @include animation(vanishIn 1s ease-in-out);
+	visibility: visible !important;	
+}
+@keyframes vanishIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    -webkit-filter: blur(90px);
+  }
+
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    -webkit-filter: blur(0px);
+  }
+}
+
 .fadeOut {
 	@include animation(fadeOut 1s ease-in-out);
 	visibility: visible !important;	
@@ -385,4 +425,8 @@ a {
 	100%{
 		fill:#fff;
 	}
+}
+
+.mCSB_inside>.mCSB_container {
+	margin:{right:0;}
 }

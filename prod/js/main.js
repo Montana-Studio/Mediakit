@@ -17,6 +17,10 @@ jQuery(document).ready(function($){
 		setTimeout(function(){ $('#fsocial-f').addClass('fadeIn'); },2400);
 		setTimeout(function(){ $('#fsocial-t').addClass('fadeIn'); },2600);
 		setTimeout(function(){ $('#fsocial-i').addClass('fadeIn'); },2800);
+
+		setTimeout(function(){ $('.nothing-message h2').addClass('vanishIn'); },600);  
+		setTimeout(function(){ $('.nothing-message p').addClass('vanishIn'); },700);  
+		setTimeout(function(){ $('.logotipe-message').addClass('vanishIn'); },1200);   
 	});
 	
 	$('#menu-nav').toggle(function() {
@@ -140,7 +144,7 @@ jQuery(document).ready(function($){
 
 	$(window).load(function(){
 		
-		var classAdd = $('.nav-colapse .contendor-menu .menu ul li:first-child, .content-single a .pattern, .footer-container .content-right .pattern');
+		var classAdd = $('.nav-colapse .contendor-menu .menu ul li:first-child, .content-single a .pattern, .footer-container .content-right .pattern, .search-loop .title-resultado .pattern, .page-sitio  .btn-left .pattern, .page-contacto .form-contacto-cont .pattern');
 
 		classAdd.append('<div class="trama"><svg><defs><pattern id="lines-pattern" class="lines-pattern" width="5" height="5" patternUnits="userSpaceOnUse"><polygon fill="none" points="-71.125,-70.875 -64.04,-70.875 -64.04,-72.968 -74.04,-72.968 -74.04,-62.968 -71.125,-62.968 "/><polygon points="9.293,10 10,10 10,9.293 "/><polygon points="9.293,0 0,9.293 0,10 0.707,10 10,0.707 10,0 "/><polygon points="0,0 0,0.707 0.707,0 "/><polygon points="4.285,0 0,4.285 0,5.699 5.699,0 "/><polygon points="4.285,10 5.699,10 10,5.699 10,4.285 "/></pattern></defs><rect class="pattern-apply" fill="url(#lines-pattern)"/></svg></div>');
 
@@ -160,6 +164,24 @@ jQuery(document).ready(function($){
 		}
 	});
 
+    $(window).load(function(){
+        $('.wrapper').mCustomScrollbar(); 
+        $('.nav-colapse').mCustomScrollbar(); 
+    });
+    $('.wrapper').mCustomScrollbar({
+	    axis:'y', 
+	    theme:'minimal-dark',
+	    scrollbarPosition: 'inside',
+	    scrollInertia: 100    
+	});
+
+	$('.wrapper').mCustomScrollbar({
+	    axis:'y', 
+	    scrollbarPosition: 'inside',
+	    scrollInertia: 100    
+	});
+
+ 
 });    
 
 

@@ -24,8 +24,14 @@
 				wp_reset_postdata();
 				else: ?>
 				<article class="nothing-message">
-					<h2>No hay post.</h2>
-				</article>	
+					<h2>Lo siento, nada para mostrar.</h2>
+					<p>Pronto tendremos nuevo contenido disponible.</p>
+					<div class="logotipe-message">
+						<svg viewBox="0 0 792 656.856">
+							<use xlink:href="#mediatrends-logo"/> 
+						</svg>
+					</div>
+				<article>
 				<?php endif; ?>
 
 	</section>

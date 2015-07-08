@@ -9,6 +9,10 @@
 	margin:{top:-80px;}
 	@include gridle_state(phoness) {
 		padding:0 !important;
+		margin:0;
+	}
+	@include gridle_state(phoness-min) {
+		margin:{top: -80px;} 
 	}
 	.footer-content {
 		@include gridle(12);

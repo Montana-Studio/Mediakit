@@ -15,6 +15,7 @@
 		<link rel="shortcut icon" type="image/svg+xml" href="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/favicon.svg">
 		<link rel="shortcut icon"  href="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/favicon.ico">
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/jquery.mCustomScrollbar.min.css"> 
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mediakit.css"> 
 
 		<?php wp_head(); ?>
@@ -27,6 +28,7 @@
         });
         </script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/snap.svg.js" type="text/javascript"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/mediakit.min.js" type="text/javascript"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/easing.min.js" type="text/javascript"></script>
 
@@ -66,7 +68,7 @@
 		</div>
 	</div>
 		<!-- wrapper -->
-		<div class="wrapper">
+		<div class="wrapper mCustomScrollbar" data-mcs-axis="y" >
 			
 		
 			<?php if(is_page('contact')){

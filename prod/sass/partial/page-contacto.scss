@@ -10,12 +10,9 @@
 	@include gridle_state(notebook-min) {
 		margin:{bottom:10px;}
 	} 
-	@include gridle_state(tabless-min) {
-		padding:10px;
+	@include gridle_state(tabless-md phoness) {
+		padding:0;
 	} 
-	@include gridle_state(phoness) {
-		padding:10px;
-	}
 	.encabezado {
 		margin:{bottom:20px;}
 		@extend .no-paddings;
@@ -47,16 +44,23 @@
 			padding: 0 10px;
 			background: none;
 		}
-		.title-form {
-			@include gridle(12);
-			padding:10px;
-			@include gridle_state(tabless-md) {
-				padding: 10px !important;
+		.pattern {
+			background-position: -0% 0;
+			@include background-image (linear-gradient(to right, #fff 50%, #000 50%));
+			background-size: 200.22% auto;
+			@include transition(background-position 0.5s ease-out);
+			@extend .trama;	
+			&.title-form {
+				@include gridle(12);
+				padding:10px;
+				@include gridle_state(tabless-md) {
+					padding: 10px !important;
+				}
+				a {
+					font:{size:17px !important;}
+				}
 			}
-			a {
-				font:{size:17px !important;}
-			}
-		}
+		} 
 		.content-form {
 			@include gridle(12);
 			@include gridle_state(tabless-md) {
@@ -169,7 +173,22 @@
 					}
 				}
 			}
-		}	
+		}
+		&:hover {
+			.pattern{
+				@include transition(background-position 0.5s ease-out);
+				background-position: 99.99% 0 !important;
+				.trama{
+					svg{
+						pattern {
+							polygon {
+								@include animation(tramaFadea 0.4s ease forwards);
+							}
+						}
+					}
+				}
+			}
+		}	 
 	}
 	.content-info {
 		@include gridle(6, desktopess notebook-min); 

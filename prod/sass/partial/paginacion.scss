@@ -3,15 +3,16 @@
 	@include gridle(12);
 	@include gridle_float(right);
 	background: $second_color;
-	padding:10px;
 	margin:10px 0;
+	min-height: 0;  
 	.page-numbers { 
 		font:$primary_font !important;
 		color:$font-color;
 		padding: 6px 12px;
 		line-height: 1.42857143;
 		border:1px solid $li-border-color;  
-		margin: 0 -3px;   
+		margin: 10px -3px;   
+		display: inline-block;
 		&.current {
 			background: $first_color;
 			color:$second_color;

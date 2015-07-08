@@ -25,6 +25,9 @@
 			@include gridle(10, desktopess notebook-min);
 			@include gridle(12, phoness tabless-min);
 			@include gridle_float(right);
+			@include gridle_state(phoness-min){
+				padding:0;
+			}
 			.art-single {
 				@include gridle(12);
 				@extend .no-paddings;
@@ -149,6 +152,11 @@
 								@include gridle(12);
 								padding:{bottom:10px;}
 								margin:{left:5px;top:10px;}
+								background-position: -0% 0;
+								@include background-image (linear-gradient(to right, #fff 50%, #000 50%));
+								background-size: 200.22% auto;
+								@include transition(background-position 0.5s ease-out);
+								@extend .trama;	
 								@include gridle_state(desktopess notebook-min) {
 									display: inline-block;
 									margin:0 !important; 
@@ -159,7 +167,8 @@
 								@include gridle_state(phoness) {
 									margin:{top: 14px !important;}
 								}
-								a {
+								.highlight-inv {
+									display: table;
 									font:{size:12px;}
 									@include gridle_state(desktopess) {
 										  font:{size: 18px;}
@@ -173,6 +182,21 @@
 									}
 								}
 							}	
+							&:hover {
+								.pattern{
+									@include transition(background-position 0.5s ease-out);
+									background-position: 99.99% 0 !important;
+									.trama{
+										svg{
+											pattern {
+												polygon {
+													@include animation(tramaFadea 0.4s ease forwards);
+												}
+											}
+										}
+									}
+								}
+							}
 						}
 						.btn-right {
 								@include gridle(6, desktopess notebook-min tabless-min);

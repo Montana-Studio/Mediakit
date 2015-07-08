@@ -29,6 +29,7 @@
 
 		</div>
 		<!-- /wrapper -->
+		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.mCustomScrollbar.concat.min.js"></script> 
 		<script src="<?php echo get_template_directory_uri(); ?>/js/masonry.js"></script>
 
 		<?php wp_footer(); ?>
