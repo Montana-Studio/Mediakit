@@ -4,7 +4,6 @@
 	position: fixed;
 	background: $first_color;
 	color:$second_color;
-	overflow: scroll;
 	overflow-x: hidden;
 	z-index: 999; 
 	@include gridle_state(desktopess) {
