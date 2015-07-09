@@ -33,7 +33,10 @@
 				 display: block;
 				 height: 100%;
 				 }
-				 @include gridle_state(phoness tabless-md) {
+				 @include gridle_state(tabless-md) {
+				 	  padding:{top:0;}
+				 }
+				 @include gridle_state(phoness) {
 				 	  padding:{top: 50px;}
 				 }
 				  @include gridle_state(phoness-min) {

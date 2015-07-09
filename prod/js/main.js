@@ -177,7 +177,7 @@ jQuery(document).ready(function($){
 
 	$('.wrapper').mCustomScrollbar({
 	    axis:'y', 
-	    scrollbarPosition: 'inside',
+	    scrollbarPosition: 'outside',
 	    scrollInertia: 100    
 	});
 

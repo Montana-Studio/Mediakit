@@ -107,7 +107,7 @@
                              <div class="btn-display">
                                 <div class="content-display">
                                     <h3 class="bg-highlight">CONTACTANOS</h3>
-                                     <div class="btn display-des"><a href="#"><i class="fa fa-external-link"></i> Cotizar</a></div>
+                                     <div class="btn btn-5 btn-5a icon-star display-des"><a href="#"><span>Cotizar</span></a></div>
                                 </div>
                             </div>
                             <div class="metrica-mapa">
