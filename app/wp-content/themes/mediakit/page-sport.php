@@ -36,15 +36,15 @@
 								<div id="results_metrics" class="sitio-social">
 									<ul>
 										<li>
-											<div class="number">134.000</div>
+											<div class="number" id="fb_likes"></div>
 											<div class="bajada-num"><i class="fa fa-facebook"> Likes</i></div>
 										</li>
 										<li>
-											<div class="number">134.000</div>
-											<div id="twitter_followers" class="bajada-num"><i class="fa fa-twitter"> Follows</i></div>
+											<div class="number" id="twitter_followers"></div>
+											<div class="bajada-num"><i class="fa fa-twitter"> Follows</i></div>
 										</li>
 										<li>
-											<div class="number">134.000</div>
+											<div class="number" id="instagram_followers"></div>
 											<div class="bajada-num"><i class="fa fa-instagram"> Follows</i></div>
 										</li>
 									</ul>

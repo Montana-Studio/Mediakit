@@ -13,7 +13,7 @@
 							 <div class="content-group">
 	                            <div class="bajada bg-highlight"><?php the_content(); ?></div>
 	                            <div class="btn-left"><div class="pattern"><div class="highlight-inv">MONTHLY REACH 34.000</div></div></div>
-	                            <div class="btn-right"><div class="btn"><a href="#"><i class="fa fa-external-link"></i> ver sitio</a></div></div>   
+	                            <div class="btn-right"><div class="btn"><a href="<?php the_field('sitio_web'); ?>"><i class="fa fa-external-link"></i> ver sitio</a></div></div>   
 	                        </div>
 						</div>
 			        </div>
