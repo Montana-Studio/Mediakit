@@ -14,20 +14,7 @@
                 
                  <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 
-                <!-- Datepicker -->
-                <!-- CÃ³digo donde se cargara selector de fechas-->
-                <div id="date-range">
-                    <div id="date-range-field">
-                        <span></span>
-                        <a href="#">&#9660;</a>
-                    </div>
-                    <div id="datepicker-calendar"></div>
-                    <div id="actions_ga">
-                        <a href="" id="apply_ga">Aplicar</a>
-                        <a href="" id="cancel_ga">Cancelar</a>
-                    </div>
-                </div>
-                <!-- End Datepicker -->
+              
 
                 <!-- Resultado mÃ©tricas -->
                 <!-- 
@@ -120,6 +107,26 @@
 
                         </div>
 
+                        <div class="data-picker-display">
+                            <div class="content-dpicker-display">
+                                <h3 class="bg-highlight">FILTRAR POR FECHA</h3>
+                                <!-- Datepicker -->
+                                <!-- CÃ³digo donde se cargara selector de fechas-->
+                                <div id="date-range" class="dp-cont">
+                                    <div id="date-range-field" class="dp-calendar">
+                                        <span></span>
+                                        <a href="#">&#9660;</a>
+                                    </div>
+                                    <div id="datepicker-calendar" class="dp-desplegable"></div>
+                                    <div id="actions_ga" class="dp-botonera">
+                                        <div class="dp-btn"> <a href="" id="apply_ga" class="btn-datapicker">Aplicar</a></div>
+                                        <div class="dp-btn"><a href="" id="cancel_ga" class="btn-datapicker">Cancelar</a></div>
+                                    </div>
+                                </div>
+                                <!-- End Datepicker -->
+                            </div>
+                        </div>
+
                         <div class="btn-display">
                             <div class="content-display">
                                 <h3 class="bg-highlight">CONTACTANOS</h3>
@@ -135,7 +142,7 @@
                                 </ul>     
                             </div>
                         </div>
-                        
+
                     </div>    
                 </div>    
                 <!-- Fin Resultado mÃ©tricas -->
