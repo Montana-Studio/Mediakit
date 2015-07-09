@@ -15,14 +15,12 @@
 				padding:{right:5px !important;}
 			}
 			.sitio-single {
-				@include gridle(12, phoness-min);
-				@include gridle(12, phoness);
-				@include gridle(12, desktopess);
+				@include gridle(12);
+				padding:{top: 0;right: 5px; bottom:0; left:0;}
+				height: auto;
 				@include gridle_state(tabless-min) {
 					padding:{left: 6px !important;}
 				}
-				padding:{top: 0;right: 5px; bottom:0; left:0;}
-				height: auto;
 				.content-single {
 					@include gridle(12,phoness-min);
 					@extend .no-paddings;

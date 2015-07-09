@@ -203,8 +203,12 @@
 									@include gridle(6);
 									.dp-btn {
 										@include gridle(6);
+										@include gridle(5, tabless-md);
 										height: 26px;
 										display: table;
+										@include gridle_state(tabless-md) {
+											margin: 0 10px;
+										}
 										&:first-child {
 											padding:{right:0 !important;}
 										}

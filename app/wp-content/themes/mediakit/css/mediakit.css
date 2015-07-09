@@ -5311,6 +5311,7 @@ a {
   .wrapper .page-header {
     height: 370px;
     padding: 10px !important;
+    overflow: hidden;
     float: left;
     direction: ltr;
     padding-left: 10px;
@@ -5462,10 +5463,12 @@ a {
         .wrapper .page-header .content-header {
           padding: 0; } }
       html.notebook-min .wrapper .page-header .content-header {
-        height: 300px; }
+        height: 300px;
+        padding: 0; }
       @media screen and (max-width: 1440px) {
         .wrapper .page-header .content-header {
-          height: 300px; } }
+          height: 300px;
+          padding: 0; } }
       .wrapper .page-header .content-header .encabezado {
         float: left;
         direction: ltr;
@@ -7044,6 +7047,7 @@ a {
       direction: ltr;
       padding-left: 10px;
       padding-right: 10px;
+      width: 100%;
       padding-top: 0;
       padding-right: 5px;
       padding-bottom: 0;
@@ -7061,45 +7065,16 @@ a {
         .wrapper .page-categoria .content-loop-categoria .sitio-single {
           padding-left: 0;
           padding-right: 0; } }
-      html.phoness-min .wrapper .page-categoria .content-loop-categoria .sitio-single {
+      html.default .wrapper .page-categoria .content-loop-categoria .sitio-single {
         width: 100%; }
-        .gridle-debug html.phoness-min .wrapper .page-categoria .content-loop-categoria .sitio-single:before, html.phoness-min .wrapper .page-categoria .content-loop-categoria .sitio-single.gridle-debug:before {
-          content: "grid-phoness-min-12" !important; }
-        .gridle-debug html.phoness-min .wrapper .page-categoria .content-loop-categoria .sitio-single.parent:before, html.phoness-min .wrapper .page-categoria .content-loop-categoria .sitio-single.gridle-debug.parent:before {
-          content: "grid-parent-phoness-min-12" !important; }
-      @media screen and (max-width: 480px) {
-        .wrapper .page-categoria .content-loop-categoria .sitio-single {
-          width: 100%; }
-          .gridle-debug .wrapper .page-categoria .content-loop-categoria .sitio-single:before, .wrapper .page-categoria .content-loop-categoria .sitio-single.gridle-debug:before {
-            content: "grid-phoness-min-12" !important; }
-          .gridle-debug .wrapper .page-categoria .content-loop-categoria .sitio-single.parent:before, .wrapper .page-categoria .content-loop-categoria .sitio-single.gridle-debug.parent:before {
-            content: "grid-parent-phoness-min-12" !important; } }
-      html.phoness .wrapper .page-categoria .content-loop-categoria .sitio-single {
-        width: 100%; }
-        .gridle-debug html.phoness .wrapper .page-categoria .content-loop-categoria .sitio-single:before, html.phoness .wrapper .page-categoria .content-loop-categoria .sitio-single.gridle-debug:before {
-          content: "grid-phoness-12" !important; }
-        .gridle-debug html.phoness .wrapper .page-categoria .content-loop-categoria .sitio-single.parent:before, html.phoness .wrapper .page-categoria .content-loop-categoria .sitio-single.gridle-debug.parent:before {
-          content: "grid-parent-phoness-12" !important; }
-      @media screen and (max-width: 800px) {
-        .wrapper .page-categoria .content-loop-categoria .sitio-single {
-          width: 100%; }
-          .gridle-debug .wrapper .page-categoria .content-loop-categoria .sitio-single:before, .wrapper .page-categoria .content-loop-categoria .sitio-single.gridle-debug:before {
-            content: "grid-phoness-12" !important; }
-          .gridle-debug .wrapper .page-categoria .content-loop-categoria .sitio-single.parent:before, .wrapper .page-categoria .content-loop-categoria .sitio-single.gridle-debug.parent:before {
-            content: "grid-parent-phoness-12" !important; } }
-      html.desktopess .wrapper .page-categoria .content-loop-categoria .sitio-single {
-        width: 100%; }
-        .gridle-debug html.desktopess .wrapper .page-categoria .content-loop-categoria .sitio-single:before, html.desktopess .wrapper .page-categoria .content-loop-categoria .sitio-single.gridle-debug:before {
-          content: "grid-desktopess-12" !important; }
-        .gridle-debug html.desktopess .wrapper .page-categoria .content-loop-categoria .sitio-single.parent:before, html.desktopess .wrapper .page-categoria .content-loop-categoria .sitio-single.gridle-debug.parent:before {
-          content: "grid-parent-desktopess-12" !important; }
-      @media screen and (min-width: 1440px) {
-        .wrapper .page-categoria .content-loop-categoria .sitio-single {
-          width: 100%; }
-          .gridle-debug .wrapper .page-categoria .content-loop-categoria .sitio-single:before, .wrapper .page-categoria .content-loop-categoria .sitio-single.gridle-debug:before {
-            content: "grid-desktopess-12" !important; }
-          .gridle-debug .wrapper .page-categoria .content-loop-categoria .sitio-single.parent:before, .wrapper .page-categoria .content-loop-categoria .sitio-single.gridle-debug.parent:before {
-            content: "grid-parent-desktopess-12" !important; } }
+        .gridle-debug html.default .wrapper .page-categoria .content-loop-categoria .sitio-single:before, html.default .wrapper .page-categoria .content-loop-categoria .sitio-single.gridle-debug:before {
+          content: "grid-default-12"; }
+        .gridle-debug html.default .wrapper .page-categoria .content-loop-categoria .sitio-single.parent:before, html.default .wrapper .page-categoria .content-loop-categoria .sitio-single.gridle-debug.parent:before {
+          content: "grid-parent-default-12"; }
+      .gridle-debug .wrapper .page-categoria .content-loop-categoria .sitio-single:before, .wrapper .page-categoria .content-loop-categoria .sitio-single.gridle-debug:before {
+        content: "grid-default-12"; }
+      .gridle-debug .wrapper .page-categoria .content-loop-categoria .sitio-single.parent:before, .wrapper .page-categoria .content-loop-categoria .sitio-single.gridle-debug.parent:before {
+        content: "grid-parent-default-12"; }
       html.tabless-min .wrapper .page-categoria .content-loop-categoria .sitio-single {
         padding-left: 6px !important; }
       @media screen and (max-width: 1024px) {
@@ -8659,6 +8634,24 @@ a {
                       content: "grid-default-6"; }
                     .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn.parent:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn.gridle-debug.parent:before {
                       content: "grid-parent-default-6"; }
+                    html.tabless-md .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn {
+                      width: 41.66667%; }
+                      .gridle-debug html.tabless-md .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn:before, html.tabless-md .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn.gridle-debug:before {
+                        content: "grid-tabless-md-5" !important; }
+                      .gridle-debug html.tabless-md .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn.parent:before, html.tabless-md .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn.gridle-debug.parent:before {
+                        content: "grid-parent-tabless-md-5" !important; }
+                    @media screen and (max-width: 1024px) {
+                      .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn {
+                        width: 41.66667%; }
+                        .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn.gridle-debug:before {
+                          content: "grid-tabless-md-5" !important; }
+                        .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn.parent:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn.gridle-debug.parent:before {
+                          content: "grid-parent-tabless-md-5" !important; } }
+                    html.tabless-md .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn {
+                      margin: 0 10px; }
+                    @media screen and (max-width: 1024px) {
+                      .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn {
+                        margin: 0 10px; } }
                     .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn:first-child {
                       padding-right: 0 !important; }
                     .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn .btn-datapicker {
