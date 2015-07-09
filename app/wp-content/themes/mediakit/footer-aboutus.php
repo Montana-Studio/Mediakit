@@ -15,9 +15,9 @@
 						</div>
 						<div class="content-right">
 							<ul>
-								<li class="pattern" id="fsocial-f"><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li class="pattern" id="fsocial-t"><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li class="pattern" id="fsocial-i"><a href="#"><i class="fa fa-instagram"></i></a></li>
+								<li class="pattern" id="fsocial-f"><a href="https://www.facebook.com/mediatrendscl" target="_blank"><i class="fa fa-facebook"></i></a></li>
+								<li class="pattern" id="fsocial-t"><a href="https://twitter.com/mediatrendscl" target="_blank"><i class="fa fa-twitter"></i></a></li>
+								<li class="pattern" id="fsocial-i"><a href="https://instagram.com/mediatrendscl" target="_blank"><i class="fa fa-instagram"></i></a></li>
 							</ul>
 						</div>
 					</div>

@@ -11812,7 +11812,9 @@ a {
               color: black;
               display: table;
               width: 100%;
-              height: 100%; }
+              height: 100%;
+              position: absolute;
+              z-index: 999; }
               .footer .footer-content .footer-container .content-right ul li a i {
                 display: table-cell;
                 vertical-align: middle; }
