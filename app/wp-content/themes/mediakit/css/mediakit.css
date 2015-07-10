@@ -4387,7 +4387,8 @@ html, body {
 
 html {
   font-family: "Open Sans", sans-serif;
-  overflow: hidden; }
+  overflow: hidden;
+  overflow-y: scroll; }
   html body {
     overflow: hidden; }
 
@@ -4403,7 +4404,7 @@ html {
 .no-margins, .metrics ul, .metrics ul li .metrics-1, .metrics ul li .metrics-2, .bajada p, .wrapper .page-header .content-header .encabezado .content-title .bajada p, .wrapper .page-categoria .content-loop-categoria .sitio-single .content-single .sitio-social ul, .nothing-message h2, .nothing-message p, .nav-colapse .contendor-menu .search, .nav-colapse .contendor-menu .menu ul, .search-content .content-title h2, .page-contacto .form-contacto-cont .content-form .wpcf7, .page-contacto .form-contacto-cont .content-form .wpcf7 .wpcf7-form, .page-contacto .form-contacto-cont .content-form .wpcf7 .wpcf7-form p, .footer .footer-content .footer-container .content-left h3, .footer .footer-content .footer-container .content-right ul {
   margin: 0 !important; }
 
-.no-paddings, .bg-highlight p, .btn, .metrics, .metrics ul, .metrics ul li i, .metrics ul li .metrics-1, .metrics ul li .metrics-2, .metrics ul .img-map, .wrapper, .wrapper .page-header, .wrapper .page-header .content-header .encabezado .content-title, .page-header-sitio .single-article .content-header, .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .logo-sitio .img-content, .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .bajada, .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-right, .nav, .nav-mobile, .wrapper .page-categoria .content-loop-categoria, .wrapper .page-categoria .content-loop-categoria .sitio-single .content-single, .wrapper .page-categoria .content-loop-categoria .sitio-single .content-single .img-single, .wrapper .page-categoria .content-loop-categoria .sitio-single .content-single .sitio-social, .wrapper .page-categoria .content-loop-categoria .sitio-single .content-single .sitio-social ul, .sitio-single .page-sitio, .sitio-single .page-sitio .art-single, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont, .about-us-page, .about-us-page .page-aboutus .encabezado .content-title .content-about, .about-us-page .page-aboutus .encabezado .content-title .content-about .bajada, .nav-colapse, .nav-colapse .contendor-menu, .nav-colapse .contendor-menu .search, .nav-colapse .contendor-menu .menu ul, .nav-colapse .contendor-menu .menu ul li, .search-content .search-cont, .search-content .search-cont .search-loop .img-search, .page-contacto .encabezado, .page-contacto .form-contacto-cont, .page-contacto .form-contacto-cont .content-form .wpcf7 .wpcf7-form, .page-contacto .form-contacto-cont .content-form .wpcf7 .wpcf7-form p .wpcf7-form-control-wrap, .footer .footer-content, .footer .footer-content .footer-container .content-left, .footer .footer-content .footer-container .content-left .img-footer, .footer .footer-content .footer-container .content-right, .footer .footer-content .footer-container .content-right ul, .footer .footer-content .footer-container .content-right ul li {
+.no-paddings, .bg-highlight p, .btn, .metrics, .metrics ul, .metrics ul li i, .metrics ul li .metrics-1, .metrics ul li .metrics-2, .metrics ul .img-map, .wrapper, .wrapper .page-header, .wrapper .page-header .content-header, .wrapper .page-header .content-header .encabezado .content-title, .page-header-sitio .single-article .content-header, .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .logo-sitio .img-content, .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .bajada, .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-right, .nav, .nav-mobile, .wrapper .page-categoria .content-loop-categoria, .wrapper .page-categoria .content-loop-categoria .sitio-single .content-single, .wrapper .page-categoria .content-loop-categoria .sitio-single .content-single .img-single, .wrapper .page-categoria .content-loop-categoria .sitio-single .content-single .sitio-social, .wrapper .page-categoria .content-loop-categoria .sitio-single .content-single .sitio-social ul, .sitio-single .page-sitio, .sitio-single .page-sitio .art-single, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont, .about-us-page, .about-us-page .page-aboutus .encabezado .content-title .content-about, .about-us-page .page-aboutus .encabezado .content-title .content-about .bajada, .nav-colapse, .nav-colapse .contendor-menu, .nav-colapse .contendor-menu .search, .nav-colapse .contendor-menu .menu ul, .nav-colapse .contendor-menu .menu ul li, .search-content .search-cont, .search-content .search-cont .search-loop .img-search, .page-contacto .encabezado, .page-contacto .form-contacto-cont, .page-contacto .form-contacto-cont .content-form .wpcf7 .wpcf7-form, .page-contacto .form-contacto-cont .content-form .wpcf7 .wpcf7-form p .wpcf7-form-control-wrap, .footer .footer-content, .footer .footer-content .footer-container .content-left, .footer .footer-content .footer-container .content-left .img-footer, .footer .footer-content .footer-container .content-right, .footer .footer-content .footer-container .content-right ul, .footer .footer-content .footer-container .content-right ul li {
   padding: 0 !important; }
 
 .resp_img {
@@ -4697,7 +4698,7 @@ a {
       padding-right: 10px;
       width: 100%;
       display: table;
-      font-size: 11px;
+      font-size: 12px;
       border: 0;
       border-bottom: 1px solid #e5e9ec;
       padding-top: 8px;
@@ -4812,7 +4813,8 @@ a {
         float: right;
         display: table-cell;
         vertical-align: middle;
-        color: #8b91a0; }
+        color: #8b91a0;
+        font-size: 13px; }
         html.default .metrics ul li .metrics-2 {
           float: left;
           direction: ltr;
@@ -4837,6 +4839,14 @@ a {
           content: "grid-parent-default-4"; }
         html.default .metrics ul li .metrics-2 {
           float: right; }
+        .metrics ul li .metrics-2 .metrics-descriptions-1, .metrics ul li .metrics-2 .metrics-descriptions-2 {
+          display: inline-block;
+          width: auto;
+          font-size: 13px;
+          font-weight: 600; }
+        .metrics ul li .metrics-2 .metrics-descriptions-2 {
+          font-size: 12px;
+          font-weight: lighter; }
     .metrics ul .img-map {
       float: left;
       direction: ltr;
@@ -5428,8 +5438,7 @@ a {
       direction: ltr;
       padding-left: 10px;
       padding-right: 10px;
-      width: 100%;
-      padding: 10px; }
+      width: 100%; }
       html.default .wrapper .page-header .content-header {
         float: left;
         direction: ltr;
@@ -5469,6 +5478,11 @@ a {
         .wrapper .page-header .content-header {
           height: 300px;
           padding: 0; } }
+      html.phoness-min .wrapper .page-header .content-header {
+        height: 210px; }
+      @media screen and (max-width: 480px) {
+        .wrapper .page-header .content-header {
+          height: 210px; } }
       .wrapper .page-header .content-header .encabezado {
         float: left;
         direction: ltr;
@@ -5518,10 +5532,12 @@ a {
           .wrapper .page-header .content-header .encabezado {
             padding: 0 5px; } }
         html.phoness-min .wrapper .page-header .content-header .encabezado {
-          padding: 0 7px; }
+          padding: 0 7px;
+          height: 210px; }
         @media screen and (max-width: 480px) {
           .wrapper .page-header .content-header .encabezado {
-            padding: 0 7px; } }
+            padding: 0 7px;
+            height: 210px; } }
         .wrapper .page-header .content-header .encabezado .content-title {
           float: left;
           direction: ltr;
@@ -5756,6 +5772,11 @@ a {
           padding-right: 0 !important; } }
       .page-header-sitio .single-article .content-header .encabezado {
         overflow: visible !important; }
+        html.phoness-min .page-header-sitio .single-article .content-header .encabezado {
+          height: 210px; }
+        @media screen and (max-width: 480px) {
+          .page-header-sitio .single-article .content-header .encabezado {
+            height: 210px; } }
         .page-header-sitio .single-article .content-header .encabezado .content-a {
           overflow: visible !important; }
           .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float {
@@ -5790,6 +5811,32 @@ a {
               content: "grid-default-9"; }
             .gridle-debug .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float.parent:before, .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float.gridle-debug.parent:before {
               content: "grid-parent-default-9"; }
+            html.phoness .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float {
+              width: 91.66667%; }
+              .gridle-debug html.phoness .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float:before, html.phoness .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float.gridle-debug:before {
+                content: "grid-phoness-11" !important; }
+              .gridle-debug html.phoness .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float.parent:before, html.phoness .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float.gridle-debug.parent:before {
+                content: "grid-parent-phoness-11" !important; }
+            @media screen and (max-width: 800px) {
+              .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float {
+                width: 91.66667%; }
+                .gridle-debug .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float:before, .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float.gridle-debug:before {
+                  content: "grid-phoness-11" !important; }
+                .gridle-debug .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float.parent:before, .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float.gridle-debug.parent:before {
+                  content: "grid-parent-phoness-11" !important; } }
+            html.phoness-min .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float {
+              width: 100%; }
+              .gridle-debug html.phoness-min .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float:before, html.phoness-min .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float.gridle-debug:before {
+                content: "grid-phoness-min-12" !important; }
+              .gridle-debug html.phoness-min .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float.parent:before, html.phoness-min .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float.gridle-debug.parent:before {
+                content: "grid-parent-phoness-min-12" !important; }
+            @media screen and (max-width: 480px) {
+              .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float {
+                width: 100%; }
+                .gridle-debug .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float:before, .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float.gridle-debug:before {
+                  content: "grid-phoness-min-12" !important; }
+                .gridle-debug .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float.parent:before, .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float.gridle-debug.parent:before {
+                  content: "grid-parent-phoness-min-12" !important; } }
             html.notebook-min .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float {
               height: 150px;
               bottom: -54px; }
@@ -5802,6 +5849,22 @@ a {
             @media screen and (max-width: 1024px) {
               .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float {
                 left: 10px; } }
+            html.phoness .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float {
+              bottom: -23px; }
+            @media screen and (max-width: 800px) {
+              .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float {
+                bottom: -23px; } }
+            html.phoness-min .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float {
+              left: 0;
+              padding: 0;
+              height: 115px;
+              bottom: -42px; }
+            @media screen and (max-width: 480px) {
+              .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float {
+                left: 0;
+                padding: 0;
+                height: 115px;
+                bottom: -42px; } }
             .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .logo-sitio {
               float: left;
               direction: ltr;
@@ -6064,6 +6127,16 @@ a {
               @media screen and (max-width: 1024px) {
                 .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group {
                   padding: 6px; } }
+              html.phoness .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group {
+                margin-top: 25px; }
+              @media screen and (max-width: 800px) {
+                .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group {
+                  margin-top: 25px; } }
+              html.phoness-min .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group {
+                margin-top: 0; }
+              @media screen and (max-width: 480px) {
+                .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group {
+                  margin-top: 0; } }
               .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .bajada {
                 width: 73% !important;
                 line-height: 20px;
@@ -6281,10 +6354,15 @@ a {
                         margin-left: 5px; } }
                     html.phoness .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern .highlight-inv, html.phoness .page-header-sitio .single-article .content-header .about-us-page .page-aboutus .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern .content-title .content-about .bajada p, .about-us-page .page-aboutus html.phoness .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern .content-title .content-about .bajada p, html.phoness .page-header-sitio .single-article .content-header .about-us-page .page-aboutus .encabezado .content-title .content-about .bajada .content-a .content-b .content-float .content-group .btn-left .pattern p, .about-us-page .page-aboutus html.phoness .page-header-sitio .single-article .content-header .encabezado .content-title .content-about .bajada .content-a .content-b .content-float .content-group .btn-left .pattern p, html.phoness .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern .nav-colapse .contendor-menu .menu ul li:first-child a, .nav-colapse .contendor-menu .menu ul li:first-child html.phoness .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern a {
                       margin-left: -4px;
-                      font-size: 11px; }
+                      font-size: 15px; }
                     @media screen and (max-width: 800px) {
                       .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern .highlight-inv, .page-header-sitio .single-article .content-header .about-us-page .page-aboutus .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern .content-title .content-about .bajada p, .about-us-page .page-aboutus .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern .content-title .content-about .bajada p, .page-header-sitio .single-article .content-header .about-us-page .page-aboutus .encabezado .content-title .content-about .bajada .content-a .content-b .content-float .content-group .btn-left .pattern p, .about-us-page .page-aboutus .page-header-sitio .single-article .content-header .encabezado .content-title .content-about .bajada .content-a .content-b .content-float .content-group .btn-left .pattern p, .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern .nav-colapse .contendor-menu .menu ul li:first-child a, .nav-colapse .contendor-menu .menu ul li:first-child .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern a {
                         margin-left: -4px;
+                        font-size: 15px; } }
+                    html.phoness-min .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern .highlight-inv, html.phoness-min .page-header-sitio .single-article .content-header .about-us-page .page-aboutus .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern .content-title .content-about .bajada p, .about-us-page .page-aboutus html.phoness-min .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern .content-title .content-about .bajada p, html.phoness-min .page-header-sitio .single-article .content-header .about-us-page .page-aboutus .encabezado .content-title .content-about .bajada .content-a .content-b .content-float .content-group .btn-left .pattern p, .about-us-page .page-aboutus html.phoness-min .page-header-sitio .single-article .content-header .encabezado .content-title .content-about .bajada .content-a .content-b .content-float .content-group .btn-left .pattern p, html.phoness-min .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern .nav-colapse .contendor-menu .menu ul li:first-child a, .nav-colapse .contendor-menu .menu ul li:first-child html.phoness-min .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern a {
+                      font-size: 11px; }
+                    @media screen and (max-width: 480px) {
+                      .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern .highlight-inv, .page-header-sitio .single-article .content-header .about-us-page .page-aboutus .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern .content-title .content-about .bajada p, .about-us-page .page-aboutus .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern .content-title .content-about .bajada p, .page-header-sitio .single-article .content-header .about-us-page .page-aboutus .encabezado .content-title .content-about .bajada .content-a .content-b .content-float .content-group .btn-left .pattern p, .about-us-page .page-aboutus .page-header-sitio .single-article .content-header .encabezado .content-title .content-about .bajada .content-a .content-b .content-float .content-group .btn-left .pattern p, .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern .nav-colapse .contendor-menu .menu ul li:first-child a, .nav-colapse .contendor-menu .menu ul li:first-child .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern a {
                         font-size: 11px; } }
                 .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left:hover .pattern {
                   -webkit-transition: background-position 0.5s ease-out;
@@ -6990,6 +7068,11 @@ a {
     @media screen and (max-width: 1024px) {
       .wrapper .page-categoria .content-loop-categoria {
         padding-right: 5px !important; } }
+    html.phoness-min .wrapper .page-categoria .content-loop-categoria {
+      padding: 0 !important; }
+    @media screen and (max-width: 480px) {
+      .wrapper .page-categoria .content-loop-categoria {
+        padding: 0 !important; } }
     .wrapper .page-categoria .content-loop-categoria .sitio-single {
       float: left;
       direction: ltr;
@@ -7028,6 +7111,11 @@ a {
       @media screen and (max-width: 1024px) {
         .wrapper .page-categoria .content-loop-categoria .sitio-single {
           padding-left: 6px !important; } }
+      html.phoness-min .wrapper .page-categoria .content-loop-categoria .sitio-single {
+        padding: 0 !important; }
+      @media screen and (max-width: 480px) {
+        .wrapper .page-categoria .content-loop-categoria .sitio-single {
+          padding: 0 !important; } }
       .wrapper .page-categoria .content-loop-categoria .sitio-single .content-single {
         float: left;
         direction: ltr;
@@ -7578,6 +7666,11 @@ a {
         content: "grid-parent-default-12"; } }
   html.default .sitio-single {
     float: right; }
+  html.phoness .sitio-single {
+    padding: 0; }
+  @media screen and (max-width: 800px) {
+    .sitio-single {
+      padding: 0; } }
   .sitio-single .page-sitio {
     float: left;
     direction: ltr;
@@ -8070,6 +8163,11 @@ a {
                 content: "grid-default-12"; }
               .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .metrica-mapa .map-content.parent:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .metrica-mapa .map-content.gridle-debug.parent:before {
                 content: "grid-parent-default-12"; }
+              html.desktopess .sitio-single .page-sitio .art-single .content-sitio .metrics .metrica-mapa .map-content {
+                padding-bottom: 0; }
+              @media screen and (min-width: 1440px) {
+                .sitio-single .page-sitio .art-single .content-sitio .metrics .metrica-mapa .map-content {
+                  padding-bottom: 0; } }
               html.tabless-md .sitio-single .page-sitio .art-single .content-sitio .metrics .metrica-mapa .map-content {
                 padding: 0 10px; }
               @media screen and (max-width: 1024px) {
@@ -8354,6 +8452,32 @@ a {
                   content: "grid-default-6"; }
                 .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display.parent:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display.gridle-debug.parent:before {
                   content: "grid-parent-default-6"; } }
+            html.tabless-md .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display {
+              width: 50%; }
+              .gridle-debug html.tabless-md .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display:before, html.tabless-md .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display.gridle-debug:before {
+                content: "grid-default-6"; }
+              .gridle-debug html.tabless-md .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display.parent:before, html.tabless-md .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display.gridle-debug.parent:before {
+                content: "grid-parent-default-6"; }
+            @media screen and (max-width: 1024px) {
+              .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display {
+                width: 50%; }
+                .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display.gridle-debug:before {
+                  content: "grid-default-6"; }
+                .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display.parent:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display.gridle-debug.parent:before {
+                  content: "grid-parent-default-6"; } }
+            html.phoness .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display {
+              width: 100%; }
+              .gridle-debug html.phoness .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display:before, html.phoness .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display.gridle-debug:before {
+                content: "grid-phoness-12" !important; }
+              .gridle-debug html.phoness .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display.parent:before, html.phoness .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display.gridle-debug.parent:before {
+                content: "grid-parent-phoness-12" !important; }
+            @media screen and (max-width: 800px) {
+              .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display {
+                width: 100%; }
+                .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display.gridle-debug:before {
+                  content: "grid-phoness-12" !important; }
+                .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display.parent:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display.gridle-debug.parent:before {
+                  content: "grid-parent-phoness-12" !important; } }
             html.desktopess .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display {
               float: right;
               margin-top: 0;
@@ -8400,15 +8524,19 @@ a {
                 padding-bottom: 0;
                 padding-left: 10px; } }
             html.phoness .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display {
-              display: none; }
+              display: block;
+              padding-left: 0; }
             @media screen and (max-width: 800px) {
               .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display {
-                display: none; } }
+                display: block;
+                padding-left: 0; } }
             html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display {
-              display: none; }
+              display: block;
+              padding-left: 0; }
             @media screen and (max-width: 480px) {
               .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display {
-                display: none; } }
+                display: block;
+                padding-left: 0; } }
             .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display {
               float: left;
               direction: ltr;
@@ -8520,10 +8648,43 @@ a {
                     content: "grid-default-6"; }
                   .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-calendar.parent:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-calendar.gridle-debug.parent:before {
                     content: "grid-parent-default-6"; }
+                  html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-calendar {
+                    width: 100%; }
+                    .gridle-debug html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-calendar:before, html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-calendar.gridle-debug:before {
+                      content: "grid-phoness-min-12" !important; }
+                    .gridle-debug html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-calendar.parent:before, html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-calendar.gridle-debug.parent:before {
+                      content: "grid-parent-phoness-min-12" !important; }
+                  @media screen and (max-width: 480px) {
+                    .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-calendar {
+                      width: 100%; }
+                      .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-calendar:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-calendar.gridle-debug:before {
+                        content: "grid-phoness-min-12" !important; }
+                      .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-calendar.parent:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-calendar.gridle-debug.parent:before {
+                        content: "grid-parent-phoness-min-12" !important; } }
+                  html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-calendar {
+                    width: 100% !important; }
+                  @media screen and (max-width: 480px) {
+                    .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-calendar {
+                      width: 100% !important; } }
                   .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-calendar span {
                     font-size: 14px; }
                 .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-desplegable {
                   z-index: 99; }
+                  html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-desplegable {
+                    width: 100% !important;
+                    overflow: scroll !important;
+                    padding-top: 10px;
+                    padding-right: 0;
+                    padding-bottom: 0;
+                    padding-left: 10px; }
+                  @media screen and (max-width: 480px) {
+                    .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-desplegable {
+                      width: 100% !important;
+                      overflow: scroll !important;
+                      padding-top: 10px;
+                      padding-right: 0;
+                      padding-bottom: 0;
+                      padding-left: 10px; } }
                 .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera {
                   float: left;
                   direction: ltr;
@@ -8552,6 +8713,26 @@ a {
                     content: "grid-default-6"; }
                   .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera.parent:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera.gridle-debug.parent:before {
                     content: "grid-parent-default-6"; }
+                  html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera {
+                    width: 100%; }
+                    .gridle-debug html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera:before, html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera.gridle-debug:before {
+                      content: "grid-phoness-min-12" !important; }
+                    .gridle-debug html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera.parent:before, html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera.gridle-debug.parent:before {
+                      content: "grid-parent-phoness-min-12" !important; }
+                  @media screen and (max-width: 480px) {
+                    .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera {
+                      width: 100%; }
+                      .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera.gridle-debug:before {
+                        content: "grid-phoness-min-12" !important; }
+                      .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera.parent:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera.gridle-debug.parent:before {
+                        content: "grid-parent-phoness-min-12" !important; } }
+                  html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera {
+                    margin-top: 10px;
+                    margin-bottom: 5px; }
+                  @media screen and (max-width: 480px) {
+                    .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera {
+                      margin-top: 10px;
+                      margin-bottom: 5px; } }
                   .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn {
                     float: left;
                     direction: ltr;
@@ -8595,11 +8776,29 @@ a {
                           content: "grid-tabless-md-5" !important; }
                         .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn.parent:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn.gridle-debug.parent:before {
                           content: "grid-parent-tabless-md-5" !important; } }
+                    html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn {
+                      width: 50%; }
+                      .gridle-debug html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn:before, html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn.gridle-debug:before {
+                        content: "grid-phoness-min-6" !important; }
+                      .gridle-debug html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn.parent:before, html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn.gridle-debug.parent:before {
+                        content: "grid-parent-phoness-min-6" !important; }
+                    @media screen and (max-width: 480px) {
+                      .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn {
+                        width: 50%; }
+                        .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn.gridle-debug:before {
+                          content: "grid-phoness-min-6" !important; }
+                        .gridle-debug .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn.parent:before, .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn.gridle-debug.parent:before {
+                          content: "grid-parent-phoness-min-6" !important; } }
                     html.tabless-md .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn {
                       margin: 0 10px; }
                     @media screen and (max-width: 1024px) {
                       .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn {
                         margin: 0 10px; } }
+                    html.phoness-min .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn {
+                      margin: 0; }
+                    @media screen and (max-width: 480px) {
+                      .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn {
+                        margin: 0; } }
                     .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn:first-child {
                       padding-right: 0 !important; }
                     .sitio-single .page-sitio .art-single .content-sitio .metrics .data-picker-display .content-dpicker-display .dp-cont .dp-botonera .dp-btn .btn-datapicker {
@@ -9714,6 +9913,8 @@ a {
               .nav-colapse .contendor-menu .menu ul li:first-child.current-menu-item a {
                 background: black;
                 color: #ffffff; }
+  .nav-colapse .mCustomScrollBox .mCSB_scrollTools {
+    right: -7px !important; }
 
 .search-content {
   float: left;
@@ -11814,7 +12015,7 @@ a {
               width: 100%;
               height: 100%;
               position: absolute;
-              z-index: 999; }
+              z-index: 99; }
               .footer .footer-content .footer-container .content-right ul li a i {
                 display: table-cell;
                 vertical-align: middle; }

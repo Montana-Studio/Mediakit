@@ -19,11 +19,16 @@
 			}
 			.encabezado {
 				overflow: visible !important;
+				@include gridle_state(phoness-min){
+					height: 210px;
+				}
 				.content-a {
 					overflow: visible !important;
 					.content-b {
 						.content-float {
 							@include gridle(9);
+							@include gridle(11, phoness);
+							@include gridle(12, phoness-min);
 							height: 200px;
 							position: absolute;
 							left:0;
@@ -34,6 +39,15 @@
 							}
 							@include gridle_state(tabless-md) {
 								left:10px;
+							}
+							@include gridle_state(phoness) {
+								bottom: -23px;
+							}
+							@include gridle_state(phoness-min) {
+								left:0;
+								padding: 0;
+								height: 115px;
+								bottom: -42px;
 							}
 							.logo-sitio {
 								@include gridle(2, desktopess notebook-min tabless-min);
@@ -87,6 +101,12 @@
 								}
 								@include gridle_state(tabless-md) {
 									padding: 6px;
+								}
+								@include gridle_state(phoness) {
+									  margin:{top: 25px;}
+								}
+								@include gridle_state(phoness-min) {
+									margin:{top:0;}
 								}
 								.bajada {
 									@extend .no-paddings;
@@ -151,6 +171,9 @@
 											}
 											@include gridle_state(phoness) {
 												margin:{left: -4px;}
+												font:{size:15px;}
+											}
+											@include gridle_state(phoness-min) {
 												font:{size:11px;}
 											}
 										}

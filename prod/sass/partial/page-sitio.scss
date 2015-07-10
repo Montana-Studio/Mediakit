@@ -3,6 +3,9 @@
 	@include gridle(12, tabless-md tabless-min phoness);
 	@include gridle_float(right);
 	height: auto;
+	@include gridle_state(phoness) {
+		padding: 0;
+	}
 	.page-sitio {
 		@include gridle(12, desktopess notebook-min);
 		@include gridle(12, phoness tabless-min);
@@ -107,6 +110,9 @@
 							@include gridle(12);
 							background: $second_color;
 							padding:{bottom: 25px;}
+							@include gridle_state(desktopess) {
+								padding:{bottom:0;}
+							}
 							@include gridle_state(tabless-md) {
 								padding: 0 10px;
 							}
@@ -158,7 +164,8 @@
 					}
 					.data-picker-display {
 						padding: 0 10px;
-						@include gridle(6, desktopess notebook-min);
+						@include gridle(6, desktopess notebook-min tabless-md);
+						@include gridle(12, phoness);
 						@include gridle_state(desktopess notebook-min) {
 							float: right;
 							margin:{top:0; right:auto;bottom:10px;left:auto;}
@@ -169,7 +176,8 @@
 							padding:{top:0; right:0; bottom:0; left:10px;}
 						}
 						@include gridle_state(phoness phoness-min) {
-							display: none;
+							display: block;
+							padding-left: 0;
 						}
 						.content-dpicker-display {
 							@extend .shadow;
@@ -190,24 +198,41 @@
 								@extend .no-paddings;
 								.dp-calendar {
 									@include gridle(6);
+									@include gridle(12, phoness-min);
 									width: 50% !important;
 									border-radius:0 !important;
+									@include gridle_state(phoness-min) {
+										width: 100% !important;
+									}
 									span {
 										font:{size:14px;}
 									}
 								}
 								.dp-desplegable {
 									z-index: 99;
+									@include gridle_state(phoness-min) {
+										width: 100% !important;
+										overflow: scroll !important;
+										padding:{top:10px; right:0; bottom:0;left: 10px;}
+									}
 								}
 								.dp-botonera {
 									@include gridle(6);
+									@include gridle(12, phoness-min);
+									@include gridle_state(phoness-min) {
+										margin:{top:10px;bottom:5px;}
+									}
 									.dp-btn {
 										@include gridle(6);
 										@include gridle(5, tabless-md);
+										@include gridle(6, phoness-min);
 										height: 26px;
 										display: table;
 										@include gridle_state(tabless-md) {
 											margin: 0 10px;
+										}
+										@include gridle_state(phoness-min) {
+											margin:0;
 										}
 										&:first-child {
 											padding:{right:0 !important;}

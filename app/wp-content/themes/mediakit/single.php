@@ -32,18 +32,27 @@
                                 <h3 class="bg-highlight">Social Media</h3>
                                 <li>
                                     <i class="fa fa-facebook"></i>
-                                    <p class="metrics-1">facebook</p>
-                                    <p id="fb_likes" class="metrics-2"></p>
+                                    <div class="metrics-1">facebook</div>
+                                    <div class="metrics-2">
+                                        <div id="fb_likes" class="metrics-descriptions-1"></div>
+                                        <div class="metrics-descriptions-2">Likes</div>
+                                    </div>
                                 </li>
                                 <li>
                                     <i class="fa fa-twitter"></i>
                                     <p class="metrics-1">Twitter</p>
-                                    <p id="twitter_followers" class="metrics-2"></p>
+                                     <div class="metrics-2">
+                                        <div id="twitter_followers" class="metrics-descriptions-1"></div>
+                                        <div class="metrics-descriptions-2">Followers</div>
+                                    </div>
                                 </li>
                                 <li>
                                     <i class="fa fa-instagram"></i>
                                     <p class="metrics-1">Instagram</p>
-                                    <p id="instagram_followers" class="metrics-2"></p>
+                                    <div class="metrics-2">
+                                        <div id="instagram_followers" class="metrics-descriptions-1"></div>
+                                        <div class="metrics-descriptions-2">Followers</div>
+                                    </div>
                                 </li>
                             </ul>
 
@@ -52,27 +61,37 @@
                                 <li>
                                     <i class="fa fa-eye"></i>
                                     <p class="metrics-1">SESSIONS</p>
-                                    <p id="sessions_count" class="metrics-2"></p>
+                                    <div class="metrics-2">
+                                        <div id="sessions_count" class="metrics-descriptions-1"></div>
+                                    </div>
                                 </li>
                                 <li>
                                     <i class="fa fa-male"></i>
                                     <p class="metrics-1">USUARIOS</p>
-                                    <p id="users_count" class="metrics-2"></p>
+                                    <div class="metrics-2">
+                                        <div id="users_count" class="metrics-descriptions-1"></div>
+                                    </div>
                                 </li>
                                 <li>
                                     <i class="fa fa-heart-o"></i>
                                     <p class="metrics-1">PAGES VIEWS</p>
-                                    <p id="pageviews_count" class="metrics-2"></p>
+                                    <div class="metrics-2">
+                                        <div id="pageviews_count" class="metrics-descriptions-1"></div>
+                                    </div>
                                 </li>
                                 <li>
                                     <i class="fa fa-laptop"></i>
                                     <p class="metrics-1">PAGEVIEWS/SESSIONS</p>
-                                    <p id="pageviews_per_session" class="metrics-2"></p>
+                                    <div class="metrics-2">
+                                        <div id="pageviews_per_session" class="metrics-descriptions-1"></div>
+                                    </div>
                                 </li>
                                 <li>
                                     <i class="fa fa-clock-o"></i>
                                     <p class="metrics-1">AVG. SESSION DURATION</p>
-                                    <p id="avg_sessions_duration" class="metrics-2"></p>
+                                    <div class="metrics-2">
+                                        <div id="avg_sessions_duration" class="metrics-descriptions-1"></div>
+                                    </div>
                                 </li>
                             </ul>
 
@@ -81,27 +100,37 @@
                                 <li>
                                     <i class="fa fa-eye"></i>
                                     <p class="metrics-1">SESSIONS</p>
-                                    <p  id="sessions_count_mobile" class="metrics-2"></p>
+                                    <div class="metrics-2">
+                                        <div id="sessions_count_mobile" class="metrics-descriptions-1"></div>
+                                    </div>
                                 </li>
                                 <li>
                                     <i class="fa fa-male"></i>
                                     <p class="metrics-1">USUARIOS</p>
-                                    <p id="users_count_mobile" class="metrics-2"></p>
+                                    <div class="metrics-2">
+                                        <div id="users_count_mobile" class="metrics-descriptions-1"></div>
+                                    </div>
                                 </li>
                                 <li>
                                     <i class="fa fa-heart-o"></i>
                                     <p class="metrics-1">PAGES VIEWS</p>
-                                    <p id="pageviews_count_mobile" class="metrics-2"></p>
+                                    <div class="metrics-2">
+                                        <div id="pageviews_count_mobile" class="metrics-descriptions-1"></div>
+                                    </div>
                                 </li>
                                 <li>
                                     <i class="fa fa-laptop"></i>
                                     <p class="metrics-1">PAGEVIEWS/SESSIONS</p>
-                                    <p id="pageviews_per_session_mobile" class="metrics-2"></p>
+                                    <div class="metrics-2">
+                                        <div id="pageviews_per_session_mobile" class="metrics-descriptions-1"></div>
+                                    </div>
                                 </li>
                                 <li>
                                     <i class="fa fa-clock-o"></i>
                                     <p class="metrics-1">AVG. SESSION DURATION</p>
-                                    <p id="avg_sessions_duration_mobile" class="metrics-2"></p>
+                                    <div class="metrics-2">
+                                        <div id="avg_sessions_duration_mobile" class="metrics-descriptions-1"></div>
+                                    </div>
                                 </li>
                             </ul>  
 
