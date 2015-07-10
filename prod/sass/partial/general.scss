@@ -1,8 +1,9 @@
 html {
 	font:{family:$primary_font;}
 	overflow: hidden;
+	overflow-y:scroll; 
 	body{
-		overflow: hidden;
+		overflow: hidden;   
 	}
 }
 .text-center{
@@ -144,7 +145,7 @@ a {
 		li {
 			@include gridle(12);
 			display: table;
-			font:{size: 11px;}
+			font:{size:12px;}
 			border:0;
 			border-bottom:1px solid $li-border-color;
 			padding:{top:8px;left:0;bottom:8px; right:0;}
@@ -180,6 +181,16 @@ a {
 				display: table-cell;
 				vertical-align: middle;
 				color:$font-color;
+				font:{size:13px;} 
+				.metrics-descriptions-1 {
+					display: inline-block;
+					width: auto;
+					font:{size:13px !important;weight:600;} 
+				}
+				.metrics-descriptions-2 {
+					@extend .metrics-descriptions-1;
+					font:{size:12px;weight:lighter;}
+				} 
 			}
 		}
 		.img-map {

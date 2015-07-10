@@ -35,13 +35,16 @@
 		@extend .no-paddings;
 		.content-header {
 			@include gridle(12);
-			padding: 10px;
+			@extend .no-paddings;
 			@include gridle_state(phoness tabless-min) {
 				padding:0;
 			}
 			@include gridle_state(notebook-min) {
 				height: 300px;
 				padding: 0;
+			}
+			@include gridle_state(phoness-min) {
+				height: 210px;
 			}
 			.encabezado {
 				@include gridle(12);
@@ -58,6 +61,7 @@
 				}
 				@include gridle_state(phoness-min) {
 					padding:0 7px;
+					height: 210px;
 				}
 				.content-title {
 					@include gridle(12);
