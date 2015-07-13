@@ -19,13 +19,28 @@
 		}
 		h2 {
 			@extend .no-margins;
+			@include gridle_state(desktopess) {
+				font:{size:35px;}
+			}
+			@include gridle_state(notebook-min) {
+				font:{size: 30px;}
+			}
+			@include gridle_state(tabless-md phoness) {
+				font:{size: 22px;}
+			}
 		}
 		p {
 			@extend .highlight;
-			margin:{top:10px;bottom:0;}
+			margin:{top:0;bottom:0;}
 			display: table;
 			width: auto;
 			text:{transform:capitalize}
+			@include gridle_state(desktopess) {
+				font:{size:35px;}
+			}
+			@include gridle_state(notebook-min) {
+				font:{size: 30px;}
+			}
 			@include gridle_state(tabless-md phoness) {
 				font:{size: 22px;}
 			}
@@ -41,6 +56,7 @@
 			border:{bottom:1px solid $li-border-color;}
 			background: $second_color;
 			padding:20px 10px;
+			color:$first_color;
 			.img-search {
 				@include gridle(2, desktopess); 
 				@include gridle(3, notebook-min); 

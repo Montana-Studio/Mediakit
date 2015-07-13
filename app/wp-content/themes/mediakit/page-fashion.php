@@ -31,7 +31,7 @@
 									</div>
 								</div>
 
-								<div class="content-pattern bg-highlight-inv"><div class="highlight-inv">MONTHLY REACH 134.000</div></div>
+								<div class="content-pattern bg-highlight-inv"><div class="highlight-inv">MONTHLY REACH <?php the_field('reach_sitio'); ?></div></div>
 
 								<div id="results_metrics" class="sitio-social">
 									<ul>

@@ -17,10 +17,6 @@
 						<div class="resultado-1">Vertical</div>
 						<div class="content-pattern bg-highlight-inv resultado-2"><div class="highlight-inv"><?php foreach((get_the_category()) as $category) { if ($category->cat_name != 'destacado') {echo $category->name ;}} ?></div></div>
 					</div>
-					<div class="title-resultado">
-						<div class="resultado-1">Reach</div>
-						<div class="content-pattern bg-highlight-inv resultado-2"><div class="highlight-inv">134.000</div></div>
-					</div>
 			</a>
 	</article>
 	<!-- /article -->
