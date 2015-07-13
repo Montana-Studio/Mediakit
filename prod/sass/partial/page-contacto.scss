@@ -42,11 +42,8 @@
 			padding: 0 10px;
 			background: none;
 		}
-//PATTERN CLASS
-		.pattern {
-			@include background-image (linear-gradient(to right, #fff 50%, #000 50%));
-			background:{size: 200.22% auto;position: -0% 0;}
-			@include transition(background-position 0.5s ease-out);
+		.cont-pattern {
+			@extend .pattern;
 			&.title-form {
 				@include gridle(12);
 				padding:10px;
@@ -56,6 +53,18 @@
 				a {
 					font:{size:17px !important;}
 				}
+			}
+			&:hover {
+				background: {position: -99.99% 0;}
+				.trama{
+					svg{
+						pattern{
+							polygon{
+								@include animation(tramaFadea 1.10s ease forwards);
+							}
+						}
+					}
+				} 
 			}
 		} 
 		.content-form {
@@ -171,23 +180,6 @@
 				}
 			}
 		}
-		&:hover {
-
-//PATTERN CLASS
-			.pattern{
-				@include transition(background-position 0.5s ease-out);
-				background-position: 99.99% 0 !important;
-				.trama{
-					svg{
-						pattern {
-							polygon {
-								@include animation(tramaFadea 0.4s ease forwards);
-							}
-						}
-					}
-				}
-			}
-		}	 
 	}
 	.content-info {
 		@include gridle(6, desktopess notebook-min); 

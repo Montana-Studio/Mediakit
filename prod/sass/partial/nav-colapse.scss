@@ -296,15 +296,13 @@
 							&.fa{
 								color:$second_color;
 							}
-							.trama{
-								svg{
-									pattern{
-										polygon{
-											@include animation(tramaFadea 0.4s ease forwards);
-										}
+							/*#pattern-lines-0{
+								pattern{
+									polygon{
+										@include animation(tramaFadea 0.4s ease forwards);
 									}
 								}
-							}
+							}*/
 						}
 						&.current-menu-item {
 							background-image: url("../img/pattern_inv.jpg") !important;
