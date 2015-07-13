@@ -11673,10 +11673,38 @@ a {
       content: "grid-default-12"; }
     .gridle-debug .page-specs .content-specs.parent:before, .page-specs .content-specs.gridle-debug.parent:before {
       content: "grid-parent-default-12"; }
+    html.desktopess .page-specs .content-specs {
+      padding-top: 80px;
+      padding-bottom: 120px; }
+    @media screen and (min-width: 1440px) {
+      .page-specs .content-specs {
+        padding-top: 80px;
+        padding-bottom: 120px; } }
+    html.notebook-min .page-specs .content-specs {
+      margin-top: 10px;
+      padding-top: 30px;
+      padding-bottom: 75px; }
+    @media screen and (max-width: 1440px) {
+      .page-specs .content-specs {
+        margin-top: 10px;
+        padding-top: 30px;
+        padding-bottom: 75px; } }
+    html.tabless-md .page-specs .content-specs {
+      margin-top: 0; }
+    @media screen and (max-width: 1024px) {
+      .page-specs .content-specs {
+        margin-top: 0; } }
     html.phoness .page-specs .content-specs {
+      padding-top: 50px;
+      padding-bottom: 80px; }
+    @media screen and (max-width: 800px) {
+      .page-specs .content-specs {
+        padding-top: 50px;
+        padding-bottom: 80px; } }
+    html.phoness-min .page-specs .content-specs {
       padding-top: 10px;
       padding-bottom: 10px; }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 480px) {
       .page-specs .content-specs {
         padding-top: 10px;
         padding-bottom: 10px; } }
@@ -11768,15 +11796,10 @@ a {
           html.default .page-specs .content-specs .section-specs .acordeon .title-acor {
             float: none; }
           html.tabless-md .page-specs .content-specs .section-specs .acordeon .title-acor {
-            padding: 0 10px; }
+            padding: 15px 10px; }
           @media screen and (max-width: 1024px) {
             .page-specs .content-specs .section-specs .acordeon .title-acor {
-              padding: 0 10px; } }
-          html.phoness .page-specs .content-specs .section-specs .acordeon .title-acor {
-            margin-bottom: 10px; }
-          @media screen and (max-width: 800px) {
-            .page-specs .content-specs .section-specs .acordeon .title-acor {
-              margin-bottom: 10px; } }
+              padding: 15px 10px; } }
           .page-specs .content-specs .section-specs .acordeon .title-acor h2 {
             float: left;
             direction: ltr;
@@ -11813,6 +11836,11 @@ a {
               content: "grid-default-11"; }
             .gridle-debug .page-specs .content-specs .section-specs .acordeon .title-acor h2.parent:before, .page-specs .content-specs .section-specs .acordeon .title-acor h2.gridle-debug.parent:before {
               content: "grid-parent-default-11"; }
+            html.phoness-min .page-specs .content-specs .section-specs .acordeon .title-acor h2 {
+              font-size: 14px; }
+            @media screen and (max-width: 480px) {
+              .page-specs .content-specs .section-specs .acordeon .title-acor h2 {
+                font-size: 14px; } }
           .page-specs .content-specs .section-specs .acordeon .title-acor .icon-title {
             float: left;
             direction: ltr;
@@ -11846,6 +11874,11 @@ a {
               content: "grid-parent-default-1"; }
             html.default .page-specs .content-specs .section-specs .acordeon .title-acor .icon-title {
               float: right; }
+            html.phoness-min .page-specs .content-specs .section-specs .acordeon .title-acor .icon-title {
+              padding-right: 20px; }
+            @media screen and (max-width: 480px) {
+              .page-specs .content-specs .section-specs .acordeon .title-acor .icon-title {
+                padding-right: 20px; } }
         .page-specs .content-specs .section-specs .acordeon .content-acor {
           float: left;
           direction: ltr;

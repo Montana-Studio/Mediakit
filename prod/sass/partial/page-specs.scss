@@ -11,7 +11,20 @@
 		color:$second_color;
 		font:{family:$primary_font;}
 		padding:{top:80px;bottom:120px;}
+		@include gridle_state(desktopess) {
+			padding:{top: 80px;bottom: 120px;}
+		}
+		@include gridle_state(notebook-min) {
+			margin:{top: 10px;}
+			padding:{top: 30px;bottom: 75px;}
+		}
+		@include gridle_state(tabless-md) {
+			margin:{top:0;}
+		}
 		@include gridle_state(phoness) {
+			padding:{top: 50px;bottom: 80px;}
+		}
+		@include gridle_state(phoness-min) {
 			padding:{top:10px;bottom:10px;}
 		}
 		.section-specs {
@@ -35,10 +48,7 @@
 					display: block;
 					cursor: pointer;
 					@include gridle_state(tabless-md) {
-						padding: 0 10px;
-					}
-					@include gridle_state(phoness) {
-						margin:{bottom:10px;}
+						padding: 15px 10px;
 					}
 					h2 {
 						@include gridle(11);
@@ -50,6 +60,9 @@
 						background-color: white;
 						position: absolute;
 						z-index: 999;
+						@include gridle_state(phoness-min) {
+							font:{size: 14px;}
+						}
 					}
 					.icon-title {
 						@include gridle(1);
@@ -57,6 +70,9 @@
 						@include gridle_float(right);
 						display: table-cell;
 						vertical-align: middle; 
+						@include gridle_state(phoness-min) {
+							padding:{right: 20px;}
+						}
 					}
 				}
 				.content-acor {
@@ -81,7 +97,7 @@
 							padding: 0 5px;
 							text-transform: uppercase;
 							@include gridle_state(phoness) {
-								font:{size:16px;}
+								font:{size:16px;}   
 							}
 						}
 						.campo-txt {
