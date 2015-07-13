@@ -110,6 +110,51 @@
 				}
 			}
 		}
+		.log_out{
+			@include gridle(12);
+			@extend .no-margins;
+			@extend .no-paddings;
+			list-style: none;
+			height: auto;
+			li {
+				@include gridle(12);
+				@extend .no-paddings;
+				list-style: none;
+				text-decoration: none;
+				border-bottom:1px solid $first_color_3;
+				background-position: -0% 0;
+				@include background-image (linear-gradient(to right, #000 50%, #fff 50%)); 
+				background-size: 200.22% auto;
+				-webkit-background-size: 200.22% auto;
+				-moz-background-size: 200.22% auto;
+				@include transition(background-position 0.3s ease-out);
+				position:relative;
+				overflow: hidden;
+				a {
+					@include gridle(10); 
+					@include gridle_float(right);
+					font:{family:$primary_font;weight:400;}
+					padding:{top:20px;bottom:20px;left:5px;}
+					@include gridle_state(notebook-min) {
+						padding:{top:15px;bottom:15px;}
+					}
+					@include gridle_state(phoness) {
+						padding: {top:13px;bottom:13px;left: 15px;}
+					}
+					color:$second_color;
+				}
+				&:hover {
+					background-position: -99.99% 0;
+					color:$first_color;
+					@include gridle_state(notebook-min) {
+						background-position: -99.99% 0;
+					}
+					a {
+						color:$first_color;
+					}
+				}
+			}
+		}
 		.menu{
 			//position:absolute;
 			height: auto;
@@ -130,7 +175,6 @@
 			@include gridle_state(phoness-min) {
 				margin:{top:88px;} 
 			}*/
-
 			ul {
 				@include gridle(12);
 				@extend .no-margins;
@@ -285,6 +329,7 @@
 	.mCustomScrollBox {
 		.mCSB_scrollTools {
 			  right: -7px !important;
+			  left:inherit !important;
 		}
 	}
 }	
