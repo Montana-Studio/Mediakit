@@ -7,6 +7,12 @@
 				</svg>
 			</a>
 		</div>
+
+		<ul class="log_out">
+				
+			<li><?php wp_loginout(); ?></li>
+
+		</ul>
 		<!--<p class="menu-review">review</p>-->
 		<div class="search">
 			<?php get_template_part('searchform'); ?>
