@@ -74,7 +74,7 @@
 						bottom:0;
 					}
 					h1 {
-						@include gridle_float(right);
+						@include gridle_float(left);
 						margin:{bottom:0;left:0;}
 						text:{transform: uppercase;}
 					}
