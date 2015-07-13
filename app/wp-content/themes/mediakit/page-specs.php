@@ -19,11 +19,11 @@
 							<?php the_content(); ?>
 
 							<div class="acordeon">
-								<div class="title-acor">
+								<div class="title-acor" id="icon-acor1">
 									<h2><?php the_field('primer_titulo'); ?></h2>
 									<div class="icon-title"><i class="fa fa-plus"></i></div> 
 								</div>
-								<div class="content-acor">
+								<div class="content-acor" id="content-acor1">
 									<div class="acor-half">
 										<h3>INFORMACIÓN:</h3>
 										<div class="campo-txt"><?php the_field('primera_informacion'); ?></div>
@@ -38,11 +38,11 @@
 							</div>
 
 							<div class="acordeon">
-								<div class="title-acor">
+								<div class="title-acor" id="icon-acor2">
 									<h2><?php the_field('segundo_titulo'); ?></h2>
 									<div class="icon-title"><i class="fa fa-plus"></i></div> 
 								</div>
-								<div class="content-acor">
+								<div class="content-acor" id="content-acor2">
 									<div class="acor-half">
 										<h3>INFORMACIÓN:</h3>
 										<div class="campo-txt"><?php the_field('segunda_informacion'); ?></div>
@@ -57,11 +57,11 @@
 							</div>
 
 							<div class="acordeon">
-								<div class="title-acor">
+								<div class="title-acor" id="icon-acor3">
 									<h2><?php the_field('tercer_titulo'); ?></h2>
 									<div class="icon-title"><i class="fa fa-plus"></i></div> 
 								</div>
-								<div class="content-acor">
+								<div class="content-acor" id="content-acor3">
 									<div class="acor-half">
 										<h3>INFORMACIÓN:</h3>
 										<div class="campo-txt"><?php the_field('tercera_informacion'); ?></div>
@@ -76,11 +76,11 @@
 							</div>
 
 							<div class="acordeon">
-								<div class="title-acor">
+								<div class="title-acor" id="icon-acor4">
 									<h2><?php the_field('cuarto_titulo'); ?></h2>
 									<div class="icon-title"><i class="fa fa-plus"></i></div> 
 								</div>
-								<div class="content-acor">
+								<div class="content-acor" id="content-acor4">
 									<div class="acor-half">
 										<h3>INFORMACIÓN:</h3>
 										<div class="campo-txt"><?php the_field('cuarta_informacion'); ?></div>

@@ -41,6 +41,22 @@ jQuery(document).ready(function($){
 	  $('#tres path').attr('class','tres-b');
 	});
 
+
+var variable = $('#trama').toggleClass();
+
+	$('#icon-acor1').click(function(){
+		$('#content-acor1').slideToggle('slow');
+	});
+	$('#icon-acor2').click(function(){
+		$('#content-acor2').slideToggle('slow');
+	});
+	$('#icon-acor3').click(function(){
+		$('#content-acor3').slideToggle('slow');
+	});
+	$('#icon-acor4').click(function(){
+		$('#content-acor4').slideToggle('slow');
+	});
+
 	/* detect touch */
 	if('ontouchstart' in window){
 	    document.documentElement.className = document.documentElement.className + 'touch';
@@ -144,7 +160,7 @@ jQuery(document).ready(function($){
 
 	$(window).load(function(){
 		
-		var classAdd = $('.nav-colapse .contendor-menu .menu ul li:first-child, .content-single a .pattern, .footer-container .content-right .pattern, .search-loop .title-resultado .pattern, .content-float  .btn-left .pattern, .page-contacto .form-contacto-cont .pattern');
+		var classAdd = $('.nav-colapse .contendor-menu .menu ul li:first-child, .content-single a .pattern, .footer-container .content-right .pattern, .search-loop .title-resultado .pattern, .content-float  .btn-left .pattern, .page-contacto .form-contacto-cont .pattern, .page-specs .acordeon .title-acor');
 
 		classAdd.append('<div class="trama"><svg><defs><pattern id="lines-pattern" class="lines-pattern" width="5" height="5" patternUnits="userSpaceOnUse"><polygon fill="none" points="-71.125,-70.875 -64.04,-70.875 -64.04,-72.968 -74.04,-72.968 -74.04,-62.968 -71.125,-62.968 "/><polygon points="9.293,10 10,10 10,9.293 "/><polygon points="9.293,0 0,9.293 0,10 0.707,10 10,0.707 10,0 "/><polygon points="0,0 0,0.707 0.707,0 "/><polygon points="4.285,0 0,4.285 0,5.699 5.699,0 "/><polygon points="4.285,10 5.699,10 10,5.699 10,4.285 "/></pattern></defs><rect class="pattern-apply" fill="url(#lines-pattern)"/></svg></div>');
 
