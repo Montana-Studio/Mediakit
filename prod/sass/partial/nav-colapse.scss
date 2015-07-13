@@ -245,7 +245,7 @@
 						@include gridle_float(none);
 						padding:{top:20px !important; right:20px; bottom:0 !important; left:20px;}
 						margin:{bottom:-4px;}
-						background:{position: -0% 0;}
+						background:{position: -0% 0;size: 200.22% auto;}
 						@include background-image (linear-gradient(to right, #fff 50%, #000 50%));
 						@include transition(background-position 0.3s ease-out);
 						a {  
@@ -287,7 +287,7 @@
 								}
 							}
 						}
-						&:hover {
+						&:hover{
 						 	background: {position: -99.99% 0;}
 							a {
 								color:$first_color;
@@ -296,21 +296,15 @@
 							&.fa{
 								color:$second_color;
 							}
-							/*#pattern-lines-0{
-								pattern{
-									polygon{
-										@include animation(tramaFadea 0.4s ease forwards);
+							.trama{
+								svg{
+									pattern{
+										polygon{
+											@include animation(tramaFadea 0.4s ease forwards);
+										}
 									}
 								}
-							}*/
-						}
-						&.current-menu-item {
-							background-image: url("../img/pattern_inv.jpg") !important;
-							color:$second_color;
-							 a {
-						 		background: $second_color;
-								color:$first_color;
-							 }
+							}
 						}		
 					}
 				}

@@ -41,9 +41,6 @@ jQuery(document).ready(function($){
 	  $('#tres path').attr('class','tres-b');
 	});
 
-
-var variable = $('#trama').toggleClass();
-
 	$('#icon-acor1').click(function(){
 		$('#content-acor1').slideToggle('slow');
 	});
@@ -182,10 +179,8 @@ var variable = $('#trama').toggleClass();
 		    });
 		}
 
-		$('.form-contacto-cont .cont-pattern').mouseover(function(){
-			$('.form-contacto-cont .cont-pattern polygon').attr('class','animationTrama');
-		});
 	});
+
 
     $('.wrapper').mCustomScrollbar({
 	    axis:'y', 

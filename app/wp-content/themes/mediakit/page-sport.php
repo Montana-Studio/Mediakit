@@ -36,7 +36,7 @@
 								<div id="results_metrics" class="sitio-social">
 									<ul>
 										<li>
-											<div class="number" id="fb_likes"></div>
+											<div id="fb_likes" class="number"></div>
 											<div class="bajada-num"><i class="fa fa-facebook"> Likes</i></div>
 										</li>
 										<li>

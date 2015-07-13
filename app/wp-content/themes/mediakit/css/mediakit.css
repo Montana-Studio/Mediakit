@@ -3064,6 +3064,7 @@ a {
             padding-left: 20px;
             margin-bottom: -4px;
             background-position: -0% 0;
+            background-size: 200.22% auto;
             background-image: -webkit-linear-gradient( left , #fff 50%, #000 50%);
             background-image: linear-gradient(to right, #fff 50%, #000 50%);
             -webkit-transition: background-position 0.3s ease-out;
@@ -3113,25 +3114,16 @@ a {
                     padding-bottom: 13px;
                     padding-left: 15px; } }
             .nav-colapse .contendor-menu .menu ul li:first-child:hover {
-              background-position: -99.99% 0;
-              /*#pattern-lines-0{
-              	pattern{
-              		polygon{
-              			@include animation(tramaFadea 0.4s ease forwards);
-              		}
-              	}
-              }*/ }
+              background-position: -99.99% 0; }
               .nav-colapse .contendor-menu .menu ul li:first-child:hover a {
                 color: black;
                 background-color: #ffffff; }
               .nav-colapse .contendor-menu .menu ul li:first-child:hover.fa {
                 color: #ffffff; }
-            .nav-colapse .contendor-menu .menu ul li:first-child.current-menu-item {
-              background-image: url("../img/pattern_inv.jpg") !important;
-              color: #ffffff; }
-              .nav-colapse .contendor-menu .menu ul li:first-child.current-menu-item a {
-                background: #ffffff;
-                color: black; }
+              .nav-colapse .contendor-menu .menu ul li:first-child:hover .trama svg pattern polygon, .nav-colapse .contendor-menu .menu ul li:first-child:hover .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .pattern svg pattern polygon, .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .nav-colapse .contendor-menu .menu ul li:first-child:hover .pattern svg pattern polygon, .nav-colapse .contendor-menu .menu ul li:first-child:hover .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .page-contacto .form-contacto-cont .cont-pattern svg pattern polygon, .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .page-contacto .form-contacto-cont .nav-colapse .contendor-menu .menu ul li:first-child:hover .cont-pattern svg pattern polygon, .nav-colapse .contendor-menu .menu ul li:first-child:hover .page-contacto .form-contacto-cont .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .cont-pattern svg pattern polygon, .page-contacto .form-contacto-cont .page-header-sitio .single-article .content-header .encabezado .content-a .content-b .content-float .content-group .btn-left .nav-colapse .contendor-menu .menu ul li:first-child:hover .cont-pattern svg pattern polygon {
+                -webkit-animation: tramaFadea 0.4s ease forwards;
+                -moz-animation: tramaFadea 0.4s ease forwards;
+                animation: tramaFadea 0.4s ease forwards; }
   .nav-colapse .mCustomScrollBox .mCSB_scrollTools {
     right: -7px !important;
     left: inherit !important; }

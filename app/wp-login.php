@@ -569,15 +569,15 @@ case 'retrievepassword' :
 </form>
 
 <p id="nav">
-<a href="<?php echo esc_url( wp_login_url() ); ?>"><?php _e('Log in') ?></a>
-<?php
-if ( get_option( 'users_can_register' ) ) :
-	$registration_url = sprintf( '<a href="%s">%s</a>', esc_url( wp_registration_url() ), __( 'Register' ) );
+	<a href="<?php echo esc_url( wp_login_url() ); ?>"><?php _e('Log in') ?></a>
+	<?php
+	if ( get_option( 'users_can_register' ) ) :
+		$registration_url = sprintf( '<a href="%s">%s</a>', esc_url( wp_registration_url() ), __( 'Register' ) );
 
-	/** This filter is documented in wp-includes/general-template.php */
-	echo ' | ' . apply_filters( 'register', $registration_url );
-endif;
-?>
+		/** This filter is documented in wp-includes/general-template.php */
+		echo ' | ' . apply_filters( 'register', $registration_url );
+	endif;
+	?>
 </p>
 
 <?php
