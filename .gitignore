@@ -1,3 +1,6 @@
 .DS_Store
 .sass-cache
 app/.htaccess
+/app/.htaccess
+app/wp-content/themes/mediakit/css/mediakit.css
+app/wp-content/themes/mediakit/css/mediakit.css.map

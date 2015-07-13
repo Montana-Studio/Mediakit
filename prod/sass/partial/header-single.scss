@@ -56,7 +56,6 @@
 								/*@include border-width(3px);
 								@include border-color(#000);
 								@include border-style(solid);*/
-
 								border:3px #000 solid;
 
 								height: 100px;
@@ -142,16 +141,11 @@
 											margin:{bottom:0;}
 										}
 										padding:{left:0 !important;right:10px !important;}
-//PATERN CLASS
-
-									.pattern{
+									.content-pattern {
+										@extend .pattern;
 										@include gridle(12);
 										padding:{bottom:10px;}
 										margin:{left:5px;top:10px;}
-										@include background-image (linear-gradient(to right, #fff 50%, #000 50%));
-										background:{position: -0% 0;size: 200.22% auto;}
-										@include transition(background-position 0.5s ease-out);
-										@extend .trama;	
 										@include gridle_state(desktopess notebook-min) {
 											display: inline-block;
 											margin:0 !important; 

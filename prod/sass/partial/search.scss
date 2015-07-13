@@ -49,7 +49,7 @@
 				@extend .no-paddings;
 				display: table;
 				height: 85px;
-				a {
+				.img-content-search {
 					display: table-cell;
 					vertical-align: middle;
 					img {
@@ -92,13 +92,10 @@
 						margin:0;
 					}
 				}
-//PATTERN CLASS
-				.pattern {
+				.content-pattern {
+					@extend .pattern;
 					height: 40px;
 					padding:{top:5px; right:5px; bottom:5px; left:3px;}
-					@include background-image (linear-gradient(to right, #fff 50%, #000 50%));
-					background:{position: -0% 0;size: 200.22% auto;}
-					@include transition(background-position 0.5s ease-out);
 					.highlight-inv {
 						font:{size:18px;}
 						display: table;
