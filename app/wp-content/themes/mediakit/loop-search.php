@@ -2,25 +2,26 @@
 	
 	<!-- article -->
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<div class="search-loop">
+			<a class="search-loop" href="<?php the_permalink()?>">
+				
 					<div class="img-search">
-						<a href="<?php the_permalink()?>">
+						<div class="img-content-search">
 							<img src="<?php the_field('imagen_logo_sitio'); ?>" alt="">
-						</a>
+						</div>
 					</div>
 					<div class="title-resultado">
 						<div class="resultado-1">Nombre</div>
-						<div class="pattern resultado-2"><div class="highlight-inv"><a href="<?php the_permalink()?>"><?php the_title(); ?></a></div></div>
+						<div class="content-pattern bg-highlight-inv resultado-2"><div class="highlight-inv"><?php the_title(); ?></div></div>
 					</div>
 					<div class="title-resultado">
 						<div class="resultado-1">Vertical</div>
-						<div class="pattern resultado-2"><div class="highlight-inv"><?php the_category(' '); ?></div></div>
+						<div class="content-pattern bg-highlight-inv resultado-2"><div class="highlight-inv"><?php foreach((get_the_category()) as $category) { if ($category->cat_name != 'destacado') {echo $category->name ;}} ?></div></div>
 					</div>
 					<div class="title-resultado">
 						<div class="resultado-1">Reach</div>
-						<div class="pattern resultado-2"><div class="highlight-inv">134.000</div></div>
+						<div class="content-pattern bg-highlight-inv resultado-2"><div class="highlight-inv">134.000</div></div>
 					</div>
-			</div>
+			</a>
 	</article>
 	<!-- /article -->
 
