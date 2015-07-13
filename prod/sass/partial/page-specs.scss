@@ -10,47 +10,95 @@
 		background: $first_color;
 		color:$second_color;
 		font:{family:$primary_font;}
-		padding:{top:50px;bottom:10px;}
+		padding:{top:80px;bottom:120px;}
+		@include gridle_state(desktopess) {
+			padding:{top: 80px;bottom: 120px;}
+		}
+		@include gridle_state(notebook-min) {
+			margin:{top: 10px;}
+			padding:{top: 30px;bottom: 75px;}
+		}
+		@include gridle_state(tabless-md) {
+			margin:{top:0;}
+		}
+		@include gridle_state(phoness) {
+			padding:{top: 50px;bottom: 80px;}
+		}
+		@include gridle_state(phoness-min) {
+			padding:{top:10px;bottom:10px;}
+		}
 		.section-specs {
 			@include gridle(10);
+			@include gridle(12, phoness);
 			@include gridle_float(none);
 			margin:0 auto;
 			display: block;
 			.acordeon {
-				padding:10px 0;
+				@extend .no-paddings; 
 				border:1px solid $second_color;
-				margin:{top: 20px;}
+				margin:{top: 30px;}
 				.title-acor {
 					@include gridle(12);
 					@include gridle_float(none);
-					padding:15px 10px;
-					display: table;
+					padding:20px 10px;
+					position: relative;
+					overflow: hidden;
+					background:{color:$second_color;}
+					color:$first_color;
+					display: block;
+					cursor: pointer;
+					@include gridle_state(tabless-md) {
+						padding: 15px 10px;
+					}
 					h2 {
 						@include gridle(11);
+						@extend .no-margins;
 						font:{size:18px;weight:600;}
 						text:{transform: uppercase;}
+						width: auto;
+						display: table;
+						background-color: white;
+						position: absolute;
+						z-index:10;
+						@include gridle_state(phoness-min) {
+							font:{size: 14px;}
+						}
 					}
 					.icon-title {
 						@include gridle(1);
 						@extend .text-center;
-						@include gridle_float(none);
+						@include gridle_float(right);
 						display: table-cell;
 						vertical-align: middle; 
+						@include gridle_state(phoness-min) {
+							padding:{right: 20px;}
+						}
 					}
 				}
 				.content-acor {
 					@include gridle(12);
 					@extend .no-paddings;
 					@include gridle_float(none);
+					display: none;
 					.acor-half {
 						@include gridle(6);
-						display: block;
+						@include gridle(12, phoness);
+						@include gridle_float(none); 
+						display: table-cell;
+						padding:{top:20px;}
+						@include gridle_state(tabless-md) {
+							padding: 0 10px;
+						}
 						h3 {
 							@extend .no-margins;
 							font:{size: 28px;weight:600;}
 							background-color: #333;
 							display: table;
 							padding: 0 5px;
+							text-transform: uppercase;
+							@include gridle_state(phoness) {
+								font:{size:16px;}   
+							}
 						}
 						.campo-txt {
 							background:{color:$second_color;}
@@ -59,6 +107,10 @@
 							margin:{bottom:20px;}
 							font:{size:13px;}
 							line-height: 1.8;
+							@include gridle_state(phoness) {
+								font:{size: 12px;}
+								line-height: 1.6;
+							}
 							mark {
 								background:{color:$first_color;}
 								color:$second_color;
@@ -67,6 +119,8 @@
 						}
 						.img-acor {
 							@include gridle(6);
+							@include gridle(8, tabless-md);
+							@include gridle(12, phoness); 
 							@extend .no-paddings;
 							background:{color: $second_color;}
 							img {
