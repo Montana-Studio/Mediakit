@@ -550,6 +550,7 @@ case 'retrievepassword' :
 	$user_login = isset($_POST['user_login']) ? wp_unslash($_POST['user_login']) : '';
 
 ?>
+<h1>registro numero 02 lost pass</h1>
 
 <form name="lostpasswordform" id="lostpasswordform" action="<?php echo esc_url( network_site_url( 'wp-login.php?action=lostpassword', 'login_post' ) ); ?>" method="post">
 	<p>
@@ -897,15 +898,24 @@ default:
 	}
 ?>
 
+
+<h1>registro numero 01</h1>
+
+
 <form name="loginform" id="loginform" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post">
+	
+
 	<p>
 		<label for="user_login"><?php _e('Username') ?><br />
 		<input type="text" name="log" id="user_login"<?php echo $aria_describedby_error; ?> class="input" value="<?php echo esc_attr( $user_login ); ?>" size="20" /></label>
 	</p>
+	
 	<p>
 		<label for="user_pass"><?php _e('Password') ?><br />
 		<input type="password" name="pwd" id="user_pass"<?php echo $aria_describedby_error; ?> class="input" value="" size="20" /></label>
 	</p>
+	
+
 	<?php
 	/**
 	 * Fires following the 'Password' field in the login form.
@@ -914,19 +924,27 @@ default:
 	 */
 	do_action( 'login_form' );
 	?>
+
 	<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever" <?php checked( $rememberme ); ?> /> <?php esc_attr_e('Remember Me'); ?></label></p>
+	
 	<p class="submit">
+
 		<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_attr_e('Log In'); ?>" />
-<?php	if ( $interim_login ) { ?>
-		<input type="hidden" name="interim-login" value="1" />
-<?php	} else { ?>
-		<input type="hidden" name="redirect_to" value="<?php echo esc_attr($redirect_to); ?>" />
-<?php 	} ?>
-<?php   if ( $customize_login ) : ?>
-		<input type="hidden" name="customize-login" value="1" />
-<?php   endif; ?>
-		<input type="hidden" name="testcookie" value="1" />
+
+
+		<?php	if ( $interim_login ) { ?>
+				<input type="hidden" name="interim-login" value="1" />
+		<?php	} else { ?>
+				<input type="hidden" name="redirect_to" value="<?php echo esc_attr($redirect_to); ?>" />
+		<?php 	} ?>
+		<?php   if ( $customize_login ) : ?>
+				<input type="hidden" name="customize-login" value="1" />
+		<?php   endif; ?>
+				<input type="hidden" name="testcookie" value="1" />
+
 	</p>
+
+
 </form>
 
 <?php if ( ! $interim_login ) { ?>
