@@ -1,40 +1,116 @@
-<?php /*Template name: Pagina Specs*/ ?>
+<?php /*Template name: Pagina Specs*/ ?>   
 
 <?php get_header(); ?>
 
 <?php get_template_part('menu'); ?>
 
-<main role="main">
 	<!-- section -->
-	<section class="page-categoria">
+		<div class="page-specs">
 			
-			<!-- LOOP -->
-			
-				<?php $query = new WP_Query('posts_per_page=10&category_name=music'); ?>
+			<div class="content-specs">
 
-				<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+				<section class="section-specs">
 
-				<article class="content-specs" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+						
+						<!-- article -->
+						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					
+							<?php the_content(); ?>
 
-				</article>
+							<div class="acordeon">
+								<div class="title-acor">
+									<h2><?php the_field('primer_titulo'); ?></h2>
+									<div class="icon-title"><i class="fa fa-plus"></i></div> 
+								</div>
+								<div class="content-acor">
+									<div class="acor-half">
+										<h3>INFORMACIÓN:</h3>
+										<div class="campo-txt"><?php the_field('primera_informacion'); ?></div>
+										<h3>ESPECIFICACIONES:</h3>
+										<div class="campo-txt"><?php the_field('primera_especificacion'); ?></div>
+									</div>
+									<div class="acor-half">
+										<h3>ADS:</h3>
+										<div class="img-acor"><img src="<?php the_field('primera_imagen'); ?>" alt=""></div>
+									</div>
+								</div>
+							</div>
 
-				<?php endwhile;
-				wp_reset_postdata();
-				else: ?>
-				<article class="nothing-message">
-					<h2>Lo siento, nada para mostrar.</h2>
-					<p>Pronto tendremos nuevo contenido disponible.</p>
-					<div class="logotipe-message">
-						<svg viewBox="0 0 792 656.856">
-							<use xlink:href="#mediatrends-logo"/> 
-						</svg>
-					</div>
-				<article>
+							<div class="acordeon">
+								<div class="title-acor">
+									<h2><?php the_field('segundo_titulo'); ?></h2>
+									<div class="icon-title"><i class="fa fa-plus"></i></div> 
+								</div>
+								<div class="content-acor">
+									<div class="acor-half">
+										<h3>INFORMACIÓN:</h3>
+										<div class="campo-txt"><?php the_field('segunda_informacion'); ?></div>
+										<h3>ESPECIFICACIONES:</h3>
+										<div class="campo-txt"><?php the_field('segunda_especificacion'); ?></div>
+									</div>
+									<div class="acor-half">
+										<h3>ADS:</h3>
+										<div class="img-acor"><img src="<?php the_field('segunda_imagen'); ?>" alt=""></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="acordeon">
+								<div class="title-acor">
+									<h2><?php the_field('tercer_titulo'); ?></h2>
+									<div class="icon-title"><i class="fa fa-plus"></i></div> 
+								</div>
+								<div class="content-acor">
+									<div class="acor-half">
+										<h3>INFORMACIÓN:</h3>
+										<div class="campo-txt"><?php the_field('tercera_informacion'); ?></div>
+										<h3>ESPECIFICACIONES:</h3>
+										<div class="campo-txt"><?php the_field('tercera_descripcion'); ?></div>
+									</div>
+									<div class="acor-half">
+										<h3>ADS:</h3>
+										<div class="img-acor"><img src="<?php the_field('tercera_imagen'); ?>" alt=""></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="acordeon">
+								<div class="title-acor">
+									<h2><?php the_field('cuarto_titulo'); ?></h2>
+									<div class="icon-title"><i class="fa fa-plus"></i></div> 
+								</div>
+								<div class="content-acor">
+									<div class="acor-half">
+										<h3>INFORMACIÓN:</h3>
+										<div class="campo-txt"><?php the_field('cuarta_informacion'); ?></div>
+									</div>
+									<div class="acor-half">
+										<h3>SERVERS:</h3>
+										<div class="img-acor"><img src="<?php the_field('cuarta_imagen'); ?>" alt=""></div>
+									</div>
+								</div>
+							</div>
+
+						</article>
+						<!-- /article -->
+
+					<?php endwhile; ?>
+
+					<?php else: ?>
+
+					<!-- article -->
+					<article>
+
+						<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+
+					</article>
+					<!-- /article -->
+
 				<?php endif; ?>
 
-	</section>
-	<!-- /section -->
-</main>
+				</section>
 
+			</div>
+
+		</div>
