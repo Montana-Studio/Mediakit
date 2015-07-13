@@ -11813,7 +11813,7 @@ a {
             display: table;
             background-color: white;
             position: absolute;
-            z-index: 999; }
+            z-index: 10; }
             html.default .page-specs .content-specs .section-specs .acordeon .title-acor h2 {
               float: left;
               direction: ltr;

@@ -59,7 +59,7 @@
 						display: table;
 						background-color: white;
 						position: absolute;
-						z-index: 999;
+						z-index:10;
 						@include gridle_state(phoness-min) {
 							font:{size: 14px;}
 						}
