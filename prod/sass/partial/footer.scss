@@ -1,11 +1,11 @@
 .footer {
 	height: 80px;
 	@include gridle(10, desktopess notebook-min);
-	@include gridle_state(desktopess notebook-min) {
+	/*@include gridle_state() {
 		float:right;
-	}
-	@include gridle(12, tabless-md);
-	@include gridle(12, phoness);
+	}*/
+	@include gridle_float(right, desktopess notebook-min);
+	@include gridle(12, tabless-md phoness);
 	margin:{top:-80px;}
 	@include gridle_state(phoness) {
 		padding:0 !important;
@@ -57,7 +57,7 @@
 					margin:{top:-25;}
 				}
 				.img-footer {
-					display: none;
+					@include gridle_hide();
 					@include gridle(4, phoness);
 					@include gridle(4, desktopess notebook-min);
 					@extend .no-paddings;

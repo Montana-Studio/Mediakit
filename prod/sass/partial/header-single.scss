@@ -53,9 +53,12 @@
 								@include gridle(2, desktopess notebook-min tabless-min);
 								@include gridle(3, phoness);
 								@include gridle(4, phoness-min);
-								@include border-width(3px);
+								/*@include border-width(3px);
 								@include border-color(#000);
-								@include border-style(solid);
+								@include border-style(solid);*/
+
+								border:3px #000 solid;
+
 								height: 100px;
 								background: $second_color;
 								display: table;
@@ -84,8 +87,7 @@
 									display: table-cell;
 									vertical-align: middle;
 									img {
-										width: 100%;
-										height: auto;
+										@extend .resp_img;
 									}
 								}
 							}
@@ -140,13 +142,14 @@
 											margin:{bottom:0;}
 										}
 										padding:{left:0 !important;right:10px !important;}
-									.pattern {
+//PATERN CLASS
+
+									.pattern{
 										@include gridle(12);
 										padding:{bottom:10px;}
 										margin:{left:5px;top:10px;}
-										background-position: -0% 0;
 										@include background-image (linear-gradient(to right, #fff 50%, #000 50%));
-										background-size: 200.22% auto;
+										background:{position: -0% 0;size: 200.22% auto;}
 										@include transition(background-position 0.5s ease-out);
 										@extend .trama;	
 										@include gridle_state(desktopess notebook-min) {
@@ -181,7 +184,7 @@
 									&:hover {
 										.pattern{
 											@include transition(background-position 0.5s ease-out);
-											background-position: 99.99% 0 !important;
+											background:{position: 99.99% 0 !important;}
 											.trama{
 												svg{
 													pattern {
@@ -222,7 +225,7 @@
 							}
 							.content-title {
 								h2 {
-									display: none;
+									@include gridle_hide();
 								}
 							}
 						}

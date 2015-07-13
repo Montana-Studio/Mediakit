@@ -1,7 +1,5 @@
 .background {
-   	background-repeat:no-repeat;
-    /* custom background-position */
-    background-position:50% 50%;
+   	background:{repeat:no-repeat;position:50% 50%;}
     /* ie8- graceful degradation */
     background-position:50% 50%\9 !important;
 }

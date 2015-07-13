@@ -4,9 +4,7 @@
 	@include gridle_state(desktopess) {
 		padding:{top:0; right:10px; bottom:0; left:10px;}
 	}
-	@include gridle_state(desktopess notebook-min) {
-		float:right;
-	} 
+	@include gridle_float(right, desktopess notebook-min);
 	@include gridle_state(notebook-min) {
 		margin:{bottom:10px;}
 	} 
@@ -44,12 +42,11 @@
 			padding: 0 10px;
 			background: none;
 		}
+//PATTERN CLASS
 		.pattern {
-			background-position: -0% 0;
 			@include background-image (linear-gradient(to right, #fff 50%, #000 50%));
-			background-size: 200.22% auto;
+			background:{size: 200.22% auto;position: -0% 0;}
 			@include transition(background-position 0.5s ease-out);
-			@extend .trama;	
 			&.title-form {
 				@include gridle(12);
 				padding:10px;
@@ -96,7 +93,7 @@
 							input {
 								@include gridle(12);
 								border:0;
-								border-bottom:1px solid $li-border-color;
+								border:{bottom:1px solid $li-border-color;}
 								padding:{top:5px; right:5px; bottom:10px; left:0;}
 								outline: none;
 								@include placeholder {
@@ -108,7 +105,7 @@
 							textarea {
 								@include gridle(12);
 								border:0;
-								border-bottom:1px solid $li-border-color;
+								border:{bottom:1px solid $li-border-color;}
 								padding:{top:5px; right:5px; bottom:5px; left:0;}
 								height: 150px;
 								outline: none;
@@ -169,12 +166,14 @@
 						color:$first_color_3;
 						padding: 10px 10px;
 						display: block;
-						float: right;
+						@include gridle_float(right);
 					}
 				}
 			}
 		}
 		&:hover {
+
+//PATTERN CLASS
 			.pattern{
 				@include transition(background-position 0.5s ease-out);
 				background-position: 99.99% 0 !important;

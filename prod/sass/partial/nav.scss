@@ -25,9 +25,7 @@
 	position: fixed;
   	z-index: 999;
 	@extend .no-paddings;
-	@include gridle_state(notebook-min desktopess) {
-		display: none;
-	}
+	@include gridle_hide(notebook-min desktopess);
 	@include gridle_state(tabless-min) {
 		display: block;
 		height: 55px;

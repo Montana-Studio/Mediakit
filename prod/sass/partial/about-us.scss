@@ -2,7 +2,7 @@
 	@include gridle(12);
 	@extend .no-paddings;
 	.page-header {
-		display: none;
+		@include gridle_hide();
 	}
 	.page-aboutus{
 		@include gridle(10);
@@ -132,10 +132,10 @@
 			visibility: hidden;
 		}
 		#fsocial-t {
-			visibility: hidden;
+			@extend #fsocial-f;
 		}
 		#fsocial-i {
-			visibility: hidden;
+			@extend #fsocial-f;
 		}
 	}	 
 }       

@@ -37,12 +37,13 @@
 					margin:5px 0;
 					position: relative;
 					.header-destacado {
-						display: none; 
+						@include gridle_hide(); 
 					}
+
+// PATTERN CLASS
 					.pattern {
-						background-position: -0% 0;
 						@include background-image (linear-gradient(to right, #fff 50%, #000 50%));
-						background-size: 200.22% auto;
+						background:{size: 200.22% auto;position: -0% 0;}
 						@include transition(background-position 0.5s ease-out);
 						.highlight-inv {
 							font:{size:18px;}
@@ -54,14 +55,12 @@
 								font:{size:14px;}
 							}
 						}
-						@extend .trama;
 					}
 					.img-single {
 						@include gridle(12);
 						@extend .no-paddings;
 						img {
-							width: 100%;
-							height: auto;
+							@extend .resp_img;
 						}
 						.title {
 							margin:{top:-31px;}
@@ -70,9 +69,8 @@
 								font:{size:20px;}
 								padding:{top:3px;left:10px;right:5px;}
 								text:{transform:uppercase;}
-								background-position: -0% 0;
 								@include background-image (linear-gradient(to right, #000 50%, #fff 50%));
-								background-size: 200.22% auto;
+								background:{size: 200.22% auto;position: -0% 0;}
 								@include transition(background-position 0.5s ease-out);
 								font:{style:italic;weight:400;}
 								width: auto;
@@ -110,7 +108,7 @@
 					.title {
 						h2 {
 							@include transition(background-position 0.5s ease-out);
-							background-position: 99.99% 0 !important;
+							background:{position: 99.99% 0 !important;}
 							color:$first_color !important;
 							
 						}
@@ -119,7 +117,7 @@
 						a{
 							.pattern{
 								@include transition(background-position 0.5s ease-out);
-								background-position: 99.99% 0 !important;
+								background:{position: 99.99% 0 !important;}
 								.trama{
 									svg{
 										pattern {

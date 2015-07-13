@@ -36,9 +36,7 @@
 					padding:0; 
 				}
 				.btn {
-					@include gridle_state(desktopess notebook-min) {
-						display:none;
-					}
+					@include gridle_hide(desktopess notebook-min);
 					@include gridle_state(notebook-min) {
 						margin:{top: 5px;}
 					}
@@ -64,8 +62,8 @@
 						padding:0 10px;
 						@include gridle(6, desktopess notebook-min);
 						@include gridle(12, phoness phoness-min);
-						@include gridle_state(desktopess notebook-min) {
-							float: left;
+						@include gridle_float(left,desktopess notebook-min);
+						@include gridle_state(desktopess notebook-min){
 							padding:{top:0;right: 10px; bottom:10px; left:10px;}
 						}
 						@include gridle_state(tabless-md) {
@@ -82,7 +80,7 @@
 							&:last-child {
 								li {
 									&:last-child {
-										  border-bottom: 0;
+										  border:{bottom: 0;}
 									}
 								}
 							}
@@ -92,8 +90,8 @@
 						padding: 0 10px;
 						@include gridle(6, desktopess notebook-min);
 						@include gridle(12, phoness phoness-min);
-						@include gridle_state(desktopess notebook-min) {
-							float: right;
+						@include gridle_float(right,desktopess notebook-min);
+						@include gridle_state(desktopess notebook-min){
 							padding:{right:0;}
 						}
 						@include gridle_state(notebook-min) {
@@ -130,8 +128,8 @@
 					.btn-display {
 						padding: 0 10px;
 						@include gridle(6, desktopess notebook-min);
+						@include gridle_float(right, desktopess notebook-min);
 						@include gridle_state(desktopess notebook-min) {
-							float: right;
 							margin:{top:0; right:auto;bottom:10px;left:auto;}
 							display: block;
 							padding:{right:0;}
@@ -139,9 +137,7 @@
 						@include gridle_state(notebook-min) {
 							padding:{top:0; right:0; bottom:0; left:10px;}
 						}
-						@include gridle_state(phoness phoness-min) {
-							display: none;
-						}
+						@include gridle_hide(phoness phoness-min);
 						.content-display {
 							@extend .shadow;
 							@include gridle(12);
@@ -166,8 +162,8 @@
 						padding: 0 10px;
 						@include gridle(6, desktopess notebook-min tabless-md);
 						@include gridle(12, phoness);
+						@include gridle_float(right,desktopess notebook-min);
 						@include gridle_state(desktopess notebook-min) {
-							float: right;
 							margin:{top:0; right:auto;bottom:10px;left:auto;}
 							display: block;
 							padding:{right:0;}
@@ -177,7 +173,7 @@
 						}
 						@include gridle_state(phoness phoness-min) {
 							display: block;
-							padding-left: 0;
+							padding:{left: 0;}
 						}
 						.content-dpicker-display {
 							@extend .shadow;
@@ -200,7 +196,7 @@
 									@include gridle(6);
 									@include gridle(12, phoness-min);
 									width: 50% !important;
-									border-radius:0 !important;
+									border:{radius:0 !important;}
 									@include gridle_state(phoness-min) {
 										width: 100% !important;
 									}
