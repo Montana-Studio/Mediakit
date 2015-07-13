@@ -1,0 +1,86 @@
+.login {
+	background: $first_color;
+	color:$second_color;
+	h1 {
+		@include gridle(12);
+		@include gridle_float(none);
+		a {
+			@include gridle(5);
+			@include gridle_float(none);
+			background-size: cover;
+			height: 300px;
+			margin:{top:50px;}
+		}
+	}
+	.message {
+		@extend .pattern;
+		@include gridle(4);
+		text-align: center;
+  		padding: 15px 0;
+  		margin: 0 auto;
+		display: block;
+		float: none;
+		border: 0;
+		color:$first_color;
+		font:{size: 15px;weight:700;}
+		letter-spacing: 1.2px;
+	}
+	#login {
+		@include gridle(10); 
+		@include gridle_float(none);
+		@extend .no-paddings;
+		display: inherit;
+		form {
+			@include gridle(4);
+			@include gridle_float(none);
+			background:$second_color;
+			border: 1px solid;
+			margin: 0 auto;
+			display: block;
+			margin:{top: 20px;}
+			p {
+				&.submit {
+					#wp-submit {
+						height: 45px;
+						line-height: 28px;
+						padding: 0 20px 0px;
+						width: 100%;
+						border: 0;
+						border-radius: 0;
+						color:$second_color;
+						background: $first_color;
+						text-transform: uppercase;
+						letter-spacing: 1.2px;
+					}
+				}
+			}
+			#loginform {
+				color:$first_color;
+				p {
+					label {
+						color:$second_color; 
+					}
+				}
+			}
+		}
+	}
+	label {
+		font:{size: 13px;}
+	}
+	form {
+		.input {
+			background: none;
+			color:$first_color;
+			font:{size: 15px;}
+			padding: 10px 7px;
+			outline: none; 
+			border:1px solid $li-border-color;
+			@include placeholder {
+				color: red;
+			}
+		}
+	}
+	#nav {
+		@extend .text-center;
+	}
+}
