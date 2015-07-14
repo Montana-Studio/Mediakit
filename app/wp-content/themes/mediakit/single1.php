@@ -40,7 +40,7 @@
                     En este caso fueron creados con con <div>, se puede modifcar a <p>, <h3>, o como estime conveniente pero no se debe alterar su id.
                     -->
                     <div class="content-sitio">
-                        <div class="btn"><a href="#"><i class="fa fa-external-link"></i> Cotizar</a></div>
+                        <a class="btn"><a href="page-contacto.php"><i class="fa fa-external-link"></i> Cotizar</a></div>
 
                         <div class="metrics">
                             <div id="results_metrics" class="metrica-number">
@@ -124,7 +124,7 @@
                              <div class="btn-display">
                                 <div class="content-display">
                                     <h3 class="bg-highlight">CONTACTANOS</h3>
-                                     <div class="btn display-des"><a href="#"><i class="fa fa-external-link"></i> Cotizar</a></div>
+                                     <div class="btn display-des"><a href="page-contacto.php"><i class="fa fa-external-link"></i> Cotizar</a></div>
                                 </div>
                             </div>
 

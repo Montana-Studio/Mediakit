@@ -77,6 +77,15 @@
 						@include gridle_float(left);
 						margin:{bottom:0;left:0;}
 						text:{transform: uppercase;}
+						@include gridle_state(desktopess) {
+							font:{size:35px;}
+						}
+						@include gridle_state(notebook-min) {
+							font:{size: 30px;}
+						}
+						@include gridle_state(tabless-md phoness) {
+							font:{size: 22px;}
+						}
 					}
 					.bajada {
 						@include gridle(9, desktopess notebook-min);

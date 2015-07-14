@@ -24,7 +24,7 @@
                 -->
                 <div class="content-sitio">
 
-                    <div class="btn"><a href="#"><i class="fa fa-external-link"></i> Cotizar</a></div>
+                    <div class="btn"><a href="../contact"><i class="fa fa-external-link"></i> Cotizar</a></div>
 
                     <div class="metrics">
                         <div id="results_metrics" class="metrica-number">
@@ -159,7 +159,7 @@
                         <div class="btn-display">
                             <div class="content-display">
                                 <h3 class="bg-highlight">CONTACTANOS</h3>
-                                 <div class="btn display-des"><a href="#"><i class="fa fa-external-link"></i> Cotizar</a></div>
+                                 <div class="btn display-des"><a href="../contact"><i class="fa fa-external-link"></i> Cotizar</a></div>
                             </div>
                         </div>
 

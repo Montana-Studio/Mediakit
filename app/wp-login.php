@@ -898,10 +898,6 @@ default:
 	}
 ?>
 
-
-<h1>registro numero 01</h1>
-
-
 <form name="loginform" id="loginform" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post">
 	
 
