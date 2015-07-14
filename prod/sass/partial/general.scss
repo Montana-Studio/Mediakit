@@ -424,6 +424,9 @@ a {
 		}
 	}
 }
+.trama2{
+	@extend .trama;
+}
 @keyframes tramaFadea{
 	0%{
 		fill:#000;

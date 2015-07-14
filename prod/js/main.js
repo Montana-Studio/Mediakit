@@ -160,10 +160,15 @@ jQuery(document).ready(function($){
 		$('.wrapper').mCustomScrollbar(); 
         $('.nav-colapse').mCustomScrollbar(); 
 
-       	var classAdd = $('.nav-colapse .contendor-menu .menu ul li:first-child, .content-single a .content-pattern, .footer-container .content-right .pattern, .search-loop .title-resultado .content-pattern, .content-float  .btn-left .content-pattern, .page-contacto .form-contacto-cont .cont-pattern, .page-specs .acordeon .title-acor');
+       	var classAdd = $('.nav-colapse .contendor-menu .menu ul li:first-child');
+       	
+       	var classAdd2 = $('.footer-container .content-right .pattern, .search-loop .title-resultado .content-pattern, .page-specs .acordeon .title-acor');
 
 		classAdd.append('<div class="trama"><svg><defs><pattern id="lines-pattern" class="lines-pattern" width="5" height="5" patternUnits="userSpaceOnUse"><polygon class="polyGon" fill="none" points="-71.125,-70.875 -64.04,-70.875 -64.04,-72.968 -74.04,-72.968 -74.04,-62.968 -71.125,-62.968 "/><polygon class="polyGon" points="9.293,10 10,10 10,9.293 "/><polygon class="polyGon" points="9.293,0 0,9.293 0,10 0.707,10 10,0.707 10,0 "/><polygon class="polyGon" points="0,0 0,0.707 0.707,0 "/><polygon class="polyGon" points="4.285,0 0,4.285 0,5.699 5.699,0 "/><polygon class="polyGon" points="4.285,10 5.699,10 10,5.699 10,4.285 "/></pattern></defs><rect class="pattern-apply" fill="url(#lines-pattern)"/></svg></div>');
-		var childDivs = $('.trama svg');
+		
+		classAdd2.append('<div class="trama2"><svg><defs><pattern id="lines-pattern" class="lines-pattern" width="5" height="5" patternUnits="userSpaceOnUse"><polygon class="polyGon" fill="none" points="-71.125,-70.875 -64.04,-70.875 -64.04,-72.968 -74.04,-72.968 -74.04,-62.968 -71.125,-62.968 "/><polygon class="polyGon" points="9.293,10 10,10 10,9.293 "/><polygon class="polyGon" points="9.293,0 0,9.293 0,10 0.707,10 10,0.707 10,0 "/><polygon class="polyGon" points="0,0 0,0.707 0.707,0 "/><polygon class="polyGon" points="4.285,0 0,4.285 0,5.699 5.699,0 "/><polygon class="polyGon" points="4.285,10 5.699,10 10,5.699 10,4.285 "/></pattern></defs><rect class="pattern-apply" fill="url(#lines-pattern)"/></svg></div>');
+		
+		var childDivs = $('.trama svg, .trama2 svg');
 
 		for(var i=0; i<childDivs.length; i++){
 
@@ -177,12 +182,6 @@ jQuery(document).ready(function($){
 				'top':0
 		    });
 		}
-
-		$('.content-single').on('mouseover', function(e){
-			$(this).find('.trama svg').css('fill','#fff');
-		}).on('mouseleave', function(){
-		   	$(this).find('.trama svg').css('fill','#000');
-		});	
 
 		$('.menu #menu-item-23').on('mouseover', function(e){
 			$(this).find('.trama svg').css('fill','#fff');
