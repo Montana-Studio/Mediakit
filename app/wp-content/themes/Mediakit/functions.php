@@ -447,10 +447,12 @@ function my_login_stylesheet() {
 }
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 
-function my_login_logo() { ?>
+
+function my_login_logo(){ ?>
+    
     <style type="text/css">
         .login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/mediatrends-login-logo.svg);
+            background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/img/mediatrends-login-logo.svg");
         }
     </style>
 <?php }

@@ -167,7 +167,7 @@
                             <div class="map-content">
                                 <ul>
                                     <h3 class="bg-highlight">MAP GLOBAL REACH</h3>
-                                    <div class="img-map"><img src="<?php the_field('imagen_mapa'); ?>"  alt=""></div>
+                                    <div class="img-map"><img src="<?php //the_field('imagen_mapa'); ?>"  alt=""></div>
                                 </ul>     
                             </div>
                         </div>
