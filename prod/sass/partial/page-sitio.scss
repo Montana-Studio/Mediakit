@@ -119,9 +119,13 @@
 							}  
 							.img-map {
 								@include gridle(8);
+								@include gridle(10, notebook-min);
 								@include gridle_float(none);
 								margin:{top:30px;right:auto; bottom:20px;left:auto;}
 								display: block;
+								@include gridle_state(notebook-min) {
+									margin:{top:45px;bottom:45px;}
+								}
 							}
 						}
 					}

@@ -14,14 +14,18 @@
 		height: 370px;
 		padding:10px !important;
 		overflow: hidden;
+		margin:{bottom: 10px;}
 		@include gridle(10, desktopess notebook-min);
 		@include gridle(12, phoness phoness-min tabless-min);
 		@include gridle_float(right, desktopess notebook-min);
+		@include gridle_state(desktopess) {
+			margin:{bottom:0;}
+		}
 		@include gridle_state(notebook-min){
 			height: 300px;
 		}
 		@include gridle_state(tabless-md) {
-			margin:{top: 55px;bottom:10px;}
+			margin:{top: 55px;}
 			padding:0 !important;
 		}
 		@include gridle_state(phoness-min) {
@@ -30,6 +34,11 @@
 			padding:0 !important;
 		}
 		@extend .no-paddings;
+		&.header-contacto {
+			@include gridle_state(notebook-min, tabless-md) {
+				margin:{bottom: 0;}
+			}
+		}
 		.content-header {
 			@include gridle(12);
 			@extend .no-paddings;
@@ -57,6 +66,9 @@
 				@include gridle_state(phoness-min) {
 					padding:0 7px;
 					height: 210px;
+				}
+				&.encabezado-contacto {
+					@extend .no-paddings;
 				}
 				.content-title {
 					@include gridle(12);

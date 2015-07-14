@@ -6,10 +6,11 @@
 	}
 	@include gridle_float(right, desktopess notebook-min);
 	@include gridle_state(notebook-min) {
-		margin:{bottom:10px;}
+		margin:{top: 10px;bottom:10px;}
 	} 
 	@include gridle_state(tabless-md phoness) {
 		padding:0;
+		margin:{top: 0;}
 	} 
 	.encabezado {
 		margin:{bottom:20px;}
@@ -39,8 +40,11 @@
 		@include gridle(12, phoness phoness-min );
 		@extend .no-paddings;
 		@include gridle_state(notebook-min) {
-			padding: 0 10px;
 			background: none;
+			padding:{right: 10px !important;}
+		}
+		@include gridle_state(phoness) {
+			padding:{right: 0 !important;}
 		}
 		.cont-pattern {
 			@extend .pattern;
@@ -48,7 +52,7 @@
 				@include gridle(12);
 				padding:10px;
 				background: $first_color;
-				color:$second_color;
+				color:$second_color; 
 				@include gridle_state(tabless-md) {
 					padding: 10px !important;
 				}

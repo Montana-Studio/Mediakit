@@ -184,7 +184,7 @@ a {
 				}
 				.metrics-descriptions-2 {
 					@extend .metrics-descriptions-1;
-					font:{size:12px;weight:lighter;}
+					font:{size:12px !important;weight:lighter;}
 				} 
 			}
 		}
