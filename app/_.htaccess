@@ -6,6 +6,7 @@ RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /Montana-Studio/sitios/_MediaKit/htdocs/app/index.php [L]
+RewriteRule ^post/([0-9]+)?/?([0-9]+)?/?$ /index.php?p=$1&page=$2 [QSA]
 </IfModule>
 
 # END WordPress

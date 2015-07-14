@@ -10,7 +10,7 @@
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<div class="form-contacto-cont">
-					<div class="cont-pattern bg-highlight-inv title-form"><a class="highlight-inv"><?php the_title(); ?></a></div>
+					<div class="cont-pattern title-form"><a class="highlight-inv"><?php the_title(); ?></a></div>
 					<div class="content-form"><?php the_content(); ?></div>
 				</div>
 				<div class="content-info">
