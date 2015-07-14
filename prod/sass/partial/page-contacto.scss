@@ -47,6 +47,8 @@
 			&.title-form {
 				@include gridle(12);
 				padding:10px;
+				background: $first_color;
+				color:$second_color;
 				@include gridle_state(tabless-md) {
 					padding: 10px !important;
 				}
