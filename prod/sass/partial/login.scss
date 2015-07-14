@@ -1,44 +1,123 @@
 .login {
+	@include gridle(12);
+	@include gridle_float(none);
+	@extend .no-paddings;
 	background: $first_color;
 	color:$second_color;
+	height: 100%;
+	position: absolute;
+	overflow: scroll;
 	h1 {
 		@include gridle(12);
+		@include gridle(11, notebook-min);
 		@include gridle_float(none);
+		margin: 0 auto;
+		display: block;
 		a {
 			@include gridle(5);
+			@include gridle(11, phoness-min);
 			@include gridle_float(none);
 			background-size: cover;
 			height: 300px;
 			margin:{top:50px;}
+			@include gridle_state(notebook-min) {
+				height: 250px;
+				margin:{top: 25px;}
+			}
+			@include gridle_state(tabless-md) {
+				height: 245px;
+			}
+			@include gridle_state(phoness-min) {
+				height: 120px;
+				margin:{top:10px;bottom:10px;}
+			}
 		}
 	}
 	.message {
-		@extend .pattern;
 		@include gridle(4);
+		@include gridle(6, tabless-md);
+		@include gridle(9, phoness);
+		@include gridle(11, phoness-min);
 		text-align: center;
+		letter-spacing: 0;
   		padding: 15px 0;
   		margin: 0 auto;
 		display: block;
 		float: none;
 		border: 0;
 		color:$first_color;
-		font:{size: 15px;weight:700;}
-		letter-spacing: 1.2px;
+		background-repeat: $second_color;
+		font:{size: 13px;weight:700;}
+		letter-spacing: 0;
+		@include gridle_state(phoness-min) {
+			padding: 8px 0;
+		}
+	}
+	#login_error {
+		@extend .message;
+		a {
+			font:{size: 12px;}
+			background-color: $first_color;
+			color:$second_color;
+			padding: 0 4px;
+		}
 	}
 	#login {
 		@include gridle(10); 
+		@include gridle(12, phoness-min); 
 		@include gridle_float(none);
 		@extend .no-paddings;
 		display: inherit;
 		form {
 			@include gridle(4);
+			@include gridle(6, tabless-md);
+			@include gridle(9, phoness);
+			@include gridle(11, phoness-min);
 			@include gridle_float(none);
-			background:$second_color;
-			border: 1px solid;
+			background:$first_color_3;
 			margin: 0 auto;
 			display: block;
 			margin:{top: 20px;}
+			@include gridle_state(phoness-min) {
+				padding:{top: 15px;bottom: 30px;}
+				margin:{top: 12px;}
+			}
+			.title-form {
+				@include gridle(11); 
+				@include gridle(12, phoness-min); 
+				@include gridle_float(none);
+				@include gridle_state(phoness-min) {
+					padding: 0;
+				}
+				margin:{top:0;right:auto;bottom:10px;left:auto;}
+				display: block;
+				small {
+					@include gridle(12);
+					@include gridle_float(none);
+					@extend .no-paddings;
+					background: $second_color;
+					color:$first_color;
+					display: table;
+					width: auto;
+					padding: 0 3px;
+					text:{transform:uppercase;}
+				}
+				mark {
+					background: $second_color;
+					color:$first_color;
+					text:{transform:uppercase;}
+					padding: 0 3px;
+				}
+			}
 			p {
+				@include gridle(11); 
+				@include gridle(12, phoness-min); 
+				@include gridle_float(none);
+				margin: 0 auto;
+				display: block;
+				@include gridle_state(phoness-min) {
+					padding:0;
+				}
 				&.submit {
 					#wp-submit {
 						height: 45px;
@@ -51,36 +130,73 @@
 						background: $first_color;
 						text-transform: uppercase;
 						letter-spacing: 1.2px;
+						margin:{top: 13px;}
+						box-shadow: none;
+						&:hover {
+							box-shadow: none;
+						}
 					}
 				}
-			}
-			#loginform {
-				color:$first_color;
-				p {
-					label {
-						color:$second_color; 
+				label {
+					color:$second_color_1; 
+					font:{size:11px;} 
+					text:{transform: uppercase;}
+					input[type=checkbox] {
+						background:{color: $first_color_1 !important;}	
+						border: 0;
+						box-shadow: none;
+						&:checked {
+							color:$second_color !important;
+							&:hover {
+								color:$second_color !important;
+								box-shadow: none;
+							}
+						}
 					}
 				}
-			}
-		}
-	}
-	label {
-		font:{size: 13px;}
-	}
-	form {
-		.input {
-			background: none;
-			color:$first_color;
-			font:{size: 15px;}
-			padding: 10px 7px;
-			outline: none; 
-			border:1px solid $li-border-color;
-			@include placeholder {
-				color: red;
+				.input {
+					background: none;
+					color:$second_color;
+					font:{size: 15px;}
+					padding: 10px 7px;
+					outline: none; 
+					border:0;
+					margin:{top:3px;}
+					background:{color: $first_color_1 !important;}
+					box-shadow: none;
+					@include gridle_state(phoness-min) {
+						margin:{top: 4px;}
+						padding:7px;
+					}
+					@include placeholder {
+						color:$second_color !important;
+					}
+				}
 			}
 		}
 	}
 	#nav {
-		@extend .text-center;
+		@include gridle(6);
+		color:$first_color_3;
+		text:{decoration: underline;align: right;}
+		margin:{top: 16px;left:0 !important;}
+		@include gridle_state(tabless-md) {
+			margin:{bottom:16px;}
+		}
+		@include gridle_state(phoness-min) { 
+			padding: 0 5px;
+		}	
+		a {	
+			@include gridle_state(phoness-min) {
+				font:{size: 11px;}
+			}
+			&:hover {
+				color:$second_color;
+			}
+		}	
+	}
+	#backtoblog {
+		@extend #nav;
+		text:{align:left;}
 	}
 }

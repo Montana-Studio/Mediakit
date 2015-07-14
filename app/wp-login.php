@@ -217,8 +217,9 @@ function login_footer($input_id = '') {
 	// Don't allow interim logins to navigate away from the page.
 	if ( ! $interim_login ): ?>
 	<p id="backtoblog"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( 'Are you lost?' ); ?>"><?php printf( __( '&larr; Back to %s' ), get_bloginfo( 'title', 'display' ) ); ?></a></p>
+	
 	<?php endif; ?>
-
+		
 	</div>
 
 	<?php if ( !empty($input_id) ) : ?>
@@ -550,7 +551,6 @@ case 'retrievepassword' :
 	$user_login = isset($_POST['user_login']) ? wp_unslash($_POST['user_login']) : '';
 
 ?>
-<h1>registro numero 02 lost pass</h1>
 
 <form name="lostpasswordform" id="lostpasswordform" action="<?php echo esc_url( network_site_url( 'wp-login.php?action=lostpassword', 'login_post' ) ); ?>" method="post">
 	<p>
@@ -900,6 +900,10 @@ default:
 
 <form name="loginform" id="loginform" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post">
 	
+	<div class="title-form">
+		<small>Si ya tienes cuenta,</small>
+		<mark>ingresa con sus datos aquí</mark>
+	</div>
 
 	<p>
 		<label for="user_login"><?php _e('Username') ?><br />
@@ -920,6 +924,13 @@ default:
 	 */
 	do_action( 'login_form' );
 	?>
+
+	<div class="title-form">
+		<small>
+			Si no tienes cuenta,
+		</small>
+		<mark>Registrate con tus redes sociales aquí</mark>
+	</div>
 
 	<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever" <?php checked( $rememberme ); ?> /> <?php esc_attr_e('Remember Me'); ?></label></p>
 	
