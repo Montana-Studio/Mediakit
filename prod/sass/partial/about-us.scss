@@ -47,18 +47,14 @@
 					margin:{top:0;right:auto;bottom:30px;left: auto;}
 					left:0;
 					right:0;
-					right: 0;
 					display: block;
 					@include gridle(3,desktopess);
 					@include gridle(4,notebook-min);
 					@include gridle(2,tabless-md);
 					@include gridle(7,phoness-min);
 					@include gridle_float(none);
-					@include gridle_state(desktopess) {
-					margin:{bottom:0;}	
-					}
-					@include gridle_state(tabless-md) {
-						margin:{bottom:0;}
+					@include gridle_state(desktopess, tabless-md) {
+						margin:{bottom:0;}	
 					}
 					@include gridle_state(phoness) {
 						display: none;
