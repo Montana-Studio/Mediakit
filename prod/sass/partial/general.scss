@@ -432,8 +432,19 @@ a {
 		fill:#fff;
 	}
 }
+@keyframes tramaFadeb{
+	0%{
+		fill:#fff;
+	}
+	100%{
+		fill:#000;
+	}
+}
 .animationTrama{
-	fill:#fff;
+	@include animation(tramaFadea .4s ease-in-out forwards);
+}
+.animationTramaOut{
+	@include animation(tramaFadeb .4s ease-in-out forwards);
 }
 .mCSB_inside>.mCSB_container {
 	margin:{right:0;}
