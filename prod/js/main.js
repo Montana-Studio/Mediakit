@@ -204,6 +204,13 @@ jQuery(document).ready(function($){
 	    scrollInertia: 100    
 	});
 
+	$('.login-action-login').mCustomScrollbar({
+	    axis:'y', 
+	    scrollbarPosition: 'outside',
+	    theme:'minimal-dark',
+	    scrollInertia: 100    
+	});
+
  
 });      
 
