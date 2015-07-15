@@ -209,7 +209,7 @@ jQuery(document).ready(function($){
 	    scrollbarPosition: 'outside',
 	    theme:'minimal-dark',
 	    scrollInertia: 100    
-	});
+	}); 
 
  
 });      

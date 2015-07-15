@@ -20,10 +20,10 @@
 		display: block;
 		font:{size: 13px;weight:700;}
 		letter-spacing: 0;
-		margin:{top:20px;right:auto;bottom:0;left:auto;}
+		margin:{top:20px;right:auto !important;bottom:0;left:auto !important;}
 		padding: 15px 0;
 		@include gridle_state(phoness-min) {
-			padding: 8px 0;  
+			padding: 8px 0;    
 		}
 	}
 	#login_error {
@@ -44,7 +44,7 @@
 		h1 {
 			@include gridle(7, desktopess);
 			@include gridle(8, notebook-min);
-			@include gridle(11, phoness-min);
+			@include gridle(12, phoness phoness-min);
 			@include gridle_float(none);
 			margin: 0 auto;
 			display: block;
@@ -57,8 +57,11 @@
 			@include gridle_state(tabless-md) {
 				height: 180px;
 			}
+			@include gridle_state(phoness) {
+				height:220px;
+			}
 			@include gridle_state(phoness-min) {
-				height: 120px;
+				height: 140px;
 				margin:{top:10px;bottom:10px;}
 			}
 			a {
@@ -66,7 +69,10 @@
 				@extend .no-paddings;
 				background-size:100%;
 				height: 100%;  
-				display: block;				  
+				display: block;		
+				@include gridle_state(phoness-min) {
+					background:{size: 120%;}
+				}		  
 			}
 		}
 		form {
