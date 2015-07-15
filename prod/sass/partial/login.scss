@@ -1,6 +1,5 @@
 .login {
 	@include gridle(12);
-	@include gridle_float(none);
 	@extend .no-paddings;
 	background: $first_color;
 	color:$second_color;
@@ -35,163 +34,176 @@
 			padding: 0 4px;
 		}
 	}
-	#login {
-		@include gridle(10); 
-		@include gridle(12, phoness-min); 
-		@include gridle_float(none);
+	.login-scroll {  
+		@include gridle(12);
 		@extend .no-paddings;
-		display: inherit;
-		h1 {
-			@include gridle(7, desktopess);
-			@include gridle(8, notebook-min);
-			@include gridle(12, phoness phoness-min);
-			@include gridle_float(none);
-			margin: 0 auto;
-			display: block;
-			height: 280px;
-			margin:{top:50px;}
-			@include gridle_state(notebook-min) {
-				height: 240px;
-				margin:{top: 25px;}
-			}
-			@include gridle_state(tabless-md) {
-				height: 180px;
-			}
-			@include gridle_state(phoness) {
-				height:220px;
-			}
-			@include gridle_state(phoness-min) {
-				height: 140px;
-				margin:{top:10px;bottom:10px;}
-			}
-			a {
-				@include gridle(12);
-				@extend .no-paddings;
-				background-size:100%;
-				height: 100%;  
-				display: block;		
-				@include gridle_state(phoness-min) {
-					background:{size: 120%;}
-				}		  
-			}
+		height: 100%;
+		background: $first_color;
+		.mCSB_dragger_bar {
+			margin:{left: 10px!important;right: 0px !important;}
 		}
-		form {
-			@include gridle(4);
-			@include gridle(6, notebook-min tabless-md);
-			@include gridle(9, phoness);
-			@include gridle(11, phoness-min);
+		.mCSB_inside>.mCSB_container {
+			margin:{right: 8px !important;}
+		}
+		#login {
+			@include gridle(10); 
+			@include gridle(12, phoness-min); 
 			@include gridle_float(none);
-			background:$first_color_3;
-			margin: 0 auto;
-			display: block;
-			margin:{top: 20px;}
-			@include gridle_state(phoness-min) {
-				padding:{top: 15px;bottom: 30px;}
-				margin:{top: 12px;}
-			}
-			.title-form {
-				@include gridle(11); 
-				@include gridle(12, phoness-min); 
-				@include gridle_float(none);
-				@include gridle_state(phoness-min) {
-					padding: 0;
-				}
-				margin:{top:0;right:auto;bottom:10px;left:auto;}
-				display: block;
-				small {
-					@include gridle(12);
-					@include gridle_float(none);
-					@extend .no-paddings;
-					background: $second_color;
-					color:$first_color;
-					display: table;
-					width: auto;
-					padding: 0 3px;
-					text:{transform:uppercase;}
-				}
-				mark {
-					background: $second_color;
-					color:$first_color;
-					text:{transform:uppercase;}
-					padding: 0 3px;
-				}
-			}
-			p {
-				@include gridle(11); 
-				@include gridle(12, phoness-min); 
+			@extend .no-paddings;
+			display: inherit;
+			h1 {
+				@include gridle(7, desktopess);
+				@include gridle(8, notebook-min);
+				@include gridle(12, phoness phoness-min);
 				@include gridle_float(none);
 				margin: 0 auto;
 				display: block;
-				@include gridle_state(phoness-min) {
-					padding:0;
+				height: 280px;
+				margin:{top:50px;}
+				@include gridle_state(notebook-min) {
+					height: 240px;
+					margin:{top: 25px;}
 				}
-				&.submit {
-					#wp-submit {
-						height: 45px;
-						line-height: 28px;
-						padding: 0 20px 0px;
-						width: 100%;
-						border: 0;
-						border-radius: 0;
-						color:$second_color;
-						background: $first_color;
-						text-transform: uppercase;
-						letter-spacing: 1.2px;
-						margin:{top: 13px;}
-						box-shadow: none;
-						&:hover {
-							box-shadow: none;
-						}
+				@include gridle_state(tabless-md) {
+					height: 180px;
+				}
+				@include gridle_state(phoness) {
+					height:220px;
+				}
+				@include gridle_state(phoness-min) {
+					height: 140px;
+					margin:{top:10px;bottom:10px;}
+				}
+				a {
+					@include gridle(12);
+					@extend .no-paddings;
+					background-size:100%;
+					height: 100%;  
+					display: block;		
+					@include gridle_state(phoness-min) {
+						background:{size: 120%;}
+					}		  
+				}
+			}
+			form {
+				@include gridle(4);
+				@include gridle(6, notebook-min tabless-md);
+				@include gridle(9, phoness);
+				@include gridle(11, phoness-min);
+				@include gridle_float(none);
+				background:$first_color_3;
+				margin: 0 auto;
+				display: block;
+				margin:{top: 20px;}
+				@include gridle_state(phoness-min) {
+					padding:{top: 15px;bottom: 30px;}
+					margin:{top: 12px;}
+				}
+				.title-form {
+					@include gridle(11); 
+					@include gridle(12, phoness-min); 
+					@include gridle_float(none);
+					@include gridle_state(phoness-min) {
+						padding: 0;
+					}
+					margin:{top:0;right:auto;bottom:10px;left:auto;}
+					display: block;
+					small {
+						@include gridle(12);
+						@include gridle_float(none);
+						@extend .no-paddings;
+						background: $second_color;
+						color:$first_color;
+						display: table;
+						width: auto;
+						padding: 0 3px;
+						text:{transform:uppercase;}
+					}
+					mark {
+						background: $second_color;
+						color:$first_color;
+						text:{transform:uppercase;}
+						padding: 0 3px;
 					}
 				}
-				label {
-					color:$second_color_1; 
-					font:{size:11px;} 
-					text:{transform: uppercase;}
-					input[type=checkbox] {
-						background:{color: $first_color_1 !important;}	
-						border: 0;
-						box-shadow: none;
-						&:checked {
-							color:$second_color !important;
+				p {
+					@include gridle(11); 
+					@include gridle(12, phoness-min); 
+					@include gridle_float(none);
+					margin: 0 auto;
+					display: block;
+					@include gridle_state(phoness-min) {
+						padding:0;
+					}
+					&.submit {
+						#wp-submit {
+							height: 45px;
+							line-height: 28px;
+							padding: 0 20px 0px;
+							width: 100%;
+							border: 0;
+							border-radius: 0;
+							color:$second_color;
+							background: $first_color;
+							text-transform: uppercase;
+							letter-spacing: 1.2px;
+							margin:{top: 13px;}
+							box-shadow: none;
 							&:hover {
-								color:$second_color !important;
 								box-shadow: none;
 							}
 						}
 					}
-				}
-				.input {
-					background: none;
-					color:$second_color;
-					font:{size: 15px;}
-					padding: 10px 7px;
-					outline: none; 
-					border:0;
-					margin:{top:3px;}
-					background:{color: $first_color_1 !important;}
-					box-shadow: none;
-					@include gridle_state(phoness-min) {
-						margin:{top: 4px;}
-						padding:7px;
+					label {
+						color:$second_color_1; 
+						font:{size:11px;} 
+						text:{transform: uppercase;}
+						input[type=checkbox] {
+							background:{color: $first_color_1 !important;}	
+							border: 0;
+							box-shadow: none;
+							&:checked {
+								color:$second_color !important;
+								&:hover {
+									color:$second_color !important;
+									box-shadow: none;
+								}
+							}
+						}
 					}
-					@include placeholder {
-						color:$second_color !important;
+					.input {
+						background: none;
+						color:$second_color;
+						font:{size: 15px;}
+						padding: 10px 7px;
+						outline: none; 
+						border:0;
+						margin:{top:3px;}
+						background:{color: $first_color_1 !important;}
+						box-shadow: none;
+						@include gridle_state(phoness-min) {
+							margin:{top: 4px;}
+							padding:7px;
+						}
+						@include placeholder {
+							color:$second_color !important;
+						}
+					}
+				}
+				.oneall_social_login {
+					@include gridle(11); 
+					@include gridle(12, phoness-min); 
+					@include gridle_float(none);
+					margin: 0 auto;
+					display: block;
+					.oneall_social_login_label {
+						@include gridle_hide();
 					}
 				}
 			}
-			.oneall_social_login {
-				@include gridle(11); 
-				@include gridle(12, phoness-min); 
-				@include gridle_float(none);
-				margin: 0 auto;
-				display: block;
-				.oneall_social_login_label {
-					@include gridle_hide();
-				}
-			}
-		}
+		}	
 	}
+	
 	#nav {
 		@include gridle(6);
 		color:$first_color_3;

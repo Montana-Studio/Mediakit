@@ -157,8 +157,15 @@ jQuery(document).ready(function($){
 
 	$(window).load(function(){
 
+		$('.login-scroll').mCustomScrollbar({
+		    axis:'y', 
+		    scrollbarPosition: 'inside',
+		    scrollInertia: 10   
+		});
 		$('.wrapper').mCustomScrollbar(); 
-        $('.nav-colapse').mCustomScrollbar(); 
+        $('.nav-colapse').mCustomScrollbar({
+        	scrollInertia: 10000   
+        }); 
 
        	var classAdd = $('.nav-colapse .contendor-menu .menu ul li:first-child');
        	
@@ -197,20 +204,6 @@ jQuery(document).ready(function($){
 	    scrollbarPosition: 'inside',
 	    scrollInertia: 100    
 	});
-
-	$('.wrapper').mCustomScrollbar({
-	    axis:'y', 
-	    scrollbarPosition: 'outside',
-	    scrollInertia: 100    
-	});
-
-	$('.login-action-login').mCustomScrollbar({
-	    axis:'y', 
-	    scrollbarPosition: 'outside',
-	    theme:'minimal-dark',
-	    scrollInertia: 100    
-	}); 
-
  
 });      
 
