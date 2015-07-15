@@ -913,8 +913,16 @@ default:
 	<p>
 		<label for="user_pass"><?php _e('Password') ?><br />
 		<input type="password" name="pwd" id="user_pass"<?php echo $aria_describedby_error; ?> class="input" value="" size="20" /></label>
+
+		<div class="title-form">
+			<small>
+				Si no tienes cuenta,
+			</small>
+			<mark>Registrate con tus redes sociales aquí</mark>
+		</div>
+
 	</p>
-	
+
 
 	<?php
 	/**
@@ -925,12 +933,7 @@ default:
 	do_action( 'login_form' );
 	?>
 
-	<div class="title-form">
-		<small>
-			Si no tienes cuenta,
-		</small>
-		<mark>Registrate con tus redes sociales aquí</mark>
-	</div>
+	
 
 	<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever" <?php checked( $rememberme ); ?> /> <?php esc_attr_e('Remember Me'); ?></label></p>
 	
