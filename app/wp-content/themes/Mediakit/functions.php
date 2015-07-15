@@ -75,6 +75,14 @@ function html5blank_nav()
     );
 }
 // Load HTML5 Blank scripts (header.php)
+
+// Custom Login
+function my_login_stylesheet() {
+    wp_enqueue_style( 'custom-login', get_template_directory_uri() . '/css/mediakit.css');
+    //wp_enqueue_script( 'custom-login', get_template_directory_uri() . '/style-login.js' );
+}
+add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+
 function html5blank_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
@@ -387,12 +395,7 @@ function create_post_type_html5()
         ) // Add Category and Post Tags support
     ));
 }
-// Custom Login
-function my_login_stylesheet() {
-    wp_enqueue_style( 'custom-login', get_template_directory_uri() . '/css/mediakit.css' );
-    //wp_enqueue_script( 'custom-login', get_template_directory_uri() . '/style-login.js' );
-}
-add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+
 function my_login_logo() { ?>
     <style type="text/css">
         .login h1 a {
