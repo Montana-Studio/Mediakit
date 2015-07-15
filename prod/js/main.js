@@ -164,7 +164,7 @@ jQuery(document).ready(function($){
 		});
 		$('.wrapper').mCustomScrollbar(); 
         $('.nav-colapse').mCustomScrollbar({
-        	scrollInertia: 10000   
+        	scrollInertia: 10  
         }); 
 
        	var classAdd = $('.nav-colapse .contendor-menu .menu ul li:first-child');
@@ -202,7 +202,7 @@ jQuery(document).ready(function($){
 	    axis:'y', 
 	    theme:'minimal-dark',
 	    scrollbarPosition: 'inside',
-	    scrollInertia: 100    
+	    scrollInertia: 10    
 	});
  
 });      
