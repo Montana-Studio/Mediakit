@@ -393,10 +393,17 @@ function my_login_stylesheet() {
     wp_enqueue_script( 'custom-login', get_template_directory_uri() . '/style-login.js' );
 }
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+<<<<<<< HEAD
+
+
+function my_login_logo(){ ?>
+    
+=======
 function my_login_logo() { ?>
+>>>>>>> 16e17e63af66f6d58a479483078bcef49b45eb32
     <style type="text/css">
         .login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/mediatrends-login-logo.svg);
+            background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/img/mediatrends-login-logo.svg");
         }
     </style>
 <?php }

@@ -7,41 +7,13 @@
 	height: 100%;
 	position: absolute;
 	overflow: scroll;
-	h1 {
-		@include gridle(12);
-		@include gridle(11, notebook-min);
-		@include gridle_float(none);
-		margin: 0 auto;
-		display: block;
-		a {
-			@include gridle(5);
-			@include gridle(11, phoness-min);
-			@include gridle_float(none);
-			background-size: cover;
-			height: 300px;
-			margin:{top:50px;}
-			@include gridle_state(notebook-min) {
-				height: 250px;
-				margin:{top: 25px;}
-			}
-			@include gridle_state(tabless-md) {
-				height: 245px;
-			}
-			@include gridle_state(phoness-min) {
-				height: 120px;
-				margin:{top:10px;bottom:10px;}
-			}
-		}
-	}
 	.message {
 		@include gridle(4);
 		@include gridle(6, tabless-md);
 		@include gridle(9, phoness);
 		@include gridle(11, phoness-min);
 		text-align: center;
-		letter-spacing: 0;
   		padding: 15px 0;
-  		margin: 0 auto;
 		display: block;
 		float: none;
 		border: 0;
@@ -49,6 +21,7 @@
 		background-repeat: $second_color;
 		font:{size: 13px;weight:700;}
 		letter-spacing: 0;
+		margin: 0 auto;
 		@include gridle_state(phoness-min) {
 			padding: 8px 0;
 		}
@@ -68,6 +41,33 @@
 		@include gridle_float(none);
 		@extend .no-paddings;
 		display: inherit;
+		h1 {
+			@include gridle(5);
+			@include gridle(11, phoness-min);
+			@include gridle_float(none);
+			margin: 0 auto;
+			display: block;
+			height: 240px;
+			margin:{top:50px;}
+			@include gridle_state(notebook-min) {
+				height: 200px;
+				margin:{top: 25px;}
+			}
+			@include gridle_state(tabless-md) {
+				height: 180px;
+			}
+			@include gridle_state(phoness-min) {
+				height: 120px;
+				margin:{top:10px;bottom:10px;}
+			}
+			a {
+				@include gridle(12);
+				@extend .no-paddings;
+				background-size:100%;
+				height: 100%;  
+				display: block;				
+			}
+		}
 		form {
 			@include gridle(4);
 			@include gridle(6, tabless-md);
