@@ -34,6 +34,7 @@
 										<h3>ADS:</h3>
 										<div class="img-acor"><img src="<?php the_field('primera_imagen'); ?>" alt=""></div>
 									</div>
+									<div class="clear" style="height:5px;"></div>
 								</div>
 							</div>
 
@@ -53,6 +54,7 @@
 										<h3>ADS:</h3>
 										<div class="img-acor"><img src="<?php the_field('segunda_imagen'); ?>" alt=""></div>
 									</div>
+									<div class="clear" style="height:5px;"></div>
 								</div>
 							</div>
 
@@ -72,6 +74,7 @@
 										<h3>ADS:</h3>
 										<div class="img-acor"><img src="<?php the_field('tercera_imagen'); ?>" alt=""></div>
 									</div>
+									<div class="clear" style="height:5px;"></div>
 								</div>
 							</div>
 
@@ -89,6 +92,7 @@
 										<h3>SERVERS:</h3>
 										<div class="img-acor"><img src="<?php the_field('cuarta_imagen'); ?>" alt=""></div>
 									</div>
+									<div class="clear" style="height:5px;"></div>
 								</div>
 							</div>
 

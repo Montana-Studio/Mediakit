@@ -8,6 +8,7 @@
 		@include gridle(10);
 		padding: 10px;
 		height: 100%;
+		min-height: 670px;
 		@include gridle_float(right);
 		@include gridle(12, phoness tabless-min);
 		@include gridle_state(phoness tabless-min) {

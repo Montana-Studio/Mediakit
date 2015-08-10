@@ -46,19 +46,6 @@
 			@include gridle(12);
 			@extend .no-paddings;
 			@extend .no-margins;
-			//position: absolute;
-			@include gridle_state(desktopess) {
-				top: 128px;
-			}
-			@include gridle_state(notebook-min) {
-				top: 92px;
-			}
-			@include gridle_state(tabless-md) {
-				top:0;
-			}
-			@include gridle_state(phoness-min) {
-				top: 0;
-			} 
 			.search-input {
 				@include gridle(10);
 				background: $first_color;
@@ -70,7 +57,7 @@
 					color: $second_color;
 					font:{family:$primary_font;}
 				}
-				@include gridle_state(notebook-min) {
+				/*@include gridle_state(notebook-min) {
 					margin:{top:0;}
 				}
 				@include gridle_state(tabless-min) {
@@ -82,7 +69,7 @@
 				}
 				@include gridle_state(phoness-min) {
 					margin: {top:40px;}
-				}
+				}*/
 			}
 			.search-submit {
 				@include gridle(2);
@@ -92,58 +79,52 @@
 				padding: 15px 0; 
 				font:{size:19px;}
 				outline: none;
-				@include gridle_state(notebook-min) {
-					margin:{top:0;}
-				} 
-				@include gridle_state(tabless-min) {
-					margin: {top:40px;}
-				}
-				@include gridle_state(tabless-md) {
-					margin:{top:55px;}
-				}
-				@include gridle_state(phoness-min) {
-					margin: {top:40px;}
-				}
 			}
 		}
 		.log_out{
 			@include gridle(12);
-			@extend .no-margins;
 			@extend .no-paddings;
 			list-style: none;
-			height: auto;
-			li {
+			@include gridle_state(phoness phoness-min){
+				margin:{top: 29px;bottom:0;}
+			}
+			@include gridle_state(notebook-min){
+				margin:{top: 44px;bottom:0;}
+			}
+			margin:{bottom:0;}
+			position:relative;
+			overflow: hidden;
+			li{
 				@include gridle(12);
-				@extend .no-paddings;
-				list-style: none;
+				@extend .bg-highlight;
 				text-decoration: none;
 				border-bottom:1px solid $first_color_3;
-				@include background-image (linear-gradient(to right, #000 50%, #fff 50%)); 
-				background:{size: 200.22% auto;position: -0% 0;}
-				-webkit-background-size: 200.22% auto;
-				-moz-background-size: 200.22% auto;
-				@include transition(background-position 0.3s ease-out);
-				position:relative;
-				overflow: hidden;
-				a {
+				padding:{bottom: 10px;top:10px;}
+				i{
+					font-size:18px;
+					margin:{left:13px;}
+					@include gridle_state(desktopess notebook-min){
+						margin:{left:6px;}
+					}
+				}
+				a{
 					@include gridle(10); 
 					@include gridle_float(right);
 					font:{family:$primary_font;weight:400;}
-					padding:{top:20px;bottom:20px;left:5px;}
-					@include gridle_state(notebook-min) {
-						padding:{top:15px;bottom:15px;}
+					width:100%;
+					height:100%;
+					position: absolute;
+					left:0;
+					top:0;
+					@include gridle_state(desktopess notebook-min) {
+						padding:{top:10px;left:41px;}
 					}
 					@include gridle_state(phoness) {
-						padding: {top:13px;bottom:13px;left: 15px;}
+						padding: {top:10px;left: 54px;}
 					}
 					color:$second_color;
 				}
-				&:hover {
-					background:{position: -99.99% 0;}
-					color:$first_color;
-					@include gridle_state(notebook-min) {
-						background:{position: -99.99% 0;}
-					}
+				&:hover{
 					a {
 						color:$first_color;
 					}

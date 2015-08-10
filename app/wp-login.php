@@ -98,8 +98,8 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 		$login_header_url   = network_home_url();
 		$login_header_title = get_current_site()->site_name;
 	} else {
-		$login_header_url   = __( 'https://wordpress.org/' );
-		$login_header_title = __( 'Powered by WordPress' );
+		$login_header_url   = __( 'http://mediatrends.cl/' );
+		$login_header_title = __( 'Powered by Montana Studio' );
 	}
 
 	/**
@@ -146,9 +146,21 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 	$classes = apply_filters( 'login_body_class', $classes, $action );
 
 	?>
+	<style>
+		html{
+			overflow-y:hidden !important;
+		}
+		body{
+			overflow:hidden !important;
+		}
+		.login h1 a{
+			background-image:url('<?php echo get_template_directory_uri(); ?>/img/mediatrends-login-logo.svg') !important;
+		}
+	</style>
 	</head>
 	<body class="login <?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 	<div class="login-scroll">
+		
 	<div id="login">
 		<h1><a href="<?php echo esc_url( $login_header_url ); ?>" title="<?php echo esc_attr( $login_header_title ); ?>" tabindex="-1"><?php bloginfo( 'name' ); ?></a></h1>
 	<?php
@@ -218,11 +230,10 @@ function login_footer($input_id = '') {
 	// Don't allow interim logins to navigate away from the page.
 	if ( ! $interim_login ): ?>
 	<p id="backtoblog"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( 'Are you lost?' ); ?>"><?php printf( __( '&larr; Back to %s' ), get_bloginfo( 'title', 'display' ) ); ?></a></p>
-	
 	<?php endif; ?>
-		
+
 	</div>
-	</div>	
+	</div>
 
 	<?php if ( !empty($input_id) ) : ?>
 	<script type="text/javascript">
@@ -244,6 +255,9 @@ function login_footer($input_id = '') {
 	<?php
 }
 
+/**
+ * @since 3.0.0
+ */
 function wp_shake_js() {
 	if ( wp_is_mobile() )
 		return;
@@ -258,6 +272,9 @@ addLoadEvent(function(){ var p=new Array(15,30,15,0,-15,-30,-15,0);p=p.concat(p.
 <?php
 }
 
+/**
+ * @since 3.7.0
+ */
 function wp_login_viewport_meta() {
 	?>
 	<meta name="viewport" content="width=device-width" />
@@ -360,7 +377,7 @@ function retrieve_password() {
 		require_once ABSPATH . WPINC . '/class-phpass.php';
 		$wp_hasher = new PasswordHash( 8, true );
 	}
-	$hashed = $wp_hasher->HashPassword( $key );
+	$hashed = time() . ':' . $wp_hasher->HashPassword( $key );
 	$wpdb->update( $wpdb->users, array( 'user_activation_key' => $hashed ), array( 'user_login' => $user_login ) );
 
 	$message = __('Someone requested that the password be reset for the following account:') . "\r\n\r\n";
@@ -525,10 +542,11 @@ case 'retrievepassword' :
 	}
 
 	if ( isset( $_GET['error'] ) ) {
-		if ( 'invalidkey' == $_GET['error'] )
-			$errors->add( 'invalidkey', __( 'Sorry, that key does not appear to be valid.' ) );
-		elseif ( 'expiredkey' == $_GET['error'] )
-			$errors->add( 'expiredkey', __( 'Sorry, that key has expired. Please try again.' ) );
+		if ( 'invalidkey' == $_GET['error'] ) {
+			$errors->add( 'invalidkey', __( 'Your password reset link appears to be invalid. Please request a new link below.' ) );
+		} elseif ( 'expiredkey' == $_GET['error'] ) {
+			$errors->add( 'expiredkey', __( 'Your password reset link has expired. Please request a new link below.' ) );
+		}
 	}
 
 	$lostpassword_redirect = ! empty( $_REQUEST['redirect_to'] ) ? $_REQUEST['redirect_to'] : '';
@@ -571,15 +589,15 @@ case 'retrievepassword' :
 </form>
 
 <p id="nav">
-	<a href="<?php echo esc_url( wp_login_url() ); ?>"><?php _e('Log in') ?></a>
-	<?php
-	if ( get_option( 'users_can_register' ) ) :
-		$registration_url = sprintf( '<a href="%s">%s</a>', esc_url( wp_registration_url() ), __( 'Register' ) );
+<a href="<?php echo esc_url( wp_login_url() ); ?>"><?php _e('Log in') ?></a>
+<?php
+if ( get_option( 'users_can_register' ) ) :
+	$registration_url = sprintf( '<a href="%s">%s</a>', esc_url( wp_registration_url() ), __( 'Register' ) );
 
-		/** This filter is documented in wp-includes/general-template.php */
-		echo ' | ' . apply_filters( 'register', $registration_url );
-	endif;
-	?>
+	/** This filter is documented in wp-includes/general-template.php */
+	echo ' | ' . apply_filters( 'register', $registration_url );
+endif;
+?>
 </p>
 
 <?php
@@ -648,16 +666,18 @@ case 'rp' :
 <form name="resetpassform" id="resetpassform" action="<?php echo esc_url( network_site_url( 'wp-login.php?action=resetpass', 'login_post' ) ); ?>" method="post" autocomplete="off">
 	<input type="hidden" id="user_login" value="<?php echo esc_attr( $rp_login ); ?>" autocomplete="off" />
 
-	<p>
-		<label for="pass1"><?php _e('New password') ?><br />
-		<input type="password" name="pass1" id="pass1" class="input" size="20" value="" autocomplete="off" /></label>
+	<p class="user-pass1-wrap">
+		<label for="pass1"><?php _e('New password') ?></label><br />
+		<div class="wp-pwd">
+			<input type="password" data-reveal="1" data-pw="<?php echo esc_attr( wp_generate_password( 24 ) ); ?>" name="pass1" id="pass1" class="input" size="20" value="" autocomplete="off" aria-describedby="pass-strength-result" />
+			<div id="pass-strength-result" class="hide-if-no-js" aria-live="polite"><?php _e( 'Strength indicator' ); ?></div>
+		</div>
 	</p>
-	<p>
-		<label for="pass2"><?php _e('Confirm new password') ?><br />
-		<input type="password" name="pass2" id="pass2" class="input" size="20" value="" autocomplete="off" /></label>
+	<p class="user-pass2-wrap">
+		<label for="pass2"><?php _e('Confirm new password') ?></label><br />
+		<input type="password" name="pass2" id="pass2" class="input" size="20" value="" autocomplete="off" />
 	</p>
 
-	<div id="pass-strength-result" class="hide-if-no-js"><?php _e('Strength indicator'); ?></div>
 	<p class="description indicator-hint"><?php echo wp_get_password_hint(); ?></p>
 	<br class="clear" />
 
@@ -751,7 +771,7 @@ case 'register' :
 	 */
 	do_action( 'register_form' );
 	?>
-	<p id="reg_passmail"><?php _e('A password will be e-mailed to you.') ?></p>
+	<p id="reg_passmail"><?php _e( 'Registration confirmation will be e-mailed to you.' ); ?></p>
 	<br class="clear" />
 	<input type="hidden" name="redirect_to" value="<?php echo esc_attr( $redirect_to ); ?>" />
 	<p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_attr_e('Register'); ?>" /></p>
@@ -911,20 +931,19 @@ default:
 		<label for="user_login"><?php _e('Username') ?><br />
 		<input type="text" name="log" id="user_login"<?php echo $aria_describedby_error; ?> class="input" value="<?php echo esc_attr( $user_login ); ?>" size="20" /></label>
 	</p>
-	
 	<p>
 		<label for="user_pass"><?php _e('Password') ?><br />
 		<input type="password" name="pwd" id="user_pass"<?php echo $aria_describedby_error; ?> class="input" value="" size="20" /></label>
-
+	
 		<div class="title-form">
 			<small>
 				Si no tienes cuenta,
 			</small>
 			<mark>Registrate con tus redes sociales aquí</mark>
 		</div>
-
 	</p>
 
+	<?php do_action('oa_social_login'); ?>
 
 	<?php
 	/**
@@ -934,29 +953,19 @@ default:
 	 */
 	do_action( 'login_form' );
 	?>
-
-	
-
 	<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever" <?php checked( $rememberme ); ?> /> <?php esc_attr_e('Remember Me'); ?></label></p>
-	
 	<p class="submit">
-
 		<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_attr_e('Log In'); ?>" />
-
-
-		<?php	if ( $interim_login ) { ?>
-				<input type="hidden" name="interim-login" value="1" />
-		<?php	} else { ?>
-				<input type="hidden" name="redirect_to" value="<?php echo esc_attr($redirect_to); ?>" />
-		<?php 	} ?>
-		<?php   if ( $customize_login ) : ?>
-				<input type="hidden" name="customize-login" value="1" />
-		<?php   endif; ?>
-				<input type="hidden" name="testcookie" value="1" />
-
+<?php	if ( $interim_login ) { ?>
+		<input type="hidden" name="interim-login" value="1" />
+<?php	} else { ?>
+		<input type="hidden" name="redirect_to" value="<?php echo esc_attr($redirect_to); ?>" />
+<?php 	} ?>
+<?php   if ( $customize_login ) : ?>
+		<input type="hidden" name="customize-login" value="1" />
+<?php   endif; ?>
+		<input type="hidden" name="testcookie" value="1" />
 	</p>
-
-
 </form>
 
 <?php if ( ! $interim_login ) { ?>

@@ -81,10 +81,8 @@
 					@include gridle_float(none);
 					display: none;
 					.acor-half {
-						@include gridle(6);
 						@include gridle(12, phoness);
-						@include gridle_float(none); 
-						display: table-cell;
+						@include gridle(6, desktopess notebook-min);
 						padding:{top:20px;}
 						@include gridle_state(tabless-md) {
 							padding: 0 10px;
@@ -118,9 +116,7 @@
 							}
 						}
 						.img-acor {
-							@include gridle(6);
-							@include gridle(8, tabless-md);
-							@include gridle(12, phoness); 
+							@include gridle(12); 
 							@extend .no-paddings;
 							background:{color: $second_color;}
 							img {

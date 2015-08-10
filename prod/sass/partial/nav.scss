@@ -40,7 +40,7 @@
 		@include gridle_state(tabless-min) {
 			  padding: 7px 10px;
 		}
-		@include gridle(4,phoness);
+		@include gridle(3,phoness);
 		@include gridle(3,tabless-md);
 		@include gridle(2,tabless);
 		@include gridle(6,phoness-min);

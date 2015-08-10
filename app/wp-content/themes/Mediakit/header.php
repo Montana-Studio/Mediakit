@@ -19,14 +19,7 @@
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mediakit.css"> 
 
 		<?php wp_head(); ?>
-		<script>
-        // conditionizr.com
-        // configure environment tests
-        conditionizr.config({
-            assets: '<?php echo get_template_directory_uri(); ?>',
-            tests: {}
-        });
-        </script>
+
 		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/mediakit.min.js" type="text/javascript"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/easing.min.js" type="text/javascript"></script>

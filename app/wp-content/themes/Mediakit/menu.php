@@ -10,7 +10,7 @@
 
 		<ul class="log_out">
 				
-			<li><?php wp_loginout(); ?></li>
+			<li><i class="fa fa-times"></i><?php wp_loginout(); ?></li>
 
 		</ul>
 		<!--<p class="menu-review">review</p>-->
