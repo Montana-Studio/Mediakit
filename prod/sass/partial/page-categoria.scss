@@ -50,6 +50,18 @@
 							@include gridle_state(tabless-md) {
 								font:{size:14px;}
 							}
+							i {
+								font:{size: 16px;}
+								margin:{bottom: 5px;}
+								@include gridle_state(tabless-md) {
+									font:{size: 15px;}
+									margin:{bottom: 2px;}
+								}
+								@include gridle_state(phoness-min) {
+									font:{size: 14px;}
+									margin:{bottom: 2px;}
+								}
+							}
 						}
 					}
 					.img-single {

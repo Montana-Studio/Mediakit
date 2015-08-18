@@ -31,24 +31,7 @@
 									</div>
 								</div>
 
-								<div class="content-pattern bg-highlight-inv"><div class="highlight-inv">MONTHLY REACH <?php the_field('reach_sitio'); ?></div></div>
-
-								<div id="results_metrics" class="sitio-social">
-									<ul>
-										<li>
-											<div class="number" id="fb_likes"></div>
-											<div class="bajada-num"><i class="fa fa-facebook"> Likes</i></div>
-										</li>
-										<li>
-											<div class="number" id="twitter_followers"></div>
-											<div class="bajada-num"><i class="fa fa-twitter"> Follows</i></div>
-										</li>
-										<li>
-											<div class="number" id="instagram_followers"></div>
-											<div class="bajada-num"><i class="fa fa-instagram"> Follows</i></div>
-										</li>
-									</ul>
-								</div>
+								<div class="content-pattern bg-highlight-inv"><div class="highlight-inv"><i class="fa fa-area-chart"></i> MONTHLY REACH <?php the_field('reach_sitio'); ?></div></div>
 
 							</a>
 						</div>	

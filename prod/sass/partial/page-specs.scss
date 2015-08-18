@@ -81,11 +81,15 @@
 					@include gridle_float(none);
 					display: none;
 					.acor-half {
-						@include gridle(12, phoness);
+						@include gridle(12);
 						@include gridle(6, desktopess notebook-min);
+						@include gridle(12, phoness-min);
 						padding:{top:20px;}
 						@include gridle_state(tabless-md) {
-							padding: 0 10px;
+							padding:10px;
+						}
+						@include gridle_state(phoness-min) {
+							padding: {top:10px;}
 						}
 						h3 {
 							@extend .no-margins;

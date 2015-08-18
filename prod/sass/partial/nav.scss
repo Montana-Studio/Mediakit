@@ -51,6 +51,18 @@
 			@include gridle(12);
 			color:$second_color;
 			padding:{left:0;right:20px;}
+			@include gridle_state(tabless-min) {
+				padding:{right: 95px;}
+			}
+			@include gridle_state(tabless tabless-md tabless-md-portrait) {
+				padding:{right: 35px;}
+			}
+			@include gridle_state(phoness-min) {
+				padding:{right: 80px;}
+			}
+			@include gridle_state(phoness-small) {
+				padding:{right: 45px;}
+			}
 			svg {
 				width: 100%;
 				height: 40px;
@@ -69,13 +81,17 @@
 			padding:{top: 10px;}
 		}
 		@include gridle_state(tabless-min) {
-			padding:{right: 10px;}
+			padding:{top:13px;right: 10px;}
+			height: 32px;
+    		width: 32px;
 		}
 		@include gridle_state(phoness) {
 			padding:{top:10px;}
 		}
 		@include gridle_state(phoness-min) {
-			padding:{top:3px;}
+			padding:{top:7px;}
+			height: 28px;
+    		width: 28px;
 		}
 		#icon-mobile {
 			position: relative;

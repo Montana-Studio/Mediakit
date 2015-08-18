@@ -91,6 +91,9 @@
 			@include gridle_state(notebook-min){
 				margin:{top: 44px;bottom:0;}
 			}
+			@include gridle_state(phoness-min) {
+				margin:{top: 25px;}
+			}
 			margin:{bottom:0;}
 			position:relative;
 			overflow: hidden;
@@ -99,12 +102,24 @@
 				@extend .bg-highlight;
 				text-decoration: none;
 				border-bottom:1px solid $first_color_3;
-				padding:{bottom: 10px;top:10px;}
+				padding:{bottom: 20px;top:20px;}
+				@include gridle_state(notebook-min) {
+					padding:{bottom: 15px;top:15px;}	
+				}
 				i{
 					font-size:18px;
 					margin:{left:13px;}
-					@include gridle_state(desktopess notebook-min){
-						margin:{left:6px;}
+					@include gridle_state(desktopess) {
+						margin:{left:15px;}
+					}
+					@include gridle_state(notebook-min) {
+						margin:{left: 3px;}
+					}
+					@include gridle_state(phoness) {
+						margin:{left: 13px;}
+					}
+					@include gridle_state(phoness-min) {
+						margin:{left: 9px;}
 					}
 				}
 				a{
@@ -116,11 +131,17 @@
 					position: absolute;
 					left:0;
 					top:0;
-					@include gridle_state(desktopess notebook-min) {
-						padding:{top:10px;left:41px;}
+					@include gridle_state(desktopess) {
+						padding:{top:18px;left:55px;}
+					}
+					@include gridle_state(notebook-min) {
+						padding:{top:13px;left: 37px;}
 					}
 					@include gridle_state(phoness) {
-						padding: {top:10px;left: 54px;}
+						padding:{top: 14px;left: 64px;}
+					}
+					@include gridle_state(phoness-min) {
+						padding:{top: 14px;left: 48px;}
 					}
 					color:$second_color;
 				}

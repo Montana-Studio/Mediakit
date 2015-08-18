@@ -24,6 +24,9 @@ $bp-xl : 1140px;
 $bp-xxl : 1440px;
 
 //MOBILE FIRST
+@include gridle_register_state( phoness-small, (
+	(max-width : $bp-smalless)
+) );
 @include gridle_register_state( phoness-min, (
 	(screen and (min-width : $bp-smalless) and (max-width:$bp-meddies))
 ) );
