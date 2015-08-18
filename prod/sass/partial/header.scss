@@ -137,5 +137,11 @@
 				}
 			}	
 		}
+		&.page-aboutus-header {
+			@extend .no-paddings;
+			height: 0;
+			visibility: hidden;
+    		display: none;
+		}
 	}	
 }

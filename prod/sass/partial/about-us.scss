@@ -1,3 +1,32 @@
+body {
+	&.page-template-page-about {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		.mCSB_container {
+			position: relative;
+			top: 0;
+			left: 0;
+			height: 100%;
+			@include gridle_state(phoness-min) {
+				height: 140%;
+			}
+			@include gridle_state(phoness-small) {
+				height: 110%;
+			}
+			.about-us-page {
+				height: 100%;
+				float: right;
+				position: absolute;
+				right: 0;
+				.about-category-class {
+					position: relative;
+					height: 100%;
+				}
+			}
+		}
+	}
+}
 .about-us-page {
 	@include gridle(12);
 	@extend .no-paddings;
@@ -8,7 +37,6 @@
 		@include gridle(10);
 		padding: 10px;
 		height: 100%;
-		min-height: 670px;
 		@include gridle_float(right);
 		@include gridle(12, phoness tabless-min);
 		@include gridle_state(phoness tabless-min) {
@@ -16,107 +44,118 @@
 		}
 		@include gridle_state(tabless-md) {
 			margin-top: 55px;
-			height: 93%;
 		} 
 		@include gridle_state(phoness) {
 			margin-top: 55px;
-			height: 85%;
 		} 
 		@include gridle_state(phoness-min) {
 			margin-top: 40px;
-			height: 93%;
 		}
-		.encabezado {
-			background-size: cover;
-			height: 100%;
-			.content-title {
-				@include gridle_state(desktopess notebook-min) { 
-				 display: block;
-				 height: 100%;
-				 }
-				 @include gridle_state(tabless-md) {
-				 	  padding:{top:0;}
-				 }
-				 @include gridle_state(phoness) {
-				 	  padding:{top: 50px;}
-				 }
-				  @include gridle_state(phoness-min) {
-				 	  padding:{top: 10px;}
-				 }
-				.logo-mediatrends {
-					visibility:hidden;
-					margin:{top:0;right:auto;bottom:30px;left: auto;}
-					left:0;
-					right:0;
-					display: block;
-					@include gridle(3,desktopess);
-					@include gridle(4,notebook-min);
-					@include gridle(2,tabless-md);
-					@include gridle(7,phoness-min);
-					@include gridle_float(none);
-					@include gridle_state(desktopess, tabless-md) {
-						margin:{bottom:0;}	
-					}
-					@include gridle_state(phoness) {
-						display: none;
-					}
-					a {
-						svg {
-							min-height: 200px;
-							fill: $second_color;
-						}
-					}
-				}
-				.content-about {
-					@include gridle(8, desktopess);
-					@include gridle(10, notebook-min); 
-					@include gridle(11, phoness);
-					@extend .no-paddings;
-					@include gridle_float(none);
-					display: block;
-					margin:0 auto;
-					h2 {
-						visibility: hidden;
-						display:table;
-						width: auto;
-						font:{size:2em;}
-						@include gridle_state(tabless-md) {
-							padding: {left:5px;}
-							margin:{top:0;}
+		.about-category-class {
+			@include gridle(12);
+			@extend .no-paddings;
+			.bg-aboutus {
+				@include gridle(12);
+				@extend .no-paddings;
+				background-repeat: no-repeat;
+				background-attachment: inherit;
+				background-size: cover;
+				height: 100%;
+				.content-title {
+					@include gridle(12);
+					@include gridle_state(desktopess) { 
+					 display: block;
+					 height: 100%;
+					 }
+					 @include gridle_state(notebook-min) {
+					 }
+					 @include gridle_state(tabless-md) {
+					 	  padding:{top:0;}
+					 }
+					 @include gridle_state(phoness) {
+					 	  padding:{top: 50px;}
+					 }
+					  @include gridle_state(phoness-min) {
+					 	  padding:{top: 10px;}
+					 }
+					.logo-mediatrends {
+						visibility:hidden;
+						margin:{top:0;right:auto;bottom:30px;left: auto;}
+						left:0;
+						right:0;
+						display: block;
+						@include gridle(3,desktopess);
+						@include gridle(4,notebook-min);
+						@include gridle(2,tabless-md);
+						@include gridle(7,phoness-min);
+						@include gridle_float(none);
+						@include gridle_state(desktopess, tabless-md) {
+							margin:{bottom:0;}	
 						}
 						@include gridle_state(phoness) {
-							padding: 0 10px;
-							margin:{top:0;}
+							display: none;
+						}
+						a {
+							svg {
+								min-height: 200px;
+								fill: $second_color;
+							}
 						}
 					}
-					.bajada {
-						@include gridle(12);
+					.content-about {
+						@include gridle(8, desktopess);
+						@include gridle(10, notebook-min); 
+						@include gridle(11, phoness);
 						@extend .no-paddings;
-						visibility: hidden;
-						margin:{bottom:100px;}
-						p {
-							@extend .highlight-inv;
-							line-height: 26px;
-							letter-spacing: 0;
-							font:{size: 13px;}
-							display: inline;
-							padding:5px;
-							@include gridle_state(desktopess) {
-								line-height: 25px;
-								letter-spacing: 0px;
-							}
-							@include gridle_state(notebook-min) {
-								line-height: 23px;
-								font:{size: 13px;}
-							} 
+						@include gridle_float(none);
+						display: block;
+						margin:0 auto;
+						h2 {
+							visibility: hidden;
+							display:table;
+							width: auto;
+							font:{size:2em;}
 							@include gridle_state(tabless-md) {
-
+								padding: {left:5px;}
+								margin:{top:0;}
 							}
 							@include gridle_state(phoness) {
-								line-height: 21px;
-								font-size: 12px;
-								padding: 1px;
-								font-weight: 600;
+								padding: 0 10px;
+								margin:{top:0;}
+							}
+							@include gridle_state(phoness-min) {
+								margin: {bottom:10px;}
+							}
+						}
+						.bajada {
+							@include gridle(12);
+							@extend .no-paddings;
+							visibility: hidden;
+							margin:{bottom:155px;}
+							p {
+								@extend .highlight-inv;
+								line-height: 26px;
+								letter-spacing: 0;
+								font:{size: 13px;}
+								display: inline;
+								padding:5px;
+								@include gridle_state(desktopess) {
+									line-height: 25px;
+									letter-spacing: 0px;
+								}
+								@include gridle_state(notebook-min) {
+									line-height: 23px;
+									font:{size: 13px;}
+								} 
+								@include gridle_state(tabless-md) {
+
+								}
+								@include gridle_state(phoness) {
+									line-height: 21px;
+									font-size: 12px;
+									padding: 1px;
+									font-weight: 600;
+								}
 							}
 						}
 					}

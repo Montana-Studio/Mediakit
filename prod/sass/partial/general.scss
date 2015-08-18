@@ -145,6 +145,9 @@ a {
 			border:{bottom:1px solid $li-border-color;}
 			padding:{top:8px;left:0;bottom:8px; right:0;}
 			text:{transform:uppercase;}
+			@include gridle_state(phoness-min) {
+				font:{size: 10px;}
+			}
 			i {
 				@include gridle(1);
 				@extend .no-paddings;
@@ -185,6 +188,9 @@ a {
 				.metrics-descriptions-2 {
 					@extend .metrics-descriptions-1;
 					font:{size:12px !important;weight:lighter;}
+					@include gridle_state(phoness-min) {
+						font:{size: 10px !important;}
+					}
 				} 
 			}
 		}

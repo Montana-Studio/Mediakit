@@ -1,31 +1,36 @@
 <?php /*Template name: Pagina About*/ ?>
-<div class="about-us-page">
+
 	
 <?php get_header(); ?>
 
 <?php get_template_part('menu'); ?>
 
+<div class="about-us-page">
 	<!-- section -->
 	<section class="page-aboutus">
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-				<div class="encabezado" style="background-image:url('<?php echo $feat_image;?>') ">
-					<div class="content-title">
-						<div class="logo-mediatrends">
-							<a href="<?php echo home_url(); ?>">
-								<svg viewBox="0 0 792 656.856">
-									<use xlink:href="#mediatrends-logo"/> 
-								</svg>
-							</a>
+				<article id="post-<?php the_ID(); ?>" <?php post_class('about-category-class'); ?>>
+					<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+					<div class="bg-aboutus" style="background-image:url('<?php echo $feat_image;?>') ">
+						
+						<!--<div class="encabezado" style="background-image:url('<?php echo $feat_image;?>') ">-->
+						<div class="content-title">
+							<div class="logo-mediatrends">
+								<a href="<?php echo home_url(); ?>">
+									<svg viewBox="0 0 792 656.856">
+										<use xlink:href="#mediatrends-logo"/> 
+									</svg>
+								</a>
+							</div>
+							<div class="content-about">
+								<h2 class="highlight-inv"><?php the_title(); ?></h2> 
+								<div class="bajada"><?php the_content(); ?></div>
+							</div>
 						</div>
-						<div class="content-about">
-							<h2 class="highlight-inv"><?php the_title(); ?></h2> 
-							<div class="bajada"><?php the_content(); ?></div>
-						</div>
+
 					</div>
-				</div>
-			</article>
+					</div>
+				</article>
 			<?php endwhile; ?>
 
 			<?php else: ?>
