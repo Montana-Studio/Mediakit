@@ -141,11 +141,20 @@
 											margin:{bottom:0;}
 										}
 										padding:{left:0 !important;right:10px !important;}
-									.content-pattern {
-										@extend .pattern;
+									.content-pattern-trama {
 										@include gridle(12);
-										padding:{bottom:10px;}
-										margin:{left:5px;top:10px;}
+										background:{color: $second_color;position: left;repeat:repeat;}
+										padding: 10px;
+										display: inline-block;
+										background-position: -0% 0;
+										@include transition(background-position 0.5s ease-out);
+										position:relative;
+										overflow:hidden;
+										background: {color:#fff;}
+										background-color:none;
+										background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIW2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEqRgDDwAAAABJRU5ErkJggg==') !important;
+										background-repeat: repeat;
+										transition:none !important;
 										@include gridle_state(desktopess notebook-min) {
 											display: inline-block;
 											margin:0 !important; 
@@ -159,6 +168,7 @@
 										.highlight-inv {
 											display: table;
 											font:{size:12px;}
+											background:{size: 200.22% auto;position: -0% 0;}
 											@include gridle_state(desktopess) {
 												  font:{size: 18px;}
 											}
@@ -184,22 +194,18 @@
 												}
 											}
 										}
-									}	
-									&:hover {
-										.pattern{
-											@include transition(background-position 0.5s ease-out);
-											background:{position: 99.99% 0 !important;}
-											.trama{
-												svg{
-													pattern {
-														polygon {
-															@include animation(tramaFadea 0.4s ease forwards);
-														}
-													}
-												}
+										&:hover {
+											.highlight-inv {
+												@include background-image (linear-gradient(to right, #fff 50%, #000 50%));
+												-webkit-background-size: 200.22% auto;
+												-moz-background-size: 200.22% auto;
+												@include transition(background-position 0.5s ease-out);
+												padding:{left:10px;right:5px;}
+												background-position: -99.99% 0;
+												color:$second_color;
 											}
 										}
-									}
+									}	
 								}
 								.btn-right {
 										@include gridle(6, desktopess notebook-min tabless-min);

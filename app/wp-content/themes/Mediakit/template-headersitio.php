@@ -12,7 +12,7 @@
 							<div class="logo-sitio"><div class="img-content"><img src="<?php //the_field('imagen_logo_sitio'); ?>" alt=""></div></div>
 							 <div class="content-group">
 	                            <div class="bajada bg-highlight"><?php the_content(); ?></div>
-	                            <div class="btn-left"><div class="content-pattern bg-highlight"><div class="highlight-inv"><i class="fa fa-area-chart"></i> MONTHLY REACH <?php //the_field('reach_sitio'); ?></div></div></div>
+	                            <div class="btn-left"><div class="content-pattern-trama"><div class="highlight-inv bg-highlight-inv"><i class="fa fa-area-chart"></i> MONTHLY REACH <?php //the_field('reach_sitio'); ?></div></div></div>
 	                            <div class="btn-right"><div class="btn"><a href="<?php// the_field('sitio_web'); ?>" target="_blank"><i class="fa fa-external-link"></i> ver sitio</a></div></div>   
 	                        </div>
 						</div>

@@ -31,7 +31,7 @@
 									</div>
 								</div>
 
-								<div class="content-pattern bg-highlight-inv"><div class="highlight-inv"><i class="fa fa-area-chart"></i> MONTHLY REACH <?php the_field('reach_sitio'); ?></div></div>
+								<div class="content-pattern-trama"><div class="bg-highlight-inv"><i class="fa fa-area-chart"></i> MONTHLY REACH <?php the_field('reach_sitio'); ?></div></div>
 
 							</a>
 						</div>	
