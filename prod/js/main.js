@@ -160,11 +160,11 @@ jQuery(document).ready(function($){
 		$('.login-scroll').mCustomScrollbar({
 		    axis:'y', 
 		    scrollbarPosition: 'inside',
-		    scrollInertia: 10   
+		    scrollInertia: 0    
 		});
 		$('.wrapper').mCustomScrollbar(); 
         $('.nav-colapse').mCustomScrollbar({
-        	scrollInertia: 10  
+        	scrollInertia: 0  
         }); 
 
        	var classAdd = $('.nav-colapse .contendor-menu .menu ul li:first-child');
@@ -202,7 +202,7 @@ jQuery(document).ready(function($){
 	    axis:'y', 
 	    theme:'minimal-dark',
 	    scrollbarPosition: 'inside',
-	    scrollInertia: 10    
+	    scrollInertia: 0    
 	});
  
 });      
