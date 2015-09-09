@@ -18,7 +18,7 @@
 						<h3 class="bg-highlight-inv">DONDE UBICARNOS</h3>
 						<p>Av. Italia 1439, Of 302</p>
 						<p>Santiago de Chile.</p>
-						<p>info@mediatrends.cl</p> 
+						<p>asepulveda@mediatrends.cl</p> 
 						<p>+56 02 2 205 91 91</p>   
 					</div>
 				</div>

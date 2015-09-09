@@ -4,7 +4,7 @@
 				<!-- copyright -->
 				<div class="footer-content">
 					<div class="footer-container">
-						<div class="content-left">
+						<!--div class="content-left">
 							<div class="img-footer">
 								<img src="<?php echo get_template_directory_uri()?>/img/sport.jpg">
 							</div>
@@ -12,7 +12,7 @@
 							<h3 class="highlight-inv" id="info-2">CEO Monetización Digital</h3>
 							<h3 class="highlight-inv" id="info-3"><a href="#"><i class="fa fa-envelope-o"></i> asepulveda@mediatrends.cl</a></h3>
 							<h3 class="highlight-inv" id="info-4"><i class="fa fa-phone"></i> +56 (9) 94866770</h3>
-						</div>
+						</div-->
 						<div class="content-right">
 							<ul>
 								<li class="pattern" id="fsocial-f"><a href="https://www.facebook.com/mediatrendscl" target="_blank"><i class="fa fa-facebook"></i></a></li>
