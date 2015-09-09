@@ -65,7 +65,7 @@
 		
 			<?php if(is_page('contact')){
 				include (TEMPLATEPATH . '/template-headercontact.php');
-			}elseif(is_page('About Us')){
+			}elseif(is_page('Sobre Nosotros')){
 				include (TEMPLATEPATH . '/template-aboutus.php');
 			}elseif(is_search()){
 				include (TEMPLATEPATH . '/template-headersearch.php');

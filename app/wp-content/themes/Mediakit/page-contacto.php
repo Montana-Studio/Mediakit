@@ -16,10 +16,10 @@
 				<div class="content-info">
 					<div class="trama">
 						<h3 class="bg-highlight-inv">DONDE UBICARNOS</h3>
-						<p>Av. Italia 12345,</p>
+						<p>Av. Italia 1439, Of 302</p>
 						<p>Santiago de Chile.</p>
-						<p>hola@mediatrends.cl</p> 
-						<p>22 1234 567 - 22 1345678</p>   
+						<p>info@mediatrends.cl</p> 
+						<p>+56 02 2 205 91 91</p>   
 					</div>
 				</div>
 			</article>
