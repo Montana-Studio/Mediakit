@@ -63,7 +63,7 @@
 		<div class="wrapper mCustomScrollbar" data-mcs-axis="y" >
 			
 		
-			<?php if(is_page('contact')){
+			<?php if(is_page('contacto')){
 				include (TEMPLATEPATH . '/template-headercontact.php');
 			}elseif(is_page('Sobre Nosotros')){
 				include (TEMPLATEPATH . '/template-aboutus.php');
