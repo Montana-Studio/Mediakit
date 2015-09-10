@@ -129,6 +129,7 @@
 						width: 25px;
 						height: 25px;
 						margin:{bottom: 5px;}
+						opacity: 0;
 						@include gridle_state(desktopess) {
 							width: 30px;
 							height: 30px;

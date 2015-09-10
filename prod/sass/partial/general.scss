@@ -322,7 +322,7 @@ a {
 	}	
 }
 .fadeIn{
-	@include animation(fadeIn 1.5s ease-in-out);
+	@include animation(fadeIn 1.5s ease-in-out forwards);
 	visibility: visible !important;	
 }
 

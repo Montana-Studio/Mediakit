@@ -205,7 +205,7 @@ jQuery(document).ready(function($){
 
 	 $('.nav-colapse .contendor-menu').mCustomScrollbar({
         	scrollInertia:0,
-        	theme:'light',
+        	theme:'minimal',
         	scrollbarPosition: 'inside'   
         }); 
  
