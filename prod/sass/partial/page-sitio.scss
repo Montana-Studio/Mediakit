@@ -60,6 +60,7 @@
 						@extend .shadow;
 						background:$second_color;
 						padding:0 10px;
+						margin:{bottom:10px;}
 						@include gridle(6, desktopess notebook-min);
 						@include gridle(12, phoness phoness-min);
 						@include gridle_float(left,desktopess notebook-min);

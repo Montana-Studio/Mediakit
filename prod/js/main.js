@@ -14,9 +14,9 @@ jQuery(document).ready(function($){
 		setTimeout(function(){ $('#info-2').addClass('fadeOut'); },1800);
 		setTimeout(function(){ $('#info-3').addClass('fadeOut'); },1900);
 		setTimeout(function(){ $('#info-4').addClass('fadeOut'); },2000);
-		setTimeout(function(){ $('#fsocial-f').addClass('fadeIn'); },2400);
-		setTimeout(function(){ $('#fsocial-t').addClass('fadeIn'); },2600);
-		setTimeout(function(){ $('#fsocial-i').addClass('fadeIn'); },2800);
+		setTimeout(function(){ $('#fsocial-f').addClass('fadeIn'); },1700);
+		setTimeout(function(){ $('#fsocial-t').addClass('fadeIn'); },1900);
+		setTimeout(function(){ $('#fsocial-i').addClass('fadeIn'); },2100);
 
 		setTimeout(function(){ $('.nothing-message h2').addClass('vanishIn'); },600);  
 		setTimeout(function(){ $('.nothing-message p').addClass('vanishIn'); },700);  
