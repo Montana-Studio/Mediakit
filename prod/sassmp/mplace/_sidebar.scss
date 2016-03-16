@@ -1,0 +1,68 @@
+.sidebar{
+    @include span-columns(3);
+    @include pad(34px 0 10px 10px);
+    h3{
+        font:{size:em(11px)}
+        @include span-columns(12);
+        @include omega();
+        @include pad(10px 0 10px 10px);
+        text:{transform:uppercase;}
+        background: {image:url('../img/bg-pattern-fino3b.svg');}
+        span{
+            @extend .destaca;
+            color:$colorWhite;
+        }
+    }
+    .widget_shopping_cart_content{
+        .cart_list{
+            @include span-columns(12);
+            li{
+                @include span-columns(12);
+                padding: 30px !important;
+                border: 1px solid $colorGrey;
+                margin:10px 0 5px;
+                a{
+                    &.remove{
+                        background:transparent;
+                    }
+                    background:{color:$colorGrey2;}
+                    @include pad(10px 0);
+                    img{
+                        margin: 0 auto;
+                        width:70%;
+                        float: none;
+                        display: block;
+                    }
+                }
+                .variation{
+                     display: none;   
+                }
+                .quantity{
+                    font:{size:em(12px);}
+                    color: $colorGrey;
+                }
+            }
+        }
+        .total{
+            @include span-columns(12);
+            background:{color:$colorBlack;}
+            color:$colorWhite;
+            border: none;
+            padding:5px !important;
+        }
+        .buttons{
+            @include span-columns(12);
+            a{
+                @include span-columns(6);
+                @include omega(2n);
+                border:1px solid $colorBlack;
+                color:$colorBlack;
+                @include textAlign(center);
+                @include borderRadius(0);
+                background:transparent;
+                text:{transform:uppercase;}
+                font:{size:em(11px)}
+            }
+        }
+    }
+}

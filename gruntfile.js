@@ -10,10 +10,12 @@ module.exports = function(grunt) {
         
         jsout:'js/mediakit.min.js',
         cssout:'css/mediakit.css',
+        cssoutmp:'css/marketplace.css',
         compimg:'img2/**/*.{png,jpg,gif}',
 
         js:'js/**/*.js',
         scss:'sass/**/*.scss',
+        scssmp:'sassmp/**/*.scss',
         img:'img/**/*.{png,jpg,gif}',
 
         sass: {
@@ -22,7 +24,8 @@ module.exports = function(grunt) {
               style: 'nested'
             },
             files: {
-              '<%= www %>/<%= cssout %>': '<%= dist %>/<%= scss %>'
+              '<%= www %>/<%= cssout %>': '<%= dist %>/<%= scss %>',
+              '<%= www %>/<%= cssoutmp %>': '<%= dist %>/<%= scssmp %>'
             },
           },
           dist: {
@@ -30,7 +33,8 @@ module.exports = function(grunt) {
               style: 'compressed'
             },
             files: {
-              '<%= www %>/<%= cssout %>': '<%= dist %>/<%= scss %>'
+              '<%= www %>/<%= cssout %>': '<%= dist %>/<%= scss %>',
+              '<%= www %>/<%= cssoutmp %>': '<%= dist %>/<%= scssmp %>'
             },
           },
         },
@@ -134,6 +138,7 @@ module.exports = function(grunt) {
             }]
           }
         },
+
         parallel:{
           grunt: {
             options: {
@@ -145,13 +150,13 @@ module.exports = function(grunt) {
 
         watch: {
           configFiles:{
-            files:['<%= dist %>/<%= scss %>','<%= dist %>/<%= js %>','<%= www %>/**/*.php'],
+            files:['<%= dist %>/<%= scss %>','<%= dist %>/<%= js %>','<%= www %>/**/*.php','<%= dist %>/<%= scssmp %>'],
             options:{
               livereload: true,
             },
           },
           sass:{
-            files:['<%= dist %>/<%= scss %>'],
+            files:['<%= dist %>/<%= scss %>','<%= dist %>/<%= scssmp %>'],
             tasks: ['sass:deve'],
             options:{
               livereload:true,

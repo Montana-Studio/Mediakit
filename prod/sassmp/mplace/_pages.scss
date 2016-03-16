@@ -1,0 +1,187 @@
+.content{
+    @include span-columns(9);
+    @include omega();
+    @include pad(0 10px 0 0);
+    position: relative;
+    nav{
+        &.woocommerce-breadcrumb{
+            margin: 0;
+            @include pad(10px 0);
+            font:{size:em(12px);}
+            color:$colorGrey;
+            a{
+                color: $colorGrey;
+                &:hover{
+                    color:$colorBlack;
+                }
+            }
+        }
+    }
+    h1{
+        @include span-columns(12);
+        @include omega();
+        @include pad(10px 0 10px 10px);
+        margin: 0;
+        font:{size:em(24);}
+        text:{transform:uppercase;}
+        background: {image:url('../img/bg-pattern-fino3b.svg');}
+        span{
+            @extend .destaca;
+        }
+    }
+    .woocommerce-ordering{
+        @include direction-context(right-to-left){
+            @include span-columns(3);
+        }
+        position: relative;
+        top:-53px;
+        right:10px;
+        background:{color:$colorWhite;}
+        select{
+            @include span-columns(12 of 12);
+            background:{color:transparent;}
+            @include appearance(none);
+            border: none;
+            @include pad(13px);
+            position: relative;
+            z-index: 2;
+            font:{size:em(10px);}
+            color:$colorGrey;
+            text:{transform:uppercase;}
+        }
+        i{ 
+            position: absolute;
+            z-index: 1;
+            right: 12px;
+            top: 38%;
+            color:$colorGrey;
+            font:{size:em(10px);weight:normal;}
+        }
+    }
+    &.page-content{
+        h1{
+            margin:{top:34px;}
+        }
+    }
+    .products{
+        @include span-columns(12);
+        @include row();
+        li{
+            @include span-columns(3 of 12);
+            @include omega(4n);
+            background:{color:$colorGrey2;}
+            border:{style:solid;width:1px;color:$colorGrey;}
+            position: relative;
+            a{
+                @include span-columns(12);
+                &.button{
+                    @include textAlign(center);
+                    @include borderRadius(0);
+                    background:{color:$colorBlack;}
+                    color:$colorWhite;
+                    font:{size:em(11px);}
+                    text:{transform:uppercase;}
+                    margin:{top:0 !important;}
+                }
+                &.by-vendor-name-link{
+                    @include direction-context(right-to-left){
+                        @include span-columns(6);
+                    }
+                    padding:5px !important;
+                    background: {color:$colorWhite;}
+                    font:{size:em(9px);}
+                    color:$colorGrey;
+                    position: absolute;
+                    bottom: 27px;
+                    right: 0;
+                }
+                &:first-child{
+                    img{
+                        width: 75% !important;
+                        margin:5px auto !important;
+                    }
+                }
+                h3{
+                    @include span-columns(12);
+                    padding:5px !important;
+                    background: {color:$colorWhite;}
+                    font:{size:em(15px) !important;}
+                    color:$colorGrey;
+                    text:{transform:uppercase;}
+                }
+                .price{
+                    @extend h3;
+                    font:{size:em(15px) !important;}
+                    color:$colorGrey !important;
+                    margin:{bottom:0 !important;}
+                }
+            }
+        }
+    }
+    //CART
+    &.content-cart{
+        .shop_table{
+            @include borderRadius(0);
+            .head-table{
+                th{
+                    font:{size:em(10px);weight:normal;}
+                    text:{transform:uppercase;}
+                }
+            }
+            .cart_item{
+                td{
+                    &.product-name{
+                        a{
+                            color:$colorBlack;
+                            font:{size:em(18px);weight:bold;}
+                        }
+                    }
+                    &.product-price{
+                        span{
+                            color:$colorGrey;
+                            font:{size:em(17px);}
+                        }
+                    }
+                    &.product-remove{
+                        a{
+                            background:{color:$colorBlack;}
+                            color:$colorWhite !important;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            font:{size:em(11px);}
+                            @include borderRadius(0);
+                            @include pad(10px 0);
+                            text:{transform:uppercase;}
+                        }
+                    }
+                    &.product-subtotal{
+                        font:{size:em(24px);}
+                    }
+                }
+            }
+            .button[name="update_cart"]{
+                @include direction-context(right-to-left){
+                    @include span-columns(2);
+                }
+                background:{color:$colorWhite;}
+                color:$colorBlack;
+                border:1px solid $colorBlack;
+                @include borderRadius(0);
+                font:{size:em(11px);}
+            }
+            .coupon{
+                @include span-columns(3);
+                .input-text{
+                    @include span-columns(6);
+                }
+                .button{
+                    @extend .button[name="update_cart"];
+                    @include direction-context(left-to-right){
+                       @include span-columns(6); 
+                    }
+                }
+            }
+        }
+    }
+}

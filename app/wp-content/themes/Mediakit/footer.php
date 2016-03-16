@@ -20,6 +20,18 @@
 		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
 		ga('send', 'pageview');
 		</script>
-
+		
+		<script>
+			jQuery(document).ready(function($){		
+				//Menu
+			    $(".nav[role='navigation-shop']").on("click",function(){
+			        $(".nav[role='navigation-shop'] ul").slideToggle(function(){
+			            $(this).on("mouseleave",function(){
+			                $(this).slideUp();
+			            });
+			        });
+			    });
+			});
+		</script>
 	</body>
 </html>

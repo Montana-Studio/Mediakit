@@ -1,0 +1,22 @@
+*, html, body{
+    margin:0;
+    padding:0;
+    font:{family:$primaryFont;}
+}
+input, textarea, select{
+    &:focus{
+        outline: none;    
+    }
+}
+p{
+    font:{size:em(12);weight:normal;}
+    margin: 0;
+    @include pad(5px 0);
+    clear: both;
+}
+.content{
+    &.no-sidebar{
+        @include span-columns(12);
+        @include pad(0 10px);
+    }   
+}

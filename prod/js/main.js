@@ -203,11 +203,11 @@ jQuery(document).ready(function($){
 	    scrollInertia: 0    
 	});
 
-	 $('.nav-colapse .contendor-menu').mCustomScrollbar({
-        	scrollInertia:0,
-        	theme:'minimal',
-        	scrollbarPosition: 'inside'   
-        }); 
+	$('.nav-colapse .contendor-menu').mCustomScrollbar({
+    	scrollInertia:0,
+    	theme:'minimal',
+    	scrollbarPosition: 'inside'   
+    });
  
 });      
 

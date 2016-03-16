@@ -1,0 +1,91 @@
+header{
+    position: relative;
+    clear:both;
+    width:100%;
+    .top-header{
+        @include span-columns(12);
+        @include row();
+        background:{color: #000;}
+        max-height: 66px;
+        .logo{
+            @include span-columns(3 of 12);
+            a{
+                display: table;
+                width:100%;
+                max-height: 100%;
+                min-height: 66px;
+                &::before{
+                    content: "";
+                    background:{image:url('../img/logo.svg');repeat:no-repeat;size:25%;position: 5px center;}
+                    display: table-cell;
+                    width: 100%;
+                }
+            }
+        }
+        .nav[role="navigation-shop"]{
+            @include direction-context(right-to-left){
+                @include span-columns(1);
+            }
+            @include textAlign(center);
+            background: {color:$colorWhite}
+            position: relative;
+            height: 66px;
+            display: table;
+            cursor:pointer;
+            i{
+                color:$colorBlack;
+                display: table-cell;
+                vertical:{align:middle;}
+                font:{size:em(18px)}
+            }
+            ul{
+                min-width: 333px;
+                position: absolute;
+                top:66px;
+                right:0;
+                background:{color:$colorWhite}
+                font:{size:em(12px);}
+                @include textAlign(left);
+                @include pad(40px);
+                border:{style:solid;width:1px;color:$colorGrey;right:none;top:none;}
+                @extend .hide;
+                z-index: 9;
+                li{
+                    margin:{top:30px;bottom:30px;}
+                    a{
+                        color:$colorGrey;
+                        text:{transform:uppercase;}
+                    }
+                    &:first-child{
+                        margin:{top:0;}
+                    }
+                    &:last-child{
+                        margin:{bottom:0;}
+                    }
+                }
+            }
+        }
+    }
+    .nav[role="navigation"]{
+        @include row();
+        @include pad(0 10px);
+        border:{color:$colorGrey;style:solid;width:1px;top:none;left:none;right:none;}
+        ul{
+            @include span-columns(12);
+            li{
+                @include span-columns(3 of 12);
+                @include pad(10px 0);
+                text:{transform:uppercase;}
+                border:{color:$colorGrey;width:1px;style:solid;top:none;left:none;bottom:none;}
+                span{
+                    @extend .destaca;
+                    font:{size: em(11);}
+                    &:last-child{
+                        font:{size: em(27);}
+                        clear: left;
+                    }
+                }
+            }
+        }
+    }
+}

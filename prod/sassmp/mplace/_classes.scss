@@ -1,0 +1,50 @@
+ul{
+    @include pad(0);
+    margin:0;
+    list:{style: none;}
+}
+@mixin textAlign($posAlign){
+    text:{align:$posAlign;}
+}
+@mixin borderRadius($borderSize){
+    @include border-top-radius($borderSize);
+    @include border-right-radius($borderSize);
+    @include border-bottom-radius($borderSize);
+    @include border-left-radius($borderSize);
+}
+a{
+    color:$colorGrey;
+    text:{decoration: none;}
+}
+.hide{
+    display:none;   
+}
+
+.line{
+    width:36px;
+    height:3px;
+    background:{color:$colorBlack}
+    float:left;
+    clear: left;
+    margin:{top:5px;}
+}
+.destaca{
+    background:{color:$colorBlack;}
+    color: $colorWhite;
+    float: left;
+    display: block;
+    padding: 5px;
+}
+.destaca2{
+    @extend .destaca;
+    color:$colorBlack;
+    background:{color:$colorWhite;}
+}
+.btn{
+    @include pad(10px 20px);
+    min-width:100px;
+    font:{size:em(11)}
+    text{transform:uppercase;}
+    background:{color: $colorWhite;}
+    color:$colorBlack;
+}

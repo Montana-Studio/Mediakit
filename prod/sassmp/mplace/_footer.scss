@@ -1,0 +1,6 @@
+.footer{
+    @include span-columns(12);
+    @include row();
+    background: {color:$colorBlack;}
+    color:$colorWhite;
+}

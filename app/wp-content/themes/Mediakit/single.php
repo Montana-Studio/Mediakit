@@ -136,6 +136,26 @@
 
                         </div>
 
+
+
+                        <div class="btn-display">
+                            <div class="content-display">
+                                <h3 class="bg-highlight">MarketPlace</h3>
+                                 <div class="btn display-des">
+                                    <a href="<?php echo get_site_url(); ?>/medios/<?php the_field('Vendedor'); ?>">
+                                        <i class="fa fa-external-link"></i> 
+                                        ver tienda
+                                    </a>
+                                 </div>
+                                 <?php
+                                 $vendor = get_field("Vendedor");
+                                 $hola = '[wcv_products vendor="'.$vendor.'"]';
+
+                                 echo do_shortcode($hola); ?>
+
+                            </div>
+                        </div>
+
                         <div class="data-picker-display">
                             <div class="content-dpicker-display">
                                 <h3 class="bg-highlight">FILTRAR POR FECHA</h3>

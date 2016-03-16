@@ -9,7 +9,7 @@ body {
 			left: 0;
 			height: 100%;
 			@include gridle_state(phoness-min) {
-				height: 140%;
+				height: 140%; 
 			}
 			@include gridle_state(phoness-small) {
 				height: 110%;
