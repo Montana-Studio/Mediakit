@@ -16,7 +16,7 @@ header{
                 min-height: 66px;
                 &::before{
                     content: "";
-                    background:{image:url('../img/logo.svg');repeat:no-repeat;size:25%;position: 5px center;}
+                    background:{image:url('../img/mediatrends-logotipe-mobile.svg');repeat:no-repeat;size:42%;position: 5px center;}
                     display: table-cell;
                     width: 100%;
                 }
@@ -32,6 +32,7 @@ header{
             height: 66px;
             display: table;
             cursor:pointer;
+            border-bottom: 1px solid #000;
             i{
                 color:$colorBlack;
                 display: table-cell;

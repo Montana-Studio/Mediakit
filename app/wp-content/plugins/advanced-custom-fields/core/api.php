@@ -329,7 +329,7 @@ function get_field_object( $field_key, $post_id = false, $options = array() ) {
 function the_field( $field_name, $post_id = false ) {
 	
 	$value = get_field($field_name, $post_id);
-	
+
 	if( is_array($value) )
 	{
 		$value = @implode(', ',$value);

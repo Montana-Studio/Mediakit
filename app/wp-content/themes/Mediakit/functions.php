@@ -480,4 +480,15 @@ function jk_woocommerce_breadcrumbs() {
     );
 }
 
+function shorten_woo_product_title( $title, $id ) {
+    if ( is_shop() && get_post_type( $id ) === 'product' ) {
+    return wp_trim_words( $title, 4 ); // change last number to the number of WORDS you want
+    } else {
+    return $title;
+}
+}
+add_filter ( 'woocommerce_product_thumbnails_columns', 'xx_thumb_cols' );
+ function xx_thumb_cols() {
+     return 4; // .last class applied to every 4th thumbnail
+ }
 ?>

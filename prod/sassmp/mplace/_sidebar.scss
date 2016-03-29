@@ -1,6 +1,6 @@
 .sidebar{
     @include span-columns(3);
-    @include pad(34px 0 10px 10px);
+    @include pad(34px 0 10px 30px);
     h3{
         font:{size:em(11px)}
         @include span-columns(12);
@@ -17,16 +17,23 @@
         .cart_list{
             @include span-columns(12);
             li{
-                @include span-columns(12);
-                padding: 30px !important;
-                border: 1px solid $colorGrey;
-                margin:10px 0 5px;
+                @include span-columns(5.7);
+                padding: 10px !important;
+                border: 1px solid $colorGrey2;
+                margin:{top:10px;right: 10px;bottom: 10px;left: 0;}
                 a{
                     &.remove{
                         background:transparent;
+                        float: right;
+                        right: 0;
+                        left: initial;
+                        color:$colorBlack !important;
+                        height: 30px;
                     }
-                    background:{color:$colorGrey2;}
-                    @include pad(10px 0);
+                    padding:{top:10px;}
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                     img{
                         margin: 0 auto;
                         width:70%;
@@ -48,10 +55,12 @@
             background:{color:$colorBlack;}
             color:$colorWhite;
             border: none;
-            padding:5px !important;
+            padding:10px !important;
+            text:{transform: uppercase;}
         }
         .buttons{
             @include span-columns(12);
+            margin:{bottom:20px;}
             a{
                 @include span-columns(6);
                 @include omega(2n);
@@ -59,6 +68,7 @@
                 color:$colorBlack;
                 @include textAlign(center);
                 @include borderRadius(0);
+                @include pad(10px 0);
                 background:transparent;
                 text:{transform:uppercase;}
                 font:{size:em(11px)}

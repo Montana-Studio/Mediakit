@@ -1,7 +1,7 @@
 .content{
     @include span-columns(9);
     @include omega();
-    @include pad(0 10px 0 0);
+    @include pad(0 30px 0 0);
     position: relative;
     nav{
         &.woocommerce-breadcrumb{
@@ -66,12 +66,14 @@
     .products{
         @include span-columns(12);
         @include row();
+        padding: 0 20px !important;
         li{
             @include span-columns(3 of 12);
             @include omega(4n);
-            background:{color:$colorGrey2;}
+            background:{color:$colorWhite;}
             border:{style:solid;width:1px;color:$colorGrey;}
             position: relative;
+            padding:10px !important;
             a{
                 @include span-columns(12);
                 &.button{
@@ -103,17 +105,35 @@
                 }
                 h3{
                     @include span-columns(12);
-                    padding:5px !important;
                     background: {color:$colorWhite;}
                     font:{size:em(15px) !important;}
                     color:$colorGrey;
                     text:{transform:uppercase;}
+                    padding: 0 !important;
                 }
                 .price{
                     @extend h3;
                     font:{size:em(15px) !important;}
                     color:$colorGrey !important;
                     margin:{bottom:0 !important;}
+                }
+                &.button {
+                    &.product_type_simple {
+                       margin-top: 20px !important;
+                     padding: 15px 0; 
+                    }
+                }
+            }
+            small {
+                @extend h3;
+                font:{size:em(13px);weight:400;}
+                color:$colorGrey !important;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                a {
+                    display: inline-block;
+                    float: inherit !important;
                 }
             }
         }

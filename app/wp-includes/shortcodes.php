@@ -202,6 +202,7 @@ function has_shortcode( $content, $tag ) {
 function do_shortcode( $content, $ignore_html = false ) {
 	global $shortcode_tags;
 
+
 	if ( false === strpos( $content, '[' ) ) {
 		return $content;
 	}
@@ -212,7 +213,6 @@ function do_shortcode( $content, $ignore_html = false ) {
 	// Find all registered tag names in $content.
 	preg_match_all( '@\[([^<>&/\[\]\x00-\x20=]++)@', $content, $matches );
 	$tagnames = array_intersect( array_keys( $shortcode_tags ), $matches[1] );
-
 	if ( empty( $tagnames ) ) {
 		return $content;
 	}

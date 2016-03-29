@@ -10,16 +10,19 @@
         @include span-columns(6);
         @include pad(10px 0);
         @include textAlign(center);
-        background:{color:$colorGrey2;}
         position: relative;
-        img{
-            max-width:85%;
-            margin:0 auto;
-        }
         a{
             @include textAlign(right);
+            @include span-columns(12);
             //position: absolute;
             width:100%;
+            height: auto;
+            display: block;
+        }
+        img{
+            @include span-columns(12);
+            margin:0 auto;
+            background:{color:$colorGrey2;} 
         }
     }
     .info-content{
@@ -78,11 +81,11 @@
         }
         .product_meta{
             @include span-columns(12 of 12);
-            @include textAlign(center);
             @include pad(10px 30px);
             font:{size:em(11px);}
             color:$colorGrey;
             text:{transform:uppercase;}
+            line-height: 26px;
             span{
                 i{
                     margin:{right:5px;}
@@ -92,7 +95,15 @@
                     @include shift(4);
                 }
                 &.posted_in{
-                    @include span-columns(3);
+                    @include span-columns(12); 
+                }
+                &.tagged_as {
+                    @include span-columns(12); 
+                    a {
+                        padding:5px;
+                        background: $colorBlack;
+                        color:$colorWhite;
+                    }
                 }
             }
         }
@@ -104,8 +115,9 @@
                 border:none;
             }
             p{
-                font:{size:em(12px);}
+                font:{size:em(12px);weight: 300;}
                 color:$colorGrey;
+                line-height: 20px;
             }
         }
     }
