@@ -25,7 +25,7 @@ a {
   clear: left;
   margin-top: 5px; }
 
-.destaca, .destaca2, .content-single h1 span, .related h2 span, .my-account .wrapper .content #customer_login .content-login h2 span, .my-account .wrapper .content #customer_login .content-signin h2 span, header .nav[role="navigation"] ul li span, .sidebar h3 span, .sidebar .content .products li a .price span, .content .products li a .sidebar .price span, .sidebar .content .products li small span, .content .products li .sidebar small span, .content h1 span {
+.destaca, .destaca2, .content-single h1 span, .related h2 span, .my-account .wrapper .content #customer_login .content-login h2 span, .my-account .wrapper .content #customer_login .content-signin h2 span, header .nav[role="navigation"] ul li span, .sidebar h3 span, .sidebar .content .products li a .price span, .content .products li a .sidebar .price span, .sidebar .content .products li small span, .content .products li .sidebar small span, .content h1 span, .content.no-sidebar .parrafos h2 span, .content.no-sidebar .parrafos .woocommerce .cart-collaterals .cart_totals h2 span, form.checkout h3 span, form.checkout .content .products li a .price span, .content .products li a form.checkout .price span, form.checkout .content .products li small span, .content .products li form.checkout small span {
   background-color: black;
   color: white;
   float: left;
@@ -68,6 +68,24 @@ p {
   padding: 0 10px; }
   .content.no-sidebar:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 48em) and (max-width: 63.9375em) {
+    .content.no-sidebar {
+      padding-bottom: 20px !important; } }
+
+.woocommerce-message, .woocommerce-info {
+  width: 100% !important;
+  float: left !important;
+  background: none !important;
+  border: 1px solid black !important;
+  border-top: 6px solid black !important; }
+  .woocommerce-message:before, .woocommerce-info:before {
+    color: black !important; }
+  .woocommerce-message .button, .woocommerce-info .button {
+    background: none !important;
+    border: 1px solid black !important;
+    border-radius: 0 !important;
+    font-size: 0.8em !important;
+    text-transform: uppercase !important; }
 
 header {
   position: relative;
@@ -91,9 +109,17 @@ header {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 23.23176%; }
+      width: 48.82117%; }
       header .top-header .logo:last-child {
         margin-right: 0; }
+      @media screen and (min-width: 80em) {
+        header .top-header .logo {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 23.23176%; }
+          header .top-header .logo:last-child {
+            margin-right: 0; } }
       header .top-header .logo a {
         display: table;
         width: 100%;
@@ -103,15 +129,27 @@ header {
           content: "";
           background-image: url("../img/mediatrends-logotipe-mobile.svg");
           background-repeat: no-repeat;
-          background-size: 42%;
+          background-size: 90%;
           background-position: 5px center;
           display: table-cell;
           width: 100%; }
+          @media screen and (min-width: 30em) and (max-width: 43.125em) {
+            header .top-header .logo a::before {
+              background-size: 57%; } }
+          @media screen and (min-width: 48em) and (max-width: 63.9375em) {
+            header .top-header .logo a::before {
+              background-size: 50%; } }
+          @media screen and (min-width: 64em) and (max-width: 79.9375em) {
+            header .top-header .logo a::before {
+              background-size: 40%; } }
+          @media screen and (min-width: 80em) {
+            header .top-header .logo a::before {
+              background-size: 42%; } }
     header .top-header .nav[role="navigation-shop"] {
       float: right;
       display: block;
       margin-left: 2.35765%;
-      width: 6.17215%;
+      width: 18.96686%;
       text-align: center;
       background-color: white;
       position: relative;
@@ -121,6 +159,33 @@ header {
       border-bottom: 1px solid #000; }
       header .top-header .nav[role="navigation-shop"]:last-child {
         margin-left: 0; }
+      @media screen and (min-width: 48em) and (max-width: 63.9375em) {
+        header .top-header .nav[role="navigation-shop"] {
+          float: right;
+          display: block;
+          margin-left: 2.35765%;
+          width: 10.43705%;
+          display: table; }
+          header .top-header .nav[role="navigation-shop"]:last-child {
+            margin-left: 0; } }
+      @media screen and (min-width: 64em) and (max-width: 79.9375em) {
+        header .top-header .nav[role="navigation-shop"] {
+          float: right;
+          display: block;
+          margin-left: 2.35765%;
+          width: 6.17215%;
+          display: table; }
+          header .top-header .nav[role="navigation-shop"]:last-child {
+            margin-left: 0; } }
+      @media screen and (min-width: 80em) {
+        header .top-header .nav[role="navigation-shop"] {
+          float: right;
+          display: block;
+          margin-left: 2.35765%;
+          width: 6.17215%;
+          display: table; }
+          header .top-header .nav[role="navigation-shop"]:last-child {
+            margin-left: 0; } }
       header .top-header .nav[role="navigation-shop"] i {
         color: black;
         display: table-cell;
@@ -133,7 +198,7 @@ header {
         right: 0;
         background-color: white;
         font-size: 0.75em;
-        text-align: left;
+        text-align: right;
         padding: 40px;
         border-style: solid;
         border-width: 1px;
@@ -141,6 +206,9 @@ header {
         border-right: none;
         border-top: none;
         z-index: 9; }
+        @media screen and (min-width: 80em) {
+          header .top-header .nav[role="navigation-shop"] ul {
+            text-align: left; } }
         header .top-header .nav[role="navigation-shop"] ul li {
           margin-top: 30px;
           margin-bottom: 30px; }
@@ -175,31 +243,107 @@ header {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 23.23176%;
+        width: 100%;
+        margin-right: 0;
         padding: 10px 0;
         text-transform: uppercase;
-        border-color: #626262;
-        border-width: 1px;
-        border-style: solid;
-        border-top: none;
-        border-left: none;
-        border-bottom: none; }
+        border: none; }
         header .nav[role="navigation"] ul li:last-child {
           margin-right: 0; }
+        @media screen and (min-width: 30em) and (max-width: 43.125em) {
+          header .nav[role="navigation"] ul li {
+            float: left;
+            display: block;
+            margin-right: 2.35765%;
+            width: 32.61455%;
+            border-color: #626262;
+            border-width: 1px;
+            border-style: solid;
+            border-top: none;
+            border-left: none;
+            border-bottom: none;
+            margin-right: 0;
+            padding-left: 5px; }
+            header .nav[role="navigation"] ul li:last-child {
+              margin-right: 0; } }
+        @media screen and (min-width: 48em) and (max-width: 63.9375em) {
+          header .nav[role="navigation"] ul li {
+            float: left;
+            display: block;
+            margin-right: 2.35765%;
+            width: 32.61455%;
+            border-color: #626262;
+            border-width: 1px;
+            border-style: solid;
+            border-top: none;
+            border-left: none;
+            border-bottom: none;
+            margin-right: 0;
+            padding-left: 10px; }
+            header .nav[role="navigation"] ul li:last-child {
+              margin-right: 0; } }
+        @media screen and (min-width: 64em) and (max-width: 79.9375em) {
+          header .nav[role="navigation"] ul li {
+            float: left;
+            display: block;
+            margin-right: 2.35765%;
+            width: 32.61455%;
+            border-color: #626262;
+            border-width: 1px;
+            border-style: solid;
+            border-top: none;
+            border-left: none;
+            border-bottom: none;
+            margin-right: 0;
+            padding-left: 10px; }
+            header .nav[role="navigation"] ul li:last-child {
+              margin-right: 0; } }
+        @media screen and (min-width: 80em) {
+          header .nav[role="navigation"] ul li {
+            float: left;
+            display: block;
+            margin-right: 2.35765%;
+            width: 23.23176%;
+            border-color: #626262;
+            border-width: 1px;
+            border-style: solid;
+            border-top: none;
+            border-left: none;
+            border-bottom: none; }
+            header .nav[role="navigation"] ul li:last-child {
+              margin-right: 0; } }
         header .nav[role="navigation"] ul li span {
           font-size: 0.6875em; }
           header .nav[role="navigation"] ul li span:last-child {
             font-size: 1.6875em;
             clear: left; }
+        @media screen and (min-width: 30em) and (max-width: 43.125em) {
+          header .nav[role="navigation"] ul li:last-child {
+            border: none; } }
+        @media screen and (min-width: 48em) and (max-width: 63.9375em) {
+          header .nav[role="navigation"] ul li:last-child {
+            border: none; } }
+        @media screen and (min-width: 64em) and (max-width: 79.9375em) {
+          header .nav[role="navigation"] ul li:last-child {
+            border: none; } }
 
 .sidebar {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 23.23176%;
-  padding: 34px 0 10px 30px; }
+  width: 100%;
+  padding: 10px; }
   .sidebar:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 80em) {
+    .sidebar {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%;
+      padding: 34px 0 10px 30px; }
+      .sidebar:last-child {
+        margin-right: 0; } }
   .sidebar h3, .sidebar .content .products li a .price, .content .products li a .sidebar .price, .sidebar .content .products li small, .content .products li .sidebar small {
     font-size: 0.6875em;
     float: left;
@@ -256,6 +400,13 @@ header {
       .sidebar .widget_shopping_cart_content .cart_list li .quantity {
         font-size: 0.75em;
         color: #626262; }
+      .sidebar .widget_shopping_cart_content .cart_list li.empty {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        .sidebar .widget_shopping_cart_content .cart_list li.empty:last-child {
+          margin-right: 0; }
   .sidebar .widget_shopping_cart_content .total {
     float: left;
     display: block;
@@ -302,6 +453,8 @@ header {
         margin-right: 0; }
       .sidebar .widget_shopping_cart_content .buttons a:nth-child(2n+1) {
         clear: left; }
+  .sidebar .widget_recently_viewed_products ul li {
+    padding: 10px 0 !important; }
 
 .footer {
   float: left;
@@ -322,12 +475,23 @@ header {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 74.41059%;
+  width: 100%;
   margin-right: 0;
-  padding: 0 30px 0 0;
+  padding: 10px;
   position: relative; }
   .content:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 80em) {
+    .content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%;
+      margin-right: 0;
+      padding: 0 30px 0 0;
+      float: right; }
+      .content:last-child {
+        margin-right: 0; } }
   .content nav.woocommerce-breadcrumb {
     margin: 0;
     padding: 10px 0;
@@ -354,13 +518,21 @@ header {
     float: right;
     display: block;
     margin-left: 2.35765%;
-    width: 23.23176%;
+    width: 40.29137%;
     position: relative;
     top: -53px;
     right: 10px;
     background-color: white; }
     .content .woocommerce-ordering:last-child {
       margin-left: 0; }
+    @media screen and (min-width: 80em) {
+      .content .woocommerce-ordering {
+        float: right;
+        display: block;
+        margin-left: 2.35765%;
+        width: 23.23176%; }
+        .content .woocommerce-ordering:last-child {
+          margin-left: 0; } }
     .content .woocommerce-ordering select {
       float: left;
       display: block;
@@ -405,22 +577,41 @@ header {
       content: "";
       display: table; }
     .content .products li {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 23.23176%;
+      width: 100% !important;
       background-color: white;
       border-style: solid;
       border-width: 1px;
       border-color: #626262;
       position: relative;
-      padding: 10px !important; }
-      .content .products li:last-child {
-        margin-right: 0; }
-      .content .products li:nth-child(4n) {
-        margin-right: 0; }
-      .content .products li:nth-child(4n+1) {
-        clear: left; }
+      padding: 10px !important;
+      margin-bottom: 20px !important; }
+      @media screen and (min-width: 30em) and (max-width: 43.125em) {
+        .content .products li {
+          width: 48% !important; }
+          .content .products li:nth-child(4n) {
+            margin-right: 0; }
+          .content .products li:nth-child(4n+1) {
+            clear: left; } }
+      @media screen and (min-width: 48em) and (max-width: 63.9375em) {
+        .content .products li {
+          width: 25% !important;
+          margin-bottom: 30px !important;
+          margin-right: 10px !important;
+          float: left !important; } }
+      @media screen and (min-width: 64em) and (max-width: 79.9375em) {
+        .content .products li {
+          width: 25% !important;
+          margin-bottom: 30px !important;
+          margin-right: 10px !important;
+          float: left !important; } }
+      @media screen and (min-width: 80em) {
+        .content .products li {
+          width: 25% !important;
+          margin-bottom: 30px !important; }
+          .content .products li:nth-child(4n) {
+            margin-right: 0; }
+          .content .products li:nth-child(4n+1) {
+            clear: left; } }
       .content .products li a {
         float: left;
         display: block;
@@ -479,6 +670,23 @@ header {
         .content .products li a.button.product_type_simple {
           margin-top: 20px !important;
           padding: 15px 0; }
+        .content .products li a.added_to_cart.wc-forward {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 100%;
+          margin-right: 0;
+          text-align: center;
+          text-transform: uppercase;
+          padding: 12px 0;
+          margin-top: 10px;
+          font-size: 0.7em;
+          border: 1px solid black; }
+          .content .products li a.added_to_cart.wc-forward:last-child {
+            margin-right: 0; }
+          .content .products li a.added_to_cart.wc-forward:hover {
+            background: black;
+            color: white; }
       .content .products li small {
         font-size: 0.8125em;
         font-weight: 400;
@@ -576,12 +784,28 @@ header {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 48.82117%;
+  width: 100%;
   padding: 10px 0;
   text-align: center;
   position: relative; }
   .content-single .img-single:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 64em) and (max-width: 79.9375em) {
+    .content-single .img-single {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .content-single .img-single:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 80em) {
+    .content-single .img-single {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .content-single .img-single:last-child {
+        margin-right: 0; } }
   .content-single .img-single a {
     text-align: right;
     float: left;
@@ -606,10 +830,28 @@ header {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 48.82117%;
+  width: 100%;
   margin-right: 0; }
   .content-single .info-content:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 64em) and (max-width: 79.9375em) {
+    .content-single .info-content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-right: 0; }
+      .content-single .info-content:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 80em) {
+    .content-single .info-content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-right: 0; }
+      .content-single .info-content:last-child {
+        margin-right: 0; } }
   .content-single .info-content p.disponible {
     float: left;
     display: block;
@@ -636,7 +878,11 @@ header {
     border-color: #f6f6f6;
     border-top: none;
     border-left: none;
-    border-right: none; }
+    border-right: none;
+    text-align: center; }
+    @media screen and (min-width: 80em) {
+      .content-single .info-content h2 {
+        text-align: left; } }
   .content-single .info-content .offers {
     float: left;
     display: block;
@@ -672,7 +918,8 @@ header {
       .content-single .info-content .addcart .quantity input[type="number"] {
         display: block;
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        border: 1px solid black; }
     .content-single .info-content .addcart button {
       background-color: black;
       border-top-left-radius: 0;
@@ -696,13 +943,16 @@ header {
     display: block;
     margin-right: 2.35765%;
     width: 100%;
-    padding: 10px 30px;
+    padding: 10px 20px;
     font-size: 0.6875em;
     color: #626262;
     text-transform: uppercase;
     line-height: 26px; }
     .content-single .info-content .product_meta:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 80em) {
+      .content-single .info-content .product_meta {
+        padding: 10px 30px; } }
     .content-single .info-content .product_meta span i {
       margin-right: 5px; }
     .content-single .info-content .product_meta span.sku_wrapper {
@@ -735,13 +985,18 @@ header {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 100%; }
+    width: 100%;
+    padding: 10px 20px; }
     .content-single .info-content .description:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 80em) {
+      .content-single .info-content .description {
+        padding: 0; } }
     .content-single .info-content .description h2 {
       font-size: 0.625em;
       padding: 10px 0;
-      border: none; }
+      border: none;
+      text-align: left; }
     .content-single .info-content .description p {
       font-size: 0.75em;
       font-weight: 300;
@@ -768,6 +1023,11 @@ header {
     margin: 10px 0; }
     .related h2:last-child {
       margin-right: 0; }
+  .related.products {
+    padding: 0 !important; }
+    @media screen and (min-width: 80em) {
+      .related.products {
+        padding: 20px 0; } }
 
 .pp_pic_holder {
   width: 900px !important;
@@ -813,6 +1073,177 @@ header {
         .pp_pic_holder .pp_content_container .pp_details .pp_nav .pp_arrow_next {
           float: none;
           display: inline-block; }
+
+.content.no-sidebar {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  padding: 20px 0; }
+  .content.no-sidebar::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .content.no-sidebar .parrafos h2 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-right: 0;
+    padding: 10px 0 10px 10px;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    background-image: url("../img/bg-pattern-fino3b.svg"); }
+    .content.no-sidebar .parrafos h2:last-child {
+      margin-right: 0; }
+  .content.no-sidebar .parrafos .woocommerce table {
+    border-radius: 0; }
+    .content.no-sidebar .parrafos .woocommerce table .coupon {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .content.no-sidebar .parrafos .woocommerce table .coupon:last-child {
+        margin-right: 0; }
+      @media screen and (min-width: 64em) and (max-width: 79.9375em) {
+        .content.no-sidebar .parrafos .woocommerce table .coupon {
+          margin-bottom: 5px; } }
+      @media screen and (min-width: 80em) {
+        .content.no-sidebar .parrafos .woocommerce table .coupon {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 31.76157%; }
+          .content.no-sidebar .parrafos .woocommerce table .coupon:last-child {
+            margin-right: 0; } }
+      .content.no-sidebar .parrafos .woocommerce table .coupon .input-text {
+        width: 50% !important;
+        height: 36px;
+        margin: 0; }
+        @media screen and (min-width: 80em) {
+          .content.no-sidebar .parrafos .woocommerce table .coupon .input-text {
+            width: 50% !important;
+            height: 37px;
+            margin-right: 5px; } }
+      .content.no-sidebar .parrafos .woocommerce table .coupon .button {
+        width: 49% !important; }
+    .content.no-sidebar .parrafos .woocommerce table .remove {
+      color: black !important; }
+      .content.no-sidebar .parrafos .woocommerce table .remove:hover {
+        background: none; }
+  .content.no-sidebar .parrafos .woocommerce .button {
+    background: black;
+    border-radius: 0;
+    font-family: "Montserrat", sans-serif;
+    color: white; }
+  .content.no-sidebar .parrafos .woocommerce .cart-collaterals .cart_totals .wc-proceed-to-checkout a {
+    background: black;
+    border-radius: 0;
+    font-family: "Montserrat", sans-serif;
+    color: white; }
+  .content.no-sidebar .parrafos .woocommerce .cart-collaterals .cart-subtotal {
+    text-align: right; }
+  .content.no-sidebar .parrafos .woocommerce .cart-collaterals .order-total {
+    text-align: right; }
+  .content.no-sidebar .parrafos .btn {
+    border: 1px solid black;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 12px;
+    font-weight: 600; }
+    .content.no-sidebar .parrafos .btn:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 64em) and (max-width: 79.9375em) {
+      .content.no-sidebar .parrafos .btn {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%;
+        float: right; }
+        .content.no-sidebar .parrafos .btn:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 80em) {
+      .content.no-sidebar .parrafos .btn {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 14.70196%;
+        float: right; }
+        .content.no-sidebar .parrafos .btn:last-child {
+          margin-right: 0; } }
+
+form.checkout {
+  float: none; }
+  form.checkout h3, form.checkout .content .products li a .price, .content .products li a form.checkout .price, form.checkout .content .products li small, .content .products li form.checkout small {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-right: 0;
+    padding: 10px 0 10px 10px;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    background-image: url("../img/bg-pattern-fino3b.svg"); }
+    form.checkout h3:last-child, form.checkout .content .products li a .price:last-child, .content .products li a form.checkout .price:last-child, form.checkout .content .products li small:last-child, .content .products li form.checkout small:last-child {
+      margin-right: 0; }
+  form.checkout .form-row {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    float: left;
+    display: block; }
+    form.checkout .form-row:last-child {
+      margin-right: 0; }
+    form.checkout .form-row .input-text {
+      padding: 10px;
+      margin-top: 2px;
+      border: 1px solid #626262; }
+      form.checkout .form-row .input-text::-webkit-input-placeholder {
+        font-style: italic; }
+      form.checkout .form-row .input-text::-moz-placeholder {
+        font-style: italic; }
+      form.checkout .form-row .input-text:-moz-placeholder {
+        font-style: italic; }
+      form.checkout .form-row .input-text:-ms-input-placeholder {
+        font-style: italic; }
+  form.checkout .woocommerce-checkout-review-order .woocommerce-checkout-payment {
+    background: black !important;
+    color: white !important;
+    border-radius: 0 !important; }
+    form.checkout .woocommerce-checkout-review-order .woocommerce-checkout-payment ul li .payment_box {
+      background: none !important;
+      border: 2px solid white !important;
+      color: white !important;
+      border-radius: 0 !important; }
+      form.checkout .woocommerce-checkout-review-order .woocommerce-checkout-payment ul li .payment_box:before {
+        border: 1em solid #fff !important;
+        border-right-color: transparent !important;
+        border-left-color: transparent !important;
+        border-top-color: transparent !important;
+        top: -14px !important; }
+    form.checkout .woocommerce-checkout-review-order .woocommerce-checkout-payment .form-row.place-order {
+      padding: 20px 0 !important; }
+      form.checkout .woocommerce-checkout-review-order .woocommerce-checkout-payment .form-row.place-order .button {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%;
+        margin-right: 0;
+        padding: 15px;
+        float: right;
+        background: black;
+        border-radius: 0;
+        font-family: "Montserrat", sans-serif;
+        color: white; }
+        form.checkout .woocommerce-checkout-review-order .woocommerce-checkout-payment .form-row.place-order .button:last-child {
+          margin-right: 0; }
 
 .my-account {
   background-color: black; }

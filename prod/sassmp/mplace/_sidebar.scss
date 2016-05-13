@@ -1,6 +1,10 @@
 .sidebar{
-    @include span-columns(3);
-    @include pad(34px 0 10px 30px);
+    @include span-columns(12);
+    @include pad(10px);
+    @include media($notebook) {
+        @include span-columns(3);
+        @include pad(34px 0 10px 30px);
+    }
     h3{
         font:{size:em(11px)}
         @include span-columns(12);
@@ -48,6 +52,9 @@
                     font:{size:em(12px);}
                     color: $colorGrey;
                 }
+                &.empty {
+                    @include span-columns(12);  
+                }
             }
         }
         .total{
@@ -72,6 +79,13 @@
                 background:transparent;
                 text:{transform:uppercase;}
                 font:{size:em(11px)}
+            }
+        }
+    }
+    .widget_recently_viewed_products {
+        ul {
+            li {
+                padding:10px 0 !important;
             }
         }
     }

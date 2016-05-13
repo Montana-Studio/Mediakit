@@ -1,4 +1,4 @@
-<!doctype html>
+	<!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
@@ -63,15 +63,4 @@
 		<div class="wrapper mCustomScrollbar" data-mcs-axis="y" >
 			
 		
-			<?php if(is_page('contacto')){
-				include (TEMPLATEPATH . '/template-headercontact.php');
-			}elseif(is_page('Sobre Nosotros')){
-				include (TEMPLATEPATH . '/template-aboutus.php');
-			}elseif(is_search()){
-				include (TEMPLATEPATH . '/template-headersearch.php');
-			}elseif(is_single()){
-				include (TEMPLATEPATH . '/template-headersitio.php');
-			}else{
-				include (TEMPLATEPATH . '/template-headernorm.php');	
-			}?>
-			<!-- /header -->
+			

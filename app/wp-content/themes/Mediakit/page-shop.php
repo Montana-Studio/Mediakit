@@ -1,12 +1,8 @@
 <?php /*Template name: Pagina Shop*/ ?>
 <?php 
-    if(is_myaccount){
-        get_header('account');
-    }else{
-        get_header('shop');
-    };
     
     if(is_cart()||is_checkout()||is_myaccount){
+    	get_header('shop');
         echo '
             <script>
                 jQuery(document).ready(function($){
@@ -84,15 +80,5 @@
 		<!-- /section -->
 	</main>
 <?php 
-    if(is_myaccount){?>
-        <script>
-        	
-        	jQuery(document).ready(function($){
-        		$('#echoTitle mark').text('<?php the_title(); ?>');
-        	});
-
-        </script>
-    <?php }else{
-        get_footer();
-    }
+    get_footer();
 ?>

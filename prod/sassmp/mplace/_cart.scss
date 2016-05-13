@@ -1,0 +1,98 @@
+.content {
+	&.no-sidebar {
+		@include outer-container(95%);
+		float: none;
+		@include pad(20px 0);
+		.parrafos {
+			h2{
+		        @include span-columns(12);
+		        @include omega();
+		        @include pad(10px 0 10px 10px);
+		        margin: {bottom:30px;}
+		        font:{size:em(24);}
+		        text:{transform:uppercase;}
+		        background: {image:url('../img/bg-pattern-fino3b.svg');}
+		        span{
+		            @extend .destaca;
+		        }
+		    }	
+		    .woocommerce {
+			    table {
+			    border-radius:0;
+			    	.coupon {
+						@include span-columns(12);
+						@include media($tabletLand) {
+							margin:{bottom:5px;}
+						}
+						@include media($notebook) {
+							@include span-columns(4);
+						}
+						.input-text {
+							width: 50% !important;
+							height: 36px;
+							margin: 0;
+		    				@include media($notebook) {
+								width: 50% !important;
+								height: 37px;
+								margin:{right:5px;}
+		    				}
+						}
+						.button {
+							width: 49% !important;
+						}
+			    	}
+			    	.remove {
+						color:$colorBlack !important;
+						&:hover {
+							background: none;
+						}
+					}
+			    }
+			     .button {
+					background: $colorBlack;
+					border-radius: 0;
+					font:{family:$primaryFont;}
+					color:$colorWhite;
+				}
+				.cart-collaterals {
+					.cart_totals  {
+						h2 {
+							span{
+					            @extend .destaca;
+					        }
+						}
+						.wc-proceed-to-checkout {
+							a {
+								background: $colorBlack;
+								border-radius: 0;
+								font:{family:$primaryFont;}
+								color:$colorWhite;
+							}
+						}
+					}
+					.cart-subtotal {
+						text:{align:right;}
+					}
+					.order-total {
+						text:{align:right;}
+					}
+				}	
+		    }
+		    .btn {
+		    	border:1px solid $colorBlack;
+		    	@include span-columns(12);
+		    	text:{transform:uppercase;align: center;}
+		    	padding: 12px;
+    			font:{weight: 600;}
+    			@include media($tabletLand) {
+    				@include span-columns(6);
+    				float: right;
+    			}
+    			@include media($notebook) {
+    				@include span-columns(2);
+    				float: right;
+    			}
+		    }
+		}
+	}
+}
