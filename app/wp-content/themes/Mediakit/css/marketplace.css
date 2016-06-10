@@ -520,7 +520,7 @@ header {
     margin-left: 2.35765%;
     width: 40.29137%;
     position: relative;
-    top: -53px;
+    top: -90px;
     right: 10px;
     background-color: white; }
     .content .woocommerce-ordering:last-child {
@@ -584,7 +584,7 @@ header {
       border-color: #626262;
       position: relative;
       padding: 10px !important;
-      margin-bottom: 20px !important; }
+      margin-bottom: 0; }
       @media screen and (min-width: 30em) and (max-width: 43.125em) {
         .content .products li {
           width: 48% !important; }
@@ -600,14 +600,22 @@ header {
           float: left !important; } }
       @media screen and (min-width: 64em) and (max-width: 79.9375em) {
         .content .products li {
-          width: 25% !important;
+          width: 32% !important;
           margin-bottom: 30px !important;
-          margin-right: 10px !important;
-          float: left !important; } }
+          float: left !important; }
+          .content .products li:nth-child(3n) {
+            margin-right: 0; }
+          .content .products li:nth-child(3n+1) {
+            clear: left; } }
       @media screen and (min-width: 80em) {
         .content .products li {
-          width: 25% !important;
-          margin-bottom: 30px !important; }
+          width: 23% !important;
+          vertical-align: top;
+          margin-top: 0;
+          margin-bottom: 10px;
+          margin-right: 10px;
+          display: inline-block;
+          float: initial; }
           .content .products li:nth-child(4n) {
             margin-right: 0; }
           .content .products li:nth-child(4n+1) {
@@ -660,13 +668,17 @@ header {
           font-size: 0.9375em !important;
           color: #626262;
           text-transform: uppercase;
-          padding: 0 !important; }
+          padding: 0 !important;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
           .content .products li a h3:last-child, .content .products li a .price:last-child, .content .products li a small:last-child {
             margin-right: 0; }
         .content .products li a .price {
           font-size: 0.9375em !important;
           color: #626262 !important;
-          margin-bottom: 0 !important; }
+          margin-bottom: 0 !important;
+          padding: 6px 0 !important; }
         .content .products li a.button.product_type_simple {
           margin-top: 20px !important;
           padding: 15px 0; }
@@ -1114,9 +1126,16 @@ header {
           float: left;
           display: block;
           margin-right: 2.35765%;
-          width: 31.76157%; }
+          width: 48.82117%; }
           .content.no-sidebar .parrafos .woocommerce table .coupon:last-child {
             margin-right: 0; } }
+      .content.no-sidebar .parrafos .woocommerce table .coupon label {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        .content.no-sidebar .parrafos .woocommerce table .coupon label:last-child {
+          margin-right: 0; }
       .content.no-sidebar .parrafos .woocommerce table .coupon .input-text {
         width: 50% !important;
         height: 36px;
@@ -1136,7 +1155,8 @@ header {
     background: black;
     border-radius: 0;
     font-family: "Montserrat", sans-serif;
-    color: white; }
+    color: white;
+    float: right; }
   .content.no-sidebar .parrafos .woocommerce .cart-collaterals .cart_totals .wc-proceed-to-checkout a {
     background: black;
     border-radius: 0;

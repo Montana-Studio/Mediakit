@@ -40,7 +40,7 @@
             @include span-columns(5);
         }
         position: relative;
-        top:-53px;
+        top:-90px;
         right:10px;
         background:{color:$colorWhite;}
         @include media($notebook) {
@@ -84,7 +84,7 @@
             border:{style:solid;width:1px;color:$colorGrey;}
             position: relative;
             padding:10px !important;
-            margin:{bottom:20px !important;}
+            margin:{bottom:0;}
             @include media($mobileLand) {
                 width: 48% !important;
                 @include omega(4n); 
@@ -95,14 +95,18 @@
                 float: left !important;
             }
             @include media($tabletLand) {
-                width: 25% !important;
-                margin:{bottom:30px !important;right:10px !important;}
+                @include omega(3n); 
+                width: 32% !important;
+                margin:{bottom:30px !important;}
                 float: left !important;
             }
             @include media($notebook) {
-                width: 25% !important;
+                width: 23% !important;
                 @include omega(4n); 
-                margin:{bottom:30px !important;}
+                vertical-align: top;
+                margin:{top:0; bottom:10px;right:10px;}
+                display: inline-block;
+                float: initial;
             }
             a{
                 @include span-columns(12);
@@ -140,12 +144,16 @@
                     color:$colorGrey;
                     text:{transform:uppercase;}
                     padding: 0 !important;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                 }
                 .price{
                     @extend h3;
                     font:{size:em(15px) !important;}
                     color:$colorGrey !important;
                     margin:{bottom:0 !important;}
+                    padding:6px 0 !important;
                 }
                 &.button {
                     &.product_type_simple {
