@@ -6,6 +6,8 @@
 		@include gridle_state(phoness tabless-min) {
 			padding:0;
 		}
+		position: fixed;
+    	right: 0;
 		.content-loop-categoria {
 			@include gridle(3, desktopess notebook-min);
 			@include gridle(4, tabless-md tabless-min);
@@ -127,6 +129,11 @@
 								}
 							}
 						}
+					}
+					&:hover {
+						box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+						@include transform(translate(0, -4px));
+						@include transition(all 0.1s ease-in-out);
 					}
 				}
 				&:hover {

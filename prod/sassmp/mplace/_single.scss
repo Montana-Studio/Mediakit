@@ -11,16 +11,21 @@
         @include pad(10px 0);
         @include textAlign(center);
         position: relative;
-        @include media($tabletLand) {
+         @include media($mobileLand) {
             @include span-columns(6);
         }
+        @include media($tablet) {
+            @include span-columns(6);
+        } 
+        @include media($tabletLand) {
+            @include span-columns(6);
+        } 
         @include media($notebook) {
             @include span-columns(6);
         }
-        a{
+        .woocommerce-main-image {
             @include textAlign(right);
             @include span-columns(12);
-            //position: absolute;
             width:100%;
             height: auto;
             display: block;
@@ -30,10 +35,31 @@
             margin:0 auto;
             background:{color:$colorGrey2;} 
         }
+        .thumbnails {
+            @include span-columns(12); 
+            a {
+                @include span-columns(3); 
+                @include omega(4n);
+                display: inline-block;
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+            }
+        }
     }
     .info-content{
         @include span-columns(12);
         @include omega();
+        @include media($mobileLand) {
+            @include span-columns(6);
+             @include omega();
+        }
+        @include media($tablet) {
+            @include span-columns(6);
+             @include omega();
+        }
         @include media($tabletLand) {
             @include span-columns(6);
              @include omega();

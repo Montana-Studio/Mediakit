@@ -29,11 +29,21 @@
 						} 
 						label {
 							@include span-columns(12);
+							margin:{bottom:5px;}
+							@include media($tablet) {
+								margin:{bottom:10px;}
+							}
 						}
 						.input-text {
 							width: 50% !important;
-							height: 36px;
+							height: 29px;
 							margin: 0; 
+							@include media($mobileLand) {
+								height: 31px;
+							}
+							@include media($tablet) {
+								height: 35px;
+							}
 		    				@include media($notebook) {
 								width: 50% !important;
 								height: 37px;
@@ -42,6 +52,11 @@
 						}
 						.button {
 							width: 49% !important;
+							padding: 10px;
+    						margin-bottom: 5px;
+    						@include media($notebook) {
+    							padding:12px !important;
+    						}
 						}
 			    	}
 			    	.remove {
@@ -50,8 +65,72 @@
 							background: none;
 						}
 					}
+					thead {
+						font:{size:0.6em;}
+						@include media($mobileLand) {
+							font:{size:0.8em;}
+						}
+						@include media($tablet) {
+							font:{size:0.9em;}
+						}
+						@include media($tabletLand) {
+							font:{size:1em;}
+						}
+						@include media($notebook) {
+							font:{size:1em;}
+						}
+					}
+					tbody {
+						font:{size:0.6em;}
+						@include media($mobileLand) {
+							font:{size:0.8em;}
+						}
+						@include media($tablet) {
+							font:{size:0.9em;}
+						}
+						@include media($tabletLand) {
+							font:{size:0.9em;}
+						}
+						@include media($notebook) {
+							font:{size:0.9em;}
+						}
+						.product-remove {
+							@include pad(6px);
+						}
+						.product-thumbnail {
+							@include pad(6px);
+						}
+						.product-price {
+							@include pad(6px);
+						}
+						.product-quantity {
+							@include pad(6px);
+						}
+						.product-subtotal {
+							@include pad(6px);
+						}
+					}
+					&.shop_table {
+						.button {
+							font:{size: 1.2em;}
+		    				@include pad(10px);
+		    				@include media($mobileLand) {
+								font:{size: 1em;}
+							}
+							@include media($tablet) {
+								font:{size: 1em;}
+							}
+							@include media($tabletLand) {
+								font:{size: 0.9em;}
+							}
+							@include media($notebook) {
+								font:{size: 0.9em;}
+								padding: 12px 40px;
+							}
+						}
+					}
 			    }
-			     .button {
+			    .button {
 					background: $colorBlack;
 					border-radius: 0;
 					font:{family:$primaryFont;}
@@ -81,6 +160,33 @@
 						text:{align:right;}
 					}
 				}	
+		    }
+		    .wc-proceed-to-checkout {
+		    	a {
+		    		font:{size: 0.8em;}
+		    		@include pad(10px);
+		    		@include media($tablet) {
+		    			font:{size: 1em;}
+		    		}
+		    		@include media($tabletLand) {
+		    			font:{size: 1em;}
+		    		}
+		    		@include media($notebook) {
+		    			font:{size: 1em;}
+		    		}
+		    	}
+		    }
+		    .woocommerce-error {
+		    	@include span-columns(12);
+		    	background: none!important;
+			    border: 1px solid $colorBlack!important;
+			    border-top: 6px solid $colorBlack!important; 
+			    &:before {
+			        color: $colorBlack !important;
+			    }
+			    li {
+			    	margin:5px 0;
+			    }
 		    }
 		    .btn {
 		    	border:1px solid $colorBlack;

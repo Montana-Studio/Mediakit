@@ -1,36 +1,7 @@
 .pp_pic_holder {
-	width: 900px !important;
-	margin:0 auto;
-	display: block;
-	left:0 !important;
-	right: 0 !important;
-	top:200px !important;
-	.ppt {
-		font:{family:$primaryFont !important;}
-		text:{transform:uppercase;}
-		margin:0; 
-	}
 	.pp_content_container {
-		border-radius: 0 !important;
-		.pp_content {
-			@include outer-container(70%);
-			width: 70% !important;
-			#pp_full_res{
-				img {
-					width: 60% !important; 
-					height: auto !important;
-					display: block;
-					margin: 0 auto;
-				}
-			}
-		}
 		.pp_details {
-    		margin: 0 auto;
-    		float: none;
-    		width: 300px !important;
-    		@include textAlign(center);
     		.pp_nav {
-    			width: 100%;
     			.pp_arrow_previous {
     				float: none;
     				display: inline-block;
@@ -47,4 +18,113 @@
     		}
 		}
 	}
+}
+.pp_woocommerce {
+    @include span-columns(12);
+    width: 900px !important;
+	margin:0 auto;
+	display: block;
+	left:0 !important;
+	right: 0 !important;
+	top:200px !important;
+	@include media($mobileLand) {
+		top:15px !important;
+	}
+	@include media($tablet) {
+    	width: 600px !important;
+    } 
+    @include media($tabletLand) {
+    	top: 60px !important; 
+    	width: 600px !important;
+    }
+    @include media($notebook) {
+    	top: 80px !important; 
+    } 
+    @include media($desktop) {
+    	top: 100px !important; 
+    } 
+    .ppt {
+		font:{family:$primaryFont !important;}
+		text:{transform:uppercase;}
+		margin:0; 
+	}
+    .pp_content_container {
+    	border-radius: 0 !important;
+        .pp_left {
+           @include pad(0);
+           .pp_right {
+                @include pad(0);
+                .pp_top {
+                	@include media($mobileLand) {
+                		height: 5px;	
+                	}
+	    		}
+                .pp_content {
+                    width: 90% !important; 
+                    margin: 0 auto;
+                    @include media($mobileLand) {
+                    	width: 40%!important;
+                    }
+                    .pp_fade {
+                        #pp_full_res {
+                            width: 100% !important; 
+                            @include media($tablet) {
+                            	width: 90% !important; 
+                            	margin:0 auto;
+                            } 
+                            @include media($tabletLand) {
+                            	width:90% !important; 
+                            	margin:0 auto;
+                            } 
+                            @include media($notebook) {
+                            	width: 60% !important; 
+                            	margin:0 auto;
+                            }
+                            @include media($desktop) {
+                            	width: 60% !important; 
+                            	margin:0 auto;
+                            }
+                            img {
+                                width: 100% !important;
+                                height: auto !important;
+                                display: block;
+								margin: 0 auto;
+                            }
+                        } 
+                        .pp_details {
+                            @include span-columns(12);
+                            margin: 0 auto;
+    						float: initial;
+    						width: 300px !important;
+    						@include textAlign(center);
+                            .pp_nav {
+                            	width: 100%;
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                margin: 0;
+                                bottom: -75px;
+                                .currentTextHolder {
+                                    color:$colorWhite;
+                                }
+                                .pp_arrow_previous {
+				    				float: none;
+				    				display: inline-block;
+				    			}
+				    			.currentTextHolder {
+				    				float: none;
+				    				display: inline-block;
+				    				font:{size: em(24px);}
+				    			}
+				    			.pp_arrow_next {
+				    				float: none;
+				    				display: inline-block;
+				    			}  
+                            }
+                        }   
+                    }
+                }
+            }
+        }
+    }
 }

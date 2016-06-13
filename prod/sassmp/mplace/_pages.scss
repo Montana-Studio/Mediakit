@@ -84,7 +84,8 @@
             border:{style:solid;width:1px;color:$colorGrey;}
             position: relative;
             padding:10px !important;
-            margin:{bottom:0;}
+            margin:{bottom:10px;}
+            display: inline-block;
             @include media($mobileLand) {
                 width: 48% !important;
                 @include omega(4n); 
