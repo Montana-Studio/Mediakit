@@ -21,6 +21,9 @@
 	@include gridle_state(notebook-min) {
 		padding:{top:0 !important;}
 	}
+	@include gridle_state(desktopess) {
+		padding:{top:0 !important;}
+	}
 	.page-header {
 		height: 370px;
 		padding:10px !important;
